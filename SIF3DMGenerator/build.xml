@@ -100,49 +100,6 @@
 		</xjc>
 	</target>
 
-	<!--	
-	<target name="30-generate-US32" depends="init" description="Create all US 3.2 POJOs based on XSD Directories">
-		<delete dir="${output.base.dir}/sifus32/src" />
-		<mkdir dir="${output.base.dir}/sifus32/src"/>
-		<echo message="Generate Pojos using JAXB for SIF US 3.2 Entity Model for all XSDs in one go..."/>
-		<xjc destdir="${output.base.dir}/sifus32/src" 
-	            package="sif.dd.us32.model.entity" 
-	            extension="true" 
-	            header="false" 
-	            source="2.0">
-			<schema  dir="${input.base.dir}/XSD/sifus32/Entity" includes="*.xsd" excludes="SIFglobal.xsd,SIFglobalBaseTypes.xsd,SIFglobalCommonTypes.xsd,SIFIdentityManagement.xsd,SIFNAassessment.xsd"/>
-			<arg value="-npa"/>
-		</xjc>
-		<echo message="Generate Pojos using JAXB for SIF US 3.2 Composite Obects for all XSDs in one go..."/>
-		<xjc destdir="${output.base.dir}/sifus32/src" 
-              package="sif.dd.us32.model.composite" 
-              extension="true" 
-              header="false" 
-              source="2.0">
-			<schema  dir="${input.base.dir}/XSD/sifus32/Composite" includes="*.xsd" excludes="SIFNACore.xsd"/>
-			<arg value="-npa"/>
-		</xjc>
-		<echo message="Generate Pojos using JAXB for SIF US 3.2 Report Objects for all XSDs in one go..."/>
-		<xjc destdir="${output.base.dir}/sifus32/src" 
-              package="sif.dd.us32.model.report" 
-              extension="true" 
-              header="false" 
-              source="2.0">
-			<schema  dir="${input.base.dir}/XSD/sifus32/Report" includes="*.xsd" excludes="SIFNAsre.xsd,SIFNAassessmentSummary.xsd,SIFNAfinance.xsd,SIFNASectionRosterReport.xsd"/>
-			<arg value="-npa"/>
-		</xjc>
-		<echo message="Generate Pojos using JAXB for SIF US 3.2 CEDS Objects (.../na/3.2 namespace) for all XSDs in one go..."/>
-		<xjc destdir="${output.base.dir}/sifus32/src" 
-              package="sif.dd.us32.model.ceds" 
-              extension="true" 
-              header="false" 
-              source="2.0">
-			<schema  dir="${input.base.dir}/XSD/sifus32/CEDS" includes="*.xsd" excludes="CEDS_AdultEducation.xsd,CEDS_Assessment.xsd,CEDS_Common.xsd,CEDS_CTech_Ed.xsd,CEDS_EarlyLearning.xsd,CEDS_K12.xsd,CEDS_PostSecondary.xsd,CEDS_Workforce.xsd,SIFNAcedsNamespace.xsd"/>
-			<arg value="-npa"/>
-		</xjc>
-	</target>
--->
-
 	<!-- ***************************** -->
 	<!-- Compile All Data Dictionaries -->
 	<!-- ***************************** -->
