@@ -52,7 +52,7 @@
 	<target name="02-clean" description="Deletes the build directory">
 		<delete dir="${class.dir}" />
 		<delete dir="${dist.dir}" />
-	  <delete dir="${output.base.dir}" />
+		<delete dir="${output.base.dir}" />
 	</target>
 
 	<!-- ***************** -->
@@ -64,7 +64,7 @@
 		<mkdir dir="${output.base.dir}"/>
 	</target>
 
-  <!-- ************************************************* -->
+	<!-- ************************************************* -->
 	<!-- Generate Data Dictionary Java Classes from XSD(s) -->
 	<!-- ************************************************* -->
 	<!--	
@@ -74,7 +74,7 @@
 		potential overrides of classes in the source directories. It is up to the developer to manually copy the generated classes
 		from the 'Generator/data/output' to the appropriate 'sif3Datamodel/src' directory before the compile and jar tasks are 
 		called for the final jar file.
-	-->	
+	-->
 	<target name="20-generate-AU13for30" depends="init" description="Generate POJOs using JAXB">
 		<echo message="Generate Pojos for Locale AU and Version 1.3/3.0"/>
 		<delete dir="${output.base.dir}/sifau13/src" />
@@ -90,6 +90,17 @@
 		</xjc>
 	</target>
 
+	<target name="30-generate-US32" depends="init" description="Create all US 3.2 POJOs based on XSD Directories">
+		<delete dir="${output.base.dir}/sifus32/src" />
+		<mkdir dir="${output.base.dir}/sifus32/src" />
+		<echo message="Generate Pojos using JAXB for SIF US 3.2 Entity Model for all XSDs in one go..." />
+		<xjc destdir="${output.base.dir}/sifus32/src" package="sif.dd.us32.model" extension="true" header="false" source="2.0">
+			<schema dir="${input.base.dir}/XSD/sifus32" includes="*.xsd" />
+			<arg value="-npa" />
+		</xjc>
+	</target>
+
+	<!--	
 	<target name="30-generate-US32" depends="init" description="Create all US 3.2 POJOs based on XSD Directories">
 		<delete dir="${output.base.dir}/sifus32/src" />
 		<mkdir dir="${output.base.dir}/sifus32/src"/>
@@ -130,10 +141,11 @@
 			<arg value="-npa"/>
 		</xjc>
 	</target>
+-->
 
-  <!-- ***************************** -->
-  <!-- Compile All Data Dictionaries -->
-  <!-- ***************************** -->
+	<!-- ***************************** -->
+	<!-- Compile All Data Dictionaries -->
+	<!-- ***************************** -->
 	<target name="compile-dd" depends="init" description="Compile Data Dictionary">
 		<echo message="Compile: Compile Data dictionary"/>
 		<javac destdir="${class.dir}" debug="on" verbose="false">
@@ -143,24 +155,24 @@
 		</javac>
 	</target>
 
-  <!-- ********************************* -->
-  <!-- JAR Targets for Data Dictionaries -->
-  <!-- ********************************* -->
+	<!-- ********************************* -->
+	<!-- JAR Targets for Data Dictionaries -->
+	<!-- ********************************* -->
 	<target name="10-jar-dd-au13for30" depends="compile-dd" description="Create jar file for SIF AU 1.3/3.0">
-    <antcall target="jar-dd">
-      <param name="locale" value="au"/>
-      <param name="sifddversion" value="1.3"/>
-      <param name="srcDir" value="au30"/>
-    </antcall>
+		<antcall target="jar-dd">
+			<param name="locale" value="au"/>
+			<param name="sifddversion" value="1.3"/>
+			<param name="srcDir" value="au30"/>
+		</antcall>
 	</target>
 
-  <target name="15-jar-dd-us32" depends="compile-dd" description="Create jar file for SIF NA 3.2">
-    <antcall target="jar-dd">
-      <param name="locale" value="us"/>
-      <param name="sifddversion" value="3.2"/>
-      <param name="srcDir" value="us32"/>
-    </antcall>
-  </target>
+	<target name="15-jar-dd-us32" depends="compile-dd" description="Create jar file for SIF NA 3.2">
+		<antcall target="jar-dd">
+			<param name="locale" value="us"/>
+			<param name="sifddversion" value="3.2"/>
+			<param name="srcDir" value="us32"/>
+		</antcall>
+	</target>
 
 	<target name="jar-dd">
 		<echo message="Create Jar: sifDataModel_${locale}${sifddversion}.jar from source ${srcDir}" />
