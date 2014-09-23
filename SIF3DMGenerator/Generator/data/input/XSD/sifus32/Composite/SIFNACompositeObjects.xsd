@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.2" targetNamespace="http://www.sifassociation.org/datamodel/na/3.2" elementFormDefault="qualified">
+	<xs:include schemaLocation="SIFNACore.xsd"/>
+</xs:schema>

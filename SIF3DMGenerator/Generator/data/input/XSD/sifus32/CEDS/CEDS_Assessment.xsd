@@ -1,0 +1,3738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../Entity/SIFglobal.xsd"/>
+	<xs:complexType name="assessmentFamilyCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentFamilyShortName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Family Short Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000933</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5934</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The abbreviated title of the Assessment Family. An Assessment Family is a set of assessments with a common name, jurisdiction, or focus.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFamilyTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Family Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000932</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5933</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The full title of the Assessment Family. An Assessment Family is a set of assessments with a common name, jurisdiction, or focus, such as Graduate Record Exam or National Assessment of Educational Progress.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentFamilyCEDS" type="assessmentFamilyCEDSType"/>
+	<xs:complexType name="assessmentCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000365</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5158</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001067</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5152</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity. This may be the publisher identifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentGUID" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment GUID</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000981</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5982</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The globally unique identifier of an Assessment using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000028</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5028</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The title or name of the assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000029</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5029</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The category of an assessment based on format and content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentShortName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Short Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000931</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5932</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An abbreviated title for an assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAcademicSubject" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Academic Subject</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000021</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5021</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentLevelForWhichDesigned" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Level for Which Designed</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000177</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5177</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The typical grade or combination of grade-levels, developmental levels, or age-levels for which an assessment is designed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentObjective" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Objective</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000382</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5373</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>This is the objective that the assessment is measuring.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPurpose" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Purpose</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000026</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5026</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The reason for which an assessment is designed or delivered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentTypeAdministeredToChildrenWithDisabilities" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Type Administered to Children With Disabilities</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000415</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5405</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The types of assessments administered to children with disabilities.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentEarlyLearningDevelopmentalDomain" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Early Learning Developmental Domain</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001000</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6003</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The developmental domains related to early learning.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentProvider" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Provider</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001006</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6009</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Identifies the provider or publisher of the assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestScoreMetricType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Score Metric Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000369</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5368</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The specific method used to report the performance and achievement of the assessment. This is the metric that is being used to derive the scores.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Language Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000317</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5317</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The code for the specific language or dialect that a person uses to communicate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentCEDS" type="assessmentCEDSType"/>
+	<xs:complexType name="assessmentFormCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentFormName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000024</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5024</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of a given assessment form.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Number</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000366</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5365</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number of a given assessment form.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAcademicSubject" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Academic Subject</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000021</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5021</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormAccommodationList" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Accommodation List</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001185</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6136</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The human readable list of one or more of the specific accommodations available. If no accommodations are provided, then this list will not be present.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormIntendedAdministrationEndDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Intended Administration End Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001187</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6138</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The ending date of the time period in which the assessment form is intended to be administered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormPlatformsSupported" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Platforms Supported</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001188</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6139</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A human readable list of delivery platforms the form will support.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormVersion" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Version</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001183</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6134</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The version number of the Assessment Form.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentLanguage" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Language</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001089</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6073</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The language in which the assessment form is designed to be delivered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSecureIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Secure Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000384</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5375</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates whether or not the assessment is a secure assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="intendedAdministrationStartDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Intended Administration Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001186</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6137</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The beginning date of the time period in which the form is intended to be administered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningResourcePublishedDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Published Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001184</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6135</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The published date of an educational resource, such as instructional media, an assessment form, or section of an assessment form.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subtest" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentFormSectionGUID" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section GUID</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000980</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5981</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSectionIdentifier" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section Identifier</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001191</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6142</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A unique number or alphanumeric code assigned to the Assessment Form Section using the system specified by Identification System for Assessment Form Section.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentAcademicSubject" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Academic Subject</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000021</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5021</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSectionSequenceNumber" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section Sequence Number</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000979</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5980</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The position of the assessment section presented in the sequence of sections within an assessment form.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSectionVersion" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section Version</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001189</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6140</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The version number of the Assessment Form Section.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="identificationSystemForAssessmentFormSection" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Identification System for Assessment Form Section</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001190</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6141</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A coding scheme that is used for identification of an Assessment Form Section.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSectionTimeLimit" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section Time Limit</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001192</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6143</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>If this section is timed, then this will identify the maximum amount of time the test taker can spend within this section.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSectionSealed" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section Sealed</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001193</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6144</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Indicates this section is sealed, meaning the test taker cannot enter the section until authorized by the proctor.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSectionReentry" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Section Reentry</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001194</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6145</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Indicates that this section can be re-entered, meaning the test taker can return to this section after they have left the section. A common example of this is a two section test where one section does not allow the use of a calculator and the other does. Typically the test taker cannot return to the non-calculator section after they have used a calculator.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningResourcePublishedDate" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Resource Published Date</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001184</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6135</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The published date of an educational resource, such as instructional media, an assessment form, or section of an assessment form.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="subtestAssessmentItem" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentFormSubtestItemWeightCorrect" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Subtest Item Weight Correct</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001010</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6013</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSubtestItemWeightIncorrect" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Subtest Item Weight Incorrect</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001012</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6014</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A weighting factor for how the item score is used to compute a sub-test score when the item is attempted and incorrect. Item weight should be a negative value if the item subtracts from the score if missed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentFormSubtestItemWeightNotAttempted" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Form Subtest Item Weight Not Attempted</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001013</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6015</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A weighting factor for how the item score is used to compute a sub-test score when the item has not been attempted by the student. Item weight should be a negative value if the item subtracts from the score if not attempted.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentFormCEDS" type="assessmentFormCEDSType"/>
+	<xs:complexType name="assessmentSessionCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentSessionType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001018</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6020</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The type of session that is scheduled.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionLocation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Location</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000597</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5590</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the place where an assessment is administered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionScheduledStartDateTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Scheduled Start Date Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001019</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6021</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date and time the assessment is scheduled to begin.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionScheduledEndDateTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Scheduled End Date Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001020</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6022</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date and time the assessment is scheduled to end.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionActualStartDateTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Actual Start Date Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001021</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6023</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date and time the assessment actually began.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionActualEndDateTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Actual End Date Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001022</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6024</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date and time the assessment actually ended.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionAdministratorIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Administrator Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000410</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5400</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The unique identifier of the person overseeing the administration of an assessment. This is typically at a district or school level or at an administrator at a testing facility.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionProctorIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Proctor Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000411</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5401</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The unique identifier of the person overseeing the assessment session in the setting.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionStaffRoleType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Staff Role Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001212</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6179</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The type of role served related to the administration of an assessment session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lEAIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Education Agency Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001072</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5159</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a local education agency.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="localEducationAgencyIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Education Agency Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001068</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5153</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to a local education agency by a school system, a state, or other agency or entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001073</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5161</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an institution.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001069</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5155</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionAllottedTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Allotted Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000408</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5399</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The duration of time allotted for the assessment session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionSecurityIssue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Security Issue</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000968</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5969</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of a security issue, if any, discovered for an administration of an assessment, such as suspected cheating by a student or a teacher changing answers after a student takes the test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionSpecialCircumstanceType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Special Circumstance Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000389</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5380</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionSpecialEventDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Special Event Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001093</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6077</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Describes special events that occur before during or after the assessment session that may impact use of results according to rules related to the Assessment Registration Testing Indicator.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentSessionCEDS" type="assessmentSessionCEDSType"/>
+	<xs:complexType name="assessmentItemCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentItemIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000630</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5623</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The identifier that uniquely identifies an assessment item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000390</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5382</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The specific type of assessment item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAcademicSubject" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Academic Subject</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000021</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5021</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemBodyText" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Body Text</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001267</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6233</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The complete text of an assessment item including all applicable parts such as stimulus, stem, and possible response options presented.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemStimulus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Stimulus</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001268</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6234</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The text, source (e.g., video clip), and/or graphic about which the assessment item is written. The stimulus provides the context of the item/task to which the student must respond.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemDifficulty" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Difficulty</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000391</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5383</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The percentage of students who answered the item correctly during trial testing of the item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemDistractorAnalysis" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Distractor Analysis</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000398</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5390</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The analysis of the distractors provided for a specific assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemStem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Stem</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000400</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5392</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The statement of the question or prompt for an Assessment Item to which the student responds.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemAllottedTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Allotted Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000403</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5395</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The amount of time allotted for a specific item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemMinimumScore" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Minimum Score</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000708</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5684</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The minimum number of points possible for the assessment item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemMaximumScore" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Maximum Score</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000707</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5683</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The maximum number of points possible for the assessment item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemTextComplexityValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Text Complexity Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000906</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5906</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The complexity of the text using the scaling system defined by Text Complexity System, e.g. Lexile™ for assessment items with a reading passage.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemTextComplexitySystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Text Complexity System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000907</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5907</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The scaling system used to specify the text complexity of an assessment item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemResponseSecurityIssue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Response Security Issue</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000969</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5970</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of security issue, if any, related to a learner's response to an assessment item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemBankIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Bank Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001181</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6132</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>If the assessment is provided with an item bank, then this identifies the item bank: a unique code or number used by the item banking system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemBankName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Bank Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001182</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6133</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>If the assessment is provided with an item bank, then this is the name of the item bank.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="naepAspectsOfReading" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>NAEP Aspects of Reading</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001122</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6166</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Aspects of reading defined by the National Assessment of Educational Progress (NAEP 2005b Framework).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="naepMathematicalComplexityLevel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>NAEP Mathematical Complexity Level</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001088</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6072</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Complexity levels defined by the National Assessment of Educational Progress (NAEP 2005a Framework).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemReleaseStatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Release Status</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001263</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6229</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates that the assessment item has been released to the public.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentItemLinkingItemIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Item Linking Item Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001261</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6227</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates that the item is intended to be administered in two different grades for the goal of establishing cross grade comparison.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="itemPossibleResponse" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemPossibleResponseSequenceNumber" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Possible Response Sequence Number</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000905</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5905</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The position of this response in the list of responses displayed, such as for a multiple choice item type.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemPossibleResponse" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Possible Response Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000908</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5908</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The description of each distracter on an assessment item, explaining why it is there, what misunderstandings it exposes.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemPossibleResponseOption" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Possible Response Option</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001269</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6235</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The possible response presented to the participant within a selected-response/multiple-choice assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemPossibleResponseCorrectIndicator" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Possible Response Correct Indicator</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001217</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6183</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Indicates that the possible response is the correct response.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemPossibleResponseFeedbackMessage" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Possible Response Feedback Message</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000904</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5904</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A message provided to the person being assessed after giving a response that matches the possible response.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="itemResponse" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemResponseStartDate" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Start Date</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000959</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5960</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The date on which the assessment item was presented to the learner.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseStartTime" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Start Time</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000958</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5959</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The time of day that the assessment item was presented to the learner.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseDuration" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Duration</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000402</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5394</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The total amount of time in seconds or milliseconds that a person spent responding to a given assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseStatus" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Status</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000405</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5396</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The status of the response for a given item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseAidSetUsed" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Aid Set Used</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000406</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5397</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A tool or aid set used while viewing the item. This can include things like a calculator, reference tools, etc.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseScoreValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Score Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000724</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5700</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The score given to a person's response to an assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseChoicePattern" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Choice Pattern</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000393</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5385</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The distribution of responses for each choice in the assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseDescriptiveFeedback" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Descriptive Feedback</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000891</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5891</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The formative descriptive feedback that was given to a learner in response to the results from a scored/evaluated assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseScaffoldingItemFlag" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Scaffolding Item Flag</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000954</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5955</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Indicates that the response is to a scaffolding problem rather than the main/assigned problem. A scaffolding item is a follow-up formative assessment item used to assess prerequisite or component skills, presented immediately after a learner gives an incorrect answer on the previous item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseHintCount" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Hint Count</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000955</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5956</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The total number of hints presented as the learner responded to a formative assessment item. This may include hints requested by the learner or hints automatically presented such as in an online tutoring system. Presentation of a scaffolding item is a separate response record and not counted as a hint.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseHintIncludedAnswer" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Hint Included Answer</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000956</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5957</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Indicates that one of the hints presented included the correct answer.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseFirstAttemptDuration" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response First Attempt Duration</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000957</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5958</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The amount of time in seconds or milliseconds that a person took to give an initial response, a first attempt to answer a formative assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="proficiencyStatus" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Proficiency Status</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000573</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5565</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An indication of whether a student's scores were proficient.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001063</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6069</cedsURL>
+								</xs:appinfo>
+								<xs:documentation> A specific response to an assessment item by the person being assessed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="itemResponseTheory" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemResponseTheoryParameterA" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter A</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001251</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6217</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The Item Response Theory value representing the discrimination of the item. The a parameter is found by taking the slope of the line tangent to the item characteristic curve at the inflection point, B. The parameter is the steepness of the curve at its steepest point.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterB" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter B</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001252</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6218</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The Item Response Theory value representing the difficulty of the item. It is the Theta value for the location of the inflection point of the item characteristic curve.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterDifficultyCategory" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter Difficulty Category</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001253</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6219</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A category for the difficulty of the item based on the Item Response Theory value.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterC" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter C</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001254</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6220</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The Item Response Theory value for multiple choice items representing the guessing of the item. The c parameter is a lower asymptote. It is the low point of the curve as it move to negative infinity on the horizontal axis. You can think of c as the probability that a chicken would get the item right.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterD1" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter D1</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001255</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6221</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>For polytomous assessment items with more than two possible responses, this is the item response theory value representing the threshold between the first and second item characteristic functions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterD2" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter D2</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001256</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6222</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>For polytomous assessment items with more than two possible responses, this is the item response theory value representing the threshold between the second and third item characteristic functions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterD3" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter D3</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001257</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6223</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>For polytomous assessment items with more than three possible responses, this is the item response theory value representing the threshold between the third and fourth item characteristic functions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterD4" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter D4</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001258</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6224</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>For polytomous assessment items with more than four possible responses, this is the item response theory value representing the threshold between the fourth and fifth item characteristic functions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterD5" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter D5</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001259</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6225</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>For polytomous assessment items with more than five possible responses, this is the item response theory value representing the threshold between the fifth and sixth item characteristic functions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryParameterD6" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Parameter D6</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001260</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6226</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>For polytomous assessment items with more than six possible responses, this is the item response theory value representing the threshold between the sixth and seventh item characteristic functions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryPointBiserialCorrelationValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Point Biserial Correlation Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001262</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6228</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The correlation between correct answers on this item and total correct answers on the test during a previous administration. </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryDIFValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory DIF Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001264</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6230</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A value representing the Differential Item Functioning, also referred to as measurement bias, for the assessment item. The value represents differences in the functioning of the item across groups which are matched on the attribute being measure by the item. The value is calculated using Mantel-Haenszel approach or a comparable algorithm so that a value of 1.0 represents no bias.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryKappaValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Kappa Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001265</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6231</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The measure used to represent the degree of agreement among raters.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResponseTheoryKappaAlgorithm" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Response Theory Kappa Algorithm</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001266</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6232</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The algorithm used to derive the Assessment Item Kappa Value</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="itemBodyCustomInteraction" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemBodyCustomInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Custom Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001102</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6079</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The custom interaction provides an opportunity for extensibility of this specification to include support for interactions not currently documented. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="itemCharacteristic" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemCharacteristicValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Characteristic Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000709</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5685</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A psychometric measure provided for an assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemCharacteristicType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Characteristic Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000392</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5384</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The type of psychometric measure provided for assessment item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="assessmentRubric" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentRubricIdentifier" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Rubric Identifier</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000422</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5412</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An identifier assigned to a rubric.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentRubricTitle" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Rubric Title</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000421</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5411</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The title of the rubric.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentRubricURLReference" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Rubric URL Reference</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000423</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5413</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The URL location where the rubric may be found.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionCategory" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Category</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001469</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6441</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A textual label for category by which Rubric Criterion may be grouped.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionDescription" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Description</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001470</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6442</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Text describing a criterion that must be met to demonstrate quality for a product, process, or performance task.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionLevelDescription" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Level Description</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001471</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6443</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Text describing one or more benchmarks that must be met to achieve a degree of achievement on a product, process, or performance task.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionLevelFeedback" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Level Feedback</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001472</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6444</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Pre-defined feedback text to be relayed to the person or organization being evaluated. This may include guidance and suggestions for improvement or development.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionLevelPosition" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Level Position</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001473</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6445</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A numeric value representing the level's position in the list of levels defined for the Rubric Criterion.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionLevelQualityLabel" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Level Quality Label</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001474</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6446</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A qualitative description of this degree of achievement used for column headers or row labels in tabular rubrics.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionLevelScore" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Level Score</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001475</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6447</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The points awarded for achieving this level.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionPosition" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Position</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001476</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6448</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A numeric value representing this criterion's position in the criteria list for this rubric.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionTitle" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Title</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001477</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6449</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The title of the rubric criterion.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricCriterionWeight" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Criterion Weight</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001478</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6450</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A numeric weight assigned to this Rubric Criterion, used for scored rubrics.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="rubricDescription" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Rubric Description</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001479</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6451</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Text describing the intended use of the rubric.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="apip" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemAdaptiveIndicator" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Adaptive Indicator</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001139</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6111</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>This indicator determines whether an assessment item is an adaptive item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPItemBodyXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Item Body XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001138</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6110</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The item body contains the text, graphics, media objects, and interactions that describe the item's content and information about how it is structured. The body is presented by combining it with stylesheet information, either explicitly or implicitly using the default style rules of the delivery or authoring system. This element contains the appropriate XML from the IMS Global APIP Specification defining the various item body interactions.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPModalFeedbackXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Modal Feedback XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001137</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6109</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Modal feedback is shown to the candidate directly following response processing. The value of an outcome variable is used in conjunction with the showHide and identifier attributes to determine whether or not the feedback is shown in a similar way to feedbackElement. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPOutcomeDeclarationXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Outcome Declaration XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001134</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6106</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Outcome variables are declared by outcome declarations. Their value is set either from a default given in the declaration itself or by a responseRule during response processing. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPResponseDeclarationXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Response Declaration XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001133</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6105</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Response declarations state what the response variables include. The response declaration may assign an optional correct response. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPResponseProcessingTemplateURL" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Response Processing Template URL</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001131</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6103</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>These templates are described using the processing language defined in IMS Global APIP specification and are distributed (in XML form) along with it. Delivery engines that support generalized response processing do not need to implement special mechanisms to support them as a template file can be parsed directly while processing the assessment item that refers to it. This element provides the URL for the template.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPResponseProcessingXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Response Processing XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001132</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6104</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Response processing is the process by which the Delivery Engine assigns outcomes based on the learner's responses. The outcomes may be used to provide feedback to the learner Feedback is either provided immediately following the end of the learner's attempt or it is provided at some later time, perhaps as part of a summary report on the item session. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPTemplateDeclarationXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Template Declaration XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001135</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6107</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Template declarations declare item variables that are to be used specifically for the purposes of cloning items. They can have their value set only during template processing. They are referred to within the item body in order to individualize the clone and possibly also within the response Processing rules if the cloning process affects the way the item is scored. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemAPIPTemplateProcessingXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item APIP Template Processing XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001136</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6108</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Template processing consists of one or more template rules that are followed by the cloning engine or delivery system in order to assign values to the template variables. Template processing is identical in form to responseProcessing except that the purpose is to assign values to template variables, not outcome variables. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemResultXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Result XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001284</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6250</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The assessment item result formatted according to the IMS Global QTI Specification.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="apipInteraction" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentItemBodyAssociateInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Associate Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001123</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6100</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An associate interaction presents candidates with a number of choices and allows them to create associations between them. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyChoiceInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Choice Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001112</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6090</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The choice interaction presents a set of choices to the candidate. The candidate's task is to select one or more of the choices, up to a maximum of maxChoices. The interaction is always initialized with no choices selected. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyDrawingInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Drawing Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001103</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6080</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The drawing interaction allows the candidate to use a common set of drawing tools to modify a given graphical image (the canvas). It must be bound to a response variable with base-type file and single cardinality. The result is a file in the same format as the original image. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyEndAttemptInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body End Attempt Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001121</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6098</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The end attempt interaction is a special type of interaction which allows item authors to provide the candidate with control over the way in which the candidate terminates an attempt. The candidate can use the interaction to terminate the attempt (triggering response processing) immediately, typically to request a hint. It must be bound to a response variable with base-type boolean and single cardinality. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyExtendedTextInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Extended Text Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001120</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6097</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An extended text interaction allows the candidate to enter an extended amount of text. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyGapMatchInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Gap Match Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001104</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6081</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A gap match interaction contains a number gaps that the candidate can fill from an associated set of choices. The candidate must be able to review the content with the gaps filled in context, as indicated by their choices. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyGraphicGapMatchInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Graphic Gap Match Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001106</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6083</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A graphic gap-match interaction is a graphical interaction with a set of gaps that are defined as areas (hotspots) of the graphic image and an additional set of gap choices that are defined outside the image. The candidate must associate the gap choices with the gaps in the image and be able to review the image with the gaps filled in context, as indicated by their choices. Care should be taken when designing these interactions to ensure that the gaps in the image are a suitable size to receive the required gap choices. It must be clear to the candidate which hotspot each choice has been associated with. When associated, choices must appear wholly inside the gaps if at all possible and, where overlaps are required, should not hide each other completely. If the candidate indicates the association by positioning the choice over the gap (e.g., drag and drop) the system should 'snap' it to the nearest position that satisfies these requirements. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyGraphicOrderInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Graphic Order Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001108</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6085</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A graphic order interaction is a graphic interaction with a corresponding set of choices that are defined as areas of the graphic image. The candidate's task is to impose an ordering on the areas (hotspots). The order hotspot interaction should only be used when the spatial relationship of the choices with respect to each other (as represented by the graphic image) is important to the needs of the item. Otherwise, orderInteraction should be used instead with separate material for each option. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyHotSpotInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Hot Spot Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001107</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6084</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A hotspot interaction is a graphical interaction with a corresponding set of choices that are defined as areas of the graphic image. The candidate's task is to select one or more of the areas (hotspots). The hotspot interaction should only be used when the spatial relationship of the choices with respect to each other (as represented by the graphic image) is important to the needs of the item. Otherwise, choiceInteraction should be used instead with separate material for each option. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyHottextInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Hottext Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001116</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6093</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The hottext interaction presents a set of choices to the candidate represented as selectable runs of text embedded within a surrounding context, such as a simple passage of text. Like choiceInteraction, the candidate's task is to select one or more of the choices, up to a maximum of maxChoices. The interaction is initialized from the defaultValue of the associated response variable, a NULL value indicating that no choices are selected (the usual case). The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyInlineChoiceInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Inline Choice Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001114</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6091</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A inline choice is an inline interaction that presents the user with a set of choices, each of which is a simple piece of text. The candidate's task is to select one of the choices. Unlike the Choice Interaction, the delivery engine must allow the candidate to review their choice within the context of the surrounding text.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyMatchInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Match Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001105</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6082</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A match interaction presents candidates with two sets of choices and allows them to create associates between pairs of choices in the two sets, but not between pairs of choices in the same set. Further restrictions can still be placed on the allowable associations using the matchMax attribute of the choices. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyMediaInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Media Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001115</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6092</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The media interaction allows more control over the way the candidate interacts with a time-based media object and allows the number of times the media object was experienced to be reported in the value of the associated response variable, which must be of base-type integer and single cardinality. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyOrderInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Order Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001117</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6094</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>In an order interaction the candidate's task is to reorder the choices, the order in which the choices are displayed initially is significant. By default the candidate's task is to order all of the choices but a subset of the choices can be requested using the maxChoices and minChoices attributes. When specified the candidate must select a subset of the choices and impose an ordering on them. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyPositionObjectInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Position Object Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001118</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6095</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The position object interaction consists of a single image which must be positioned on another graphic image (the stage) by the candidate. Like selectPointInteraction, the associated response may have an areaMapping that scores the response on the basis of comparing it against predefined areas but the delivery engine must not indicate these areas of the stage. Only the actual position(s) selected by the candidate shall be indicated. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodySelectPointInteraction" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Select Point Interaction</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001110</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6088</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A graphic associate interaction is a graphic interaction with a corresponding set of choices that are defined as areas of the graphic image. The candidate's task is to associate the areas (hotspots) with each other. The graphic associate interaction should only be used when the graphical relationship of the choices with respect to each other (as represented by the graphic image) is important to the needs of the item. Otherwise, associateInteraction should be used instead with separate Material for each option. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodySelectPointInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Select Point Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001109</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6087</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Like hotspotInteraction, a select point interaction is a graphic interaction. The candidate's task is to select one or more points. The associated response may have an areaMapping that scores the response on the basis of comparing it against predefined areas but the delivery engine must not indicate these areas of the image. Only the actual point(s) selected by the candidate shall be indicated. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodySliderInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Slider Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001111</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6089</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The slider interaction presents the candidate with a control for selecting a numerical value between a lower and upper bound. It must be bound to a response variable with single cardinality with a base-type of either integer or float. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyTextEntryInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Text Entry Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001119</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6096</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A textEntry interaction obtains a simple piece of text from the candidate. Like inlineChoiceInteraction, the delivery engine must allow the candidate to review their choice within the context of the surrounding text. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemBodyUploadInteractionXML" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Body Upload Interaction XML</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001222</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6099</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The upload interaction allows the candidate to upload a pre-prepared file representing their response. It must be bound to a response variable with base-type file and single cardinality. The XML from the IMS Global APIP Specification would be included.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentItemInteractionType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Item Interaction Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001158</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6117</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The assessment item body interaction type as defined by IMS Global specifications.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentItemCEDS" type="assessmentItemCEDSType"/>
+	<xs:complexType name="assessmentAssetCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentAssetIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001198</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6149</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique code identifying the Assessment Asset provided by the authoring system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetIdentifierType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Identifier Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001199</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6150</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The type of identifier that is provided for this asset.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001200</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6151</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the Assessment Asset.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetOwner" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Owner</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001201</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6152</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the ownership rights holder or publisher of the asset.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001196</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6147</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Specifies a predominant type of assessment asset represented by the Learning Resource. Assessment assets represent any content used to compose an assessment item, is referenced by an item but not part of the item content itself, or is content that is included as part of a section within an assessment form. Assets can be static content such as art work or dynamic assets such as calculators.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetPublishedDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Published Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001197</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6148</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date that this version of the asset was made available for use.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetVersion" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Version</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001195</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6146</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A version number or label defined by the publisher.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetContentXML" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Content XML</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001202</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6153</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>XML encoded in UTF-8 representing the content of the Assessment Asset.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetContentMimeType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Content Mime Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001203</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6154</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>MIME type to specifically indicate the Assessment Asset content type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAssetContentURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Asset Content URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001204</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6155</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The Uniform Resource Locator (URL) location of the external Assessment Asset content.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Language Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000317</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5317</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The code for the specific language or dialect that a person uses to communicate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentAssetCEDS" type="assessmentAssetCEDSType"/>
+	<xs:complexType name="assessmentSubtestCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentSubtestIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000367</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5366</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an assessment subtest.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestIdentifierType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Identifier Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001014</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6016</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The type of identifier that is provided for a Subtest.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000275</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5275</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name or title of the subtest.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestAbbreviation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Abbreviation</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000368</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5367</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The shortened name identifying the assessment for use in reference and/or reports.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000274</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5274</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the subtest (e.g., vocabulary, measurement, or geometry).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestVersion" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Version</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000388</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5379</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The version of the subtest that is included for the assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestPublishedDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Published Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001091</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6075</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the Subtest was published.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestMinimumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Minimum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000395</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5387</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The minimum value possible for the measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestMaximumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Maximum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000396</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5388</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The maximum value for the measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestScaleOptimalValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Optimal Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000397</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5389</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The optimal value for this measurement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAcademicSubject" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Academic Subject</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000021</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5021</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPurpose" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Purpose</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000026</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5026</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The reason for which an assessment is designed or delivered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestScoreMetricType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Score Metric Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000369</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5368</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The specific method used to report the performance and achievement of the assessment. This is the metric that is being used to derive the scores.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentContentStandardType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Content Standard Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000605</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5598</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An indication as to whether an assessment conforms to a standard.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestRules" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Rules</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000719</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5695</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A description of the rules to produce a student test/subtest score from for a grouping of student item scores.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormSubtestTier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Subtest Tier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001214</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6180</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>In a hierarchy of subtests, this element represents the level of the sub test in the hierarchy. The top tier and default is zero.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentFormSubtestContainerOnly" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Form Subtest Container Only</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001215</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6181</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>In a hierarchy of subtests, this indicates that this tier is only used as a level in the hierarchy and does not represent a scoring model.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentSubtestCEDS" type="assessmentSubtestCEDSType"/>
+	<xs:complexType name="assessmentSubtestResultCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentSubtestResultPretestOutcome" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Pretest Outcome</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000572</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5564</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The results of a pre-test in academic subjects.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultScoreValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Score Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000245</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5245</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A meaningful raw score, derived score, or statistical expression of the performance of a person on an assessment. The type of result is indicated by the Metric Type element. The results can be expressed as a number, percentile, range, level, etc. The score relates to all scored items or a sub test scoring one aspect of performance on the test. This value may or may not correspond to one or more Performance Levels.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestScoreMetricType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Score Metric Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000369</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5368</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The specific method used to report the performance and achievement of the assessment. This is the metric that is being used to derive the scores.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultDescriptiveFeedback" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Descriptive Feedback</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000890</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5890</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The formative descriptive feedback that was given to a learner based on a scored/evaluated portion of an assessment as recorded in the Subtest Result entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultDateUpdated" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Date Updated</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000970</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5971</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The most recent date that the subtest result was calculated/updated. The value should be the same as Assessment Subtest Result Date Created if the subtest has only been scored once, but may be different if the score was recalculated with a different result.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultDateCreated" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Date Created</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000971</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5972</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the assessment subtest result was generated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultPreliminaryIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Preliminary Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001007</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6010</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>If this score is preliminary, then this attribute value should be set. Preliminary scores may be provided for early use by the assessment program or user while final scoring is occurring.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="diagnosticStatementSource" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Diagnostic Statement Source</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001008</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6011</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Identifies the source of the Diagnostic Statement based on a scored/evaluated portion of an assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultNumberOfResponses" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Number of Responses</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001009</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6012</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number of responses that are included with the Student Score Set. Responses are those items that were attempted (partially or fully answered) by the student and not necessarily the number of items in the sub test (which can be determined from the sub test object).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultDescriptiveFeedbackSource" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Descriptive Feedback Source</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001092</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6076</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Identifies the source of the descriptive feedback that was given to a learner based on a scored/evaluated portion of an assessment. May indicate if this is teacher, scorer, or system generated feedback. Values for this attribute would be determined by the assessment program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSubtestResultDiagnosticStatement" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Subtest Result Diagnostic Statement</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001219</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6185</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A statement intended for use by education professionals, using professional terminology, to interpret learner needs based on the scored/evaluated portion of an assessment. This statement may inform Descriptive Feedback given to the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="instructionalRecommendation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Instructional Recommendation</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000370</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5369</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>This provides the next steps for instruction for the student based upon the assessment results and student characteristics.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentSubtestResultCEDS" type="assessmentSubtestResultCEDSType"/>
+	<xs:complexType name="assessmentRegistrationCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentRegistrationParticipationIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Participation Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000025</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5025</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An indication of whether a student participated in an assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gradeLevelWhenAssessed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Grade Level When Assessed</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000126</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5126</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The grade or developmental level of a student when assessed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAccommodationCategory" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Accommodation Category</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000383</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5374</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A category of accommodations needed for a given assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="localEducationAgencyIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Education Agency Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001068</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5153</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to a local education agency by a school system, a state, or other agency or entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001069</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5155</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lEAIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Education Agency Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001072</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5159</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a local education agency.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001073</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5161</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an institution.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationReasonNotCompleting" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Reason Not Completing</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000540</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5531</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The primary reason a participant did not complete an assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationAssignorIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Assignor Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000889</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5889</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The unique identifier of the person who assigned the assessment to the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationDaysOfInstruction" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Days of Instruction</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001015</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6017</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number of days of instruction the student has taken prior to testing.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationRetestIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Retest Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001016</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6018</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates if this registration is for a retest (retake). Retest can occur if a student failed a prior attempt and is eligible to retake. Other retest scenarios also can occur.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationCreationDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Creation Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001017</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6019</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date/time assignment is made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationTestingIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Testing Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001055</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6061</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates rules about use of results based on Special Events before during or after the test. The option set values are determined by the testing program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationScorePublishDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Score Publish Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001056</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6062</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date set by the testing program when the test scores are published. For formative or classroom assessments, this will likely be the date when the scored the individual test. For summative assessments, this date is likely set for a group of assessments when the processing system releases the scores.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationGradeLevelToBeAssessed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Grade Level To Be Assessed</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001057</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6063</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The grade or level at which the learner is to be assessed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAccommodationOtherDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Accommodation Other Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001157</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6116</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the accommodation when 'Assessment Accommodation Type' is set to 'Other'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRegistrationTestAttemptIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Registration Test Attempt Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001162</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6119</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique identifier for the test attempt assigned by the delivery system.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="reasonNotTested" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Reason Not Tested</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000228</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5228</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The primary reason a student is not tested.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentRegistrationCEDS" type="assessmentRegistrationCEDSType"/>
+	<xs:complexType name="assessmentAdministrationCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001067</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5152</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity. This may be the publisher identifier.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000365</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5158</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000977</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5978</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name given to an assessment event.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationOrganizationName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Organization Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000966</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5967</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the organization with overall responsibility for the assessment event.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000961</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5962</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The code given to the assessment event by a state or other authority directing overall administration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationStartDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000962</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5963</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The start date of the time period designated for the assessment administration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationStartTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Start Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000963</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5964</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The start time of the time period designated for the assessment administration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationFinishDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Finish Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000964</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5965</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The finish date of the time period designated for the assessment administration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationFinishTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Finish Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000965</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5966</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The finish time of the time period designated for the assessment administration.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSecureIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Secure Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000384</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5375</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates whether or not the assessment is a secure assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lEAIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Education Agency Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001072</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5159</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a local education agency.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="localEducationAgencyIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Education Agency Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001068</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5153</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to a local education agency by a school system, a state, or other agency or entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolIdentificationSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Identification System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001073</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5161</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an institution.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001069</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5155</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAdministrationAssessmentFamily" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Administration Assessment Family</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000967</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5968</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The title of the assessment family to be administered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentAdministrationCEDS" type="assessmentAdministrationCEDSType"/>
+	<xs:complexType name="assessmentPersonalNeedsProfileCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentNeedLanguageType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Need Language Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001023</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6025</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Defines as part of an Assessment Personal Needs Profile a preference for the language of the user interface.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentNeedType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Need Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001127</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6101</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A type of need identified for a learner as part of an assessment need profile.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPersonalNeedsProfileActivateByDefault" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Personal Needs Profile Activate By Default</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001005</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6008</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Determines if the alternative accessible content is rendered as the default content for the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPersonalNeedsProfileAssignedSupport" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Personal Needs Profile Assigned Support</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001004</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6007</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Defines whether or not the individual needs the kind of support defined by the entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="profileContent" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentNeedAlternativeRepresentationType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Alternative Representation Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001041</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6045</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the default presentation mode of the associated Alternative Representations accessibility.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedDirectionsOnly" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Directions Only</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001045</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6050</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile whether or not the verbal alternative content presentation should be applied to directive content only.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedHazardType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Hazard Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001024</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6026</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile a characteristic of a digital resource that may be specified as being dangerous to a user.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedItemTranslationDisplayLanguageType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Item Translation Display Language Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001038</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6042</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the default language for the displayed translation.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedKeywordTranslationLanguageType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Keyword Translation Language Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001039</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6043</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the default language for the keyword translation.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedSupportToolType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Support Tool Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001025</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6027</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the electronic tool associated with a resource.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedUserSpokenPreferenceType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need User Spoken Preference Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001044</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6049</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Used as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="profileControl" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentNeedTimeMultiplier" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Time Multiplier</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001049</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6055</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile. If the value is ‘unlimited’ then there is no time limit for the test.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="profileDisplay" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentNeedBrailleDotPressure" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Braille Dot Pressure</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001036</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6040</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the resistance pressure of Braille display pins.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedBrailleGradeType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Braille Grade Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001032</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6035</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the grade of Braille to use when using a Braille display.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedBrailleMarkType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Braille Mark Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001035</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6038</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile what textual properties to mark when using a Braille display.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedBrailleStatusCellType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Braille Status Cell Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001037</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6041</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the preferred presence or location of a Braille display status cell.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedInvertColorChoice" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Invert Color Choice</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001030</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6033</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the Access for All (AfA) preference to invert the foreground and background Colors.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedLineReaderHighlightColor" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Line Reader Highlight Color</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001050</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6056</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The color defined as part of an Assessment Personal Needs Profile to be used to highlight the point of line reader activity i.e. the line being read.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedLinkIndicationType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Link Indication Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001027</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6029</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the characteristics of presentation for a hyperlink when using a screen reader.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedMagnification" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Magnification</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001031</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6034</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the preferred magnification of the screen as a factor of a screen’s original size.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedMaskingType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Masking Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001046</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6051</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Specifies as part of an Assessment Personal Needs Profile the type of masks the user is able to create to cover portions of the question until needed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedNumberOfBrailleCells" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Number of Braille Cells</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001034</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6037</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the number of active Braille cells in a Braille display.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedNumberOfBrailleDotsType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Number of Braille Dots Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001033</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6036</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the number of dots in a Braille cell.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedPitch" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Pitch</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001087</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6031</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the pitch of a speech synthesizer.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedReadAtStartPreference" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Read At Start Preference</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001043</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6048</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Used as part of an Assessment Personal Needs Profile to define if the spoken play-back should commence from the start of a recording or not.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedSigningType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Signing Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001040</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6044</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the type of signing preferred by the user.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedSoundFileURL" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Sound File URL</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001048</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6053</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The URI of the sound file that is to be played to the user as an expression of encouragement when Masking is specified as part of an Assessment Personal Needs Profile. It is left to the system to determine when to play this audio file.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedSpeechRate" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Speech Rate</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001028</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6030</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the rate of speech of a speech synthesizer.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedSpokenSourcePreferenceType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Spoken Source Preference Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001042</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6046</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the preferred spoken audio form.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedTextMessagingString" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Text Messaging String</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001047</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6052</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The text string that is to be displayed to the user as an expression of encouragement when Masking is specified as part of an Assessment Personal Needs Profile. It is left to the system to determine when to display this string.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedUsageType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Usage Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001026</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6028</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedVolume" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Volume</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001029</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6032</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines as part of an Assessment Personal Needs Profile the volume of a speech synthesizer.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="screenEnhancement" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="assessmentNeedBackgroundColor" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Background Color</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001053</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6059</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>This is the preferred Background color for screen enhancement defined as part of an Assessment Personal Needs Profile.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedForegroundColor" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Foreground Color</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001052</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6058</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>This is the preferred Foreground color for screen enhancement defined as part of an Assessment Personal Needs Profile.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedIncreasedWhitespacingType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Increased Whitespacing Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001054</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6060</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines the user preferences for white spacing in lines, words and characters as part of an Assessment Personal Needs Profile.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="assessmentNeedOverlayColor" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Assessment Need Overlay Color</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001051</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6057</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>This is the preferred color for the overlay for screen enhancement defined as part of an Assessment Personal Needs Profile.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentPersonalNeedsProfileCEDS" type="assessmentPersonalNeedsProfileCEDSType"/>
+	<xs:complexType name="assessmentParticipantSessionCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentAccommodationCategory" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Accommodation Category</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000383</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5374</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A category of accommodations needed for a given assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAccommodationOtherDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Accommodation Other Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001157</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6116</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the accommodation when 'Assessment Accommodation Type' is set to 'Other'.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentAccommodationType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Accommodation Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000385</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5376</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The specific accommodation necessary for the administration of the assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentParticipantSessionDeliveryDeviceDetails" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Participant Session Delivery Device Details</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001003</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6006</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The details about the device or platform by with which the assessment was delivered to the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentParticipantSessionLanguage" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Participant Session Language</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000371</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5370</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The language that the assessment is administered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentParticipantSessionPlatformType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Participant Session Platform Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000386</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5377</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The platform with which the assessment was delivered to the student during the assessment session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentParticipantSessionPlatformUserAgent" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Participant Session Platform User Agent</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001152</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6112</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A list of product tokens (keywords) with optional comments that identifies the client hardware and software with which the assessment was delivered to the student during the assessment session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentParticipantSessionSecurityIssue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Participant Session Security Issue</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001130</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6102</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Describes an issue related to the security of a testing instrument identified during a specific instance of delivering an assessment to a specific person during a specific time period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentParticipantSessionTimeAssessed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Participant Session Time Assessed</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000407</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5398</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The overall time a learner actually spent during the assessment session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionActualEndDateTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Actual End Date Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001022</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6024</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date and time the assessment actually ended.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionActualStartDateTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Actual Start Date Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001021</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6023</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Date and time the assessment actually began.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionLocation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Location</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000597</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5590</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the place where an assessment is administered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionSecurityIssue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Security Issue</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000968</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5969</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of a security issue, if any, discovered for an administration of an assessment, such as suspected cheating by a student or a teacher changing answers after a student takes the test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionSpecialCircumstanceType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Special Circumstance Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000389</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5380</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentSessionSpecialEventDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Session Special Event Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001093</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6077</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Describes special events that occur before during or after the assessment session that may impact use of results according to rules related to the Assessment Registration Testing Indicator.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentParticipantSessionCEDS" type="assessmentParticipantSessionCEDSType"/>
+	<xs:complexType name="learnerActionCEDSType">
+		<xs:sequence>
+			<xs:element name="learnerActionDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Action Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000937</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5938</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the action was taken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActionTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Action Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000936</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5937</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The time to the second or millisecond when the action was taken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActionType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Action Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000934</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5935</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The type of action taken by the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActionValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Action Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000935</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5936</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The value representing input by the learner using an online system, such as a value entered in response to an assessment question, or the URL of a learning resource link clicked.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="learnerActionCEDS" type="learnerActionCEDSType"/>
+	<xs:complexType name="rubricCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentRubricIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Rubric Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000422</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5412</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An identifier assigned to a rubric.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRubricTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Rubric Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000421</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5411</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The title of the rubric.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentRubricURLReference" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Rubric URL Reference</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000423</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5413</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The URL location where the rubric may be found.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionCategory" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Category</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001469</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6441</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A textual label for category by which Rubric Criterion may be grouped.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001470</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6442</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Text describing a criterion that must be met to demonstrate quality for a product, process, or performance task.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionLevelDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Level Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001471</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6443</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Text describing one or more benchmarks that must be met to achieve a degree of achievement on a product, process, or performance task.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionLevelFeedback" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Level Feedback</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001472</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6444</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Pre-defined feedback text to be relayed to the person or organization being evaluated. This may include guidance and suggestions for improvement or development.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionLevelPosition" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Level Position</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001473</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6445</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A numeric value representing the level's position in the list of levels defined for the Rubric Criterion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionLevelQualityLabel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Level Quality Label</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001474</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6446</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A qualitative description of this degree of achievement used for column headers or row labels in tabular rubrics.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionLevelScore" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Level Score</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001475</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6447</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The points awarded for achieving this level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionPosition" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Position</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001476</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6448</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A numeric value representing this criterion's position in the criteria list for this rubric.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001477</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6449</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The title of the rubric criterion.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricCriterionWeight" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Criterion Weight</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001478</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6450</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A numeric weight assigned to this Rubric Criterion, used for scored rubrics.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubricDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Rubric Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001479</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6451</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Text describing the intended use of the rubric.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="rubricCEDS" type="rubricCEDSType"/>
+	<xs:complexType name="learnerActivityCEDSType">
+		<xs:sequence>
+			<xs:element name="learnerActivityTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000939</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5940</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The title for work assigned to the learner, which can comprise of learning resources, activities, and assessments.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000940</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5941</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description and context for the assignment described in a way that the learner can understand.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityPrerequisite" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Prerequisite</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000941</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5942</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The description of the skills or competencies the student must have to engage in assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000942</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5943</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The type of work assigned to the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityCreationDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Creation Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000943</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5944</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The creation date of the assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityMaximumTimeAllowed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Maximum Time Allowed</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000944</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5945</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The time required to complete the assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityMaximumTimeAllowedUnit" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Maximum Time Allowed Unit</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000945</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5946</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The unit of time of the Maximum Time Allowed value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityDueDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Due Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000946</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5947</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date assignment is due.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityDueTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Due Time</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000947</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5948</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The time the assignment is due.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityMaximumAttemptsAllowed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Maximum Attempts Allowed</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000948</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5949</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number attempts a student may make on this assignment. Assumed to be unlimited if zero or omitted.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityAddToGradeBookFlag" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Add To Grade Book Flag</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000949</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5950</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Identifies the assignment as one that is graded.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityReleaseDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Release Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000950</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5951</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date the student was informed about an assignment or that an automated system displays the assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityWeight" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Weight</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000951</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5952</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The percentage weight of the assignment during the particular course or term.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityPossiblePoints" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Possible Points</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000952</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5953</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number of possible points for an assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityRubricURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Rubric URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000953</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5954</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The Uniform Resource Locator pointing to a rubric that may be used to evaluate learner performance on the assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learnerActivityLanguage" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learner Activity Language</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000938</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5939</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The default language used for the assignment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="learnerActivityCEDS" type="learnerActivityCEDSType"/>
+	<xs:complexType name="assessmentPerformanceLevelCEDSType">
+		<xs:sequence>
+			<xs:element name="assessmentPerformanceLevelIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Performance Level Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000717</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5693</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A unique number or alphanumeric code assigned to an assessment performance level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPerformanceLevelLabel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Performance Level Label</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000718</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5694</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A label representing the performance level appropriate for use on a report.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPerformanceLevelLowerCutScore" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Performance Level Lower Cut Score</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000418</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5408</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Lowest possible score for the performance level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPerformanceLevelScoreMetric" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Performance Level Score Metric</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000417</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5407</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The metric or scale used for score reporting.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPerformanceLevelUpperCutScore" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Performance Level Upper Cut Score</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000419</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5409</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Highest possible score for the performance level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assessmentPerformanceLevelDescriptiveFeedback" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Assessment Performance Level Descriptive Feedback</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001218</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6184</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A feedback message designed to be reported with the assessment performance level.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="assessmentPerformanceLevelCEDS" type="assessmentPerformanceLevelCEDSType"/>
+</xs:schema>

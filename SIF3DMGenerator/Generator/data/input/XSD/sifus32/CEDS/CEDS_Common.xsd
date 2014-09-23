@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../Entity/SIFglobal.xsd"/>
+	<xs:complexType name="learningGoalCEDSType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<events/>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="learningGoalType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>001166</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4170</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the Learning Goal expires or has been achieved.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>001165</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4169</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the Learning Goal becomes active.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningGoalDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3903</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A statement that specifies the learning that is intended in a way that both the educators and learners can understand.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningGoalSuccessCriteria" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3902</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>One or more statements that describes the criteria used by teachers and students to check for attainment of a leaning goal. This criteria gives clear indications as to the degree to which learning is moving through the Zone or Proximal Development toward independent achievement of the learning goal.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="learningGoalCEDS" type="learningGoalCEDSType"/>
+	<xs:complexType name="learningResourceCEDSType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<events/>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="accessAPIType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Access API Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001389</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6358</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates that the learning resource is compatible with the referenced accessibility application programming interface (API).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="accessHazardType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Access Hazard Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001390</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6359</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A characteristic of the described learning resource that is physiologically dangerous to some users.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="accessModeType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Access Mode Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001391</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6360</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An access mode through which the intellectual content of a described learning resource or adaptation is communicated; if adaptations for the resource are known, the access modes of those adaptations are not included.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="adaptationURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Adaptation URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001392</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6361</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The Uniform Resource Locator of a learning resource that is an adaptation for this resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="adaptedFromURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Adapted From URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001398</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6367</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>URL identifier of a learning resource for which this resource is an adaptation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="assistiveTechnologiesCompatibleIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Assistive Technologies Compatible Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001393</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6362</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates that the learning resource is compatible with assistive technologies.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="basedOnURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Based On URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000922</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5923</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A resource that was used in the creation of this resource. This term can be repeated for multiple sources.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bookFormatType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Book Format Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001394</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6363</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Specifies the format for a learning resource that is a book. Other options may be considered for inclusion in the option set.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="competencyAlignmentType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Competency Alignment Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000879</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5879</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The alignment relationship between the resource and the competency.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="conceptKeyword" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Concept Keyword</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001146</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6159</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The significant topicality of the Learning Resource using free-text keywords and phrases.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="controlFlexibilityType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Control Flexibility Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001395</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6364</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Identifies a single input method that is sufficient to control the described learning resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="copyrightHolderName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Copyright Holder Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001144</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6157</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name(s) of the person(s) or organization(s) holding the copyright for the Learning Resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="copyrightYear" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Copyright Year</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001145</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6158</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The copyright year for the Learning Resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="creator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Creator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000917</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5918</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of individual credited with the creation of the resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateCreated" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Date Created</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000916</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5916</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the resource was created.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001143</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6156</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A short description of the Learning Resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="digitalMediaSubType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Digital Media Sub Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001396</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6365</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The media or file subtype of the digital resource being based on the Media Types and Subtypes, formerly known as MIME types, defined by the Internet Assigned Numbers Authority (IANA).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="digitalMediaType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Digital Media Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001397</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6366</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The media or file type of the digital resource being based on the media types defined by the Internet Assigned Numbers Authority (AINA) at http://www.iana.org/assignments/media-types.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationLevel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Education Level </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001246</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6212</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The education level, grade level or primary instructional level at which a Learning Resource is intended.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="educationalUse" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Educational Use</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001002</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6005</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The purpose of the work in the context of education.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="intendedEndUserRole" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Intended End User Role</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000923</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5924</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The individual or group for which the resource was produced.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="interactivityType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Interactivity Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000927</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5928</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The predominate mode of learning supported by the learning resource. Acceptable values are active, expositive, or mixed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="language" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Language</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000919</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5920</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The primary language of the resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mediaFeatureType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Media Feature Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001399</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6368</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Accessible content features included with the learning resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="physicalMediaType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Physical Media Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001401</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6370</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A type of physical media on which the Learning Resource is delivered or available.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="publisherName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Publisher Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000918</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5919</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the organization credited with publishing the resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subjectCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Subject Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000914</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5914</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The code used to identify the organization of subject matter and related learning experiences addressed by the learning resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subjectCodeSystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Subject Code System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000915</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5915</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The system that is used to identify the organization of subject matter and related learning experiences addressed by the learning resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subjectName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Subject Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000913</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5913</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The descriptive name for the subject of the content for the learning resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="textComplexitySystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Text Complexity System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000930</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5931</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The scaling system used to specify the text complexity of an Learning Resource</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="textComplexityValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Text Complexity Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000929</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5930</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The complexity of the text using the scaling system defined by Text Complexity System, e.g. Lexile(tm).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeRequired" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Time Required</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000924</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5925</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The approximate or typical time it takes to work with or through this learning resource for the typical intended target audience.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="title" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000912</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5912</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The title of the resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningResourceType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000928</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5929</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The predominate type or kind characterizing the learning resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="typicalAgeRangeMaximum" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Typical Age Range Maximum</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000926</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5927</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The maximum for the typical range of ages of the content’s intended end user.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="typicalAgeRangeMinimum" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Typical Age Range Minimum</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000925</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5926</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The minimum for the typical range of ages of the content’s intended end user.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningResourceURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000911</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5911</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The Uniform Resource Locator where the resource may be accessed, or a proxy for the resource, such as an information page for a commercially available resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="useRightsURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Use Rights URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000921</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5922</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The URL where the owner specifies permissions for using the resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="version" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Resource Version</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001216</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6182</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Defines the version of the learning resource as defined by the publisher.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemAssociationIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Association Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000871</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5871</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A URI that establishes uniqueness of an association.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemAssociationType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Association Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000869</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5869</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Defines the nature of the association between a Learning Standard Item and an associated data object such as a Learning Resource, an Assessment Item, or even another Learning Standard Item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="peerRating" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="peerRatingSampleSize" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Resource Peer Rating Sample Size</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001400</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6369</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The sample size of a peer rating value. Only used when the Peer Rating Value is collected in aggregate as an average of multiple atomic/individual ratings.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="peerRatingValue" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Resource Peer Rating Value</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001148</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6161</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An individual score, rating or level assigned to a Learning Resource by a person within the boundaries set by a Peer Rating System that may be aggregated to derive an overall score for the learning resource.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="peerRatingDate" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Peer Rating Date</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001167</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6171</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The date on which the Peer Rating was entered.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="learningResourceCEDS" type="learningResourceCEDSType"/>
+	<xs:complexType name="parentGuardianCEDSType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<events/>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="custodialParentOrGuardianIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>000329</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3328</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An indication that a person has legal custody of a child.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="personRelationshipToLearnerType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>000425</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3415</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The nature of the person's relationship to a learner. The learner may be an Early Learning Child, K12 Student, Postsecondary Student, or an adult learner in a workforce education program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="firstName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>O</sifChar>
+									<cedsId>000115</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3115</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The full legal first name given to a person at birth, baptism, or through legal change.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="middleName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>O</sifChar>
+									<cedsId>000184</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3184</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A full legal middle name given to a person at birth, baptism, or through legal change.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="lastName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>O</sifChar>
+									<cedsId>000172</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3172</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The full legal last name borne in common by members of a family.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="suffix" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>O</sifChar>
+									<cedsId>000121</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3121</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An appendage, if any, used to denote a person's generation in his family (e.g., Jr., Sr., III).</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="prefix" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>O</sifChar>
+									<cedsId>000212</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3212</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>An appellation, if any, used to denote rank, placement, or status (e.g., Mr., Ms., Reverend, Sister, Dr., Colonel).</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="otherNameList" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="otherName" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>OR</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation/>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:attribute name="otherNameType" type="xs:string">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId>000634</cedsId>
+											<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3627</cedsURL>
+										</xs:appinfo>
+										<xs:documentation>The types of previous, alternate or other names for a person.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="addressList" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="address" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>OR</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation/>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="street" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="line1" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<sifChar>O</sifChar>
+															<cedsId>000269</cedsId>
+															<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3269</cedsURL>
+														</xs:appinfo>
+														<xs:documentation>The street number and street name or post office box number of an address.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="apartmentNumber" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<sifChar>O</sifChar>
+															<cedsId>000019</cedsId>
+															<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3019</cedsURL>
+														</xs:appinfo>
+														<xs:documentation>The apartment, room, or suite number of an address.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="city" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000040</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3040</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>The name of the city in which an address is located.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="stateProvince" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000267</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3267</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>The abbreviation for the state (within the United States) or outlying area in which an address is located.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="postalCode" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000214</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3214</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>A number that identifies each postal delivery area in the United States used as a portion of an address.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="county" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000190</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3190</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="country" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000050</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3050</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>The unique two character International Organization for Standardization (ISO) code for the country in which an address is located.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="addressType" type="xs:string">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId>000010</cedsId>
+											<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3358</cedsURL>
+										</xs:appinfo>
+										<xs:documentation>The type of address listed for a learner or a parent, guardian, family member or related person.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="phoneNumberList" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="phoneNumber" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>OR</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation/>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="phoneNumberIndicator" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000219</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3219</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>An indication that the telephone number should be used as the principal number for a person or organization.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="number" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<sifChar>O</sifChar>
+												<cedsId>000279</cedsId>
+												<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3279</cedsURL>
+											</xs:appinfo>
+											<xs:documentation>The telephone number including the area code, and extension, if applicable.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="phoneNumberType" type="xs:string">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId>000280</cedsId>
+											<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3280</cedsURL>
+										</xs:appinfo>
+										<xs:documentation>The type of communication number listed for a person.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="emailList" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="email" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>OR</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation/>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:attribute name="emailType" type="xs:string">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId>000089</cedsId>
+											<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3089</cedsURL>
+										</xs:appinfo>
+										<xs:documentation>The type of electronic mail (e-mail) address listed for a person or organization.</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="educationLevel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>000141</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3141</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The extent of formal instruction a person has received (e.g., the highest grade in school completed or its equivalent or the highest degree received).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emergencyContactIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Emergency Contact Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001341</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6308</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates whether or not the person is a designated emergency contact for the learner.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="parentGuardianCEDS" type="parentGuardianCEDSType"/>
+	<xs:complexType name="authenticationIdentityProviderType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<events/>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authentication Identity Provider Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001168</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6122</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of a provider that can authenticate the identity of an person.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uri" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authentication Identity Provider URI</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001169</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6123</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The Uniform Resource Identifier (URI) of the Authentication Identity Provider.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="loginIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authentication Identity Provider Login Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001170</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6124</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The login identifier for the person for the specified Authentication Identity Provider.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authentication Identity Provider Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001171</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6125</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the an associated person may begin to use the specified Authentication Identity Provider to authenticate identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authentication Identity Provider End Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001172</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6126</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date after which the an associated person is no longer allowed to use the specified Authentication Identity Provider to authenticate identity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="authenticationIdentityProvider" type="authenticationIdentityProviderType"/>
+	<xs:complexType name="authorizationApplicationType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<events/>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="applicationName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authorization Application Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001173</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6127</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of a data system or application which an authenticated person may access.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationURI" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authorization Application URI</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001174</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6128</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The Uniform Resource Identifier (URI) of a data system or application which an authenticated person may access.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationRoleName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authorization Application Role Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001175</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6129</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The user role for which the person is allowed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="authorizationStartDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authorization Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001176</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6130</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date on which the an associated person is authorized to start using the application with the specified role.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="authorizationEndDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authorization End Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001177</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6131</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The date after which the an associated person is no longer allowed to use the application with the specified role.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="authorizationApplication" type="authorizationApplicationType"/>
+	<xs:complexType name="learningStandardItemCEDSType">
+		<xs:sequence>
+			<xs:element name="learningStandardItemCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000692</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5669</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A human-referenceable code designated by the publisher to identify the item in the hierarchy of learning standard items.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemEducationLevel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Education Level</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000725</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5701</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The education level, grade level or primary instructional level at which a Learning Standard Item is intended.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000689</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5666</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The globally unique identifier (GUID) issued by the publisher of the competency framework that uniquely identifies the item in the hierarchy of learning standard items using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemPrerequisiteIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Prerequisite Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000715</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5691</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The unique identifier of a prerequisite Learning Standard Item, a competency needed prior to learning this one. (Some items may have no prerequisites others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemStatement" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Statement</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000690</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5667</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The text of the statement. The textual content that either describes a specific competency or describes a less granular group of competencies within the taxonomy of the standards document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000691</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5668</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The textual label identifying the class of the statement as designated by the promulgating body—e.g., "Standard," "Benchmark," "Strand," or "Topic." or "Level 1, Level 2,..."</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemPreviousVersionIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Previous Version Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001524</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6498</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The unique identifier of the previous version of the Learning Standard Item if the statement was modified.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemBloomsTaxonomyDomain" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Blooms Taxonomy Domain</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000875</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5875</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Classification of the Learning Standard Item using Bloom's Taxonomy Domains. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemConceptKeyword" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Concept Keyword</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000887</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5887</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The significant topicality of the learning standard using free-text keywords and phrases.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemConceptTerm" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Concept Term</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000888</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5888</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The topicality of the achievement standard, e.g. "Pythagorean Theorem" "Trigonometric functions" "Forces and energy" "Scientific method" "Oral history" etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemCurrentVersionIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Current Version Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001525</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6499</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates that this is the most current version of the Learning Standard Item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemLanguage" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Language</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000881</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5881</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The default language of the text used for the content in the learning standard statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemLicense" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item License</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000883</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5883</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The full text or URL reference to a legal document giving official permission to do something with the standards statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemMultipleIntelligence" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Multiple Intelligence</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000876</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5876</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Classification of the Learning Standard Item using intelligences defined for Howard Earl Gardner's Theory of Multiple Intelligences.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemNodeAccessibilityProfile" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Node Accessibility Profile</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001408</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6377</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>When the Learning Standard Item is used as a node in a learning map, this element supports alternative pathways based on a learner's accessibility profile. The type selected indicates which accessibility profile the node is designed to address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemNodeName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Node Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001409</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6378</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name or label displayed on the node when this learning standard item is used in a learning map.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemNotes" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Notes</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001249</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6215</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Information about the derivation of a Learning Standard Item Statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemParentCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Parent Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000873</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5873</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A human-referenceable code designated by the publisher to identify the parent item in the hierarchy of learning standard items.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemParentIdentifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Parent Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000872</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5872</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The globally unique identifier (GUID) issued by the publisher of the competency framework that uniquely identifies the parent item in the hierarchy of learning standard items using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemParentURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Parent URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001094</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6078</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A network-resolvable Uniform Resource Locator (URL) pointing to the authoritative reference for the hierarchal parent of the learning standard item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemTestabilityType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Testability Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001411</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6380</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Indicates if the competency described in the Learning Standard Item Statement can be tested using one or more assessment items.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemTextComplexityMaximumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Text Complexity Maximum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001155</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6115</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The maximum value in the range of text complexity applicable to a language learning standard using the scaling system defined by Text Complexity System, e.g. Lexile(tm).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemTextComplexityMinimumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Text Complexity Minimum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001154</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6114</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The minimum value in the range of text complexity applicable to a language learning standard using the scaling system defined by Text Complexity System, e.g. Lexile(tm).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemTextComplexitySystem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Text Complexity System</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000910</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5910</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The scaling system used to specify the text complexity of an learning standard item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemTypicalAgeRange" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Typical Age Range</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000870</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5870</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The typical range of ages for the content’s intended end user.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemUrl" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item URL</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000874</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5874</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A network-resolvable Uniform Resource Locator (URL) pointing to the authoritative reference for the learning standard item.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemVersion" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Version</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001250</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6216</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A label assigned by the publisher indicating the version of the learning standard statement.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="itemAssociation" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="learningStandardItemAssociationIdentifier" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Identifier</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000871</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5871</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>A URI that establishes uniqueness of an association.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000869</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5869</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Defines the nature of the association between a Learning Standard Item and an associated data object such as a Learning Resource, an Assessment Item, or even another Learning Standard Item.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationConnectionCitation" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Connection Citation</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001402</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6371</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Any citation appropriate to evidence the connection between nodes</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationDestinationNodeName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Destination Node Name</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001403</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6372</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Name of the destination node when the Learning Standard Item Association is used as a connector in a learning map.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationDestinationNodeURI" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Destination Node URI</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001404</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6373</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>URI of the destination node when the Learning Standard Item Association is used as a connector in a learning map.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationOriginNodeName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Origin Node Name</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001405</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6374</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Name of the origin node when the Learning Standard Item Association is used as a connector in a learning map.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationOriginNodeURI" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Origin Node URI</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001406</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6375</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>URI of the origin node when the Learning Standard Item Association is used as a connector in a learning map.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="learningStandardItemAssociationWeight" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Learning Standard Item Association Weight</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>001407</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6376</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>Indicates the relative significance this connection has for the destination node in a learning map.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="learningStandardItemCEDS" type="learningStandardItemCEDSType"/>
+	<xs:complexType name="learningStandardDocumentCEDSType">
+		<xs:sequence>
+			<xs:element name="learningStandardDocumentCreator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Creator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000696</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5673</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The person or organization chiefly responsible for the intellectual content of the standards document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000697</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5674</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A textual description of the scope and contents of the Learning Standards Document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentIdentifierURI" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Identifier URI</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000693</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5670</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An unambiguous reference to the standards document using a network-resolvable URI.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentJurisdiction" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Jurisdiction</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000699</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5676</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A legal, quasi-legal, organizational or institutional domain of the entity mandating the use of the statement--e.g., California.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentPublicationStatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Publication Status</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000698</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5675</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The publication status of the document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentSubject" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Subject</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000702</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5679</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The topic or academic subject of the Learning Standard Document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Title</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000694</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5671</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the standards document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentValidEndDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Valid End Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000701</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5678</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day the standards document was deprecated/replaced by the jurisdiction in which it was intended to apply.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentValidStartDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Valid Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000700</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5677</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day the standards document was adopted by the jurisdiction in which it was intended to apply.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentVersion" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Version</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000695</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5672</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Defines the revision of the document as a version number or date.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentLanguage" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Language</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000880</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5880</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The default language of the text used for the content in the learning standard document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentLicense" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document License</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000882</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5882</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A legal document giving official permission to do something with the standards document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentPublisher" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Publisher</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000884</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5884</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The entity responsible for making the learning standards document available.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentRights" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Rights</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000885</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5885</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The information about rights held in and over the resource.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardDocumentRightsHolder" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Document Rights Holder</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000886</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5886</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The person or organization owning or managing rights over the learning standards document.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemValidEndDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Valid End Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001511</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6483</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day the standards item was deprecated/replaced by the jurisdiction in which it was intended to apply.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="learningStandardItemValidStartDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Learning Standard Item Valid Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001512</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6484</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day the standards item was adopted by the jurisdiction in which it was intended to apply.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="learningStandardDocumentCEDS" type="learningStandardDocumentCEDSType"/>
+	<xs:complexType name="competencySetCEDSType">
+		<xs:sequence>
+			<xs:element name="competencySetCompletionCriteria" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Competency Set Completion Criteria</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000877</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5877</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="competencySetCompletionCriteriaThreshold" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Competency Set Completion Criteria Threshold</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000878</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=5878</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The minimum number of competencies in the set that must be achieved for completion or partial completion of a unit, course, program, degree, certification, or other achievement/award.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="competencySetCEDS" type="competencySetCEDSType"/>
+	<xs:complexType name="peerRatingSystemCEDSType">
+		<xs:sequence>
+			<xs:element name="peerRatingSystemMaximumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Peer Rating System Maximum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001149</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6162</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The maximum value allowed by the Peer Rating System.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="peerRatingSystemMinimumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Peer Rating System Minimum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001150</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6163</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The minimum value allowed by the Peer Rating System.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="peerRatingSystemName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Peer Rating System Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001147</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6160</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the scaling system used to specify the Peer Rating.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="peerRatingSystemOptimumValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Peer Rating System Optimum Value</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001151</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=6164</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The optimum value allowed by the Peer Rating System. The optimum or best rating may be the maximum value, the minimum value, or something in between.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="refId" type="gRefIdType" use="required"/>
+	</xs:complexType>
+	<xs:element name="peerRatingSystemCEDS" type="peerRatingSystemCEDSType"/>
+</xs:schema>

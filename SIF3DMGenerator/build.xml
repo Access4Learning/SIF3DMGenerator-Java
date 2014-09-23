@@ -1,0 +1,172 @@
+<project name="SIF3DMGenerator" basedir="." default="10-jar-dd-au13for30">
+
+	<property name="project.basedir" value="${basedir}"/>
+
+	<!-- *************************** -->
+	<!-- Load default property files -->
+	<!-- *************************** -->
+	<!--property file="${project.basedir}/script/ant.properties"/-->
+
+	<!-- ********************* -->
+	<!-- Environment Variables -->
+	<!-- ********************* -->
+	<property name="generator.dir" value="${project.basedir}/Generator"/>
+	<property name="output.base.dir" value="${generator.dir}/data/output"/>
+	<property name="input.base.dir" value="${generator.dir}/data/input"/>
+	<property name="lib.root.dir" value="${project.basedir}/lib"/>
+	<property name="jaxb.lib.root.dir" value="${lib.root.dir}/jaxblib" />
+	<property name="build.dir" value="${project.basedir}/build"/>
+	<property name="class.dir" value="${build.dir}/classes" />
+	<property name="dist.dir" value="${build.dir}/dist" />
+
+	<property name="verbose" value="true" />
+
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+		<classpath>
+			<fileset dir="${jaxb.lib.root.dir}" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<path id="classpath">
+		<fileset dir="${lib.root.dir}">
+			<include name="**/*.jar" />
+			<include name="**/*.zip" />
+		</fileset>
+		<pathelement path="${class.dir}" />
+	</path>
+
+	<!-- print some varaibles -->
+	<target name="00-env" description="Show Ant variables">
+		<echo message="project.basedir: ${project.basedir}"/>
+		<echo message="generator.dir: ${generator.dir}"/>
+		<echo message="output.base.dir: ${output.base.dir}"/>
+		<echo message="input.base.dir: ${input.base.dir}"/>
+		<echo message="lib.root.dir: ${lib.root.dir}"/>
+		<echo message="jaxb.lib.root.dir: ${jaxb.lib.root.dir}"/>
+		<echo message="build.dir: ${build.dir}"/>
+		<echo message="class.dir: ${class.dir}"/>
+		<echo message="dist.dir: ${dist.dir}"/>
+	</target>
+
+	<!-- Clean environment. -->
+	<target name="02-clean" description="Deletes the build directory">
+		<delete dir="${class.dir}" />
+		<delete dir="${dist.dir}" />
+	  <delete dir="${output.base.dir}" />
+	</target>
+
+	<!-- ***************** -->
+	<!-- Environment setup -->
+	<!-- ***************** -->
+	<target name="init">
+		<mkdir dir="${class.dir}"/>
+		<mkdir dir="${dist.dir}"/>
+		<mkdir dir="${output.base.dir}"/>
+	</target>
+
+  <!-- ************************************************* -->
+	<!-- Generate Data Dictionary Java Classes from XSD(s) -->
+	<!-- ************************************************* -->
+	<!--	
+		NOTE:
+		The Generation targets only create the classes in the 'Generator/data/output' directory. They will not be copied to the
+		actual source directories that can be found under 'sif3Datamodel/src'. This is done on purpose for the time being to avoid
+		potential overrides of classes in the source directories. It is up to the developer to manually copy the generated classes
+		from the 'Generator/data/output' to the appropriate 'sif3Datamodel/src' directory before the compile and jar tasks are 
+		called for the final jar file.
+	-->	
+	<target name="20-generate-AU13for30" depends="init" description="Generate POJOs using JAXB">
+		<echo message="Generate Pojos for Locale AU and Version 1.3/3.0"/>
+		<delete dir="${output.base.dir}/sifau13/src" />
+		<mkdir dir="${output.base.dir}/sifau13/src"/>
+		<xjc destdir="${output.base.dir}/sifau13/src" 
+             package="sif.dd.au30.model" 
+             extension="true" 
+             header="false" 
+             source="2.0">
+			<schema  dir="${input.base.dir}/XSD/sifau30" includes="*.xsd"/>
+			<binding dir="${generator.dir}/config" includes="auCustom.xjb"/>
+			<arg value="-npa"/>
+		</xjc>
+	</target>
+
+	<target name="30-generate-US32" depends="init" description="Create all US 3.2 POJOs based on XSD Directories">
+		<delete dir="${output.base.dir}/sifus32/src" />
+		<mkdir dir="${output.base.dir}/sifus32/src"/>
+		<echo message="Generate Pojos using JAXB for SIF US 3.2 Entity Model for all XSDs in one go..."/>
+		<xjc destdir="${output.base.dir}/sifus32/src" 
+	            package="sif.dd.us32.model.entity" 
+	            extension="true" 
+	            header="false" 
+	            source="2.0">
+			<schema  dir="${input.base.dir}/XSD/sifus32/Entity" includes="*.xsd" excludes="SIFglobal.xsd,SIFglobalBaseTypes.xsd,SIFglobalCommonTypes.xsd,SIFIdentityManagement.xsd,SIFNAassessment.xsd"/>
+			<arg value="-npa"/>
+		</xjc>
+		<echo message="Generate Pojos using JAXB for SIF US 3.2 Composite Obects for all XSDs in one go..."/>
+		<xjc destdir="${output.base.dir}/sifus32/src" 
+              package="sif.dd.us32.model.composite" 
+              extension="true" 
+              header="false" 
+              source="2.0">
+			<schema  dir="${input.base.dir}/XSD/sifus32/Composite" includes="*.xsd" excludes="SIFNACore.xsd"/>
+			<arg value="-npa"/>
+		</xjc>
+		<echo message="Generate Pojos using JAXB for SIF US 3.2 Report Objects for all XSDs in one go..."/>
+		<xjc destdir="${output.base.dir}/sifus32/src" 
+              package="sif.dd.us32.model.report" 
+              extension="true" 
+              header="false" 
+              source="2.0">
+			<schema  dir="${input.base.dir}/XSD/sifus32/Report" includes="*.xsd" excludes="SIFNAsre.xsd,SIFNAassessmentSummary.xsd,SIFNAfinance.xsd,SIFNASectionRosterReport.xsd"/>
+			<arg value="-npa"/>
+		</xjc>
+		<echo message="Generate Pojos using JAXB for SIF US 3.2 CEDS Objects (.../na/3.2 namespace) for all XSDs in one go..."/>
+		<xjc destdir="${output.base.dir}/sifus32/src" 
+              package="sif.dd.us32.model.ceds" 
+              extension="true" 
+              header="false" 
+              source="2.0">
+			<schema  dir="${input.base.dir}/XSD/sifus32/CEDS" includes="*.xsd" excludes="CEDS_AdultEducation.xsd,CEDS_Assessment.xsd,CEDS_Common.xsd,CEDS_CTech_Ed.xsd,CEDS_EarlyLearning.xsd,CEDS_K12.xsd,CEDS_PostSecondary.xsd,CEDS_Workforce.xsd,SIFNAcedsNamespace.xsd"/>
+			<arg value="-npa"/>
+		</xjc>
+	</target>
+
+  <!-- ***************************** -->
+  <!-- Compile All Data Dictionaries -->
+  <!-- ***************************** -->
+	<target name="compile-dd" depends="init" description="Compile Data Dictionary">
+		<echo message="Compile: Compile Data dictionary"/>
+		<javac destdir="${class.dir}" debug="on" verbose="false">
+			<!-- Ensure project jars are first. -->
+			<compilerarg value="-Xbootclasspath/p:${toString:classpath}"/>
+			<src path="${project.basedir}/sif3Datamodel/src" />
+		</javac>
+	</target>
+
+  <!-- ********************************* -->
+  <!-- JAR Targets for Data Dictionaries -->
+  <!-- ********************************* -->
+	<target name="10-jar-dd-au13for30" depends="compile-dd" description="Create jar file for SIF AU 1.3/3.0">
+    <antcall target="jar-dd">
+      <param name="locale" value="au"/>
+      <param name="sifddversion" value="1.3"/>
+      <param name="srcDir" value="au30"/>
+    </antcall>
+	</target>
+
+  <target name="15-jar-dd-us32" depends="compile-dd" description="Create jar file for SIF NA 3.2">
+    <antcall target="jar-dd">
+      <param name="locale" value="us"/>
+      <param name="sifddversion" value="3.2"/>
+      <param name="srcDir" value="us32"/>
+    </antcall>
+  </target>
+
+	<target name="jar-dd">
+		<echo message="Create Jar: sifDataModel_${locale}${sifddversion}.jar from source ${srcDir}" />
+		<jar destfile="${dist.dir}/sifDataModel_${locale}${sifddversion}.jar">
+			<fileset dir="${class.dir}" includes="**/sif/dd/${srcDir}/**" excludes="**/readme.txt" />
+		</jar>
+	</target>
+
+</project>

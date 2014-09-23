@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.2" targetNamespace="http://www.sifassociation.org/datamodel/na/3.2" elementFormDefault="qualified">
+	<xs:include schemaLocation="CEDS_AdultEducation.xsd"/>
+	<xs:include schemaLocation="CEDS_Assessment.xsd"/>
+	<xs:include schemaLocation="CEDS_Common.xsd"/>
+	<xs:include schemaLocation="CEDS_CTech_Ed.xsd"/>
+	<xs:include schemaLocation="CEDS_EarlyLearning.xsd"/>
+	<xs:include schemaLocation="CEDS_K12.xsd"/>
+	<xs:include schemaLocation="CEDS_PostSecondary.xsd"/>
+	<xs:include schemaLocation="CEDS_Workforce.xsd"/>
+</xs:schema>

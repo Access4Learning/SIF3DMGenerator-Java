@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--NOTE: 
+		This file may be used to implement CEDS objects and elements as extensions to other SIF objects. 
+		This file includes all CEDS objects into a separate CEDS namespace (separate from the default SIF namespace). Extensions to SIF objects must be in a distinct and separate XML namespace in order to be implemented.
+		See the SIF Data Model User's Guide for more information about extending SIF objects. 
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/CEDS/3.2" targetNamespace="http://www.sifassociation.org/datamodel/na/CEDS/3.2" elementFormDefault="qualified">
+	<xs:include schemaLocation="CEDS_AdultEducation.xsd"/>
+	<xs:include schemaLocation="CEDS_Assessment.xsd"/>
+	<xs:include schemaLocation="CEDS_Common.xsd"/>
+	<xs:include schemaLocation="CEDS_CTech_Ed.xsd"/>
+	<xs:include schemaLocation="CEDS_EarlyLearning.xsd"/>
+	<xs:include schemaLocation="CEDS_K12.xsd"/>
+	<xs:include schemaLocation="CEDS_PostSecondary.xsd"/>
+	<xs:include schemaLocation="CEDS_Workforce.xsd"/>
+</xs:schema>
