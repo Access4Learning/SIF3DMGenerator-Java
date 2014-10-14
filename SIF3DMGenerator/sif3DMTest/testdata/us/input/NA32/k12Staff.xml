@@ -1,0 +1,175 @@
+<k12Staff xmlns="http://www.sifassociation.org/datamodel/na/3.2" refId="De9Fe7a6-b806-4eCe-c4f2-18b97dD95DdC">
+  <identity>
+    <name>
+      <firstName>:/2du</firstName>
+      <middleName>B/#o=LV:</middleName>
+      <lastName>L=-, ^</lastName>
+      <suffix>l&amp;U\0:%cx</suffix>
+      <prefix>+rUO</prefix>
+    </name>
+    <otherNameList>
+      <otherName otherNameType="r;Sv">
+        <otherFirstName>mA]cx ozkP</otherFirstName>
+        <otherLastName>T2F_</otherLastName>
+        <otherMiddleName>'$_)}q#2a\WX</otherMiddleName>
+        <otherName>}+4)9;6)Ron</otherName>
+      </otherName>
+    </otherNameList>
+    <identification>
+      <staffIdSystem>\39p</staffIdSystem>
+      <staffId>0w$IoHj4&amp;Y='</staffId>
+      <socialSecurityNumber>WvGU R?</socialSecurityNumber>
+      <idVerification>FRBNwN6:</idVerification>
+    </identification>
+  </identity>
+  <contact>
+    <addressList>
+      <address addressType="3gLeNT(">
+        <street>
+          <line1>{WxsqH[</line1>
+          <apartmentNumber>YHx|Uf'</apartmentNumber>
+        </street>
+        <city>*aT#:kq3T3Y</city>
+        <stateProvince>&amp;[hF'iz-?Y</stateProvince>
+        <postalCode>|~{E)l'</postalCode>
+        <county>mi%2he</county>
+        <country>IlkJ_?&amp;^$;.c</country>
+      </address>
+    </addressList>
+    <phoneNumberList>
+      <phoneNumber phoneNumberType="&amp;,9TZS*T">
+        <phoneNumberIndicator>_,(y</phoneNumberIndicator>
+        <number>'+_E*Wt</number>
+      </phoneNumber>
+    </phoneNumberList>
+    <emailList>
+      <email emailType="~rxY@N!"/>
+    </emailList>
+  </contact>
+  <demographic>
+    <birthdate>(jYWE[!J"</birthdate>
+    <sex>KUY.hc</sex>
+    <americanIndianOrAlaskaNative>^F|o</americanIndianOrAlaskaNative>
+    <asian>n)au</asian>
+    <blackOrAfricanAmerican>jbMa}7r9q&lt;</blackOrAfricanAmerican>
+    <nativeHawaiianOrOtherPacificIslander>amN(30o5</nativeHawaiianOrOtherPacificIslander>
+    <white>&amp;6fC'r:hsN!</white>
+    <hispanicOrLatinoEthnicity>vlLrRdoOi#us</hispanicOrLatinoEthnicity>
+  </demographic>
+  <assignment>
+    <leaId>I#O&amp;</leaId>
+    <leaIdSystem>xWMS</leaIdSystem>
+    <schoolId>;TC.nE</schoolId>
+    <schoolIdSystem>&amp;G.(qbds</schoolIdSystem>
+    <teachingAssignmentStartDate>&gt;$c0{}z6^[</teachingAssignmentStartDate>
+    <teachingAssignmentEndDate>XbDbnaD{</teachingAssignmentEndDate>
+    <educationStaffClassification>[sBjdn</educationStaffClassification>
+    <primaryAssignment>)c]0fL/&amp;E</primaryAssignment>
+    <staffFTE>[^zjm0^</staffFTE>
+    <assignmentStartDate>(AO:</assignmentStartDate>
+    <assignmentEndDate>~8xQ</assignmentEndDate>
+    <classroomPositionType>X{BA"Xmk_{V0</classroomPositionType>
+    <itinerantTeacher>-0# </itinerantTeacher>
+    <migrantEducationProgramStaffCategory>^ll697vjQ:Xx</migrantEducationProgramStaffCategory>
+    <professionalEducationalJobClassification>Gto4G?Y"2@@</professionalEducationalJobClassification>
+    <specialEducationAgeGroupTaught>_d;0 LY{</specialEducationAgeGroupTaught>
+    <specialEducationParaprofessional>USCBO\k</specialEducationParaprofessional>
+    <specialEducationRelatedServicesPersonnel>xd'e]:h/sob</specialEducationRelatedServicesPersonnel>
+    <specialEducationStaffCategory>^&lt;tIXj^%</specialEducationStaffCategory>
+    <specialEducationTeacher>wX+B{0B$W-b[</specialEducationTeacher>
+    <titleIProgramStaffCategory>~soo</titleIProgramStaffCategory>
+  </assignment>
+  <credential>
+    <credentialType>vu6lZlMVJ?^e</credentialType>
+    <teachingCredentialType>~?W%EhjK</teachingCredentialType>
+    <teachingCredentialBasis>.d`cA7</teachingCredentialBasis>
+    <credentialIssuanceDate>^jn1lq}d_g</credentialIssuanceDate>
+    <credentialExpirationDate>c(PEu3+</credentialExpirationDate>
+    <yearsOfPriorTeachingExperience>#%s^TH]9</yearsOfPriorTeachingExperience>
+    <highestLevelOfEducationCompleted>O"HWXb!jDI</highestLevelOfEducationCompleted>
+    <highlyQualifiedTeacher>##Perj)Uwu7"</highlyQualifiedTeacher>
+    <paraprofessionalQualification>A($,my[2+cU</paraprofessionalQualification>
+    <programSponsorType>m@AA.6k!:S</programSponsorType>
+    <cteInstructorIndustryCertification>ZvpiRFy4</cteInstructorIndustryCertification>
+  </credential>
+  <employment>
+    <positionTitle>oopT]YCh68aQ</positionTitle>
+    <hireDate> $l?l</hireDate>
+    <contractDaysOfServicePerYear>!4ay#W</contractDaysOfServicePerYear>
+    <employmentStatus>IV5)d$</employmentStatus>
+    <employmentSeparationReason>W e+dg(wRsA</employmentSeparationReason>
+    <employmentSeparationType>aY1c@(QGS_</employmentSeparationType>
+    <staffCompensationBaseSalary>mKt :</staffCompensationBaseSalary>
+    <staffCompensationHealthBenefits>A;a|1\4h</staffCompensationHealthBenefits>
+    <staffCompensationRetirementBenefits>ghztT'</staffCompensationRetirementBenefits>
+    <staffCompensationOtherBenefits>Ge9g1Mo#*'?0</staffCompensationOtherBenefits>
+    <salaryForTeachingAssignmentOnlyIndicator>uV-,WXud1&amp;</salaryForTeachingAssignmentOnlyIndicator>
+    <staffCompensationTotalBenefits>3gEv</staffCompensationTotalBenefits>
+    <staffCompensationTotalSalary>.q1[</staffCompensationTotalSalary>
+    <mepPersonnelIndicator>@oAl0V</mepPersonnelIndicator>
+    <titleITargetedAssistanceStaffFunded>\v[h5+j</titleITargetedAssistanceStaffFunded>
+    <employmentEndDate>5U^yG=b.x*</employmentEndDate>
+    <employmentStartDate>WSL)7Ww</employmentStartDate>
+  </employment>
+  <professionalDevelopment>
+    <staffEvaluationOutcome>d3_VS7xd</staffEvaluationOutcome>
+    <staffEvaluationScale>pUT6K^Y;Z`|</staffEvaluationScale>
+    <staffEvaluationScoreOrRating>F6gs+-e,</staffEvaluationScoreOrRating>
+    <staffEvaluationSystem>=J)P_h</staffEvaluationSystem>
+    <facultyAndAdministrationPerformanceLevel>U\nZ? %X</facultyAndAdministrationPerformanceLevel>
+    <technologySkillsStandardsMet>94K|1A0DC)r</technologySkillsStandardsMet>
+    <careerEducationPlanDate>H/er4U&amp;</careerEducationPlanDate>
+    <careerEducationPlanType>M{?[LZ</careerEducationPlanType>
+  </professionalDevelopment>
+  <professionalDevelopmentActivity>
+    <professionalDevelopmentActivityApprovalCode> M sjUp%a}Q</professionalDevelopmentActivityApprovalCode>
+    <professionalDevelopmentActivityApprovedFor>Ma/v:W</professionalDevelopmentActivityApprovedFor>
+    <professionalDevelopmentActivityCode>-fJ&lt;c;</professionalDevelopmentActivityCode>
+    <professionalDevelopmentActivityCost>n\$R[C Kgu</professionalDevelopmentActivityCost>
+    <professionalDevelopmentActivityCreditType>M4&gt;j=$E</professionalDevelopmentActivityCreditType>
+    <professionalDevelopmentActivityCredits>t.Atz=mNYCP8</professionalDevelopmentActivityCredits>
+    <professionalDevelopmentActivityDescription>wz`N@E</professionalDevelopmentActivityDescription>
+    <professionalDevelopmentActivityEducationLevelsAddressed>8Y]&amp;-k</professionalDevelopmentActivityEducationLevelsAddressed>
+    <professionalDevelopmentActivityExpirationDate>&lt;6-V0h+/#</professionalDevelopmentActivityExpirationDate>
+    <professionalDevelopmentActivityLevel>^2sQTIrK-Oe~</professionalDevelopmentActivityLevel>
+    <professionalDevelopmentActivityObjective>s`z)z</professionalDevelopmentActivityObjective>
+    <professionalDevelopmentActivityTargetAudience>NF*&gt;m.</professionalDevelopmentActivityTargetAudience>
+    <professionalDevelopmentActivityType>[8CI'h.L9x</professionalDevelopmentActivityType>
+    <session>
+      <professionalDevelopmentDeliveryMethod>9|SE;A{</professionalDevelopmentDeliveryMethod>
+      <professionalDevelopmentFundingSource>c&lt;bP]}+x</professionalDevelopmentFundingSource>
+      <professionalDevelopmentInstructionalDeliveryMode>g]mp'c%"nr</professionalDevelopmentInstructionalDeliveryMode>
+      <professionalDevelopmentInstructorIdentifier>^-axn b</professionalDevelopmentInstructorIdentifier>
+      <professionalDevelopmentPublishActivityIndicator>2KQp'* N!':y</professionalDevelopmentPublishActivityIndicator>
+      <professionalDevelopmentSessionCapacity>&gt;aL0;J</professionalDevelopmentSessionCapacity>
+      <professionalDevelopmentSessionEndDate>GDezbc"_)</professionalDevelopmentSessionEndDate>
+      <professionalDevelopmentSessionEndTime>m^]s?29.=_</professionalDevelopmentSessionEndTime>
+      <professionalDevelopmentSessionEvaluationMethod>n$=R$MJ`x</professionalDevelopmentSessionEvaluationMethod>
+      <professionalDevelopmentSessionEvaluationScore>3uG6</professionalDevelopmentSessionEvaluationScore>
+      <professionalDevelopmentSessionIdentifier>&amp;`v!Py</professionalDevelopmentSessionIdentifier>
+      <professionalDevelopmentSessionLocationName>WM}`p0Z-I</professionalDevelopmentSessionLocationName>
+      <professionalDevelopmentSessionStartDate>j85~</professionalDevelopmentSessionStartDate>
+      <professionalDevelopmentSessionStartTime>"hi9i"dc'uIH</professionalDevelopmentSessionStartTime>
+      <professionalDevelopmentSessionStatus>nhg]f</professionalDevelopmentSessionStatus>
+      <sponsoringAgencyName>yT(k</sponsoringAgencyName>
+    </session>
+    <sessionLocation>
+      <sessionLocationName>wQI_gwFJ2a</sessionLocationName>
+      <addressStreetNumberAndName>\~zouO</addressStreetNumberAndName>
+      <addressApartmentRoomOrSuiteNumber>,W&amp;e</addressApartmentRoomOrSuiteNumber>
+      <addressCity>~%oKrjPB`&gt;</addressCity>
+      <stateAbbreviation>tX%0v;VVc</stateAbbreviation>
+      <addressPostalCode>?oe @j$E</addressPostalCode>
+      <telephoneNumber>G^U5L</telephoneNumber>
+    </sessionLocation>
+  </professionalDevelopmentActivity>
+  <attendance>
+    <leaveEventType>\HlU!y&gt;mss*O</leaveEventType>
+    <attendanceStatus>D:(5]@B</attendanceStatus>
+  </attendance>
+  <technicalAssistance>
+    <technicalAssistanceApprovedIndicator>66IQTq</technicalAssistanceApprovedIndicator>
+    <technicalAssistanceDeliveryType>*;HA</technicalAssistanceDeliveryType>
+    <technicalAssistanceType>In&lt;1</technicalAssistanceType>
+  </technicalAssistance>
+</k12Staff>

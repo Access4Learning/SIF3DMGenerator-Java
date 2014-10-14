@@ -1,0 +1,86 @@
+<k12Section xmlns="http://www.sifassociation.org/datamodel/na/3.2" refId="2C5eADb5-7F38-1D1b-A9AA-25eA8fbdA4B5">
+  <abilityGroupingStatus>e$&amp;53E+V+[@/</abilityGroupingStatus>
+  <directory>
+    <sectionId>TPpz!7::0ZUe</sectionId>
+    <classroomId>D-8Q+aYTl`1D</classroomId>
+    <sessionBeginDate> ki 4V)V</sessionBeginDate>
+    <sessionEndDate>[{dih:p</sessionEndDate>
+    <sessionDesignator>g,qJ</sessionDesignator>
+    <sessionType>)4-xvdC</sessionType>
+    <classBeginningTime>&gt;MT"</classBeginningTime>
+    <classEndingTime>wfb;w3lr]</classEndingTime>
+    <classMeetingDays>d!.qd_Z\v1</classMeetingDays>
+    <classPeriod>8*tB;&gt;!;gH</classPeriod>
+    <timetableDayId>"`f7~KBaB|</timetableDayId>
+    <classSectionTimeRequiredForCompletion>yX^&amp;.'IK</classSectionTimeRequiredForCompletion>
+    <instructionLanguage>DACwY9ZOUV1L</instructionLanguage>
+    <classSectionSingleSexClassStatus>dhk`iO\0V</classSectionSingleSexClassStatus>
+    <receivingLocationOfInstruction>v8tx#CPIeAB</receivingLocationOfInstruction>
+    <classSectionInstructionalDeliveryMode>a^8&lt;f`(</classSectionInstructionalDeliveryMode>
+    <virtualIndicator>DL,4U:#D9</virtualIndicator>
+    <alignedWithState>)|:;-f</alignedWithState>
+    <advancedPlacementCourseCode>%]_sP%0-*7</advancedPlacementCourseCode>
+    <blendedLearningModelType>b3E'jos</blendedLearningModelType>
+    <careerCluster>hat~</careerCluster>
+    <courseApplicableEducationLevel>&lt;{9&lt;RR,2:C</courseApplicableEducationLevel>
+    <courseCertificationDescription>9u(j.</courseCertificationDescription>
+    <courseFundingProgram>,uk~~zx;gf</courseFundingProgram>
+    <courseIdentifier>zg(&lt; ^C9EV3</courseIdentifier>
+    <courseInteractionMode>I?77JE-wlMU</courseInteractionMode>
+    <familyAndConsumerSciencesCourseIndicator>k$F8`4E</familyAndConsumerSciencesCourseIndicator>
+    <ncaaEligibility>FqY2OEn!(</ncaaEligibility>
+  </directory>
+  <course>
+    <courseIdentifier>Z3v2AlPW,</courseIdentifier>
+    <courseCodeSystem>4av*w&amp;s</courseCodeSystem>
+    <courseTitle>+9#z=</courseTitle>
+    <sequenceOfCourse>-JIOcUd</sequenceOfCourse>
+    <instructionalLevel>&gt;]\9$7n[NyXc</instructionalLevel>
+    <creditTypeEarned>&lt;wU\&amp;2+H8QP</creditTypeEarned>
+    <graduationRequirement>yK4Q2vKT:</graduationRequirement>
+    <carnegieUnitCredit>[&gt;rw</carnegieUnitCredit>
+    <gpaApplicability>pDK*#9r^_e </gpaApplicability>
+    <relatedLearningStandardList>
+      <relatedLearningStandard>=Df%; O,0&amp;qT</relatedLearningStandard>
+    </relatedLearningStandardList>
+    <classSectionAssessmentReportingMethod>$SE=F5o[s</classSectionAssessmentReportingMethod>
+  </course>
+  <enrollment>
+    <studentId>jt(#&amp;eNP*</studentId>
+    <studentIdSystem>{dQ9j|Q0~j|</studentIdSystem>
+    <enrollmentEntryDate>f5oT8)AX2</enrollmentEntryDate>
+    <classSectionExitType>&amp;@p.&amp;&amp;</classSectionExitType>
+    <classSectionExitWithdrawalDate>hi|2Y2T</classSectionExitWithdrawalDate>
+    <classSectionEntryType>8W@q&gt;_!vlth</classSectionEntryType>
+    <exitStatus>-oMv[%m)YZF-</exitStatus>
+    <gradeLevelWhenCourseTaken>VMY&gt;\{Q]X</gradeLevelWhenCourseTaken>
+    <classSectionEnrollmentStatusStartDate>]@ph&lt;m#</classSectionEnrollmentStatusStartDate>
+    <classSectionEnrollmentStatusEndDate>(gmH)x</classSectionEnrollmentStatusEndDate>
+    <classSectionEnrollmentStatusType>':HJ$:P </classSectionEnrollmentStatusType>
+    <numberOfDaysInAttendance>nKkV/fML0|</numberOfDaysInAttendance>
+    <numberOfDaysAbsent>i@~gO</numberOfDaysAbsent>
+    <numberOfCreditsAttempted>)x0n?L?</numberOfCreditsAttempted>
+    <numberOfCreditsEarned>F3q*nW$[</numberOfCreditsEarned>
+    <responsibleDistrictType>]kc*n</responsibleDistrictType>
+    <responsibleSchoolType>Dg1&gt;+W){iK9X</responsibleSchoolType>
+    <studentMark>
+      <markingPeriodName>aq"H#S&gt;\Fj(</markingPeriodName>
+      <studentCourseSectionMarkFinalIndicator>6Qlkx$z{~:.</studentCourseSectionMarkFinalIndicator>
+      <gradeEarned>qyPE\G4Zq&gt;.</gradeEarned>
+      <midTermMark>73On8fHM!4</midTermMark>
+      <gradeValueQualifier>c\(Bz#{p7k</gradeValueQualifier>
+    </studentMark>
+  </enrollment>
+  <staff>
+    <staffMemberId>47npG\</staffMemberId>
+    <StaffMemberIdSystem>u^"E/Gw6p&gt;]</StaffMemberIdSystem>
+    <assignmentStartDate> l.M2rk</assignmentStartDate>
+    <assignmentEndDate>kc,4F:&gt;Yffqy</assignmentEndDate>
+    <teacherOfRecord>U,Md9=N</teacherOfRecord>
+    <teachingAssignmentRole>0F{d[u^</teachingAssignmentRole>
+    <teachingAssignmentContributionPercentage>%1*v^H#*24</teachingAssignmentContributionPercentage>
+  </staff>
+  <attendance>
+    <attendanceStatus>NL/@S1w</attendanceStatus>
+  </attendance>
+</k12Section>

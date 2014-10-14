@@ -1,0 +1,130 @@
+<k12School xmlns="http://www.sifassociation.org/datamodel/na/3.2" refId="76C16b6b-e8e7-1bf5-CE12-5F7bD52688Bf">
+  <identification>
+    <schoolId>Id8hwB</schoolId>
+    <schoolIdSystem>wy],F</schoolIdSystem>
+    <name>"%Nmolz7B</name>
+    <organizationType>RNmm=z&lt;`dG`]</organizationType>
+    <shortNameOfInstitution>J]G.ZEp</shortNameOfInstitution>
+  </identification>
+  <addressList>
+    <address addressType="tt.9Es">
+      <street>
+        <line1>'7&gt;V/:</line1>
+        <apartmentNumber>&gt;[v&lt;&amp;Uo:</apartmentNumber>
+      </street>
+      <city>~&lt;Z=|DOGa9O_</city>
+      <stateProvince>2K6dRXv</stateProvince>
+      <postalCode>lfs*4IK</postalCode>
+      <county>B}I92drO</county>
+      <buildingSiteNumber>TXsdu</buildingSiteNumber>
+      <countyANSICode>6"*/7 2</countyANSICode>
+      <gridLocation>
+        <latitude>ffqzj3YA`B%</latitude>
+        <longtitude>j{mAGiM?xG</longtitude>
+      </gridLocation>
+    </address>
+  </addressList>
+  <phoneNumberList>
+    <phoneNumber phoneNumberType="&amp;_Wkpw3">
+      <phoneNumberIndicator>*P'VXHxH$&lt;</phoneNumberIndicator>
+      <number>-4X"&amp;</number>
+    </phoneNumber>
+  </phoneNumberList>
+  <directory>
+    <gradesOfferedList>
+      <gradesOffered>V{eF}F</gradesOffered>
+    </gradesOfferedList>
+    <schoolType>'Lms^ T7&amp;l&amp;i</schoolType>
+    <emphasisProgram>\FweeOAJ</emphasisProgram>
+    <charterSchool>2dsjCRANi'[</charterSchool>
+    <schoolLevel>Q;Z-n6$fb-9</schoolLevel>
+    <charterSchoolType>HKo.Q 9HUAFh</charterSchoolType>
+    <fundingControl>Ma-X]o</fundingControl>
+    <operationalStatus>ad#c</operationalStatus>
+    <operationalStatusEffectiveDate>5#}|~;~hp|</operationalStatusEffectiveDate>
+    <programType>$Hs*c</programType>
+    <alternativeSchoolFocus>sDP^aI4bscK</alternativeSchoolFocus>
+    <apCourseSelfSelection>WaXS7ven7D</apCourseSelfSelection>
+    <internetAccess>ShO"vY?{\</internetAccess>
+    <improvementStatus>sfWh7</improvementStatus>
+    <sharedTime>=D39O</sharedTime>
+    <virtualIndicator>co#*-hdm</virtualIndicator>
+    <url>HezZCL9;*k"</url>
+    <charterSchoolApprovalAgencyType>?&lt;u?PV</charterSchoolApprovalAgencyType>
+    <charterSchoolApprovalYear>Fz,Q/</charterSchoolApprovalYear>
+  </directory>
+  <institutionCharacteristics>
+    <abilityGrouping>YB_X`1=J2</abilityGrouping>
+    <cteNontraditional>h$,"(KOSB!</cteNontraditional>
+    <programGiftedEligibilityCriteria>Zi"x@6</programGiftedEligibilityCriteria>
+    <increasedLearningTime>Ye!#</increasedLearningTime>
+    <statePovertyDesignation>e&gt;)2</statePovertyDesignation>
+    <studentSupportServiceType>&amp;+S*5vcU</studentSupportServiceType>
+    <titleIProgramType>{/x'S</titleIProgramType>
+    <titleISchoolStatus>?c\!qD^h&amp;l</titleISchoolStatus>
+    <titleIIILanguageInstructionProgramType>]&lt;%NAvt[e;B</titleIIILanguageInstructionProgramType>
+    <disciplineMethodForFirearmsIncidents>4K{H3p&lt;K5*cO</disciplineMethodForFirearmsIncidents>
+    <disciplineMethodOfChildrenWithDisabilities>k+pj</disciplineMethodOfChildrenWithDisabilities>
+    <ideaDisciplineMethodForFirearmsIncidents>$=w)QJI*</ideaDisciplineMethodForFirearmsIncidents>
+  </institutionCharacteristics>
+  <accountability>
+    <aypStatus>QbCmCzHi</aypStatus>
+    <aypAppealChangedDesignation>H.Ja9mLl-xS</aypAppealChangedDesignation>
+    <aypAppealProcessDate>&amp;)QJJ0hn C</aypAppealProcessDate>
+    <appealedAYPDesignation>j1I&lt;Kg</appealedAYPDesignation>
+    <alternateAYPApproachIndicator>K8;bfLlv0=$p</alternateAYPApproachIndicator>
+    <amaoProficiencyLEPStudents>U-/9</amaoProficiencyLEPStudents>
+    <amaoProgressLEPStudents>yym\/3YS</amaoProgressLEPStudents>
+    <correctiveAction>YZG:O.</correctiveAction>
+    <elementaryMiddleAdditional>c^!@{I:5].f&amp;</elementaryMiddleAdditional>
+    <gunFreeSchoolsActReporting>&amp;LAu%2</gunFreeSchoolsActReporting>
+    <hsGraduationRateIndicatorStatus>`vm'b?gR&lt;</hsGraduationRateIndicatorStatus>
+    <participationMath>VPw{|F$Tp</participationMath>
+    <participationReadingAndLanguageArts>B!mA.#B</participationReadingAndLanguageArts>
+    <proficiencyTargetMath>&amp;p{7Us]h3K"h</proficiencyTargetMath>
+    <persistentlyDangerous>JAl^kv!3</persistentlyDangerous>
+    <proficiencyTargetReadingAndLanguageArts>(KE=\oG5?</proficiencyTargetReadingAndLanguageArts>
+    <persistentlyLowestAchieving> w =</persistentlyLowestAchieving>
+    <reconstitutedStatus>Ad 8: &amp;</reconstitutedStatus>
+    <restructuringAction>Rg%K]YncQ8z</restructuringAction>
+    <improvementExitDate>SBCOoe\</improvementExitDate>
+    <improvementFunds>O,lw_Kf&amp;&lt;(</improvementFunds>
+  </accountability>
+  <finance>
+    <financialAccountCategory>Yq5wCKUVOz|K</financialAccountCategory>
+    <financialAccountDescription>dXLri=4^UMO</financialAccountDescription>
+    <financialAccountFundClassification>K&gt;C5i</financialAccountFundClassification>
+    <financialAccountName>4^1U?]/m</financialAccountName>
+    <financialAccountProgramCode>S8*ta}$Uj</financialAccountProgramCode>
+    <financialAccountingPeriodActualValue>yy9n=E9+&lt;$@n</financialAccountingPeriodActualValue>
+    <financialAccountingPeriodBudgetedValue>D&amp;&amp;eiPlMz</financialAccountingPeriodBudgetedValue>
+    <financialBalanceSheetAccountCode>&lt;rLg]</financialBalanceSheetAccountCode>
+    <financialExpenditureFunctionCode>9M=5D3|Zt</financialExpenditureFunctionCode>
+    <financialExpenditureObjectCode>1+2LNVY3wY?_</financialExpenditureObjectCode>
+  </finance>
+  <federalFunds>
+    <consolidatedMEPFunds>Lv7kML{Xpt</consolidatedMEPFunds>
+    <improvementGrantIntervention>4sA{S4A</improvementGrantIntervention>
+  </federalFunds>
+  <sessionList>
+    <session>
+      <sessionDescription>f8ffGO[Q</sessionDescription>
+      <sessionMarkingTerm>zt|$JL $(,&gt;</sessionMarkingTerm>
+      <sessionSchedulingTerm>G-]xIdK</sessionSchedulingTerm>
+      <sessionAttendanceTerm>au_@C</sessionAttendanceTerm>
+      <schoolYear>tv4bbv"mvb1+</schoolYear>
+      <firstInstructionDate>y!b&amp;g0G1?</firstInstructionDate>
+      <lastInstructionDate>d;NT\*%+B@</lastInstructionDate>
+      <daysInSession>GH1\[_%bL~E$</daysInSession>
+      <schoolYearMinutes>|[7 bXUP</schoolYearMinutes>
+      <instructionalMinutes>l#A*3~</instructionalMinutes>
+      <minutesPerDay>nW:PATiW</minutesPerDay>
+      <sessionCode>z]:7</sessionCode>
+    </session>
+  </sessionList>
+  <technicalAssistance>
+    <technicalAssistanceApprovedIndicator>Fz &gt;]</technicalAssistanceApprovedIndicator>
+    <technicalAssistanceDeliveryType>D13.c;0/%=</technicalAssistanceDeliveryType>
+    <technicalAssistanceType>$pI{xBfQ*m'</technicalAssistanceType>
+  </technicalAssistance>
+</k12School>
