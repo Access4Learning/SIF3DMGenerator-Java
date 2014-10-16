@@ -36,7 +36,10 @@ public class DataModelMarshalFactory implements MarshalFactory
 	protected final Logger logger = Logger.getLogger(getClass());
 
 	private static final HashMap<Class<?>, Method> CREATE_METHODS = new HashMap<Class<?>, Method>();
-	
+
+	private ObjectFactory objFactory = new ObjectFactory();
+	  
+
 	/**
 	 * Pre-populate Create Method Cache for faster marshaling of objects.
 	 */
@@ -52,8 +55,6 @@ public class DataModelMarshalFactory implements MarshalFactory
 			}
 		}
 	}
-	
-	private ObjectFactory objFactory = new ObjectFactory();
 	
 	@Override
 	public String marshalToXML(Object obj) throws MarshalException, UnsupportedMediaTypeExcpetion
@@ -79,29 +80,29 @@ public class DataModelMarshalFactory implements MarshalFactory
 		return result;
 	}
 	
-	/**
-	 * Finds the method that has one parameter of the type provided.
-	 * 
-	 * @param obj object that needs to be marshaled.
-	 * @return method - method to invoke to convert object into a jaxb element.
-	 */
-	private Method findCreateMethod(Object obj)
-	{
-		Method result = null;
-		if (obj != null && obj.getClass() != null)
-		{
-			result = CREATE_METHODS.get(obj.getClass());
-		}
-		return result;
-  }
-
 	@Override
 	public String marshalToJSON(Object obj) throws MarshalException, UnsupportedMediaTypeExcpetion
 	{
-		// TODO: JH - Implement from JSON marshaller
-		logger.warn("Marshal to JSON not supported, yet");
-		throw new UnsupportedMediaTypeExcpetion("Marshal Object to JSON not implemented, yet");
-	}
+		String result = null;
+		try
+		{
+			Method method = findCreateMethod(obj);
+			if (method != null)
+			{
+				JAXBElement<?> element = (JAXBElement<?>) method.invoke(objFactory, obj);
+				if (element != null)
+				{
+					result = JAXBUtils.marshalToJSON(element);
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			logger.error("An error occurred marshalling object to JSON", e);
+			throw new MarshalException("An error occurred marshalling object to JSON", e);
+		}
+		return result;
+  }
 
 	@Override
 	public String marshal(Object obj, MediaType mediaType) throws MarshalException, UnsupportedMediaTypeExcpetion
@@ -121,4 +122,25 @@ public class DataModelMarshalFactory implements MarshalFactory
 		// If we get here then we deal with an unknown media type
 		throw new UnsupportedMediaTypeExcpetion("Unsupported media type: " + mediaType + ". Cannot marshal the given input to this media type.");
 	}
+	
+  /*---------------------*/
+  /*-- PRivate Methods --*/
+  /*---------------------*/
+  /*
+   * Finds the method that has one parameter of the type provided.
+   * 
+   * @param obj object that needs to be marshaled.
+   * @return method - method to invoke to convert object into a jaxb element.
+   */
+  private Method findCreateMethod(Object obj)
+  {
+    Method result = null;
+    if (obj != null && obj.getClass() != null)
+    {
+      result = CREATE_METHODS.get(obj.getClass());
+    }
+    return result;
+  }
+
+
 }
