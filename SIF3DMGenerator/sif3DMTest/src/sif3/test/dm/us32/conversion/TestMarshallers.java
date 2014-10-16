@@ -20,8 +20,7 @@ package sif3.test.dm.us32.conversion;
 
 import sif.dd.us32.conversion.DataModelMarshalFactory;
 import sif.dd.us32.conversion.DataModelUnmarshalFactory;
-import sif.dd.us32.model.K12SchoolCollectionType;
-import sif.dd.us32.model.K12StudentCollectionType;
+import sif.dd.us32.model.K12StudentType;
 import au.com.systemic.framework.utils.FileReaderWriter;
 import au.com.systemic.framework.utils.Timer;
 
@@ -31,17 +30,22 @@ import au.com.systemic.framework.utils.Timer;
  */
 public class TestMarshallers
 {
-//	private final static String INPUT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
+	private final static String INPUT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
 //	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Students.xml";
-	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Schools.xml";
+//	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Schools.xml";
 //	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
 
-//	private final static String OUTPUT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.xml";
-//	private final static String OUTPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/students.xml";
-	private final static String OUTPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/schools.xml";
-//	private final static String OUTPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.xml";
+	private final static String OUTPUT_FILE_NAME_XML  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.xml";
+//	private final static String OUTPUT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/students.xml";
+//	private final static String OUTPUT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/schools.xml";
+//	private final static String OUTPUT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.xml";
 
-	private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
+private final static String OUTPUT_FILE_NAME_JSON  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.json";
+//private final static String OUTPUT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/students.json";
+//	private final static String OUTPUT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/schools.json";
+//private final static String OUTPUT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.json";
+
+private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
 	private DataModelMarshalFactory marshaller = new DataModelMarshalFactory();
 
 
@@ -52,18 +56,23 @@ public class TestMarshallers
 			String inputEnvXML = FileReaderWriter.getFileContent(INPUT_FILE_NAME);
 			Timer timer = new Timer();
 			timer.start();
-//			K12StudentType data = (K12StudentType)unmarshaller.unmarshalFromXML(inputEnvXML, K12StudentType.class);
+			K12StudentType data = (K12StudentType)unmarshaller.unmarshalFromXML(inputEnvXML, K12StudentType.class);
 //			K12StudentCollectionType data = (K12StudentCollectionType)unmarshaller.unmarshalFromXML(inputEnvXML, K12StudentCollectionType.class);
-			K12SchoolCollectionType data = (K12SchoolCollectionType)unmarshaller.unmarshalFromXML(inputEnvXML, K12SchoolCollectionType.class);
+//			K12SchoolCollectionType data = (K12SchoolCollectionType)unmarshaller.unmarshalFromXML(inputEnvXML, K12SchoolCollectionType.class);
 			timer.finish();
 			System.out.println("Time Taken to unmarshal: "+timer.timeTaken()+"ms");
 			
 			timer.start();
-			String ouputEnvXML = marshaller.marshalToXML(data);
+			String outputXML = marshaller.marshalToXML(data);
 			timer.finish();
-			FileReaderWriter.writeContentToFile(ouputEnvXML, OUTPUT_FILE_NAME);
+			FileReaderWriter.writeContentToFile(outputXML, OUTPUT_FILE_NAME_XML);
 			System.out.println("Time Taken to marshal: "+timer.timeTaken()+"ms");
 			
+      timer.start();
+      String outputJSON = marshaller.marshalToJSON(data);
+      timer.finish();
+      FileReaderWriter.writeContentToFile(outputJSON, OUTPUT_FILE_NAME_JSON);
+      System.out.println("Time Taken to marshal: "+timer.timeTaken()+"ms");
 		}
 		catch (Exception ex)
 		{

@@ -33,9 +33,12 @@ public class TestMarshallers
 	private final static String INPUT_STUDENT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/input/StudentPersonal.xml";
 //	private final static String INPUT_STUDENT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/input/StudentPersonal.xml";
 
-		private final static String OUTPUT_STUDENT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.xml";
-//	private final static String OUTPUT_STUDENT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.xml";
+		private final static String OUTPUT_STUDENT_FILE_NAME_XML  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.xml";
+//	private final static String OUTPUT_STUDENT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.xml";
 
+    private final static String OUTPUT_STUDENT_FILE_NAME_JSON  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.json";
+//  private final static String OUTPUT_STUDENT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.json";
+		
 	private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
 	private DataModelMarshalFactory marshaller = new DataModelMarshalFactory();
 
@@ -54,8 +57,14 @@ public class TestMarshallers
 			timer.start();
 			String ouputEnvXML = marshaller.marshalToXML(student);
 			timer.finish();
-			FileReaderWriter.writeContentToFile(ouputEnvXML, OUTPUT_STUDENT_FILE_NAME);
-			System.out.println("Time Taken to marshal: "+timer.timeTaken()+"ms");
+			FileReaderWriter.writeContentToFile(ouputEnvXML, OUTPUT_STUDENT_FILE_NAME_XML);
+			System.out.println("Time Taken to marshal Object -> XML: "+timer.timeTaken()+"ms");
+			
+			timer.start();
+      String ouputEnvJSON = marshaller.marshalToJSON(student);
+      timer.finish();
+      FileReaderWriter.writeContentToFile(ouputEnvJSON, OUTPUT_STUDENT_FILE_NAME_JSON);
+      System.out.println("Time Taken to marshal Object -> JSON: "+timer.timeTaken()+"ms");
 			
 		}
 		catch (Exception ex)
