@@ -18,7 +18,11 @@
 package sif.dd.us32.conversion;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBElement;
@@ -36,8 +40,11 @@ public class DataModelMarshalFactory implements MarshalFactory
 	protected final Logger logger = Logger.getLogger(getClass());
 
 	private static final HashMap<Class<?>, Method> CREATE_METHODS = new HashMap<Class<?>, Method>();
+
+	//List of supported media types.
+	private static final HashSet<MediaType> supportedMediaTypes = new HashSet<MediaType>(Arrays.asList(MediaType.APPLICATION_XML_TYPE, MediaType.TEXT_XML_TYPE, MediaType.APPLICATION_JSON_TYPE));
 	
-  private ObjectFactory objFactory = new ObjectFactory();
+	private ObjectFactory objFactory = new ObjectFactory();
   
 	/**
 	 * Pre-populate Create Method Cache for faster marshaling of objects.
@@ -108,8 +115,7 @@ public class DataModelMarshalFactory implements MarshalFactory
 	{
 		if (mediaType != null)
 		{
-			if (MediaType.APPLICATION_XML_TYPE.isCompatible(mediaType) || 
-				MediaType.TEXT_XML_TYPE.isCompatible(mediaType))
+			if (MediaType.APPLICATION_XML_TYPE.isCompatible(mediaType) || MediaType.TEXT_XML_TYPE.isCompatible(mediaType))
 			{
 				return marshalToXML(obj);
 			}
@@ -122,22 +128,63 @@ public class DataModelMarshalFactory implements MarshalFactory
 		throw new UnsupportedMediaTypeExcpetion("Unsupported media type: " + mediaType + ". Cannot marshal the given input to this media type.");
 	}
 	
-  /*---------------------*/
-  /*-- PRivate Methods --*/
-  /*---------------------*/
-  /*
-   * Finds the method that has one parameter of the type provided.
-   * 
-   * @param obj object that needs to be marshaled.
-   * @return method - method to invoke to convert object into a jaxb element.
-   */
-  private Method findCreateMethod(Object obj)
-  {
-    Method result = null;
-    if (obj != null && obj.getClass() != null)
+	/*
+	 * (non-Javadoc)
+	 * @see sif3.common.conversion.MediaTypeOperations#getDefault()
+	 */
+	@Override
+    public MediaType getDefault()
     {
-      result = CREATE_METHODS.get(obj.getClass());
+	    return MediaType.APPLICATION_XML_TYPE;
     }
-    return result;
-  }
+
+	/*
+	 * (non-Javadoc)
+	 * @see sif3.common.conversion.MediaTypeOperations#isSupported(javax.ws.rs.core.MediaType)
+	 */
+	@Override
+    public boolean isSupported(MediaType mediaType)
+    {
+		if (mediaType != null)
+		{
+			Set<MediaType> mediaTypes = getSupportedMediaTypes();
+			for (Iterator<MediaType> iter = mediaTypes.iterator(); iter.hasNext();)
+			{
+				if (mediaType.isCompatible(iter.next()))
+				{
+					return true;
+				}
+			}
+		}
+		
+		return false;
+    }
+	
+	/* (non-Javadoc)
+     * @see sif3.common.conversion.MediaTypeOperations#getSupportedMediaTypes()
+     */
+    @Override
+    public Set<MediaType> getSupportedMediaTypes()
+    {
+	    return supportedMediaTypes;
+    }
+
+    /*---------------------*/
+    /*-- Private Methods --*/
+    /*---------------------*/
+    /*
+     * Finds the method that has one parameter of the type provided.
+     * 
+     * @param obj object that needs to be marshaled.
+     * @return method - method to invoke to convert object into a jaxb element.
+     */
+	private Method findCreateMethod(Object obj)
+	{
+		Method result = null;
+		if (obj != null && obj.getClass() != null)
+		{
+			result = CREATE_METHODS.get(obj.getClass());
+		}
+		return result;
+	}
 }
