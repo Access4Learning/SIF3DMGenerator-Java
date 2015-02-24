@@ -1514,6 +1514,7 @@ public class LearningStandardItemType {
     public static class StandardSettingBody {
 
         @XmlElement(name = "Country", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String country;
         @XmlElementRef(name = "StateProvince", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
         protected JAXBElement<String> stateProvince;

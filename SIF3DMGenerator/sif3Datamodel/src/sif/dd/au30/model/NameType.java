@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * 
- *       The Name element, which could belong to a student, staff member, contact, etc. This element or a form with a
+ *       The Name element, which could belong to a student, staff member, contact, etc. This element or a form of this element with a
  *       subset of Type values occurs within objects
  *       such as StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
  *     

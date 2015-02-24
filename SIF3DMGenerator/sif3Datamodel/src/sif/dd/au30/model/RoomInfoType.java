@@ -32,6 +32,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/au/datamodel/1.3}LocalIdType" minOccurs="0"/>
  *         &lt;element name="RoomNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StaffList" minOccurs="0">
  *           &lt;complexType>
@@ -65,6 +66,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomInfoType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
     "schoolInfoRefId",
+    "localId",
     "roomNumber",
     "staffList",
     "description",
@@ -82,6 +84,8 @@ public class RoomInfoType {
     @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> localId;
     @XmlElement(name = "RoomNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
@@ -132,6 +136,30 @@ public class RoomInfoType {
      */
     public void setSchoolInfoRefId(String value) {
         this.schoolInfoRefId = value;
+    }
+
+    /**
+     * Gets the value of the localId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLocalId() {
+        return localId;
+    }
+
+    /**
+     * Sets the value of the localId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLocalId(JAXBElement<String> value) {
+        this.localId = value;
     }
 
     /**

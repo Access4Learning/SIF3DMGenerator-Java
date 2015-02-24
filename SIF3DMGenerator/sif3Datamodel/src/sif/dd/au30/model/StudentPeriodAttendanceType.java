@@ -18,7 +18,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * 
- *         This object allows recording of period level attendance a student.
+ *         This object allows recording of period level attendance for a student.
  * 
  *         The Australian StudentPeriodAttendance object differs to the US StudentPeriodAttendance object in the following ways:
  *         Student Period Attendance object is usually linked to a SessionInfo object (see below), but it is possible, for simple period attendance packages, to not link period attendance to a session or timetable.There will be one provider of the StudentPeriodAttendance within a SIF Zone in Australia.  The US, in contrast, has specified objects and events to allow for multiple providers of the StudentPeriodAttendance object in a zone.

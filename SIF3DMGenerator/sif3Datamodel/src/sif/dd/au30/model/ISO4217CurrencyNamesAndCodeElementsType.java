@@ -50,16 +50,14 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="COP"/>
  *     &lt;enumeration value="COU"/>
  *     &lt;enumeration value="CRC"/>
- *     &lt;enumeration value="CSD"/>
+ *     &lt;enumeration value="CUC"/>
  *     &lt;enumeration value="CUP"/>
  *     &lt;enumeration value="CVE"/>
- *     &lt;enumeration value="CYP"/>
  *     &lt;enumeration value="CZK"/>
  *     &lt;enumeration value="DJF"/>
  *     &lt;enumeration value="DKK"/>
  *     &lt;enumeration value="DOP"/>
  *     &lt;enumeration value="DZD"/>
- *     &lt;enumeration value="EEK"/>
  *     &lt;enumeration value="EGP"/>
  *     &lt;enumeration value="ERN"/>
  *     &lt;enumeration value="ETB"/>
@@ -68,12 +66,11 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="FKP"/>
  *     &lt;enumeration value="GBP"/>
  *     &lt;enumeration value="GEL"/>
- *     &lt;enumeration value="GHC"/>
+ *     &lt;enumeration value="GHS"/>
  *     &lt;enumeration value="GIP"/>
  *     &lt;enumeration value="GMD"/>
  *     &lt;enumeration value="GNF"/>
  *     &lt;enumeration value="GTQ"/>
- *     &lt;enumeration value="GWP"/>
  *     &lt;enumeration value="GYD"/>
  *     &lt;enumeration value="HKD"/>
  *     &lt;enumeration value="HNL"/>
@@ -104,7 +101,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="LRD"/>
  *     &lt;enumeration value="LSL"/>
  *     &lt;enumeration value="LTL"/>
- *     &lt;enumeration value="LVL"/>
  *     &lt;enumeration value="LYD"/>
  *     &lt;enumeration value="MAD"/>
  *     &lt;enumeration value="MDL"/>
@@ -114,7 +110,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="MNT"/>
  *     &lt;enumeration value="MOP"/>
  *     &lt;enumeration value="MRO"/>
- *     &lt;enumeration value="MTL"/>
  *     &lt;enumeration value="MUR"/>
  *     &lt;enumeration value="MVR"/>
  *     &lt;enumeration value="MWK"/>
@@ -137,29 +132,28 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="PLN"/>
  *     &lt;enumeration value="PYG"/>
  *     &lt;enumeration value="QAR"/>
- *     &lt;enumeration value="ROL"/>
  *     &lt;enumeration value="RON"/>
  *     &lt;enumeration value="RUB"/>
+ *     &lt;enumeration value="RSD"/>
  *     &lt;enumeration value="RWF"/>
  *     &lt;enumeration value="SAR"/>
  *     &lt;enumeration value="SBD"/>
  *     &lt;enumeration value="SCR"/>
- *     &lt;enumeration value="SDD"/>
+ *     &lt;enumeration value="SDG"/>
  *     &lt;enumeration value="SEK"/>
  *     &lt;enumeration value="SGD"/>
  *     &lt;enumeration value="SHP"/>
- *     &lt;enumeration value="SIT"/>
- *     &lt;enumeration value="SKK"/>
  *     &lt;enumeration value="SLL"/>
  *     &lt;enumeration value="SOS"/>
  *     &lt;enumeration value="SRD"/>
+ *     &lt;enumeration value="SSP"/>
  *     &lt;enumeration value="STD"/>
  *     &lt;enumeration value="SVC"/>
  *     &lt;enumeration value="SYP"/>
  *     &lt;enumeration value="SZL"/>
  *     &lt;enumeration value="THB"/>
  *     &lt;enumeration value="TJS"/>
- *     &lt;enumeration value="TMM"/>
+ *     &lt;enumeration value="TMT"/>
  *     &lt;enumeration value="TND"/>
  *     &lt;enumeration value="TOP"/>
  *     &lt;enumeration value="TRY"/>
@@ -170,10 +164,9 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="UGX"/>
  *     &lt;enumeration value="USD"/>
  *     &lt;enumeration value="USN"/>
- *     &lt;enumeration value="USS"/>
  *     &lt;enumeration value="UYU"/>
  *     &lt;enumeration value="UZS"/>
- *     &lt;enumeration value="VEB"/>
+ *     &lt;enumeration value="VEF"/>
  *     &lt;enumeration value="VND"/>
  *     &lt;enumeration value="VUV"/>
  *     &lt;enumeration value="WST"/>
@@ -186,12 +179,12 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="XBD"/>
  *     &lt;enumeration value="XCD"/>
  *     &lt;enumeration value="XDR"/>
- *     &lt;enumeration value="XFO"/>
- *     &lt;enumeration value="XFU"/>
  *     &lt;enumeration value="XOF"/>
  *     &lt;enumeration value="XPD"/>
  *     &lt;enumeration value="XPF"/>
  *     &lt;enumeration value="XPT"/>
+ *     &lt;enumeration value="XSU"/>
+ *     &lt;enumeration value="XUA"/>
  *     &lt;enumeration value="XTS"/>
  *     &lt;enumeration value="XXX"/>
  *     &lt;enumeration value="YER"/>
@@ -431,10 +424,10 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     CRC,
 
     /**
-     * Serbian Dinar
+     * Perso Convertible
      * 
      */
-    CSD,
+    CUC,
 
     /**
      * Cuban Peso
@@ -447,12 +440,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     CVE,
-
-    /**
-     * Cyprus Pound
-     * 
-     */
-    CYP,
 
     /**
      * Czech Koruna
@@ -483,12 +470,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     DZD,
-
-    /**
-     * Kroon
-     * 
-     */
-    EEK,
 
     /**
      * Egyptian Pound
@@ -542,7 +523,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * Cedi
      * 
      */
-    GHC,
+    GHS,
 
     /**
      * Gibraltar Pound
@@ -567,12 +548,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     GTQ,
-
-    /**
-     * Guinea-Bissau Peso
-     * 
-     */
-    GWP,
 
     /**
      * Guyana Dollar
@@ -755,12 +730,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     LTL,
 
     /**
-     * Latvian Lats
-     * 
-     */
-    LVL,
-
-    /**
      * Libyan Dinar
      * 
      */
@@ -813,12 +782,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     MRO,
-
-    /**
-     * Maltese Lira
-     * 
-     */
-    MTL,
 
     /**
      * Mauritius Rupee
@@ -953,12 +916,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     QAR,
 
     /**
-     * Old Leu
-     * 
-     */
-    ROL,
-
-    /**
      * New Leu
      * 
      */
@@ -969,6 +926,12 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     RUB,
+
+    /**
+     * Serbian Dina
+     * 
+     */
+    RSD,
 
     /**
      * Rwanda Franc
@@ -995,10 +958,10 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     SCR,
 
     /**
-     * Sudanese Dinar
+     * Sudanese Pound
      * 
      */
-    SDD,
+    SDG,
 
     /**
      * Swedish Krona
@@ -1019,18 +982,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     SHP,
 
     /**
-     * Tolar
-     * 
-     */
-    SIT,
-
-    /**
-     * Slovak Koruna
-     * 
-     */
-    SKK,
-
-    /**
      * Leone
      * 
      */
@@ -1047,6 +998,12 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     SRD,
+
+    /**
+     * South Sudanese Pound
+     * 
+     */
+    SSP,
 
     /**
      * Dobra
@@ -1085,10 +1042,10 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     TJS,
 
     /**
-     * Manat
+     * Turkmenistan New Manat
      * 
      */
-    TMM,
+    TMT,
 
     /**
      * Tunisian Dinar
@@ -1151,12 +1108,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     USN,
 
     /**
-     * US Dollar (Same day)
-     * 
-     */
-    USS,
-
-    /**
      * Peso Uruguayo
      * 
      */
@@ -1172,7 +1123,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * Bolivar
      * 
      */
-    VEB,
+    VEF,
 
     /**
      * Dong
@@ -1247,18 +1198,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     XDR,
 
     /**
-     * Gold-Franc
-     * 
-     */
-    XFO,
-
-    /**
-     * UIC-Franc
-     * 
-     */
-    XFU,
-
-    /**
      * CFA Franc BCEAO
      * 
      */
@@ -1281,6 +1220,18 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * 
      */
     XPT,
+
+    /**
+     * Sucre
+     * 
+     */
+    XSU,
+
+    /**
+     * ADB Unit of Account
+     * 
+     */
+    XUA,
 
     /**
      * Code specifically reserved for testing purposes

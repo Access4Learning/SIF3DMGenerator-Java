@@ -25,6 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="M"/>
  *     &lt;enumeration value="P"/>
  *     &lt;enumeration value="S"/>
+ *     &lt;enumeration value="U"/>
+ *     &lt;enumeration value="T"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -42,7 +44,7 @@ public enum AUCodeSetsACStrandType {
     A,
 
     /**
-     * Business and economics
+     * Economics and business
      * 
      */
     B,
@@ -54,7 +56,7 @@ public enum AUCodeSetsACStrandType {
     C,
 
     /**
-     * Design
+     * Design and technologies
      * 
      */
     D,
@@ -78,7 +80,7 @@ public enum AUCodeSetsACStrandType {
     H,
 
     /**
-     * Information and communication technologies
+     * Digital technologies
      * 
      */
     I,
@@ -105,7 +107,19 @@ public enum AUCodeSetsACStrandType {
      * Science
      * 
      */
-    S;
+    S,
+
+    /**
+     * Humanities and social sciences
+     * 
+     */
+    U,
+
+    /**
+     * Technology
+     * 
+     */
+    T;
 
     public String value() {
         return name();

@@ -1,10 +1,9 @@
-<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by Linda Marshall (DEECD) -->
-<!--
+	<!--
 		SIF Implementation Specification (Australia) 1.3  Infrastructure Version: 3.0 REST v1.0
 	-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sif="http://www.sifassociation.org/au/datamodel/1.3" targetNamespace="http://www.sifassociation.org/au/datamodel/1.3" elementFormDefault="qualified">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="imports/xml/xml.xsd"/>
-	<!--Version 1.3/3.0__v01 22nd Ocotober 2013-->
+	<!--Version 1.3/3.0 v01 Updated December 22, 2014-->
 	<!--Infrastructure Common Elements-->
 	<!--SIF_ExtendedElements-->
 	<xs:complexType name="SIF_ExtendedElementsType">
@@ -930,10 +929,11 @@
 	<xs:element name="PhoneNumber" type="sif:PhoneNumberType"/>
 	<!--Country-->
 	<xs:simpleType name="CountryType">
-		<xs:annotation>
-			<xs:documentation>A country code.</xs:documentation>
-		</xs:annotation>
-		<xs:union memberTypes="sif:AUCodeSetsStandardAustralianClassificationOfCountriesSACCType"/>
+		<xs:restriction base="sif:AUCodeSetsStandardAustralianClassificationOfCountriesSACCType">
+			<xs:annotation>
+				<xs:documentation>A country code.</xs:documentation>
+			</xs:annotation>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="Country" type="sif:CountryType"/>
 	<!--GridLocation-->
@@ -1344,7 +1344,7 @@
 	<xs:complexType name="NameType">
 		<xs:annotation>
 			<xs:documentation>
-      The Name element, which could belong to a student, staff member, contact, etc. This element or a form with a
+      The Name element, which could belong to a student, staff member, contact, etc. This element or a form of this element with a
       subset of Type values occurs within objects
       such as StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
     </xs:documentation>
@@ -1633,7 +1633,7 @@
 	<!--ACStrandSubjectArea-->
 	<xs:complexType name="ACStrandSubjectAreaType">
 		<xs:annotation>
-			<xs:documentation>Subject matter.</xs:documentation>
+			<xs:documentation>Subject matter of a student's study as codified under the Australian Curriculum.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ACStrand" type="sif:AUCodeSetsACStrandType" minOccurs="0">
@@ -2228,7 +2228,7 @@
 	<!--AggregateCharacteristicInfo-->
 	<xs:complexType name="AggregateCharacteristicInfoType">
 		<xs:annotation>
-			<xs:documentation>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group.</xs:documentation>
+			<xs:documentation>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group for statistical purposes.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Description" type="xs:string" nillable="true" minOccurs="0">
@@ -2273,7 +2273,7 @@
 	<!--AggregateStatisticFact-->
 	<xs:complexType name="AggregateStatisticFactType">
 		<xs:annotation>
-			<xs:documentation>This object is the actual value of the measurement. It is always associated with one statistic and one or more characteristics.</xs:documentation>
+			<xs:documentation>This object is the actual value of a statistical measurement. It is always associated with one statistic and one or more characteristics.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="AggregateStatisticInfoRefId" type="sif:IdRefType" minOccurs="0">
@@ -2534,29 +2534,29 @@
 					<xs:sequence>
 						<xs:element name="YearCreated" type="xs:gYear" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This represents the year that this specific learning standard was created.  This is important to indicate as standards are updated to reflect the appropriate year it was created. This would be assigned and unique to the standard setting body.</xs:documentation>
+								<xs:documentation>This represents the year that this specific learning standard was created.  This is important to indicate as standards are updated to reflect the appropriate year it was created. This would be assigned by and unique to the standard setting body.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element ref="sif:ACStrandSubjectArea" minOccurs="0"/>
 						<xs:element name="StandardNumber" type="xs:normalizedString" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This is the specific number of the standard.  For example, if the subject is mathematics and this standard is Patterns, Functions and Algebra, this would be StandardNumber 1. This would be assigned and unique to the standard setting body.</xs:documentation>
+								<xs:documentation>This is the specific number of the standard.  For example, if the subject is mathematics and this standard is Patterns, Functions and Algebra, this would be StandardNumber 1. This would be assigned by and unique to the standard setting body.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element ref="sif:YearLevels" minOccurs="0"/>
 						<xs:element name="Benchmark" type="xs:normalizedString" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This is the next level within the hierarchy of the learning standard.  For example, if the subject is mathematics and the standard is algebra, this would be the next delineation - Represent an unknown quantity as a variable using a symbol, including letters. This would be assigned and unique to the standard setting body.</xs:documentation>
+								<xs:documentation>This is the next level within the hierarchy of the learning standard.  For example, if the subject is mathematics and the standard is algebra, this would be the next delineation - Represent an unknown quantity as a variable using a symbol, including letters. This would be assigned by and unique to the standard setting body.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="YearLevel" type="sif:YearLevelType" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This is the specific year level.  This is to be utilized if the YearLevel covers several years. This would be assigned and unique to the standard setting body.</xs:documentation>
+								<xs:documentation>This is the specific year level.  This is to be utilized if the YearLevel covers several years. This would be assigned by and unique to the standard setting body.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="IndicatorNumber" type="xs:normalizedString" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This would be the most granular level of the learning standard associated with the grade level. Following the same example, an indicator for Algebra YearLevel 5-7, the indicator for the benchmark above at Year 6 would be to Evaluate simple expressions by replacing variables with given values, and use formulas in problem-solving situations. This would be assigned and unique to the standard setting body.</xs:documentation>
+								<xs:documentation>This would be the most granular level of the learning standard associated with the grade level. Following the same example, an indicator for Algebra YearLevel 5-7, the indicator for the benchmark above at Year 6 would be to Evaluate simple expressions by replacing variables with given values, and use formulas in problem-solving situations. This would be assigned by and unique to the standard setting body.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="AlternateIdentificationCodes" nillable="true" minOccurs="0">
@@ -2696,7 +2696,7 @@
 					<xs:sequence>
 						<xs:element name="Author" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Name of the organization that authored the curriculum document, i.e. "ACARA May be the same as "Organization" above.</xs:documentation>
+								<xs:documentation>Name of the organization that authored the curriculum document, i.e. "ACARA". May be the same as "Organization" above.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
@@ -3922,9 +3922,14 @@
 					<xs:documentation>GUID that identifies the school that this room belongs to.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="LocalId" type="sif:LocalIdType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The locally assigned identifier for the room.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="RoomNumber" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Room number as presented to the user/application.</xs:documentation>
+					<xs:documentation>Room number as presented to the user/application. It is intended to be human readable and user-friendly corresponding to the physical label of the Room.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StaffList" nillable="true" minOccurs="0">
@@ -3970,11 +3975,11 @@
 					<xs:documentation>Phone number for the room</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-      <xs:element name="RoomType" type="xs:token" nillable="true" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>Type of room.</xs:documentation>
-        </xs:annotation>
-      </xs:element>      
+			<xs:element name="RoomType" type="xs:token" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Type of room, for use in timetabling.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SIF_Metadata" type="sif:SIF_MetadataType" nillable="true" minOccurs="0"/>
 			<xs:element name="SIF_ExtendedElements" type="sif:SIF_ExtendedElementsType" nillable="true" minOccurs="0">
 				<xs:unique name="SIF_ExtendedElementsKey19">
@@ -4029,7 +4034,7 @@
 			<xs:element name="PrimaryAssignment" type="sif:AUCodeSetsYesOrNoCategoryType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
-        Is this the staff member's primary assignment?  Note: There must be one and only one instance of the object with a Yes value in this element per school year.
+        Is this the staff member's primary assignment?  Note: There must be one and only one instance of the object with a Yes value in this element per StaffMember per school year.
       </xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -4319,7 +4324,7 @@
 			</xs:element>
 			<xs:element name="OnTimeGraduationYear" type="sif:OnTimeGraduationYearType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>First projected graduation year, usually determined when student is accepted into 9th grade.</xs:documentation>
+					<xs:documentation>First projected graduation year, usually determined when student is accepted into Year 9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GraduationDate" type="sif:GraduationDateType" nillable="true" minOccurs="0">
@@ -4397,7 +4402,11 @@
 					<xs:documentation>Does the student have a current signed Acceptable Use Policy document for system access?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GiftedTalented" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0"/>
+			<xs:element name="GiftedTalented" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Is the student in Gifted/Talented programs?</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="EconomicDisadvantage" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Does the student meet the State criteria for classification as having an economic disadvantage?</xs:documentation>
@@ -4922,7 +4931,11 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ProgramStatus" type="sif:ProgramStatusType" nillable="true" minOccurs="0"/>
+			<xs:element name="ProgramStatus" type="sif:ProgramStatusType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The current status of the student's program participation.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="GiftedEligibilityCriteria" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Eligible for Gifted / Talented program?</xs:documentation>
@@ -5128,7 +5141,7 @@
 		<xs:sequence>
 			<xs:element name="CalendarDateRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>An optional ID (GUID) for this day date of the calendar information is being reported. This GUID would be used to form a REST URL.</xs:documentation>
+					<xs:documentation>An optional ID (GUID) for this day date of the calendar information that is being reported. This GUID would be used to form a REST URL.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolInfoRefId" type="sif:IdRefType" minOccurs="0">
@@ -5478,7 +5491,7 @@
 			<xs:element ref="sif:SchoolYear" minOccurs="0"/>
 			<xs:element name="DayValue" type="sif:AUCodeSetsDayValueCodeType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Value of a day this instance, represents.</xs:documentation>
+					<xs:documentation>Value of a day this instance represents.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="sif:AttendanceCode" minOccurs="0"/>
@@ -5537,7 +5550,7 @@
 	<xs:complexType name="StudentPeriodAttendanceType">
 		<xs:annotation>
 			<xs:documentation>
-        This object allows recording of period level attendance a student.
+        This object allows recording of period level attendance for a student.
 
         The Australian StudentPeriodAttendance object differs to the US StudentPeriodAttendance object in the following ways:
         Student Period Attendance object is usually linked to a SessionInfo object (see below), but it is possible, for simple period attendance packages, to not link period attendance to a session or timetable.There will be one provider of the StudentPeriodAttendance within a SIF Zone in Australia.  The US, in contrast, has specified objects and events to allow for multiple providers of the StudentPeriodAttendance object in a zone.</xs:documentation>
@@ -5606,7 +5619,7 @@
 								</xs:sequence>
 								<xs:attribute name="Type" use="required">
 									<xs:annotation>
-										<xs:documentation>The role of the staff member for that created this attendance record.</xs:documentation>
+										<xs:documentation>The role of the staff member that created this attendance record.</xs:documentation>
 									</xs:annotation>
 									<xs:simpleType>
 										<xs:restriction base="xs:token">
@@ -5623,7 +5636,7 @@
 						</xs:element>
 						<xs:element name="CreationDateTime" type="xs:dateTime" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>The date and time of this attendance record was created.</xs:documentation>
+								<xs:documentation>The date and time this attendance record was created.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
@@ -5795,7 +5808,7 @@
 			</xs:element>
 			<xs:element name="OnTimeGraduationYear" type="sif:OnTimeGraduationYearType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>First projected graduation year, usually determined when student is accepted into ninth grade.</xs:documentation>
+					<xs:documentation>First projected graduation year, usually determined when student is accepted into Year 9.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StudentSubjectChoiceList" nillable="true" minOccurs="0">
@@ -5937,7 +5950,7 @@
 	<xs:complexType name="TimeTableSubjectType">
 		<xs:annotation>
 			<xs:documentation>
-        This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
+        This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects – SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
 
         When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent to the TimeTabling application.
       </xs:documentation>
@@ -6066,7 +6079,7 @@
 		<xs:sequence>
 			<xs:element name="SchoolInfoRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Optional the GUID of the SchoolInfo Object if this object is known in the zone.</xs:documentation>
+					<xs:documentation>Optional, the GUID of the SchoolInfo Object if this object is known in the zone.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element ref="sif:SchoolYear" minOccurs="0"/>
@@ -6249,7 +6262,7 @@
 			</xs:element>
 			<xs:element name="LongName" type="xs:normalizedString" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Longer description of required</xs:documentation>
+					<xs:documentation>Longer description if required.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Set" type="xs:normalizedString" nillable="true" minOccurs="0">
@@ -6347,7 +6360,7 @@
 									</xs:element>
 									<xs:element name="Name" type="sif:NameOfRecordType" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation/>
+											<xs:documentation>Name of Staff Member.</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="Association" type="xs:normalizedString" minOccurs="0">
@@ -6513,12 +6526,12 @@
 			</xs:element>
 			<xs:element name="SchoolInfoRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Optional the GUID of the SchoolInfo Object  if this object is known in the zone</xs:documentation>
+					<xs:documentation>Optional, the GUID of the SchoolInfo Object  if this object is known in the zone</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SchoolLocalId" type="sif:LocalIdType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Optional Local School Id</xs:documentation>
+					<xs:documentation>Optional, Local School Id</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SIF_Metadata" type="sif:SIF_MetadataType" nillable="true" minOccurs="0"/>
@@ -6937,8 +6950,8 @@
 	<xs:complexType name="StudentSDTNType">
 		<xs:annotation>
 			<xs:documentation>
-        This object has been developed to cater for the SDTN - Student Data Transfer Note.  http://www.mceecdya.edu.au/verve/_resources/ISDTN_Form_3_Transfer_Note_Oct_06.pdf
-        The elements in this object have been developed to support the LIMF recommendations and allow two or more jurisdictions to exchange this data. http://www.aictec.edu.au/aictec/go/home/about/pid/289
+        This object has been developed to cater for the SDTN – Student Data Transfer Note. Please refer to: http://scseec.edu.au/archive/Publications/ISDTN.aspx 
+        The elements in this object were developed to support the previous LIMF recommendations and allow two or more jurisdictions to exchange this data. 
       </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
@@ -7365,7 +7378,7 @@
 						</xs:element>
 						<xs:element name="AttendanceContact" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Should this contact be notified in case of attendance issue?</xs:documentation>
+								<xs:documentation>Should this contact be notified in case of an attendance issue?</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="PrimaryCareProvider" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
@@ -7462,12 +7475,12 @@
 			</xs:element>
 			<xs:element name="StudentActivityLevel" type="xs:normalizedString" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>A description of the separation of level in the activity (e.g.,House, Inter-school, Club, State, National).</xs:documentation>
+					<xs:documentation>A description of the separation of level in the activity (e.g. House, Inter-school, Club, State, National).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="YearLevels" type="sif:YearLevelsType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Collection of grade levels applicable to this co-curricular or extra-curricular activity. </xs:documentation>
+					<xs:documentation>Collection of year levels applicable to this co-curricular or extra-curricular activity. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CurricularStatus" type="sif:AUCodeSetsActivityTypeType" nillable="true" minOccurs="0">
@@ -7532,7 +7545,7 @@
 			</xs:element>
 			<xs:element name="StartDate" type="xs:date" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This is the date which the activity participation is valid (inclusive). </xs:documentation>
+					<xs:documentation>This is the date from which the activity participation is valid (inclusive). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="xs:date" nillable="true" minOccurs="0">
@@ -8194,7 +8207,7 @@
 	<!--SectionInfo-->
 	<xs:complexType name="SectionInfoType">
 		<xs:annotation>
-			<xs:documentation>This object provides information about the section</xs:documentation>
+			<xs:documentation>This object provides information about the section, the specific time period a session of the course meets. Australian Implementations have been using TeachingGroup as a representation of a class;</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SchoolCourseInfoRefId" type="sif:IdRefType" minOccurs="0">
@@ -8620,7 +8633,7 @@
 					<xs:sequence>
 						<xs:element name="AdministrationAssessment" type="sif:IdRefType" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>The RedId of the assessment related to this administration.</xs:documentation>
+								<xs:documentation>The RefId of the assessment related to this administration.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
@@ -9124,7 +9137,7 @@
 			</xs:element>
 			<xs:element name="AssessmentSubjects" type="sif:SubjectAreaListType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The assessment may be designed to measure specific subject areas. Note that grade levels are also included in the Assessment Form object. Specific forms of an assessment may have more granularity. </xs:documentation>
+					<xs:documentation>The assessment may be designed to measure specific subject areas. Note that subjects are also included in the Assessment Form object. Specific forms of an assessment may have more granularity. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssessmentGradeLevels" type="sif:YearLevelsType" nillable="true" minOccurs="0">
@@ -9530,7 +9543,7 @@
 			</xs:element>
 			<xs:element name="AssessmentFormRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Identifies the AssessmentSession that contains the location and scheduled time the assessment will/has been delivered. The session is likely identified at some time after the registration is initially created.</xs:documentation>
+					<xs:documentation>Identifies the AssessmentForm used in the administration.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CreationDateTime" type="xs:dateTime" minOccurs="0">
@@ -10098,7 +10111,7 @@
 			</xs:element>
 			<xs:element name="SectionTimeLimit" type="xs:duration" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>If this section is timed, then this will identify the maximum amoutamount of time the test taker can spend within this section.</xs:documentation>
+					<xs:documentation>If this section is timed, then this will identify the maximum amount of time the test taker can spend within this section.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SectionSealed" nillable="true" minOccurs="0">
@@ -10546,7 +10559,7 @@
 	<!--Sif3StudentResponseSet-->
 	<xs:complexType name="Sif3StudentResponseSetType">
 		<xs:annotation>
-			<xs:documentation>This object transmits the student's responses to stimuli presented in an assessment. This object contains the raw responses as well as provides item-level scores and feedback to the student based on those responses.</xs:documentation>
+			<xs:documentation>This object transmits the student's responses to stimuli presented in an assessment. This object contains the raw responses as well as providing item-level scores and feedback to the student based on those responses.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Items" minOccurs="0">
@@ -10611,7 +10624,7 @@
 									</xs:element>
 									<xs:element name="ItemNumber" type="xs:token" nillable="true" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Identifies the sequence of the item as it was delivered to this student.  For adaptive testing, this is the sequence in which the item was delivered. This should be the item sequence starting at 1 and continue to the end of the test (spanning all sections). This should include all items such as sample items.</xs:documentation>
+											<xs:documentation>Identifies the sequence of the item as it was delivered to this student.  For adaptive testing, this is the sequence in which the item was delivered. This should be the item sequence starting at 1 and continuing to the end of the test (spanning all sections). This should include all items such as sample items.</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="ItemName" type="xs:token" nillable="true" minOccurs="0">
@@ -11041,7 +11054,388 @@
 			<xs:field xpath="@RefId"/>
 		</xs:unique>
 	</xs:element>
-	<!-- Adding Collections Here -->
+	<!--ScheduledActivity-->
+	<xs:complexType name="ScheduledActivityType">
+		<xs:annotation>
+			<xs:documentation>
+        This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SchoolInfoRefId" type="sif:IdRefType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The ID (GUID) of the school for which this attendance information is being reported.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TimeTableCellRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>An optional Id (GUID) for the timetable cell that this activity is scheduled in. Instances of cyclical classroom sessions will have this element, but one-off events such as excursions will not use this element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DayId" type="sif:LocalIdType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Day Id.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PeriodId" type="sif:LocalIdType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Period Id within the Day Id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TimeTableRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The GUID of the TimeTable to which this Cell belongs</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Date for which the activity is scheduled. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartTime" type="xs:time" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Starting time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FinishTime" type="xs:time" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Finish time for activity. This element is mandatory even if the object is used for preplanning excursions: a tentative or notional date and time should be provided if a finalised date is not available.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CellType" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Type of Lesson/Session eg Teaching, Lunch etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TimeTableSubjectRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Optional to link the GUID of the Subject, if this is a piece of curriculum being scheduled.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TeacherList" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TeacherCover" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="StaffPersonalRefId" type="sif:IdRefType" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>The Id (GUID) of the StaffPersonal record for the teacher supervising the event or event subset.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="StaffLocalId" type="sif:LocalIdType" nillable="true" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>LocalId of the StaffPersonal record for the teacher supervising the event or event subset.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="StartTime" type="xs:time" nillable="true" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Start time for the subset of the event which the teacher supervises. If not present then we assume this teacher will be on the event for the full duration.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FinishTime" type="xs:time" nillable="true" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Finish time for the subset of the event which the teacher supervises. If not present then we assume this teacher will be on the event for the full duration. Either both or neither StartTime and FinishTime should be provided.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Credit" type="sif:AUCodeSetsTeacherCoverCreditType" nillable="true" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>How the activity is credited, from the perspective of the teacher(s) supervising the event. If a teacher is substituting for the normal teacher supervising, the credit indicates how the substituting teacher is credited.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Supervision" type="sif:AUCodeSetsTeacherCoverSupervisionType" nillable="true" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>How intensively the teacher supervises the activity.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Weighting" type="xs:decimal" nillable="true" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Weighting of credit assigned to teacher for activity. Assumes default of 1.0 assigned for classroom duty.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RoomList" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RoomInfoRefId" type="sif:IdRefType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>The Id (GUID) of the Room in which the scheduled activity is held.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AddressList" type="sif:AddressListType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The address(es) associated with the scheduled activity.</xs:documentation>
+				</xs:annotation>
+				<xs:unique name="AddressListKey6">
+					<xs:selector xpath="./sif:Address"/>
+					<xs:field xpath="@Type"/>
+					<xs:field xpath="@Role"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="Location" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Text description of venue. Can be used for either onsite or offsite venues. Can be used if neither RoomList nor AddressList is appropriate or supported by the source system. (E.g. the venue is the oval, which is not represented as a room; the venue is a specific part of the park). If RoomList, AddressList, and Location conflict, the order of priority in interpreting the object is RoomList, then AddressList, then Location.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityType" type="sif:AUCodeSetsScheduledActivityTypeType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The type of activity undertaken.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityName" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This element is required if this is a one-off event, i.e. there is no TimeTableCellRefId provided, in order for excursions to be uniquely identified.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActivityComment" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Allows free-text information, e.g. for excursions. Comment should not be used to identify the location of the venue, since the contents of Comment are open-ended..</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StudentList" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="StudentPersonalRefId" type="sif:IdRefType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>GUID from the StudentPersonal  Object that identifies the student.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TeachingGroupList" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TeachingGroupRefId" type="sif:IdRefType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>GUID from the TeachingGroup Object that identifies this TeachingGroup.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="YearLevels" type="sif:YearLevelsType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>List of year levels offered by the school.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Override" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:annotation>
+						<xs:documentation>This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleContent>
+						<xs:extension base="sif:AUCodeSetsYesOrNoCategoryTypeOrEmpty">
+							<xs:attribute name="DateOfOverride" type="xs:date" use="optional">
+								<xs:annotation>
+									<xs:documentation>The date needs to be provided if Override=Yes.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SIF_Metadata" type="sif:SIF_MetadataType" nillable="true" minOccurs="0"/>
+			<xs:element name="SIF_ExtendedElements" type="sif:SIF_ExtendedElementsType" nillable="true" minOccurs="0">
+				<xs:unique name="SIF_ExtendedElementsKey67">
+					<xs:selector xpath="./sif:SIF_ExtendedElement"/>
+					<xs:field xpath="@Name"/>
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RefId" type="sif:RefIdType" use="required">
+			<xs:annotation>
+				<xs:documentation>The GUID of the Object</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ScheduledActivity" type="sif:ScheduledActivityType">
+		<xs:unique name="ScheduledActivityKey1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="@RefId"/>
+		</xs:unique>
+	</xs:element>
+	<!--ResourceBooking-->
+	<xs:complexType name="ResourceBookingType">
+		<xs:annotation>
+			<xs:documentation>
+          This object represents a booking for any resource for a single contiguous time period. This could be either a room or another resource, such as equipment.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ResourceRefId" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:annotation>
+						<xs:documentation>The ID (GUID) of the resource being booked. Provided only if the resource being booked is a SIF object with a GUID.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleContent>
+						<xs:extension base="sif:IdRefTypeOrEmpty">
+							<xs:attribute name="SIF_RefObject" use="required">
+								<xs:annotation>
+									<xs:documentation>The type of SIF object that the ResourceRefId element identifies.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="RoomInfo"/>
+										<xs:enumeration value="EquipmentInfo"/>
+										<xs:enumeration value="LearningResource"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ResourceLocalId" type="sif:LocalIdType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Local Id of the resource being booked. Provided whether the resource is a SIF object or not.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Starting date and time for booking.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FinishDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Finish date and time for booking.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FromPeriod" type="sif:LocalIdType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Starting period for booking. If specified, the booking is intended to align with bell times.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ToPeriod" type="sif:LocalIdType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Finish period for booking. If specified, the booking is intended to align with bell times.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Booker" type="sif:IdRefType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicates who booked the room. Points to a StaffPersonal record. This will normally (but not necessarily) be the teacher who will be occupying the room.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Reason" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A free-text explanation of the reason for the room booking.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScheduledActivityRefId" type="sif:IdRefType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Links the room-booking to a ScheduledActivity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="KeepOld" type="xs:boolean" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>If ScheduledActivity is provided, 'true' means the booker wishes to retain all rooms already specified for the ScheduledActivity. 'false' means that room(s)/resources are now available for other uses.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SIF_Metadata" type="sif:SIF_MetadataType" nillable="true" minOccurs="0"/>
+			<xs:element name="SIF_ExtendedElements" type="sif:SIF_ExtendedElementsType" nillable="true" minOccurs="0">
+				<xs:unique name="SIF_ExtendedElementsKey68">
+					<xs:selector xpath="./sif:SIF_ExtendedElement"/>
+					<xs:field xpath="@Name"/>
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RefId" type="sif:RefIdType" use="required">
+			<xs:annotation>
+				<xs:documentation>The GUID of the Object</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="ResourceBooking" type="sif:ResourceBookingType">
+		<xs:unique name="ResourceBookingKey1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="@RefId"/>
+		</xs:unique>
+	</xs:element>
+	<!--EquipmentInfo-->
+	<xs:complexType name="EquipmentInfoType">
+		<xs:annotation>
+			<xs:documentation>
+          This object represents any resource object that is not already described in SIF AU by an existing object (such as RoomInfo or LearningResource). It is intended for use with ResourceBooking, so it can represent any bookable resource; but it is not limited to that usage. While the obvious type of equipment described for booking purposes are things like computers and projectors, the types of equipment that can be booked depends on the educational organisation, and can easily extend to things like vehicles or animals.      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Description of the equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element ref="sif:LocalId" minOccurs="0"/>
+			<xs:element name="AssetNumber" type="sif:LocalIdType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Asset number of the equipment; may be distinct from Local Id.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EquipmentType" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Type of equipment.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:union memberTypes="sif:AUCodeSetsEquipmentTypeType xs:token"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SIF_RefId" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:annotation>
+						<xs:documentation>The SIF RefId of the owner/location of the equipment.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleContent>
+						<xs:extension base="sif:IdRefTypeOrEmpty">
+							<xs:attribute name="SIF_RefObject" use="required">
+								<xs:annotation>
+									<xs:documentation>The type of SIF object that the SIF_RefId element identifies.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="SchoolInfo"/>
+										<xs:enumeration value="RoomInfo"/>
+										<xs:enumeration value="LEAInfo"/>
+										<xs:enumeration value="other"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SIF_Metadata" type="sif:SIF_MetadataType" nillable="true" minOccurs="0"/>
+			<xs:element name="SIF_ExtendedElements" type="sif:SIF_ExtendedElementsType" nillable="true" minOccurs="0">
+				<xs:unique name="SIF_ExtendedElementsKey69">
+					<xs:selector xpath="./sif:SIF_ExtendedElement"/>
+					<xs:field xpath="@Name"/>
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RefId" type="sif:RefIdType" use="required">
+			<xs:annotation>
+				<xs:documentation>The GUID of the Object</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="EquipmentInfo" type="sif:EquipmentInfoType">
+		<xs:unique name="EquipmentInfoKey1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="@RefId"/>
+		</xs:unique>
+	</xs:element>
+	
+		<!-- Adding Collections Here -->
 	<xs:complexType name="ActivityCollectionType">
 		<xs:sequence>
 			<xs:element name="Activity" type="sif:ActivityType" minOccurs="0" maxOccurs="unbounded"/>
@@ -11389,6 +11783,7 @@
 			<xs:element name="SchoolInfo" type="sif:SchoolInfoType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:element name="Schools" type="sif:SchoolCollectionType"/>
 	<xs:complexType name="SystemRoleCollectionType">
 		<xs:sequence>
 			<xs:element name="SystemRole" type="sif:SystemRoleType" minOccurs="0" maxOccurs="unbounded"/>
@@ -11438,6 +11833,27 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="TeachingGroups" type="sif:TeachingGroupCollectionType"/>
+	<xs:complexType name="ResourceBookingCollectionType">
+		<xs:sequence>
+			<xs:element name="ResourceBooking" type="sif:ResourceBookingType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ResourceBookings" type="sif:ResourceBookingCollectionType"/>
+	<xs:complexType name="ScheduledActivityCollectionType">
+		<xs:sequence>
+			<xs:element name="ScheduledActivity" type="sif:ScheduledActivityType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ScheduledActivitys" type="sif:ScheduledActivityCollectionType"/>
+	
+	<xs:complexType name="EquipmentInfoCollectionType">
+		<xs:sequence>
+			<xs:element name="EquipmentInfo" type="sif:EquipmentInfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EquipmentInfos" type="sif:EquipmentInfoCollectionType"/>
+	
+	
 	<!-- Code Set enumerations -->
 	<xs:simpleType name="InfrastructureStatusCodeType">
 		<xs:restriction base="xs:token">
@@ -14872,7 +15288,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="5020">
 				<xs:annotation>
-					<xs:documentation>Communications, nf.d.</xs:documentation>
+					<xs:documentation>Communications, n.f.d.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5021">
@@ -25792,81 +26208,6 @@
 	</xs:simpleType>
 	<xs:simpleType name="AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType">
 		<xs:restriction base="xs:token">
-			<xs:enumeration value="0">
-				<xs:annotation>
-					<xs:documentation>Not Stated</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0000">
-				<xs:annotation>
-					<xs:documentation>Inadequately Described</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0001">
-				<xs:annotation>
-					<xs:documentation>Non Verbal, so described</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0002">
-				<xs:annotation>
-					<xs:documentation>Not Stated</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0003">
-				<xs:annotation>
-					<xs:documentation>Swiss, so described</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0004">
-				<xs:annotation>
-					<xs:documentation>Cypriot, so described</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0005">
-				<xs:annotation>
-					<xs:documentation>Creole, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0006">
-				<xs:annotation>
-					<xs:documentation>French Creole, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0007">
-				<xs:annotation>
-					<xs:documentation>Spanish Creole, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0008">
-				<xs:annotation>
-					<xs:documentation>Portuguese Creole, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0009">
-				<xs:annotation>
-					<xs:documentation>Pidgin, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1000">
-				<xs:annotation>
-					<xs:documentation>Northern European Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1100">
-				<xs:annotation>
-					<xs:documentation>Celtic, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1101">
-				<xs:annotation>
-					<xs:documentation>Gaelic (Scotland)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1102">
-				<xs:annotation>
-					<xs:documentation>Irish</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="1103">
 				<xs:annotation>
 					<xs:documentation>Welsh</xs:documentation>
@@ -25880,11 +26221,6 @@
 			<xs:enumeration value="1201">
 				<xs:annotation>
 					<xs:documentation>English</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1300">
-				<xs:annotation>
-					<xs:documentation>German and Related Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1301">
@@ -25902,11 +26238,6 @@
 					<xs:documentation>Yiddish</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1400">
-				<xs:annotation>
-					<xs:documentation>Dutch and Related Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="1401">
 				<xs:annotation>
 					<xs:documentation>Dutch</xs:documentation>
@@ -25920,11 +26251,6 @@
 			<xs:enumeration value="1403">
 				<xs:annotation>
 					<xs:documentation>Afrikaans</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1500">
-				<xs:annotation>
-					<xs:documentation>Scandinavian, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1501">
@@ -25952,11 +26278,6 @@
 					<xs:documentation>Scandinavian, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="1600">
-				<xs:annotation>
-					<xs:documentation>Finnish and Related Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="1601">
 				<xs:annotation>
 					<xs:documentation>Estonian</xs:documentation>
@@ -25972,11 +26293,6 @@
 					<xs:documentation>Finnish and Related Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="2000">
-				<xs:annotation>
-					<xs:documentation>Southern European Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="2101">
 				<xs:annotation>
 					<xs:documentation>French</xs:documentation>
@@ -25985,11 +26301,6 @@
 			<xs:enumeration value="2201">
 				<xs:annotation>
 					<xs:documentation>Greek</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2300">
-				<xs:annotation>
-					<xs:documentation>Iberian Romance, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2301">
@@ -26022,11 +26333,6 @@
 					<xs:documentation>Maltese</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="2900">
-				<xs:annotation>
-					<xs:documentation>Other Southern European Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="2901">
 				<xs:annotation>
 					<xs:documentation>Basque</xs:documentation>
@@ -26040,16 +26346,6 @@
 			<xs:enumeration value="2999">
 				<xs:annotation>
 					<xs:documentation>Other Southern European Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3000">
-				<xs:annotation>
-					<xs:documentation>Eastern European Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3100">
-				<xs:annotation>
-					<xs:documentation>Baltic, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3101">
@@ -26067,11 +26363,6 @@
 					<xs:documentation>Hungarian</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3400">
-				<xs:annotation>
-					<xs:documentation>East Slavic, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3401">
 				<xs:annotation>
 					<xs:documentation>Belorussian</xs:documentation>
@@ -26085,11 +26376,6 @@
 			<xs:enumeration value="3403">
 				<xs:annotation>
 					<xs:documentation>Ukrainian</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3500">
-				<xs:annotation>
-					<xs:documentation>South Slavic, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3501">
@@ -26127,11 +26413,6 @@
 					<xs:documentation>Serbo-Croatian/Yugoslavian, so described</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3600">
-				<xs:annotation>
-					<xs:documentation>West Slavic, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3601">
 				<xs:annotation>
 					<xs:documentation>Czech</xs:documentation>
@@ -26147,9 +26428,9 @@
 					<xs:documentation>Slovak</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3900">
+			<xs:enumeration value="3604">
 				<xs:annotation>
-					<xs:documentation>Other Eastern European Languages, nfd</xs:documentation>
+					<xs:documentation>Czechoslovakian, so described</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3901">
@@ -26177,16 +26458,6 @@
 					<xs:documentation>Other Eastern European Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4000">
-				<xs:annotation>
-					<xs:documentation>Southwest and Central Asian Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4100">
-				<xs:annotation>
-					<xs:documentation>Iranic, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="4101">
 				<xs:annotation>
 					<xs:documentation>Kurdish</xs:documentation>
@@ -26212,14 +26483,14 @@
 					<xs:documentation>Persian (excluding Dari)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4107">
+				<xs:annotation>
+					<xs:documentation>Hazaraghi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="4199">
 				<xs:annotation>
 					<xs:documentation>Iranic, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4200">
-				<xs:annotation>
-					<xs:documentation>Middle Eastern Semitic Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4202">
@@ -26227,24 +26498,29 @@
 					<xs:documentation>Arabic</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4203">
-				<xs:annotation>
-					<xs:documentation>Assyrian</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="4204">
 				<xs:annotation>
 					<xs:documentation>Hebrew</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4206">
+				<xs:annotation>
+					<xs:documentation>Assyrian Neo-Aramaic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4207">
+				<xs:annotation>
+					<xs:documentation>Chaldean Neo-Aramaic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4208">
+				<xs:annotation>
+					<xs:documentation>Mandaean (Mandaic)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="4299">
 				<xs:annotation>
 					<xs:documentation>Middle Eastern Semitic Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4300">
-				<xs:annotation>
-					<xs:documentation>Turkic, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4301">
@@ -26282,11 +26558,6 @@
 					<xs:documentation>Turkic, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4900">
-				<xs:annotation>
-					<xs:documentation>Other Southwest and Central Asian Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="4901">
 				<xs:annotation>
 					<xs:documentation>Armenian</xs:documentation>
@@ -26300,16 +26571,6 @@
 			<xs:enumeration value="4999">
 				<xs:annotation>
 					<xs:documentation>Other Southwest and Central Asian Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5000">
-				<xs:annotation>
-					<xs:documentation>Southern Asian Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5100">
-				<xs:annotation>
-					<xs:documentation>Dravidian, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5101">
@@ -26340,11 +26601,6 @@
 			<xs:enumeration value="5199">
 				<xs:annotation>
 					<xs:documentation>Dravidian, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5200">
-				<xs:annotation>
-					<xs:documentation>Indo-Aryan, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="5201">
@@ -26417,6 +26673,11 @@
 					<xs:documentation>Oriya</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="5217">
+				<xs:annotation>
+					<xs:documentation>Fijian Hindustani</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="5299">
 				<xs:annotation>
 					<xs:documentation>Indo-Aryan, nec</xs:documentation>
@@ -26427,16 +26688,6 @@
 					<xs:documentation>Other Southern Asian Languages</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="6000">
-				<xs:annotation>
-					<xs:documentation>Southeast Asian Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6100">
-				<xs:annotation>
-					<xs:documentation>Burmese and Related Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="6101">
 				<xs:annotation>
 					<xs:documentation>Burmese</xs:documentation>
@@ -26444,7 +26695,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="6102">
 				<xs:annotation>
-					<xs:documentation>Haka</xs:documentation>
+					<xs:documentation>Chin Haka</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="6103">
@@ -26452,14 +26703,14 @@
 					<xs:documentation>Karen</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="6104">
+				<xs:annotation>
+					<xs:documentation>Rohingya</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="6199">
 				<xs:annotation>
 					<xs:documentation>Burmese and Related Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6200">
-				<xs:annotation>
-					<xs:documentation>Hmong-Mien, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="6201">
@@ -26470,11 +26721,6 @@
 			<xs:enumeration value="6299">
 				<xs:annotation>
 					<xs:documentation>Hmong-Mien, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6300">
-				<xs:annotation>
-					<xs:documentation>Mon-Khmer, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="6301">
@@ -26497,11 +26743,6 @@
 					<xs:documentation>Mon-Khmer, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="6400">
-				<xs:annotation>
-					<xs:documentation>Tai, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="6401">
 				<xs:annotation>
 					<xs:documentation>Lao</xs:documentation>
@@ -26515,11 +26756,6 @@
 			<xs:enumeration value="6499">
 				<xs:annotation>
 					<xs:documentation>Tai, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6500">
-				<xs:annotation>
-					<xs:documentation>Southeast Asian Austronesian Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="6501">
@@ -26612,16 +26848,6 @@
 					<xs:documentation>Other Southeast Asian Languages</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7000">
-				<xs:annotation>
-					<xs:documentation>Eastern Asian Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="7100">
-				<xs:annotation>
-					<xs:documentation>Chinese, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="7101">
 				<xs:annotation>
 					<xs:documentation>Cantonese</xs:documentation>
@@ -26632,24 +26858,19 @@
 					<xs:documentation>Hakka</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7103">
-				<xs:annotation>
-					<xs:documentation>Hokkien</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="7104">
 				<xs:annotation>
 					<xs:documentation>Mandarin</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7105">
-				<xs:annotation>
-					<xs:documentation>Teochew</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="7106">
 				<xs:annotation>
 					<xs:documentation>Wu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7107">
+				<xs:annotation>
+					<xs:documentation>Min Nan</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="7199">
@@ -26667,11 +26888,6 @@
 					<xs:documentation>Korean</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7900">
-				<xs:annotation>
-					<xs:documentation>Other Eastern Asian Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="7901">
 				<xs:annotation>
 					<xs:documentation>Tibetan</xs:documentation>
@@ -26687,29 +26903,9 @@
 					<xs:documentation>Other Eastern Asian Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8000">
-				<xs:annotation>
-					<xs:documentation>Australian Indigenous Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8100">
-				<xs:annotation>
-					<xs:documentation>Arnhem Land and Daly River Region Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8101">
 				<xs:annotation>
 					<xs:documentation>Anindilyakwa</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8102">
-				<xs:annotation>
-					<xs:documentation>Burarra</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8108">
-				<xs:annotation>
-					<xs:documentation>Kunwinjku</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8111">
@@ -26752,21 +26948,6 @@
 					<xs:documentation>Gudanji</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8124">
-				<xs:annotation>
-					<xs:documentation>Gundjeihmi</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8125">
-				<xs:annotation>
-					<xs:documentation>Gun-nartpa</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8126">
-				<xs:annotation>
-					<xs:documentation>Gurr-goni</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8127">
 				<xs:annotation>
 					<xs:documentation>Iwaidja</xs:documentation>
@@ -26790,16 +26971,6 @@
 			<xs:enumeration value="8133">
 				<xs:annotation>
 					<xs:documentation>Kunbarlang</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8134">
-				<xs:annotation>
-					<xs:documentation>Kune</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8135">
-				<xs:annotation>
-					<xs:documentation>Kuninjku</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8136">
@@ -26835,11 +27006,6 @@
 			<xs:enumeration value="8144">
 				<xs:annotation>
 					<xs:documentation>Matngala</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8145">
-				<xs:annotation>
-					<xs:documentation>Mayali</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8146">
@@ -26882,19 +27048,104 @@
 					<xs:documentation>Wardaman</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8156">
+				<xs:annotation>
+					<xs:documentation>Amurdak</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8157">
+				<xs:annotation>
+					<xs:documentation>Garrwa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8158">
+				<xs:annotation>
+					<xs:documentation>Kuwema</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8161">
+				<xs:annotation>
+					<xs:documentation>Marramaninyshi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8162">
+				<xs:annotation>
+					<xs:documentation>Ngandi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8163">
+				<xs:annotation>
+					<xs:documentation>Waanyi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8164">
+				<xs:annotation>
+					<xs:documentation>Wagiman</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8165">
+				<xs:annotation>
+					<xs:documentation>Yanyuwa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8166">
+				<xs:annotation>
+					<xs:documentation>Marridan (Maridan)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8171">
+				<xs:annotation>
+					<xs:documentation>Gundjeihmi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8172">
+				<xs:annotation>
+					<xs:documentation>Kune</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8173">
+				<xs:annotation>
+					<xs:documentation>Kuninjku</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8174">
+				<xs:annotation>
+					<xs:documentation>Kunwinjku</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8175">
+				<xs:annotation>
+					<xs:documentation>Mayali</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8179">
+				<xs:annotation>
+					<xs:documentation>Kunwinjkuan, nec</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8181">
+				<xs:annotation>
+					<xs:documentation>Burarra</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8182">
+				<xs:annotation>
+					<xs:documentation>Gun-nartpa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8183">
+				<xs:annotation>
+					<xs:documentation>Gurr-goni</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8189">
+				<xs:annotation>
+					<xs:documentation>Burarran, nec</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8199">
 				<xs:annotation>
 					<xs:documentation>Arnhem Land and Daly River Region Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8200">
-				<xs:annotation>
-					<xs:documentation>Yongu Matha, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8210">
-				<xs:annotation>
-					<xs:documentation>Dhangu, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8211">
@@ -26917,11 +27168,6 @@
 					<xs:documentation>Dhangu, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8220">
-				<xs:annotation>
-					<xs:documentation>Dhay'yi, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8221">
 				<xs:annotation>
 					<xs:documentation>Dhalwangu</xs:documentation>
@@ -26935,11 +27181,6 @@
 			<xs:enumeration value="8229">
 				<xs:annotation>
 					<xs:documentation>Dhay'yi, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8230">
-				<xs:annotation>
-					<xs:documentation>Dhuwal, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8231">
@@ -26967,19 +27208,14 @@
 					<xs:documentation>Liyagalawumirr</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8236">
+				<xs:annotation>
+					<xs:documentation>Liyagawumirr</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8239">
 				<xs:annotation>
 					<xs:documentation>Dhuwal, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8240">
-				<xs:annotation>
-					<xs:documentation>Dhuwala, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8241">
-				<xs:annotation>
-					<xs:documentation>Dhuwaya</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8242">
@@ -26997,11 +27233,6 @@
 					<xs:documentation>Guyamirrilili</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8245">
-				<xs:annotation>
-					<xs:documentation>Madarrpa</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8246">
 				<xs:annotation>
 					<xs:documentation>Manggalili</xs:documentation>
@@ -27017,11 +27248,6 @@
 					<xs:documentation>Dhuwala, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8250">
-				<xs:annotation>
-					<xs:documentation>Djinang, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8251">
 				<xs:annotation>
 					<xs:documentation>Wurlaki</xs:documentation>
@@ -27032,14 +27258,19 @@
 					<xs:documentation>Djinang, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8260">
-				<xs:annotation>
-					<xs:documentation>Djinba, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8261">
 				<xs:annotation>
 					<xs:documentation>Ganalbingu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8262">
+				<xs:annotation>
+					<xs:documentation>Djinba</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8263">
+				<xs:annotation>
+					<xs:documentation>Manyjalpingu</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8269">
@@ -27047,14 +27278,14 @@
 					<xs:documentation>Djinba, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8270">
-				<xs:annotation>
-					<xs:documentation> Yakuy, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8271">
 				<xs:annotation>
 					<xs:documentation>Ritharrngu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8272">
+				<xs:annotation>
+					<xs:documentation>Wagilak</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8279">
@@ -27067,14 +27298,44 @@
 					<xs:documentation>Nhangu</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8299">
+			<xs:enumeration value="8282">
 				<xs:annotation>
-					<xs:documentation>Other Yolngu Matha</xs:documentation>
+					<xs:documentation>Yan-Nhangu</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8300">
+			<xs:enumeration value="8289">
 				<xs:annotation>
-					<xs:documentation>Cape York Peninsula Languages, nfd</xs:documentation>
+					<xs:documentation>Nhangu, nec</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8291">
+				<xs:annotation>
+					<xs:documentation>Dhuwaya</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8292">
+				<xs:annotation>
+					<xs:documentation>Djangu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8293">
+				<xs:annotation>
+					<xs:documentation>Madarrpa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8294">
+				<xs:annotation>
+					<xs:documentation>Warramiri</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8295">
+				<xs:annotation>
+					<xs:documentation>Rirratjingu</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8299">
+				<xs:annotation>
+					<xs:documentation>Other Yolngu Matha, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8301">
@@ -27137,14 +27398,39 @@
 					<xs:documentation>Wik Ngathan</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8315">
+				<xs:annotation>
+					<xs:documentation>Alngith</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8316">
+				<xs:annotation>
+					<xs:documentation>Kugu Muminh</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8317">
+				<xs:annotation>
+					<xs:documentation>Morrobalama</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8318">
+				<xs:annotation>
+					<xs:documentation>Thaynakwith</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8321">
+				<xs:annotation>
+					<xs:documentation>Yupangathi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8322">
+				<xs:annotation>
+					<xs:documentation>Tjungundji</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8399">
 				<xs:annotation>
 					<xs:documentation>Cape York Peninsula Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8400">
-				<xs:annotation>
-					<xs:documentation>Torres Strait Island Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8401">
@@ -27159,12 +27445,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="8403">
 				<xs:annotation>
-					<xs:documentation>Torres Strait Creole</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8500">
-				<xs:annotation>
-					<xs:documentation>Northern Desert Fringe Area Languages, nfd</xs:documentation>
+					<xs:documentation>Yumplatok (Torres Strait Creole)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8504">
@@ -27200,11 +27481,6 @@
 			<xs:enumeration value="8512">
 				<xs:annotation>
 					<xs:documentation>Mudburra</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8513">
-				<xs:annotation>
-					<xs:documentation>Ngandi</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8514">
@@ -27247,24 +27523,9 @@
 					<xs:documentation>Northern Desert Fringe Area Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8600">
-				<xs:annotation>
-					<xs:documentation>Arandic, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8603">
 				<xs:annotation>
 					<xs:documentation>Alyawarr</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8604">
-				<xs:annotation>
-					<xs:documentation>Anmatyerr</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8605">
-				<xs:annotation>
-					<xs:documentation>Arrernte</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8606">
@@ -27272,14 +27533,44 @@
 					<xs:documentation>Kaytetye</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8607">
+				<xs:annotation>
+					<xs:documentation>Antekerrepenh</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8611">
+				<xs:annotation>
+					<xs:documentation>Central Anmatyerr</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8612">
+				<xs:annotation>
+					<xs:documentation>Eastern Anmatyerr</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8619">
+				<xs:annotation>
+					<xs:documentation>Anmatyerr, nec</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8621">
+				<xs:annotation>
+					<xs:documentation>Eastern Arrernte</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8622">
+				<xs:annotation>
+					<xs:documentation>Western Arrarnta</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8629">
+				<xs:annotation>
+					<xs:documentation>Arrernte, nec</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8699">
 				<xs:annotation>
 					<xs:documentation>Arandic, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8700">
-				<xs:annotation>
-					<xs:documentation>Western Desert Language, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8703">
@@ -27357,14 +27648,14 @@
 					<xs:documentation>Yulparija</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8722">
+				<xs:annotation>
+					<xs:documentation>Tjupany</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8799">
 				<xs:annotation>
 					<xs:documentation>Western Desert Language, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8800">
-				<xs:annotation>
-					<xs:documentation>Kimberley Area Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8801">
@@ -27417,14 +27708,24 @@
 					<xs:documentation>Yawuru</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8813">
+				<xs:annotation>
+					<xs:documentation>Gambera</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8814">
+				<xs:annotation>
+					<xs:documentation>Jawi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8815">
+				<xs:annotation>
+					<xs:documentation>Kija</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8899">
 				<xs:annotation>
 					<xs:documentation>Kimberley Area Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8900">
-				<xs:annotation>
-					<xs:documentation>Other Australian Indigenous Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8901">
@@ -27472,11 +27773,6 @@
 					<xs:documentation>Gamilaraay</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8912">
-				<xs:annotation>
-					<xs:documentation>Garrwa</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8913">
 				<xs:annotation>
 					<xs:documentation>Garuwali</xs:documentation>
@@ -27515,11 +27811,6 @@
 			<xs:enumeration value="8922">
 				<xs:annotation>
 					<xs:documentation>Kayardild</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="8923">
-				<xs:annotation>
-					<xs:documentation>Kija</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="8924">
@@ -27592,11 +27883,6 @@
 					<xs:documentation>Wiradjuri</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8942">
-				<xs:annotation>
-					<xs:documentation>Yanyuwa</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="8943">
 				<xs:annotation>
 					<xs:documentation>Yindjibarndi</xs:documentation>
@@ -27612,6 +27898,81 @@
 					<xs:documentation>Yorta Yorta</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8946">
+				<xs:annotation>
+					<xs:documentation>Baanbay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8947">
+				<xs:annotation>
+					<xs:documentation>Badimaya</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8948">
+				<xs:annotation>
+					<xs:documentation>Barababaraba</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8951">
+				<xs:annotation>
+					<xs:documentation>Dadi Dadi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8952">
+				<xs:annotation>
+					<xs:documentation>Dharawal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8953">
+				<xs:annotation>
+					<xs:documentation>Djabwurrung</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8954">
+				<xs:annotation>
+					<xs:documentation>Gudjal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8955">
+				<xs:annotation>
+					<xs:documentation>Keerray-Woorroong</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8956">
+				<xs:annotation>
+					<xs:documentation>Ladji Ladji</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8957">
+				<xs:annotation>
+					<xs:documentation>Mirning</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8958">
+				<xs:annotation>
+					<xs:documentation>Ngatjumaya</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8961">
+				<xs:annotation>
+					<xs:documentation>Waluwarra</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8962">
+				<xs:annotation>
+					<xs:documentation>Wangkangurru</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8963">
+				<xs:annotation>
+					<xs:documentation>Wargamay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8964">
+				<xs:annotation>
+					<xs:documentation>Wergaia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="8998">
 				<xs:annotation>
 					<xs:documentation>Aboriginal English, so described</xs:documentation>
@@ -27622,19 +27983,9 @@
 					<xs:documentation>Other Australian Indigenous Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="9000">
-				<xs:annotation>
-					<xs:documentation>Other Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="9101">
 				<xs:annotation>
 					<xs:documentation>American Languages</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9200">
-				<xs:annotation>
-					<xs:documentation>African Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9201">
@@ -27787,14 +28138,94 @@
 					<xs:documentation>Seychelles Creole</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9241">
+				<xs:annotation>
+					<xs:documentation>Anuak</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9242">
+				<xs:annotation>
+					<xs:documentation>Bari</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9243">
+				<xs:annotation>
+					<xs:documentation>Bassa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9244">
+				<xs:annotation>
+					<xs:documentation>Dan (Gio-Dan)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9245">
+				<xs:annotation>
+					<xs:documentation>Fulfulde</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9246">
+				<xs:annotation>
+					<xs:documentation>Kinyarwanda (Rwanda)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9247">
+				<xs:annotation>
+					<xs:documentation>Kirundi (Rundi)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9248">
+				<xs:annotation>
+					<xs:documentation>Kpelle</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9251">
+				<xs:annotation>
+					<xs:documentation>Krahn</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9252">
+				<xs:annotation>
+					<xs:documentation>Liberian (Liberian English)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9253">
+				<xs:annotation>
+					<xs:documentation>Loma (Lorma)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9254">
+				<xs:annotation>
+					<xs:documentation>Lumun (Kuku Lumun)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9255">
+				<xs:annotation>
+					<xs:documentation>Madi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9256">
+				<xs:annotation>
+					<xs:documentation>Mandinka</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9257">
+				<xs:annotation>
+					<xs:documentation>Mann</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9258">
+				<xs:annotation>
+					<xs:documentation>Moro (Nuba Moro)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9261">
+				<xs:annotation>
+					<xs:documentation>Themne</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="9299">
 				<xs:annotation>
 					<xs:documentation>African Languages, nec</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9300">
-				<xs:annotation>
-					<xs:documentation>Pacific Austronesian Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9301">
@@ -27815,11 +28246,6 @@
 			<xs:enumeration value="9304">
 				<xs:annotation>
 					<xs:documentation>Maori (New Zealand)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9305">
-				<xs:annotation>
-					<xs:documentation>Motu</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9306">
@@ -27867,16 +28293,6 @@
 					<xs:documentation>Pacific Austronesian Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="9400">
-				<xs:annotation>
-					<xs:documentation>Oceanian Pidgins and Creoles, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9401">
-				<xs:annotation>
-					<xs:documentation>Tok Pisin</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="9402">
 				<xs:annotation>
 					<xs:documentation>Bislama</xs:documentation>
@@ -27902,29 +28318,29 @@
 					<xs:documentation>Oceanian Pidgins and Creoles, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="9500">
-				<xs:annotation>
-					<xs:documentation>Papua New Guinea Papuan Languages, nfd</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="9502">
 				<xs:annotation>
 					<xs:documentation>Kiwai</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9503">
+				<xs:annotation>
+					<xs:documentation>Motu (HiriMotu)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9504">
+				<xs:annotation>
+					<xs:documentation>Tok Pisin (Neomelanesian)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="9599">
 				<xs:annotation>
-					<xs:documentation>Papua New Guinea Papuan Languages, nec</xs:documentation>
+					<xs:documentation>Papua New Guinea Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9601">
 				<xs:annotation>
 					<xs:documentation>Invented Languages</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9700">
-				<xs:annotation>
-					<xs:documentation>Sign Languages, nfd</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9701">
@@ -27942,6 +28358,351 @@
 					<xs:documentation>Sign Languages, nec</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="0000">
+				<xs:annotation>
+					<xs:documentation>Inadequately Described</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0001">
+				<xs:annotation>
+					<xs:documentation>Non Verbal, so described</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0002">
+				<xs:annotation>
+					<xs:documentation>Not Stated</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0003">
+				<xs:annotation>
+					<xs:documentation>Swiss, so described</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0004">
+				<xs:annotation>
+					<xs:documentation>Cypriot, so described</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0005">
+				<xs:annotation>
+					<xs:documentation>Creole, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0006">
+				<xs:annotation>
+					<xs:documentation>French Creole, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0007">
+				<xs:annotation>
+					<xs:documentation>Spanish Creole, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0008">
+				<xs:annotation>
+					<xs:documentation>Portuguese Creole, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0009">
+				<xs:annotation>
+					<xs:documentation>Pidgin, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1000">
+				<xs:annotation>
+					<xs:documentation>Northern European Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1100">
+				<xs:annotation>
+					<xs:documentation>Celtic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1300">
+				<xs:annotation>
+					<xs:documentation>German and Related Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1400">
+				<xs:annotation>
+					<xs:documentation>Dutch and Related Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1500">
+				<xs:annotation>
+					<xs:documentation>Scandinavian, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1600">
+				<xs:annotation>
+					<xs:documentation>Finnish and Related Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2000">
+				<xs:annotation>
+					<xs:documentation>Southern European Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2300">
+				<xs:annotation>
+					<xs:documentation>Iberian Romance, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2900">
+				<xs:annotation>
+					<xs:documentation>Other Southern European Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3000">
+				<xs:annotation>
+					<xs:documentation>Eastern European Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3100">
+				<xs:annotation>
+					<xs:documentation>Baltic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3400">
+				<xs:annotation>
+					<xs:documentation>East Slavic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3500">
+				<xs:annotation>
+					<xs:documentation>South Slavic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3600">
+				<xs:annotation>
+					<xs:documentation>West Slavic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3900">
+				<xs:annotation>
+					<xs:documentation>Other Eastern European Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4000">
+				<xs:annotation>
+					<xs:documentation>Southwest and Central Asian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4100">
+				<xs:annotation>
+					<xs:documentation>Iranic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4200">
+				<xs:annotation>
+					<xs:documentation>Middle Eastern Semitic Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4300">
+				<xs:annotation>
+					<xs:documentation>Turkic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4900">
+				<xs:annotation>
+					<xs:documentation>Other Southwest and Central Asian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5000">
+				<xs:annotation>
+					<xs:documentation>Southern Asian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5100">
+				<xs:annotation>
+					<xs:documentation>Dravidian, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5200">
+				<xs:annotation>
+					<xs:documentation>Indo-Aryan, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6000">
+				<xs:annotation>
+					<xs:documentation>Southeast Asian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6100">
+				<xs:annotation>
+					<xs:documentation>Burmese and Related Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6200">
+				<xs:annotation>
+					<xs:documentation>Hmong-Mien, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6300">
+				<xs:annotation>
+					<xs:documentation>Mon-Khmer, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6400">
+				<xs:annotation>
+					<xs:documentation>Tai, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6500">
+				<xs:annotation>
+					<xs:documentation>Southeast Asian Austronesian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7000">
+				<xs:annotation>
+					<xs:documentation>Eastern Asian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7100">
+				<xs:annotation>
+					<xs:documentation>Chinese, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7900">
+				<xs:annotation>
+					<xs:documentation>Other Eastern Asian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8000">
+				<xs:annotation>
+					<xs:documentation>Australian Indigenous Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8100">
+				<xs:annotation>
+					<xs:documentation>Arnhem Land and Daly River Region Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8170">
+				<xs:annotation>
+					<xs:documentation>Kuwinjkuan, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8180">
+				<xs:annotation>
+					<xs:documentation>Burarran, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8200">
+				<xs:annotation>
+					<xs:documentation>Yolngu Matha, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8210">
+				<xs:annotation>
+					<xs:documentation>Dhangu, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8220">
+				<xs:annotation>
+					<xs:documentation>Dhay'yi, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8230">
+				<xs:annotation>
+					<xs:documentation>Dhuwal, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8240">
+				<xs:annotation>
+					<xs:documentation>Dhuwala, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8250">
+				<xs:annotation>
+					<xs:documentation>Djinang, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8260">
+				<xs:annotation>
+					<xs:documentation>Djinba, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8270">
+				<xs:annotation>
+					<xs:documentation>Yakuy, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8300">
+				<xs:annotation>
+					<xs:documentation>Cape York Peninsula Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8400">
+				<xs:annotation>
+					<xs:documentation>Torres Strait Island Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8500">
+				<xs:annotation>
+					<xs:documentation>Northern Desert Fringe Area Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8600">
+				<xs:annotation>
+					<xs:documentation>Arandic, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8610">
+				<xs:annotation>
+					<xs:documentation>Anmatyerr, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8620">
+				<xs:annotation>
+					<xs:documentation>Arrernte, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8700">
+				<xs:annotation>
+					<xs:documentation>Western Desert Language, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8800">
+				<xs:annotation>
+					<xs:documentation>Kimberley Area Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8900">
+				<xs:annotation>
+					<xs:documentation>Other Australian  Indigenous Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9000">
+				<xs:annotation>
+					<xs:documentation>Other Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9200">
+				<xs:annotation>
+					<xs:documentation>African Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9300">
+				<xs:annotation>
+					<xs:documentation>Pacific Austronesian Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9400">
+				<xs:annotation>
+					<xs:documentation>Oceanic Pidgins and Creoles, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9500">
+				<xs:annotation>
+					<xs:documentation>Papua New Guinea Languages,  nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9700">
+				<xs:annotation>
+					<xs:documentation>Sign Languages, nfd</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AUCodeSetsLanguageTypeType">
@@ -27953,7 +28714,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation>Main Language Other Than English Spoken at Home,</xs:documentation>
+					<xs:documentation>Main Language Other Than English Spoken at Home</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
@@ -29982,7 +30743,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1911">
 				<xs:annotation>
-					<xs:documentation>Transferred to a private, non-religiously-affiliated school in a different district the same jurisdiction</xs:documentation>
+					<xs:documentation>Transferred to a private, non-religiously-affiliated school in a different district in the same jurisdiction</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1912">
@@ -30933,7 +31694,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1499">
 				<xs:annotation>
-					<xs:documentation>Other Building Operations and general maintenance - In</xs:documentation>
+					<xs:documentation>Other Building Operations and general maintenance - In school</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2203">
@@ -31028,7 +31789,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1400">
 				<xs:annotation>
-					<xs:documentation>Building in school n.f.d.</xs:documentation>
+					<xs:documentation>Building Operations in school n.f.d.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1399">
@@ -31268,7 +32029,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2400">
 				<xs:annotation>
-					<xs:documentation>Building out of school n.f.d.</xs:documentation>
+					<xs:documentation>Building Operations out of school n.f.d.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2399">
@@ -31646,102 +32407,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-  <xs:complexType name="ScheduledActivityType">
-    <xs:sequence>
-      <xs:element name="SchoolInfoRefId" type="sif:IdRefType" />
-      <xs:element name="TimeTableCellRefId" minOccurs="0" nillable="true" type="sif:IdRefType" />
-      <xs:element name="DayId" minOccurs="0" nillable="true" type="sif:LocalIdType" />
-      <xs:element name="PeriodId" minOccurs="0" nillable="true" type="sif:LocalIdType" />
-      <xs:element name="TimeTableRefId" minOccurs="0" nillable="true" type="sif:IdRefType" />
-      <xs:element name="ActivityDate" type="xs:date" />
-      <xs:element name="StartTime" type="xs:time" />
-      <xs:element name="FinishTime" type="xs:time" />
-      <xs:element name="CellType" minOccurs="0" nillable="true" type="xs:normalizedString" />
-      <xs:element name="TimeTableSubjectRefId" minOccurs="0" nillable="true" type="sif:IdRefType" />
-      <xs:element name="TeacherList" minOccurs="0" nillable="true">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="TeacherCover" maxOccurs="unbounded">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element name="StaffPersonalRefId" type="sif:IdRefType" />
-                  <xs:element name="StaffLocalId" minOccurs="0" nillable="true" type="sif:LocalIdType" />
-                  <xs:element name="StartTime" minOccurs="0" nillable="true" type="xs:time" />
-                  <xs:element name="FinishTime" minOccurs="0" nillable="true" type="xs:time" />
-                  <xs:element name="Credit" minOccurs="0" nillable="true" type="xs:normalizedString" />
-                  <xs:element name="Supervision" minOccurs="0" nillable="true" type="xs:normalizedString" />
-                  <xs:element name="Weighting" minOccurs="0" nillable="true" type="xs:decimal" />
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="RoomList" minOccurs="0" nillable="true">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="RoomInfoRefId" maxOccurs="unbounded" type="sif:IdRefType" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="AddressList" minOccurs="0" nillable="true" type="sif:AddressListType">
-        <xs:key name="AddressListKey6">
-          <xs:selector xpath="./sif:Address" />
-          <xs:field xpath="@Type" />
-          <xs:field xpath="@Role" />
-        </xs:key>
-      </xs:element>
-      <xs:element name="Location" minOccurs="0" nillable="true" type="xs:normalizedString" />
-      <xs:element name="ActivityType" minOccurs="0" nillable="true" type="xs:normalizedString" />
-      <xs:element name="ActivityName" minOccurs="0" nillable="true" type="xs:normalizedString" />
-      <xs:element name="ActivityComment" minOccurs="0" nillable="true" type="xs:normalizedString" />
-      <xs:element name="StudentList" minOccurs="0" nillable="true">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="StudentPersonalRefId" maxOccurs="unbounded" type="sif:IdRefType" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="TeachingGroupList" minOccurs="0" nillable="true">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="TeachingGroupRefId" maxOccurs="unbounded" type="sif:IdRefType" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="YearLevels" minOccurs="0" nillable="true" type="sif:YearLevelsType" />
-      <xs:element name="Override" minOccurs="0" nillable="true">
-        <xs:complexType>
-          <xs:simpleContent>
-            <xs:extension base="sif:AUCodeSetsYesOrNoCategoryType">
-              <xs:attribute name="DateOfOverride" use="optional" type="xs:date" />
-            </xs:extension>
-          </xs:simpleContent>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="sif:SIF_MetadataType" />
-      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="sif:SIF_ExtendedElementsType">
-        <xs:key name="SIF_ExtendedElementsKey67">
-          <xs:selector xpath="./sif:SIF_ExtendedElement" />
-          <xs:field xpath="@Name" />
-        </xs:key>
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute name="RefId" use="required" type="sif:RefIdType" />
-  </xs:complexType>
-  <xs:element name="ScheduledActivity" type="sif:ScheduledActivityType">
-    <xs:key name="ScheduledActivityKey1">
-      <xs:selector xpath="." />
-      <xs:field xpath="@RefId" />
-    </xs:key>
-  </xs:element>
-  <xs:complexType name="ScheduledActivityCollectionType">
-    <xs:sequence>
-      <xs:element name="ScheduledActivity" type="sif:ScheduledActivityType" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ScheduledActivitys" type="sif:ScheduledActivityCollectionType"/>
-  <xs:simpleType name="AUCodeSetsACStrandType">
+	<xs:simpleType name="AUCodeSetsACStrandType">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="A">
 				<xs:annotation>
@@ -31750,7 +32416,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="B">
 				<xs:annotation>
-					<xs:documentation>Business and economics</xs:documentation>
+					<xs:documentation>Economics and business</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="C">
@@ -31760,7 +32426,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Design</xs:documentation>
+					<xs:documentation>Design and technologies</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="E">
@@ -31780,7 +32446,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="I">
 				<xs:annotation>
-					<xs:documentation>Information and communication technologies</xs:documentation>
+					<xs:documentation>Digital technologies</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="L">
@@ -31801,6 +32467,16 @@
 			<xs:enumeration value="S">
 				<xs:annotation>
 					<xs:documentation>Science</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="U">
+				<xs:annotation>
+					<xs:documentation>Humanities and social sciences</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="T">
+				<xs:annotation>
+					<xs:documentation>Technology</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -31953,6 +32629,147 @@
 			<xs:enumeration value="O">
 				<xs:annotation>
 					<xs:documentation>On Leave</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AUCodeSetsTeacherCoverCreditType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="In-Lieu">
+				<xs:annotation>
+					<xs:documentation>The cover is taken as replacement for a cancelled class</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Extra">
+				<xs:annotation>
+					<xs:documentation>The cover counts towards the teacher's extras quota</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Underload">
+				<xs:annotation>
+					<xs:documentation>The cover is not counted as an extra because the teacher is underloaded on the cyclical timetable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Casual">
+				<xs:annotation>
+					<xs:documentation>The the event is supervised by a casual teacher</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AUCodeSetsTeacherCoverSupervisionType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Normal">
+				<xs:annotation>
+					<xs:documentation>Normal supervision</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MinimalSupervision">
+				<xs:annotation>
+					<xs:documentation>Minimal supervision</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MergedClass">
+				<xs:annotation>
+					<xs:documentation>The event is a merged class</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AUCodeSetsScheduledActivityTypeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Duty">
+				<xs:annotation>
+					<xs:documentation>Yard duty (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TeachingClass">
+				<xs:annotation>
+					<xs:documentation>Classroom teaching (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Study">
+				<xs:annotation>
+					<xs:documentation>Supervised study for students with gaps in their timetables (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RollClass">
+				<xs:annotation>
+					<xs:documentation>Morning roll-call (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RosteredTimeOff">
+				<xs:annotation>
+					<xs:documentation>Rostered Time Off (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="StaffMeeting">
+				<xs:annotation>
+					<xs:documentation>Staff Meeting (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ExtraCurricular">
+				<xs:annotation>
+					<xs:documentation>Music, sport, chess club etc (cyclical)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Excursion">
+				<xs:annotation>
+					<xs:documentation>Excursion (one-off)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Incursion">
+				<xs:annotation>
+					<xs:documentation>Excursion held on campus (one-off)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Exam">
+				<xs:annotation>
+					<xs:documentation>Exam (one-off)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Event">
+				<xs:annotation>
+					<xs:documentation>Anything else (one-off)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AUCodeSetsEquipmentTypeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="DesktopComputer">
+				<xs:annotation>
+					<xs:documentation>Desktop Computer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="LaptopComputer">
+				<xs:annotation>
+					<xs:documentation>Laptop Computer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Tablet">
+				<xs:annotation>
+					<xs:documentation>Tablet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OverheadProjector">
+				<xs:annotation>
+					<xs:documentation>Overhead Projector</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SlideProjector">
+				<xs:annotation>
+					<xs:documentation>Slide Projector</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Vehicle">
+				<xs:annotation>
+					<xs:documentation>Vehicle</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Other">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -32242,9 +33059,9 @@
 					<xs:documentation>Costa Rican Colon</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="CSD">
+			<xs:enumeration value="CUC">
 				<xs:annotation>
-					<xs:documentation>Serbian Dinar</xs:documentation>
+					<xs:documentation>Perso Convertible</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CUP">
@@ -32255,11 +33072,6 @@
 			<xs:enumeration value="CVE">
 				<xs:annotation>
 					<xs:documentation>Cape Verde Escudo</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="CYP">
-				<xs:annotation>
-					<xs:documentation>Cyprus Pound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CZK">
@@ -32285,11 +33097,6 @@
 			<xs:enumeration value="DZD">
 				<xs:annotation>
 					<xs:documentation>Algerian Dinar</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="EEK">
-				<xs:annotation>
-					<xs:documentation>Kroon</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="EGP">
@@ -32332,7 +33139,7 @@
 					<xs:documentation>Lari</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="GHC">
+			<xs:enumeration value="GHS">
 				<xs:annotation>
 					<xs:documentation>Cedi</xs:documentation>
 				</xs:annotation>
@@ -32355,11 +33162,6 @@
 			<xs:enumeration value="GTQ">
 				<xs:annotation>
 					<xs:documentation>Quetzal</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="GWP">
-				<xs:annotation>
-					<xs:documentation>Guinea-Bissau Peso</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GYD">
@@ -32512,11 +33314,6 @@
 					<xs:documentation>Lithuanian Litas</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="LVL">
-				<xs:annotation>
-					<xs:documentation>Latvian Lats</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="LYD">
 				<xs:annotation>
 					<xs:documentation>Libyan Dinar</xs:documentation>
@@ -32560,11 +33357,6 @@
 			<xs:enumeration value="MRO">
 				<xs:annotation>
 					<xs:documentation>Ouguiya</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="MTL">
-				<xs:annotation>
-					<xs:documentation>Maltese Lira</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="MUR">
@@ -32677,11 +33469,6 @@
 					<xs:documentation>Qatari Rial</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="ROL">
-				<xs:annotation>
-					<xs:documentation>Old Leu</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="RON">
 				<xs:annotation>
 					<xs:documentation>New Leu</xs:documentation>
@@ -32690,6 +33477,11 @@
 			<xs:enumeration value="RUB">
 				<xs:annotation>
 					<xs:documentation>Russian Ruble</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RSD">
+				<xs:annotation>
+					<xs:documentation>Serbian Dina</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="RWF">
@@ -32712,9 +33504,9 @@
 					<xs:documentation>Seychelles Rupee</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="SDD">
+			<xs:enumeration value="SDG">
 				<xs:annotation>
-					<xs:documentation>Sudanese Dinar</xs:documentation>
+					<xs:documentation>Sudanese Pound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="SEK">
@@ -32732,16 +33524,6 @@
 					<xs:documentation>Saint Helena Pound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="SIT">
-				<xs:annotation>
-					<xs:documentation>Tolar</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="SKK">
-				<xs:annotation>
-					<xs:documentation>Slovak Koruna</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="SLL">
 				<xs:annotation>
 					<xs:documentation>Leone</xs:documentation>
@@ -32755,6 +33537,11 @@
 			<xs:enumeration value="SRD">
 				<xs:annotation>
 					<xs:documentation>Surinam Dollar</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SSP">
+				<xs:annotation>
+					<xs:documentation>South Sudanese Pound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="STD">
@@ -32787,9 +33574,9 @@
 					<xs:documentation>Somoni</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="TMM">
+			<xs:enumeration value="TMT">
 				<xs:annotation>
-					<xs:documentation>Manat</xs:documentation>
+					<xs:documentation>Turkmenistan New Manat</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="TND">
@@ -32842,11 +33629,6 @@
 					<xs:documentation>US Dollar (Next day)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="USS">
-				<xs:annotation>
-					<xs:documentation>US Dollar (Same day)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="UYU">
 				<xs:annotation>
 					<xs:documentation>Peso Uruguayo</xs:documentation>
@@ -32857,7 +33639,7 @@
 					<xs:documentation>Uzbekistan Sum</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="VEB">
+			<xs:enumeration value="VEF">
 				<xs:annotation>
 					<xs:documentation>Bolivar</xs:documentation>
 				</xs:annotation>
@@ -32922,16 +33704,6 @@
 					<xs:documentation>SDR</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="XFO">
-				<xs:annotation>
-					<xs:documentation>Gold-Franc</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="XFU">
-				<xs:annotation>
-					<xs:documentation>UIC-Franc</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="XOF">
 				<xs:annotation>
 					<xs:documentation>CFA Franc BCEAO</xs:documentation>
@@ -32950,6 +33722,16 @@
 			<xs:enumeration value="XPT">
 				<xs:annotation>
 					<xs:documentation>Platinum</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="XSU">
+				<xs:annotation>
+					<xs:documentation>Sucre</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="XUA">
+				<xs:annotation>
+					<xs:documentation>ADB Unit of Account</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="XTS">
@@ -33417,10 +34199,9 @@
 			<xs:simpleType>
 				<xs:restriction base="xs:token">
 					<xs:annotation>
-						<xs:documentation>SIF format for a 1.3/3.0 GUID.</xs:documentation>
+						<xs:documentation>SIF format for a GUID.</xs:documentation>
 					</xs:annotation>
-					<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
-					<!---<xs:pattern value="[0-9A-F]{32}"/>-->
+					<xs:pattern value="[0-9A-F]{32}"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:restriction>
@@ -34121,6 +34902,16 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<!--AUCodeSetsYesOrNoCategoryTypeOrEmpty-->
+	<xs:simpleType name="AUCodeSetsYesOrNoCategoryTypeOrEmpty">
+		<xs:union memberTypes="sif:AUCodeSetsYesOrNoCategoryType">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
 	<!--XSDecimalOrEmpty-->
 	<xs:simpleType name="XSDecimalOrEmpty">
 		<xs:union memberTypes="xs:decimal">

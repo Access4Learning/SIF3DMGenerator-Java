@@ -811,6 +811,7 @@ public class DemographicsType {
     public static class CountriesOfCitizenship {
 
         @XmlElement(name = "CountryOfCitizenship", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected List<String> countryOfCitizenship;
 
         /**
@@ -871,6 +872,7 @@ public class DemographicsType {
     public static class CountriesOfResidency {
 
         @XmlElement(name = "CountryOfResidency", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected List<String> countryOfResidency;
 
         /**

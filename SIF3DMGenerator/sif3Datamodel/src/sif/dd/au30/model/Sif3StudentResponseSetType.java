@@ -17,7 +17,7 @@ import javax.xml.datatype.Duration;
 
 
 /**
- * This object transmits the student's responses to stimuli presented in an assessment. This object contains the raw responses as well as provides item-level scores and feedback to the student based on those responses.
+ * This object transmits the student's responses to stimuli presented in an assessment. This object contains the raw responses as well as providing item-level scores and feedback to the student based on those responses.
  * 
  * <p>Java class for Sif3StudentResponseSetType complex type.
  * 
