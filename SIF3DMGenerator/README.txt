@@ -54,6 +54,11 @@ Version from October 16, 2014
 ===============================
 Added JSON mapping functionality to Marshaller and Unmarshaller classes.
 
+===============================
+Version from March 03, 2015
+===============================
+Updated Marshallers and Unmarshallers to match the interface version of the SIF3 Framework.
+
 #########################################################################################################
 # Download Instructions
 #########################################################################################################
