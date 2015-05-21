@@ -34,7 +34,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/au/datamodel/1.3}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/au/datamodel/1.3}StateProvinceIdType" minOccurs="0"/>
  *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ACARAId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="OtherIdList" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -121,41 +120,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="SLA" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsAustralianStandardGeographicalClassificationASGCType" minOccurs="0"/>
  *         &lt;element name="SchoolCoEdStatus" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsSchoolCoEdStatusType" minOccurs="0"/>
  *         &lt;element name="BoardingSchoolStatus" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="YearLevelEnrollmentList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="YearLevelEnrollment" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="Year" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsYearLevelCodeType" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="Enrolment" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="TotalEnrollments" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Girls" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="Boys" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="TotalStudents" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
  *         &lt;element name="Entity_Open" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Entity_Close" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="SchoolGroupList" minOccurs="0">
@@ -185,7 +149,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "localId",
     "stateProvinceId",
     "commonwealthId",
-    "acaraId",
     "otherIdList",
     "schoolName",
     "leaInfoRefId",
@@ -217,8 +180,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "sla",
     "schoolCoEdStatus",
     "boardingSchoolStatus",
-    "yearLevelEnrollmentList",
-    "totalEnrollments",
     "entityOpen",
     "entityClose",
     "schoolGroupList",
@@ -233,8 +194,6 @@ public class SchoolInfoType {
     protected JAXBElement<String> stateProvinceId;
     @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
     protected JAXBElement<String> commonwealthId;
-    @XmlElementRef(name = "ACARAId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> acaraId;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
     protected JAXBElement<SchoolInfoType.OtherIdList> otherIdList;
     @XmlElement(name = "SchoolName", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
@@ -299,10 +258,6 @@ public class SchoolInfoType {
     protected JAXBElement<AUCodeSetsSchoolCoEdStatusType> schoolCoEdStatus;
     @XmlElementRef(name = "BoardingSchoolStatus", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> boardingSchoolStatus;
-    @XmlElementRef(name = "YearLevelEnrollmentList", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-    protected JAXBElement<SchoolInfoType.YearLevelEnrollmentList> yearLevelEnrollmentList;
-    @XmlElementRef(name = "TotalEnrollments", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-    protected JAXBElement<SchoolInfoType.TotalEnrollments> totalEnrollments;
     @XmlElementRef(name = "Entity_Open", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> entityOpen;
     @XmlElementRef(name = "Entity_Close", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
@@ -387,30 +342,6 @@ public class SchoolInfoType {
      */
     public void setCommonwealthId(JAXBElement<String> value) {
         this.commonwealthId = value;
-    }
-
-    /**
-     * Gets the value of the acaraId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
-     */
-    public JAXBElement<String> getACARAId() {
-        return acaraId;
-    }
-
-    /**
-     * Sets the value of the acaraId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
-     */
-    public void setACARAId(JAXBElement<String> value) {
-        this.acaraId = value;
     }
 
     /**
@@ -1158,54 +1089,6 @@ public class SchoolInfoType {
     }
 
     /**
-     * Gets the value of the yearLevelEnrollmentList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SchoolInfoType.YearLevelEnrollmentList }{@code >}
-     *     
-     */
-    public JAXBElement<SchoolInfoType.YearLevelEnrollmentList> getYearLevelEnrollmentList() {
-        return yearLevelEnrollmentList;
-    }
-
-    /**
-     * Sets the value of the yearLevelEnrollmentList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SchoolInfoType.YearLevelEnrollmentList }{@code >}
-     *     
-     */
-    public void setYearLevelEnrollmentList(JAXBElement<SchoolInfoType.YearLevelEnrollmentList> value) {
-        this.yearLevelEnrollmentList = value;
-    }
-
-    /**
-     * Gets the value of the totalEnrollments property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SchoolInfoType.TotalEnrollments }{@code >}
-     *     
-     */
-    public JAXBElement<SchoolInfoType.TotalEnrollments> getTotalEnrollments() {
-        return totalEnrollments;
-    }
-
-    /**
-     * Sets the value of the totalEnrollments property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SchoolInfoType.TotalEnrollments }{@code >}
-     *     
-     */
-    public void setTotalEnrollments(JAXBElement<SchoolInfoType.TotalEnrollments> value) {
-        this.totalEnrollments = value;
-    }
-
-    /**
      * Gets the value of the entityOpen property.
      * 
      * @return
@@ -1847,284 +1730,6 @@ public class SchoolInfoType {
                 schoolGroup = new ArrayList<String>();
             }
             return this.schoolGroup;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Girls" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="Boys" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="TotalStudents" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "girls",
-        "boys",
-        "totalStudents"
-    })
-    public static class TotalEnrollments {
-
-        @XmlElementRef(name = "Girls", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> girls;
-        @XmlElementRef(name = "Boys", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> boys;
-        @XmlElementRef(name = "TotalStudents", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> totalStudents;
-
-        /**
-         * Gets the value of the girls property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getGirls() {
-            return girls;
-        }
-
-        /**
-         * Sets the value of the girls property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setGirls(JAXBElement<String> value) {
-            this.girls = value;
-        }
-
-        /**
-         * Gets the value of the boys property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getBoys() {
-            return boys;
-        }
-
-        /**
-         * Sets the value of the boys property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setBoys(JAXBElement<String> value) {
-            this.boys = value;
-        }
-
-        /**
-         * Gets the value of the totalStudents property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getTotalStudents() {
-            return totalStudents;
-        }
-
-        /**
-         * Sets the value of the totalStudents property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setTotalStudents(JAXBElement<String> value) {
-            this.totalStudents = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="YearLevelEnrollment" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="Year" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsYearLevelCodeType" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="Enrolment" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "yearLevelEnrollment"
-    })
-    public static class YearLevelEnrollmentList {
-
-        @XmlElement(name = "YearLevelEnrollment", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
-        protected List<SchoolInfoType.YearLevelEnrollmentList.YearLevelEnrollment> yearLevelEnrollment;
-
-        /**
-         * Gets the value of the yearLevelEnrollment property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the yearLevelEnrollment property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getYearLevelEnrollment().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link SchoolInfoType.YearLevelEnrollmentList.YearLevelEnrollment }
-         * 
-         * 
-         */
-        public List<SchoolInfoType.YearLevelEnrollmentList.YearLevelEnrollment> getYearLevelEnrollment() {
-            if (yearLevelEnrollment == null) {
-                yearLevelEnrollment = new ArrayList<SchoolInfoType.YearLevelEnrollmentList.YearLevelEnrollment>();
-            }
-            return this.yearLevelEnrollment;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="Year" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsYearLevelCodeType" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="Enrolment" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "year",
-            "enrolment"
-        })
-        public static class YearLevelEnrollment {
-
-            @XmlElement(name = "Year", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected List<String> year;
-            @XmlElement(name = "Enrolment", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected List<String> enrolment;
-
-            /**
-             * Gets the value of the year property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the year property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getYear().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link String }
-             * 
-             * 
-             */
-            public List<String> getYear() {
-                if (year == null) {
-                    year = new ArrayList<String>();
-                }
-                return this.year;
-            }
-
-            /**
-             * Gets the value of the enrolment property.
-             * 
-             * <p>
-             * This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the enrolment property.
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * <pre>
-             *    getEnrolment().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link String }
-             * 
-             * 
-             */
-            public List<String> getEnrolment() {
-                if (enrolment == null) {
-                    enrolment = new ArrayList<String>();
-                }
-                return this.enrolment;
-            }
-
         }
 
     }
