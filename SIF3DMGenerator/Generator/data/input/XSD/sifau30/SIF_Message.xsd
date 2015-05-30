@@ -2,8 +2,8 @@
 		SIF Implementation Specification (Australia) 1.3  Infrastructure Version: 3.0 REST v1.0
 	-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sif="http://www.sifassociation.org/au/datamodel/1.3" targetNamespace="http://www.sifassociation.org/au/datamodel/1.3" elementFormDefault="qualified">
-    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="imports/xml/xml.xsd"/>
-	<!--Version 1.3/3.0 v01 Updated May 21, 2014 For NSW StudentAttendanceTimeList -->
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="imports/xml/xml.xsd"/>
+	<!--Version 1.3/3.0 v01a Updated May 30, 2015 for SchoolInfo ASL and StudentAttendanceTimeList NSW -->
 	<!--Infrastructure Common Elements-->
 	<!--SIF_ExtendedElements-->
 	<xs:complexType name="SIF_ExtendedElementsType">
@@ -1702,6 +1702,11 @@
 					<xs:documentation>Commonwealth identifier for this school/campus.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ACARAId" type="xs:normalizedString" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ACARA identifier for this school/campus.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="OtherIdList" nillable="true" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
@@ -1929,6 +1934,49 @@
 				<xs:annotation>
 					<xs:documentation>Is this school a Boarding School?</xs:documentation>
 				</xs:annotation>
+			</xs:element>
+			<xs:element name="YearLevelEnrollmentList" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="YearLevelEnrollment" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Year" type="sif:AUCodeSetsYearLevelCodeType" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Year Level of Enrolment.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Enrollment" type="xs:normalizedString" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Number of Year Level Enrolments if known.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TotalEnrollments" nillable="true" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Girls" type="xs:normalizedString" nillable="true" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Number of enrolled Female students.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Boys" type="xs:normalizedString" nillable="true" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Number of enrolled Male students.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TotalStudents" type="xs:normalizedString" nillable="true" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Total number of enrolled students.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="Entity_Open" type="xs:date" nillable="true" minOccurs="0">
 				<xs:annotation>
@@ -11434,8 +11482,7 @@
 			<xs:field xpath="@RefId"/>
 		</xs:unique>
 	</xs:element>
-	
-		<!--StudentAttendanceTimeList-->
+	<!--StudentAttendanceTimeList-->
 	<xs:complexType name="StudentAttendanceTimeListType">
 		<xs:annotation>
 			<xs:documentation>This object provides more detail about the attendance spans for a single student during the day: it provides more detailed information than the single TimeIn and TimeOut elements in StudentDailyAttendance.</xs:documentation>
@@ -11798,7 +11845,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="StudentAttendanceSummarys" type="sif:StudentAttendanceSummaryCollectionType"/>
-		<xs:complexType name="StudentAttendanceTimeListCollectionType">
+	<xs:complexType name="StudentAttendanceTimeListCollectionType">
 		<xs:sequence>
 			<xs:element name="StudentAttendanceTimeList" type="sif:StudentAttendanceTimeListType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
