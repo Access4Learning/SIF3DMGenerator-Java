@@ -19,7 +19,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * 
- *         This object has been developed to cater for the SDTN – Student Data Transfer Note. Please refer to: http://scseec.edu.au/archive/Publications/ISDTN.aspx 
+ *         This object has been developed to cater for the SDTN - Student Data Transfer Note. Please refer to: http://scseec.edu.au/archive/Publications/ISDTN.aspx 
  *         The elements in this object were developed to support the previous LIMF recommendations and allow two or more jurisdictions to exchange this data. 
  *       
  * 
