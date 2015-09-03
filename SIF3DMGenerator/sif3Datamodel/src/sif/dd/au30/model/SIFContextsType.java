@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_Context" maxOccurs="unbounded"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_Context" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,12 +36,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SIF_ContextsType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "SIF_ContextsType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "sifContext"
 })
 public class SIFContextsType {
 
-    @XmlElement(name = "SIF_Context", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+    @XmlElement(name = "SIF_Context", namespace = "http://www.sifassociation.org/au/datamodel/1.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> sifContext;
 

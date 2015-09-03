@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Sif3Assessment" type="{http://www.sifassociation.org/au/datamodel/1.3}Sif3AssessmentType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Sif3Assessment" type="{http://www.sifassociation.org/au/datamodel/1.4}Sif3AssessmentType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Sif3AssessmentCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "Sif3AssessmentCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "sif3Assessment"
 })
 public class Sif3AssessmentCollectionType {
 
-    @XmlElement(name = "Sif3Assessment", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "Sif3Assessment", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected List<Sif3AssessmentType> sif3Assessment;
 
     /**

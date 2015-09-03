@@ -18,9 +18,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * 
- *         This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects – SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
- * 
- *         When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent to the TimeTabling application.
+ *         This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled 
+ *         by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications 
+ *         identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within 
+ *         the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that 
+ *         Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base 
+ *         information to the Time Tabling application about what curriculum offerings are being proposed.
+ *         When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent 
+ *         to the TimeTabling application.
  *       
  * 
  * <p>Java class for TimeTableSubjectType complex type.
@@ -32,37 +37,37 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/au/datamodel/1.3}LocalIdType" minOccurs="0"/>
- *         &lt;element name="AcademicYear" type="{http://www.sifassociation.org/au/datamodel/1.3}YearLevelType" minOccurs="0"/>
+ *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="AcademicYear" type="{http://www.sifassociation.org/au/datamodel/1.4}YearLevelType" minOccurs="0"/>
  *         &lt;element name="AcademicYearRange" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="Start" type="{http://www.sifassociation.org/au/datamodel/1.3}YearLevelType" minOccurs="0"/>
- *                   &lt;element name="End" type="{http://www.sifassociation.org/au/datamodel/1.3}YearLevelType" minOccurs="0"/>
+ *                   &lt;element name="Start" type="{http://www.sifassociation.org/au/datamodel/1.4}YearLevelType" minOccurs="0"/>
+ *                   &lt;element name="End" type="{http://www.sifassociation.org/au/datamodel/1.4}YearLevelType" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="CourseLocalId" type="{http://www.sifassociation.org/au/datamodel/1.3}LocalIdType" minOccurs="0"/>
- *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}RefIdType" minOccurs="0"/>
+ *         &lt;element name="CourseLocalId" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="Faculty" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectShortName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectLongName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ProposedMaxClassSize" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="ProposedMinClassSize" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/1.3}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="Semester" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/au/datamodel/1.3}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/1.3}OtherCodeListType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/au/datamodel/1.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/1.4}OtherCodeListType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.3}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -71,7 +76,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimeTableSubjectType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "TimeTableSubjectType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "subjectLocalId",
     "academicYear",
     "academicYearRange",
@@ -93,44 +98,44 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TimeTableSubjectType {
 
-    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String subjectLocalId;
-    @XmlElementRef(name = "AcademicYear", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AcademicYear", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<YearLevelType> academicYear;
-    @XmlElementRef(name = "AcademicYearRange", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AcademicYearRange", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<TimeTableSubjectType.AcademicYearRange> academicYearRange;
-    @XmlElementRef(name = "CourseLocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CourseLocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> courseLocalId;
-    @XmlElementRef(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolCourseInfoRefId;
-    @XmlElementRef(name = "Faculty", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Faculty", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> faculty;
-    @XmlElementRef(name = "SubjectShortName", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SubjectShortName", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> subjectShortName;
-    @XmlElement(name = "SubjectLongName", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SubjectLongName", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String subjectLongName;
-    @XmlElementRef(name = "SubjectType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SubjectType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> subjectType;
-    @XmlElementRef(name = "ProposedMaxClassSize", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ProposedMaxClassSize", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> proposedMaxClassSize;
-    @XmlElementRef(name = "ProposedMinClassSize", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ProposedMinClassSize", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> proposedMinClassSize;
-    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolLocalId;
-    @XmlElementRef(name = "Semester", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Semester", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> semester;
-    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> schoolYear;
-    @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherCodeListType> otherCodeList;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -603,8 +608,8 @@ public class TimeTableSubjectType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="Start" type="{http://www.sifassociation.org/au/datamodel/1.3}YearLevelType" minOccurs="0"/>
-     *         &lt;element name="End" type="{http://www.sifassociation.org/au/datamodel/1.3}YearLevelType" minOccurs="0"/>
+     *         &lt;element name="Start" type="{http://www.sifassociation.org/au/datamodel/1.4}YearLevelType" minOccurs="0"/>
+     *         &lt;element name="End" type="{http://www.sifassociation.org/au/datamodel/1.4}YearLevelType" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -620,9 +625,9 @@ public class TimeTableSubjectType {
     })
     public static class AcademicYearRange {
 
-        @XmlElement(name = "Start", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlElement(name = "Start", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         protected YearLevelType start;
-        @XmlElement(name = "End", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlElement(name = "End", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         protected YearLevelType end;
 
         /**

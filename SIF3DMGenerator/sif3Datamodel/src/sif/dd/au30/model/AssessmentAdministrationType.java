@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AssessmentFormRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
+ *         &lt;element name="AssessmentFormRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="AdministrationName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SpecialConditions" minOccurs="0">
  *           &lt;complexType>
@@ -61,14 +61,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="FinishDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="DueDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="Address" type="{http://www.sifassociation.org/au/datamodel/1.3}AddressType" minOccurs="0"/>
- *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="LEAInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="Address" type="{http://www.sifassociation.org/au/datamodel/1.4}AddressType" minOccurs="0"/>
+ *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LEAInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.3}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AssessmentAdministrationType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "AssessmentAdministrationType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "assessmentFormRefId",
     "administrationName",
     "specialConditions",
@@ -94,34 +94,34 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AssessmentAdministrationType {
 
-    @XmlElement(name = "AssessmentFormRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "AssessmentFormRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String assessmentFormRefId;
-    @XmlElementRef(name = "AdministrationName", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AdministrationName", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> administrationName;
-    @XmlElementRef(name = "SpecialConditions", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SpecialConditions", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AssessmentAdministrationType.SpecialConditions> specialConditions;
-    @XmlElement(name = "AdministrationDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = String.class)
+    @XmlElement(name = "AdministrationDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
     protected Calendar administrationDateTime;
-    @XmlElementRef(name = "StartDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StartDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> startDateTime;
-    @XmlElementRef(name = "FinishDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FinishDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> finishDateTime;
-    @XmlElementRef(name = "DueDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "DueDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> dueDateTime;
-    @XmlElementRef(name = "Address", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Address", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressType> address;
-    @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> staffPersonalRefId;
-    @XmlElementRef(name = "LEAInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LEAInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> leaInfoRefId;
-    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -504,7 +504,7 @@ public class AssessmentAdministrationType {
     })
     public static class SpecialConditions {
 
-        @XmlElement(name = "SpecialCondition", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlElement(name = "SpecialCondition", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         protected List<AssessmentAdministrationType.SpecialConditions.SpecialCondition> specialCondition;
 
         /**

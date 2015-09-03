@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSchoolLevelType", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+@XmlType(name = "AUCodeSetsSchoolLevelType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
 @XmlEnum
 public enum AUCodeSetsSchoolLevelType {
 
@@ -120,7 +120,7 @@ public enum AUCodeSetsSchoolLevelType {
     PRE_SCH("PreSch"),
 
     /**
-     * Primary/Seconday Combined
+     * Primary/Secondary Combined
      * 
      */
     @XmlEnumValue("Pri/Sec")

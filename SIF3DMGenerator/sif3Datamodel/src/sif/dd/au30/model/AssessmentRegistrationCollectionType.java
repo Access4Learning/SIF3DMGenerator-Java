@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AssessmentRegistration" type="{http://www.sifassociation.org/au/datamodel/1.3}AssessmentRegistrationType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="AssessmentRegistration" type="{http://www.sifassociation.org/au/datamodel/1.4}AssessmentRegistrationType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AssessmentRegistrationCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "AssessmentRegistrationCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "assessmentRegistration"
 })
 public class AssessmentRegistrationCollectionType {
 
-    @XmlElement(name = "AssessmentRegistration", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "AssessmentRegistration", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected List<AssessmentRegistrationType> assessmentRegistration;
 
     /**

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Sif3AssessmentScoreTable" type="{http://www.sifassociation.org/au/datamodel/1.3}Sif3AssessmentScoreTableType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Sif3AssessmentScoreTable" type="{http://www.sifassociation.org/au/datamodel/1.4}Sif3AssessmentScoreTableType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Sif3AssessmentScoreTableCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "Sif3AssessmentScoreTableCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "sif3AssessmentScoreTable"
 })
 public class Sif3AssessmentScoreTableCollectionType {
 
-    @XmlElement(name = "Sif3AssessmentScoreTable", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "Sif3AssessmentScoreTable", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected List<Sif3AssessmentScoreTableType> sif3AssessmentScoreTable;
 
     /**

@@ -18,7 +18,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides more detail about the attendance spans for a single student during the day: it provides more detailed information than the single TimeIn and TimeOut elements in StudentDailyAttendance.
+ * This object provides more detail about the attendance spans for a single student during the
+ * 				day: it provides more detailed information than the single TimeIn and TimeOut elements in
+ * 				StudentDailyAttendance.
  * 
  * <p>Java class for StudentAttendanceTimeListType complex type.
  * 
@@ -29,29 +31,28 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType"/>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SchoolYear"/>
- *         &lt;element name="AttendanceTimes">
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SchoolYear" minOccurs="0"/>
+ *         &lt;element name="AttendanceTimes" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="AttendanceTime" maxOccurs="unbounded">
+ *                   &lt;element name="AttendanceTime" maxOccurs="unbounded" minOccurs="0">
  *                     &lt;complexType>
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}AttendanceCode"/>
- *                             &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsAttendanceStatusType"/>
- *                             &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *                             &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *                             &lt;element name="AbsenceValue" minOccurs="0">
+ *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}AttendanceCode" minOccurs="0"/>
+ *                             &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAttendanceStatusType" minOccurs="0"/>
+ *                             &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *                             &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *                             &lt;element name="DurationValue" minOccurs="0">
  *                               &lt;simpleType>
  *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
  *                                   &lt;minInclusive value="0"/>
- *                                   &lt;maxInclusive value="1"/>
  *                                 &lt;/restriction>
  *                               &lt;/simpleType>
  *                             &lt;/element>
@@ -66,10 +67,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.3}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -78,7 +79,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentAttendanceTimeListType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "StudentAttendanceTimeListType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "studentPersonalRefId",
     "schoolInfoRefId",
     "date",
@@ -89,22 +90,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class StudentAttendanceTimeListType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
-    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected XMLGregorianCalendar schoolYear;
-    @XmlElement(name = "AttendanceTimes", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+    @XmlElement(name = "AttendanceTimes", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected StudentAttendanceTimeListType.AttendanceTimes attendanceTimes;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -313,20 +314,19 @@ public class StudentAttendanceTimeListType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="AttendanceTime" maxOccurs="unbounded">
+     *         &lt;element name="AttendanceTime" maxOccurs="unbounded" minOccurs="0">
      *           &lt;complexType>
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}AttendanceCode"/>
-     *                   &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsAttendanceStatusType"/>
-     *                   &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
-     *                   &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
-     *                   &lt;element name="AbsenceValue" minOccurs="0">
+     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}AttendanceCode" minOccurs="0"/>
+     *                   &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAttendanceStatusType" minOccurs="0"/>
+     *                   &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+     *                   &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+     *                   &lt;element name="DurationValue" minOccurs="0">
      *                     &lt;simpleType>
      *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
      *                         &lt;minInclusive value="0"/>
-     *                         &lt;maxInclusive value="1"/>
      *                       &lt;/restriction>
      *                     &lt;/simpleType>
      *                   &lt;/element>
@@ -350,7 +350,7 @@ public class StudentAttendanceTimeListType {
     })
     public static class AttendanceTimes {
 
-        @XmlElement(name = "AttendanceTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+        @XmlElement(name = "AttendanceTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         protected List<StudentAttendanceTimeListType.AttendanceTimes.AttendanceTime> attendanceTime;
 
         /**
@@ -393,15 +393,14 @@ public class StudentAttendanceTimeListType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}AttendanceCode"/>
-         *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsAttendanceStatusType"/>
-         *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
-         *         &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
-         *         &lt;element name="AbsenceValue" minOccurs="0">
+         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}AttendanceCode" minOccurs="0"/>
+         *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAttendanceStatusType" minOccurs="0"/>
+         *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+         *         &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+         *         &lt;element name="DurationValue" minOccurs="0">
          *           &lt;simpleType>
          *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
          *               &lt;minInclusive value="0"/>
-         *               &lt;maxInclusive value="1"/>
          *             &lt;/restriction>
          *           &lt;/simpleType>
          *         &lt;/element>
@@ -420,25 +419,25 @@ public class StudentAttendanceTimeListType {
             "attendanceStatus",
             "startTime",
             "endTime",
-            "absenceValue",
+            "durationValue",
             "attendanceNote"
         })
         public static class AttendanceTime {
 
-            @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+            @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
             protected AttendanceCodeType attendanceCode;
-            @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+            @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
             protected String attendanceStatus;
-            @XmlElement(name = "StartTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+            @XmlElement(name = "StartTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
             @XmlSchemaType(name = "time")
             protected XMLGregorianCalendar startTime;
-            @XmlElement(name = "EndTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", required = true)
+            @XmlElement(name = "EndTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
             @XmlSchemaType(name = "time")
             protected XMLGregorianCalendar endTime;
-            @XmlElementRef(name = "AbsenceValue", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
-            protected JAXBElement<BigDecimal> absenceValue;
-            @XmlElementRef(name = "AttendanceNote", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "DurationValue", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            protected JAXBElement<BigDecimal> durationValue;
+            @XmlElementRef(name = "AttendanceNote", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> attendanceNote;
 
             /**
@@ -538,27 +537,27 @@ public class StudentAttendanceTimeListType {
             }
 
             /**
-             * Gets the value of the absenceValue property.
+             * Gets the value of the durationValue property.
              * 
              * @return
              *     possible object is
              *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
              *     
              */
-            public JAXBElement<BigDecimal> getAbsenceValue() {
-                return absenceValue;
+            public JAXBElement<BigDecimal> getDurationValue() {
+                return durationValue;
             }
 
             /**
-             * Sets the value of the absenceValue property.
+             * Sets the value of the durationValue property.
              * 
              * @param value
              *     allowed object is
              *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
              *     
              */
-            public void setAbsenceValue(JAXBElement<BigDecimal> value) {
-                this.absenceValue = value;
+            public void setDurationValue(JAXBElement<BigDecimal> value) {
+                this.durationValue = value;
             }
 
             /**

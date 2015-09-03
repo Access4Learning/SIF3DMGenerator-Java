@@ -69,27 +69,27 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ScheduledEndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="ActualStartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="ActualEndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="Address" type="{http://www.sifassociation.org/au/datamodel/1.3}AddressType" minOccurs="0"/>
- *         &lt;element name="AssessmentAdministrationRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="AssessmentFormRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="LEAInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" minOccurs="0"/>
+ *         &lt;element name="Address" type="{http://www.sifassociation.org/au/datamodel/1.4}AddressType" minOccurs="0"/>
+ *         &lt;element name="AssessmentAdministrationRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="AssessmentFormRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LEAInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="StaffPersonalRefIds" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.3}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -98,7 +98,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Sif3AssessmentSessionType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "Sif3AssessmentSessionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "sessionName",
     "sessionType",
     "unusualEvents",
@@ -118,41 +118,41 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class Sif3AssessmentSessionType {
 
-    @XmlElement(name = "SessionName", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SessionName", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String sessionName;
-    @XmlElement(name = "SessionType", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SessionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String sessionType;
-    @XmlElementRef(name = "UnusualEvents", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "UnusualEvents", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Sif3AssessmentSessionType.UnusualEvents> unusualEvents;
-    @XmlElementRef(name = "ScheduledStartDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ScheduledStartDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> scheduledStartDateTime;
-    @XmlElementRef(name = "ScheduledEndDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ScheduledEndDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> scheduledEndDateTime;
-    @XmlElementRef(name = "ActualStartDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ActualStartDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> actualStartDateTime;
-    @XmlElementRef(name = "ActualEndDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ActualEndDateTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> actualEndDateTime;
-    @XmlElementRef(name = "Address", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Address", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressType> address;
-    @XmlElementRef(name = "AssessmentAdministrationRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssessmentAdministrationRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assessmentAdministrationRefId;
-    @XmlElement(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String assessmentRefId;
-    @XmlElementRef(name = "AssessmentFormRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssessmentFormRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assessmentFormRefId;
-    @XmlElementRef(name = "LEAInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LEAInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> leaInfoRefId;
-    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElementRef(name = "StaffPersonalRefIds", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StaffPersonalRefIds", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Sif3AssessmentSessionType.StaffPersonalRefIds> staffPersonalRefIds;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -577,7 +577,7 @@ public class Sif3AssessmentSessionType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.3}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -592,7 +592,7 @@ public class Sif3AssessmentSessionType {
     })
     public static class StaffPersonalRefIds {
 
-        @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected List<String> staffPersonalRefId;
 
@@ -668,7 +668,7 @@ public class Sif3AssessmentSessionType {
     })
     public static class UnusualEvents {
 
-        @XmlElement(name = "UnusualEvent", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlElement(name = "UnusualEvent", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         protected List<Sif3AssessmentSessionType.UnusualEvents.UnusualEvent> unusualEvent;
 
         /**

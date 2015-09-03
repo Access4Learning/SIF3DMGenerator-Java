@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsACStrandType", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+@XmlType(name = "AUCodeSetsACStrandType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
 @XmlEnum
 public enum AUCodeSetsACStrandType {
 

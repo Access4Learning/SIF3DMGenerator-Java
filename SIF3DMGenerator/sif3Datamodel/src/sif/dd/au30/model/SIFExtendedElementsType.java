@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="SIF_ExtendedElement" maxOccurs="unbounded" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
- *               &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.3}ExtendedContentType">
+ *               &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.4}ExtendedContentType">
  *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
  *                 &lt;attribute name="SIF_Action">
  *                   &lt;simpleType>
@@ -51,12 +51,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SIF_ExtendedElementsType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "SIF_ExtendedElementsType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "sifExtendedElement"
 })
 public class SIFExtendedElementsType {
 
-    @XmlElement(name = "SIF_ExtendedElement", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SIF_ExtendedElement", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected List<SIFExtendedElementsType.SIFExtendedElement> sifExtendedElement;
 
     /**
@@ -99,7 +99,7 @@ public class SIFExtendedElementsType {
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
-     *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.3}ExtendedContentType">
+     *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.4}ExtendedContentType">
      *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
      *       &lt;attribute name="SIF_Action">
      *         &lt;simpleType>

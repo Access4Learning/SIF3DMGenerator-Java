@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SIF_MsgId" type="{http://www.sifassociation.org/au/datamodel/1.3}MsgIdType" minOccurs="0"/>
+ *         &lt;element name="SIF_MsgId" type="{http://www.sifassociation.org/au/datamodel/1.4}MsgIdType" minOccurs="0"/>
  *         &lt;element name="SIF_Timestamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="SIF_Security" minOccurs="0">
  *           &lt;complexType>
@@ -37,8 +37,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_AuthenticationLevel" minOccurs="0"/>
- *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_EncryptionLevel" minOccurs="0"/>
+ *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_AuthenticationLevel" minOccurs="0"/>
+ *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_EncryptionLevel" minOccurs="0"/>
  *                           &lt;/sequence>
  *                         &lt;/restriction>
  *                       &lt;/complexContent>
@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="SIF_Contexts" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_ContextsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Contexts" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ContextsType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SIF_HeaderDataModelType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "SIF_HeaderDataModelType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "sifMsgId",
     "sifTimestamp",
     "sifSecurity",
@@ -83,21 +83,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class SIFHeaderDataModelType {
 
-    @XmlElement(name = "SIF_MsgId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SIF_MsgId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String sifMsgId;
-    @XmlElement(name = "SIF_Timestamp", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = String.class)
+    @XmlElement(name = "SIF_Timestamp", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
     protected Calendar sifTimestamp;
-    @XmlElementRef(name = "SIF_Security", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Security", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFHeaderDataModelType.SIFSecurity> sifSecurity;
-    @XmlElement(name = "SIF_SourceId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "SIF_SourceId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String sifSourceId;
-    @XmlElementRef(name = "SIF_DestinationId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_DestinationId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> sifDestinationId;
-    @XmlElementRef(name = "SIF_Contexts", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Contexts", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFContextsType> sifContexts;
 
     /**
@@ -260,8 +260,8 @@ public class SIFHeaderDataModelType {
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_AuthenticationLevel" minOccurs="0"/>
-     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_EncryptionLevel" minOccurs="0"/>
+     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_AuthenticationLevel" minOccurs="0"/>
+     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_EncryptionLevel" minOccurs="0"/>
      *                 &lt;/sequence>
      *               &lt;/restriction>
      *             &lt;/complexContent>
@@ -281,7 +281,7 @@ public class SIFHeaderDataModelType {
     })
     public static class SIFSecurity {
 
-        @XmlElement(name = "SIF_SecureChannel", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+        @XmlElement(name = "SIF_SecureChannel", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
         protected SIFHeaderDataModelType.SIFSecurity.SIFSecureChannel sifSecureChannel;
 
         /**
@@ -319,8 +319,8 @@ public class SIFHeaderDataModelType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_AuthenticationLevel" minOccurs="0"/>
-         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}SIF_EncryptionLevel" minOccurs="0"/>
+         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_AuthenticationLevel" minOccurs="0"/>
+         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}SIF_EncryptionLevel" minOccurs="0"/>
          *       &lt;/sequence>
          *     &lt;/restriction>
          *   &lt;/complexContent>
@@ -336,9 +336,9 @@ public class SIFHeaderDataModelType {
         })
         public static class SIFSecureChannel {
 
-            @XmlElement(name = "SIF_AuthenticationLevel", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+            @XmlElement(name = "SIF_AuthenticationLevel", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
             protected Long sifAuthenticationLevel;
-            @XmlElement(name = "SIF_EncryptionLevel", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+            @XmlElement(name = "SIF_EncryptionLevel", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
             protected Long sifEncryptionLevel;
 
             /**

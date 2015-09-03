@@ -47,15 +47,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GridLocationType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "GridLocationType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "latitude",
     "longitude"
 })
 public class GridLocationType {
 
-    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected BigDecimal latitude;
-    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     protected BigDecimal longitude;
 
     /**

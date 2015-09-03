@@ -196,7 +196,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "ISO4217CurrencyNamesAndCodeElementsType", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+@XmlType(name = "ISO4217CurrencyNamesAndCodeElementsType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
 @XmlEnum
 public enum ISO4217CurrencyNamesAndCodeElementsType {
 

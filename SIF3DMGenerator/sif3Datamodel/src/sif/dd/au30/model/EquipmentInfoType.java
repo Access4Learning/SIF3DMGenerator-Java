@@ -30,18 +30,20 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.3}LocalId" minOccurs="0"/>
- *         &lt;element name="AssetNumber" type="{http://www.sifassociation.org/au/datamodel/1.3}LocalIdType" minOccurs="0"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}LocalId" minOccurs="0"/>
+ *         &lt;element name="AssetNumber" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="InvoiceRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="PurchaseOrderRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="EquipmentType" minOccurs="0">
  *           &lt;simpleType>
- *             &lt;union memberTypes=" {http://www.sifassociation.org/au/datamodel/1.3}AUCodeSetsEquipmentTypeType {http://www.w3.org/2001/XMLSchema}token">
+ *             &lt;union memberTypes=" {http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsEquipmentTypeType {http://www.w3.org/2001/XMLSchema}token">
  *             &lt;/union>
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="SIF_RefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.3>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -56,10 +58,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.3}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.3}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -68,11 +70,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EquipmentInfoType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "EquipmentInfoType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "name",
     "description",
     "localId",
     "assetNumber",
+    "invoiceRefId",
+    "purchaseOrderRefId",
     "equipmentType",
     "sifRefId",
     "sifMetadata",
@@ -80,24 +84,28 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class EquipmentInfoType {
 
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String name;
-    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.3")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElementRef(name = "AssetNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assetNumber;
-    @XmlElementRef(name = "EquipmentType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "InvoiceRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> invoiceRefId;
+    @XmlElementRef(name = "PurchaseOrderRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> purchaseOrderRefId;
+    @XmlElementRef(name = "EquipmentType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> equipmentType;
-    @XmlElementRef(name = "SIF_RefId", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_RefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<EquipmentInfoType.SIFRefId> sifRefId;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.3", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -197,6 +205,54 @@ public class EquipmentInfoType {
      */
     public void setAssetNumber(JAXBElement<String> value) {
         this.assetNumber = value;
+    }
+
+    /**
+     * Gets the value of the invoiceRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getInvoiceRefId() {
+        return invoiceRefId;
+    }
+
+    /**
+     * Sets the value of the invoiceRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setInvoiceRefId(JAXBElement<String> value) {
+        this.invoiceRefId = value;
+    }
+
+    /**
+     * Gets the value of the purchaseOrderRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getPurchaseOrderRefId() {
+        return purchaseOrderRefId;
+    }
+
+    /**
+     * Sets the value of the purchaseOrderRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setPurchaseOrderRefId(JAXBElement<String> value) {
+        this.purchaseOrderRefId = value;
     }
 
     /**
@@ -330,7 +386,7 @@ public class EquipmentInfoType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.3>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">

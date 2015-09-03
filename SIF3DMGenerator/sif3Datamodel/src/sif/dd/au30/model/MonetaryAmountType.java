@@ -4,6 +4,7 @@ package sif.dd.au30.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
@@ -18,8 +19,8 @@ import javax.xml.bind.annotation.XmlValue;
  * <pre>
  * &lt;complexType name="MonetaryAmountType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.3>XSDecimalOrEmpty">
- *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/au/datamodel/1.3}ISO4217CurrencyNamesAndCodeElementsType" />
+ *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>XSDecimalOrEmpty">
+ *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/au/datamodel/1.4}ISO4217CurrencyNamesAndCodeElementsType" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -28,8 +29,12 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MonetaryAmountType", namespace = "http://www.sifassociation.org/au/datamodel/1.3", propOrder = {
+@XmlType(name = "MonetaryAmountType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
     "value"
+})
+@XmlSeeAlso({
+    sif.dd.au30.model.PaymentReceiptType.ReceivedAmount.class,
+    sif.dd.au30.model.InvoiceType.BilledAmount.class
 })
 public class MonetaryAmountType {
 
