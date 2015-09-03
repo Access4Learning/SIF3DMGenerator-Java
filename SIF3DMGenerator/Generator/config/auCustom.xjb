@@ -15,10 +15,7 @@
                    printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
   </jaxb:globalBindings>
 
-  <jaxb:bindings schemaLocation="file:/c:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/Generator/data/input/XSD/sifau30/SIF_Message.xsd">
-<!--
-  <jaxb:bindings schemaLocation="file:/C:/DEV/eclipseWorkspace/SIF3DMGenerator/Generator/data/input/XSD/sifau30/SIF_Message.xsd">
--->
+  <jaxb:bindings schemaLocation="file:../data/input/XSD/sifau30/temp/SIF_Message.xsd">
       <jaxb:bindings node="//xs:complexType[@name='CalendarDateType']">
       <jaxb:class name="CalendarDate"/>
     </jaxb:bindings>
