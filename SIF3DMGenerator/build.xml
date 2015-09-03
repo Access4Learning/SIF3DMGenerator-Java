@@ -18,6 +18,7 @@
 	<property name="build.dir" value="${project.basedir}/build"/>
 	<property name="class.dir" value="${build.dir}/classes" />
 	<property name="dist.dir" value="${build.dir}/dist" />
+	<property name="sifau.dd.file.name" value="SIF_Message.xsd"/>
 
 	<property name="verbose" value="true" />
 
@@ -76,20 +77,35 @@
 		called for the final jar file.
 	-->
 	<target name="20-generate-AU13for30" depends="init" description="Generate POJOs using JAXB">
-		<echo message="Generate Pojos for Locale AU and Version 1.3/3.0"/>
-		<delete dir="${output.base.dir}/sifau13/src" />
-		<mkdir dir="${output.base.dir}/sifau13/src"/>
-		<xjc destdir="${output.base.dir}/sifau13/src" 
+		<antcall target="generate-au-pojo">
+			<param name="sifddversion" value="1.3"/>
+		</antcall>
+	</target>
+
+	<target name="21-generate-AU14for30" depends="init" description="Generate POJOs using JAXB">
+		<antcall target="generate-au-pojo">
+			<param name="sifddversion" value="1.4"/>
+		</antcall>
+	</target>
+
+	<target name="generate-au-pojo" depends="init" description="Generate POJOs using JAXB">
+		<echo message="Generate Pojos for Locale AU, Data Model Version ${sifddversion} and Infrastructure 3.x"/>
+		<delete dir="${output.base.dir}/sifau${sifddversion}/src" />
+		<mkdir dir="${output.base.dir}/sifau${sifddversion}/src"/>
+		<mkdir dir="${input.base.dir}/XSD/sifau30/temp"/>
+		<copy file="${input.base.dir}/XSD/sifau30/au${sifddversion}/${sifau.dd.file.name}" tofile="${input.base.dir}/XSD/sifau30/temp/${sifau.dd.file.name}"/>
+		<xjc destdir="${output.base.dir}/sifau${sifddversion}/src" 
              package="sif.dd.au30.model" 
              extension="true" 
              header="false" 
              source="2.0">
-			<schema  dir="${input.base.dir}/XSD/sifau30" includes="*.xsd"/>
+			<schema  dir="${input.base.dir}/XSD/sifau30/temp" includes="*.xsd"/>
 			<binding dir="${generator.dir}/config" includes="auCustom.xjb"/>
 			<arg value="-npa"/>
 		</xjc>
+		<delete dir="${input.base.dir}/XSD/sifau30/temp"/>
 	</target>
-
+	
 	<target name="30-generate-US32" depends="init" description="Create all US 3.2 POJOs based on XSD Directories">
 		<delete dir="${output.base.dir}/sifus32/src" />
 		<mkdir dir="${output.base.dir}/sifus32/src" />
@@ -100,6 +116,18 @@
 		</xjc>
 	</target>
 
+<!--
+    <target name="30-generate-sifussimpleRIC" depends="init" description="Create all SIF US Simple for RIC POJOs based on XSD Directories">
+        <delete dir="${output.base.dir}/sifus32/src" />
+        <mkdir dir="${output.base.dir}/sifus32/src" />
+        <echo message="Generate Pojos using JAXB for SIF US 3.2 Entity Model for all XSDs in one go..." />
+        <xjc destdir="${output.base.dir}/sifus32/src" package="sif.dd.us32.model" extension="true" header="false" source="2.0">
+            <schema dir="${input.base.dir}/XSD/sifussimpleRIC" includes="*.xsd" />
+            <arg value="-npa" />
+        </xjc>
+    </target>
+-->
+	
 	<!-- ***************************** -->
 	<!-- Compile All Data Dictionaries -->
 	<!-- ***************************** -->
@@ -123,6 +151,14 @@
 		</antcall>
 	</target>
 
+	<target name="11-jar-dd-au14for30" depends="compile-dd" description="Create jar file for SIF AU 1.4/3.0">
+		<antcall target="jar-dd">
+			<param name="locale" value="au"/>
+			<param name="sifddversion" value="1.4"/>
+			<param name="srcDir" value="au30"/>
+		</antcall>
+	</target>
+
 	<target name="15-jar-dd-us32" depends="compile-dd" description="Create jar file for SIF NA 3.2">
 		<antcall target="jar-dd">
 			<param name="locale" value="us"/>
@@ -131,10 +167,20 @@
 		</antcall>
 	</target>
 
+<!--
+    <target name="15-jar-dd-ussimpleRIC" depends="compile-dd" description="Create jar file for SIF Simple RIC">
+        <antcall target="jar-dd">
+            <param name="locale" value="us"/>
+            <param name="sifddversion" value="simpleRIC"/>
+            <param name="srcDir" value="us32"/>
+        </antcall>
+    </target>
+-->
+	
 	<target name="jar-dd">
 		<echo message="Create Jar: sifDataModel_${locale}${sifddversion}.jar from source ${srcDir}" />
 		<jar destfile="${dist.dir}/sifDataModel_${locale}${sifddversion}.jar">
-			<fileset dir="${class.dir}" includes="**/sif/dd/${srcDir}/**" excludes="**/readme.txt" />
+	 	   <fileset dir="${class.dir}" includes="**/sif/dd/${srcDir}/**" excludes="**/readme.txt" />
 		</jar>
 	</target>
 
