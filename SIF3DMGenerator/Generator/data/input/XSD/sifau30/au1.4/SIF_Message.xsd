@@ -1,9 +1,9 @@
 <!--
-		SIF Implementation Specification (Australia) 1.4 (September 3, 2015) Infrastructure Version: 3.x REST v2
+		SIF Implementation Specification (Australia) 1.4 (September 17, 2015) Infrastructure Version: 3.x REST v2
 	-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sif="http://www.sifassociation.org/au/datamodel/1.4" targetNamespace="http://www.sifassociation.org/au/datamodel/1.4" elementFormDefault="qualified">
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../imports/xml/xml.xsd"/>
-	<!--Version 1.4/3.x v0.2 Updated September 3, 2015 for ACT Project - includes Finance and Gradebook objects -->
+	<!--Version 1.4/3.x v0.3 Updated September 17, 2015 for ACT Project - includes Finance and Gradebook objects -->
 	<!-- Update - GUID Patterning Corrected-->
 	<!--Infrastructure Common Elements-->
 	<!--SIF_ExtendedElements-->
@@ -796,7 +796,7 @@
 			</xs:element>
 			<xs:element name="AddressList" type="sif:AddressListType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The person’s address(es).</xs:documentation>
+					<xs:documentation>The person's address(es).</xs:documentation>
 				</xs:annotation>
 				<xs:unique name="AddressListKey1">
 					<xs:selector xpath="./sif:Address"/>
@@ -806,7 +806,7 @@
 			</xs:element>
 			<xs:element name="PhoneNumberList" type="sif:PhoneNumberListType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The person’s phone number(s).</xs:documentation>
+					<xs:documentation>The person's phone number(s).</xs:documentation>
 				</xs:annotation>
 				<xs:unique name="PhoneNumberListKey1">
 					<xs:selector xpath="./sif:PhoneNumber"/>
@@ -815,7 +815,7 @@
 			</xs:element>
 			<xs:element name="EmailList" type="sif:EmailListType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The person’s e-mail address(es).</xs:documentation>
+					<xs:documentation>The person's e-mail address(es).</xs:documentation>
 				</xs:annotation>
 				<xs:unique name="EmailListKey1">
 					<xs:selector xpath="./sif:Email"/>
@@ -864,7 +864,7 @@
 			</xs:element>
 			<xs:element name="PhoneNumberList" type="sif:PhoneNumberListType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The principal’s phone number(s).</xs:documentation>
+					<xs:documentation>The principal's phone number(s).</xs:documentation>
 				</xs:annotation>
 				<xs:unique name="PhoneNumberListKey2">
 					<xs:selector xpath="./sif:PhoneNumber"/>
@@ -873,7 +873,7 @@
 			</xs:element>
 			<xs:element name="EmailList" type="sif:EmailListType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The principal’s e-mail address(es).</xs:documentation>
+					<xs:documentation>The principal's e-mail address(es).</xs:documentation>
 				</xs:annotation>
 				<xs:unique name="EmailListKey2">
 					<xs:selector xpath="./sif:Email"/>
@@ -4774,7 +4774,7 @@
 						<xs:element name="HomeroomLocalId" type="sif:LocalIdType" nillable="true" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
-        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from RoomInfo/HomeroomNumber if supported.  If not supported, use the value from RoomInfo/RoomNumber.  If neither is supported, use the most appropriate value from the agent’s application.
+        Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from RoomInfo/HomeroomNumber if supported.  If not supported, use the value from RoomInfo/RoomNumber.  If neither is supported, use the most appropriate value from the agent's application.
       </xs:documentation>
 							</xs:annotation>
 						</xs:element>
@@ -4827,12 +4827,12 @@
 						</xs:element>
 						<xs:element name="Parent1NonSchoolEducation" type="sif:AUCodeSetsNonSchoolEducationType" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This reflects the level of Parent1’s Non-School Education.</xs:documentation>
+								<xs:documentation>This reflects the level of Parent1's Non-School Education.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="Parent2NonSchoolEducation" type="sif:AUCodeSetsNonSchoolEducationType" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>This reflects the level of Parent2’s Non-School Education.</xs:documentation>
+								<xs:documentation>This reflects the level of Parent2's Non-School Education.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="Parent1Sex" type="sif:AUCodeSetsSexCodeType" nillable="true" minOccurs="0">
@@ -4872,7 +4872,7 @@
 			</xs:element>
 			<xs:element name="ESL" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Does the student meet ‘English as a Second Language Criteria’?</xs:documentation>
+					<xs:documentation>Does the student meet ‘English as a Second Language Criteria'?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="YoungCarersRole" type="sif:AUCodeSetsYesOrNoCategoryType" nillable="true" minOccurs="0">
@@ -5288,7 +5288,7 @@
 			</xs:element>
 			<xs:element name="NonSchoolEducation" type="sif:AUCodeSetsNonSchoolEducationType" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>This reflects the level of the Contact’s Non-School Education.</xs:documentation>
+					<xs:documentation>This reflects the level of the Contact's Non-School Education.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SIF_Metadata" type="sif:SIF_MetadataType" nillable="true" minOccurs="0"/>
@@ -5960,12 +5960,12 @@
 			</xs:element>
 			<xs:element name="TimeIn" type="xs:time" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The time the student entered or returned to school.  Must be provided if ‘Partial’ chosen for DayValue.</xs:documentation>
+					<xs:documentation>The time the student entered or returned to school.  Must be provided if ‘Partial' chosen for DayValue.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TimeOut" type="xs:time" nillable="true" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The time the student left school.  Must be provided if ‘Partial’ chosen for DayValue..</xs:documentation>
+					<xs:documentation>The time the student left school.  Must be provided if ‘Partial' chosen for DayValue..</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AbsenceValue" nillable="true" minOccurs="0">
@@ -6408,14 +6408,9 @@
 	<xs:complexType name="TimeTableSubjectType">
 		<xs:annotation>
 			<xs:documentation>
-        This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled 
-        by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications 
-        identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within 
-        the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that 
-        Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base 
-        information to the Time Tabling application about what curriculum offerings are being proposed.
-        When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent 
-        to the TimeTabling application.
+        This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
+
+        When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent to the TimeTabling application.
       </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
@@ -7469,7 +7464,7 @@
 						</xs:element>
 						<xs:element name="PhoneNumberList" type="sif:PhoneNumberListType" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>The further contact person’s phone number(s).</xs:documentation>
+								<xs:documentation>The further contact person's phone number(s).</xs:documentation>
 							</xs:annotation>
 							<xs:unique name="PhoneNumberListKey7">
 								<xs:selector xpath="./sif:PhoneNumber"/>
@@ -7478,7 +7473,7 @@
 						</xs:element>
 						<xs:element name="EmailList" type="sif:EmailListType" nillable="true" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>The further contact person’s e-mail address(es).</xs:documentation>
+								<xs:documentation>The further contact person's e-mail address(es).</xs:documentation>
 							</xs:annotation>
 							<xs:unique name="EmailListKey6">
 								<xs:selector xpath="./sif:Email"/>
@@ -7553,7 +7548,7 @@
 									</xs:element>
 									<xs:element name="StudentActivityDescription" type="xs:normalizedString" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Description of Activity Info in the Previous Schools’ zone.</xs:documentation>
+											<xs:documentation>Description of Activity Info in the Previous Schools' zone.</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 								</xs:sequence>
@@ -13414,7 +13409,7 @@
 			<xs:element name="SchoolInfo" type="sif:SchoolInfoType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="Schools" type="sif:SchoolCollectionType"/>
+	<xs:element name="SchoolInfos" type="sif:SchoolCollectionType"/>
 	<xs:complexType name="SystemRoleCollectionType">
 		<xs:sequence>
 			<xs:element name="SystemRole" type="sif:SystemRoleType" minOccurs="0" maxOccurs="unbounded"/>
@@ -13445,7 +13440,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="TimeTableSubjects" type="sif:TimeTableSubjectCollectionType"/>
-	<xs:element name="SchoolInfos" type="sif:SchoolCollectionType"/>
 	<xs:complexType name="StaffCollectionType">
 		<xs:sequence>
 			<xs:element name="StaffPersonal" type="sif:StaffPersonalType" minOccurs="0" maxOccurs="unbounded"/>
