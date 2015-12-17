@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
@@ -52,10 +51,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *           &lt;/complexType>
  *         &lt;/element>
  *         &lt;element name="City" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="StateProvince" type="{http://www.sifassociation.org/au/datamodel/1.4}StateProvinceType" minOccurs="0"/>
- *         &lt;element name="Country" type="{http://www.sifassociation.org/au/datamodel/1.4}CountryType" minOccurs="0"/>
+ *         &lt;element name="StateProvince" type="{http://www.sifassociation.org/au/datamodel/3.4}StateProvinceType" minOccurs="0"/>
+ *         &lt;element name="Country" type="{http://www.sifassociation.org/au/datamodel/3.4}CountryType" minOccurs="0"/>
  *         &lt;element name="PostalCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="GridLocation" type="{http://www.sifassociation.org/au/datamodel/1.4}GridLocationType" minOccurs="0"/>
+ *         &lt;element name="GridLocation" type="{http://www.sifassociation.org/au/datamodel/3.4}GridLocationType" minOccurs="0"/>
  *         &lt;element name="MapReference" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -71,8 +70,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;/element>
  *         &lt;element name="RadioContact" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Community" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="AddressGlobalUID" type="{http://www.sifassociation.org/au/datamodel/1.4}GUIDType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="AddressGlobalUID" type="{http://www.sifassociation.org/au/datamodel/3.4}GUIDType" minOccurs="0"/>
  *         &lt;element name="StatisticalAreas" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -110,8 +109,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *           &lt;/complexType>
  *         &lt;/element>
  *       &lt;/sequence>
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAddressTypeType" />
- *       &lt;attribute name="Role" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAddressRoleType" />
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAddressTypeType" />
+ *       &lt;attribute name="Role" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAddressRoleType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -120,7 +119,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AddressType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "AddressType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "street",
     "city",
     "stateProvince",
@@ -134,38 +133,35 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "addressGlobalUID",
     "statisticalAreas"
 })
-@XmlSeeAlso({
-    sif.dd.au30.model.AddressListType.Address.class
-})
 public class AddressType {
 
-    @XmlElement(name = "Street", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "Street", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected AddressType.Street street;
-    @XmlElement(name = "City", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "City", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String city;
-    @XmlElementRef(name = "StateProvince", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StateProvince", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvince;
-    @XmlElementRef(name = "Country", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Country", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> country;
-    @XmlElement(name = "PostalCode", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "PostalCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String postalCode;
-    @XmlElementRef(name = "GridLocation", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "GridLocation", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<GridLocationType> gridLocation;
-    @XmlElementRef(name = "MapReference", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MapReference", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressType.MapReference> mapReference;
-    @XmlElementRef(name = "RadioContact", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "RadioContact", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> radioContact;
-    @XmlElementRef(name = "Community", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Community", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> community;
-    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> localId;
-    @XmlElementRef(name = "AddressGlobalUID", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AddressGlobalUID", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> addressGlobalUID;
-    @XmlElementRef(name = "StatisticalAreas", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StatisticalAreas", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressType.StatisticalAreas> statisticalAreas;
     @XmlAttribute(name = "Type", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -539,11 +535,11 @@ public class AddressType {
     })
     public static class MapReference {
 
-        @XmlElement(name = "XCoordinate", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "XCoordinate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String xCoordinate;
-        @XmlElement(name = "YCoordinate", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "YCoordinate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String yCoordinate;
@@ -677,7 +673,7 @@ public class AddressType {
     })
     public static class StatisticalAreas {
 
-        @XmlElementRef(name = "StatisticalArea", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StatisticalArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AddressType.StatisticalAreas.StatisticalArea> statisticalArea;
 
         /**
@@ -855,33 +851,33 @@ public class AddressType {
     })
     public static class Street {
 
-        @XmlElement(name = "Line1", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "Line1", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String line1;
-        @XmlElementRef(name = "Line2", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Line2", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> line2;
-        @XmlElementRef(name = "Line3", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Line3", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> line3;
-        @XmlElementRef(name = "Complex", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Complex", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> complex;
-        @XmlElementRef(name = "StreetNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StreetNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> streetNumber;
-        @XmlElementRef(name = "StreetPrefix", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StreetPrefix", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> streetPrefix;
-        @XmlElementRef(name = "StreetName", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StreetName", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> streetName;
-        @XmlElementRef(name = "StreetType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StreetType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> streetType;
-        @XmlElementRef(name = "StreetSuffix", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StreetSuffix", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> streetSuffix;
-        @XmlElementRef(name = "ApartmentType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "ApartmentType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> apartmentType;
-        @XmlElementRef(name = "ApartmentNumberPrefix", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "ApartmentNumberPrefix", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> apartmentNumberPrefix;
-        @XmlElementRef(name = "ApartmentNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "ApartmentNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> apartmentNumber;
-        @XmlElementRef(name = "ApartmentNumberSuffix", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "ApartmentNumberSuffix", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> apartmentNumberSuffix;
 
         /**

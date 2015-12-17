@@ -29,8 +29,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentContactRelationshipRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}Relationship" minOccurs="0"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="StudentContactPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}Relationship" minOccurs="0"/>
  *         &lt;element name="ParentRelationshipStatus" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -45,7 +46,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="Household" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="Household" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -56,32 +57,31 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="ParentLegalGuardian" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="PickupRights" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="LivesWith" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="AccessToRecords" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="ReceivesAssessmentReport" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="EmergencyContact" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="HasCustody" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="DisciplinaryContact" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="FeesBilling" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="FamilyMail" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *                   &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="ParentLegalGuardian" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="PickupRights" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="LivesWith" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="AccessToRecords" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="ReceivesAssessmentReport" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="EmergencyContact" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="HasCustody" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="DisciplinaryContact" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="FeesBilling" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="FamilyMail" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                   &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="MainlySpeaksEnglishAtHome" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="MainlySpeaksEnglishAtHome" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ContactSequence" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="ContactSequenceSource" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsSourceCodeTypeType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="ContactSequenceSource" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSourceCodeTypeType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="StudentPersonalRefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
- *       &lt;attribute name="StudentContactPersonalRefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="StudentContactRelationshipRefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -90,8 +90,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentContactRelationshipType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
-    "studentContactRelationshipRefId",
+@XmlType(name = "StudentContactRelationshipType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+    "studentPersonalRefId",
+    "studentContactPersonalRefId",
     "relationship",
     "parentRelationshipStatus",
     "householdList",
@@ -104,55 +105,80 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentContactRelationshipType {
 
-    @XmlElementRef(name = "StudentContactRelationshipRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> studentContactRelationshipRefId;
-    @XmlElement(name = "Relationship", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected RelationshipType relationship;
-    @XmlElementRef(name = "ParentRelationshipStatus", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> parentRelationshipStatus;
-    @XmlElementRef(name = "HouseholdList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentContactRelationshipType.HouseholdList> householdList;
-    @XmlElementRef(name = "ContactFlags", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentContactRelationshipType.ContactFlags> contactFlags;
-    @XmlElementRef(name = "MainlySpeaksEnglishAtHome", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> mainlySpeaksEnglishAtHome;
-    @XmlElementRef(name = "ContactSequence", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<Long> contactSequence;
-    @XmlElementRef(name = "ContactSequenceSource", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<AUCodeSetsSourceCodeTypeType> contactSequenceSource;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
-    @XmlAttribute(name = "StudentPersonalRefId", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlAttribute(name = "StudentContactPersonalRefId", required = true)
+    @XmlElement(name = "StudentContactPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentContactPersonalRefId;
+    @XmlElement(name = "Relationship", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected RelationshipType relationship;
+    @XmlElementRef(name = "ParentRelationshipStatus", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> parentRelationshipStatus;
+    @XmlElementRef(name = "HouseholdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentContactRelationshipType.HouseholdList> householdList;
+    @XmlElementRef(name = "ContactFlags", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentContactRelationshipType.ContactFlags> contactFlags;
+    @XmlElementRef(name = "MainlySpeaksEnglishAtHome", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> mainlySpeaksEnglishAtHome;
+    @XmlElementRef(name = "ContactSequence", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Long> contactSequence;
+    @XmlElementRef(name = "ContactSequenceSource", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsSourceCodeTypeType> contactSequenceSource;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SIFMetadataType> sifMetadata;
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
+    @XmlAttribute(name = "StudentContactRelationshipRefId", required = true)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String studentContactRelationshipRefId;
 
     /**
-     * Gets the value of the studentContactRelationshipRefId property.
+     * Gets the value of the studentPersonalRefId property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getStudentContactRelationshipRefId() {
-        return studentContactRelationshipRefId;
+    public String getStudentPersonalRefId() {
+        return studentPersonalRefId;
     }
 
     /**
-     * Sets the value of the studentContactRelationshipRefId property.
+     * Sets the value of the studentPersonalRefId property.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setStudentContactRelationshipRefId(JAXBElement<String> value) {
-        this.studentContactRelationshipRefId = value;
+    public void setStudentPersonalRefId(String value) {
+        this.studentPersonalRefId = value;
+    }
+
+    /**
+     * Gets the value of the studentContactPersonalRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStudentContactPersonalRefId() {
+        return studentContactPersonalRefId;
+    }
+
+    /**
+     * Sets the value of the studentContactPersonalRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStudentContactPersonalRefId(String value) {
+        this.studentContactPersonalRefId = value;
     }
 
     /**
@@ -372,51 +398,27 @@ public class StudentContactRelationshipType {
     }
 
     /**
-     * Gets the value of the studentPersonalRefId property.
+     * Gets the value of the studentContactRelationshipRefId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getStudentPersonalRefId() {
-        return studentPersonalRefId;
+    public String getStudentContactRelationshipRefId() {
+        return studentContactRelationshipRefId;
     }
 
     /**
-     * Sets the value of the studentPersonalRefId property.
+     * Sets the value of the studentContactRelationshipRefId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setStudentPersonalRefId(String value) {
-        this.studentPersonalRefId = value;
-    }
-
-    /**
-     * Gets the value of the studentContactPersonalRefId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getStudentContactPersonalRefId() {
-        return studentContactPersonalRefId;
-    }
-
-    /**
-     * Sets the value of the studentContactPersonalRefId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setStudentContactPersonalRefId(String value) {
-        this.studentContactPersonalRefId = value;
+    public void setStudentContactRelationshipRefId(String value) {
+        this.studentContactRelationshipRefId = value;
     }
 
 
@@ -430,19 +432,19 @@ public class StudentContactRelationshipType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="ParentLegalGuardian" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="PickupRights" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="LivesWith" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="AccessToRecords" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="ReceivesAssessmentReport" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="EmergencyContact" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="HasCustody" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="DisciplinaryContact" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="FeesBilling" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="FamilyMail" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
-     *         &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="ParentLegalGuardian" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="PickupRights" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="LivesWith" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="AccessToRecords" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="ReceivesAssessmentReport" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="EmergencyContact" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="HasCustody" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="DisciplinaryContact" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="FeesBilling" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="FamilyMail" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *         &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -469,31 +471,31 @@ public class StudentContactRelationshipType {
     })
     public static class ContactFlags {
 
-        @XmlElementRef(name = "ParentLegalGuardian", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "ParentLegalGuardian", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> parentLegalGuardian;
-        @XmlElementRef(name = "PickupRights", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "PickupRights", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> pickupRights;
-        @XmlElementRef(name = "LivesWith", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "LivesWith", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> livesWith;
-        @XmlElementRef(name = "AccessToRecords", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "AccessToRecords", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> accessToRecords;
-        @XmlElementRef(name = "ReceivesAssessmentReport", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "ReceivesAssessmentReport", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> receivesAssessmentReport;
-        @XmlElementRef(name = "EmergencyContact", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "EmergencyContact", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> emergencyContact;
-        @XmlElementRef(name = "HasCustody", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "HasCustody", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> hasCustody;
-        @XmlElementRef(name = "DisciplinaryContact", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "DisciplinaryContact", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> disciplinaryContact;
-        @XmlElementRef(name = "AttendanceContact", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "AttendanceContact", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> attendanceContact;
-        @XmlElementRef(name = "PrimaryCareProvider", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "PrimaryCareProvider", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> primaryCareProvider;
-        @XmlElementRef(name = "FeesBilling", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "FeesBilling", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> feesBilling;
-        @XmlElementRef(name = "FamilyMail", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "FamilyMail", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> familyMail;
-        @XmlElementRef(name = "InterventionOrder", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "InterventionOrder", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<AUCodeSetsYesOrNoCategoryType> interventionOrder;
 
         /**
@@ -821,7 +823,7 @@ public class StudentContactRelationshipType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="Household" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="Household" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -836,7 +838,7 @@ public class StudentContactRelationshipType {
     })
     public static class HouseholdList {
 
-        @XmlElement(name = "Household", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "Household", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         protected List<String> household;
 

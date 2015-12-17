@@ -17,12 +17,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Below"/>
  *     &lt;enumeration value="At"/>
  *     &lt;enumeration value="Above"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsProgressLevelType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsProgressLevelType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsProgressLevelType {
 
@@ -46,7 +47,13 @@ public enum AUCodeSetsProgressLevelType {
      * 
      */
     @XmlEnumValue("Above")
-    ABOVE("Above");
+    ABOVE("Above"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsProgressLevelType(String v) {

@@ -19,12 +19,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="N/A"/>
  *     &lt;enumeration value="Partial"/>
  *     &lt;enumeration value="PM"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsDayValueCodeType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsDayValueCodeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsDayValueCodeType {
 
@@ -60,7 +61,13 @@ public enum AUCodeSetsDayValueCodeType {
      * Afternoon
      * 
      */
-    PM("PM");
+    PM("PM"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsDayValueCodeType(String v) {

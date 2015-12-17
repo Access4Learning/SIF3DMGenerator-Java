@@ -5,11 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -24,21 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PhoneNumber" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.4}PhoneNumberType">
- *                 &lt;attribute name="SIF_Action">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                       &lt;enumeration value="Delete"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}PhoneNumber" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -48,13 +31,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhoneNumberListType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "PhoneNumberListType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "phoneNumber"
 })
 public class PhoneNumberListType {
 
-    @XmlElement(name = "PhoneNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected List<PhoneNumberListType.PhoneNumber> phoneNumber;
+    @XmlElement(name = "PhoneNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected List<PhoneNumberType> phoneNumber;
 
     /**
      * Gets the value of the phoneNumber property.
@@ -74,75 +57,15 @@ public class PhoneNumberListType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PhoneNumberListType.PhoneNumber }
+     * {@link PhoneNumberType }
      * 
      * 
      */
-    public List<PhoneNumberListType.PhoneNumber> getPhoneNumber() {
+    public List<PhoneNumberType> getPhoneNumber() {
         if (phoneNumber == null) {
-            phoneNumber = new ArrayList<PhoneNumberListType.PhoneNumber>();
+            phoneNumber = new ArrayList<PhoneNumberType>();
         }
         return this.phoneNumber;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.4}PhoneNumberType">
-     *       &lt;attribute name="SIF_Action">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *             &lt;enumeration value="Delete"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class PhoneNumber
-        extends PhoneNumberType
-    {
-
-        @XmlAttribute(name = "SIF_Action")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String sifAction;
-
-        /**
-         * Gets the value of the sifAction property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getSIFAction() {
-            return sifAction;
-        }
-
-        /**
-         * Sets the value of the sifAction property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setSIFAction(String value) {
-            this.sifAction = value;
-        }
-
     }
 
 }

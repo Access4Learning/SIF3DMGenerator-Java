@@ -16,12 +16,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="C"/>
  *     &lt;enumeration value="I"/>
  *     &lt;enumeration value="N"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsImmunisationCertificateStatusType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsImmunisationCertificateStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsImmunisationCertificateStatusType {
 
@@ -42,7 +43,13 @@ public enum AUCodeSetsImmunisationCertificateStatusType {
      * Not Sighted
      * 
      */
-    N;
+    N,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

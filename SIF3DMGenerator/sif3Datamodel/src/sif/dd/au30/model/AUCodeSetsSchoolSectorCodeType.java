@@ -16,12 +16,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="Gov"/>
  *     &lt;enumeration value="NG"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSchoolSectorCodeType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsSchoolSectorCodeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsSchoolSectorCodeType {
 
@@ -37,7 +38,13 @@ public enum AUCodeSetsSchoolSectorCodeType {
      * Non-Government School
      * 
      */
-    NG("NG");
+    NG("NG"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsSchoolSectorCodeType(String v) {

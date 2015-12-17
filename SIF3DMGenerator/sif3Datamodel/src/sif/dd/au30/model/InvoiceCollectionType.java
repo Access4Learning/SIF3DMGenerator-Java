@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Invoice" type="{http://www.sifassociation.org/au/datamodel/1.4}InvoiceType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Invoice" type="{http://www.sifassociation.org/au/datamodel/3.4}InvoiceType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InvoiceCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "InvoiceCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "invoice"
 })
 public class InvoiceCollectionType {
 
-    @XmlElement(name = "Invoice", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "Invoice", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected List<InvoiceType> invoice;
 
     /**

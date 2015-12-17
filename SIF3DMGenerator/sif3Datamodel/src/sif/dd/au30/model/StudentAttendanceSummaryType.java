@@ -27,7 +27,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentAttendanceSummaryRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}SchoolYear" minOccurs="0"/>
+ *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="StartDay" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="EndDay" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="FTE" minOccurs="0">
@@ -44,14 +48,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="UnexcusedAbsences" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="DaysTardy" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="DaysInMembership" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="StudentPersonalRefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" />
- *       &lt;attribute name="SchoolInfoRefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" />
- *       &lt;attribute name="SchoolYear" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}SchoolYearType" />
- *       &lt;attribute name="StartDate" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
- *       &lt;attribute name="EndDate" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *       &lt;attribute name="StudentAttendanceSummaryRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -60,8 +60,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentAttendanceSummaryType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
-    "studentAttendanceSummaryRefId",
+@XmlType(name = "StudentAttendanceSummaryType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+    "studentPersonalRefId",
+    "schoolInfoRefId",
+    "schoolYear",
+    "startDate",
+    "endDate",
     "startDay",
     "endDay",
     "fte",
@@ -75,65 +79,162 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class StudentAttendanceSummaryType {
 
-    @XmlElementRef(name = "StudentAttendanceSummaryRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> studentAttendanceSummaryRefId;
-    @XmlElementRef(name = "StartDay", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<Long> startDay;
-    @XmlElementRef(name = "EndDay", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<Long> endDay;
-    @XmlElementRef(name = "FTE", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<BigDecimal> fte;
-    @XmlElement(name = "DaysAttended", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected BigDecimal daysAttended;
-    @XmlElement(name = "ExcusedAbsences", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected BigDecimal excusedAbsences;
-    @XmlElement(name = "UnexcusedAbsences", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected BigDecimal unexcusedAbsences;
-    @XmlElementRef(name = "DaysTardy", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<BigDecimal> daysTardy;
-    @XmlElement(name = "DaysInMembership", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected BigDecimal daysInMembership;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
-    @XmlAttribute(name = "StudentPersonalRefId", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlAttribute(name = "SchoolInfoRefId", required = true)
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlAttribute(name = "SchoolYear", required = true)
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected XMLGregorianCalendar schoolYear;
-    @XmlAttribute(name = "StartDate", required = true)
+    @XmlElement(name = "StartDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar startDate;
-    @XmlAttribute(name = "EndDate", required = true)
+    @XmlElement(name = "EndDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar endDate;
+    @XmlElementRef(name = "StartDay", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Long> startDay;
+    @XmlElementRef(name = "EndDay", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Long> endDay;
+    @XmlElementRef(name = "FTE", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> fte;
+    @XmlElement(name = "DaysAttended", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected BigDecimal daysAttended;
+    @XmlElement(name = "ExcusedAbsences", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected BigDecimal excusedAbsences;
+    @XmlElement(name = "UnexcusedAbsences", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected BigDecimal unexcusedAbsences;
+    @XmlElementRef(name = "DaysTardy", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> daysTardy;
+    @XmlElement(name = "DaysInMembership", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected BigDecimal daysInMembership;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SIFMetadataType> sifMetadata;
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
+    @XmlAttribute(name = "StudentAttendanceSummaryRefId")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String studentAttendanceSummaryRefId;
 
     /**
-     * Gets the value of the studentAttendanceSummaryRefId property.
+     * Gets the value of the studentPersonalRefId property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getStudentAttendanceSummaryRefId() {
-        return studentAttendanceSummaryRefId;
+    public String getStudentPersonalRefId() {
+        return studentPersonalRefId;
     }
 
     /**
-     * Sets the value of the studentAttendanceSummaryRefId property.
+     * Sets the value of the studentPersonalRefId property.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setStudentAttendanceSummaryRefId(JAXBElement<String> value) {
-        this.studentAttendanceSummaryRefId = value;
+    public void setStudentPersonalRefId(String value) {
+        this.studentPersonalRefId = value;
+    }
+
+    /**
+     * Gets the value of the schoolInfoRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSchoolInfoRefId() {
+        return schoolInfoRefId;
+    }
+
+    /**
+     * Sets the value of the schoolInfoRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSchoolInfoRefId(String value) {
+        this.schoolInfoRefId = value;
+    }
+
+    /**
+     * Gets the value of the schoolYear property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getSchoolYear() {
+        return schoolYear;
+    }
+
+    /**
+     * Sets the value of the schoolYear property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setSchoolYear(XMLGregorianCalendar value) {
+        this.schoolYear = value;
+    }
+
+    /**
+     * Gets the value of the startDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getStartDate() {
+        return startDate;
+    }
+
+    /**
+     * Sets the value of the startDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setStartDate(XMLGregorianCalendar value) {
+        this.startDate = value;
+    }
+
+    /**
+     * Gets the value of the endDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEndDate() {
+        return endDate;
+    }
+
+    /**
+     * Sets the value of the endDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEndDate(XMLGregorianCalendar value) {
+        this.endDate = value;
     }
 
     /**
@@ -377,123 +478,27 @@ public class StudentAttendanceSummaryType {
     }
 
     /**
-     * Gets the value of the studentPersonalRefId property.
+     * Gets the value of the studentAttendanceSummaryRefId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getStudentPersonalRefId() {
-        return studentPersonalRefId;
+    public String getStudentAttendanceSummaryRefId() {
+        return studentAttendanceSummaryRefId;
     }
 
     /**
-     * Sets the value of the studentPersonalRefId property.
+     * Sets the value of the studentAttendanceSummaryRefId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setStudentPersonalRefId(String value) {
-        this.studentPersonalRefId = value;
-    }
-
-    /**
-     * Gets the value of the schoolInfoRefId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSchoolInfoRefId() {
-        return schoolInfoRefId;
-    }
-
-    /**
-     * Sets the value of the schoolInfoRefId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSchoolInfoRefId(String value) {
-        this.schoolInfoRefId = value;
-    }
-
-    /**
-     * Gets the value of the schoolYear property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getSchoolYear() {
-        return schoolYear;
-    }
-
-    /**
-     * Sets the value of the schoolYear property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setSchoolYear(XMLGregorianCalendar value) {
-        this.schoolYear = value;
-    }
-
-    /**
-     * Gets the value of the startDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getStartDate() {
-        return startDate;
-    }
-
-    /**
-     * Sets the value of the startDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setStartDate(XMLGregorianCalendar value) {
-        this.startDate = value;
-    }
-
-    /**
-     * Gets the value of the endDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getEndDate() {
-        return endDate;
-    }
-
-    /**
-     * Sets the value of the endDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setEndDate(XMLGregorianCalendar value) {
-        this.endDate = value;
+    public void setStudentAttendanceSummaryRefId(String value) {
+        this.studentAttendanceSummaryRefId = value;
     }
 
 }

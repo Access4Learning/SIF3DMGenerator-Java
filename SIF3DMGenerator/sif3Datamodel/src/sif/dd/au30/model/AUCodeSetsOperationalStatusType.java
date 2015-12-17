@@ -19,12 +19,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="P"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="U"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsOperationalStatusType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsOperationalStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsOperationalStatusType {
 
@@ -63,7 +64,13 @@ public enum AUCodeSetsOperationalStatusType {
      * Unstaffed
      * 
      */
-    U;
+    U,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

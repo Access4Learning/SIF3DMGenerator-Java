@@ -25,12 +25,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Incursion"/>
  *     &lt;enumeration value="Exam"/>
  *     &lt;enumeration value="Event"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsScheduledActivityTypeType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsScheduledActivityTypeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsScheduledActivityTypeType {
 
@@ -110,7 +111,13 @@ public enum AUCodeSetsScheduledActivityTypeType {
      * 
      */
     @XmlEnumValue("Event")
-    EVENT("Event");
+    EVENT("Event"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsScheduledActivityTypeType(String v) {

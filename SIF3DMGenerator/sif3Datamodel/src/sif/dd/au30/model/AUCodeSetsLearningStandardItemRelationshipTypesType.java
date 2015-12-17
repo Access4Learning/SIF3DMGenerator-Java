@@ -17,12 +17,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Content"/>
  *     &lt;enumeration value="PD"/>
  *     &lt;enumeration value="State"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsLearningStandardItemRelationshipTypesType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsLearningStandardItemRelationshipTypesType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsLearningStandardItemRelationshipTypesType {
 
@@ -45,7 +46,13 @@ public enum AUCodeSetsLearningStandardItemRelationshipTypesType {
      * 
      */
     @XmlEnumValue("State")
-    STATE("State");
+    STATE("State"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsLearningStandardItemRelationshipTypesType(String v) {

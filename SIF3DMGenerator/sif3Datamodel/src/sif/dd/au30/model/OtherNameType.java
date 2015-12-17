@@ -4,7 +4,6 @@ package sif.dd.au30.model;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -21,8 +20,8 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="OtherNameType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/1.4}BaseNameType">
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsNameUsageTypeType" />
+ *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/3.4}BaseNameType">
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNameUsageTypeType" />
  *     &lt;/extension>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -31,10 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OtherNameType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-@XmlSeeAlso({
-    sif.dd.au30.model.OtherNamesType.Name.class
-})
+@XmlType(name = "OtherNameType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 public class OtherNameType
     extends BaseNameType
 {

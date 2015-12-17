@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
@@ -27,7 +26,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * &lt;complexType name="EmailType">
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsEmailTypeType" />
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEmailTypeType" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -36,11 +35,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EmailType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "EmailType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "value"
-})
-@XmlSeeAlso({
-    sif.dd.au30.model.EmailListType.Email.class
 })
 public class EmailType {
 

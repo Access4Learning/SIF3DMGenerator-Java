@@ -1,7 +1,6 @@
 
 package sif.dd.au30.model;
 
-import java.math.BigDecimal;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -30,11 +29,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="BilledEntity" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *                       &lt;enumeration value="StudentPersonal"/>
  *                       &lt;enumeration value="StudentContactPersonal"/>
+ *                       &lt;enumeration value="StaffPersonal"/>
  *                       &lt;enumeration value="VendorInfo"/>
  *                     &lt;/restriction>
  *                   &lt;/simpleType>
@@ -43,14 +44,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="AddressList" type="{http://www.sifassociation.org/au/datamodel/1.4}AddressListType" minOccurs="0"/>
+ *         &lt;element name="AddressList" type="{http://www.sifassociation.org/au/datamodel/3.4}AddressListType" minOccurs="0"/>
  *         &lt;element name="BillingName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="BillingNote" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="Discount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="Discount" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -59,7 +60,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DebtorType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "DebtorType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "billedEntity",
     "addressList",
     "billingName",
@@ -70,19 +71,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class DebtorType {
 
-    @XmlElement(name = "BilledEntity", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "BilledEntity", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected DebtorType.BilledEntity billedEntity;
-    @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressListType> addressList;
-    @XmlElementRef(name = "BillingName", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "BillingName", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> billingName;
-    @XmlElementRef(name = "BillingNote", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "BillingNote", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> billingNote;
-    @XmlElementRef(name = "Discount", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<BigDecimal> discount;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Discount", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> discount;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -189,10 +190,10 @@ public class DebtorType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public JAXBElement<BigDecimal> getDiscount() {
+    public JAXBElement<String> getDiscount() {
         return discount;
     }
 
@@ -201,10 +202,10 @@ public class DebtorType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setDiscount(JAXBElement<BigDecimal> value) {
+    public void setDiscount(JAXBElement<String> value) {
         this.discount = value;
     }
 
@@ -291,11 +292,13 @@ public class DebtorType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+     *             &lt;enumeration value="StudentPersonal"/>
      *             &lt;enumeration value="StudentContactPersonal"/>
+     *             &lt;enumeration value="StaffPersonal"/>
      *             &lt;enumeration value="VendorInfo"/>
      *           &lt;/restriction>
      *         &lt;/simpleType>

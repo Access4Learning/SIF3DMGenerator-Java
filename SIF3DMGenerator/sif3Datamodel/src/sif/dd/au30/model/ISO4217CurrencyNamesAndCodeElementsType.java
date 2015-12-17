@@ -191,12 +191,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="ZAR"/>
  *     &lt;enumeration value="ZMK"/>
  *     &lt;enumeration value="ZWN"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "ISO4217CurrencyNamesAndCodeElementsType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "ISO4217CurrencyNamesAndCodeElementsType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum ISO4217CurrencyNamesAndCodeElementsType {
 
@@ -1267,7 +1268,13 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
      * Zimbabwe Dollar
      * 
      */
-    ZWN;
+    ZWN,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

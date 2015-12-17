@@ -94,25 +94,25 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="AssetOwner" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="AssetSubjects" type="{http://www.sifassociation.org/au/datamodel/1.4}SubjectAreaListType" minOccurs="0"/>
- *         &lt;element name="AssetGradeLevels" type="{http://www.sifassociation.org/au/datamodel/1.4}YearLevelsType" minOccurs="0"/>
- *         &lt;element name="AssetLanguage" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
+ *         &lt;element name="AssetSubjects" type="{http://www.sifassociation.org/au/datamodel/3.4}SubjectAreaListType" minOccurs="0"/>
+ *         &lt;element name="AssetGradeLevels" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelsType" minOccurs="0"/>
+ *         &lt;element name="AssetLanguage" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
  *         &lt;element name="AssetLearningStandards" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="AssetLearningStandard" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="AssetLearningStandard" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="AssetContent" type="{http://www.sifassociation.org/au/datamodel/1.4}AbstractContentElementType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="AssetContent" type="{http://www.sifassociation.org/au/datamodel/3.4}AbstractContentElementType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -121,7 +121,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Sif3AssessmentAssetType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "Sif3AssessmentAssetType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "assetVersion",
     "assetPublishDate",
     "assetIdentifiers",
@@ -138,32 +138,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class Sif3AssessmentAssetType {
 
-    @XmlElementRef(name = "AssetVersion", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetVersion", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assetVersion;
-    @XmlElementRef(name = "AssetPublishDate", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetPublishDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> assetPublishDate;
-    @XmlElementRef(name = "AssetIdentifiers", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetIdentifiers", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Sif3AssessmentAssetType.AssetIdentifiers> assetIdentifiers;
-    @XmlElementRef(name = "AssetName", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetName", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assetName;
-    @XmlElement(name = "AssetType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "AssetType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String assetType;
-    @XmlElementRef(name = "AssetOwner", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetOwner", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assetOwner;
-    @XmlElementRef(name = "AssetSubjects", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetSubjects", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SubjectAreaListType> assetSubjects;
-    @XmlElementRef(name = "AssetGradeLevels", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetGradeLevels", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<YearLevelsType> assetGradeLevels;
-    @XmlElementRef(name = "AssetLanguage", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetLanguage", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assetLanguage;
-    @XmlElementRef(name = "AssetLearningStandards", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssetLearningStandards", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Sif3AssessmentAssetType.AssetLearningStandards> assetLearningStandards;
-    @XmlElement(name = "AssetContent", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "AssetContent", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected AbstractContentElementType assetContent;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -548,7 +548,7 @@ public class Sif3AssessmentAssetType {
     })
     public static class AssetIdentifiers {
 
-        @XmlElement(name = "AssetIdentifier", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "AssetIdentifier", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         protected List<Sif3AssessmentAssetType.AssetIdentifiers.AssetIdentifier> assetIdentifier;
 
         /**
@@ -684,7 +684,7 @@ public class Sif3AssessmentAssetType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="AssetLearningStandard" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="AssetLearningStandard" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -699,7 +699,7 @@ public class Sif3AssessmentAssetType {
     })
     public static class AssetLearningStandards {
 
-        @XmlElement(name = "AssetLearningStandard", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "AssetLearningStandard", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected List<String> assetLearningStandard;
 

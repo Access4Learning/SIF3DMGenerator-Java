@@ -42,10 +42,10 @@ import org.w3c.dom.Element;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -54,18 +54,18 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AssessmentPackageType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "AssessmentPackageType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "xmlData",
     "sifMetadata",
     "sifExtendedElements"
 })
 public class AssessmentPackageType {
 
-    @XmlElementRef(name = "XMLData", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "XMLData", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AssessmentPackageType.XMLData> xmlData;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -206,8 +206,8 @@ public class AssessmentPackageType {
          * 
          * @return
          *     possible object is
-         *     {@link Element }
          *     {@link Object }
+         *     {@link Element }
          *     
          */
         public Object getAny() {
@@ -219,8 +219,8 @@ public class AssessmentPackageType {
          * 
          * @param value
          *     allowed object is
-         *     {@link Element }
          *     {@link Object }
+         *     {@link Element }
          *     
          */
         public void setAny(Object value) {

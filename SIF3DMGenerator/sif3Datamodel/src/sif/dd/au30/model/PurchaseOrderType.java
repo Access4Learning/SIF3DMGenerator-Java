@@ -32,9 +32,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="FormNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="VendorInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="EmployeePersonalRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="VendorInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="EmployeePersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="PurchasingItems" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -48,8 +48,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                             &lt;element name="ItemNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                             &lt;element name="ItemDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                             &lt;element name="Quantity" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                             &lt;element name="UnitCost" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
+ *                             &lt;element name="UnitCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+ *                             &lt;element name="TotalCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
  *                             &lt;element name="QuantityDelivered" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                             &lt;element name="CancelledOrder" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *                             &lt;element name="TaxRate" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *                             &lt;element name="ExpenseAccounts" minOccurs="0">
  *                               &lt;complexType>
  *                                 &lt;complexContent>
@@ -61,9 +64,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                                               &lt;sequence>
  *                                                 &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *                                                 &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
- *                                                 &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
- *                                                 &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+ *                                                 &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+ *                                                 &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *                                                 &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
  *                                               &lt;/sequence>
  *                                             &lt;/restriction>
  *                                           &lt;/complexContent>
@@ -86,14 +89,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;/element>
  *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="TaxRate" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="TaxAmount" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
- *         &lt;element name="AmountDelivered" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="TaxAmount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+ *         &lt;element name="TotalAmount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
  *         &lt;element name="UpdateDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="FullyDelivered" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="FullyDelivered" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="OriginalPurchaseOrderRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -102,7 +106,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PurchaseOrderType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "PurchaseOrderType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "formNumber",
     "vendorInfoRefId",
     "chargedLocationInfoRefId",
@@ -111,42 +115,45 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "creationDate",
     "taxRate",
     "taxAmount",
-    "amountDelivered",
+    "totalAmount",
     "updateDate",
     "fullyDelivered",
+    "originalPurchaseOrderRefId",
     "sifMetadata",
     "sifExtendedElements"
 })
 public class PurchaseOrderType {
 
-    @XmlElement(name = "FormNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "FormNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String formNumber;
-    @XmlElement(name = "VendorInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "VendorInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String vendorInfoRefId;
-    @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> chargedLocationInfoRefId;
-    @XmlElementRef(name = "EmployeePersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmployeePersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> employeePersonalRefId;
-    @XmlElement(name = "PurchasingItems", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "PurchasingItems", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected PurchaseOrderType.PurchasingItems purchasingItems;
-    @XmlElementRef(name = "CreationDate", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CreationDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> creationDate;
-    @XmlElementRef(name = "TaxRate", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TaxRate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> taxRate;
-    @XmlElementRef(name = "TaxAmount", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TaxAmount", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<MonetaryAmountType> taxAmount;
-    @XmlElementRef(name = "AmountDelivered", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> amountDelivered;
-    @XmlElementRef(name = "UpdateDate", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TotalAmount", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<MonetaryAmountType> totalAmount;
+    @XmlElementRef(name = "UpdateDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> updateDate;
-    @XmlElementRef(name = "FullyDelivered", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FullyDelivered", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> fullyDelivered;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OriginalPurchaseOrderRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> originalPurchaseOrderRefId;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -345,27 +352,27 @@ public class PurchaseOrderType {
     }
 
     /**
-     * Gets the value of the amountDelivered property.
+     * Gets the value of the totalAmount property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}
      *     
      */
-    public JAXBElement<String> getAmountDelivered() {
-        return amountDelivered;
+    public JAXBElement<MonetaryAmountType> getTotalAmount() {
+        return totalAmount;
     }
 
     /**
-     * Sets the value of the amountDelivered property.
+     * Sets the value of the totalAmount property.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}
      *     
      */
-    public void setAmountDelivered(JAXBElement<String> value) {
-        this.amountDelivered = value;
+    public void setTotalAmount(JAXBElement<MonetaryAmountType> value) {
+        this.totalAmount = value;
     }
 
     /**
@@ -414,6 +421,30 @@ public class PurchaseOrderType {
      */
     public void setFullyDelivered(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.fullyDelivered = value;
+    }
+
+    /**
+     * Gets the value of the originalPurchaseOrderRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getOriginalPurchaseOrderRefId() {
+        return originalPurchaseOrderRefId;
+    }
+
+    /**
+     * Sets the value of the originalPurchaseOrderRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setOriginalPurchaseOrderRefId(JAXBElement<String> value) {
+        this.originalPurchaseOrderRefId = value;
     }
 
     /**
@@ -507,8 +538,11 @@ public class PurchaseOrderType {
      *                   &lt;element name="ItemNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                   &lt;element name="ItemDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                   &lt;element name="Quantity" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *                   &lt;element name="UnitCost" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
+     *                   &lt;element name="UnitCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+     *                   &lt;element name="TotalCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
      *                   &lt;element name="QuantityDelivered" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                   &lt;element name="CancelledOrder" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+     *                   &lt;element name="TaxRate" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
      *                   &lt;element name="ExpenseAccounts" minOccurs="0">
      *                     &lt;complexType>
      *                       &lt;complexContent>
@@ -520,9 +554,9 @@ public class PurchaseOrderType {
      *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                                     &lt;sequence>
      *                                       &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-     *                                       &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
-     *                                       &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
-     *                                       &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+     *                                       &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+     *                                       &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+     *                                       &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
      *                                     &lt;/sequence>
      *                                   &lt;/restriction>
      *                                 &lt;/complexContent>
@@ -552,7 +586,7 @@ public class PurchaseOrderType {
     })
     public static class PurchasingItems {
 
-        @XmlElement(name = "PurchasingItem", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "PurchasingItem", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         protected List<PurchaseOrderType.PurchasingItems.PurchasingItem> purchasingItem;
 
         /**
@@ -598,8 +632,11 @@ public class PurchaseOrderType {
          *         &lt;element name="ItemNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *         &lt;element name="ItemDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *         &lt;element name="Quantity" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-         *         &lt;element name="UnitCost" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
+         *         &lt;element name="UnitCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+         *         &lt;element name="TotalCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
          *         &lt;element name="QuantityDelivered" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *         &lt;element name="CancelledOrder" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+         *         &lt;element name="TaxRate" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
          *         &lt;element name="ExpenseAccounts" minOccurs="0">
          *           &lt;complexType>
          *             &lt;complexContent>
@@ -611,9 +648,9 @@ public class PurchaseOrderType {
          *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *                           &lt;sequence>
          *                             &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-         *                             &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
-         *                             &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
-         *                             &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+         *                             &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+         *                             &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+         *                             &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
          *                           &lt;/sequence>
          *                         &lt;/restriction>
          *                       &lt;/complexContent>
@@ -638,24 +675,33 @@ public class PurchaseOrderType {
             "itemDescription",
             "quantity",
             "unitCost",
+            "totalCost",
             "quantityDelivered",
+            "cancelledOrder",
+            "taxRate",
             "expenseAccounts"
         })
         public static class PurchasingItem {
 
-            @XmlElementRef(name = "ItemNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "ItemNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> itemNumber;
-            @XmlElement(name = "ItemDescription", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+            @XmlElement(name = "ItemDescription", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String itemDescription;
-            @XmlElementRef(name = "Quantity", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "Quantity", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> quantity;
-            @XmlElementRef(name = "UnitCost", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "UnitCost", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<MonetaryAmountType> unitCost;
-            @XmlElementRef(name = "QuantityDelivered", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "TotalCost", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            protected JAXBElement<MonetaryAmountType> totalCost;
+            @XmlElementRef(name = "QuantityDelivered", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> quantityDelivered;
-            @XmlElementRef(name = "ExpenseAccounts", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "CancelledOrder", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            protected JAXBElement<AUCodeSetsYesOrNoCategoryType> cancelledOrder;
+            @XmlElementRef(name = "TaxRate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            protected JAXBElement<BigDecimal> taxRate;
+            @XmlElementRef(name = "ExpenseAccounts", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<PurchaseOrderType.PurchasingItems.PurchasingItem.ExpenseAccounts> expenseAccounts;
 
             /**
@@ -755,6 +801,30 @@ public class PurchaseOrderType {
             }
 
             /**
+             * Gets the value of the totalCost property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}
+             *     
+             */
+            public JAXBElement<MonetaryAmountType> getTotalCost() {
+                return totalCost;
+            }
+
+            /**
+             * Sets the value of the totalCost property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}
+             *     
+             */
+            public void setTotalCost(JAXBElement<MonetaryAmountType> value) {
+                this.totalCost = value;
+            }
+
+            /**
              * Gets the value of the quantityDelivered property.
              * 
              * @return
@@ -776,6 +846,54 @@ public class PurchaseOrderType {
              */
             public void setQuantityDelivered(JAXBElement<String> value) {
                 this.quantityDelivered = value;
+            }
+
+            /**
+             * Gets the value of the cancelledOrder property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+             *     
+             */
+            public JAXBElement<AUCodeSetsYesOrNoCategoryType> getCancelledOrder() {
+                return cancelledOrder;
+            }
+
+            /**
+             * Sets the value of the cancelledOrder property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+             *     
+             */
+            public void setCancelledOrder(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+                this.cancelledOrder = value;
+            }
+
+            /**
+             * Gets the value of the taxRate property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+             *     
+             */
+            public JAXBElement<BigDecimal> getTaxRate() {
+                return taxRate;
+            }
+
+            /**
+             * Sets the value of the taxRate property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+             *     
+             */
+            public void setTaxRate(JAXBElement<BigDecimal> value) {
+                this.taxRate = value;
             }
 
             /**
@@ -819,9 +937,9 @@ public class PurchaseOrderType {
              *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
              *                 &lt;sequence>
              *                   &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-             *                   &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
-             *                   &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
-             *                   &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+             *                   &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+             *                   &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+             *                   &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
              *                 &lt;/sequence>
              *               &lt;/restriction>
              *             &lt;/complexContent>
@@ -841,7 +959,7 @@ public class PurchaseOrderType {
             })
             public static class ExpenseAccounts {
 
-                @XmlElementRef(name = "ExpenseAccount", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "ExpenseAccount", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
                 protected JAXBElement<PurchaseOrderType.PurchasingItems.PurchasingItem.ExpenseAccounts.ExpenseAccount> expenseAccount;
 
                 /**
@@ -880,9 +998,9 @@ public class PurchaseOrderType {
                  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
                  *       &lt;sequence>
                  *         &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
-                 *         &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/1.4}MonetaryAmountType" minOccurs="0"/>
-                 *         &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
-                 *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/1.4}LocalIdType" minOccurs="0"/>
+                 *         &lt;element name="Amount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+                 *         &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+                 *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
                  *       &lt;/sequence>
                  *     &lt;/restriction>
                  *   &lt;/complexContent>
@@ -900,15 +1018,15 @@ public class PurchaseOrderType {
                 })
                 public static class ExpenseAccount {
 
-                    @XmlElement(name = "AccountCode", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+                    @XmlElement(name = "AccountCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
                     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
                     @XmlSchemaType(name = "token")
                     protected String accountCode;
-                    @XmlElement(name = "Amount", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+                    @XmlElement(name = "Amount", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
                     protected MonetaryAmountType amount;
-                    @XmlElementRef(name = "FinancialAccountRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "FinancialAccountRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
                     protected JAXBElement<String> financialAccountRefId;
-                    @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
                     protected JAXBElement<String> accountingPeriod;
 
                     /**

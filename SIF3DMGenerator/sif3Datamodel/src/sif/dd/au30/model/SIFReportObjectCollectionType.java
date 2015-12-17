@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SIF_ReportObject" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ReportObjectType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SIF_ReportObject" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ReportObjectType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SIF_ReportObjectCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "SIF_ReportObjectCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "sifReportObject"
 })
 public class SIFReportObjectCollectionType {
 
-    @XmlElement(name = "SIF_ReportObject", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "SIF_ReportObject", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected List<SIFReportObjectType> sifReportObject;
 
     /**

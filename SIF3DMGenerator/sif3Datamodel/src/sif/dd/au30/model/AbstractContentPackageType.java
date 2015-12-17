@@ -59,7 +59,7 @@ import org.w3c.dom.Element;
  *           &lt;element name="BinaryData">
  *             &lt;complexType>
  *               &lt;simpleContent>
- *                 &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>XSBase64BinaryOrEmpty">
+ *                 &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSBase64BinaryOrEmpty">
  *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -82,7 +82,7 @@ import org.w3c.dom.Element;
  *           &lt;/element>
  *         &lt;/choice>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -91,7 +91,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbstractContentPackageType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "AbstractContentPackageType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "xmlData",
     "textData",
     "binaryData",
@@ -103,13 +103,13 @@ import org.w3c.dom.Element;
 })
 public class AbstractContentPackageType {
 
-    @XmlElement(name = "XMLData", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "XMLData", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected AbstractContentPackageType.XMLData xmlData;
-    @XmlElement(name = "TextData", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "TextData", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected AbstractContentPackageType.TextData textData;
-    @XmlElement(name = "BinaryData", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "BinaryData", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected AbstractContentPackageType.BinaryData binaryData;
-    @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected AbstractContentPackageType.Reference reference;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -244,7 +244,7 @@ public class AbstractContentPackageType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/1.4>XSBase64BinaryOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSBase64BinaryOrEmpty">
      *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -402,7 +402,7 @@ public class AbstractContentPackageType {
     })
     public static class Reference {
 
-        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         @XmlSchemaType(name = "anyURI")
         protected String url;
         @XmlAttribute(name = "MIMEType", required = true)
@@ -666,8 +666,8 @@ public class AbstractContentPackageType {
          * 
          * @return
          *     possible object is
-         *     {@link Element }
          *     {@link Object }
+         *     {@link Element }
          *     
          */
         public Object getAny() {
@@ -679,8 +679,8 @@ public class AbstractContentPackageType {
          * 
          * @param value
          *     allowed object is
-         *     {@link Element }
          *     {@link Object }
+         *     {@link Element }
          *     
          */
         public void setAny(Object value) {

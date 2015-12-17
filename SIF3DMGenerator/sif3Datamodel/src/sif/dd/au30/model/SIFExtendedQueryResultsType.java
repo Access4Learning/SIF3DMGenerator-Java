@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                     &lt;complexType>
  *                       &lt;simpleContent>
  *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
- *                           &lt;attribute name="ObjectName" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}ObjectNameType" />
+ *                           &lt;attribute name="ObjectName" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}ObjectNameType" />
  *                           &lt;attribute name="Alias">
  *                             &lt;simpleType>
  *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}normalizedString">
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element name="C" type="{http://www.sifassociation.org/au/datamodel/1.4}SelectedContentType" maxOccurs="unbounded"/>
+ *                             &lt;element name="C" type="{http://www.sifassociation.org/au/datamodel/3.4}SelectedContentType" maxOccurs="unbounded"/>
  *                           &lt;/sequence>
  *                         &lt;/restriction>
  *                       &lt;/complexContent>
@@ -86,15 +86,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SIF_ExtendedQueryResultsType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "SIF_ExtendedQueryResultsType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "sifColumnHeaders",
     "sifRows"
 })
 public class SIFExtendedQueryResultsType {
 
-    @XmlElement(name = "SIF_ColumnHeaders", namespace = "http://www.sifassociation.org/au/datamodel/1.4", required = true)
+    @XmlElement(name = "SIF_ColumnHeaders", namespace = "http://www.sifassociation.org/au/datamodel/3.4", required = true)
     protected SIFExtendedQueryResultsType.SIFColumnHeaders sifColumnHeaders;
-    @XmlElement(name = "SIF_Rows", namespace = "http://www.sifassociation.org/au/datamodel/1.4", required = true)
+    @XmlElement(name = "SIF_Rows", namespace = "http://www.sifassociation.org/au/datamodel/3.4", required = true)
     protected SIFExtendedQueryResultsType.SIFRows sifRows;
 
     /**
@@ -160,7 +160,7 @@ public class SIFExtendedQueryResultsType {
      *           &lt;complexType>
      *             &lt;simpleContent>
      *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-     *                 &lt;attribute name="ObjectName" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}ObjectNameType" />
+     *                 &lt;attribute name="ObjectName" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}ObjectNameType" />
      *                 &lt;attribute name="Alias">
      *                   &lt;simpleType>
      *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}normalizedString">
@@ -186,7 +186,7 @@ public class SIFExtendedQueryResultsType {
     })
     public static class SIFColumnHeaders {
 
-        @XmlElement(name = "SIF_Element", namespace = "http://www.sifassociation.org/au/datamodel/1.4", required = true)
+        @XmlElement(name = "SIF_Element", namespace = "http://www.sifassociation.org/au/datamodel/3.4", required = true)
         protected List<SIFExtendedQueryResultsType.SIFColumnHeaders.SIFElement> sifElement;
 
         /**
@@ -228,7 +228,7 @@ public class SIFExtendedQueryResultsType {
          * &lt;complexType>
          *   &lt;simpleContent>
          *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-         *       &lt;attribute name="ObjectName" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}ObjectNameType" />
+         *       &lt;attribute name="ObjectName" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}ObjectNameType" />
          *       &lt;attribute name="Alias">
          *         &lt;simpleType>
          *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}normalizedString">
@@ -352,7 +352,7 @@ public class SIFExtendedQueryResultsType {
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element name="C" type="{http://www.sifassociation.org/au/datamodel/1.4}SelectedContentType" maxOccurs="unbounded"/>
+     *                   &lt;element name="C" type="{http://www.sifassociation.org/au/datamodel/3.4}SelectedContentType" maxOccurs="unbounded"/>
      *                 &lt;/sequence>
      *               &lt;/restriction>
      *             &lt;/complexContent>
@@ -372,7 +372,7 @@ public class SIFExtendedQueryResultsType {
     })
     public static class SIFRows {
 
-        @XmlElement(name = "R", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "R", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         protected List<SIFExtendedQueryResultsType.SIFRows.R> r;
 
         /**
@@ -415,7 +415,7 @@ public class SIFExtendedQueryResultsType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element name="C" type="{http://www.sifassociation.org/au/datamodel/1.4}SelectedContentType" maxOccurs="unbounded"/>
+         *         &lt;element name="C" type="{http://www.sifassociation.org/au/datamodel/3.4}SelectedContentType" maxOccurs="unbounded"/>
          *       &lt;/sequence>
          *     &lt;/restriction>
          *   &lt;/complexContent>
@@ -430,7 +430,7 @@ public class SIFExtendedQueryResultsType {
         })
         public static class R {
 
-            @XmlElement(name = "C", namespace = "http://www.sifassociation.org/au/datamodel/1.4", required = true)
+            @XmlElement(name = "C", namespace = "http://www.sifassociation.org/au/datamodel/3.4", required = true)
             protected List<SelectedContentType> c;
 
             /**

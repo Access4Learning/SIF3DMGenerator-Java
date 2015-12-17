@@ -33,12 +33,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Specif"/>
  *     &lt;enumeration value="Supp"/>
  *     &lt;enumeration value="Unknown"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSchoolLevelType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsSchoolLevelType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsSchoolLevelType {
 
@@ -173,7 +174,13 @@ public enum AUCodeSetsSchoolLevelType {
      * 
      */
     @XmlEnumValue("Unknown")
-    UNKNOWN("Unknown");
+    UNKNOWN("Unknown"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsSchoolLevelType(String v) {

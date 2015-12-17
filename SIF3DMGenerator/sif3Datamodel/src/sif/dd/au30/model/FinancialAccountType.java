@@ -29,18 +29,27 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubAccountRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SubAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="AccountNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="FinancialClassificationRefId" type="{http://www.sifassociation.org/au/datamodel/1.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="ClassType" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *               &lt;enumeration value="Asset"/>
+ *               &lt;enumeration value="Liability"/>
+ *               &lt;enumeration value="Revenue"/>
+ *               &lt;enumeration value="Expense"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="CreationTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -49,13 +58,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FinancialAccountType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "FinancialAccountType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "subAccountRefId",
     "chargedLocationInfoRefId",
     "accountNumber",
     "name",
     "description",
-    "financialClassificationRefId",
+    "classType",
     "creationDate",
     "creationTime",
     "sifMetadata",
@@ -63,32 +72,32 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class FinancialAccountType {
 
-    @XmlElementRef(name = "SubAccountRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SubAccountRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> subAccountRefId;
-    @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> chargedLocationInfoRefId;
-    @XmlElement(name = "AccountNumber", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "AccountNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String accountNumber;
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String name;
-    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "FinancialClassificationRefId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "ClassType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String financialClassificationRefId;
-    @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    protected String classType;
+    @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar creationDate;
-    @XmlElement(name = "CreationTime", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "CreationTime", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar creationTime;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -215,27 +224,27 @@ public class FinancialAccountType {
     }
 
     /**
-     * Gets the value of the financialClassificationRefId property.
+     * Gets the value of the classType property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getFinancialClassificationRefId() {
-        return financialClassificationRefId;
+    public String getClassType() {
+        return classType;
     }
 
     /**
-     * Sets the value of the financialClassificationRefId property.
+     * Sets the value of the classType property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setFinancialClassificationRefId(String value) {
-        this.financialClassificationRefId = value;
+    public void setClassType(String value) {
+        this.classType = value;
     }
 
     /**

@@ -56,12 +56,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OtherCodeListType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "OtherCodeListType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "otherCode"
 })
 public class OtherCodeListType {
 
-    @XmlElement(name = "OtherCode", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "OtherCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected List<OtherCodeListType.OtherCode> otherCode;
 
     /**

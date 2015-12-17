@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                               &lt;complexType>
  *                                 &lt;simpleContent>
  *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>token">
- *                                     &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+ *                                     &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
  *                                   &lt;/extension>
  *                                 &lt;/simpleContent>
  *                               &lt;/complexType>
@@ -107,7 +107,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                               &lt;/complexType>
  *                             &lt;/element>
  *                           &lt;/sequence>
- *                           &lt;attribute name="FromScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+ *                           &lt;attribute name="FromScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
  *                         &lt;/restriction>
  *                       &lt;/complexContent>
  *                     &lt;/complexType>
@@ -117,10 +117,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -129,7 +129,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Sif3AssessmentScoreTableType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "Sif3AssessmentScoreTableType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "scoreTableVersion",
     "scoreTablePublishDate",
     "scoreTableIdentifiers",
@@ -140,21 +140,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class Sif3AssessmentScoreTableType {
 
-    @XmlElementRef(name = "ScoreTableVersion", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ScoreTableVersion", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> scoreTableVersion;
-    @XmlElementRef(name = "ScoreTablePublishDate", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ScoreTablePublishDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> scoreTablePublishDate;
-    @XmlElementRef(name = "ScoreTableIdentifiers", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ScoreTableIdentifiers", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Sif3AssessmentScoreTableType.ScoreTableIdentifiers> scoreTableIdentifiers;
-    @XmlElement(name = "ScoreTableName", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "ScoreTableName", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String scoreTableName;
-    @XmlElementRef(name = "ScoreValues", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ScoreValues", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Sif3AssessmentScoreTableType.ScoreValues> scoreValues;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -395,7 +395,7 @@ public class Sif3AssessmentScoreTableType {
     })
     public static class ScoreTableIdentifiers {
 
-        @XmlElement(name = "ScoreTableIdentifier", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "ScoreTableIdentifier", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         protected List<Sif3AssessmentScoreTableType.ScoreTableIdentifiers.ScoreTableIdentifier> scoreTableIdentifier;
 
         /**
@@ -542,7 +542,7 @@ public class Sif3AssessmentScoreTableType {
      *                     &lt;complexType>
      *                       &lt;simpleContent>
      *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>token">
-     *                           &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+     *                           &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
      *                         &lt;/extension>
      *                       &lt;/simpleContent>
      *                     &lt;/complexType>
@@ -572,7 +572,7 @@ public class Sif3AssessmentScoreTableType {
      *                     &lt;/complexType>
      *                   &lt;/element>
      *                 &lt;/sequence>
-     *                 &lt;attribute name="FromScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+     *                 &lt;attribute name="FromScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
      *               &lt;/restriction>
      *             &lt;/complexContent>
      *           &lt;/complexType>
@@ -591,7 +591,7 @@ public class Sif3AssessmentScoreTableType {
     })
     public static class ScoreValues {
 
-        @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         protected List<Sif3AssessmentScoreTableType.ScoreValues.ScoreValue> scoreValue;
 
         /**
@@ -640,7 +640,7 @@ public class Sif3AssessmentScoreTableType {
          *           &lt;complexType>
          *             &lt;simpleContent>
          *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>token">
-         *                 &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+         *                 &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
          *               &lt;/extension>
          *             &lt;/simpleContent>
          *           &lt;/complexType>
@@ -670,7 +670,7 @@ public class Sif3AssessmentScoreTableType {
          *           &lt;/complexType>
          *         &lt;/element>
          *       &lt;/sequence>
-         *       &lt;attribute name="FromScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+         *       &lt;attribute name="FromScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
          *     &lt;/restriction>
          *   &lt;/complexContent>
          * &lt;/complexType>
@@ -688,19 +688,19 @@ public class Sif3AssessmentScoreTableType {
         })
         public static class ScoreValue {
 
-            @XmlElement(name = "LowerCut", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+            @XmlElement(name = "LowerCut", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
             @XmlSchemaType(name = "token")
             protected String lowerCut;
-            @XmlElement(name = "UpperCut", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+            @XmlElement(name = "UpperCut", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
             @XmlSchemaType(name = "token")
             protected String upperCut;
-            @XmlElement(name = "DerivedValue", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+            @XmlElement(name = "DerivedValue", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
             protected Sif3AssessmentScoreTableType.ScoreValues.ScoreValue.DerivedValue derivedValue;
-            @XmlElementRef(name = "PassFailIndicator", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "PassFailIndicator", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> passFailIndicator;
-            @XmlElementRef(name = "FeedbackList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "FeedbackList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<Sif3AssessmentScoreTableType.ScoreValues.ScoreValue.FeedbackList> feedbackList;
             @XmlAttribute(name = "FromScoreMetric", required = true)
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -860,7 +860,7 @@ public class Sif3AssessmentScoreTableType {
              * &lt;complexType>
              *   &lt;simpleContent>
              *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>token">
-             *       &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsAssessmentReportingMethodType" />
+             *       &lt;attribute name="ToScoreMetric" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAssessmentReportingMethodType" />
              *     &lt;/extension>
              *   &lt;/simpleContent>
              * &lt;/complexType>
@@ -970,7 +970,7 @@ public class Sif3AssessmentScoreTableType {
             })
             public static class FeedbackList {
 
-                @XmlElement(name = "Feedback", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+                @XmlElement(name = "Feedback", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
                 protected List<Sif3AssessmentScoreTableType.ScoreValues.ScoreValue.FeedbackList.Feedback> feedback;
 
                 /**
@@ -1032,11 +1032,11 @@ public class Sif3AssessmentScoreTableType {
                 })
                 public static class Feedback {
 
-                    @XmlElement(name = "DiagnosticStatement", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+                    @XmlElement(name = "DiagnosticStatement", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
                     protected String diagnosticStatement;
-                    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
                     protected JAXBElement<String> description;
-                    @XmlElementRef(name = "Source", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "Source", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
                     protected JAXBElement<String> source;
 
                     /**

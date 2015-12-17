@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for StudentCollectionType complex type.
+ * <p>Java class for SchoolInfoCollectionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="StudentCollectionType">
+ * &lt;complexType name="SchoolInfoCollectionType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonal" type="{http://www.sifassociation.org/au/datamodel/1.4}StudentPersonalType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SchoolInfo" type="{http://www.sifassociation.org/au/datamodel/3.4}SchoolInfoType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
-    "studentPersonal"
+@XmlType(name = "SchoolInfoCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+    "schoolInfo"
 })
-public class StudentCollectionType {
+public class SchoolInfoCollectionType {
 
-    @XmlElement(name = "StudentPersonal", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
-    protected List<StudentPersonalType> studentPersonal;
+    @XmlElement(name = "SchoolInfo", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    protected List<SchoolInfoType> schoolInfo;
 
     /**
-     * Gets the value of the studentPersonal property.
+     * Gets the value of the schoolInfo property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the studentPersonal property.
+     * This is why there is not a <CODE>set</CODE> method for the schoolInfo property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getStudentPersonal().add(newItem);
+     *    getSchoolInfo().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link StudentPersonalType }
+     * {@link SchoolInfoType }
      * 
      * 
      */
-    public List<StudentPersonalType> getStudentPersonal() {
-        if (studentPersonal == null) {
-            studentPersonal = new ArrayList<StudentPersonalType>();
+    public List<SchoolInfoType> getSchoolInfo() {
+        if (schoolInfo == null) {
+            schoolInfo = new ArrayList<SchoolInfoType>();
         }
-        return this.studentPersonal;
+        return this.schoolInfo;
     }
 
 }

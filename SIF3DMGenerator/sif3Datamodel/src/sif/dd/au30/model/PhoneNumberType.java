@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
@@ -29,9 +28,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="Number" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Extension" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ListedStatus" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ListedStatus" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsTelephoneNumberTypeType" />
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsTelephoneNumberTypeType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -40,23 +39,20 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhoneNumberType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "PhoneNumberType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "number",
     "extension",
     "listedStatus"
 })
-@XmlSeeAlso({
-    sif.dd.au30.model.PhoneNumberListType.PhoneNumber.class
-})
 public class PhoneNumberType {
 
-    @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String number;
-    @XmlElementRef(name = "Extension", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Extension", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> extension;
-    @XmlElementRef(name = "ListedStatus", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ListedStatus", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> listedStatus;
     @XmlAttribute(name = "Type", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

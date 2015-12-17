@@ -17,12 +17,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Normal"/>
  *     &lt;enumeration value="MinimalSupervision"/>
  *     &lt;enumeration value="MergedClass"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsTeacherCoverSupervisionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsTeacherCoverSupervisionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsTeacherCoverSupervisionType {
 
@@ -46,7 +47,13 @@ public enum AUCodeSetsTeacherCoverSupervisionType {
      * 
      */
     @XmlEnumValue("MergedClass")
-    MERGED_CLASS("MergedClass");
+    MERGED_CLASS("MergedClass"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsTeacherCoverSupervisionType(String v) {

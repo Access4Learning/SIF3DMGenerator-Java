@@ -18,12 +18,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Extra"/>
  *     &lt;enumeration value="Underload"/>
  *     &lt;enumeration value="Casual"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsTeacherCoverCreditType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsTeacherCoverCreditType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsTeacherCoverCreditType {
 
@@ -54,7 +55,13 @@ public enum AUCodeSetsTeacherCoverCreditType {
      * 
      */
     @XmlEnumValue("Casual")
-    CASUAL("Casual");
+    CASUAL("Casual"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsTeacherCoverCreditType(String v) {

@@ -17,12 +17,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="U"/>
  *     &lt;enumeration value="X"/>
  *     &lt;enumeration value="Y"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsYesOrNoCategoryType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsYesOrNoCategoryType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsYesOrNoCategoryType {
 
@@ -49,7 +50,13 @@ public enum AUCodeSetsYesOrNoCategoryType {
      * Yes
      * 
      */
-    Y;
+    Y,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

@@ -21,12 +21,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="SlideProjector"/>
  *     &lt;enumeration value="Vehicle"/>
  *     &lt;enumeration value="Other"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsEquipmentTypeType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsEquipmentTypeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsEquipmentTypeType {
 
@@ -78,7 +79,13 @@ public enum AUCodeSetsEquipmentTypeType {
      * 
      */
     @XmlEnumValue("Other")
-    OTHER("Other");
+    OTHER("Other"),
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED("ZZREDACTED");
     private final String value;
 
     AUCodeSetsEquipmentTypeType(String v) {

@@ -22,12 +22,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="VIC"/>
  *     &lt;enumeration value="WA"/>
  *     &lt;enumeration value="XXX"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsStateTerritoryCodeType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsStateTerritoryCodeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsStateTerritoryCodeType {
 
@@ -84,7 +85,13 @@ public enum AUCodeSetsStateTerritoryCodeType {
      * Not Provided
      * 
      */
-    XXX;
+    XXX,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

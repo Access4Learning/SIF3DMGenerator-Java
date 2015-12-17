@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/1.4}OtherCodeListType" minOccurs="0"/>
+ *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -44,16 +44,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ProgramStatusType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "ProgramStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "code",
     "otherCodeList"
 })
 public class ProgramStatusType {
 
-    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String code;
-    @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherCodeListType> otherCodeList;
 
     /**

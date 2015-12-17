@@ -31,9 +31,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}LocalId" minOccurs="0"/>
- *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/au/datamodel/1.4}StateProvinceIdType" minOccurs="0"/>
- *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/au/datamodel/1.4}ElectronicIdListType" minOccurs="0"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}LocalId" minOccurs="0"/>
+ *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/au/datamodel/3.4}StateProvinceIdType" minOccurs="0"/>
+ *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/au/datamodel/3.4}ElectronicIdListType" minOccurs="0"/>
  *         &lt;element name="OtherIdList" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -53,13 +53,38 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/1.4}PersonInfo" minOccurs="0"/>
+ *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}PersonInfo" minOccurs="0"/>
  *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="EmploymentStatus" type="{http://www.sifassociation.org/au/datamodel/1.4}AUCodeSetsStaffStatusType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/1.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="EmploymentStatus" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsStaffStatusType" minOccurs="0"/>
+ *         &lt;element name="MostRecent" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+ *                   &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+ *                   &lt;element name="LocalCampusId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+ *                   &lt;element name="NAPLANClassList" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="ClassCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="HomeGroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/1.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -68,7 +93,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StaffPersonalType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "StaffPersonalType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "localId",
     "stateProvinceId",
     "electronicIdList",
@@ -76,29 +101,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "personInfo",
     "title",
     "employmentStatus",
+    "mostRecent",
     "sifMetadata",
     "sifExtendedElements"
 })
 public class StaffPersonalType {
 
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
-    @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ElectronicIdListType> electronicIdList;
-    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StaffPersonalType.OtherIdList> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected PersonInfoType personInfo;
-    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> title;
-    @XmlElementRef(name = "EmploymentStatus", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmploymentStatus", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsStaffStatusType> employmentStatus;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MostRecent", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StaffPersonalType.MostRecent> mostRecent;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/1.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -273,6 +301,30 @@ public class StaffPersonalType {
     }
 
     /**
+     * Gets the value of the mostRecent property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link StaffPersonalType.MostRecent }{@code >}
+     *     
+     */
+    public JAXBElement<StaffPersonalType.MostRecent> getMostRecent() {
+        return mostRecent;
+    }
+
+    /**
+     * Sets the value of the mostRecent property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link StaffPersonalType.MostRecent }{@code >}
+     *     
+     */
+    public void setMostRecent(JAXBElement<StaffPersonalType.MostRecent> value) {
+        this.mostRecent = value;
+    }
+
+    /**
      * Gets the value of the sifMetadata property.
      * 
      * @return
@@ -355,6 +407,245 @@ public class StaffPersonalType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
+     *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+     *         &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+     *         &lt;element name="LocalCampusId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+     *         &lt;element name="NAPLANClassList" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="ClassCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="HomeGroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "schoolLocalId",
+        "schoolACARAId",
+        "localCampusId",
+        "naplanClassList",
+        "homeGroup"
+    })
+    public static class MostRecent {
+
+        @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        protected JAXBElement<String> schoolLocalId;
+        @XmlElementRef(name = "SchoolACARAId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        protected JAXBElement<String> schoolACARAId;
+        @XmlElementRef(name = "LocalCampusId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        protected JAXBElement<String> localCampusId;
+        @XmlElementRef(name = "NAPLANClassList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        protected JAXBElement<StaffPersonalType.MostRecent.NAPLANClassList> naplanClassList;
+        @XmlElementRef(name = "HomeGroup", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        protected JAXBElement<String> homeGroup;
+
+        /**
+         * Gets the value of the schoolLocalId property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public JAXBElement<String> getSchoolLocalId() {
+            return schoolLocalId;
+        }
+
+        /**
+         * Sets the value of the schoolLocalId property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public void setSchoolLocalId(JAXBElement<String> value) {
+            this.schoolLocalId = value;
+        }
+
+        /**
+         * Gets the value of the schoolACARAId property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public JAXBElement<String> getSchoolACARAId() {
+            return schoolACARAId;
+        }
+
+        /**
+         * Sets the value of the schoolACARAId property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public void setSchoolACARAId(JAXBElement<String> value) {
+            this.schoolACARAId = value;
+        }
+
+        /**
+         * Gets the value of the localCampusId property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public JAXBElement<String> getLocalCampusId() {
+            return localCampusId;
+        }
+
+        /**
+         * Sets the value of the localCampusId property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public void setLocalCampusId(JAXBElement<String> value) {
+            this.localCampusId = value;
+        }
+
+        /**
+         * Gets the value of the naplanClassList property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link StaffPersonalType.MostRecent.NAPLANClassList }{@code >}
+         *     
+         */
+        public JAXBElement<StaffPersonalType.MostRecent.NAPLANClassList> getNAPLANClassList() {
+            return naplanClassList;
+        }
+
+        /**
+         * Sets the value of the naplanClassList property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link StaffPersonalType.MostRecent.NAPLANClassList }{@code >}
+         *     
+         */
+        public void setNAPLANClassList(JAXBElement<StaffPersonalType.MostRecent.NAPLANClassList> value) {
+            this.naplanClassList = value;
+        }
+
+        /**
+         * Gets the value of the homeGroup property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public JAXBElement<String> getHomeGroup() {
+            return homeGroup;
+        }
+
+        /**
+         * Sets the value of the homeGroup property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
+         */
+        public void setHomeGroup(JAXBElement<String> value) {
+            this.homeGroup = value;
+        }
+
+
+        /**
+         * <p>Java class for anonymous complex type.
+         * 
+         * <p>The following schema fragment specifies the expected content contained within this class.
+         * 
+         * <pre>
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="ClassCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
+         * </pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {
+            "classCode"
+        })
+        public static class NAPLANClassList {
+
+            @XmlElement(name = "ClassCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+            @XmlSchemaType(name = "normalizedString")
+            protected List<String> classCode;
+
+            /**
+             * Gets the value of the classCode property.
+             * 
+             * <p>
+             * This accessor method returns a reference to the live list,
+             * not a snapshot. Therefore any modification you make to the
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the classCode property.
+             * 
+             * <p>
+             * For example, to add a new item, do as follows:
+             * <pre>
+             *    getClassCode().add(newItem);
+             * </pre>
+             * 
+             * 
+             * <p>
+             * Objects of the following type(s) are allowed in the list
+             * {@link String }
+             * 
+             * 
+             */
+            public List<String> getClassCode() {
+                if (classCode == null) {
+                    classCode = new ArrayList<String>();
+                }
+                return this.classCode;
+            }
+
+        }
+
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
      *         &lt;element name="OtherId" maxOccurs="unbounded" minOccurs="0">
      *           &lt;complexType>
      *             &lt;simpleContent>
@@ -378,7 +669,7 @@ public class StaffPersonalType {
     })
     public static class OtherIdList {
 
-        @XmlElement(name = "OtherId", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+        @XmlElement(name = "OtherId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
         protected List<StaffPersonalType.OtherIdList.OtherId> otherId;
 
         /**

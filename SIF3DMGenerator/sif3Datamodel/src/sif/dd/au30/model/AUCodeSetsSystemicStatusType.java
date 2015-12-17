@@ -15,12 +15,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="N"/>
  *     &lt;enumeration value="S"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSystemicStatusType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsSystemicStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsSystemicStatusType {
 
@@ -35,7 +36,13 @@ public enum AUCodeSetsSystemicStatusType {
      * Systemic
      * 
      */
-    S;
+    S,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

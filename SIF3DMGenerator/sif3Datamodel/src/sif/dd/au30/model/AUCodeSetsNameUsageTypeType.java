@@ -23,12 +23,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="PRV"/>
  *     &lt;enumeration value="STG"/>
  *     &lt;enumeration value="TRB"/>
+ *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsNameUsageTypeType", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+@XmlType(name = "AUCodeSetsNameUsageTypeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
 @XmlEnum
 public enum AUCodeSetsNameUsageTypeType {
 
@@ -91,7 +92,13 @@ public enum AUCodeSetsNameUsageTypeType {
      * Tribal Name
      * 
      */
-    TRB;
+    TRB,
+
+    /**
+     * REDACTED for privacy
+     * 
+     */
+    ZZREDACTED;
 
     public String value() {
         return name();

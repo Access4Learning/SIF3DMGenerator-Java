@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentScoreSet" type="{http://www.sifassociation.org/au/datamodel/1.4}StudentScoreSetType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="StudentScoreSet" type="{http://www.sifassociation.org/au/datamodel/3.4}StudentScoreSetType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentScoreSetCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/1.4", propOrder = {
+@XmlType(name = "StudentScoreSetCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
     "studentScoreSet"
 })
 public class StudentScoreSetCollectionType {
 
-    @XmlElement(name = "StudentScoreSet", namespace = "http://www.sifassociation.org/au/datamodel/1.4")
+    @XmlElement(name = "StudentScoreSet", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
     protected List<StudentScoreSetType> studentScoreSet;
 
     /**
