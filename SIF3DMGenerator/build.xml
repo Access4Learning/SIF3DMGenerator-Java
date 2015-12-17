@@ -88,6 +88,12 @@
 		</antcall>
 	</target>
 
+	<target name="22-generate-AU34" depends="init" description="Generate POJOs using JAXB">
+		<antcall target="generate-au-pojo">
+			<param name="sifddversion" value="3.4"/>
+		</antcall>
+	</target>
+
 	<target name="generate-au-pojo" depends="init" description="Generate POJOs using JAXB">
 		<echo message="Generate Pojos for Locale AU, Data Model Version ${sifddversion} and Infrastructure 3.x"/>
 		<delete dir="${output.base.dir}/sifau${sifddversion}/src" />
@@ -155,6 +161,14 @@
 		<antcall target="jar-dd">
 			<param name="locale" value="au"/>
 			<param name="sifddversion" value="1.4"/>
+			<param name="srcDir" value="au30"/>
+		</antcall>
+	</target>
+
+	<target name="12-jar-dd-au34" depends="compile-dd" description="Create jar file for SIF AU 3.4">
+		<antcall target="jar-dd">
+			<param name="locale" value="au"/>
+			<param name="sifddversion" value="3.4"/>
 			<param name="srcDir" value="au30"/>
 		</antcall>
 	</target>
