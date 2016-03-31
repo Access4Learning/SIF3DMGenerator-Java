@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="lib/jaxrs/jersey-core-1.17.1.jar"/>
 	<classpathentry kind="lib" path="lib/jaxblib/jaxb-impl.jar"/>
 	<classpathentry kind="lib" path="lib/json/jettison-1.3.3.jar"/>
-	<classpathentry kind="lib" path="lib/sif3common/sif3.1Common-v0.8.0-beta.jar"/>
+	<classpathentry kind="lib" path="lib/sif3common/sif3.1Common-v0.9.0-beta.jar"/>
 	<classpathentry kind="lib" path="lib/systemic/systemic-framework-20160229.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
