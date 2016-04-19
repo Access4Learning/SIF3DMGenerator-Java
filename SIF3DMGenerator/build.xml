@@ -38,6 +38,8 @@
 
 	<!-- print some varaibles -->
 	<target name="00-env" description="Show Ant variables">
+		<echo message="Java/JVM version: ${ant.java.version}"/> 
+		<echo message="Java/JVM detail version: ${java.version}"/> 
 		<echo message="project.basedir: ${project.basedir}"/>
 		<echo message="generator.dir: ${generator.dir}"/>
 		<echo message="output.base.dir: ${output.base.dir}"/>
@@ -202,6 +204,8 @@
 	<!-- ***************************** -->
 	<target name="compile-dd" depends="init">
 		<echo message="Compile: Compile Data dictionary"/>
+		<echo message="Ant uses Java/JVM version: ${ant.java.version}"/> 
+		<echo message="Detailed Java/JVM version: ${java.version}"/> 
 		<javac destdir="${class.dir}" debug="on" verbose="false">
 			<!-- Ensure project jars are first. -->
 			<compilerarg value="-Xbootclasspath/p:${toString:classpath}"/>
