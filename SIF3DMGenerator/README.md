@@ -69,6 +69,10 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 ## Version from September 01, 2016
 - Modifed this README.md file to accurately reflect available data models within this project.
 
+## Version from October 23, 2016
+- Added SIF AU 3.4 XSD (data/input/XSD/sifau30/au3.4 directory) and generated data model classes 
+  for SIF AU 3.4 (sif.dd.au30 package). This represents the officially released SIF AU 3.4 Data Model.
+
 # Download Instructions
 How to download this project:
 
