@@ -1,8 +1,6 @@
 
 package sif.dd.au30.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object contains information about a school district, region, or other Local, State or Jurisdiction Educational Authority.
- * 
  * <p>Java class for LEAInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -28,54 +24,22 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}LocalId" minOccurs="0"/>
- *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/au/datamodel/3.4}StateProvinceIdType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
  *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="LEAName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="LEAURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         &lt;element name="EducationAgencyType" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEducationAgencyTypeType" minOccurs="0"/>
- *                   &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="LEAContactList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LEAContact" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="PublishInDirectory" type="{http://www.sifassociation.org/au/datamodel/3.4}PublishInDirectoryType" minOccurs="0"/>
- *                             &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}ContactInfo" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PhoneNumberList" type="{http://www.sifassociation.org/au/datamodel/3.4}PhoneNumberListType" minOccurs="0"/>
- *         &lt;element name="AddressList" type="{http://www.sifassociation.org/au/datamodel/3.4}AddressListType" minOccurs="0"/>
- *         &lt;element name="OperationalStatus" type="{http://www.sifassociation.org/au/datamodel/3.4}OperationalStatusType" minOccurs="0"/>
+ *         &lt;element name="EducationAgencyType" type="{http://www.sifassociation.org/datamodel/au/3.4}AgencyType" minOccurs="0"/>
+ *         &lt;element name="LEAContactList" type="{http://www.sifassociation.org/datamodel/au/3.4}LEAContactListType" minOccurs="0"/>
+ *         &lt;element name="PhoneNumberList" type="{http://www.sifassociation.org/datamodel/au/3.4}PhoneNumberListType" minOccurs="0"/>
+ *         &lt;element name="AddressList" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressListType" minOccurs="0"/>
+ *         &lt;element name="OperationalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}OperationalStatusType" minOccurs="0"/>
  *         &lt;element name="JurisdictionLowerHouse" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SLA" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardGeographicalClassificationASGCType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SLA" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianStandardGeographicalClassificationASGCType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -84,7 +48,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LEAInfoType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "LEAInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "localId",
     "stateProvinceId",
     "commonwealthId",
@@ -102,36 +66,36 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class LEAInfoType {
 
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
-    @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> commonwealthId;
-    @XmlElement(name = "LEAName", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "LEAName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String leaName;
-    @XmlElementRef(name = "LEAURL", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LEAURL", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> leaurl;
-    @XmlElementRef(name = "EducationAgencyType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LEAInfoType.EducationAgencyType> educationAgencyType;
-    @XmlElementRef(name = "LEAContactList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LEAInfoType.LEAContactList> leaContactList;
-    @XmlElementRef(name = "PhoneNumberList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EducationAgencyType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AgencyType> educationAgencyType;
+    @XmlElementRef(name = "LEAContactList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LEAContactListType> leaContactList;
+    @XmlElementRef(name = "PhoneNumberList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<PhoneNumberListType> phoneNumberList;
-    @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressListType> addressList;
-    @XmlElementRef(name = "OperationalStatus", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OperationalStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsOperationalStatusType> operationalStatus;
-    @XmlElementRef(name = "JurisdictionLowerHouse", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "JurisdictionLowerHouse", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> jurisdictionLowerHouse;
-    @XmlElementRef(name = "SLA", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SLA", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> sla;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -262,10 +226,10 @@ public class LEAInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LEAInfoType.EducationAgencyType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AgencyType }{@code >}
      *     
      */
-    public JAXBElement<LEAInfoType.EducationAgencyType> getEducationAgencyType() {
+    public JAXBElement<AgencyType> getEducationAgencyType() {
         return educationAgencyType;
     }
 
@@ -274,10 +238,10 @@ public class LEAInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LEAInfoType.EducationAgencyType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AgencyType }{@code >}
      *     
      */
-    public void setEducationAgencyType(JAXBElement<LEAInfoType.EducationAgencyType> value) {
+    public void setEducationAgencyType(JAXBElement<AgencyType> value) {
         this.educationAgencyType = value;
     }
 
@@ -286,10 +250,10 @@ public class LEAInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LEAInfoType.LEAContactList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LEAContactListType }{@code >}
      *     
      */
-    public JAXBElement<LEAInfoType.LEAContactList> getLEAContactList() {
+    public JAXBElement<LEAContactListType> getLEAContactList() {
         return leaContactList;
     }
 
@@ -298,10 +262,10 @@ public class LEAInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LEAInfoType.LEAContactList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LEAContactListType }{@code >}
      *     
      */
-    public void setLEAContactList(JAXBElement<LEAInfoType.LEAContactList> value) {
+    public void setLEAContactList(JAXBElement<LEAContactListType> value) {
         this.leaContactList = value;
     }
 
@@ -495,244 +459,6 @@ public class LEAInfoType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEducationAgencyTypeType" minOccurs="0"/>
-     *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "code",
-        "otherCodeList"
-    })
-    public static class EducationAgencyType {
-
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String code;
-        @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<OtherCodeListType> otherCodeList;
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        /**
-         * Gets the value of the otherCodeList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public JAXBElement<OtherCodeListType> getOtherCodeList() {
-            return otherCodeList;
-        }
-
-        /**
-         * Sets the value of the otherCodeList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
-            this.otherCodeList = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="LEAContact" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="PublishInDirectory" type="{http://www.sifassociation.org/au/datamodel/3.4}PublishInDirectoryType" minOccurs="0"/>
-     *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}ContactInfo" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "leaContact"
-    })
-    public static class LEAContactList {
-
-        @XmlElement(name = "LEAContact", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<LEAInfoType.LEAContactList.LEAContact> leaContact;
-
-        /**
-         * Gets the value of the leaContact property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the leaContact property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getLEAContact().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link LEAInfoType.LEAContactList.LEAContact }
-         * 
-         * 
-         */
-        public List<LEAInfoType.LEAContactList.LEAContact> getLEAContact() {
-            if (leaContact == null) {
-                leaContact = new ArrayList<LEAInfoType.LEAContactList.LEAContact>();
-            }
-            return this.leaContact;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="PublishInDirectory" type="{http://www.sifassociation.org/au/datamodel/3.4}PublishInDirectoryType" minOccurs="0"/>
-         *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}ContactInfo" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "publishInDirectory",
-            "contactInfo"
-        })
-        public static class LEAContact {
-
-            @XmlElementRef(name = "PublishInDirectory", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<AUCodeSetsYesOrNoCategoryType> publishInDirectory;
-            @XmlElement(name = "ContactInfo", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            protected ContactInfoType contactInfo;
-
-            /**
-             * Gets the value of the publishInDirectory property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
-             *     
-             */
-            public JAXBElement<AUCodeSetsYesOrNoCategoryType> getPublishInDirectory() {
-                return publishInDirectory;
-            }
-
-            /**
-             * Sets the value of the publishInDirectory property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
-             *     
-             */
-            public void setPublishInDirectory(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
-                this.publishInDirectory = value;
-            }
-
-            /**
-             * Gets the value of the contactInfo property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link ContactInfoType }
-             *     
-             */
-            public ContactInfoType getContactInfo() {
-                return contactInfo;
-            }
-
-            /**
-             * Sets the value of the contactInfo property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link ContactInfoType }
-             *     
-             */
-            public void setContactInfo(ContactInfoType value) {
-                this.contactInfo = value;
-            }
-
-        }
-
     }
 
 }

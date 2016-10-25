@@ -31,92 +31,32 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsScheduledActivityTypeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsScheduledActivityTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsScheduledActivityTypeType {
 
-
-    /**
-     * Yard duty (cyclical)
-     * 
-     */
     @XmlEnumValue("Duty")
     DUTY("Duty"),
-
-    /**
-     * Classroom teaching (cyclical)
-     * 
-     */
     @XmlEnumValue("TeachingClass")
     TEACHING_CLASS("TeachingClass"),
-
-    /**
-     * Supervised study for students with gaps in their timetables (cyclical)
-     * 
-     */
     @XmlEnumValue("Study")
     STUDY("Study"),
-
-    /**
-     * Morning roll-call (cyclical)
-     * 
-     */
     @XmlEnumValue("RollClass")
     ROLL_CLASS("RollClass"),
-
-    /**
-     * Rostered Time Off (cyclical)
-     * 
-     */
     @XmlEnumValue("RosteredTimeOff")
     ROSTERED_TIME_OFF("RosteredTimeOff"),
-
-    /**
-     * Staff Meeting (cyclical)
-     * 
-     */
     @XmlEnumValue("StaffMeeting")
     STAFF_MEETING("StaffMeeting"),
-
-    /**
-     * Music, sport, chess club etc (cyclical)
-     * 
-     */
     @XmlEnumValue("ExtraCurricular")
     EXTRA_CURRICULAR("ExtraCurricular"),
-
-    /**
-     * Excursion (one-off)
-     * 
-     */
     @XmlEnumValue("Excursion")
     EXCURSION("Excursion"),
-
-    /**
-     * Excursion held on campus (one-off)
-     * 
-     */
     @XmlEnumValue("Incursion")
     INCURSION("Incursion"),
-
-    /**
-     * Exam (one-off)
-     * 
-     */
     @XmlEnumValue("Exam")
     EXAM("Exam"),
-
-    /**
-     * Anything else (one-off)
-     * 
-     */
     @XmlEnumValue("Event")
     EVENT("Event"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

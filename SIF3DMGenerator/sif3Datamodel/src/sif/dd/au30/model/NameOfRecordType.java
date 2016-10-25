@@ -10,11 +10,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Extends BaseNameType to allow for one Type attribute value, indicating the name is the name of record;
- *         serves as the primary name in some SIF objects, including StudentPersonal.
- *       
- * 
  * <p>Java class for NameOfRecordType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +17,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <pre>
  * &lt;complexType name="NameOfRecordType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/3.4}BaseNameType">
+ *     &lt;extension base="{http://www.sifassociation.org/datamodel/au/3.4}BaseNameType">
  *       &lt;attribute name="Type" use="required">
  *         &lt;simpleType>
  *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -38,7 +33,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NameOfRecordType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "NameOfRecordType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 public class NameOfRecordType
     extends BaseNameType
 {

@@ -1,27 +1,18 @@
 
 package sif.dd.au30.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *       This object contains information about the people who are referenced as student contacts.
- *     
- * 
  * <p>Java class for StudentContactPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -31,34 +22,16 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="OtherIdList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="OtherId" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
- *                           &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}PersonInfo" minOccurs="0"/>
- *         &lt;element name="EmploymentType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
- *         &lt;element name="SchoolEducationalLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}EducationalLevelType" minOccurs="0"/>
- *         &lt;element name="NonSchoolEducation" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
+ *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
+ *         &lt;element name="EmploymentType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
+ *         &lt;element name="SchoolEducationalLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}EducationalLevelType" minOccurs="0"/>
+ *         &lt;element name="NonSchoolEducation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -67,7 +40,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentContactPersonalType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "StudentContactPersonalType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "localId",
     "otherIdList",
     "personInfo",
@@ -79,21 +52,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentContactPersonalType {
 
-    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> localId;
-    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentContactPersonalType.OtherIdList> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<OtherIdListType> otherIdList;
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonInfoType personInfo;
-    @XmlElementRef(name = "EmploymentType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmploymentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> employmentType;
-    @XmlElementRef(name = "SchoolEducationalLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolEducationalLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolEducationalLevel;
-    @XmlElementRef(name = "NonSchoolEducation", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "NonSchoolEducation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> nonSchoolEducation;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -128,10 +101,10 @@ public class StudentContactPersonalType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StudentContactPersonalType.OtherIdList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}
      *     
      */
-    public JAXBElement<StudentContactPersonalType.OtherIdList> getOtherIdList() {
+    public JAXBElement<OtherIdListType> getOtherIdList() {
         return otherIdList;
     }
 
@@ -140,10 +113,10 @@ public class StudentContactPersonalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StudentContactPersonalType.OtherIdList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}
      *     
      */
-    public void setOtherIdList(JAXBElement<StudentContactPersonalType.OtherIdList> value) {
+    public void setOtherIdList(JAXBElement<OtherIdListType> value) {
         this.otherIdList = value;
     }
 
@@ -313,157 +286,6 @@ public class StudentContactPersonalType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="OtherId" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-     *                 &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "otherId"
-    })
-    public static class OtherIdList {
-
-        @XmlElement(name = "OtherId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<StudentContactPersonalType.OtherIdList.OtherId> otherId;
-
-        /**
-         * Gets the value of the otherId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the otherId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getOtherId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link StudentContactPersonalType.OtherIdList.OtherId }
-         * 
-         * 
-         */
-        public List<StudentContactPersonalType.OtherIdList.OtherId> getOtherId() {
-            if (otherId == null) {
-                otherId = new ArrayList<StudentContactPersonalType.OtherIdList.OtherId>();
-            }
-            return this.otherId;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-         *       &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class OtherId {
-
-            @XmlValue
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String value;
-            @XmlAttribute(name = "Type", required = true)
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String type;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the type property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getType() {
-                return type;
-            }
-
-            /**
-             * Sets the value of the type property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setType(String value) {
-                this.type = value;
-            }
-
-        }
-
     }
 
 }

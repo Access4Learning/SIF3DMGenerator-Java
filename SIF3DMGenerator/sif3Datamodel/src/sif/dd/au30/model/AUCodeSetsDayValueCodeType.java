@@ -25,48 +25,18 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsDayValueCodeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsDayValueCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsDayValueCodeType {
 
-
-    /**
-     * Morning
-     * 
-     */
     AM("AM"),
-
-    /**
-     * All Day
-     * 
-     */
     @XmlEnumValue("Full")
     FULL("Full"),
-
-    /**
-     * Not Applicable
-     * 
-     */
     @XmlEnumValue("N/A")
     N_A("N/A"),
-
-    /**
-     * Partial Day
-     * 
-     */
     @XmlEnumValue("Partial")
     PARTIAL("Partial"),
-
-    /**
-     * Afternoon
-     * 
-     */
     PM("PM"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

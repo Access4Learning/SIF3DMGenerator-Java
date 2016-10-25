@@ -9,10 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         This element contains a map location. The GridLocation element is utilized within the Address element.
- *       
- * 
  * <p>Java class for GridLocationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -47,15 +43,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GridLocationType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "GridLocationType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "latitude",
     "longitude"
 })
 public class GridLocationType {
 
-    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal latitude;
-    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal longitude;
 
     /**

@@ -19,10 +19,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- * 			This object tracks resource usage by a student or staff member at a school over a defined time period.
- * 		  
- * 
  * <p>Java class for ResourceUsageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -32,13 +28,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="ResourceUsageContentType" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsResourceUsageContentTypeType" minOccurs="0"/>
+ *                   &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsResourceUsageContentTypeType" minOccurs="0"/>
  *                   &lt;element name="LocalDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
@@ -81,7 +77,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                             &lt;element name="SIF_RefId" minOccurs="0">
  *                               &lt;complexType>
  *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+ *                                   &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                                     &lt;attribute name="SIF_RefObject" use="required">
  *                                       &lt;simpleType>
  *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -97,7 +93,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                             &lt;/element>
  *                             &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *                             &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *                             &lt;element name="CurrentCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+ *                             &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
  *                             &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                           &lt;/sequence>
  *                         &lt;/restriction>
@@ -109,10 +105,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -121,7 +117,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ResourceUsageType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "ResourceUsageType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "schoolInfoRefId",
     "resourceUsageContentType",
     "resourceReportColumnList",
@@ -131,18 +127,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ResourceUsageType {
 
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "ResourceUsageContentType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "ResourceUsageContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ResourceUsageType.ResourceUsageContentType resourceUsageContentType;
-    @XmlElement(name = "ResourceReportColumnList", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "ResourceReportColumnList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ResourceUsageType.ResourceReportColumnList resourceReportColumnList;
-    @XmlElement(name = "ResourceReportLineList", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "ResourceReportLineList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ResourceUsageType.ResourceReportLineList resourceReportLineList;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -354,7 +350,7 @@ public class ResourceUsageType {
     })
     public static class ResourceReportColumnList {
 
-        @XmlElement(name = "ResourceReportColumn", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "ResourceReportColumn", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected List<ResourceUsageType.ResourceReportColumnList.ResourceReportColumn> resourceReportColumn;
 
         /**
@@ -416,13 +412,13 @@ public class ResourceUsageType {
         })
         public static class ResourceReportColumn {
 
-            @XmlElement(name = "ColumnName", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+            @XmlElement(name = "ColumnName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String columnName;
-            @XmlElementRef(name = "ColumnDescription", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "ColumnDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> columnDescription;
-            @XmlElementRef(name = "ColumnDelimiter", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "ColumnDelimiter", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<String> columnDelimiter;
 
             /**
@@ -520,7 +516,7 @@ public class ResourceUsageType {
      *                   &lt;element name="SIF_RefId" minOccurs="0">
      *                     &lt;complexType>
      *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+     *                         &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *                           &lt;attribute name="SIF_RefObject" use="required">
      *                             &lt;simpleType>
      *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -536,7 +532,7 @@ public class ResourceUsageType {
      *                   &lt;/element>
      *                   &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
      *                   &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-     *                   &lt;element name="CurrentCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+     *                   &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
      *                   &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                 &lt;/sequence>
      *               &lt;/restriction>
@@ -557,7 +553,7 @@ public class ResourceUsageType {
     })
     public static class ResourceReportLineList {
 
-        @XmlElement(name = "ResourceReportLine", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "ResourceReportLine", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected List<ResourceUsageType.ResourceReportLineList.ResourceReportLine> resourceReportLine;
 
         /**
@@ -603,7 +599,7 @@ public class ResourceUsageType {
          *         &lt;element name="SIF_RefId" minOccurs="0">
          *           &lt;complexType>
          *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+         *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
          *                 &lt;attribute name="SIF_RefObject" use="required">
          *                   &lt;simpleType>
          *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -619,7 +615,7 @@ public class ResourceUsageType {
          *         &lt;/element>
          *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
          *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-         *         &lt;element name="CurrentCost" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+         *         &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
          *         &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *       &lt;/sequence>
          *     &lt;/restriction>
@@ -639,16 +635,16 @@ public class ResourceUsageType {
         })
         public static class ResourceReportLine {
 
-            @XmlElementRef(name = "SIF_RefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "SIF_RefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId> sifRefId;
-            @XmlElement(name = "StartDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+            @XmlElement(name = "StartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlSchemaType(name = "date")
             protected XMLGregorianCalendar startDate;
-            @XmlElementRef(name = "EndDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "EndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<XMLGregorianCalendar> endDate;
-            @XmlElement(name = "CurrentCost", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+            @XmlElement(name = "CurrentCost", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             protected MonetaryAmountType currentCost;
-            @XmlElement(name = "ReportRow", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+            @XmlElement(name = "ReportRow", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String reportRow;
@@ -775,8 +771,6 @@ public class ResourceUsageType {
 
 
             /**
-             * SIF RefId that identifies the student, staff or group whose usage is being tracked.
-             * 
              * <p>Java class for anonymous complex type.
              * 
              * <p>The following schema fragment specifies the expected content contained within this class.
@@ -784,7 +778,7 @@ public class ResourceUsageType {
              * <pre>
              * &lt;complexType>
              *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+             *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
              *       &lt;attribute name="SIF_RefObject" use="required">
              *         &lt;simpleType>
              *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -878,7 +872,7 @@ public class ResourceUsageType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsResourceUsageContentTypeType" minOccurs="0"/>
+     *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsResourceUsageContentTypeType" minOccurs="0"/>
      *         &lt;element name="LocalDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
@@ -895,10 +889,10 @@ public class ResourceUsageType {
     })
     public static class ResourceUsageContentType {
 
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String code;
-        @XmlElementRef(name = "LocalDescription", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "LocalDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> localDescription;
 
         /**

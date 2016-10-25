@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * A monetary amount.
- * 
  * <p>Java class for MonetaryAmountType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -19,8 +17,8 @@ import javax.xml.bind.annotation.XmlValue;
  * <pre>
  * &lt;complexType name="MonetaryAmountType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSDecimalOrEmpty">
- *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/au/datamodel/3.4}ISO4217CurrencyNamesAndCodeElementsType" />
+ *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSDecimalOrEmpty">
+ *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/datamodel/au/3.4}ISO4217CurrencyNamesAndCodeElementsType" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -29,12 +27,11 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MonetaryAmountType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "MonetaryAmountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "value"
 })
 @XmlSeeAlso({
-    sif.dd.au30.model.PaymentReceiptType.TransactionAmount.class,
-    sif.dd.au30.model.InvoiceType.BilledAmount.class
+    DebitOrCreditAmountType.class
 })
 public class MonetaryAmountType {
 

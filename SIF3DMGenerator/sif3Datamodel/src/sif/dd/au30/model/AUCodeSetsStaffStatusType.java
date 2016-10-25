@@ -23,39 +23,14 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsStaffStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsStaffStatusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsStaffStatusType {
 
-
-    /**
-     * Active
-     * 
-     */
     A,
-
-    /**
-     * Inactive
-     * 
-     */
     I,
-
-    /**
-     * Suspended
-     * 
-     */
     S,
-
-    /**
-     * On Leave
-     * 
-     */
     O,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

@@ -23,36 +23,16 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsTeacherCoverSupervisionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsTeacherCoverSupervisionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsTeacherCoverSupervisionType {
 
-
-    /**
-     * Normal supervision
-     * 
-     */
     @XmlEnumValue("Normal")
     NORMAL("Normal"),
-
-    /**
-     * Minimal supervision
-     * 
-     */
     @XmlEnumValue("MinimalSupervision")
     MINIMAL_SUPERVISION("MinimalSupervision"),
-
-    /**
-     * The event is a merged class
-     * 
-     */
     @XmlEnumValue("MergedClass")
     MERGED_CLASS("MergedClass"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

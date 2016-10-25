@@ -15,11 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element.  If Code changes
- *         and OtherCodes are supported, both Code and all associated OtherCode elements must be present.
- *       
- * 
  * <p>Java class for OtherCodeListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -56,12 +51,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OtherCodeListType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "OtherCodeListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "otherCode"
 })
 public class OtherCodeListType {
 
-    @XmlElement(name = "OtherCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "OtherCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<OtherCodeListType.OtherCode> otherCode;
 
     /**

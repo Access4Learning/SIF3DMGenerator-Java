@@ -1,18 +1,13 @@
 
 package sif.dd.au30.model;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -20,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains all the personal information related to the student.
- * 
  * <p>Java class for StudentPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -31,145 +24,35 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AlertMessages" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="AlertMessage" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                           &lt;attribute name="Type" use="required">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                                 &lt;enumeration value="Legal"/>
- *                                 &lt;enumeration value="Discipline"/>
- *                                 &lt;enumeration value="Educational"/>
- *                                 &lt;enumeration value="Other"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="MedicalAlertMessages" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="MedicalAlertMessage" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                           &lt;attribute name="Severity" use="required">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                                 &lt;enumeration value="Low"/>
- *                                 &lt;enumeration value="Moderate"/>
- *                                 &lt;enumeration value="High"/>
- *                                 &lt;enumeration value="Severe"/>
- *                                 &lt;enumeration value="Unknown"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}LocalId" minOccurs="0"/>
- *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/au/datamodel/3.4}StateProvinceIdType" minOccurs="0"/>
- *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/au/datamodel/3.4}ElectronicIdListType" minOccurs="0"/>
- *         &lt;element name="OtherIdList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="OtherId" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
- *                           &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}PersonInfo" minOccurs="0"/>
- *         &lt;element name="ProjectedGraduationYear" type="{http://www.sifassociation.org/au/datamodel/3.4}ProjectedGraduationYearType" minOccurs="0"/>
- *         &lt;element name="OnTimeGraduationYear" type="{http://www.sifassociation.org/au/datamodel/3.4}OnTimeGraduationYearType" minOccurs="0"/>
- *         &lt;element name="GraduationDate" type="{http://www.sifassociation.org/au/datamodel/3.4}GraduationDateType" minOccurs="0"/>
- *         &lt;element name="MostRecent" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                   &lt;element name="HomeroomLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                   &lt;element name="YearLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelType" minOccurs="0"/>
- *                   &lt;element name="FTE" minOccurs="0">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
- *                         &lt;minInclusive value="0"/>
- *                         &lt;maxInclusive value="1"/>
- *                         &lt;fractionDigits value="2"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                   &lt;element name="Parent1Language" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
- *                   &lt;element name="Parent2Language" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
- *                   &lt;element name="Parent1EmploymentType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
- *                   &lt;element name="Parent2EmploymentType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
- *                   &lt;element name="Parent1SchoolEducationLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSchoolEducationLevelTypeType" minOccurs="0"/>
- *                   &lt;element name="Parent2SchoolEducationLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSchoolEducationLevelTypeType" minOccurs="0"/>
- *                   &lt;element name="Parent1NonSchoolEducation" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
- *                   &lt;element name="Parent2NonSchoolEducation" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
- *                   &lt;element name="LocalCampusId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                   &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                   &lt;element name="TestLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelType" minOccurs="0"/>
- *                   &lt;element name="Homegroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="ClassCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="MembershipType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSchoolEnrollmentTypeType" minOccurs="0"/>
- *                   &lt;element name="FFPOS" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsFFPOSStatusCodeType" minOccurs="0"/>
- *                   &lt;element name="ReportingSchoolId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                   &lt;element name="OtherEnrollmentSchoolACARAId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="AcceptableUsePolicy" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="GiftedTalented" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="EconomicDisadvantage" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="ESL" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="YoungCarersRole" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="Disability" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="IntegrationAide" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="EducationSupport" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="HomeSchooledStudent" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="Sensitive" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="OfflineDelivery" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="AlertMessages" type="{http://www.sifassociation.org/datamodel/au/3.4}AlertMessagesType" minOccurs="0"/>
+ *         &lt;element name="MedicalAlertMessages" type="{http://www.sifassociation.org/datamodel/au/3.4}MedicalAlertMessagesType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
+ *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}ElectronicIdListType" minOccurs="0"/>
+ *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
+ *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
+ *         &lt;element name="ProjectedGraduationYear" type="{http://www.sifassociation.org/datamodel/au/3.4}ProjectedGraduationYearType" minOccurs="0"/>
+ *         &lt;element name="OnTimeGraduationYear" type="{http://www.sifassociation.org/datamodel/au/3.4}OnTimeGraduationYearType" minOccurs="0"/>
+ *         &lt;element name="GraduationDate" type="{http://www.sifassociation.org/datamodel/au/3.4}GraduationDateType" minOccurs="0"/>
+ *         &lt;element name="MostRecent" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentMostRecentContainerType" minOccurs="0"/>
+ *         &lt;element name="AcceptableUsePolicy" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="GiftedTalented" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="EconomicDisadvantage" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ESL" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ESLDateAssessed" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="YoungCarersRole" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="Disability" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="IntegrationAide" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="EducationSupport" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="HomeSchooledStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="Sensitive" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="OfflineDelivery" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="PrePrimaryEducation" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="FirstAUSchoolEnrollment" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -178,7 +61,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentPersonalType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "StudentPersonalType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "alertMessages",
     "medicalAlertMessages",
     "localId",
@@ -194,6 +77,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "giftedTalented",
     "economicDisadvantage",
     "esl",
+    "eslDateAssessed",
     "youngCarersRole",
     "disability",
     "integrationAide",
@@ -208,58 +92,60 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class StudentPersonalType {
 
-    @XmlElementRef(name = "AlertMessages", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentPersonalType.AlertMessages> alertMessages;
-    @XmlElementRef(name = "MedicalAlertMessages", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentPersonalType.MedicalAlertMessages> medicalAlertMessages;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElementRef(name = "AlertMessages", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AlertMessagesType> alertMessages;
+    @XmlElementRef(name = "MedicalAlertMessages", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<MedicalAlertMessagesType> medicalAlertMessages;
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
-    @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ElectronicIdListType> electronicIdList;
-    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentPersonalType.OtherIdList> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<OtherIdListType> otherIdList;
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonInfoType personInfo;
-    @XmlElementRef(name = "ProjectedGraduationYear", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ProjectedGraduationYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> projectedGraduationYear;
-    @XmlElementRef(name = "OnTimeGraduationYear", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OnTimeGraduationYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> onTimeGraduationYear;
-    @XmlElementRef(name = "GraduationDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "GraduationDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> graduationDate;
-    @XmlElementRef(name = "MostRecent", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StudentPersonalType.MostRecent> mostRecent;
-    @XmlElementRef(name = "AcceptableUsePolicy", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MostRecent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentMostRecentContainerType> mostRecent;
+    @XmlElementRef(name = "AcceptableUsePolicy", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> acceptableUsePolicy;
-    @XmlElementRef(name = "GiftedTalented", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "GiftedTalented", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> giftedTalented;
-    @XmlElementRef(name = "EconomicDisadvantage", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EconomicDisadvantage", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> economicDisadvantage;
-    @XmlElementRef(name = "ESL", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ESL", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> esl;
-    @XmlElementRef(name = "YoungCarersRole", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ESLDateAssessed", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> eslDateAssessed;
+    @XmlElementRef(name = "YoungCarersRole", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> youngCarersRole;
-    @XmlElementRef(name = "Disability", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Disability", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> disability;
-    @XmlElementRef(name = "IntegrationAide", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "IntegrationAide", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> integrationAide;
-    @XmlElementRef(name = "EducationSupport", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EducationSupport", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> educationSupport;
-    @XmlElementRef(name = "HomeSchooledStudent", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "HomeSchooledStudent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> homeSchooledStudent;
-    @XmlElementRef(name = "Sensitive", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Sensitive", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> sensitive;
-    @XmlElementRef(name = "OfflineDelivery", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OfflineDelivery", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> offlineDelivery;
-    @XmlElementRef(name = "PrePrimaryEducation", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PrePrimaryEducation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> prePrimaryEducation;
-    @XmlElementRef(name = "FirstAUSchoolEnrollment", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FirstAUSchoolEnrollment", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> firstAUSchoolEnrollment;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -270,10 +156,10 @@ public class StudentPersonalType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.AlertMessages }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AlertMessagesType }{@code >}
      *     
      */
-    public JAXBElement<StudentPersonalType.AlertMessages> getAlertMessages() {
+    public JAXBElement<AlertMessagesType> getAlertMessages() {
         return alertMessages;
     }
 
@@ -282,10 +168,10 @@ public class StudentPersonalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.AlertMessages }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AlertMessagesType }{@code >}
      *     
      */
-    public void setAlertMessages(JAXBElement<StudentPersonalType.AlertMessages> value) {
+    public void setAlertMessages(JAXBElement<AlertMessagesType> value) {
         this.alertMessages = value;
     }
 
@@ -294,10 +180,10 @@ public class StudentPersonalType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.MedicalAlertMessages }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MedicalAlertMessagesType }{@code >}
      *     
      */
-    public JAXBElement<StudentPersonalType.MedicalAlertMessages> getMedicalAlertMessages() {
+    public JAXBElement<MedicalAlertMessagesType> getMedicalAlertMessages() {
         return medicalAlertMessages;
     }
 
@@ -306,10 +192,10 @@ public class StudentPersonalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.MedicalAlertMessages }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MedicalAlertMessagesType }{@code >}
      *     
      */
-    public void setMedicalAlertMessages(JAXBElement<StudentPersonalType.MedicalAlertMessages> value) {
+    public void setMedicalAlertMessages(JAXBElement<MedicalAlertMessagesType> value) {
         this.medicalAlertMessages = value;
     }
 
@@ -390,10 +276,10 @@ public class StudentPersonalType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.OtherIdList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}
      *     
      */
-    public JAXBElement<StudentPersonalType.OtherIdList> getOtherIdList() {
+    public JAXBElement<OtherIdListType> getOtherIdList() {
         return otherIdList;
     }
 
@@ -402,10 +288,10 @@ public class StudentPersonalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.OtherIdList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}
      *     
      */
-    public void setOtherIdList(JAXBElement<StudentPersonalType.OtherIdList> value) {
+    public void setOtherIdList(JAXBElement<OtherIdListType> value) {
         this.otherIdList = value;
     }
 
@@ -510,10 +396,10 @@ public class StudentPersonalType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.MostRecent }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StudentMostRecentContainerType }{@code >}
      *     
      */
-    public JAXBElement<StudentPersonalType.MostRecent> getMostRecent() {
+    public JAXBElement<StudentMostRecentContainerType> getMostRecent() {
         return mostRecent;
     }
 
@@ -522,10 +408,10 @@ public class StudentPersonalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StudentPersonalType.MostRecent }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StudentMostRecentContainerType }{@code >}
      *     
      */
-    public void setMostRecent(JAXBElement<StudentPersonalType.MostRecent> value) {
+    public void setMostRecent(JAXBElement<StudentMostRecentContainerType> value) {
         this.mostRecent = value;
     }
 
@@ -623,6 +509,30 @@ public class StudentPersonalType {
      */
     public void setESL(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.esl = value;
+    }
+
+    /**
+     * Gets the value of the eslDateAssessed property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getESLDateAssessed() {
+        return eslDateAssessed;
+    }
+
+    /**
+     * Sets the value of the eslDateAssessed property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setESLDateAssessed(JAXBElement<XMLGregorianCalendar> value) {
+        this.eslDateAssessed = value;
     }
 
     /**
@@ -911,1115 +821,6 @@ public class StudentPersonalType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="AlertMessage" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *                 &lt;attribute name="Type" use="required">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *                       &lt;enumeration value="Legal"/>
-     *                       &lt;enumeration value="Discipline"/>
-     *                       &lt;enumeration value="Educational"/>
-     *                       &lt;enumeration value="Other"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "alertMessage"
-    })
-    public static class AlertMessages {
-
-        @XmlElement(name = "AlertMessage", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<StudentPersonalType.AlertMessages.AlertMessage> alertMessage;
-
-        /**
-         * Gets the value of the alertMessage property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the alertMessage property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getAlertMessage().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link StudentPersonalType.AlertMessages.AlertMessage }
-         * 
-         * 
-         */
-        public List<StudentPersonalType.AlertMessages.AlertMessage> getAlertMessage() {
-            if (alertMessage == null) {
-                alertMessage = new ArrayList<StudentPersonalType.AlertMessages.AlertMessage>();
-            }
-            return this.alertMessage;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-         *       &lt;attribute name="Type" use="required">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-         *             &lt;enumeration value="Legal"/>
-         *             &lt;enumeration value="Discipline"/>
-         *             &lt;enumeration value="Educational"/>
-         *             &lt;enumeration value="Other"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class AlertMessage {
-
-            @XmlValue
-            protected String value;
-            @XmlAttribute(name = "Type", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String type;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the type property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getType() {
-                return type;
-            }
-
-            /**
-             * Sets the value of the type property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setType(String value) {
-                this.type = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="MedicalAlertMessage" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *                 &lt;attribute name="Severity" use="required">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *                       &lt;enumeration value="Low"/>
-     *                       &lt;enumeration value="Moderate"/>
-     *                       &lt;enumeration value="High"/>
-     *                       &lt;enumeration value="Severe"/>
-     *                       &lt;enumeration value="Unknown"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "medicalAlertMessage"
-    })
-    public static class MedicalAlertMessages {
-
-        @XmlElement(name = "MedicalAlertMessage", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<StudentPersonalType.MedicalAlertMessages.MedicalAlertMessage> medicalAlertMessage;
-
-        /**
-         * Gets the value of the medicalAlertMessage property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the medicalAlertMessage property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getMedicalAlertMessage().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link StudentPersonalType.MedicalAlertMessages.MedicalAlertMessage }
-         * 
-         * 
-         */
-        public List<StudentPersonalType.MedicalAlertMessages.MedicalAlertMessage> getMedicalAlertMessage() {
-            if (medicalAlertMessage == null) {
-                medicalAlertMessage = new ArrayList<StudentPersonalType.MedicalAlertMessages.MedicalAlertMessage>();
-            }
-            return this.medicalAlertMessage;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-         *       &lt;attribute name="Severity" use="required">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-         *             &lt;enumeration value="Low"/>
-         *             &lt;enumeration value="Moderate"/>
-         *             &lt;enumeration value="High"/>
-         *             &lt;enumeration value="Severe"/>
-         *             &lt;enumeration value="Unknown"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class MedicalAlertMessage {
-
-            @XmlValue
-            protected String value;
-            @XmlAttribute(name = "Severity", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String severity;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the severity property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getSeverity() {
-                return severity;
-            }
-
-            /**
-             * Sets the value of the severity property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setSeverity(String value) {
-                this.severity = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *         &lt;element name="HomeroomLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelType" minOccurs="0"/>
-     *         &lt;element name="FTE" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-     *               &lt;minInclusive value="0"/>
-     *               &lt;maxInclusive value="1"/>
-     *               &lt;fractionDigits value="2"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="Parent1Language" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
-     *         &lt;element name="Parent2Language" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
-     *         &lt;element name="Parent1EmploymentType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
-     *         &lt;element name="Parent2EmploymentType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
-     *         &lt;element name="Parent1SchoolEducationLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSchoolEducationLevelTypeType" minOccurs="0"/>
-     *         &lt;element name="Parent2SchoolEducationLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSchoolEducationLevelTypeType" minOccurs="0"/>
-     *         &lt;element name="Parent1NonSchoolEducation" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
-     *         &lt;element name="Parent2NonSchoolEducation" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
-     *         &lt;element name="LocalCampusId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *         &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *         &lt;element name="TestLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelType" minOccurs="0"/>
-     *         &lt;element name="Homegroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="ClassCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="MembershipType" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsSchoolEnrollmentTypeType" minOccurs="0"/>
-     *         &lt;element name="FFPOS" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsFFPOSStatusCodeType" minOccurs="0"/>
-     *         &lt;element name="ReportingSchoolId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *         &lt;element name="OtherEnrollmentSchoolACARAId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "schoolLocalId",
-        "homeroomLocalId",
-        "yearLevel",
-        "fte",
-        "parent1Language",
-        "parent2Language",
-        "parent1EmploymentType",
-        "parent2EmploymentType",
-        "parent1SchoolEducationLevel",
-        "parent2SchoolEducationLevel",
-        "parent1NonSchoolEducation",
-        "parent2NonSchoolEducation",
-        "localCampusId",
-        "schoolACARAId",
-        "testLevel",
-        "homegroup",
-        "classCode",
-        "membershipType",
-        "ffpos",
-        "reportingSchoolId",
-        "otherEnrollmentSchoolACARAId"
-    })
-    public static class MostRecent {
-
-        @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> schoolLocalId;
-        @XmlElementRef(name = "HomeroomLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> homeroomLocalId;
-        @XmlElementRef(name = "YearLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<YearLevelType> yearLevel;
-        @XmlElementRef(name = "FTE", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<BigDecimal> fte;
-        @XmlElementRef(name = "Parent1Language", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent1Language;
-        @XmlElementRef(name = "Parent2Language", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent2Language;
-        @XmlElementRef(name = "Parent1EmploymentType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent1EmploymentType;
-        @XmlElementRef(name = "Parent2EmploymentType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent2EmploymentType;
-        @XmlElementRef(name = "Parent1SchoolEducationLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent1SchoolEducationLevel;
-        @XmlElementRef(name = "Parent2SchoolEducationLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent2SchoolEducationLevel;
-        @XmlElementRef(name = "Parent1NonSchoolEducation", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent1NonSchoolEducation;
-        @XmlElementRef(name = "Parent2NonSchoolEducation", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> parent2NonSchoolEducation;
-        @XmlElementRef(name = "LocalCampusId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> localCampusId;
-        @XmlElementRef(name = "SchoolACARAId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> schoolACARAId;
-        @XmlElementRef(name = "TestLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<YearLevelType> testLevel;
-        @XmlElementRef(name = "Homegroup", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> homegroup;
-        @XmlElementRef(name = "ClassCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> classCode;
-        @XmlElement(name = "MembershipType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String membershipType;
-        @XmlElementRef(name = "FFPOS", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> ffpos;
-        @XmlElementRef(name = "ReportingSchoolId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> reportingSchoolId;
-        @XmlElementRef(name = "OtherEnrollmentSchoolACARAId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> otherEnrollmentSchoolACARAId;
-
-        /**
-         * Gets the value of the schoolLocalId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getSchoolLocalId() {
-            return schoolLocalId;
-        }
-
-        /**
-         * Sets the value of the schoolLocalId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setSchoolLocalId(JAXBElement<String> value) {
-            this.schoolLocalId = value;
-        }
-
-        /**
-         * Gets the value of the homeroomLocalId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getHomeroomLocalId() {
-            return homeroomLocalId;
-        }
-
-        /**
-         * Sets the value of the homeroomLocalId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setHomeroomLocalId(JAXBElement<String> value) {
-            this.homeroomLocalId = value;
-        }
-
-        /**
-         * Gets the value of the yearLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}
-         *     
-         */
-        public JAXBElement<YearLevelType> getYearLevel() {
-            return yearLevel;
-        }
-
-        /**
-         * Sets the value of the yearLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}
-         *     
-         */
-        public void setYearLevel(JAXBElement<YearLevelType> value) {
-            this.yearLevel = value;
-        }
-
-        /**
-         * Gets the value of the fte property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
-         */
-        public JAXBElement<BigDecimal> getFTE() {
-            return fte;
-        }
-
-        /**
-         * Sets the value of the fte property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
-         */
-        public void setFTE(JAXBElement<BigDecimal> value) {
-            this.fte = value;
-        }
-
-        /**
-         * Gets the value of the parent1Language property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent1Language() {
-            return parent1Language;
-        }
-
-        /**
-         * Sets the value of the parent1Language property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent1Language(JAXBElement<String> value) {
-            this.parent1Language = value;
-        }
-
-        /**
-         * Gets the value of the parent2Language property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent2Language() {
-            return parent2Language;
-        }
-
-        /**
-         * Sets the value of the parent2Language property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent2Language(JAXBElement<String> value) {
-            this.parent2Language = value;
-        }
-
-        /**
-         * Gets the value of the parent1EmploymentType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent1EmploymentType() {
-            return parent1EmploymentType;
-        }
-
-        /**
-         * Sets the value of the parent1EmploymentType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent1EmploymentType(JAXBElement<String> value) {
-            this.parent1EmploymentType = value;
-        }
-
-        /**
-         * Gets the value of the parent2EmploymentType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent2EmploymentType() {
-            return parent2EmploymentType;
-        }
-
-        /**
-         * Sets the value of the parent2EmploymentType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent2EmploymentType(JAXBElement<String> value) {
-            this.parent2EmploymentType = value;
-        }
-
-        /**
-         * Gets the value of the parent1SchoolEducationLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent1SchoolEducationLevel() {
-            return parent1SchoolEducationLevel;
-        }
-
-        /**
-         * Sets the value of the parent1SchoolEducationLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent1SchoolEducationLevel(JAXBElement<String> value) {
-            this.parent1SchoolEducationLevel = value;
-        }
-
-        /**
-         * Gets the value of the parent2SchoolEducationLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent2SchoolEducationLevel() {
-            return parent2SchoolEducationLevel;
-        }
-
-        /**
-         * Sets the value of the parent2SchoolEducationLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent2SchoolEducationLevel(JAXBElement<String> value) {
-            this.parent2SchoolEducationLevel = value;
-        }
-
-        /**
-         * Gets the value of the parent1NonSchoolEducation property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent1NonSchoolEducation() {
-            return parent1NonSchoolEducation;
-        }
-
-        /**
-         * Sets the value of the parent1NonSchoolEducation property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent1NonSchoolEducation(JAXBElement<String> value) {
-            this.parent1NonSchoolEducation = value;
-        }
-
-        /**
-         * Gets the value of the parent2NonSchoolEducation property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getParent2NonSchoolEducation() {
-            return parent2NonSchoolEducation;
-        }
-
-        /**
-         * Sets the value of the parent2NonSchoolEducation property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setParent2NonSchoolEducation(JAXBElement<String> value) {
-            this.parent2NonSchoolEducation = value;
-        }
-
-        /**
-         * Gets the value of the localCampusId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getLocalCampusId() {
-            return localCampusId;
-        }
-
-        /**
-         * Sets the value of the localCampusId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setLocalCampusId(JAXBElement<String> value) {
-            this.localCampusId = value;
-        }
-
-        /**
-         * Gets the value of the schoolACARAId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getSchoolACARAId() {
-            return schoolACARAId;
-        }
-
-        /**
-         * Sets the value of the schoolACARAId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setSchoolACARAId(JAXBElement<String> value) {
-            this.schoolACARAId = value;
-        }
-
-        /**
-         * Gets the value of the testLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}
-         *     
-         */
-        public JAXBElement<YearLevelType> getTestLevel() {
-            return testLevel;
-        }
-
-        /**
-         * Sets the value of the testLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}
-         *     
-         */
-        public void setTestLevel(JAXBElement<YearLevelType> value) {
-            this.testLevel = value;
-        }
-
-        /**
-         * Gets the value of the homegroup property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getHomegroup() {
-            return homegroup;
-        }
-
-        /**
-         * Sets the value of the homegroup property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setHomegroup(JAXBElement<String> value) {
-            this.homegroup = value;
-        }
-
-        /**
-         * Gets the value of the classCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getClassCode() {
-            return classCode;
-        }
-
-        /**
-         * Sets the value of the classCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setClassCode(JAXBElement<String> value) {
-            this.classCode = value;
-        }
-
-        /**
-         * Gets the value of the membershipType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getMembershipType() {
-            return membershipType;
-        }
-
-        /**
-         * Sets the value of the membershipType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setMembershipType(String value) {
-            this.membershipType = value;
-        }
-
-        /**
-         * Gets the value of the ffpos property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getFFPOS() {
-            return ffpos;
-        }
-
-        /**
-         * Sets the value of the ffpos property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setFFPOS(JAXBElement<String> value) {
-            this.ffpos = value;
-        }
-
-        /**
-         * Gets the value of the reportingSchoolId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getReportingSchoolId() {
-            return reportingSchoolId;
-        }
-
-        /**
-         * Sets the value of the reportingSchoolId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setReportingSchoolId(JAXBElement<String> value) {
-            this.reportingSchoolId = value;
-        }
-
-        /**
-         * Gets the value of the otherEnrollmentSchoolACARAId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getOtherEnrollmentSchoolACARAId() {
-            return otherEnrollmentSchoolACARAId;
-        }
-
-        /**
-         * Sets the value of the otherEnrollmentSchoolACARAId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setOtherEnrollmentSchoolACARAId(JAXBElement<String> value) {
-            this.otherEnrollmentSchoolACARAId = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="OtherId" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-     *                 &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "otherId"
-    })
-    public static class OtherIdList {
-
-        @XmlElement(name = "OtherId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<StudentPersonalType.OtherIdList.OtherId> otherId;
-
-        /**
-         * Gets the value of the otherId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the otherId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getOtherId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link StudentPersonalType.OtherIdList.OtherId }
-         * 
-         * 
-         */
-        public List<StudentPersonalType.OtherIdList.OtherId> getOtherId() {
-            if (otherId == null) {
-                otherId = new ArrayList<StudentPersonalType.OtherIdList.OtherId>();
-            }
-            return this.otherId;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-         *       &lt;attribute name="Type" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class OtherId {
-
-            @XmlValue
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String value;
-            @XmlAttribute(name = "Type", required = true)
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String type;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the type property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getType() {
-                return type;
-            }
-
-            /**
-             * Sets the value of the type property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setType(String value) {
-                this.type = value;
-            }
-
-        }
-
     }
 
 }

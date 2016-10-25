@@ -2,15 +2,12 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -18,11 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object defines information related to a staff member's assignment(s); commonly, this will be a school
- *         assignment.
- *       
- * 
  * <p>Java class for StaffAssignmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -32,11 +24,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/au/datamodel/3.4}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="PrimaryAssignment" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="PrimaryAssignment" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="JobStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="JobEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="JobFTE" minOccurs="0">
@@ -49,49 +41,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="JobFunction" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="StaffSubjectList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="StaffSubject" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *                             &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                             &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="StaffActivity" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsStaffActivityType" minOccurs="0"/>
- *                   &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelsType" minOccurs="0"/>
- *         &lt;element name="CasualReliefTeacher" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="EmploymentStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsStaffStatusType" minOccurs="0"/>
+ *         &lt;element name="StaffSubjectList" type="{http://www.sifassociation.org/datamodel/au/3.4}StaffSubjectListType" minOccurs="0"/>
+ *         &lt;element name="StaffActivity" type="{http://www.sifassociation.org/datamodel/au/3.4}StaffActivityExtensionType" minOccurs="0"/>
+ *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
+ *         &lt;element name="CasualReliefTeacher" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="Homegroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="House" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="CalendarSummaryList" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarSummaryListType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -100,7 +61,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StaffAssignmentType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "StaffAssignmentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "schoolInfoRefId",
     "schoolYear",
     "staffPersonalRefId",
@@ -110,52 +71,58 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "jobEndDate",
     "jobFTE",
     "jobFunction",
+    "employmentStatus",
     "staffSubjectList",
     "staffActivity",
     "yearLevels",
     "casualReliefTeacher",
     "homegroup",
     "house",
+    "calendarSummaryList",
     "sifMetadata",
     "sifExtendedElements"
 })
 public class StaffAssignmentType {
 
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> schoolYear;
-    @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String staffPersonalRefId;
-    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "PrimaryAssignment", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "PrimaryAssignment", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsYesOrNoCategoryType primaryAssignment;
-    @XmlElementRef(name = "JobStartDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "JobStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> jobStartDate;
-    @XmlElementRef(name = "JobEndDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "JobEndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> jobEndDate;
-    @XmlElementRef(name = "JobFTE", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "JobFTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> jobFTE;
-    @XmlElementRef(name = "JobFunction", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "JobFunction", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> jobFunction;
-    @XmlElementRef(name = "StaffSubjectList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StaffAssignmentType.StaffSubjectList> staffSubjectList;
-    @XmlElementRef(name = "StaffActivity", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<StaffAssignmentType.StaffActivity> staffActivity;
-    @XmlElementRef(name = "YearLevels", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmploymentStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsStaffStatusType> employmentStatus;
+    @XmlElementRef(name = "StaffSubjectList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StaffSubjectListType> staffSubjectList;
+    @XmlElementRef(name = "StaffActivity", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StaffActivityExtensionType> staffActivity;
+    @XmlElementRef(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<YearLevelsType> yearLevels;
-    @XmlElementRef(name = "CasualReliefTeacher", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CasualReliefTeacher", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> casualReliefTeacher;
-    @XmlElementRef(name = "Homegroup", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Homegroup", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> homegroup;
-    @XmlElementRef(name = "House", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "House", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> house;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CalendarSummaryList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<CalendarSummaryListType> calendarSummaryList;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -378,14 +345,38 @@ public class StaffAssignmentType {
     }
 
     /**
+     * Gets the value of the employmentStatus property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsStaffStatusType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsStaffStatusType> getEmploymentStatus() {
+        return employmentStatus;
+    }
+
+    /**
+     * Sets the value of the employmentStatus property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsStaffStatusType }{@code >}
+     *     
+     */
+    public void setEmploymentStatus(JAXBElement<AUCodeSetsStaffStatusType> value) {
+        this.employmentStatus = value;
+    }
+
+    /**
      * Gets the value of the staffSubjectList property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StaffAssignmentType.StaffSubjectList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StaffSubjectListType }{@code >}
      *     
      */
-    public JAXBElement<StaffAssignmentType.StaffSubjectList> getStaffSubjectList() {
+    public JAXBElement<StaffSubjectListType> getStaffSubjectList() {
         return staffSubjectList;
     }
 
@@ -394,10 +385,10 @@ public class StaffAssignmentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StaffAssignmentType.StaffSubjectList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StaffSubjectListType }{@code >}
      *     
      */
-    public void setStaffSubjectList(JAXBElement<StaffAssignmentType.StaffSubjectList> value) {
+    public void setStaffSubjectList(JAXBElement<StaffSubjectListType> value) {
         this.staffSubjectList = value;
     }
 
@@ -406,10 +397,10 @@ public class StaffAssignmentType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link StaffAssignmentType.StaffActivity }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StaffActivityExtensionType }{@code >}
      *     
      */
-    public JAXBElement<StaffAssignmentType.StaffActivity> getStaffActivity() {
+    public JAXBElement<StaffActivityExtensionType> getStaffActivity() {
         return staffActivity;
     }
 
@@ -418,10 +409,10 @@ public class StaffAssignmentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link StaffAssignmentType.StaffActivity }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StaffActivityExtensionType }{@code >}
      *     
      */
-    public void setStaffActivity(JAXBElement<StaffAssignmentType.StaffActivity> value) {
+    public void setStaffActivity(JAXBElement<StaffActivityExtensionType> value) {
         this.staffActivity = value;
     }
 
@@ -522,6 +513,30 @@ public class StaffAssignmentType {
     }
 
     /**
+     * Gets the value of the calendarSummaryList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link CalendarSummaryListType }{@code >}
+     *     
+     */
+    public JAXBElement<CalendarSummaryListType> getCalendarSummaryList() {
+        return calendarSummaryList;
+    }
+
+    /**
+     * Sets the value of the calendarSummaryList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link CalendarSummaryListType }{@code >}
+     *     
+     */
+    public void setCalendarSummaryList(JAXBElement<CalendarSummaryListType> value) {
+        this.calendarSummaryList = value;
+    }
+
+    /**
      * Gets the value of the sifMetadata property.
      * 
      * @return
@@ -591,274 +606,6 @@ public class StaffAssignmentType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsStaffActivityType" minOccurs="0"/>
-     *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "code",
-        "otherCodeList"
-    })
-    public static class StaffActivity {
-
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String code;
-        @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<OtherCodeListType> otherCodeList;
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        /**
-         * Gets the value of the otherCodeList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public JAXBElement<OtherCodeListType> getOtherCodeList() {
-            return otherCodeList;
-        }
-
-        /**
-         * Sets the value of the otherCodeList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
-            this.otherCodeList = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="StaffSubject" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
-     *                   &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *                   &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "staffSubject"
-    })
-    public static class StaffSubjectList {
-
-        @XmlElement(name = "StaffSubject", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<StaffAssignmentType.StaffSubjectList.StaffSubject> staffSubject;
-
-        /**
-         * Gets the value of the staffSubject property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the staffSubject property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getStaffSubject().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link StaffAssignmentType.StaffSubjectList.StaffSubject }
-         * 
-         * 
-         */
-        public List<StaffAssignmentType.StaffSubjectList.StaffSubject> getStaffSubject() {
-            if (staffSubject == null) {
-                staffSubject = new ArrayList<StaffAssignmentType.StaffSubjectList.StaffSubject>();
-            }
-            return this.staffSubject;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
-         *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-         *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "preferenceNumber",
-            "subjectLocalId",
-            "timeTableSubjectRefId"
-        })
-        public static class StaffSubject {
-
-            @XmlElement(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            @XmlSchemaType(name = "unsignedInt")
-            protected Long preferenceNumber;
-            @XmlElementRef(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> subjectLocalId;
-            @XmlElementRef(name = "TimeTableSubjectRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> timeTableSubjectRefId;
-
-            /**
-             * Gets the value of the preferenceNumber property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link Long }
-             *     
-             */
-            public Long getPreferenceNumber() {
-                return preferenceNumber;
-            }
-
-            /**
-             * Sets the value of the preferenceNumber property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link Long }
-             *     
-             */
-            public void setPreferenceNumber(Long value) {
-                this.preferenceNumber = value;
-            }
-
-            /**
-             * Gets the value of the subjectLocalId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getSubjectLocalId() {
-                return subjectLocalId;
-            }
-
-            /**
-             * Sets the value of the subjectLocalId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setSubjectLocalId(JAXBElement<String> value) {
-                this.subjectLocalId = value;
-            }
-
-            /**
-             * Gets the value of the timeTableSubjectRefId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getTimeTableSubjectRefId() {
-                return timeTableSubjectRefId;
-            }
-
-            /**
-             * Sets the value of the timeTableSubjectRefId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setTimeTableSubjectRefId(JAXBElement<String> value) {
-                this.timeTableSubjectRefId = value;
-            }
-
-        }
-
     }
 
 }

@@ -26,6 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Other"/>
  *     &lt;enumeration value="PreSch"/>
  *     &lt;enumeration value="Pri/Sec"/>
+ *     &lt;enumeration value="Spec/P-12"/>
+ *     &lt;enumeration value="Spec/Pri"/>
+ *     &lt;enumeration value="Spec/Sec"/>
  *     &lt;enumeration value="Prim"/>
  *     &lt;enumeration value="Sec"/>
  *     &lt;enumeration value="Senior"/>
@@ -39,147 +42,53 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSchoolLevelType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsSchoolLevelType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsSchoolLevelType {
 
-
-    /**
-     * Camp
-     * 
-     */
     @XmlEnumValue("Camp")
     CAMP("Camp"),
-
-    /**
-     * Community College
-     * 
-     */
     @XmlEnumValue("Commty")
     COMMTY("Commty"),
-
-    /**
-     * Early Childhood
-     * 
-     */
     @XmlEnumValue("EarlyCh")
     EARLY_CH("EarlyCh"),
-
-    /**
-     * Junior Primary
-     * 
-     */
     @XmlEnumValue("JunPri")
     JUN_PRI("JunPri"),
-
-    /**
-     * Kindergarten only
-     * 
-     */
     @XmlEnumValue("Kgarten")
     KGARTEN("Kgarten"),
-
-    /**
-     * Preschool/Kindergarten
-     * 
-     */
     @XmlEnumValue("Kind")
     KIND("Kind"),
-
-    /**
-     * Language
-     * 
-     */
     @XmlEnumValue("Lang")
     LANG("Lang"),
-
-    /**
-     * Maternal Child Health Centre
-     * 
-     */
     MCH("MCH"),
-
-    /**
-     * Middle School
-     * 
-     */
     @XmlEnumValue("Middle")
     MIDDLE("Middle"),
-
-    /**
-     * Other
-     * 
-     */
     @XmlEnumValue("Other")
     OTHER("Other"),
-
-    /**
-     * PreSchool only
-     * 
-     */
     @XmlEnumValue("PreSch")
     PRE_SCH("PreSch"),
-
-    /**
-     * Primary/Secondary Combined
-     * 
-     */
     @XmlEnumValue("Pri/Sec")
     PRI_SEC("Pri/Sec"),
-
-    /**
-     * Primary
-     * 
-     */
+    @XmlEnumValue("Spec/P-12")
+    SPEC_P_12("Spec/P-12"),
+    @XmlEnumValue("Spec/Pri")
+    SPEC_PRI("Spec/Pri"),
+    @XmlEnumValue("Spec/Sec")
+    SPEC_SEC("Spec/Sec"),
     @XmlEnumValue("Prim")
     PRIM("Prim"),
-
-    /**
-     * Secondary
-     * 
-     */
     @XmlEnumValue("Sec")
     SEC("Sec"),
-
-    /**
-     * Senior Secondary School
-     * 
-     */
     @XmlEnumValue("Senior")
     SENIOR("Senior"),
-
-    /**
-     * Special
-     * 
-     */
     @XmlEnumValue("Special")
     SPECIAL("Special"),
-
-    /**
-     * Specific Purpose
-     * 
-     */
     @XmlEnumValue("Specif")
     SPECIF("Specif"),
-
-    /**
-     * SupportCentre
-     * 
-     */
     @XmlEnumValue("Supp")
     SUPP("Supp"),
-
-    /**
-     * Unknown
-     * 
-     */
     @XmlEnumValue("Unknown")
     UNKNOWN("Unknown"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

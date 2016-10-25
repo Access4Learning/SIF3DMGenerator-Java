@@ -2,8 +2,6 @@
 package sif.dd.au30.model;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -19,10 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object identifies a particular Teaching Group or class in a particular a time table.
- *       
- * 
  * <p>Java class for TeachingGroupType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -32,100 +26,30 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}SchoolYear" minOccurs="0"/>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}LocalId" minOccurs="0"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="LongName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="GroupType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Set" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Block" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="CurriculumLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
- *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
- *         &lt;element name="SchoolCourseLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" minOccurs="0"/>
- *         &lt;element name="TimeTableSubjectLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolCourseLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="TimeTableSubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="Semester" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="StudentList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TeachingGroupStudent" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *                             &lt;element name="StudentLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                             &lt;element name="Name" type="{http://www.sifassociation.org/au/datamodel/3.4}NameOfRecordType" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="TeacherList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TeachingGroupTeacher" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *                             &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                             &lt;element name="Name" type="{http://www.sifassociation.org/au/datamodel/3.4}NameOfRecordType" minOccurs="0"/>
- *                             &lt;element name="Association" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="StudentList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentListType" minOccurs="0"/>
+ *         &lt;element name="TeacherList" type="{http://www.sifassociation.org/datamodel/au/3.4}TeacherListType" minOccurs="0"/>
  *         &lt;element name="MinClassSize" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="MaxClassSize" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="TeachingGroupPeriodList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TeachingGroupPeriod" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="TimeTableCellRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *                             &lt;element name="RoomNumber" type="{http://www.sifassociation.org/au/datamodel/3.4}HomeroomNumberType" minOccurs="0"/>
- *                             &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                             &lt;element name="DayId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                             &lt;element name="PeriodId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *                             &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
- *                             &lt;element name="CellType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="TeachingGroupPeriodList" type="{http://www.sifassociation.org/datamodel/au/3.4}TeachingGroupPeriodListType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -134,11 +58,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TeachingGroupType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "TeachingGroupType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "schoolYear",
     "localId",
     "shortName",
     "longName",
+    "groupType",
     "set",
     "block",
     "curriculumLevel",
@@ -159,50 +84,52 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TeachingGroupType {
 
-    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected XMLGregorianCalendar schoolYear;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElement(name = "ShortName", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "ShortName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String shortName;
-    @XmlElementRef(name = "LongName", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LongName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> longName;
-    @XmlElementRef(name = "Set", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "GroupType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> groupType;
+    @XmlElementRef(name = "Set", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> set;
-    @XmlElementRef(name = "Block", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Block", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> block;
-    @XmlElementRef(name = "CurriculumLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CurriculumLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> curriculumLevel;
-    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolLocalId;
-    @XmlElementRef(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolCourseInfoRefId;
-    @XmlElementRef(name = "SchoolCourseLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolCourseLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolCourseLocalId;
-    @XmlElementRef(name = "TimeTableSubjectRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TimeTableSubjectRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> timeTableSubjectRefId;
-    @XmlElementRef(name = "TimeTableSubjectLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TimeTableSubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> timeTableSubjectLocalId;
-    @XmlElementRef(name = "Semester", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Semester", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> semester;
-    @XmlElementRef(name = "StudentList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<TeachingGroupType.StudentList> studentList;
-    @XmlElementRef(name = "TeacherList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<TeachingGroupType.TeacherList> teacherList;
-    @XmlElementRef(name = "MinClassSize", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StudentList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentListType> studentList;
+    @XmlElementRef(name = "TeacherList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<TeacherListType> teacherList;
+    @XmlElementRef(name = "MinClassSize", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigInteger> minClassSize;
-    @XmlElementRef(name = "MaxClassSize", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MaxClassSize", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigInteger> maxClassSize;
-    @XmlElementRef(name = "TeachingGroupPeriodList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<TeachingGroupType.TeachingGroupPeriodList> teachingGroupPeriodList;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TeachingGroupPeriodList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<TeachingGroupPeriodListType> teachingGroupPeriodList;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -302,6 +229,30 @@ public class TeachingGroupType {
      */
     public void setLongName(JAXBElement<String> value) {
         this.longName = value;
+    }
+
+    /**
+     * Gets the value of the groupType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getGroupType() {
+        return groupType;
+    }
+
+    /**
+     * Sets the value of the groupType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setGroupType(JAXBElement<String> value) {
+        this.groupType = value;
     }
 
     /**
@@ -549,10 +500,10 @@ public class TeachingGroupType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TeachingGroupType.StudentList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StudentListType }{@code >}
      *     
      */
-    public JAXBElement<TeachingGroupType.StudentList> getStudentList() {
+    public JAXBElement<StudentListType> getStudentList() {
         return studentList;
     }
 
@@ -561,10 +512,10 @@ public class TeachingGroupType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TeachingGroupType.StudentList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StudentListType }{@code >}
      *     
      */
-    public void setStudentList(JAXBElement<TeachingGroupType.StudentList> value) {
+    public void setStudentList(JAXBElement<StudentListType> value) {
         this.studentList = value;
     }
 
@@ -573,10 +524,10 @@ public class TeachingGroupType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TeachingGroupType.TeacherList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TeacherListType }{@code >}
      *     
      */
-    public JAXBElement<TeachingGroupType.TeacherList> getTeacherList() {
+    public JAXBElement<TeacherListType> getTeacherList() {
         return teacherList;
     }
 
@@ -585,10 +536,10 @@ public class TeachingGroupType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TeachingGroupType.TeacherList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TeacherListType }{@code >}
      *     
      */
-    public void setTeacherList(JAXBElement<TeachingGroupType.TeacherList> value) {
+    public void setTeacherList(JAXBElement<TeacherListType> value) {
         this.teacherList = value;
     }
 
@@ -645,10 +596,10 @@ public class TeachingGroupType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link TeachingGroupType.TeachingGroupPeriodList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TeachingGroupPeriodListType }{@code >}
      *     
      */
-    public JAXBElement<TeachingGroupType.TeachingGroupPeriodList> getTeachingGroupPeriodList() {
+    public JAXBElement<TeachingGroupPeriodListType> getTeachingGroupPeriodList() {
         return teachingGroupPeriodList;
     }
 
@@ -657,10 +608,10 @@ public class TeachingGroupType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link TeachingGroupType.TeachingGroupPeriodList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TeachingGroupPeriodListType }{@code >}
      *     
      */
-    public void setTeachingGroupPeriodList(JAXBElement<TeachingGroupType.TeachingGroupPeriodList> value) {
+    public void setTeachingGroupPeriodList(JAXBElement<TeachingGroupPeriodListType> value) {
         this.teachingGroupPeriodList = value;
     }
 
@@ -734,705 +685,6 @@ public class TeachingGroupType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TeachingGroupStudent" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
-     *                   &lt;element name="StudentLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *                   &lt;element name="Name" type="{http://www.sifassociation.org/au/datamodel/3.4}NameOfRecordType" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "teachingGroupStudent"
-    })
-    public static class StudentList {
-
-        @XmlElement(name = "TeachingGroupStudent", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<TeachingGroupType.StudentList.TeachingGroupStudent> teachingGroupStudent;
-
-        /**
-         * Gets the value of the teachingGroupStudent property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the teachingGroupStudent property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getTeachingGroupStudent().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link TeachingGroupType.StudentList.TeachingGroupStudent }
-         * 
-         * 
-         */
-        public List<TeachingGroupType.StudentList.TeachingGroupStudent> getTeachingGroupStudent() {
-            if (teachingGroupStudent == null) {
-                teachingGroupStudent = new ArrayList<TeachingGroupType.StudentList.TeachingGroupStudent>();
-            }
-            return this.teachingGroupStudent;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
-         *         &lt;element name="StudentLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-         *         &lt;element name="Name" type="{http://www.sifassociation.org/au/datamodel/3.4}NameOfRecordType" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "studentPersonalRefId",
-            "studentLocalId",
-            "name"
-        })
-        public static class TeachingGroupStudent {
-
-            @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> studentPersonalRefId;
-            @XmlElement(name = "StudentLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            protected String studentLocalId;
-            @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            protected NameOfRecordType name;
-
-            /**
-             * Gets the value of the studentPersonalRefId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getStudentPersonalRefId() {
-                return studentPersonalRefId;
-            }
-
-            /**
-             * Sets the value of the studentPersonalRefId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setStudentPersonalRefId(JAXBElement<String> value) {
-                this.studentPersonalRefId = value;
-            }
-
-            /**
-             * Gets the value of the studentLocalId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getStudentLocalId() {
-                return studentLocalId;
-            }
-
-            /**
-             * Sets the value of the studentLocalId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setStudentLocalId(String value) {
-                this.studentLocalId = value;
-            }
-
-            /**
-             * Gets the value of the name property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link NameOfRecordType }
-             *     
-             */
-            public NameOfRecordType getName() {
-                return name;
-            }
-
-            /**
-             * Sets the value of the name property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link NameOfRecordType }
-             *     
-             */
-            public void setName(NameOfRecordType value) {
-                this.name = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TeachingGroupTeacher" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
-     *                   &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *                   &lt;element name="Name" type="{http://www.sifassociation.org/au/datamodel/3.4}NameOfRecordType" minOccurs="0"/>
-     *                   &lt;element name="Association" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "teachingGroupTeacher"
-    })
-    public static class TeacherList {
-
-        @XmlElement(name = "TeachingGroupTeacher", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<TeachingGroupType.TeacherList.TeachingGroupTeacher> teachingGroupTeacher;
-
-        /**
-         * Gets the value of the teachingGroupTeacher property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the teachingGroupTeacher property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getTeachingGroupTeacher().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link TeachingGroupType.TeacherList.TeachingGroupTeacher }
-         * 
-         * 
-         */
-        public List<TeachingGroupType.TeacherList.TeachingGroupTeacher> getTeachingGroupTeacher() {
-            if (teachingGroupTeacher == null) {
-                teachingGroupTeacher = new ArrayList<TeachingGroupType.TeacherList.TeachingGroupTeacher>();
-            }
-            return this.teachingGroupTeacher;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
-         *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-         *         &lt;element name="Name" type="{http://www.sifassociation.org/au/datamodel/3.4}NameOfRecordType" minOccurs="0"/>
-         *         &lt;element name="Association" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "staffPersonalRefId",
-            "staffLocalId",
-            "name",
-            "association"
-        })
-        public static class TeachingGroupTeacher {
-
-            @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> staffPersonalRefId;
-            @XmlElement(name = "StaffLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            protected String staffLocalId;
-            @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            protected NameOfRecordType name;
-            @XmlElement(name = "Association", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String association;
-
-            /**
-             * Gets the value of the staffPersonalRefId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getStaffPersonalRefId() {
-                return staffPersonalRefId;
-            }
-
-            /**
-             * Sets the value of the staffPersonalRefId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setStaffPersonalRefId(JAXBElement<String> value) {
-                this.staffPersonalRefId = value;
-            }
-
-            /**
-             * Gets the value of the staffLocalId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getStaffLocalId() {
-                return staffLocalId;
-            }
-
-            /**
-             * Sets the value of the staffLocalId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setStaffLocalId(String value) {
-                this.staffLocalId = value;
-            }
-
-            /**
-             * Gets the value of the name property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link NameOfRecordType }
-             *     
-             */
-            public NameOfRecordType getName() {
-                return name;
-            }
-
-            /**
-             * Sets the value of the name property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link NameOfRecordType }
-             *     
-             */
-            public void setName(NameOfRecordType value) {
-                this.name = value;
-            }
-
-            /**
-             * Gets the value of the association property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getAssociation() {
-                return association;
-            }
-
-            /**
-             * Sets the value of the association property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setAssociation(String value) {
-                this.association = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TeachingGroupPeriod" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="TimeTableCellRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
-     *                   &lt;element name="RoomNumber" type="{http://www.sifassociation.org/au/datamodel/3.4}HomeroomNumberType" minOccurs="0"/>
-     *                   &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *                   &lt;element name="DayId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *                   &lt;element name="PeriodId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-     *                   &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
-     *                   &lt;element name="CellType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "teachingGroupPeriod"
-    })
-    public static class TeachingGroupPeriodList {
-
-        @XmlElement(name = "TeachingGroupPeriod", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<TeachingGroupType.TeachingGroupPeriodList.TeachingGroupPeriod> teachingGroupPeriod;
-
-        /**
-         * Gets the value of the teachingGroupPeriod property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the teachingGroupPeriod property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getTeachingGroupPeriod().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link TeachingGroupType.TeachingGroupPeriodList.TeachingGroupPeriod }
-         * 
-         * 
-         */
-        public List<TeachingGroupType.TeachingGroupPeriodList.TeachingGroupPeriod> getTeachingGroupPeriod() {
-            if (teachingGroupPeriod == null) {
-                teachingGroupPeriod = new ArrayList<TeachingGroupType.TeachingGroupPeriodList.TeachingGroupPeriod>();
-            }
-            return this.teachingGroupPeriod;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="TimeTableCellRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
-         *         &lt;element name="RoomNumber" type="{http://www.sifassociation.org/au/datamodel/3.4}HomeroomNumberType" minOccurs="0"/>
-         *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-         *         &lt;element name="DayId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-         *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
-         *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
-         *         &lt;element name="CellType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "timeTableCellRefId",
-            "roomNumber",
-            "staffLocalId",
-            "dayId",
-            "periodId",
-            "startTime",
-            "cellType"
-        })
-        public static class TeachingGroupPeriod {
-
-            @XmlElementRef(name = "TimeTableCellRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> timeTableCellRefId;
-            @XmlElementRef(name = "RoomNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> roomNumber;
-            @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> staffLocalId;
-            @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            protected String dayId;
-            @XmlElementRef(name = "PeriodId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> periodId;
-            @XmlElementRef(name = "StartTime", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<XMLGregorianCalendar> startTime;
-            @XmlElementRef(name = "CellType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> cellType;
-
-            /**
-             * Gets the value of the timeTableCellRefId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getTimeTableCellRefId() {
-                return timeTableCellRefId;
-            }
-
-            /**
-             * Sets the value of the timeTableCellRefId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setTimeTableCellRefId(JAXBElement<String> value) {
-                this.timeTableCellRefId = value;
-            }
-
-            /**
-             * Gets the value of the roomNumber property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getRoomNumber() {
-                return roomNumber;
-            }
-
-            /**
-             * Sets the value of the roomNumber property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setRoomNumber(JAXBElement<String> value) {
-                this.roomNumber = value;
-            }
-
-            /**
-             * Gets the value of the staffLocalId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getStaffLocalId() {
-                return staffLocalId;
-            }
-
-            /**
-             * Sets the value of the staffLocalId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setStaffLocalId(JAXBElement<String> value) {
-                this.staffLocalId = value;
-            }
-
-            /**
-             * Gets the value of the dayId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getDayId() {
-                return dayId;
-            }
-
-            /**
-             * Sets the value of the dayId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setDayId(String value) {
-                this.dayId = value;
-            }
-
-            /**
-             * Gets the value of the periodId property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getPeriodId() {
-                return periodId;
-            }
-
-            /**
-             * Sets the value of the periodId property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setPeriodId(JAXBElement<String> value) {
-                this.periodId = value;
-            }
-
-            /**
-             * Gets the value of the startTime property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-             *     
-             */
-            public JAXBElement<XMLGregorianCalendar> getStartTime() {
-                return startTime;
-            }
-
-            /**
-             * Sets the value of the startTime property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-             *     
-             */
-            public void setStartTime(JAXBElement<XMLGregorianCalendar> value) {
-                this.startTime = value;
-            }
-
-            /**
-             * Gets the value of the cellType property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getCellType() {
-                return cellType;
-            }
-
-            /**
-             * Sets the value of the cellType property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setCellType(JAXBElement<String> value) {
-                this.cellType = value;
-            }
-
-        }
-
     }
 
 }

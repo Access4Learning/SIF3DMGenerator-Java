@@ -22,33 +22,13 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsImmunisationCertificateStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsImmunisationCertificateStatusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsImmunisationCertificateStatusType {
 
-
-    /**
-     * Complete
-     * 
-     */
     C,
-
-    /**
-     * Incomplete
-     * 
-     */
     I,
-
-    /**
-     * Not Sighted
-     * 
-     */
     N,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

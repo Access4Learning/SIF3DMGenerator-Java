@@ -28,69 +28,19 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsStateTerritoryCodeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsStateTerritoryCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsStateTerritoryCodeType {
 
-
-    /**
-     * Australian Capital Territory
-     * 
-     */
     ACT,
-
-    /**
-     * New South Wales
-     * 
-     */
     NSW,
-
-    /**
-     * Northern Territory
-     * 
-     */
     NT,
-
-    /**
-     * Queensland
-     * 
-     */
     QLD,
-
-    /**
-     * South Australia
-     * 
-     */
     SA,
-
-    /**
-     * Tasmania
-     * 
-     */
     TAS,
-
-    /**
-     * Victoria
-     * 
-     */
     VIC,
-
-    /**
-     * Western Australia
-     * 
-     */
     WA,
-
-    /**
-     * Not Provided
-     * 
-     */
     XXX,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

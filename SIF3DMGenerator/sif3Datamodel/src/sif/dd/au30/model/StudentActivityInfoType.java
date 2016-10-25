@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Co-curricular or extra-curricular activities (e.g., student organizations, inter-school sports, athletics, publications, band, orchestra, and service activities) in which students may participate.
- * 
  * <p>Java class for StudentActivityInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -28,26 +26,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="StudentActivityType" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsActivityInvolvementCodeType" minOccurs="0"/>
- *                   &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="StudentActivityType" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentActivityType" minOccurs="0"/>
  *         &lt;element name="StudentActivityLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelsType" minOccurs="0"/>
- *         &lt;element name="CurricularStatus" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsActivityTypeType" minOccurs="0"/>
- *         &lt;element name="Location" type="{http://www.sifassociation.org/au/datamodel/3.4}LocationType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
+ *         &lt;element name="CurricularStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsActivityTypeType" minOccurs="0"/>
+ *         &lt;element name="Location" type="{http://www.sifassociation.org/datamodel/au/3.4}LocationType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -56,7 +43,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentActivityInfoType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "StudentActivityInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "title",
     "description",
     "studentActivityType",
@@ -69,25 +56,25 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentActivityInfoType {
 
-    @XmlElement(name = "Title", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String title;
-    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "StudentActivityType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-    protected StudentActivityInfoType.StudentActivityType studentActivityType;
-    @XmlElementRef(name = "StudentActivityLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElement(name = "StudentActivityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected StudentActivityType studentActivityType;
+    @XmlElementRef(name = "StudentActivityLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentActivityLevel;
-    @XmlElementRef(name = "YearLevels", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<YearLevelsType> yearLevels;
-    @XmlElementRef(name = "CurricularStatus", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CurricularStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> curricularStatus;
-    @XmlElementRef(name = "Location", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Location", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LocationType> location;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -146,10 +133,10 @@ public class StudentActivityInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link StudentActivityInfoType.StudentActivityType }
+     *     {@link StudentActivityType }
      *     
      */
-    public StudentActivityInfoType.StudentActivityType getStudentActivityType() {
+    public StudentActivityType getStudentActivityType() {
         return studentActivityType;
     }
 
@@ -158,10 +145,10 @@ public class StudentActivityInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link StudentActivityInfoType.StudentActivityType }
+     *     {@link StudentActivityType }
      *     
      */
-    public void setStudentActivityType(StudentActivityInfoType.StudentActivityType value) {
+    public void setStudentActivityType(StudentActivityType value) {
         this.studentActivityType = value;
     }
 
@@ -331,90 +318,6 @@ public class StudentActivityInfoType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsActivityInvolvementCodeType" minOccurs="0"/>
-     *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "code",
-        "otherCodeList"
-    })
-    public static class StudentActivityType {
-
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String code;
-        @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<OtherCodeListType> otherCodeList;
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        /**
-         * Gets the value of the otherCodeList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public JAXBElement<OtherCodeListType> getOtherCodeList() {
-            return otherCodeList;
-        }
-
-        /**
-         * Sets the value of the otherCodeList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
-            this.otherCodeList = value;
-        }
-
     }
 
 }

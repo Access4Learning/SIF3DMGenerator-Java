@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.
- * 
  * <p>Java class for PhoneNumberType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -28,9 +26,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="Number" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Extension" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ListedStatus" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ListedStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="Preference" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsTelephoneNumberTypeType" />
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsTelephoneNumberTypeType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -39,21 +38,24 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhoneNumberType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "PhoneNumberType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "number",
     "extension",
-    "listedStatus"
+    "listedStatus",
+    "preference"
 })
 public class PhoneNumberType {
 
-    @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String number;
-    @XmlElementRef(name = "Extension", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Extension", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> extension;
-    @XmlElementRef(name = "ListedStatus", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ListedStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> listedStatus;
+    @XmlElementRef(name = "Preference", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Long> preference;
     @XmlAttribute(name = "Type", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String type;
@@ -128,6 +130,30 @@ public class PhoneNumberType {
      */
     public void setListedStatus(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.listedStatus = value;
+    }
+
+    /**
+     * Gets the value of the preference property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link Long }{@code >}
+     *     
+     */
+    public JAXBElement<Long> getPreference() {
+        return preference;
+    }
+
+    /**
+     * Sets the value of the preference property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link Long }{@code >}
+     *     
+     */
+    public void setPreference(JAXBElement<Long> value) {
+        this.preference = value;
     }
 
     /**

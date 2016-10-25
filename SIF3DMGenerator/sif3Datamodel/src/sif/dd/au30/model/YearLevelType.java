@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Year or academic level.
- * 
  * <p>Java class for YearLevelType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsYearLevelCodeType" minOccurs="0"/>
+ *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYearLevelCodeType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,12 +29,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "YearLevelType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "YearLevelType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "code"
 })
 public class YearLevelType {
 
-    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String code;
 

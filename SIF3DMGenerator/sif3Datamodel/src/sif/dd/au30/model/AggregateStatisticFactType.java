@@ -2,8 +2,6 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object is the actual value of a statistical measurement. It is always associated with one statistic and one or more characteristics.
- * 
  * <p>Java class for AggregateStatisticFactType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,18 +23,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AggregateStatisticInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="Characteristics" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="AggregateCharacteristicInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="AggregateStatisticInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="Characteristics" type="{http://www.sifassociation.org/datamodel/au/3.4}CharacteristicsType" minOccurs="0"/>
  *         &lt;element name="Excluded" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -48,10 +34,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -60,7 +46,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AggregateStatisticFactType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "AggregateStatisticFactType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "aggregateStatisticInfoRefId",
     "characteristics",
     "excluded",
@@ -70,18 +56,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AggregateStatisticFactType {
 
-    @XmlElement(name = "AggregateStatisticInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "AggregateStatisticInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String aggregateStatisticInfoRefId;
-    @XmlElement(name = "Characteristics", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-    protected AggregateStatisticFactType.Characteristics characteristics;
-    @XmlElementRef(name = "Excluded", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElement(name = "Characteristics", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected CharacteristicsType characteristics;
+    @XmlElementRef(name = "Excluded", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> excluded;
-    @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal value;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -116,10 +102,10 @@ public class AggregateStatisticFactType {
      * 
      * @return
      *     possible object is
-     *     {@link AggregateStatisticFactType.Characteristics }
+     *     {@link CharacteristicsType }
      *     
      */
-    public AggregateStatisticFactType.Characteristics getCharacteristics() {
+    public CharacteristicsType getCharacteristics() {
         return characteristics;
     }
 
@@ -128,10 +114,10 @@ public class AggregateStatisticFactType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AggregateStatisticFactType.Characteristics }
+     *     {@link CharacteristicsType }
      *     
      */
-    public void setCharacteristics(AggregateStatisticFactType.Characteristics value) {
+    public void setCharacteristics(CharacteristicsType value) {
         this.characteristics = value;
     }
 
@@ -253,67 +239,6 @@ public class AggregateStatisticFactType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="AggregateCharacteristicInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "aggregateCharacteristicInfoRefId"
-    })
-    public static class Characteristics {
-
-        @XmlElement(name = "AggregateCharacteristicInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected List<String> aggregateCharacteristicInfoRefId;
-
-        /**
-         * Gets the value of the aggregateCharacteristicInfoRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the aggregateCharacteristicInfoRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getAggregateCharacteristicInfoRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getAggregateCharacteristicInfoRefId() {
-            if (aggregateCharacteristicInfoRefId == null) {
-                aggregateCharacteristicInfoRefId = new ArrayList<String>();
-            }
-            return this.aggregateCharacteristicInfoRefId;
-        }
-
     }
 
 }

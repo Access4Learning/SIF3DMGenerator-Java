@@ -2,8 +2,6 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -19,9 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object complements the Invoice object, and contains information about the payment of a Invoice object.
- * 
  * <p>Java class for PaymentReceiptType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -43,50 +38,25 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="InvoiceRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="VendorInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="DebtorRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="InvoiceRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="VendorInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="DebtorRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="TransactionDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="TransactionAmount" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>MonetaryAmountType">
- *                 &lt;attribute name="Type" use="required">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                       &lt;enumeration value="Debit"/>
- *                       &lt;enumeration value="Credit"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="TransactionAmount" type="{http://www.sifassociation.org/datamodel/au/3.4}DebitOrCreditAmountType" minOccurs="0"/>
  *         &lt;element name="ReceivedTransactionId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="FinancialAccountRefIdList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="FinancialAccountRefIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}FinancialAccountRefIdListType" minOccurs="0"/>
  *         &lt;element name="TransactionDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="TaxRate" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="TaxAmount" type="{http://www.sifassociation.org/au/datamodel/3.4}MonetaryAmountType" minOccurs="0"/>
+ *         &lt;element name="TaxAmount" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
  *         &lt;element name="TransactionMethod" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ChequeNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="TransactionNote" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/au/datamodel/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -95,7 +65,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PaymentReceiptType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "PaymentReceiptType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "transactionType",
     "invoiceRefId",
     "vendorInfoRefId",
@@ -117,45 +87,45 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class PaymentReceiptType {
 
-    @XmlElement(name = "TransactionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "TransactionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String transactionType;
-    @XmlElementRef(name = "InvoiceRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "InvoiceRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> invoiceRefId;
-    @XmlElementRef(name = "VendorInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VendorInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> vendorInfoRefId;
-    @XmlElementRef(name = "DebtorRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "DebtorRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> debtorRefId;
-    @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> chargedLocationInfoRefId;
-    @XmlElement(name = "TransactionDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "TransactionDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar transactionDate;
-    @XmlElement(name = "TransactionAmount", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-    protected PaymentReceiptType.TransactionAmount transactionAmount;
-    @XmlElement(name = "ReceivedTransactionId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "TransactionAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected DebitOrCreditAmountType transactionAmount;
+    @XmlElement(name = "ReceivedTransactionId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String receivedTransactionId;
-    @XmlElementRef(name = "FinancialAccountRefIdList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<PaymentReceiptType.FinancialAccountRefIdList> financialAccountRefIdList;
-    @XmlElementRef(name = "TransactionDescription", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FinancialAccountRefIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<FinancialAccountRefIdListType> financialAccountRefIdList;
+    @XmlElementRef(name = "TransactionDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> transactionDescription;
-    @XmlElementRef(name = "TaxRate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TaxRate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> taxRate;
-    @XmlElementRef(name = "TaxAmount", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TaxAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<MonetaryAmountType> taxAmount;
-    @XmlElementRef(name = "TransactionMethod", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TransactionMethod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> transactionMethod;
-    @XmlElementRef(name = "ChequeNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ChequeNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> chequeNumber;
-    @XmlElementRef(name = "TransactionNote", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TransactionNote", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> transactionNote;
-    @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> accountingPeriod;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -310,10 +280,10 @@ public class PaymentReceiptType {
      * 
      * @return
      *     possible object is
-     *     {@link PaymentReceiptType.TransactionAmount }
+     *     {@link DebitOrCreditAmountType }
      *     
      */
-    public PaymentReceiptType.TransactionAmount getTransactionAmount() {
+    public DebitOrCreditAmountType getTransactionAmount() {
         return transactionAmount;
     }
 
@@ -322,10 +292,10 @@ public class PaymentReceiptType {
      * 
      * @param value
      *     allowed object is
-     *     {@link PaymentReceiptType.TransactionAmount }
+     *     {@link DebitOrCreditAmountType }
      *     
      */
-    public void setTransactionAmount(PaymentReceiptType.TransactionAmount value) {
+    public void setTransactionAmount(DebitOrCreditAmountType value) {
         this.transactionAmount = value;
     }
 
@@ -358,10 +328,10 @@ public class PaymentReceiptType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link PaymentReceiptType.FinancialAccountRefIdList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link FinancialAccountRefIdListType }{@code >}
      *     
      */
-    public JAXBElement<PaymentReceiptType.FinancialAccountRefIdList> getFinancialAccountRefIdList() {
+    public JAXBElement<FinancialAccountRefIdListType> getFinancialAccountRefIdList() {
         return financialAccountRefIdList;
     }
 
@@ -370,10 +340,10 @@ public class PaymentReceiptType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link PaymentReceiptType.FinancialAccountRefIdList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link FinancialAccountRefIdListType }{@code >}
      *     
      */
-    public void setFinancialAccountRefIdList(JAXBElement<PaymentReceiptType.FinancialAccountRefIdList> value) {
+    public void setFinancialAccountRefIdList(JAXBElement<FinancialAccountRefIdListType> value) {
         this.financialAccountRefIdList = value;
     }
 
@@ -615,130 +585,6 @@ public class PaymentReceiptType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "financialAccountRefId"
-    })
-    public static class FinancialAccountRefIdList {
-
-        @XmlElement(name = "FinancialAccountRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected List<String> financialAccountRefId;
-
-        /**
-         * Gets the value of the financialAccountRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the financialAccountRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getFinancialAccountRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getFinancialAccountRefId() {
-            if (financialAccountRefId == null) {
-                financialAccountRefId = new ArrayList<String>();
-            }
-            return this.financialAccountRefId;
-        }
-
-    }
-
-
-    /**
-     * Amount received.
-     * 
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>MonetaryAmountType">
-     *       &lt;attribute name="Type" use="required">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *             &lt;enumeration value="Debit"/>
-     *             &lt;enumeration value="Credit"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class TransactionAmount
-        extends MonetaryAmountType
-    {
-
-        @XmlAttribute(name = "Type", required = true)
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String type;
-
-        /**
-         * Gets the value of the type property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getType() {
-            return type;
-        }
-
-        /**
-         * Sets the value of the type property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setType(String value) {
-            this.type = value;
-        }
-
     }
 
 }

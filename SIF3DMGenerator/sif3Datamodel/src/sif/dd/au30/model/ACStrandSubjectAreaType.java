@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Subject matter of a student's study as codified under the Australian Curriculum.
- * 
  * <p>Java class for ACStrandSubjectAreaType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,8 +19,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ACStrand" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsACStrandType" minOccurs="0"/>
- *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/au/datamodel/3.4}SubjectAreaType" minOccurs="0"/>
+ *         &lt;element name="ACStrand" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsACStrandType" minOccurs="0"/>
+ *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}SubjectAreaType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,15 +30,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ACStrandSubjectAreaType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "ACStrandSubjectAreaType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "acStrand",
     "subjectArea"
 })
 public class ACStrandSubjectAreaType {
 
-    @XmlElement(name = "ACStrand", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "ACStrand", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsACStrandType acStrand;
-    @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SubjectAreaType> subjectArea;
 
     /**

@@ -22,33 +22,13 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsEnrollmentTimeFrameType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsEnrollmentTimeFrameType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsEnrollmentTimeFrameType {
 
-
-    /**
-     * Current
-     * 
-     */
     C,
-
-    /**
-     * Future
-     * 
-     */
     F,
-
-    /**
-     * Historical
-     * 
-     */
     H,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

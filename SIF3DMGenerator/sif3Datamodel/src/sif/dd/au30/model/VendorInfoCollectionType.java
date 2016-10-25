@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="VendorInfo" type="{http://www.sifassociation.org/au/datamodel/3.4}VendorInfoType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="VendorInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}VendorInfoType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VendorInfoCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "VendorInfoCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "vendorInfo"
 })
 public class VendorInfoCollectionType {
 
-    @XmlElement(name = "VendorInfo", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "VendorInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<VendorInfoType> vendorInfo;
 
     /**

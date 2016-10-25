@@ -8,11 +8,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Extends BaseNameType to allow for Type attribute values excluding "name of record."  Used for other names to
- *         be included in addition to the name of record in objects.
- *       
- * 
  * <p>Java class for OtherNameType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,8 +15,8 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="OtherNameType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://www.sifassociation.org/au/datamodel/3.4}BaseNameType">
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsNameUsageTypeType" />
+ *     &lt;extension base="{http://www.sifassociation.org/datamodel/au/3.4}BaseNameType">
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNameUsageTypeType" />
  *     &lt;/extension>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -30,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OtherNameType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "OtherNameType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 public class OtherNameType
     extends BaseNameType
 {

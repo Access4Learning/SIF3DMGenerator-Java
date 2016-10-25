@@ -2,28 +2,18 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         The work assigned to students, an educational event planned by a teacher to deliver a particular educational concept
- *         or skill.
- *       
- * 
  * <p>Java class for ActivityType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -35,160 +25,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Preamble" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="TechnicalRequirements" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TechnicalRequirement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SoftwareRequirementList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="SoftwareRequirement" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="SoftwareTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                             &lt;element name="Version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                             &lt;element name="Vendor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                             &lt;element name="OS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="EssentialMaterials" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="EssentialMaterial" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="LearningObjectives" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LearningObjective" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="LearningStandards" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LearningStandardItemRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/au/datamodel/3.4}SubjectAreaType" minOccurs="0"/>
- *         &lt;element name="Prerequisites" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Prerequisite" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Students" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SourceObjects" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="SourceObject" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
- *                           &lt;attribute name="SIF_RefObject" use="required">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                                 &lt;enumeration value="Assessment"/>
- *                                 &lt;enumeration value="LearningResource"/>
- *                                 &lt;enumeration value="Activity"/>
- *                                 &lt;enumeration value="Lesson"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="TechnicalRequirements" type="{http://www.sifassociation.org/datamodel/au/3.4}TechnicalRequirementsType" minOccurs="0"/>
+ *         &lt;element name="SoftwareRequirementList" type="{http://www.sifassociation.org/datamodel/au/3.4}SoftwareRequirementListType" minOccurs="0"/>
+ *         &lt;element name="EssentialMaterials" type="{http://www.sifassociation.org/datamodel/au/3.4}EssentialMaterialsType" minOccurs="0"/>
+ *         &lt;element name="LearningObjectives" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningObjectivesType" minOccurs="0"/>
+ *         &lt;element name="LearningStandards" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardsType" minOccurs="0"/>
+ *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}SubjectAreaType" minOccurs="0"/>
+ *         &lt;element name="Prerequisites" type="{http://www.sifassociation.org/datamodel/au/3.4}PrerequisitesType" minOccurs="0"/>
+ *         &lt;element name="Students" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentsType" minOccurs="0"/>
+ *         &lt;element name="SourceObjects" type="{http://www.sifassociation.org/datamodel/au/3.4}SourceObjectsType" minOccurs="0"/>
  *         &lt;element name="Points" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="ActivityTime" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *                   &lt;element name="Duration" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSUnsignedIntOrEmpty">
- *                           &lt;attribute name="Units" use="required">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                                 &lt;enumeration value="week"/>
- *                                 &lt;enumeration value="day"/>
- *                                 &lt;enumeration value="hour"/>
- *                                 &lt;enumeration value="minute"/>
- *                                 &lt;enumeration value="second"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *                   &lt;element name="FinishDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *                   &lt;element name="DueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="ActivityTime" type="{http://www.sifassociation.org/datamodel/au/3.4}ActivityTimeType" minOccurs="0"/>
+ *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="MaxAttemptsAllowed" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="ActivityWeight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="Evaluation" minOccurs="0">
@@ -210,22 +58,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="LearningResources" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LearningResourceRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="LearningResources" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningResourcesType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang use="required""/>
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -234,7 +71,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ActivityType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "ActivityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "title",
     "preamble",
     "technicalRequirements",
@@ -258,51 +95,49 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ActivityType {
 
-    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> title;
-    @XmlElementRef(name = "Preamble", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Preamble", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> preamble;
-    @XmlElementRef(name = "TechnicalRequirements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.TechnicalRequirements> technicalRequirements;
-    @XmlElementRef(name = "SoftwareRequirementList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.SoftwareRequirementList> softwareRequirementList;
-    @XmlElementRef(name = "EssentialMaterials", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.EssentialMaterials> essentialMaterials;
-    @XmlElementRef(name = "LearningObjectives", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.LearningObjectives> learningObjectives;
-    @XmlElementRef(name = "LearningStandards", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.LearningStandards> learningStandards;
-    @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TechnicalRequirements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<TechnicalRequirementsType> technicalRequirements;
+    @XmlElementRef(name = "SoftwareRequirementList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SoftwareRequirementListType> softwareRequirementList;
+    @XmlElementRef(name = "EssentialMaterials", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<EssentialMaterialsType> essentialMaterials;
+    @XmlElementRef(name = "LearningObjectives", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LearningObjectivesType> learningObjectives;
+    @XmlElementRef(name = "LearningStandards", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LearningStandardsType> learningStandards;
+    @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SubjectAreaType> subjectArea;
-    @XmlElementRef(name = "Prerequisites", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.Prerequisites> prerequisites;
-    @XmlElementRef(name = "Students", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.Students> students;
-    @XmlElementRef(name = "SourceObjects", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.SourceObjects> sourceObjects;
-    @XmlElementRef(name = "Points", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Prerequisites", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PrerequisitesType> prerequisites;
+    @XmlElementRef(name = "Students", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentsType> students;
+    @XmlElementRef(name = "SourceObjects", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SourceObjectsType> sourceObjects;
+    @XmlElementRef(name = "Points", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> points;
-    @XmlElement(name = "ActivityTime", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-    protected ActivityType.ActivityTime activityTime;
-    @XmlElementRef(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElement(name = "ActivityTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected ActivityTimeType activityTime;
+    @XmlElementRef(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assessmentRefId;
-    @XmlElementRef(name = "MaxAttemptsAllowed", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MaxAttemptsAllowed", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> maxAttemptsAllowed;
-    @XmlElementRef(name = "ActivityWeight", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ActivityWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> activityWeight;
-    @XmlElementRef(name = "Evaluation", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Evaluation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ActivityType.Evaluation> evaluation;
-    @XmlElementRef(name = "LearningResources", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<ActivityType.LearningResources> learningResources;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LearningResources", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LearningResourcesType> learningResources;
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String refId;
-    @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace", required = true)
-    protected String lang;
 
     /**
      * Gets the value of the title property.
@@ -357,10 +192,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.TechnicalRequirements }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TechnicalRequirementsType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.TechnicalRequirements> getTechnicalRequirements() {
+    public JAXBElement<TechnicalRequirementsType> getTechnicalRequirements() {
         return technicalRequirements;
     }
 
@@ -369,10 +204,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.TechnicalRequirements }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TechnicalRequirementsType }{@code >}
      *     
      */
-    public void setTechnicalRequirements(JAXBElement<ActivityType.TechnicalRequirements> value) {
+    public void setTechnicalRequirements(JAXBElement<TechnicalRequirementsType> value) {
         this.technicalRequirements = value;
     }
 
@@ -381,10 +216,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.SoftwareRequirementList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SoftwareRequirementListType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.SoftwareRequirementList> getSoftwareRequirementList() {
+    public JAXBElement<SoftwareRequirementListType> getSoftwareRequirementList() {
         return softwareRequirementList;
     }
 
@@ -393,10 +228,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.SoftwareRequirementList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SoftwareRequirementListType }{@code >}
      *     
      */
-    public void setSoftwareRequirementList(JAXBElement<ActivityType.SoftwareRequirementList> value) {
+    public void setSoftwareRequirementList(JAXBElement<SoftwareRequirementListType> value) {
         this.softwareRequirementList = value;
     }
 
@@ -405,10 +240,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.EssentialMaterials }{@code >}
+     *     {@link JAXBElement }{@code <}{@link EssentialMaterialsType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.EssentialMaterials> getEssentialMaterials() {
+    public JAXBElement<EssentialMaterialsType> getEssentialMaterials() {
         return essentialMaterials;
     }
 
@@ -417,10 +252,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.EssentialMaterials }{@code >}
+     *     {@link JAXBElement }{@code <}{@link EssentialMaterialsType }{@code >}
      *     
      */
-    public void setEssentialMaterials(JAXBElement<ActivityType.EssentialMaterials> value) {
+    public void setEssentialMaterials(JAXBElement<EssentialMaterialsType> value) {
         this.essentialMaterials = value;
     }
 
@@ -429,10 +264,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.LearningObjectives }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningObjectivesType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.LearningObjectives> getLearningObjectives() {
+    public JAXBElement<LearningObjectivesType> getLearningObjectives() {
         return learningObjectives;
     }
 
@@ -441,10 +276,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.LearningObjectives }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningObjectivesType }{@code >}
      *     
      */
-    public void setLearningObjectives(JAXBElement<ActivityType.LearningObjectives> value) {
+    public void setLearningObjectives(JAXBElement<LearningObjectivesType> value) {
         this.learningObjectives = value;
     }
 
@@ -453,10 +288,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.LearningStandards }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.LearningStandards> getLearningStandards() {
+    public JAXBElement<LearningStandardsType> getLearningStandards() {
         return learningStandards;
     }
 
@@ -465,10 +300,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.LearningStandards }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}
      *     
      */
-    public void setLearningStandards(JAXBElement<ActivityType.LearningStandards> value) {
+    public void setLearningStandards(JAXBElement<LearningStandardsType> value) {
         this.learningStandards = value;
     }
 
@@ -501,10 +336,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.Prerequisites }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PrerequisitesType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.Prerequisites> getPrerequisites() {
+    public JAXBElement<PrerequisitesType> getPrerequisites() {
         return prerequisites;
     }
 
@@ -513,10 +348,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.Prerequisites }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PrerequisitesType }{@code >}
      *     
      */
-    public void setPrerequisites(JAXBElement<ActivityType.Prerequisites> value) {
+    public void setPrerequisites(JAXBElement<PrerequisitesType> value) {
         this.prerequisites = value;
     }
 
@@ -525,10 +360,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.Students }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StudentsType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.Students> getStudents() {
+    public JAXBElement<StudentsType> getStudents() {
         return students;
     }
 
@@ -537,10 +372,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.Students }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StudentsType }{@code >}
      *     
      */
-    public void setStudents(JAXBElement<ActivityType.Students> value) {
+    public void setStudents(JAXBElement<StudentsType> value) {
         this.students = value;
     }
 
@@ -549,10 +384,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.SourceObjects }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SourceObjectsType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.SourceObjects> getSourceObjects() {
+    public JAXBElement<SourceObjectsType> getSourceObjects() {
         return sourceObjects;
     }
 
@@ -561,10 +396,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.SourceObjects }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SourceObjectsType }{@code >}
      *     
      */
-    public void setSourceObjects(JAXBElement<ActivityType.SourceObjects> value) {
+    public void setSourceObjects(JAXBElement<SourceObjectsType> value) {
         this.sourceObjects = value;
     }
 
@@ -597,10 +432,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link ActivityType.ActivityTime }
+     *     {@link ActivityTimeType }
      *     
      */
-    public ActivityType.ActivityTime getActivityTime() {
+    public ActivityTimeType getActivityTime() {
         return activityTime;
     }
 
@@ -609,10 +444,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link ActivityType.ActivityTime }
+     *     {@link ActivityTimeType }
      *     
      */
-    public void setActivityTime(ActivityType.ActivityTime value) {
+    public void setActivityTime(ActivityTimeType value) {
         this.activityTime = value;
     }
 
@@ -717,10 +552,10 @@ public class ActivityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.LearningResources }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningResourcesType }{@code >}
      *     
      */
-    public JAXBElement<ActivityType.LearningResources> getLearningResources() {
+    public JAXBElement<LearningResourcesType> getLearningResources() {
         return learningResources;
     }
 
@@ -729,10 +564,10 @@ public class ActivityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ActivityType.LearningResources }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningResourcesType }{@code >}
      *     
      */
-    public void setLearningResources(JAXBElement<ActivityType.LearningResources> value) {
+    public void setLearningResources(JAXBElement<LearningResourcesType> value) {
         this.learningResources = value;
     }
 
@@ -808,366 +643,6 @@ public class ActivityType {
         this.refId = value;
     }
 
-    /**
-     * Gets the value of the lang property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLang() {
-        return lang;
-    }
-
-    /**
-     * Sets the value of the lang property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLang(String value) {
-        this.lang = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-     *         &lt;element name="Duration" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSUnsignedIntOrEmpty">
-     *                 &lt;attribute name="Units" use="required">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *                       &lt;enumeration value="week"/>
-     *                       &lt;enumeration value="day"/>
-     *                       &lt;enumeration value="hour"/>
-     *                       &lt;enumeration value="minute"/>
-     *                       &lt;enumeration value="second"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-     *         &lt;element name="FinishDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-     *         &lt;element name="DueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "creationDate",
-        "duration",
-        "startDate",
-        "finishDate",
-        "dueDate"
-    })
-    public static class ActivityTime {
-
-        @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar creationDate;
-        @XmlElementRef(name = "Duration", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<ActivityType.ActivityTime.Duration> duration;
-        @XmlElementRef(name = "StartDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<XMLGregorianCalendar> startDate;
-        @XmlElementRef(name = "FinishDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<XMLGregorianCalendar> finishDate;
-        @XmlElementRef(name = "DueDate", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<XMLGregorianCalendar> dueDate;
-
-        /**
-         * Gets the value of the creationDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
-         */
-        public XMLGregorianCalendar getCreationDate() {
-            return creationDate;
-        }
-
-        /**
-         * Sets the value of the creationDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
-         */
-        public void setCreationDate(XMLGregorianCalendar value) {
-            this.creationDate = value;
-        }
-
-        /**
-         * Gets the value of the duration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link ActivityType.ActivityTime.Duration }{@code >}
-         *     
-         */
-        public JAXBElement<ActivityType.ActivityTime.Duration> getDuration() {
-            return duration;
-        }
-
-        /**
-         * Sets the value of the duration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link ActivityType.ActivityTime.Duration }{@code >}
-         *     
-         */
-        public void setDuration(JAXBElement<ActivityType.ActivityTime.Duration> value) {
-            this.duration = value;
-        }
-
-        /**
-         * Gets the value of the startDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *     
-         */
-        public JAXBElement<XMLGregorianCalendar> getStartDate() {
-            return startDate;
-        }
-
-        /**
-         * Sets the value of the startDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *     
-         */
-        public void setStartDate(JAXBElement<XMLGregorianCalendar> value) {
-            this.startDate = value;
-        }
-
-        /**
-         * Gets the value of the finishDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *     
-         */
-        public JAXBElement<XMLGregorianCalendar> getFinishDate() {
-            return finishDate;
-        }
-
-        /**
-         * Sets the value of the finishDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *     
-         */
-        public void setFinishDate(JAXBElement<XMLGregorianCalendar> value) {
-            this.finishDate = value;
-        }
-
-        /**
-         * Gets the value of the dueDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *     
-         */
-        public JAXBElement<XMLGregorianCalendar> getDueDate() {
-            return dueDate;
-        }
-
-        /**
-         * Sets the value of the dueDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
-         *     
-         */
-        public void setDueDate(JAXBElement<XMLGregorianCalendar> value) {
-            this.dueDate = value;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSUnsignedIntOrEmpty">
-         *       &lt;attribute name="Units" use="required">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-         *             &lt;enumeration value="week"/>
-         *             &lt;enumeration value="day"/>
-         *             &lt;enumeration value="hour"/>
-         *             &lt;enumeration value="minute"/>
-         *             &lt;enumeration value="second"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class Duration {
-
-            @XmlValue
-            protected String value;
-            @XmlAttribute(name = "Units", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String units;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the units property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getUnits() {
-                return units;
-            }
-
-            /**
-             * Sets the value of the units property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setUnits(String value) {
-                this.units = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="EssentialMaterial" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "essentialMaterial"
-    })
-    public static class EssentialMaterials {
-
-        @XmlElement(name = "EssentialMaterial", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<String> essentialMaterial;
-
-        /**
-         * Gets the value of the essentialMaterial property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the essentialMaterial property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getEssentialMaterial().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getEssentialMaterial() {
-            if (essentialMaterial == null) {
-                essentialMaterial = new ArrayList<String>();
-            }
-            return this.essentialMaterial;
-        }
-
-    }
-
 
     /**
      * <p>Java class for anonymous complex type.
@@ -1202,7 +677,7 @@ public class ActivityType {
     })
     public static class Evaluation {
 
-        @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> description;
         @XmlAttribute(name = "EvaluationType", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -1254,744 +729,6 @@ public class ActivityType {
          */
         public void setEvaluationType(String value) {
             this.evaluationType = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="LearningObjective" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "learningObjective"
-    })
-    public static class LearningObjectives {
-
-        @XmlElement(name = "LearningObjective", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<String> learningObjective;
-
-        /**
-         * Gets the value of the learningObjective property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the learningObjective property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getLearningObjective().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getLearningObjective() {
-            if (learningObjective == null) {
-                learningObjective = new ArrayList<String>();
-            }
-            return this.learningObjective;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="LearningResourceRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "learningResourceRefId"
-    })
-    public static class LearningResources {
-
-        @XmlElement(name = "LearningResourceRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected List<String> learningResourceRefId;
-
-        /**
-         * Gets the value of the learningResourceRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the learningResourceRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getLearningResourceRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getLearningResourceRefId() {
-            if (learningResourceRefId == null) {
-                learningResourceRefId = new ArrayList<String>();
-            }
-            return this.learningResourceRefId;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="LearningStandardItemRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "learningStandardItemRefId"
-    })
-    public static class LearningStandards {
-
-        @XmlElement(name = "LearningStandardItemRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected List<String> learningStandardItemRefId;
-
-        /**
-         * Gets the value of the learningStandardItemRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the learningStandardItemRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getLearningStandardItemRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getLearningStandardItemRefId() {
-            if (learningStandardItemRefId == null) {
-                learningStandardItemRefId = new ArrayList<String>();
-            }
-            return this.learningStandardItemRefId;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Prerequisite" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "prerequisite"
-    })
-    public static class Prerequisites {
-
-        @XmlElement(name = "Prerequisite", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<String> prerequisite;
-
-        /**
-         * Gets the value of the prerequisite property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the prerequisite property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getPrerequisite().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getPrerequisite() {
-            if (prerequisite == null) {
-                prerequisite = new ArrayList<String>();
-            }
-            return this.prerequisite;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="SoftwareRequirement" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="SoftwareTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                   &lt;element name="Version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                   &lt;element name="Vendor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                   &lt;element name="OS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "softwareRequirement"
-    })
-    public static class SoftwareRequirementList {
-
-        @XmlElement(name = "SoftwareRequirement", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<ActivityType.SoftwareRequirementList.SoftwareRequirement> softwareRequirement;
-
-        /**
-         * Gets the value of the softwareRequirement property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the softwareRequirement property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getSoftwareRequirement().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link ActivityType.SoftwareRequirementList.SoftwareRequirement }
-         * 
-         * 
-         */
-        public List<ActivityType.SoftwareRequirementList.SoftwareRequirement> getSoftwareRequirement() {
-            if (softwareRequirement == null) {
-                softwareRequirement = new ArrayList<ActivityType.SoftwareRequirementList.SoftwareRequirement>();
-            }
-            return this.softwareRequirement;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="SoftwareTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *         &lt;element name="Version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *         &lt;element name="Vendor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *         &lt;element name="OS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "softwareTitle",
-            "version",
-            "vendor",
-            "os"
-        })
-        public static class SoftwareRequirement {
-
-            @XmlElement(name = "SoftwareTitle", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-            protected String softwareTitle;
-            @XmlElementRef(name = "Version", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> version;
-            @XmlElementRef(name = "Vendor", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> vendor;
-            @XmlElementRef(name = "OS", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-            protected JAXBElement<String> os;
-
-            /**
-             * Gets the value of the softwareTitle property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getSoftwareTitle() {
-                return softwareTitle;
-            }
-
-            /**
-             * Sets the value of the softwareTitle property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setSoftwareTitle(String value) {
-                this.softwareTitle = value;
-            }
-
-            /**
-             * Gets the value of the version property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getVersion() {
-                return version;
-            }
-
-            /**
-             * Sets the value of the version property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setVersion(JAXBElement<String> value) {
-                this.version = value;
-            }
-
-            /**
-             * Gets the value of the vendor property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getVendor() {
-                return vendor;
-            }
-
-            /**
-             * Sets the value of the vendor property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setVendor(JAXBElement<String> value) {
-                this.vendor = value;
-            }
-
-            /**
-             * Gets the value of the os property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public JAXBElement<String> getOS() {
-                return os;
-            }
-
-            /**
-             * Sets the value of the os property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link JAXBElement }{@code <}{@link String }{@code >}
-             *     
-             */
-            public void setOS(JAXBElement<String> value) {
-                this.os = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="SourceObject" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
-     *                 &lt;attribute name="SIF_RefObject" use="required">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *                       &lt;enumeration value="Assessment"/>
-     *                       &lt;enumeration value="LearningResource"/>
-     *                       &lt;enumeration value="Activity"/>
-     *                       &lt;enumeration value="Lesson"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "sourceObject"
-    })
-    public static class SourceObjects {
-
-        @XmlElement(name = "SourceObject", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<ActivityType.SourceObjects.SourceObject> sourceObject;
-
-        /**
-         * Gets the value of the sourceObject property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the sourceObject property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getSourceObject().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link ActivityType.SourceObjects.SourceObject }
-         * 
-         * 
-         */
-        public List<ActivityType.SourceObjects.SourceObject> getSourceObject() {
-            if (sourceObject == null) {
-                sourceObject = new ArrayList<ActivityType.SourceObjects.SourceObject>();
-            }
-            return this.sourceObject;
-        }
-
-
-        /**
-         * GUID assigned to the source object.
-         * 
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
-         *       &lt;attribute name="SIF_RefObject" use="required">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-         *             &lt;enumeration value="Assessment"/>
-         *             &lt;enumeration value="LearningResource"/>
-         *             &lt;enumeration value="Activity"/>
-         *             &lt;enumeration value="Lesson"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class SourceObject {
-
-            @XmlValue
-            protected String value;
-            @XmlAttribute(name = "SIF_RefObject", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String sifRefObject;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the sifRefObject property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getSIFRefObject() {
-                return sifRefObject;
-            }
-
-            /**
-             * Sets the value of the sifRefObject property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setSIFRefObject(String value) {
-                this.sifRefObject = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "studentPersonalRefId"
-    })
-    public static class Students {
-
-        @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected List<String> studentPersonalRefId;
-
-        /**
-         * Gets the value of the studentPersonalRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the studentPersonalRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getStudentPersonalRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getStudentPersonalRefId() {
-            if (studentPersonalRefId == null) {
-                studentPersonalRefId = new ArrayList<String>();
-            }
-            return this.studentPersonalRefId;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TechnicalRequirement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "technicalRequirement"
-    })
-    public static class TechnicalRequirements {
-
-        @XmlElementRef(name = "TechnicalRequirement", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> technicalRequirement;
-
-        /**
-         * Gets the value of the technicalRequirement property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getTechnicalRequirement() {
-            return technicalRequirement;
-        }
-
-        /**
-         * Sets the value of the technicalRequirement property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setTechnicalRequirement(JAXBElement<String> value) {
-            this.technicalRequirement = value;
         }
 
     }

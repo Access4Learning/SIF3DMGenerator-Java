@@ -19,12 +19,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *       This object contains information related to curriculum standards statements "standards" or "benchmarks" or the like
- *       within the document. Each LearningStandardItem reflects an individual standard statement and may occur
- *       at several levels within a hierarchially structured document.
- *     
- * 
  * <p>Java class for LearningStandardItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -34,41 +28,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Resources" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LearningResourceRefId" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
- *                           &lt;attribute name="ResourceType" use="required">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                                 &lt;enumeration value="LearningResource"/>
- *                                 &lt;enumeration value="WorkSample"/>
- *                                 &lt;enumeration value="AnnotatedWorkSample"/>
- *                                 &lt;enumeration value="Other"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="Resources" type="{http://www.sifassociation.org/datamodel/au/3.4}LResourcesType" minOccurs="0"/>
  *         &lt;element name="StandardSettingBody" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}Country" minOccurs="0"/>
- *                   &lt;element name="StateProvince" type="{http://www.sifassociation.org/au/datamodel/3.4}StateProvinceType" minOccurs="0"/>
+ *                   &lt;element name="Country" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" minOccurs="0"/>
+ *                   &lt;element name="StateProvince" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceType" minOccurs="0"/>
  *                   &lt;element name="SettingBodyName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
@@ -87,52 +54,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="PredecessorItems" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LearningStandardItemRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="StatementCodes" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="StatementCode" type="{http://www.w3.org/2001/XMLSchema}token" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Statements" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Statement" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}YearLevels" minOccurs="0"/>
- *         &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/au/datamodel/3.4}ACStrandSubjectAreaType" minOccurs="0"/>
+ *         &lt;element name="PredecessorItems" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardsType" minOccurs="0"/>
+ *         &lt;element name="StatementCodes" type="{http://www.sifassociation.org/datamodel/au/3.4}StatementCodesType" minOccurs="0"/>
+ *         &lt;element name="Statements" type="{http://www.sifassociation.org/datamodel/au/3.4}StatementsType" minOccurs="0"/>
+ *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
+ *         &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}ACStrandSubjectAreaType" minOccurs="0"/>
  *         &lt;element name="StandardIdentifier" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
  *                   &lt;element name="YearCreated" type="{http://www.w3.org/2001/XMLSchema}gYear" minOccurs="0"/>
- *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}ACStrandSubjectArea" minOccurs="0"/>
+ *                   &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}ACStrandSubjectAreaType" minOccurs="0"/>
  *                   &lt;element name="StandardNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}YearLevels" minOccurs="0"/>
+ *                   &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
  *                   &lt;element name="Benchmark" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="YearLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelType" minOccurs="0"/>
+ *                   &lt;element name="YearLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
  *                   &lt;element name="IndicatorNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                   &lt;element name="AlternateIdentificationCodes" minOccurs="0">
  *                     &lt;complexType>
@@ -151,7 +88,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="LearningStandardDocumentRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LearningStandardDocumentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="RelatedLearningStandardItems" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -160,10 +97,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                   &lt;element name="LearningStandardItemRefId" maxOccurs="unbounded" minOccurs="0">
  *                     &lt;complexType>
  *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+ *                         &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                           &lt;attribute name="RelationshipType" use="required">
  *                             &lt;simpleType>
- *                               &lt;union memberTypes=" {http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsLearningStandardItemRelationshipTypesType {http://www.w3.org/2001/XMLSchema}token">
+ *                               &lt;union>
+ *                                 &lt;simpleType>
+ *                                   &lt;restriction base="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsLearningStandardItemRelationshipTypesType">
+ *                                   &lt;/restriction>
+ *                                 &lt;/simpleType>
+ *                                 &lt;simpleType>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *                                   &lt;/restriction>
+ *                                 &lt;/simpleType>
  *                               &lt;/union>
  *                             &lt;/simpleType>
  *                           &lt;/attribute>
@@ -178,11 +123,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;/element>
  *         &lt;element name="Level4" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Level5" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
- *       &lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang use="required""/>
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -191,7 +135,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LearningStandardItemType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "LearningStandardItemType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "resources",
     "standardSettingBody",
     "standardHierarchyLevel",
@@ -210,52 +154,50 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class LearningStandardItemType {
 
-    @XmlElementRef(name = "Resources", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LearningStandardItemType.Resources> resources;
-    @XmlElementRef(name = "StandardSettingBody", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Resources", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LResourcesType> resources;
+    @XmlElementRef(name = "StandardSettingBody", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardItemType.StandardSettingBody> standardSettingBody;
-    @XmlElement(name = "StandardHierarchyLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "StandardHierarchyLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected LearningStandardItemType.StandardHierarchyLevel standardHierarchyLevel;
-    @XmlElementRef(name = "PredecessorItems", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LearningStandardItemType.PredecessorItems> predecessorItems;
-    @XmlElementRef(name = "StatementCodes", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LearningStandardItemType.StatementCodes> statementCodes;
-    @XmlElementRef(name = "Statements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LearningStandardItemType.Statements> statements;
-    @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElementRef(name = "PredecessorItems", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LearningStandardsType> predecessorItems;
+    @XmlElementRef(name = "StatementCodes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StatementCodesType> statementCodes;
+    @XmlElementRef(name = "Statements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StatementsType> statements;
+    @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected YearLevelsType yearLevels;
-    @XmlElementRef(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ACStrandSubjectAreaType> acStrandSubjectArea;
-    @XmlElementRef(name = "StandardIdentifier", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StandardIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardItemType.StandardIdentifier> standardIdentifier;
-    @XmlElement(name = "LearningStandardDocumentRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "LearningStandardDocumentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String learningStandardDocumentRefId;
-    @XmlElementRef(name = "RelatedLearningStandardItems", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "RelatedLearningStandardItems", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardItemType.RelatedLearningStandardItems> relatedLearningStandardItems;
-    @XmlElementRef(name = "Level4", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Level4", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> level4;
-    @XmlElementRef(name = "Level5", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Level5", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> level5;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String refId;
-    @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace", required = true)
-    protected String lang;
 
     /**
      * Gets the value of the resources property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.Resources }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LResourcesType }{@code >}
      *     
      */
-    public JAXBElement<LearningStandardItemType.Resources> getResources() {
+    public JAXBElement<LResourcesType> getResources() {
         return resources;
     }
 
@@ -264,10 +206,10 @@ public class LearningStandardItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.Resources }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LResourcesType }{@code >}
      *     
      */
-    public void setResources(JAXBElement<LearningStandardItemType.Resources> value) {
+    public void setResources(JAXBElement<LResourcesType> value) {
         this.resources = value;
     }
 
@@ -324,10 +266,10 @@ public class LearningStandardItemType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.PredecessorItems }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}
      *     
      */
-    public JAXBElement<LearningStandardItemType.PredecessorItems> getPredecessorItems() {
+    public JAXBElement<LearningStandardsType> getPredecessorItems() {
         return predecessorItems;
     }
 
@@ -336,10 +278,10 @@ public class LearningStandardItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.PredecessorItems }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}
      *     
      */
-    public void setPredecessorItems(JAXBElement<LearningStandardItemType.PredecessorItems> value) {
+    public void setPredecessorItems(JAXBElement<LearningStandardsType> value) {
         this.predecessorItems = value;
     }
 
@@ -348,10 +290,10 @@ public class LearningStandardItemType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.StatementCodes }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StatementCodesType }{@code >}
      *     
      */
-    public JAXBElement<LearningStandardItemType.StatementCodes> getStatementCodes() {
+    public JAXBElement<StatementCodesType> getStatementCodes() {
         return statementCodes;
     }
 
@@ -360,10 +302,10 @@ public class LearningStandardItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.StatementCodes }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StatementCodesType }{@code >}
      *     
      */
-    public void setStatementCodes(JAXBElement<LearningStandardItemType.StatementCodes> value) {
+    public void setStatementCodes(JAXBElement<StatementCodesType> value) {
         this.statementCodes = value;
     }
 
@@ -372,10 +314,10 @@ public class LearningStandardItemType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.Statements }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StatementsType }{@code >}
      *     
      */
-    public JAXBElement<LearningStandardItemType.Statements> getStatements() {
+    public JAXBElement<StatementsType> getStatements() {
         return statements;
     }
 
@@ -384,10 +326,10 @@ public class LearningStandardItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LearningStandardItemType.Statements }{@code >}
+     *     {@link JAXBElement }{@code <}{@link StatementsType }{@code >}
      *     
      */
-    public void setStatements(JAXBElement<LearningStandardItemType.Statements> value) {
+    public void setStatements(JAXBElement<StatementsType> value) {
         this.statements = value;
     }
 
@@ -631,91 +573,6 @@ public class LearningStandardItemType {
         this.refId = value;
     }
 
-    /**
-     * Gets the value of the lang property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLang() {
-        return lang;
-    }
-
-    /**
-     * Sets the value of the lang property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLang(String value) {
-        this.lang = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="LearningStandardItemRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "learningStandardItemRefId"
-    })
-    public static class PredecessorItems {
-
-        @XmlElement(name = "LearningStandardItemRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected List<String> learningStandardItemRefId;
-
-        /**
-         * Gets the value of the learningStandardItemRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the learningStandardItemRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getLearningStandardItemRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getLearningStandardItemRefId() {
-            if (learningStandardItemRefId == null) {
-                learningStandardItemRefId = new ArrayList<String>();
-            }
-            return this.learningStandardItemRefId;
-        }
-
-    }
-
 
     /**
      * <p>Java class for anonymous complex type.
@@ -730,10 +587,18 @@ public class LearningStandardItemType {
      *         &lt;element name="LearningStandardItemRefId" maxOccurs="unbounded" minOccurs="0">
      *           &lt;complexType>
      *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+     *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *                 &lt;attribute name="RelationshipType" use="required">
      *                   &lt;simpleType>
-     *                     &lt;union memberTypes=" {http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsLearningStandardItemRelationshipTypesType {http://www.w3.org/2001/XMLSchema}token">
+     *                     &lt;union>
+     *                       &lt;simpleType>
+     *                         &lt;restriction base="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsLearningStandardItemRelationshipTypesType">
+     *                         &lt;/restriction>
+     *                       &lt;/simpleType>
+     *                       &lt;simpleType>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+     *                         &lt;/restriction>
+     *                       &lt;/simpleType>
      *                     &lt;/union>
      *                   &lt;/simpleType>
      *                 &lt;/attribute>
@@ -755,7 +620,7 @@ public class LearningStandardItemType {
     })
     public static class RelatedLearningStandardItems {
 
-        @XmlElement(name = "LearningStandardItemRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "LearningStandardItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected List<LearningStandardItemType.RelatedLearningStandardItems.LearningStandardItemRefId> learningStandardItemRefId;
 
         /**
@@ -789,8 +654,6 @@ public class LearningStandardItemType {
 
 
         /**
-         * A relationship between the current standard item and another standard item.
-         * 
          * <p>Java class for anonymous complex type.
          * 
          * <p>The following schema fragment specifies the expected content contained within this class.
@@ -798,10 +661,18 @@ public class LearningStandardItemType {
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+         *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
          *       &lt;attribute name="RelationshipType" use="required">
          *         &lt;simpleType>
-         *           &lt;union memberTypes=" {http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsLearningStandardItemRelationshipTypesType {http://www.w3.org/2001/XMLSchema}token">
+         *           &lt;union>
+         *             &lt;simpleType>
+         *               &lt;restriction base="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsLearningStandardItemRelationshipTypesType">
+         *               &lt;/restriction>
+         *             &lt;/simpleType>
+         *             &lt;simpleType>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+         *               &lt;/restriction>
+         *             &lt;/simpleType>
          *           &lt;/union>
          *         &lt;/simpleType>
          *       &lt;/attribute>
@@ -886,174 +757,6 @@ public class LearningStandardItemType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="LearningResourceRefId" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
-     *                 &lt;attribute name="ResourceType" use="required">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *                       &lt;enumeration value="LearningResource"/>
-     *                       &lt;enumeration value="WorkSample"/>
-     *                       &lt;enumeration value="AnnotatedWorkSample"/>
-     *                       &lt;enumeration value="Other"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "learningResourceRefId"
-    })
-    public static class Resources {
-
-        @XmlElement(name = "LearningResourceRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<LearningStandardItemType.Resources.LearningResourceRefId> learningResourceRefId;
-
-        /**
-         * Gets the value of the learningResourceRefId property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the learningResourceRefId property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getLearningResourceRefId().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link LearningStandardItemType.Resources.LearningResourceRefId }
-         * 
-         * 
-         */
-        public List<LearningStandardItemType.Resources.LearningResourceRefId> getLearningResourceRefId() {
-            if (learningResourceRefId == null) {
-                learningResourceRefId = new ArrayList<LearningStandardItemType.Resources.LearningResourceRefId>();
-            }
-            return this.learningResourceRefId;
-        }
-
-
-        /**
-         * A relationship between the item and an attached resource (e.g. learning resource, work sample).
-         * 
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
-         *       &lt;attribute name="ResourceType" use="required">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-         *             &lt;enumeration value="LearningResource"/>
-         *             &lt;enumeration value="WorkSample"/>
-         *             &lt;enumeration value="AnnotatedWorkSample"/>
-         *             &lt;enumeration value="Other"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class LearningResourceRefId {
-
-            @XmlValue
-            protected String value;
-            @XmlAttribute(name = "ResourceType", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String resourceType;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the resourceType property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getResourceType() {
-                return resourceType;
-            }
-
-            /**
-             * Sets the value of the resourceType property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setResourceType(String value) {
-                this.resourceType = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
      *         &lt;element name="Number" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
      *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
      *       &lt;/sequence>
@@ -1071,10 +774,10 @@ public class LearningStandardItemType {
     })
     public static class StandardHierarchyLevel {
 
-        @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlSchemaType(name = "unsignedInt")
         protected Long number;
-        @XmlElement(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected String description;
 
         /**
@@ -1139,11 +842,11 @@ public class LearningStandardItemType {
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
      *         &lt;element name="YearCreated" type="{http://www.w3.org/2001/XMLSchema}gYear" minOccurs="0"/>
-     *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}ACStrandSubjectArea" minOccurs="0"/>
+     *         &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}ACStrandSubjectAreaType" minOccurs="0"/>
      *         &lt;element name="StandardNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}YearLevels" minOccurs="0"/>
+     *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
      *         &lt;element name="Benchmark" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/au/datamodel/3.4}YearLevelType" minOccurs="0"/>
+     *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
      *         &lt;element name="IndicatorNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *         &lt;element name="AlternateIdentificationCodes" minOccurs="0">
      *           &lt;complexType>
@@ -1179,26 +882,26 @@ public class LearningStandardItemType {
     })
     public static class StandardIdentifier {
 
-        @XmlElement(name = "YearCreated", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "YearCreated", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlSchemaType(name = "gYear")
         protected XMLGregorianCalendar yearCreated;
-        @XmlElement(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected ACStrandSubjectAreaType acStrandSubjectArea;
-        @XmlElement(name = "StandardNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "StandardNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String standardNumber;
-        @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected YearLevelsType yearLevels;
-        @XmlElementRef(name = "Benchmark", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Benchmark", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> benchmark;
-        @XmlElementRef(name = "YearLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "YearLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<YearLevelType> yearLevel;
-        @XmlElementRef(name = "IndicatorNumber", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "IndicatorNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> indicatorNumber;
-        @XmlElementRef(name = "AlternateIdentificationCodes", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "AlternateIdentificationCodes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes> alternateIdentificationCodes;
-        @XmlElement(name = "Organization", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "Organization", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
         @XmlSchemaType(name = "normalizedString")
         protected String organization;
@@ -1445,7 +1148,7 @@ public class LearningStandardItemType {
         })
         public static class AlternateIdentificationCodes {
 
-            @XmlElement(name = "AlternateIdentificationCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+            @XmlElement(name = "AlternateIdentificationCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected List<String> alternateIdentificationCode;
@@ -1494,8 +1197,8 @@ public class LearningStandardItemType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}Country" minOccurs="0"/>
-     *         &lt;element name="StateProvince" type="{http://www.sifassociation.org/au/datamodel/3.4}StateProvinceType" minOccurs="0"/>
+     *         &lt;element name="Country" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" minOccurs="0"/>
+     *         &lt;element name="StateProvince" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceType" minOccurs="0"/>
      *         &lt;element name="SettingBodyName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
@@ -1513,12 +1216,12 @@ public class LearningStandardItemType {
     })
     public static class StandardSettingBody {
 
-        @XmlElement(name = "Country", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+        @XmlElement(name = "Country", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String country;
-        @XmlElementRef(name = "StateProvince", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "StateProvince", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> stateProvince;
-        @XmlElementRef(name = "SettingBodyName", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "SettingBodyName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> settingBodyName;
 
         /**
@@ -1591,128 +1294,6 @@ public class LearningStandardItemType {
          */
         public void setSettingBodyName(JAXBElement<String> value) {
             this.settingBodyName = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="StatementCode" type="{http://www.w3.org/2001/XMLSchema}token" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "statementCode"
-    })
-    public static class StatementCodes {
-
-        @XmlElement(name = "StatementCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected List<String> statementCode;
-
-        /**
-         * Gets the value of the statementCode property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the statementCode property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getStatementCode().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getStatementCode() {
-            if (statementCode == null) {
-                statementCode = new ArrayList<String>();
-            }
-            return this.statementCode;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Statement" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "statement"
-    })
-    public static class Statements {
-
-        @XmlElement(name = "Statement", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<String> statement;
-
-        /**
-         * Gets the value of the statement property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the statement property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getStatement().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getStatement() {
-            if (statement == null) {
-                statement = new ArrayList<String>();
-            }
-            return this.statement;
         }
 
     }

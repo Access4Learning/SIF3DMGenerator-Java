@@ -23,35 +23,15 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsLearningStandardItemRelationshipTypesType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsLearningStandardItemRelationshipTypesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsLearningStandardItemRelationshipTypesType {
 
-
-    /**
-     * A link to another state or school content standard.
-     * 
-     */
     @XmlEnumValue("Content")
     CONTENT("Content"),
-
-    /**
-     * Personal Development
-     * 
-     */
     PD("PD"),
-
-    /**
-     * A link to a standard from another state. The purpose of this is to express relationships between state standards.
-     * 
-     */
     @XmlEnumValue("State")
     STATE("State"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

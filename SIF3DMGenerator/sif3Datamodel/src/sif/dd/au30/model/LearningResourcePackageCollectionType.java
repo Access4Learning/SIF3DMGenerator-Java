@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LearningResourcePackage" type="{http://www.sifassociation.org/au/datamodel/3.4}LearningResourcePackageType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="LearningResourcePackage" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningResourcePackageType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LearningResourcePackageCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "LearningResourcePackageCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "learningResourcePackage"
 })
 public class LearningResourcePackageCollectionType {
 
-    @XmlElement(name = "LearningResourcePackage", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "LearningResourcePackage", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<LearningResourcePackageType> learningResourcePackage;
 
     /**

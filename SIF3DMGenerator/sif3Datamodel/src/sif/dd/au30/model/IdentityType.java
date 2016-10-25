@@ -1,27 +1,19 @@
 
 package sif.dd.au30.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object allows a system that stores network identities and/or passwords to share them with other applications through SIF. The provider of the Identity object may only support providing an identity or a password, or it may support both.
- *       
- * 
  * <p>Java class for IdentityType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -34,7 +26,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="SIF_RefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -60,62 +52,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="IdentityAssertions" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="IdentityAssertion" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
- *                           &lt;attribute name="SchemaName" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PasswordList" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Password" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSBase64BinaryOrEmpty">
- *                           &lt;attribute name="Algorithm" use="required">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                                 &lt;enumeration value="MD5"/>
- *                                 &lt;enumeration value="SHA1"/>
- *                                 &lt;enumeration value="DES"/>
- *                                 &lt;enumeration value="TripleDES"/>
- *                                 &lt;enumeration value="RC2"/>
- *                                 &lt;enumeration value="AES"/>
- *                                 &lt;enumeration value="RSA"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                           &lt;attribute name="KeyName" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="AuthenticationSourceGlobalUID" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="IdentityAssertions" type="{http://www.sifassociation.org/datamodel/au/3.4}IdentityAssertionsType" minOccurs="0"/>
+ *         &lt;element name="PasswordList" type="{http://www.sifassociation.org/datamodel/au/3.4}PasswordListType" minOccurs="0"/>
+ *         &lt;element name="AuthenticationSourceGlobalUID" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -124,7 +67,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IdentityType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "IdentityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "sifRefId",
     "authenticationSource",
     "identityAssertions",
@@ -135,20 +78,20 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class IdentityType {
 
-    @XmlElement(name = "SIF_RefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "SIF_RefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected IdentityType.SIFRefId sifRefId;
-    @XmlElement(name = "AuthenticationSource", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "AuthenticationSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String authenticationSource;
-    @XmlElementRef(name = "IdentityAssertions", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<IdentityType.IdentityAssertions> identityAssertions;
-    @XmlElementRef(name = "PasswordList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<IdentityType.PasswordList> passwordList;
-    @XmlElementRef(name = "AuthenticationSourceGlobalUID", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "IdentityAssertions", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<IdentityAssertionsType> identityAssertions;
+    @XmlElementRef(name = "PasswordList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PasswordListType> passwordList;
+    @XmlElementRef(name = "AuthenticationSourceGlobalUID", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> authenticationSourceGlobalUID;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -207,10 +150,10 @@ public class IdentityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link IdentityType.IdentityAssertions }{@code >}
+     *     {@link JAXBElement }{@code <}{@link IdentityAssertionsType }{@code >}
      *     
      */
-    public JAXBElement<IdentityType.IdentityAssertions> getIdentityAssertions() {
+    public JAXBElement<IdentityAssertionsType> getIdentityAssertions() {
         return identityAssertions;
     }
 
@@ -219,10 +162,10 @@ public class IdentityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link IdentityType.IdentityAssertions }{@code >}
+     *     {@link JAXBElement }{@code <}{@link IdentityAssertionsType }{@code >}
      *     
      */
-    public void setIdentityAssertions(JAXBElement<IdentityType.IdentityAssertions> value) {
+    public void setIdentityAssertions(JAXBElement<IdentityAssertionsType> value) {
         this.identityAssertions = value;
     }
 
@@ -231,10 +174,10 @@ public class IdentityType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link IdentityType.PasswordList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PasswordListType }{@code >}
      *     
      */
-    public JAXBElement<IdentityType.PasswordList> getPasswordList() {
+    public JAXBElement<PasswordListType> getPasswordList() {
         return passwordList;
     }
 
@@ -243,10 +186,10 @@ public class IdentityType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link IdentityType.PasswordList }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PasswordListType }{@code >}
      *     
      */
-    public void setPasswordList(JAXBElement<IdentityType.PasswordList> value) {
+    public void setPasswordList(JAXBElement<PasswordListType> value) {
         this.passwordList = value;
     }
 
@@ -354,365 +297,8 @@ public class IdentityType {
      * 
      * <pre>
      * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="IdentityAssertion" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-     *                 &lt;attribute name="SchemaName" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "identityAssertion"
-    })
-    public static class IdentityAssertions {
-
-        @XmlElement(name = "IdentityAssertion", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<IdentityType.IdentityAssertions.IdentityAssertion> identityAssertion;
-
-        /**
-         * Gets the value of the identityAssertion property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the identityAssertion property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getIdentityAssertion().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link IdentityType.IdentityAssertions.IdentityAssertion }
-         * 
-         * 
-         */
-        public List<IdentityType.IdentityAssertions.IdentityAssertion> getIdentityAssertion() {
-            if (identityAssertion == null) {
-                identityAssertion = new ArrayList<IdentityType.IdentityAssertions.IdentityAssertion>();
-            }
-            return this.identityAssertion;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
-         *       &lt;attribute name="SchemaName" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class IdentityAssertion {
-
-            @XmlValue
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String value;
-            @XmlAttribute(name = "SchemaName", required = true)
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String schemaName;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the schemaName property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getSchemaName() {
-                return schemaName;
-            }
-
-            /**
-             * Sets the value of the schemaName property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setSchemaName(String value) {
-                this.schemaName = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Password" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSBase64BinaryOrEmpty">
-     *                 &lt;attribute name="Algorithm" use="required">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *                       &lt;enumeration value="MD5"/>
-     *                       &lt;enumeration value="SHA1"/>
-     *                       &lt;enumeration value="DES"/>
-     *                       &lt;enumeration value="TripleDES"/>
-     *                       &lt;enumeration value="RC2"/>
-     *                       &lt;enumeration value="AES"/>
-     *                       &lt;enumeration value="RSA"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *                 &lt;attribute name="KeyName" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "password"
-    })
-    public static class PasswordList {
-
-        @XmlElement(name = "Password", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        protected List<IdentityType.PasswordList.Password> password;
-
-        /**
-         * Gets the value of the password property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the password property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getPassword().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link IdentityType.PasswordList.Password }
-         * 
-         * 
-         */
-        public List<IdentityType.PasswordList.Password> getPassword() {
-            if (password == null) {
-                password = new ArrayList<IdentityType.PasswordList.Password>();
-            }
-            return this.password;
-        }
-
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>XSBase64BinaryOrEmpty">
-         *       &lt;attribute name="Algorithm" use="required">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-         *             &lt;enumeration value="MD5"/>
-         *             &lt;enumeration value="SHA1"/>
-         *             &lt;enumeration value="DES"/>
-         *             &lt;enumeration value="TripleDES"/>
-         *             &lt;enumeration value="RC2"/>
-         *             &lt;enumeration value="AES"/>
-         *             &lt;enumeration value="RSA"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *       &lt;attribute name="KeyName" use="required" type="{http://www.w3.org/2001/XMLSchema}normalizedString" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
-         * </pre>
-         * 
-         * 
-         */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
-            "value"
-        })
-        public static class Password {
-
-            @XmlValue
-            protected String value;
-            @XmlAttribute(name = "Algorithm", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            protected String algorithm;
-            @XmlAttribute(name = "KeyName", required = true)
-            @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-            @XmlSchemaType(name = "normalizedString")
-            protected String keyName;
-
-            /**
-             * Gets the value of the value property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getValue() {
-                return value;
-            }
-
-            /**
-             * Sets the value of the value property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setValue(String value) {
-                this.value = value;
-            }
-
-            /**
-             * Gets the value of the algorithm property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getAlgorithm() {
-                return algorithm;
-            }
-
-            /**
-             * Sets the value of the algorithm property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setAlgorithm(String value) {
-                this.algorithm = value;
-            }
-
-            /**
-             * Gets the value of the keyName property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
-             */
-            public String getKeyName() {
-                return keyName;
-            }
-
-            /**
-             * Sets the value of the keyName property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
-             */
-            public void setKeyName(String value) {
-                this.keyName = value;
-            }
-
-        }
-
-    }
-
-
-    /**
-     * 
-     *         The SIF RefId of a StudentPersonal, StaffPersonal, or StudentContactPersonal object.
-     *       
-     * 
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/au/datamodel/3.4>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">

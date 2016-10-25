@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of subject areas.
- * 
  * <p>Java class for SubjectAreaListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}SubjectArea" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}SubjectAreaType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SubjectAreaListType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "SubjectAreaListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "subjectArea"
 })
 public class SubjectAreaListType {
 
-    @XmlElement(name = "SubjectArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "SubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<SubjectAreaType> subjectArea;
 
     /**

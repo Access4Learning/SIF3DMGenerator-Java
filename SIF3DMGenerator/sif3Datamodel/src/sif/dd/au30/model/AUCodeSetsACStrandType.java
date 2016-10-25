@@ -34,105 +34,25 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsACStrandType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsACStrandType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsACStrandType {
 
-
-    /**
-     * The arts
-     * 
-     */
     A,
-
-    /**
-     * Economics and business
-     * 
-     */
     B,
-
-    /**
-     * Civics and citizenship
-     * 
-     */
     C,
-
-    /**
-     * Design and technologies
-     * 
-     */
     D,
-
-    /**
-     * English
-     * 
-     */
     E,
-
-    /**
-     * Geography
-     * 
-     */
     G,
-
-    /**
-     * History
-     * 
-     */
     H,
-
-    /**
-     * Digital technologies
-     * 
-     */
     I,
-
-    /**
-     * Languages
-     * 
-     */
     L,
-
-    /**
-     * Mathematics
-     * 
-     */
     M,
-
-    /**
-     * Health and physical education
-     * 
-     */
     P,
-
-    /**
-     * Science
-     * 
-     */
     S,
-
-    /**
-     * Humanities and social sciences
-     * 
-     */
     U,
-
-    /**
-     * Technology
-     * 
-     */
     T,
-
-    /**
-     * Work Studies
-     * 
-     */
     W,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

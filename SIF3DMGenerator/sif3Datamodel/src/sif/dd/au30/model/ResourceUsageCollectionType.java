@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ResourceUsage" type="{http://www.sifassociation.org/au/datamodel/3.4}ResourceUsageType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ResourceUsage" type="{http://www.sifassociation.org/datamodel/au/3.4}ResourceUsageType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ResourceUsageCollectionType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "ResourceUsageCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "resourceUsage"
 })
 public class ResourceUsageCollectionType {
 
-    @XmlElement(name = "ResourceUsage", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "ResourceUsage", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<ResourceUsageType> resourceUsage;
 
     /**

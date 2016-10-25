@@ -23,36 +23,16 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsProgressLevelType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsProgressLevelType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsProgressLevelType {
 
-
-    /**
-     * Below level
-     * 
-     */
     @XmlEnumValue("Below")
     BELOW("Below"),
-
-    /**
-     * At level
-     * 
-     */
     @XmlEnumValue("At")
     AT("At"),
-
-    /**
-     * Above level
-     * 
-     */
     @XmlEnumValue("Above")
     ABOVE("Above"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

@@ -22,28 +22,13 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSchoolSectorCodeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsSchoolSectorCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsSchoolSectorCodeType {
 
-
-    /**
-     * Government School
-     * 
-     */
     @XmlEnumValue("Gov")
     GOV("Gov"),
-
-    /**
-     * Non-Government School
-     * 
-     */
     NG("NG"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

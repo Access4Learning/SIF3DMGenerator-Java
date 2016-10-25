@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of Address elements.
- * 
  * <p>Java class for AddressListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}Address" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Address" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AddressListType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "AddressListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "address"
 })
 public class AddressListType {
 
-    @XmlElement(name = "Address", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "Address", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<AddressType> address;
 
     /**

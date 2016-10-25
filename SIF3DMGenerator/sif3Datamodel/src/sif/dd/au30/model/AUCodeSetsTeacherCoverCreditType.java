@@ -24,43 +24,18 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsTeacherCoverCreditType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsTeacherCoverCreditType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsTeacherCoverCreditType {
 
-
-    /**
-     * The cover is taken as replacement for a cancelled class
-     * 
-     */
     @XmlEnumValue("In-Lieu")
     IN_LIEU("In-Lieu"),
-
-    /**
-     * The cover counts towards the teacher's extras quota
-     * 
-     */
     @XmlEnumValue("Extra")
     EXTRA("Extra"),
-
-    /**
-     * The cover is not counted as an extra because the teacher is underloaded on the cyclical timetable
-     * 
-     */
     @XmlEnumValue("Underload")
     UNDERLOAD("Underload"),
-
-    /**
-     * The the event is supervised by a casual teacher
-     * 
-     */
     @XmlEnumValue("Casual")
     CASUAL("Casual"),
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

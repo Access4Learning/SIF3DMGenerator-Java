@@ -1,0 +1,120 @@
+
+package sif.dd.au30.model;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for AdjustmentType complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="AdjustmentType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="AdjustmentDomain" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestDomainType" minOccurs="0"/>
+ *         &lt;element name="PNPCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}PNPCodeListType" minOccurs="0"/>
+ *         &lt;element name="BookletType" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AdjustmentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "adjustmentDomain",
+    "pnpCodeList",
+    "bookletType"
+})
+public class AdjustmentType {
+
+    @XmlElement(name = "AdjustmentDomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected AUCodeSetsNAPTestDomainType adjustmentDomain;
+    @XmlElement(name = "PNPCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected PNPCodeListType pnpCodeList;
+    @XmlElementRef(name = "BookletType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> bookletType;
+
+    /**
+     * Gets the value of the adjustmentDomain property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AUCodeSetsNAPTestDomainType }
+     *     
+     */
+    public AUCodeSetsNAPTestDomainType getAdjustmentDomain() {
+        return adjustmentDomain;
+    }
+
+    /**
+     * Sets the value of the adjustmentDomain property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AUCodeSetsNAPTestDomainType }
+     *     
+     */
+    public void setAdjustmentDomain(AUCodeSetsNAPTestDomainType value) {
+        this.adjustmentDomain = value;
+    }
+
+    /**
+     * Gets the value of the pnpCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PNPCodeListType }
+     *     
+     */
+    public PNPCodeListType getPNPCodeList() {
+        return pnpCodeList;
+    }
+
+    /**
+     * Sets the value of the pnpCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PNPCodeListType }
+     *     
+     */
+    public void setPNPCodeList(PNPCodeListType value) {
+        this.pnpCodeList = value;
+    }
+
+    /**
+     * Gets the value of the bookletType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getBookletType() {
+        return bookletType;
+    }
+
+    /**
+     * Sets the value of the bookletType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setBookletType(JAXBElement<String> value) {
+        this.bookletType = value;
+    }
+
+}

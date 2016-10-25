@@ -24,45 +24,15 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsSourceCodeTypeType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsSourceCodeTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsSourceCodeTypeType {
 
-
-    /**
-     * Provided by the child (ie pupil)
-     * 
-     */
     C,
-
-    /**
-     * Other 
-     * 
-     */
     O,
-
-    /**
-     * Provided by the parent
-     * 
-     */
     P,
-
-    /**
-     * Ascribed by the current school
-     * 
-     */
     S,
-
-    /**
-     * Ascribed by a previous school
-     * 
-     */
     T,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

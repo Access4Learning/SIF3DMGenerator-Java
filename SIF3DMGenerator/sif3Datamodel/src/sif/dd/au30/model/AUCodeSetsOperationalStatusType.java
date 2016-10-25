@@ -25,51 +25,16 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsOperationalStatusType", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+@XmlType(name = "AUCodeSetsOperationalStatusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsOperationalStatusType {
 
-
-    /**
-     * Building or Construction Started
-     * 
-     */
     B,
-
-    /**
-     * Closed
-     * 
-     */
     C,
-
-    /**
-     * Open
-     * 
-     */
     O,
-
-    /**
-     * Pending
-     * 
-     */
     P,
-
-    /**
-     * Site
-     * 
-     */
     S,
-
-    /**
-     * Unstaffed
-     * 
-     */
     U,
-
-    /**
-     * REDACTED for privacy
-     * 
-     */
     ZZREDACTED;
 
     public String value() {

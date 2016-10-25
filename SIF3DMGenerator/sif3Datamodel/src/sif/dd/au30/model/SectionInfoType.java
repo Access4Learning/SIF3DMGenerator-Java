@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides information about the section, the specific time period a session of the course meets. Australian Implementations have been using TeachingGroup as a representation of a class;
- * 
  * <p>Java class for SectionInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,47 +24,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}LocalId" minOccurs="0"/>
+ *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/au/datamodel/3.4}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="TermInfoRefId" type="{http://www.sifassociation.org/au/datamodel/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="MediumOfInstruction" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsMediumOfInstructionType" minOccurs="0"/>
- *                   &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="LanguageOfInstruction" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
- *                   &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="LocationOfInstruction" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsReceivingLocationOfInstructionType" minOccurs="0"/>
- *                   &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="TermInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="MediumOfInstruction" type="{http://www.sifassociation.org/datamodel/au/3.4}MediumOfInstructionType" minOccurs="0"/>
+ *         &lt;element name="LanguageOfInstruction" type="{http://www.sifassociation.org/datamodel/au/3.4}LanguageOfInstructionType" minOccurs="0"/>
+ *         &lt;element name="LocationOfInstruction" type="{http://www.sifassociation.org/datamodel/au/3.4}LocationOfInstructionType" minOccurs="0"/>
  *         &lt;element name="SummerSchool" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -75,31 +40,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="SchoolCourseInfoOverride" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="CourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="StateCourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="DistrictCourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="SubjectArea" type="{http://www.sifassociation.org/au/datamodel/3.4}SubjectAreaType" minOccurs="0"/>
- *                   &lt;element name="CourseTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="InstructionalLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                   &lt;element name="CourseCredits" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="Override" use="required">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *                       &lt;enumeration value="Yes"/>
- *                       &lt;enumeration value="No"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="SchoolCourseInfoOverride" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolCourseInfoOverrideType" minOccurs="0"/>
  *         &lt;element name="CourseSectionCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SectionCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="CountForAttendance" minOccurs="0">
@@ -110,10 +51,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/au/datamodel/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/au/datamodel/3.4}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -122,7 +63,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SectionInfoType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "SectionInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "schoolCourseInfoRefId",
     "localId",
     "description",
@@ -141,37 +82,37 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class SectionInfoType {
 
-    @XmlElement(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolCourseInfoRefId;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> schoolYear;
-    @XmlElementRef(name = "TermInfoRefId", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TermInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> termInfoRefId;
-    @XmlElementRef(name = "MediumOfInstruction", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SectionInfoType.MediumOfInstruction> mediumOfInstruction;
-    @XmlElementRef(name = "LanguageOfInstruction", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SectionInfoType.LanguageOfInstruction> languageOfInstruction;
-    @XmlElementRef(name = "LocationOfInstruction", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SectionInfoType.LocationOfInstruction> locationOfInstruction;
-    @XmlElementRef(name = "SummerSchool", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MediumOfInstruction", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<MediumOfInstructionType> mediumOfInstruction;
+    @XmlElementRef(name = "LanguageOfInstruction", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LanguageOfInstructionType> languageOfInstruction;
+    @XmlElementRef(name = "LocationOfInstruction", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocationOfInstructionType> locationOfInstruction;
+    @XmlElementRef(name = "SummerSchool", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> summerSchool;
-    @XmlElementRef(name = "SchoolCourseInfoOverride", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SectionInfoType.SchoolCourseInfoOverride> schoolCourseInfoOverride;
-    @XmlElementRef(name = "CourseSectionCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolCourseInfoOverride", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<SchoolCourseInfoOverrideType> schoolCourseInfoOverride;
+    @XmlElementRef(name = "CourseSectionCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> courseSectionCode;
-    @XmlElementRef(name = "SectionCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SectionCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> sectionCode;
-    @XmlElementRef(name = "CountForAttendance", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CountForAttendance", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> countForAttendance;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -302,10 +243,10 @@ public class SectionInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.MediumOfInstruction }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MediumOfInstructionType }{@code >}
      *     
      */
-    public JAXBElement<SectionInfoType.MediumOfInstruction> getMediumOfInstruction() {
+    public JAXBElement<MediumOfInstructionType> getMediumOfInstruction() {
         return mediumOfInstruction;
     }
 
@@ -314,10 +255,10 @@ public class SectionInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.MediumOfInstruction }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MediumOfInstructionType }{@code >}
      *     
      */
-    public void setMediumOfInstruction(JAXBElement<SectionInfoType.MediumOfInstruction> value) {
+    public void setMediumOfInstruction(JAXBElement<MediumOfInstructionType> value) {
         this.mediumOfInstruction = value;
     }
 
@@ -326,10 +267,10 @@ public class SectionInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.LanguageOfInstruction }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LanguageOfInstructionType }{@code >}
      *     
      */
-    public JAXBElement<SectionInfoType.LanguageOfInstruction> getLanguageOfInstruction() {
+    public JAXBElement<LanguageOfInstructionType> getLanguageOfInstruction() {
         return languageOfInstruction;
     }
 
@@ -338,10 +279,10 @@ public class SectionInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.LanguageOfInstruction }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LanguageOfInstructionType }{@code >}
      *     
      */
-    public void setLanguageOfInstruction(JAXBElement<SectionInfoType.LanguageOfInstruction> value) {
+    public void setLanguageOfInstruction(JAXBElement<LanguageOfInstructionType> value) {
         this.languageOfInstruction = value;
     }
 
@@ -350,10 +291,10 @@ public class SectionInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.LocationOfInstruction }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LocationOfInstructionType }{@code >}
      *     
      */
-    public JAXBElement<SectionInfoType.LocationOfInstruction> getLocationOfInstruction() {
+    public JAXBElement<LocationOfInstructionType> getLocationOfInstruction() {
         return locationOfInstruction;
     }
 
@@ -362,10 +303,10 @@ public class SectionInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.LocationOfInstruction }{@code >}
+     *     {@link JAXBElement }{@code <}{@link LocationOfInstructionType }{@code >}
      *     
      */
-    public void setLocationOfInstruction(JAXBElement<SectionInfoType.LocationOfInstruction> value) {
+    public void setLocationOfInstruction(JAXBElement<LocationOfInstructionType> value) {
         this.locationOfInstruction = value;
     }
 
@@ -398,10 +339,10 @@ public class SectionInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.SchoolCourseInfoOverride }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SchoolCourseInfoOverrideType }{@code >}
      *     
      */
-    public JAXBElement<SectionInfoType.SchoolCourseInfoOverride> getSchoolCourseInfoOverride() {
+    public JAXBElement<SchoolCourseInfoOverrideType> getSchoolCourseInfoOverride() {
         return schoolCourseInfoOverride;
     }
 
@@ -410,10 +351,10 @@ public class SectionInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SectionInfoType.SchoolCourseInfoOverride }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SchoolCourseInfoOverrideType }{@code >}
      *     
      */
-    public void setSchoolCourseInfoOverride(JAXBElement<SectionInfoType.SchoolCourseInfoOverride> value) {
+    public void setSchoolCourseInfoOverride(JAXBElement<SchoolCourseInfoOverrideType> value) {
         this.schoolCourseInfoOverride = value;
     }
 
@@ -559,516 +500,6 @@ public class SectionInfoType {
      */
     public void setRefId(String value) {
         this.refId = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType" minOccurs="0"/>
-     *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "code",
-        "otherCodeList"
-    })
-    public static class LanguageOfInstruction {
-
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String code;
-        @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<OtherCodeListType> otherCodeList;
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        /**
-         * Gets the value of the otherCodeList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public JAXBElement<OtherCodeListType> getOtherCodeList() {
-            return otherCodeList;
-        }
-
-        /**
-         * Sets the value of the otherCodeList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
-            this.otherCodeList = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsReceivingLocationOfInstructionType" minOccurs="0"/>
-     *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "code",
-        "otherCodeList"
-    })
-    public static class LocationOfInstruction {
-
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String code;
-        @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<OtherCodeListType> otherCodeList;
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        /**
-         * Gets the value of the otherCodeList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public JAXBElement<OtherCodeListType> getOtherCodeList() {
-            return otherCodeList;
-        }
-
-        /**
-         * Sets the value of the otherCodeList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
-            this.otherCodeList = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/au/datamodel/3.4}AUCodeSetsMediumOfInstructionType" minOccurs="0"/>
-     *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/au/datamodel/3.4}OtherCodeListType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "code",
-        "otherCodeList"
-    })
-    public static class MediumOfInstruction {
-
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String code;
-        @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<OtherCodeListType> otherCodeList;
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        /**
-         * Gets the value of the otherCodeList property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public JAXBElement<OtherCodeListType> getOtherCodeList() {
-            return otherCodeList;
-        }
-
-        /**
-         * Sets the value of the otherCodeList property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}
-         *     
-         */
-        public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
-            this.otherCodeList = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="StateCourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="DistrictCourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/au/datamodel/3.4}SubjectAreaType" minOccurs="0"/>
-     *         &lt;element name="CourseTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="InstructionalLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *         &lt;element name="CourseCredits" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="Override" use="required">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
-     *             &lt;enumeration value="Yes"/>
-     *             &lt;enumeration value="No"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "courseCode",
-        "stateCourseCode",
-        "districtCourseCode",
-        "subjectArea",
-        "courseTitle",
-        "instructionalLevel",
-        "courseCredits"
-    })
-    public static class SchoolCourseInfoOverride {
-
-        @XmlElementRef(name = "CourseCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> courseCode;
-        @XmlElementRef(name = "StateCourseCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> stateCourseCode;
-        @XmlElementRef(name = "DistrictCourseCode", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> districtCourseCode;
-        @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<SubjectAreaType> subjectArea;
-        @XmlElementRef(name = "CourseTitle", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> courseTitle;
-        @XmlElementRef(name = "InstructionalLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> instructionalLevel;
-        @XmlElementRef(name = "CourseCredits", namespace = "http://www.sifassociation.org/au/datamodel/3.4", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> courseCredits;
-        @XmlAttribute(name = "Override", required = true)
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String override;
-
-        /**
-         * Gets the value of the courseCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getCourseCode() {
-            return courseCode;
-        }
-
-        /**
-         * Sets the value of the courseCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setCourseCode(JAXBElement<String> value) {
-            this.courseCode = value;
-        }
-
-        /**
-         * Gets the value of the stateCourseCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getStateCourseCode() {
-            return stateCourseCode;
-        }
-
-        /**
-         * Sets the value of the stateCourseCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setStateCourseCode(JAXBElement<String> value) {
-            this.stateCourseCode = value;
-        }
-
-        /**
-         * Gets the value of the districtCourseCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getDistrictCourseCode() {
-            return districtCourseCode;
-        }
-
-        /**
-         * Sets the value of the districtCourseCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setDistrictCourseCode(JAXBElement<String> value) {
-            this.districtCourseCode = value;
-        }
-
-        /**
-         * Gets the value of the subjectArea property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}
-         *     
-         */
-        public JAXBElement<SubjectAreaType> getSubjectArea() {
-            return subjectArea;
-        }
-
-        /**
-         * Sets the value of the subjectArea property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}
-         *     
-         */
-        public void setSubjectArea(JAXBElement<SubjectAreaType> value) {
-            this.subjectArea = value;
-        }
-
-        /**
-         * Gets the value of the courseTitle property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getCourseTitle() {
-            return courseTitle;
-        }
-
-        /**
-         * Sets the value of the courseTitle property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setCourseTitle(JAXBElement<String> value) {
-            this.courseTitle = value;
-        }
-
-        /**
-         * Gets the value of the instructionalLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getInstructionalLevel() {
-            return instructionalLevel;
-        }
-
-        /**
-         * Sets the value of the instructionalLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setInstructionalLevel(JAXBElement<String> value) {
-            this.instructionalLevel = value;
-        }
-
-        /**
-         * Gets the value of the courseCredits property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public JAXBElement<String> getCourseCredits() {
-            return courseCredits;
-        }
-
-        /**
-         * Sets the value of the courseCredits property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
-         */
-        public void setCourseCredits(JAXBElement<String> value) {
-            this.courseCredits = value;
-        }
-
-        /**
-         * Gets the value of the override property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getOverride() {
-            return override;
-        }
-
-        /**
-         * Sets the value of the override property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setOverride(String value) {
-            this.override = value;
-        }
-
     }
 
 }

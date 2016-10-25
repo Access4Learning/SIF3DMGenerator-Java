@@ -10,10 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         List of year levels.
- *       
- * 
  * <p>Java class for YearLevelsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.sifassociation.org/au/datamodel/3.4}YearLevel" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "YearLevelsType", namespace = "http://www.sifassociation.org/au/datamodel/3.4", propOrder = {
+@XmlType(name = "YearLevelsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "yearLevel"
 })
 public class YearLevelsType {
 
-    @XmlElement(name = "YearLevel", namespace = "http://www.sifassociation.org/au/datamodel/3.4")
+    @XmlElement(name = "YearLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<YearLevelType> yearLevel;
 
     /**
