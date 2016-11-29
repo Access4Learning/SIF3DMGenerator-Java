@@ -30,22 +30,25 @@ import au.com.systemic.framework.utils.Timer;
  */
 public class TestMarshallers
 {
-	private final static String INPUT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
-//	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Students.xml";
-//	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Schools.xml";
-//	private final static String INPUT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
+    private final static String BASE_DIR = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator";
+//  private final static String BASE_DIR = "C:/Development/marsWorkspace/SIF3DMGenerator";
 
-	private final static String OUTPUT_FILE_NAME_XML  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.xml";
-//	private final static String OUTPUT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/students.xml";
-//	private final static String OUTPUT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/schools.xml";
-//	private final static String OUTPUT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.xml";
+    private final static String INPUT_FILE_NAME  = BASE_DIR + "/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
+//	private final static String INPUT_FILE_NAME  = BASE_DIR + "/sif3DMTest/testdata/us/input/NA32/k12Students.xml";
+//	private final static String INPUT_FILE_NAME  = BASE_DIR + "/sif3DMTest/testdata/us/input/NA32/k12Schools.xml";
+//	private final static String INPUT_FILE_NAME  = BASE_DIR + "/sif3DMTest/testdata/us/input/NA32/k12Student.xml";
 
-private final static String OUTPUT_FILE_NAME_JSON  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.json";
-//private final static String OUTPUT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/students.json";
-//	private final static String OUTPUT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/schools.json";
-//private final static String OUTPUT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/us/output/NA32/student.json";
+	private final static String OUTPUT_FILE_NAME_XML  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/student.xml";
+//	private final static String OUTPUT_FILE_NAME_XML  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/students.xml";
+//	private final static String OUTPUT_FILE_NAME_XML  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/schools.xml";
+//	private final static String OUTPUT_FILE_NAME_XML  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/student.xml";
 
-private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
+	private final static String OUTPUT_FILE_NAME_JSON  = BASE_DIR + "/sif3DMTest/sif3DMTest/testdata/us/output/NA32/student.json";
+//  private final static String OUTPUT_FILE_NAME_JSON  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/students.json";
+//	private final static String OUTPUT_FILE_NAME_JSON  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/schools.json";
+//  private final static String OUTPUT_FILE_NAME_JSON  = BASE_DIR + "/sif3DMTest/testdata/us/output/NA32/student.json";
+
+	private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
 	private DataModelMarshalFactory marshaller = new DataModelMarshalFactory();
 
 

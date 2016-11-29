@@ -30,14 +30,13 @@ import au.com.systemic.framework.utils.Timer;
  */
 public class TestMarshallers
 {
-	private final static String INPUT_STUDENT_FILE_NAME  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/input/StudentPersonal.xml";
-//	private final static String INPUT_STUDENT_FILE_NAME  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/input/StudentPersonal.xml";
-
-		private final static String OUTPUT_STUDENT_FILE_NAME_XML  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.xml";
-//	private final static String OUTPUT_STUDENT_FILE_NAME_XML  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.xml";
-
-    private final static String OUTPUT_STUDENT_FILE_NAME_JSON  = "C:/DEV/eclipseWorkspace/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.json";
-//  private final static String OUTPUT_STUDENT_FILE_NAME_JSON  = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator/sif3DMTest/testdata/au/output/StudentPersonal.json";
+    private final static String BASE_DIR = "C:/Development/GitHubRepositories/SIF3DMGenerator/SIF3DMGenerator";
+//    private final static String BASE_DIR = "C:/Development/marsWorkspace/SIF3DMGenerator";
+    
+    
+	private final static String INPUT_STUDENT_FILE_NAME       = BASE_DIR +"/sif3DMTest/testdata/au/input/StudentPersonal.xml";
+	private final static String OUTPUT_STUDENT_FILE_NAME_XML  = BASE_DIR +"/sif3DMTest/testdata/au/output/StudentPersonal.xml";
+	private final static String OUTPUT_STUDENT_FILE_NAME_JSON = BASE_DIR +"/sif3DMTest/testdata/au/output/StudentPersonal.json";
 		
 	private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
 	private DataModelMarshalFactory marshaller = new DataModelMarshalFactory();
