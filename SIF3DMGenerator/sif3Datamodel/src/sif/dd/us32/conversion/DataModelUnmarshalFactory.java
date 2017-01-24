@@ -23,7 +23,8 @@ import java.util.Set;
 
 import javax.ws.rs.core.MediaType;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import sif3.common.conversion.UnmarshalFactory;
 import sif3.common.exception.UnmarshalException;
@@ -32,7 +33,7 @@ import sif3.common.utils.JAXBUtils;
 
 public class DataModelUnmarshalFactory implements UnmarshalFactory
 {
-	protected final Logger logger = Logger.getLogger(getClass());
+    protected final Logger logger = LoggerFactory.getLogger(getClass());
 
 	private static final HashSet<MediaType> supportedMediaTypes = new HashSet<MediaType>(Arrays.asList(MediaType.APPLICATION_XML_TYPE, MediaType.TEXT_XML_TYPE, MediaType.APPLICATION_JSON_TYPE));
 
