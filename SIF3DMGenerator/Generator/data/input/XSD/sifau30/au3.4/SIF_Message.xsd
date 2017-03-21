@@ -1,5 +1,5 @@
 <!--
-		SIF Implementation Specification (Australia) 3.4 (October 19, 2016) Infrastructure Version: v3
+		SIF Implementation Specification (Australia) 3.4.1 NAPLAN Draft (January 10, 2017) Infrastructure Version: v3
 	-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/au/3.4" targetNamespace="http://www.sifassociation.org/datamodel/au/3.4" elementFormDefault="qualified"
 >
@@ -1472,6 +1472,8 @@
       <xs:element name="CellType" minOccurs="0" type="xs:normalizedString" />
       <xs:element name="SchoolInfoRefId" minOccurs="0" nillable="true" type="IdRefType" />
       <xs:element name="SchoolLocalId" minOccurs="0" nillable="true" type="LocalIdType" />
+      <xs:element name="TeacherList" minOccurs="0" nillable="true" type="ScheduledTeacherListType" />
+      <xs:element name="RoomList" minOccurs="0" nillable="true" type="RoomListType" />
       <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
       <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
     </xs:sequence>
@@ -2579,9 +2581,244 @@
   </xs:complexType>
   <xs:element name="GradingAssignmentScores" type="GradingAssignmentScoreCollectionType" />
 
+
+  <!--NAPEventStudentLink-->
+
+  <xs:complexType name="NAPEventStudentLinkType">
+    <xs:sequence>
+      <xs:element name="StudentPersonalRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="PlatformStudentIdentifier" minOccurs="0" type="LocalIdType" />
+      <xs:element name="SchoolInfoRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="SchoolACARAId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="NAPTestRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="NAPTestLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="SchoolSector" minOccurs="0" type="AUCodeSetsSchoolSectorCodeType" />
+      <xs:element name="System" minOccurs="0" nillable="true" type="AUCodeSetsSchoolSystemType" />
+      <xs:element name="SchoolGeolocation" minOccurs="0" nillable="true" type="AUCodeSetsSchoolLocationType" />
+      <xs:element name="ReportingSchoolName" minOccurs="0" nillable="true" type="xs:normalizedString" />
+      <xs:element name="NAPJurisdiction" minOccurs="0" nillable="true" type="AUCodeSetsNAPJurisdictionType" />
+      <xs:element name="ParticipationCode" minOccurs="0" type="AUCodeSetsNAPParticipationCodeType" />
+      <xs:element name="ParticipationText" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="Device" minOccurs="0" nillable="true" type="xs:token" />
+      <xs:element name="Date" minOccurs="0" type="xs:date" />
+      <xs:element name="StartTime" minOccurs="0" type="xs:time" />
+      <xs:element name="LapsedTimeTest" minOccurs="0" type="xs:duration" />
+      <xs:element name="ExemptionReason" minOccurs="0" nillable="true" type="xs:normalizedString" />
+      <xs:element name="PersonalDetailsChanged" minOccurs="0" nillable="true" type="xs:boolean" />
+      <xs:element name="PSIOtherIdMatch" minOccurs="0" nillable="true" type="xs:boolean" />
+      <xs:element name="PossibleDuplicate" minOccurs="0" nillable="true" type="xs:boolean" />
+      <xs:element name="DOBRange" minOccurs="0" nillable="true" type="xs:boolean" />
+      <xs:element name="TestDisruptionList" minOccurs="0" nillable="true" type="TestDisruptionListType" />
+      <xs:element name="Adjustment" minOccurs="0" nillable="true" type="AdjustmentContainerType" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPEventStudentLink" type="NAPEventStudentLinkType">
+    <xs:unique name="NAPEventStudentLinkKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPEventStudentLinkCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPEventStudentLink" type="NAPEventStudentLinkType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPEventStudentLinks" type="NAPEventStudentLinkCollectionType" />
+
+
+  <!--NAPTest-->
+
+  <xs:complexType name="NAPTestType">
+    <xs:sequence>
+      <xs:element name="TestContent" minOccurs="0" type="NAPTestContentType" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPTest" type="NAPTestType">
+    <xs:unique name="NAPTestKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPTestCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPTest" type="NAPTestType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPTests" type="NAPTestCollectionType" />
+
+
+  <!--NAPTestlet-->
+
+  <xs:complexType name="NAPTestletType">
+    <xs:sequence>
+      <xs:element name="NAPTestRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="NAPTestLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="TestletContent" minOccurs="0" type="NAPTestletContentType" />
+      <xs:element name="TestItemList" minOccurs="0" type="NAPTestItemListType" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPTestlet" type="NAPTestletType">
+    <xs:unique name="NAPTestletKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPTestletCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPTestlet" type="NAPTestletType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPTestlets" type="NAPTestletCollectionType" />
+
+
+  <!--NAPTestScoreSummary-->
+
+  <xs:complexType name="NAPTestScoreSummaryType">
+    <xs:sequence>
+      <xs:element name="SchoolInfoRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="SchoolACARAId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="NAPTestRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="NAPTestLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="DomainNationalAverage" minOccurs="0" nillable="true" type="xs:decimal" />
+      <xs:element name="DomainSchoolAverage" minOccurs="0" nillable="true" type="xs:decimal" />
+      <xs:element name="DomainJurisdictionAverage" minOccurs="0" nillable="true" type="xs:decimal" />
+      <xs:element name="DomainTopNational60Percent" minOccurs="0" nillable="true" type="xs:decimal" />
+      <xs:element name="DomainBottomNational60Percent" minOccurs="0" nillable="true" type="xs:decimal" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPTestScoreSummary" type="NAPTestScoreSummaryType">
+    <xs:unique name="NAPTestScoreSummaryKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPTestScoreSummaryCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPTestScoreSummary" type="NAPTestScoreSummaryType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPTestScoreSummarys" type="NAPTestScoreSummaryCollectionType" />
+
+
+  <!--NAPTestItem-->
+
+  <xs:complexType name="NAPTestItemType">
+    <xs:sequence>
+      <xs:element name="TestItemContent" minOccurs="0" type="NAPTestItemContentType" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPTestItem" type="NAPTestItemType">
+    <xs:unique name="NAPTestItemKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPTestItemCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPTestItem" type="NAPTestItemType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPTestItems" type="NAPTestItemCollectionType" />
+
+
+  <!--NAPStudentResponseSet-->
+
+  <xs:complexType name="NAPStudentResponseSetType">
+    <xs:sequence>
+      <xs:element name="ReportExclusionFlag" minOccurs="0" type="xs:boolean" />
+      <xs:element name="CalibrationSampleFlag" minOccurs="0" nillable="true" type="xs:token" />
+      <xs:element name="EquatingSampleFlag" minOccurs="0" nillable="true" type="xs:token" />
+      <xs:element name="PathTakenForDomain" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="ParallelTest" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="StudentPersonalRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="PlatformStudentIdentifier" minOccurs="0" type="LocalIdType" />
+      <xs:element name="NAPTestRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="NAPTestLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="DomainScore" minOccurs="0" type="DomainScoreType" />
+      <xs:element name="TestletList" minOccurs="0" type="NAPStudentResponseTestletListType" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPStudentResponseSet" type="NAPStudentResponseSetType">
+    <xs:unique name="NAPStudentResponseSetKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPStudentResponseSetCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPStudentResponseSet" type="NAPStudentResponseSetType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPStudentResponseSets" type="NAPStudentResponseSetCollectionType" />
+
+
+  <!--NAPCodeFrame-->
+
+  <xs:complexType name="NAPCodeFrameType">
+    <xs:sequence>
+      <xs:element name="NAPTestRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="TestContent" minOccurs="0" nillable="true" type="NAPTestContentType" />
+      <xs:element name="TestletList" minOccurs="0" type="NAPCodeFrameTestletListType" />
+      <xs:element name="SIF_Metadata" minOccurs="0" nillable="true" type="SIF_MetadataType" />
+      <xs:element name="SIF_ExtendedElements" minOccurs="0" nillable="true" type="SIF_ExtendedElementsType" />
+    </xs:sequence>
+    <xs:attribute name="RefId" use="required" type="RefIdType" />
+  </xs:complexType>
+
+  <xs:element name="NAPCodeFrame" type="NAPCodeFrameType">
+    <xs:unique name="NAPCodeFrameKey1">
+      <xs:selector xpath="." />
+      <xs:field xpath="@RefId" />
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="NAPCodeFrameCollectionType">
+    <xs:sequence>
+      <xs:element name="NAPCodeFrame" type="NAPCodeFrameType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NAPCodeFrames" type="NAPCodeFrameCollectionType" />
+
   <xs:simpleType name="AUCodeSetsNAPResponseCorrectnessType">
     <xs:restriction base="xs:token">
-      <xs:enumeration value="0" />
+      <xs:enumeration value="Correct" />
+      <xs:enumeration value="Incorrect" />
+      <xs:enumeration value="NotInPath" />
+      <xs:enumeration value="NotAttempted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AUCodeSetsNAPJurisdictionType">
+    <xs:restriction base="xs:token">
       <xs:enumeration value="1" />
       <xs:enumeration value="2" />
       <xs:enumeration value="3" />
@@ -2591,27 +2828,6 @@
       <xs:enumeration value="7" />
       <xs:enumeration value="8" />
       <xs:enumeration value="9" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="AUCodeSetsNAPTestItemStimulusTypeType">
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="Text" />
-      <xs:enumeration value="Image" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="AUCodeSetsNAPWritingRubricTypeType">
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="Text Structure" />
-      <xs:enumeration value="Ideas" />
-      <xs:enumeration value="Ideas" />
-      <xs:enumeration value="Persuasive Devices" />
-      <xs:enumeration value="Character and Setting" />
-      <xs:enumeration value="Vocabulary" />
-      <xs:enumeration value="Cohesion" />
-      <xs:enumeration value="Paragraphing" />
-      <xs:enumeration value="Sentence Structure" />
-      <xs:enumeration value="Punctuation" />
-      <xs:enumeration value="Spelling" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="AUCodeSetsNAPWritingGenreType">
@@ -2629,6 +2845,7 @@
   </xs:simpleType>
   <xs:simpleType name="AUCodeSetsNAPTestItemTypeType">
     <xs:restriction base="xs:token">
+      <xs:enumeration value="CO" />
       <xs:enumeration value="ET" />
       <xs:enumeration value="HS" />
       <xs:enumeration value="HT" />
@@ -2650,26 +2867,17 @@
   </xs:simpleType>
   <xs:simpleType name="AUCodeSetsNAPTestTypeType">
     <xs:restriction base="xs:token">
-      <xs:enumeration value="Main" />
-      <xs:enumeration value="Survey" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="AUCodeSetsNAPTestletTypeType">
-    <xs:restriction base="xs:token">
       <xs:enumeration value="Normal" />
-      <xs:enumeration value="Override" />
       <xs:enumeration value="Equating" />
-      <xs:enumeration value="Adjustment" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="AUCodeSetsNAPTestDomainType">
     <xs:restriction base="xs:token">
       <xs:enumeration value="Reading" />
       <xs:enumeration value="Writing" />
-      <xs:enumeration value="Writing" />
       <xs:enumeration value="Numeracy" />
-      <xs:enumeration value="Language Conventions Spelling" />
-      <xs:enumeration value="Language Conventions Grammar and Punctuation" />
+      <xs:enumeration value="Spelling" />
+      <xs:enumeration value="Grammar and Punctuation" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="AUCodeSetsPNPCodeType">
@@ -2700,6 +2908,7 @@
       <xs:enumeration value="W" />
       <xs:enumeration value="S" />
       <xs:enumeration value="R" />
+      <xs:enumeration value="X" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="AUCodeSetsAttendanceCodeType">
@@ -6232,7 +6441,6 @@
       <xs:enumeration value="40" />
       <xs:enumeration value="41" />
       <xs:enumeration value="51" />
-      <xs:enumeration value="101" />
       <xs:enumeration value="186" />
       <xs:enumeration value="187" />
       <xs:enumeration value="188" />
@@ -7411,29 +7619,368 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!--NAPTestItemContentType-->
+
+  <xs:complexType name="NAPTestItemContentType">
+    <xs:sequence>
+      <xs:element name="NAPTestItemLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="ItemName" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="ItemType" minOccurs="0" type="AUCodeSetsNAPTestItemTypeType" />
+      <xs:element name="Subdomain" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="WritingGenre" minOccurs="0" nillable="true" type="AUCodeSetsNAPWritingGenreType" />
+      <xs:element name="ItemDescriptor" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="ReleasedStatus" minOccurs="0" type="xs:boolean" />
+      <xs:element name="MarkingType" minOccurs="0" type="AUCodeSetsNAPTestItemMarkingTypeType" />
+      <xs:element name="MultipleChoiceOptionCount" minOccurs="0" nillable="true" type="xs:int" />
+      <xs:element name="CorrectAnswer" minOccurs="0" nillable="true" type="xs:normalizedString" />
+      <xs:element name="MaximumScore" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemDifficulty" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemDifficultyLogit5" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemDifficultyLogit62" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemDifficultyLogit5SE" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemDifficultyLogit62SE" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemProficiencyBand" minOccurs="0" type="xs:integer" />
+      <xs:element name="ItemProficiencyLevel" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="ExemplarURL" minOccurs="0" nillable="true" type="xs:anyURI" />
+      <xs:element name="ItemSubstitutedForList" minOccurs="0" nillable="true" type="SubstituteItemListType" />
+      <xs:element name="ContentDescriptionList" minOccurs="0" nillable="true" type="ContentDescriptionListType" />
+      <xs:element name="StimulusList" minOccurs="0" nillable="true" type="StimulusListType" />
+      <xs:element name="NAPWritingRubricList" minOccurs="0" nillable="true" type="NAPWritingRubricListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestletContentType-->
+
+  <xs:complexType name="NAPTestletContentType">
+    <xs:sequence>
+      <xs:element name="NAPTestletLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="TestletName" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="Node" minOccurs="0" nillable="true" type="xs:token" />
+      <xs:element name="LocationInStage" minOccurs="0" nillable="true" type="xs:integer" />
+      <xs:element name="TestletMaximumScore" minOccurs="0" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestContentType-->
+
+  <xs:complexType name="NAPTestContentType">
+    <xs:sequence>
+      <xs:element name="NAPTestLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="TestName" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="TestLevel" minOccurs="0" type="YearLevelType" />
+      <xs:element name="TestType" minOccurs="0" type="AUCodeSetsNAPTestTypeType" />
+      <xs:element name="Domain" minOccurs="0" type="AUCodeSetsNAPTestDomainType" />
+      <xs:element name="TestYear" minOccurs="0" type="SchoolYearType" />
+      <xs:element name="StagesCount" minOccurs="0" type="xs:int" />
+      <xs:element name="DomainBands" minOccurs="0" type="DomainBandsContainerType" />
+      <xs:element name="DomainProficiency" minOccurs="0" type="DomainProficiencyContainerType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--PlausibleScaledValueListType-->
+
+  <xs:complexType name="PlausibleScaledValueListType">
+    <xs:sequence>
+      <xs:element name="PlausibleScaledValue" minOccurs="0" maxOccurs="unbounded" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--SubstituteItemListType-->
+
+  <xs:complexType name="SubstituteItemListType">
+    <xs:sequence>
+      <xs:element name="SubstituteItem" minOccurs="0" maxOccurs="unbounded" type="SubstituteItemType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--SubstituteItemType-->
+
+  <xs:complexType name="SubstituteItemType">
+    <xs:sequence>
+      <xs:element name="SubstituteItemRefId" minOccurs="0" type="IdRefType" />
+      <xs:element name="SubstituteItemLocalId" minOccurs="0" nillable="true" type="LocalIdType" />
+      <xs:element name="PNPCodeList" minOccurs="0" type="PNPCodeListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--CodeFrameTestItemListType-->
+
+  <xs:complexType name="CodeFrameTestItemListType">
+    <xs:sequence>
+      <xs:element name="TestItem" minOccurs="0" maxOccurs="unbounded" type="CodeFrameTestItemType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--CodeFrameTestItemType-->
+
+  <xs:complexType name="CodeFrameTestItemType">
+    <xs:sequence>
+      <xs:element name="TestItemRefId" minOccurs="0" type="IdRefType" />
+      <xs:element name="SequenceNumber" minOccurs="0" type="xs:integer" />
+      <xs:element name="TestItemContent" minOccurs="0" type="NAPTestItemContentType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--StimulusLocalIdListType-->
+
+  <xs:complexType name="StimulusLocalIdListType">
+    <xs:sequence>
+      <xs:element name="StimulusLocalId" minOccurs="0" maxOccurs="unbounded" type="LocalIdType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--DomainBandsContainerType-->
+
+  <xs:complexType name="DomainBandsContainerType">
+    <xs:sequence>
+      <xs:element name="Band1Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band1Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band2Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band2Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band3Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band3Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band4Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band4Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band5Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band5Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band6Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band6Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band7Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band7Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band8Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band8Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band9Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band9Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band10Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Band10Upper" minOccurs="0" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--DomainProficiencyContainerType-->
+
+  <xs:complexType name="DomainProficiencyContainerType">
+    <xs:sequence>
+      <xs:element name="Level1Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level1Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level2Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level2Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level3Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level3Upper" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level4Lower" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Level4Upper" minOccurs="0" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestItemListType-->
+
+  <xs:complexType name="NAPTestItemListType">
+    <xs:sequence>
+      <xs:element name="TestItem" minOccurs="0" maxOccurs="unbounded" type="NAPTestItem2Type" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestItem2Type-->
+
+  <xs:complexType name="NAPTestItem2Type">
+    <xs:sequence>
+      <xs:element name="TestItemRefId" minOccurs="0" type="IdRefType" />
+      <xs:element name="TestItemLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="SequenceNumber" minOccurs="0" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPCodeFrameTestletListType-->
+
+  <xs:complexType name="NAPCodeFrameTestletListType">
+    <xs:sequence>
+      <xs:element name="Testlet" minOccurs="0" maxOccurs="unbounded" type="NAPTestletCodeFrameType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestletCodeFrameType-->
+
+  <xs:complexType name="NAPTestletCodeFrameType">
+    <xs:sequence>
+      <xs:element name="NAPTestletRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="TestletContent" minOccurs="0" type="NAPTestletContentType" />
+      <xs:element name="TestItemList" minOccurs="0" type="CodeFrameTestItemListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPStudentResponseTestletListType-->
+
+  <xs:complexType name="NAPStudentResponseTestletListType">
+    <xs:sequence>
+      <xs:element name="Testlet" minOccurs="0" maxOccurs="unbounded" type="NAPTestletResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestletResponseType-->
+
+  <xs:complexType name="NAPTestletResponseType">
+    <xs:sequence>
+      <xs:element name="NAPTestletRefId" minOccurs="0" nillable="true" type="IdRefType" />
+      <xs:element name="NAPTestletLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="TestletSubScore" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ItemResponseList" minOccurs="0" type="NAPTestletItemResponseListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestletItemResponseListType-->
+
+  <xs:complexType name="NAPTestletItemResponseListType">
+    <xs:sequence>
+      <xs:element name="ItemResponse" minOccurs="0" maxOccurs="unbounded" type="NAPTestletResponseItemType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPTestletResponseItemType-->
+
+  <xs:complexType name="NAPTestletResponseItemType">
+    <xs:sequence>
+      <xs:element name="NAPTestItemRefId" minOccurs="0" type="IdRefType" />
+      <xs:element name="NAPTestItemLocalId" minOccurs="0" nillable="true" type="LocalIdType" />
+      <xs:element name="Response" minOccurs="0" type="xs:string" />
+      <xs:element name="ResponseCorrectness" minOccurs="0" nillable="true" type="AUCodeSetsNAPResponseCorrectnessType" />
+      <xs:element name="Score" minOccurs="0" nillable="true" type="xs:decimal" />
+      <xs:element name="LapsedTimeItem" minOccurs="0" type="xs:duration" />
+      <xs:element name="SequenceNumber" minOccurs="0" type="xs:integer" />
+      <xs:element name="ItemWeight" minOccurs="0" type="xs:decimal" />
+      <xs:element name="SubscoreList" minOccurs="0" nillable="true" type="NAPSubscoreListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPSubscoreListType-->
+
+  <xs:complexType name="NAPSubscoreListType">
+    <xs:sequence>
+      <xs:element name="Subscore" minOccurs="0" maxOccurs="unbounded" type="NAPSubscoreType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPSubscoreType-->
+
+  <xs:complexType name="NAPSubscoreType">
+    <xs:sequence>
+      <xs:element name="SubscoreType" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="SubscoreValue" minOccurs="0" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--DomainScoreType-->
+
+  <xs:complexType name="DomainScoreType">
+    <xs:sequence>
+      <xs:element name="RawScore" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ScaledScoreValue" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ScaledScoreLogitValue" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ScaledScoreStandardError" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ScaledScoreLogitStandardError" minOccurs="0" type="xs:decimal" />
+      <xs:element name="StudentDomainBand" minOccurs="0" type="xs:integer" />
+      <xs:element name="StudentProficiency" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="PlausibleScaledValueList" minOccurs="0" maxOccurs="unbounded" type="PlausibleScaledValueListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPWritingRubricListType-->
+
+  <xs:complexType name="NAPWritingRubricListType">
+    <xs:sequence>
+      <xs:element name="NAPWritingRubric" minOccurs="0" maxOccurs="unbounded" type="NAPWritingRubricType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--NAPWritingRubricType-->
+
+  <xs:complexType name="NAPWritingRubricType">
+    <xs:sequence>
+      <xs:element name="RubricType" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="ScoreList" minOccurs="0" type="ScoreListType" />
+      <xs:element name="Descriptor" minOccurs="0" nillable="true" type="xs:normalizedString" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--ScoreListType-->
+
+  <xs:complexType name="ScoreListType">
+    <xs:sequence>
+      <xs:element name="Score" minOccurs="0" maxOccurs="unbounded" type="ScoreType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--ScoreType-->
+
+  <xs:complexType name="ScoreType">
+    <xs:sequence>
+      <xs:element name="MaxScoreValue" minOccurs="0" type="xs:decimal" />
+      <xs:element name="ScoreDescriptionList" minOccurs="0" type="ScoreDescriptionListType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--ScoreDescriptionListType-->
+
+  <xs:complexType name="ScoreDescriptionListType">
+    <xs:sequence>
+      <xs:element name="ScoreDescription" minOccurs="0" maxOccurs="unbounded" type="ScoreDescriptionType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--ScoreDescriptionType-->
+
+  <xs:complexType name="ScoreDescriptionType">
+    <xs:sequence>
+      <xs:element name="ScoreValue" minOccurs="0" type="xs:decimal" />
+      <xs:element name="Descriptor" minOccurs="0" type="xs:normalizedString" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <!--StimulusListType-->
+
+  <xs:complexType name="StimulusListType">
+    <xs:sequence>
+      <xs:element name="Stimulus" minOccurs="0" maxOccurs="unbounded" type="StimulusType" />
+    </xs:sequence>
+  </xs:complexType>
+
+
   <!--StimulusType-->
 
   <xs:complexType name="StimulusType">
     <xs:sequence>
-      <xs:element name="LocalId" minOccurs="0" type="LocalIdType" />
-      <xs:element name="StimulusType" minOccurs="0" type="AUCodeSetsNAPTestItemStimulusTypeType" />
-      <xs:element name="Domain" minOccurs="0" nillable="true" type="AUCodeSetsNAPTestDomainType" />
+      <xs:element name="StimulusLocalId" minOccurs="0" type="LocalIdType" />
       <xs:element name="TextGenre" minOccurs="0" nillable="true" type="xs:normalizedString" />
       <xs:element name="TextType" minOccurs="0" nillable="true" type="xs:normalizedString" />
       <xs:element name="WordCount" minOccurs="0" nillable="true" type="xs:integer" />
-      <xs:element name="Descriptor" minOccurs="0" type="xs:normalizedString" />
-      <xs:element name="Content" minOccurs="0">
-        <xs:simpleType>
-          <xs:union>
-            <xs:simpleType>
-              <xs:restriction base="xs:base64Binary" />
-            </xs:simpleType>
-            <xs:simpleType>
-              <xs:restriction base="xs:normalizedString" />
-            </xs:simpleType>
-          </xs:union>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="TextDescriptor" minOccurs="0" type="xs:normalizedString" />
+      <xs:element name="Content" minOccurs="0" type="xs:anyURI" />
     </xs:sequence>
   </xs:complexType>
 
@@ -7456,20 +8003,10 @@
   </xs:complexType>
 
 
-  <!--AdjustmentListType-->
+  <!--AdjustmentContainerType-->
 
-  <xs:complexType name="AdjustmentListType">
+  <xs:complexType name="AdjustmentContainerType">
     <xs:sequence>
-      <xs:element name="Adjustment" minOccurs="0" maxOccurs="unbounded" type="AdjustmentType" />
-    </xs:sequence>
-  </xs:complexType>
-
-
-  <!--AdjustmentType-->
-
-  <xs:complexType name="AdjustmentType">
-    <xs:sequence>
-      <xs:element name="AdjustmentDomain" minOccurs="0" type="AUCodeSetsNAPTestDomainType" />
       <xs:element name="PNPCodeList" minOccurs="0" type="PNPCodeListType" />
       <xs:element name="BookletType" minOccurs="0" nillable="true" type="xs:token" />
     </xs:sequence>
@@ -7489,7 +8026,6 @@
 
   <xs:complexType name="TestDisruptionType">
     <xs:sequence>
-      <xs:element name="Code" minOccurs="0" nillable="true" type="xs:token" />
       <xs:element name="Event" minOccurs="0" type="xs:normalizedString" />
     </xs:sequence>
   </xs:complexType>
@@ -8711,7 +9247,7 @@
   <xs:complexType name="TeachingGroupTeacherType">
     <xs:sequence>
       <xs:element name="StaffPersonalRefId" minOccurs="0" nillable="true" type="IdRefType" />
-      <xs:element name="StaffLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="StaffLocalId" minOccurs="0" nillable="true" type="LocalIdType" />
       <xs:element name="Name" minOccurs="0" nillable="true" type="NameOfRecordType" />
       <xs:element name="Association" minOccurs="0" type="xs:normalizedString" />
     </xs:sequence>
@@ -8732,7 +9268,7 @@
   <xs:complexType name="TeachingGroupStudentType">
     <xs:sequence>
       <xs:element name="StudentPersonalRefId" minOccurs="0" nillable="true" type="IdRefType" />
-      <xs:element name="StudentLocalId" minOccurs="0" type="LocalIdType" />
+      <xs:element name="StudentLocalId" minOccurs="0" nillable="true" type="LocalIdType" />
       <xs:element name="Name" minOccurs="0" nillable="true" type="NameOfRecordType" />
     </xs:sequence>
   </xs:complexType>
