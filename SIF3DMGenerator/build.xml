@@ -100,6 +100,12 @@
 		</antcall>
 	</target>
 
+	<target name="23-generate-AU341" depends="init" description="Generate POJOs using JAXB">
+		<antcall target="generate-au-pojo">
+			<param name="sifddversion" value="3.4.1"/>
+		</antcall>
+	</target>
+	
 	<target name="generate-au-pojo" depends="init" description="Generate POJOs using JAXB">
 		<echo message="Generate Pojos for Locale AU, Data Model Version ${sifddversion} and Infrastructure 3.x"/>
 		<delete dir="${output.base.dir}/sifau${sifddversion}/src" />

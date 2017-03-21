@@ -20,10 +20,11 @@ The reason for this project is that the actual SIF3 Framework becomes/remains in
 data model. It is expected that a specific SIF3 Project will include not only the SIF3 Framework 
 Libraries but also one of the Data Model libraries generated out of this project.
 
-As of September 01, 2016 the following SIF Locale Data Models are supported by this project
+As of March 21, 2017 the following SIF Locale Data Models are supported by this project
 - SIF AU 1.3 for Infrastructure 3.x
 - SIF AU 1.4 for Infrastructure 3.x
-- SIF AU 3.4 (Draft) for Infrastructure 3.x
+- SIF AU 3.4 for Infrastructure 3.x
+- SIF AU 3.4.1 (Draft) for Infrastructure 3.x
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
 
@@ -31,9 +32,10 @@ As of September 01, 2016 the following SIF Locale Data Models are supported by t
 
 ## SIF AU:
 1. Run the 20-generateAU13for30 (SIF AU 1.3 data model), 21-generateAU14for30 (SIF AU 1.4 data model)
-   or 22-generateAU34 (SIF AU 3.4 data model) ant target respectively.
+   or 22-generateAU34 or 23-generateAU341 (SIF AU 3.4  or SIF AU 3.4.1 data model) ant target respectively.
    This will generate the Java POJOs for the chosen data model. The POJOs can be found in the
-   Generator/data/output/sifau1.3, Generator/data/output/sifau1.4 or Generator/data/output/sifau3.4 respectively.
+   Generator/data/output/sifau1.3, Generator/data/output/sifau1.4 or Generator/data/output/sifau3.4,
+   Generator/data/output/sifau3.4.1 respectively.
 2. Remove all java classes in the sif3Datamodel/src/sif/dd/au30/model source directory.
 3. Copy the generated POJOs from step 1) to the directory of step 2).
 4. Run the 10-jar-dd-au13for30 (SIF AU 1.3 data model), 11-jar-dd-au14for30 (SIF AU 1.4 data model) or 
@@ -72,6 +74,10 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 ## Version from October 23, 2016
 - Added SIF AU 3.4 XSD (data/input/XSD/sifau30/au3.4 directory) and generated data model classes 
   for SIF AU 3.4 (sif.dd.au30 package). This represents the officially released SIF AU 3.4 Data Model.
+
+## Version from March 21, 2017
+- Added SIF AU 3.4.1 XSD (data/input/XSD/sifau30/au3.4.1 directory) and generated data model classes 
+  for SIF AU 3.4.1 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.1 Data Model.
 
 # Download Instructions
 How to download this project:
