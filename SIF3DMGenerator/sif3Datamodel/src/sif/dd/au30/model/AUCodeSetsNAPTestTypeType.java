@@ -14,21 +14,21 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;simpleType name="AUCodeSetsNAPTestTypeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="Main"/>
- *     &lt;enumeration value="Survey"/>
+ *     &lt;enumeration value="Normal"/>
+ *     &lt;enumeration value="Equating"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsNAPTestTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsNAPTestTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsNAPTestTypeType {
 
-    @XmlEnumValue("Main")
-    MAIN("Main"),
-    @XmlEnumValue("Survey")
-    SURVEY("Survey");
+    @XmlEnumValue("Normal")
+    NORMAL("Normal"),
+    @XmlEnumValue("Equating")
+    EQUATING("Equating");
     private final String value;
 
     AUCodeSetsNAPTestTypeType(String v) {

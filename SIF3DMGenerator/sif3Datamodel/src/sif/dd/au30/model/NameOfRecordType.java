@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <pre>
  * &lt;complexType name="NameOfRecordType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://www.sifassociation.org/datamodel/au/3.4}BaseNameType">
+ *     &lt;extension base="{http://www.sifassociation.org/datamodel/au/3.4.1}BaseNameType">
  *       &lt;attribute name="Type" use="required">
  *         &lt;simpleType>
  *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NameOfRecordType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "NameOfRecordType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 public class NameOfRecordType
     extends BaseNameType
 {

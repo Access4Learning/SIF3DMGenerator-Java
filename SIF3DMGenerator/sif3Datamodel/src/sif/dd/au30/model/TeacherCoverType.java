@@ -23,12 +23,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType"/>
+ *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
- *         &lt;element name="Credit" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsTeacherCoverCreditType" minOccurs="0"/>
- *         &lt;element name="Supervision" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsTeacherCoverSupervisionType" minOccurs="0"/>
+ *         &lt;element name="Credit" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsTeacherCoverCreditType" minOccurs="0"/>
+ *         &lt;element name="Supervision" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsTeacherCoverSupervisionType" minOccurs="0"/>
  *         &lt;element name="Weighting" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -39,7 +39,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TeacherCoverType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "TeacherCoverType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "staffPersonalRefId",
     "staffLocalId",
     "startTime",
@@ -50,20 +50,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TeacherCoverType {
 
-    @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String staffPersonalRefId;
-    @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> staffLocalId;
-    @XmlElementRef(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> startTime;
-    @XmlElementRef(name = "FinishTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FinishTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> finishTime;
-    @XmlElementRef(name = "Credit", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Credit", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsTeacherCoverCreditType> credit;
-    @XmlElementRef(name = "Supervision", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Supervision", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsTeacherCoverSupervisionType> supervision;
-    @XmlElementRef(name = "Weighting", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Weighting", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> weighting;
 
     /**

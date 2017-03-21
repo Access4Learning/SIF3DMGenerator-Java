@@ -22,10 +22,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *         &lt;element name="Amount" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
- *         &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token"/>
+ *         &lt;element name="Amount" type="{http://www.sifassociation.org/datamodel/au/3.4.1}MonetaryAmountType"/>
+ *         &lt;element name="FinancialAccountRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" minOccurs="0"/>
+ *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExpenseAccountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "ExpenseAccountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "accountCode",
     "amount",
     "financialAccountRefId",
@@ -43,15 +43,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class ExpenseAccountType {
 
-    @XmlElement(name = "AccountCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "AccountCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String accountCode;
-    @XmlElement(name = "Amount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Amount", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     protected MonetaryAmountType amount;
-    @XmlElementRef(name = "FinancialAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FinancialAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> financialAccountRefId;
-    @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> accountingPeriod;
 
     /**

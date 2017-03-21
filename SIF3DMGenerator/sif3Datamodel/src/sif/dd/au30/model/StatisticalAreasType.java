@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StatisticalArea" type="{http://www.sifassociation.org/datamodel/au/3.4}StatisticalAreaType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="StatisticalArea" type="{http://www.sifassociation.org/datamodel/au/3.4.1}StatisticalAreaType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StatisticalAreasType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "StatisticalAreasType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "statisticalArea"
 })
 public class StatisticalAreasType {
 
-    @XmlElement(name = "StatisticalArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StatisticalArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<StatisticalAreaType> statisticalArea;
 
     /**

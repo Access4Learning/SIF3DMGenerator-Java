@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CalendarDate" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarDateType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="CalendarDate" type="{http://www.sifassociation.org/datamodel/au/3.4.1}CalendarDateType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CalendarDateCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "CalendarDateCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "calendarDate"
 })
 public class CalendarDateCollectionType {
 
-    @XmlElement(name = "CalendarDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CalendarDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<CalendarDate> calendarDate;
 
     /**

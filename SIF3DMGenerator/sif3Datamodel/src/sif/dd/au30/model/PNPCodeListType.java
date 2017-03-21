@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PNPCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPNPCodeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PNPCode" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsPNPCodeType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PNPCodeListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "PNPCodeListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "pnpCode"
 })
 public class PNPCodeListType {
 
-    @XmlElement(name = "PNPCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PNPCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     protected List<AUCodeSetsPNPCodeType> pnpCode;
 
     /**

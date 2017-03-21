@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolFocus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolFocusCodeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SchoolFocus" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsSchoolFocusCodeType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,12 +31,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SchoolFocusListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "SchoolFocusListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "schoolFocus"
 })
 public class SchoolFocusListType {
 
-    @XmlElement(name = "SchoolFocus", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolFocus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> schoolFocus;
 

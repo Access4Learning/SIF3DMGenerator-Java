@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ProgramFundingSource" type="{http://www.sifassociation.org/datamodel/au/3.4}ProgramFundingSourceType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ProgramFundingSource" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ProgramFundingSourceType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ProgramFundingSourcesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "ProgramFundingSourcesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "programFundingSource"
 })
 public class ProgramFundingSourcesType {
 
-    @XmlElement(name = "ProgramFundingSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ProgramFundingSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     protected List<ProgramFundingSourceType> programFundingSource;
 
     /**

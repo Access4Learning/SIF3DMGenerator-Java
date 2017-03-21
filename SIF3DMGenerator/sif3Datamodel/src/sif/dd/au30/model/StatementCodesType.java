@@ -32,12 +32,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StatementCodesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "StatementCodesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "statementCode"
 })
 public class StatementCodesType {
 
-    @XmlElement(name = "StatementCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StatementCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected List<String> statementCode;

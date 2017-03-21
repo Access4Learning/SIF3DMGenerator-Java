@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;simpleType name="AUCodeSetsNAPTestItemTypeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *     &lt;enumeration value="CO"/>
  *     &lt;enumeration value="ET"/>
  *     &lt;enumeration value="HS"/>
  *     &lt;enumeration value="HT"/>
@@ -35,10 +36,11 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsNAPTestItemTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsNAPTestItemTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsNAPTestItemTypeType {
 
+    CO,
     ET,
     HS,
     HT,

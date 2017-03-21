@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CalendarSummary" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarSummaryType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="CalendarSummary" type="{http://www.sifassociation.org/datamodel/au/3.4.1}CalendarSummaryType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CalendarSummaryCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "CalendarSummaryCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "calendarSummary"
 })
 public class CalendarSummaryCollectionType {
 
-    @XmlElement(name = "CalendarSummary", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CalendarSummary", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<CalendarSummaryType> calendarSummary;
 
     /**

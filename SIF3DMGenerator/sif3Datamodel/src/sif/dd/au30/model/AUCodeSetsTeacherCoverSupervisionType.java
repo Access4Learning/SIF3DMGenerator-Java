@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsTeacherCoverSupervisionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsTeacherCoverSupervisionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsTeacherCoverSupervisionType {
 

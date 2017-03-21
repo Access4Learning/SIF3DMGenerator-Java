@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsDayValueCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsDayValueCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsDayValueCodeType {
 

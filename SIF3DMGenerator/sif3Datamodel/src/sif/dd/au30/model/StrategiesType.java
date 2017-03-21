@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StrategiesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "StrategiesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "strategy"
 })
 public class StrategiesType {
 
-    @XmlElement(name = "Strategy", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Strategy", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<String> strategy;
 
     /**

@@ -22,10 +22,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="Name" type="{http://www.sifassociation.org/datamodel/au/3.4}NameOfRecordType" minOccurs="0"/>
- *         &lt;element name="Association" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" minOccurs="0"/>
+ *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="Name" type="{http://www.sifassociation.org/datamodel/au/3.4.1}NameOfRecordType" minOccurs="0"/>
+ *         &lt;element name="Association" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TeachingGroupTeacherType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "TeachingGroupTeacherType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "staffPersonalRefId",
     "staffLocalId",
     "name",
@@ -43,14 +43,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class TeachingGroupTeacherType {
 
-    @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> staffPersonalRefId;
-    @XmlElement(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    protected String staffLocalId;
-    @XmlElementRef(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> staffLocalId;
+    @XmlElementRef(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<NameOfRecordType> name;
-    @XmlElement(name = "Association", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Association", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String association;
@@ -84,10 +83,10 @@ public class TeachingGroupTeacherType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getStaffLocalId() {
+    public JAXBElement<String> getStaffLocalId() {
         return staffLocalId;
     }
 
@@ -96,10 +95,10 @@ public class TeachingGroupTeacherType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setStaffLocalId(String value) {
+    public void setStaffLocalId(JAXBElement<String> value) {
         this.staffLocalId = value;
     }
 

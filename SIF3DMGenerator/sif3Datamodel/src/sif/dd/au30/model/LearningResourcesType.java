@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LearningResourceRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="LearningResourceRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,12 +31,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LearningResourcesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "LearningResourcesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "learningResourceRefId"
 })
 public class LearningResourcesType {
 
-    @XmlElement(name = "LearningResourceRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LearningResourceRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> learningResourceRefId;
 

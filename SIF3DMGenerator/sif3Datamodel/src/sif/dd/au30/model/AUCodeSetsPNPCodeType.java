@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsPNPCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsPNPCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsPNPCodeType {
 

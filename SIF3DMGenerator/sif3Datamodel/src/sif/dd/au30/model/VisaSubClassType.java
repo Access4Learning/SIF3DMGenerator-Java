@@ -20,7 +20,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassCodeType" minOccurs="0"/>
+ *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4.1}VisaSubClassCodeType"/>
  *         &lt;element name="VisaExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="ATEExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="ATEStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
@@ -34,7 +34,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VisaSubClassType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "VisaSubClassType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "code",
     "visaExpiryDate",
     "ateExpiryDate",
@@ -43,15 +43,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class VisaSubClassType {
 
-    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     protected String code;
-    @XmlElementRef(name = "VisaExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VisaExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> visaExpiryDate;
-    @XmlElementRef(name = "ATEExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ATEExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> ateExpiryDate;
-    @XmlElementRef(name = "ATEStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ATEStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> ateStartDate;
-    @XmlElementRef(name = "VisaStatisticalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VisaStatisticalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> visaStatisticalCode;
 
     /**

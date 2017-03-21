@@ -19,33 +19,33 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="IndigenousStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsIndigenousStatusType" minOccurs="0"/>
- *         &lt;element name="Sex" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSexCodeType" minOccurs="0"/>
- *         &lt;element name="BirthDate" type="{http://www.sifassociation.org/datamodel/au/3.4}BirthDateType" minOccurs="0"/>
+ *         &lt;element name="IndigenousStatus" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsIndigenousStatusType" minOccurs="0"/>
+ *         &lt;element name="Sex" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsSexCodeType" minOccurs="0"/>
+ *         &lt;element name="BirthDate" type="{http://www.sifassociation.org/datamodel/au/3.4.1}BirthDateType" minOccurs="0"/>
  *         &lt;element name="DateOfDeath" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="BirthDateVerification" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsBirthdateVerificationType" minOccurs="0"/>
+ *         &lt;element name="BirthDateVerification" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsBirthdateVerificationType" minOccurs="0"/>
  *         &lt;element name="PlaceOfBirth" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="StateOfBirth" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceType" minOccurs="0"/>
- *         &lt;element name="CountryOfBirth" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" minOccurs="0"/>
- *         &lt;element name="CountriesOfCitizenship" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryListType" minOccurs="0"/>
- *         &lt;element name="CountriesOfResidency" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryList2Type" minOccurs="0"/>
+ *         &lt;element name="StateOfBirth" type="{http://www.sifassociation.org/datamodel/au/3.4.1}StateProvinceType" minOccurs="0"/>
+ *         &lt;element name="CountryOfBirth" type="{http://www.sifassociation.org/datamodel/au/3.4.1}CountryType" minOccurs="0"/>
+ *         &lt;element name="CountriesOfCitizenship" type="{http://www.sifassociation.org/datamodel/au/3.4.1}CountryListType" minOccurs="0"/>
+ *         &lt;element name="CountriesOfResidency" type="{http://www.sifassociation.org/datamodel/au/3.4.1}CountryList2Type" minOccurs="0"/>
  *         &lt;element name="CountryArrivalDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="AustralianCitizenshipStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianCitizenshipStatusType" minOccurs="0"/>
- *         &lt;element name="EnglishProficiency" type="{http://www.sifassociation.org/datamodel/au/3.4}EnglishProficiencyType" minOccurs="0"/>
- *         &lt;element name="LanguageList" type="{http://www.sifassociation.org/datamodel/au/3.4}LanguageListType" minOccurs="0"/>
- *         &lt;element name="DwellingArrangement" type="{http://www.sifassociation.org/datamodel/au/3.4}DwellingArrangementType" minOccurs="0"/>
- *         &lt;element name="Religion" type="{http://www.sifassociation.org/datamodel/au/3.4}ReligionType" minOccurs="0"/>
- *         &lt;element name="ReligiousEventList" type="{http://www.sifassociation.org/datamodel/au/3.4}ReligiousEventListType" minOccurs="0"/>
+ *         &lt;element name="AustralianCitizenshipStatus" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsAustralianCitizenshipStatusType" minOccurs="0"/>
+ *         &lt;element name="EnglishProficiency" type="{http://www.sifassociation.org/datamodel/au/3.4.1}EnglishProficiencyType" minOccurs="0"/>
+ *         &lt;element name="LanguageList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LanguageListType" minOccurs="0"/>
+ *         &lt;element name="DwellingArrangement" type="{http://www.sifassociation.org/datamodel/au/3.4.1}DwellingArrangementType" minOccurs="0"/>
+ *         &lt;element name="Religion" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ReligionType" minOccurs="0"/>
+ *         &lt;element name="ReligiousEventList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ReligiousEventListType" minOccurs="0"/>
  *         &lt;element name="ReligiousRegion" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="PermanentResident" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPermanentResidentStatusType" minOccurs="0"/>
- *         &lt;element name="VisaSubClass" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassCodeType" minOccurs="0"/>
+ *         &lt;element name="PermanentResident" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsPermanentResidentStatusType" minOccurs="0"/>
+ *         &lt;element name="VisaSubClass" type="{http://www.sifassociation.org/datamodel/au/3.4.1}VisaSubClassCodeType" minOccurs="0"/>
  *         &lt;element name="VisaStatisticalCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="VisaExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="VisaSubClassList" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassListType" minOccurs="0"/>
- *         &lt;element name="LBOTE" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="ImmunisationCertificateStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsImmunisationCertificateStatusType" minOccurs="0"/>
- *         &lt;element name="CulturalBackground" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType" minOccurs="0"/>
- *         &lt;element name="MaritalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsMaritalStatusAIHWType" minOccurs="0"/>
+ *         &lt;element name="VisaSubClassList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}VisaSubClassListType" minOccurs="0"/>
+ *         &lt;element name="LBOTE" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ImmunisationCertificateStatus" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsImmunisationCertificateStatusType" minOccurs="0"/>
+ *         &lt;element name="CulturalBackground" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType" minOccurs="0"/>
+ *         &lt;element name="MaritalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsMaritalStatusAIHWType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -55,7 +55,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DemographicsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "DemographicsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "indigenousStatus",
     "sex",
     "birthDate",
@@ -86,59 +86,59 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class DemographicsType {
 
-    @XmlElementRef(name = "IndigenousStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "IndigenousStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> indigenousStatus;
-    @XmlElementRef(name = "Sex", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Sex", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> sex;
-    @XmlElementRef(name = "BirthDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "BirthDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> birthDate;
-    @XmlElementRef(name = "DateOfDeath", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "DateOfDeath", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> dateOfDeath;
-    @XmlElementRef(name = "BirthDateVerification", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "BirthDateVerification", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> birthDateVerification;
-    @XmlElementRef(name = "PlaceOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PlaceOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> placeOfBirth;
-    @XmlElementRef(name = "StateOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StateOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateOfBirth;
-    @XmlElementRef(name = "CountryOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CountryOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> countryOfBirth;
-    @XmlElementRef(name = "CountriesOfCitizenship", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CountriesOfCitizenship", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<CountryListType> countriesOfCitizenship;
-    @XmlElementRef(name = "CountriesOfResidency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CountriesOfResidency", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<CountryList2Type> countriesOfResidency;
-    @XmlElementRef(name = "CountryArrivalDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CountryArrivalDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> countryArrivalDate;
-    @XmlElementRef(name = "AustralianCitizenshipStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AustralianCitizenshipStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> australianCitizenshipStatus;
-    @XmlElementRef(name = "EnglishProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EnglishProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<EnglishProficiencyType> englishProficiency;
-    @XmlElementRef(name = "LanguageList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LanguageList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<LanguageListType> languageList;
-    @XmlElementRef(name = "DwellingArrangement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "DwellingArrangement", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<DwellingArrangementType> dwellingArrangement;
-    @XmlElementRef(name = "Religion", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Religion", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<ReligionType> religion;
-    @XmlElementRef(name = "ReligiousEventList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ReligiousEventList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<ReligiousEventListType> religiousEventList;
-    @XmlElementRef(name = "ReligiousRegion", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ReligiousRegion", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> religiousRegion;
-    @XmlElementRef(name = "PermanentResident", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PermanentResident", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> permanentResident;
-    @XmlElementRef(name = "VisaSubClass", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VisaSubClass", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> visaSubClass;
-    @XmlElementRef(name = "VisaStatisticalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VisaStatisticalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> visaStatisticalCode;
-    @XmlElementRef(name = "VisaExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VisaExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> visaExpiryDate;
-    @XmlElementRef(name = "VisaSubClassList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "VisaSubClassList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<VisaSubClassListType> visaSubClassList;
-    @XmlElementRef(name = "LBOTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LBOTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> lbote;
-    @XmlElementRef(name = "ImmunisationCertificateStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ImmunisationCertificateStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsImmunisationCertificateStatusType> immunisationCertificateStatus;
-    @XmlElementRef(name = "CulturalBackground", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "CulturalBackground", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> culturalBackground;
-    @XmlElementRef(name = "MaritalStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MaritalStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> maritalStatus;
 
     /**

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ExclusionRule" type="{http://www.sifassociation.org/datamodel/au/3.4}ExclusionRuleType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ExclusionRule" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ExclusionRuleType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExclusionRulesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "ExclusionRulesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "exclusionRule"
 })
 public class ExclusionRulesType {
 
-    @XmlElement(name = "ExclusionRule", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ExclusionRule", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<ExclusionRuleType> exclusionRule;
 
     /**

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ReligiousEvent" type="{http://www.sifassociation.org/datamodel/au/3.4}ReligiousEventType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ReligiousEvent" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ReligiousEventType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReligiousEventListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "ReligiousEventListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "religiousEvent"
 })
 public class ReligiousEventListType {
 
-    @XmlElement(name = "ReligiousEvent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ReligiousEvent", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<ReligiousEventType> religiousEvent;
 
     /**

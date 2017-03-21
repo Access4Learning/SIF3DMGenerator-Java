@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPeriodAttendance" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentPeriodAttendanceType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="StudentPeriodAttendance" type="{http://www.sifassociation.org/datamodel/au/3.4.1}StudentPeriodAttendanceType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentPeriodAttendanceCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "StudentPeriodAttendanceCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "studentPeriodAttendance"
 })
 public class StudentPeriodAttendanceCollectionType {
 
-    @XmlElement(name = "StudentPeriodAttendance", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentPeriodAttendance", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
     protected List<StudentPeriodAttendanceType> studentPeriodAttendance;
 
     /**

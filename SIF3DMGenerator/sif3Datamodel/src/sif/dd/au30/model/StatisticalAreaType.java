@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StatisticalAreaType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "StatisticalAreaType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "value"
 })
 public class StatisticalAreaType {

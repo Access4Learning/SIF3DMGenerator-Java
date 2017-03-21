@@ -16,16 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="Reading"/>
  *     &lt;enumeration value="Writing"/>
- *     &lt;enumeration value="Writing"/>
  *     &lt;enumeration value="Numeracy"/>
- *     &lt;enumeration value="Language Conventions Spelling"/>
- *     &lt;enumeration value="Language Conventions Grammar and Punctuation"/>
+ *     &lt;enumeration value="Spelling"/>
+ *     &lt;enumeration value="Grammar and Punctuation"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsNAPTestDomainType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsNAPTestDomainType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsNAPTestDomainType {
 
@@ -35,10 +34,10 @@ public enum AUCodeSetsNAPTestDomainType {
     WRITING("Writing"),
     @XmlEnumValue("Numeracy")
     NUMERACY("Numeracy"),
-    @XmlEnumValue("Language Conventions Spelling")
-    LANGUAGE_CONVENTIONS_SPELLING("Language Conventions Spelling"),
-    @XmlEnumValue("Language Conventions Grammar and Punctuation")
-    LANGUAGE_CONVENTIONS_GRAMMAR_AND_PUNCTUATION("Language Conventions Grammar and Punctuation");
+    @XmlEnumValue("Spelling")
+    SPELLING("Spelling"),
+    @XmlEnumValue("Grammar and Punctuation")
+    GRAMMAR_AND_PUNCTUATION("Grammar and Punctuation");
     private final String value;
 
     AUCodeSetsNAPTestDomainType(String v) {

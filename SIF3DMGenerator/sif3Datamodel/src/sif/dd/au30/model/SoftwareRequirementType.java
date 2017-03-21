@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SoftwareTitle" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="SoftwareTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="Version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Vendor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="OS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SoftwareRequirementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "SoftwareRequirementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "softwareTitle",
     "version",
     "vendor",
@@ -40,13 +40,13 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class SoftwareRequirementType {
 
-    @XmlElement(name = "SoftwareTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SoftwareTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     protected String softwareTitle;
-    @XmlElementRef(name = "Version", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Version", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> version;
-    @XmlElementRef(name = "Vendor", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Vendor", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> vendor;
-    @XmlElementRef(name = "OS", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OS", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> os;
 
     /**

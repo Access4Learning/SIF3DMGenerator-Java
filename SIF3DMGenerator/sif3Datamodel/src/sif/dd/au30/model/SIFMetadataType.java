@@ -26,14 +26,14 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="TimeElement" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeElementType" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="TimeElement" type="{http://www.sifassociation.org/datamodel/au/3.4.1}TimeElementType" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="LifeCycle" type="{http://www.sifassociation.org/datamodel/au/3.4}LifeCycleType" minOccurs="0"/>
- *         &lt;element name="EducationFilter" type="{http://www.sifassociation.org/datamodel/au/3.4}EducationFilterType" minOccurs="0"/>
+ *         &lt;element name="LifeCycle" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LifeCycleType" minOccurs="0"/>
+ *         &lt;element name="EducationFilter" type="{http://www.sifassociation.org/datamodel/au/3.4.1}EducationFilterType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -43,18 +43,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SIF_MetadataType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "SIF_MetadataType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "timeElements",
     "lifeCycle",
     "educationFilter"
 })
 public class SIFMetadataType {
 
-    @XmlElementRef(name = "TimeElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TimeElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType.TimeElements> timeElements;
-    @XmlElementRef(name = "LifeCycle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LifeCycle", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<LifeCycleType> lifeCycle;
-    @XmlElementRef(name = "EducationFilter", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EducationFilter", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<EducationFilterType> educationFilter;
 
     /**
@@ -140,7 +140,7 @@ public class SIFMetadataType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="TimeElement" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeElementType" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="TimeElement" type="{http://www.sifassociation.org/datamodel/au/3.4.1}TimeElementType" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -155,7 +155,7 @@ public class SIFMetadataType {
     })
     public static class TimeElements {
 
-        @XmlElement(name = "TimeElement", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+        @XmlElement(name = "TimeElement", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
         protected List<TimeElementType> timeElement;
 
         /**

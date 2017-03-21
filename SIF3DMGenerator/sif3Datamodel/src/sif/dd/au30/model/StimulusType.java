@@ -23,27 +23,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="StimulusType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestItemStimulusTypeType" minOccurs="0"/>
- *         &lt;element name="Domain" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestDomainType" minOccurs="0"/>
+ *         &lt;element name="StimulusLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType"/>
  *         &lt;element name="TextGenre" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="TextType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="WordCount" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="Content" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;union>
- *               &lt;simpleType>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}base64Binary">
- *                 &lt;/restriction>
- *               &lt;/simpleType>
- *               &lt;simpleType>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}normalizedString">
- *                 &lt;/restriction>
- *               &lt;/simpleType>
- *             &lt;/union>
- *           &lt;/simpleType>
- *         &lt;/element>
+ *         &lt;element name="TextDescriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Content" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,108 +38,55 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StimulusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "localId",
-    "stimulusType",
-    "domain",
+@XmlType(name = "StimulusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+    "stimulusLocalId",
     "textGenre",
     "textType",
     "wordCount",
-    "descriptor",
+    "textDescriptor",
     "content"
 })
 public class StimulusType {
 
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StimulusLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    protected String localId;
-    @XmlElement(name = "StimulusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AUCodeSetsNAPTestItemStimulusTypeType stimulusType;
-    @XmlElementRef(name = "Domain", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<AUCodeSetsNAPTestDomainType> domain;
-    @XmlElementRef(name = "TextGenre", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected String stimulusLocalId;
+    @XmlElementRef(name = "TextGenre", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> textGenre;
-    @XmlElementRef(name = "TextType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TextType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> textType;
-    @XmlElementRef(name = "WordCount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "WordCount", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<BigInteger> wordCount;
-    @XmlElement(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TextDescriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
-    protected String descriptor;
-    @XmlElement(name = "Content", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected String textDescriptor;
+    @XmlElement(name = "Content", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlSchemaType(name = "anyURI")
     protected String content;
 
     /**
-     * Gets the value of the localId property.
+     * Gets the value of the stimulusLocalId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getLocalId() {
-        return localId;
+    public String getStimulusLocalId() {
+        return stimulusLocalId;
     }
 
     /**
-     * Sets the value of the localId property.
+     * Sets the value of the stimulusLocalId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setLocalId(String value) {
-        this.localId = value;
-    }
-
-    /**
-     * Gets the value of the stimulusType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AUCodeSetsNAPTestItemStimulusTypeType }
-     *     
-     */
-    public AUCodeSetsNAPTestItemStimulusTypeType getStimulusType() {
-        return stimulusType;
-    }
-
-    /**
-     * Sets the value of the stimulusType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AUCodeSetsNAPTestItemStimulusTypeType }
-     *     
-     */
-    public void setStimulusType(AUCodeSetsNAPTestItemStimulusTypeType value) {
-        this.stimulusType = value;
-    }
-
-    /**
-     * Gets the value of the domain property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link AUCodeSetsNAPTestDomainType }{@code >}
-     *     
-     */
-    public JAXBElement<AUCodeSetsNAPTestDomainType> getDomain() {
-        return domain;
-    }
-
-    /**
-     * Sets the value of the domain property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link AUCodeSetsNAPTestDomainType }{@code >}
-     *     
-     */
-    public void setDomain(JAXBElement<AUCodeSetsNAPTestDomainType> value) {
-        this.domain = value;
+    public void setStimulusLocalId(String value) {
+        this.stimulusLocalId = value;
     }
 
     /**
@@ -230,27 +162,27 @@ public class StimulusType {
     }
 
     /**
-     * Gets the value of the descriptor property.
+     * Gets the value of the textDescriptor property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDescriptor() {
-        return descriptor;
+    public String getTextDescriptor() {
+        return textDescriptor;
     }
 
     /**
-     * Sets the value of the descriptor property.
+     * Sets the value of the textDescriptor property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDescriptor(String value) {
-        this.descriptor = value;
+    public void setTextDescriptor(String value) {
+        this.textDescriptor = value;
     }
 
     /**

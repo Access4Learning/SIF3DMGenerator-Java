@@ -15,25 +15,29 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="P"/>
  *     &lt;enumeration value="A"/>
+ *     &lt;enumeration value="C"/>
  *     &lt;enumeration value="E"/>
  *     &lt;enumeration value="W"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="R"/>
+ *     &lt;enumeration value="X"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsNAPParticipationCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+@XmlType(name = "AUCodeSetsNAPParticipationCodeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
 @XmlEnum
 public enum AUCodeSetsNAPParticipationCodeType {
 
     P,
     A,
+    C,
     E,
     W,
     S,
-    R;
+    R,
+    X;
 
     public String value() {
         return name();

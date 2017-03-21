@@ -10,17 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for AdjustmentType complex type.
+ * <p>Java class for AdjustmentContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AdjustmentType">
+ * &lt;complexType name="AdjustmentContainerType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AdjustmentDomain" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestDomainType" minOccurs="0"/>
- *         &lt;element name="PNPCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}PNPCodeListType" minOccurs="0"/>
+ *         &lt;element name="PNPCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}PNPCodeListType"/>
  *         &lt;element name="BookletType" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -31,43 +30,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AdjustmentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "adjustmentDomain",
+@XmlType(name = "AdjustmentContainerType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
     "pnpCodeList",
     "bookletType"
 })
-public class AdjustmentType {
+public class AdjustmentContainerType {
 
-    @XmlElement(name = "AdjustmentDomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AUCodeSetsNAPTestDomainType adjustmentDomain;
-    @XmlElement(name = "PNPCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PNPCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
     protected PNPCodeListType pnpCodeList;
-    @XmlElementRef(name = "BookletType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "BookletType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
     protected JAXBElement<String> bookletType;
-
-    /**
-     * Gets the value of the adjustmentDomain property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AUCodeSetsNAPTestDomainType }
-     *     
-     */
-    public AUCodeSetsNAPTestDomainType getAdjustmentDomain() {
-        return adjustmentDomain;
-    }
-
-    /**
-     * Sets the value of the adjustmentDomain property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AUCodeSetsNAPTestDomainType }
-     *     
-     */
-    public void setAdjustmentDomain(AUCodeSetsNAPTestDomainType value) {
-        this.adjustmentDomain = value;
-    }
 
     /**
      * Gets the value of the pnpCodeList property.
