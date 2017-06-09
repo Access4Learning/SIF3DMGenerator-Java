@@ -19,9 +19,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestletRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" minOccurs="0"/>
- *         &lt;element name="TestletContent" type="{http://www.sifassociation.org/datamodel/au/3.4.1}NAPTestletContentType"/>
- *         &lt;element name="TestItemList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}CodeFrameTestItemListType"/>
+ *         &lt;element name="NAPTestletRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="TestletContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestletContentType" minOccurs="0"/>
+ *         &lt;element name="TestItemList" type="{http://www.sifassociation.org/datamodel/au/3.4}CodeFrameTestItemListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,18 +31,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NAPTestletCodeFrameType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "NAPTestletCodeFrameType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "napTestletRefId",
     "testletContent",
     "testItemList"
 })
 public class NAPTestletCodeFrameType {
 
-    @XmlElementRef(name = "NAPTestletRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "NAPTestletRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestletRefId;
-    @XmlElement(name = "TestletContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "TestletContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NAPTestletContentType testletContent;
-    @XmlElement(name = "TestItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "TestItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected CodeFrameTestItemListType testItemList;
 
     /**

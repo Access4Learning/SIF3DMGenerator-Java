@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Event" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Event" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,12 +30,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TestDisruptionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "TestDisruptionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "event"
 })
 public class TestDisruptionType {
 
-    @XmlElement(name = "Event", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Event", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String event;

@@ -23,18 +23,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType"/>
- *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}StateProvinceIdType" minOccurs="0"/>
- *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ElectronicIdListType" minOccurs="0"/>
- *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}OtherIdListType" minOccurs="0"/>
- *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4.1}PersonInfoType"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
+ *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}ElectronicIdListType" minOccurs="0"/>
+ *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
+ *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
  *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="EmploymentStatus" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsStaffStatusType" minOccurs="0"/>
- *         &lt;element name="MostRecent" type="{http://www.sifassociation.org/datamodel/au/3.4.1}StaffMostRecentContainerType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="EmploymentStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsStaffStatusType" minOccurs="0"/>
+ *         &lt;element name="MostRecent" type="{http://www.sifassociation.org/datamodel/au/3.4}StaffMostRecentContainerType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StaffPersonalType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "StaffPersonalType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "localId",
     "stateProvinceId",
     "electronicIdList",
@@ -57,26 +57,26 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StaffPersonalType {
 
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
-    @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ElectronicIdListType> electronicIdList;
-    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherIdListType> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonInfoType personInfo;
-    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> title;
-    @XmlElementRef(name = "EmploymentStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmploymentStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsStaffStatusType> employmentStatus;
-    @XmlElementRef(name = "MostRecent", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MostRecent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StaffMostRecentContainerType> mostRecent;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

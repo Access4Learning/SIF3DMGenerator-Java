@@ -18,10 +18,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
- *         &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
- *         &lt;element name="LocalCampusId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
- *         &lt;element name="NAPLANClassList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}NAPLANClassListType" minOccurs="0"/>
+ *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="LocalCampusId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="NAPLANClassList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPLANClassListType" minOccurs="0"/>
  *         &lt;element name="HomeGroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StaffMostRecentContainerType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "StaffMostRecentContainerType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "schoolLocalId",
     "schoolACARAId",
     "localCampusId",
@@ -41,15 +41,15 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StaffMostRecentContainerType {
 
-    @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolLocalId;
-    @XmlElementRef(name = "SchoolACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SchoolACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolACARAId;
-    @XmlElementRef(name = "LocalCampusId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LocalCampusId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> localCampusId;
-    @XmlElementRef(name = "NAPLANClassList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "NAPLANClassList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<NAPLANClassListType> naplanClassList;
-    @XmlElementRef(name = "HomeGroup", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "HomeGroup", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> homeGroup;
 
     /**

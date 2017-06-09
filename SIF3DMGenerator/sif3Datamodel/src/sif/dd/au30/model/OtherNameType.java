@@ -15,8 +15,8 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="OtherNameType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://www.sifassociation.org/datamodel/au/3.4.1}BaseNameType">
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsNameUsageTypeType" />
+ *     &lt;extension base="{http://www.sifassociation.org/datamodel/au/3.4}BaseNameType">
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNameUsageTypeType" />
  *     &lt;/extension>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OtherNameType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+@XmlType(name = "OtherNameType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 public class OtherNameType
     extends BaseNameType
 {

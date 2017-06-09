@@ -23,14 +23,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" minOccurs="0"/>
- *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType"/>
- *         &lt;element name="TestletContent" type="{http://www.sifassociation.org/datamodel/au/3.4.1}NAPTestletContentType"/>
- *         &lt;element name="TestItemList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}NAPTestItemListType"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="NAPTestRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="TestletContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestletContentType" minOccurs="0"/>
+ *         &lt;element name="TestItemList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItemListType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NAPTestletType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "NAPTestletType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "napTestRefId",
     "napTestLocalId",
     "testletContent",
@@ -49,18 +49,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class NAPTestletType {
 
-    @XmlElementRef(name = "NAPTestRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "NAPTestRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestRefId;
-    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestLocalId;
-    @XmlElement(name = "TestletContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "TestletContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NAPTestletContentType testletContent;
-    @XmlElement(name = "TestItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "TestItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NAPTestItemListType testItemList;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

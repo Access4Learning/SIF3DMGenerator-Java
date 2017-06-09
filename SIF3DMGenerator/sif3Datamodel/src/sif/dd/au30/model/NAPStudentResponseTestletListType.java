@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Testlet" type="{http://www.sifassociation.org/datamodel/au/3.4.1}NAPTestletResponseType" maxOccurs="unbounded"/>
+ *         &lt;element name="Testlet" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestletResponseType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NAPStudentResponseTestletListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "NAPStudentResponseTestletListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "testlet"
 })
 public class NAPStudentResponseTestletListType {
 
-    @XmlElement(name = "Testlet", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Testlet", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<NAPTestletResponseType> testlet;
 
     /**

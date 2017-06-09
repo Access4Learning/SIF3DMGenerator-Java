@@ -25,18 +25,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Preamble" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="TechnicalRequirements" type="{http://www.sifassociation.org/datamodel/au/3.4.1}TechnicalRequirementsType" minOccurs="0"/>
- *         &lt;element name="SoftwareRequirementList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SoftwareRequirementListType" minOccurs="0"/>
- *         &lt;element name="EssentialMaterials" type="{http://www.sifassociation.org/datamodel/au/3.4.1}EssentialMaterialsType" minOccurs="0"/>
- *         &lt;element name="LearningObjectives" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LearningObjectivesType" minOccurs="0"/>
- *         &lt;element name="LearningStandards" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LearningStandardsType" minOccurs="0"/>
- *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SubjectAreaType" minOccurs="0"/>
- *         &lt;element name="Prerequisites" type="{http://www.sifassociation.org/datamodel/au/3.4.1}PrerequisitesType" minOccurs="0"/>
- *         &lt;element name="Students" type="{http://www.sifassociation.org/datamodel/au/3.4.1}StudentsType" minOccurs="0"/>
- *         &lt;element name="SourceObjects" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SourceObjectsType" minOccurs="0"/>
+ *         &lt;element name="TechnicalRequirements" type="{http://www.sifassociation.org/datamodel/au/3.4}TechnicalRequirementsType" minOccurs="0"/>
+ *         &lt;element name="SoftwareRequirementList" type="{http://www.sifassociation.org/datamodel/au/3.4}SoftwareRequirementListType" minOccurs="0"/>
+ *         &lt;element name="EssentialMaterials" type="{http://www.sifassociation.org/datamodel/au/3.4}EssentialMaterialsType" minOccurs="0"/>
+ *         &lt;element name="LearningObjectives" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningObjectivesType" minOccurs="0"/>
+ *         &lt;element name="LearningStandards" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardsType" minOccurs="0"/>
+ *         &lt;element name="SubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}SubjectAreaType" minOccurs="0"/>
+ *         &lt;element name="Prerequisites" type="{http://www.sifassociation.org/datamodel/au/3.4}PrerequisitesType" minOccurs="0"/>
+ *         &lt;element name="Students" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentsType" minOccurs="0"/>
+ *         &lt;element name="SourceObjects" type="{http://www.sifassociation.org/datamodel/au/3.4}SourceObjectsType" minOccurs="0"/>
  *         &lt;element name="Points" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="ActivityTime" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ActivityTimeType"/>
- *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" minOccurs="0"/>
+ *         &lt;element name="ActivityTime" type="{http://www.sifassociation.org/datamodel/au/3.4}ActivityTimeType" minOccurs="0"/>
+ *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="MaxAttemptsAllowed" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="ActivityWeight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="Evaluation" minOccurs="0">
@@ -58,11 +58,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="LearningResources" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LearningResourcesType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="LearningResources" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningResourcesType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ActivityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ActivityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "title",
     "preamble",
     "technicalRequirements",
@@ -95,45 +95,45 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class ActivityType {
 
-    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> title;
-    @XmlElementRef(name = "Preamble", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Preamble", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> preamble;
-    @XmlElementRef(name = "TechnicalRequirements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TechnicalRequirements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<TechnicalRequirementsType> technicalRequirements;
-    @XmlElementRef(name = "SoftwareRequirementList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SoftwareRequirementList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SoftwareRequirementListType> softwareRequirementList;
-    @XmlElementRef(name = "EssentialMaterials", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EssentialMaterials", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<EssentialMaterialsType> essentialMaterials;
-    @XmlElementRef(name = "LearningObjectives", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LearningObjectives", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningObjectivesType> learningObjectives;
-    @XmlElementRef(name = "LearningStandards", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LearningStandards", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardsType> learningStandards;
-    @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SubjectAreaType> subjectArea;
-    @XmlElementRef(name = "Prerequisites", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Prerequisites", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<PrerequisitesType> prerequisites;
-    @XmlElementRef(name = "Students", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Students", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StudentsType> students;
-    @XmlElementRef(name = "SourceObjects", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SourceObjects", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SourceObjectsType> sourceObjects;
-    @XmlElementRef(name = "Points", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Points", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> points;
-    @XmlElement(name = "ActivityTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "ActivityTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ActivityTimeType activityTime;
-    @XmlElementRef(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assessmentRefId;
-    @XmlElementRef(name = "MaxAttemptsAllowed", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MaxAttemptsAllowed", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> maxAttemptsAllowed;
-    @XmlElementRef(name = "ActivityWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ActivityWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> activityWeight;
-    @XmlElementRef(name = "Evaluation", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Evaluation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ActivityType.Evaluation> evaluation;
-    @XmlElementRef(name = "LearningResources", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LearningResources", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningResourcesType> learningResources;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -677,7 +677,7 @@ public class ActivityType {
     })
     public static class Evaluation {
 
-        @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
         protected JAXBElement<String> description;
         @XmlAttribute(name = "EvaluationType", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

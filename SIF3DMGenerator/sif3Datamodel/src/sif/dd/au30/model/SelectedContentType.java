@@ -31,7 +31,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SelectedContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "SelectedContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "content"
 })
 public class SelectedContentType {
@@ -58,8 +58,8 @@ public class SelectedContentType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Element }
      * {@link String }
+     * {@link Element }
      * 
      * 
      */

@@ -2,6 +2,7 @@
 package sif.dd.au30.model;
 
 import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -31,40 +32,53 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="SL"/>
  *     &lt;enumeration value="SP"/>
  *     &lt;enumeration value="TE"/>
+ *     &lt;enumeration value="Unknown"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "AUCodeSetsNAPTestItemTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+@XmlType(name = "AUCodeSetsNAPTestItemTypeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 @XmlEnum
 public enum AUCodeSetsNAPTestItemTypeType {
 
-    CO,
-    ET,
-    HS,
-    HT,
-    IA,
-    IC,
-    IGA,
-    IGGM,
-    IGM,
-    IGO,
-    IM,
-    IO,
-    MC,
-    MCS,
-    PO,
-    SL,
-    SP,
-    TE;
+    CO("CO"),
+    ET("ET"),
+    HS("HS"),
+    HT("HT"),
+    IA("IA"),
+    IC("IC"),
+    IGA("IGA"),
+    IGGM("IGGM"),
+    IGM("IGM"),
+    IGO("IGO"),
+    IM("IM"),
+    IO("IO"),
+    MC("MC"),
+    MCS("MCS"),
+    PO("PO"),
+    SL("SL"),
+    SP("SP"),
+    TE("TE"),
+    @XmlEnumValue("Unknown")
+    UNKNOWN("Unknown");
+    private final String value;
+
+    AUCodeSetsNAPTestItemTypeType(String v) {
+        value = v;
+    }
 
     public String value() {
-        return name();
+        return value;
     }
 
     public static AUCodeSetsNAPTestItemTypeType fromValue(String v) {
-        return valueOf(v);
+        for (AUCodeSetsNAPTestItemTypeType c: AUCodeSetsNAPTestItemTypeType.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

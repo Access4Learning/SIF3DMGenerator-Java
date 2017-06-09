@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OtherIdType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "OtherIdType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "value"
 })
 public class OtherIdType {

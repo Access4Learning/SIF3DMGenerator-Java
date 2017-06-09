@@ -26,10 +26,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token"/>
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="EndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="SpanGaps" minOccurs="0">
@@ -42,10 +42,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *                             &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token"/>
- *                             &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *                             &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *                             &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                             &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *                             &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                             &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                             &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *                             &lt;element name="EndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *                           &lt;/sequence>
@@ -58,7 +58,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="IsCurrent" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="IsCurrent" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimeElementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "TimeElementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "type",
     "code",
     "name",
@@ -80,30 +80,30 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class TimeElementType {
 
-    @XmlElement(name = "Type", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Type", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String type;
-    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String code;
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String name;
-    @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String value;
-    @XmlElementRef(name = "StartDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StartDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> startDateTime;
-    @XmlElementRef(name = "EndDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EndDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> endDateTime;
-    @XmlElementRef(name = "SpanGaps", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SpanGaps", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<TimeElementType.SpanGaps> spanGaps;
-    @XmlElement(name = "IsCurrent", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
-    protected boolean isCurrent;
+    @XmlElement(name = "IsCurrent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected Boolean isCurrent;
 
     /**
      * Gets the value of the type property.
@@ -276,16 +276,24 @@ public class TimeElementType {
     /**
      * Gets the value of the isCurrent property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public boolean isIsCurrent() {
+    public Boolean isIsCurrent() {
         return isCurrent;
     }
 
     /**
      * Sets the value of the isCurrent property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsCurrent(boolean value) {
+    public void setIsCurrent(Boolean value) {
         this.isCurrent = value;
     }
 
@@ -305,10 +313,10 @@ public class TimeElementType {
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-     *                   &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token"/>
-     *                   &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-     *                   &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+     *                   &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                   &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+     *                   &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                   &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                   &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
      *                   &lt;element name="EndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
      *                 &lt;/sequence>
@@ -330,7 +338,7 @@ public class TimeElementType {
     })
     public static class SpanGaps {
 
-        @XmlElement(name = "SpanGap", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+        @XmlElement(name = "SpanGap", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected List<TimeElementType.SpanGaps.SpanGap> spanGap;
 
         /**
@@ -373,10 +381,10 @@ public class TimeElementType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-         *         &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token"/>
-         *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-         *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+         *         &lt;element name="Type" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *         &lt;element name="Code" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+         *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *         &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
          *         &lt;element name="EndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
          *       &lt;/sequence>
@@ -398,25 +406,25 @@ public class TimeElementType {
         })
         public static class SpanGap {
 
-            @XmlElement(name = "Type", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+            @XmlElement(name = "Type", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String type;
-            @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+            @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
             @XmlSchemaType(name = "token")
             protected String code;
-            @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+            @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String name;
-            @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+            @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String value;
-            @XmlElementRef(name = "StartDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "StartDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<Calendar> startDateTime;
-            @XmlElementRef(name = "EndDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "EndDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<Calendar> endDateTime;
 
             /**

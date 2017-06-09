@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="ScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,15 +32,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ScoreDescriptionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ScoreDescriptionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "scoreValue",
     "descriptor"
 })
 public class ScoreDescriptionType {
 
-    @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal scoreValue;
-    @XmlElement(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String descriptor;

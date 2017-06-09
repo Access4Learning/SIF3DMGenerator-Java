@@ -1,7 +1,6 @@
 
 package sif.dd.au30.model;
 
-import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -18,8 +17,8 @@ import javax.xml.bind.annotation.XmlValue;
  * <pre>
  * &lt;complexType name="MonetaryAmountType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
- *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ISO4217CurrencyNamesAndCodeElementsType" />
+ *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSDecimalOrEmpty">
+ *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/datamodel/au/3.4}ISO4217CurrencyNamesAndCodeElementsType" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -28,7 +27,7 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MonetaryAmountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "MonetaryAmountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "value"
 })
 @XmlSeeAlso({
@@ -37,7 +36,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class MonetaryAmountType {
 
     @XmlValue
-    protected BigDecimal value;
+    protected String value;
     @XmlAttribute(name = "Currency")
     protected ISO4217CurrencyNamesAndCodeElementsType currency;
 
@@ -46,10 +45,10 @@ public class MonetaryAmountType {
      * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public BigDecimal getValue() {
+    public String getValue() {
         return value;
     }
 
@@ -58,10 +57,10 @@ public class MonetaryAmountType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public void setValue(BigDecimal value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

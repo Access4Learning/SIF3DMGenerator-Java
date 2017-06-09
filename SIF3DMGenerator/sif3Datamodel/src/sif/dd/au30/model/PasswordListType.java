@@ -25,10 +25,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Password" maxOccurs="unbounded">
+ *         &lt;element name="Password" maxOccurs="unbounded" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
  *                 &lt;attribute name="Algorithm" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -56,12 +56,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PasswordListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "PasswordListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "password"
 })
 public class PasswordListType {
 
-    @XmlElement(name = "Password", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Password", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<PasswordListType.Password> password;
 
     /**
@@ -102,7 +102,7 @@ public class PasswordListType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
      *       &lt;attribute name="Algorithm" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -131,7 +131,7 @@ public class PasswordListType {
     public static class Password {
 
         @XmlValue
-        protected byte[] value;
+        protected String value;
         @XmlAttribute(name = "Algorithm", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String algorithm;
@@ -145,9 +145,10 @@ public class PasswordListType {
          * 
          * @return
          *     possible object is
-         *     byte[]
+         *     {@link String }
+         *     
          */
-        public byte[] getValue() {
+        public String getValue() {
             return value;
         }
 
@@ -156,9 +157,10 @@ public class PasswordListType {
          * 
          * @param value
          *     allowed object is
-         *     byte[]
+         *     {@link String }
+         *     
          */
-        public void setValue(byte[] value) {
+        public void setValue(String value) {
             this.value = value;
         }
 

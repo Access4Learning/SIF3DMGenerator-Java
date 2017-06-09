@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SIF_RefId">
+ *         &lt;element name="SIF_RefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -45,12 +45,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SystemContextList">
+ *         &lt;element name="SystemContextList" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="SystemContext" maxOccurs="unbounded">
+ *                   &lt;element name="SystemContext" maxOccurs="unbounded" minOccurs="0">
  *                     &lt;complexType>
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                                 &lt;complexContent>
  *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                                     &lt;sequence>
- *                                       &lt;element name="Role" maxOccurs="unbounded">
+ *                                       &lt;element name="Role" maxOccurs="unbounded" minOccurs="0">
  *                                         &lt;complexType>
  *                                           &lt;complexContent>
  *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                                                     &lt;complexContent>
  *                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                                                         &lt;sequence>
- *                                                           &lt;element name="RoleScope" maxOccurs="unbounded">
+ *                                                           &lt;element name="RoleScope" maxOccurs="unbounded" minOccurs="0">
  *                                                             &lt;complexType>
  *                                                               &lt;complexContent>
  *                                                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -79,7 +79,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                                                                     &lt;element name="RoleScopeRefId" minOccurs="0">
  *                                                                       &lt;complexType>
  *                                                                         &lt;simpleContent>
- *                                                                           &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+ *                                                                           &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                                                                             &lt;attribute name="SIF_RefObject" use="required">
  *                                                                               &lt;simpleType>
  *                                                                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -125,10 +125,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RefIdType" />
+ *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -137,7 +137,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SystemRoleType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "SystemRoleType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "sifRefId",
     "systemContextList",
     "sifMetadata",
@@ -145,13 +145,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class SystemRoleType {
 
-    @XmlElement(name = "SIF_RefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "SIF_RefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected SystemRoleType.SIFRefId sifRefId;
-    @XmlElement(name = "SystemContextList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "SystemContextList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected SystemRoleType.SystemContextList systemContextList;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -286,7 +286,7 @@ public class SystemRoleType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -311,7 +311,6 @@ public class SystemRoleType {
     public static class SIFRefId {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -378,7 +377,7 @@ public class SystemRoleType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="SystemContext" maxOccurs="unbounded">
+     *         &lt;element name="SystemContext" maxOccurs="unbounded" minOccurs="0">
      *           &lt;complexType>
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -388,7 +387,7 @@ public class SystemRoleType {
      *                       &lt;complexContent>
      *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                           &lt;sequence>
-     *                             &lt;element name="Role" maxOccurs="unbounded">
+     *                             &lt;element name="Role" maxOccurs="unbounded" minOccurs="0">
      *                               &lt;complexType>
      *                                 &lt;complexContent>
      *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -398,7 +397,7 @@ public class SystemRoleType {
      *                                           &lt;complexContent>
      *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                                               &lt;sequence>
-     *                                                 &lt;element name="RoleScope" maxOccurs="unbounded">
+     *                                                 &lt;element name="RoleScope" maxOccurs="unbounded" minOccurs="0">
      *                                                   &lt;complexType>
      *                                                     &lt;complexContent>
      *                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -407,7 +406,7 @@ public class SystemRoleType {
      *                                                           &lt;element name="RoleScopeRefId" minOccurs="0">
      *                                                             &lt;complexType>
      *                                                               &lt;simpleContent>
-     *                                                                 &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+     *                                                                 &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *                                                                   &lt;attribute name="SIF_RefObject" use="required">
      *                                                                     &lt;simpleType>
      *                                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -462,7 +461,7 @@ public class SystemRoleType {
     })
     public static class SystemContextList {
 
-        @XmlElement(name = "SystemContext", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+        @XmlElement(name = "SystemContext", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         protected List<SystemRoleType.SystemContextList.SystemContext> systemContext;
 
         /**
@@ -510,7 +509,7 @@ public class SystemRoleType {
          *             &lt;complexContent>
          *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *                 &lt;sequence>
-         *                   &lt;element name="Role" maxOccurs="unbounded">
+         *                   &lt;element name="Role" maxOccurs="unbounded" minOccurs="0">
          *                     &lt;complexType>
          *                       &lt;complexContent>
          *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -520,7 +519,7 @@ public class SystemRoleType {
          *                                 &lt;complexContent>
          *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *                                     &lt;sequence>
-         *                                       &lt;element name="RoleScope" maxOccurs="unbounded">
+         *                                       &lt;element name="RoleScope" maxOccurs="unbounded" minOccurs="0">
          *                                         &lt;complexType>
          *                                           &lt;complexContent>
          *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -529,7 +528,7 @@ public class SystemRoleType {
          *                                                 &lt;element name="RoleScopeRefId" minOccurs="0">
          *                                                   &lt;complexType>
          *                                                     &lt;simpleContent>
-         *                                                       &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+         *                                                       &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
          *                                                         &lt;attribute name="SIF_RefObject" use="required">
          *                                                           &lt;simpleType>
          *                                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -579,7 +578,7 @@ public class SystemRoleType {
         })
         public static class SystemContext {
 
-            @XmlElementRef(name = "RoleList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "RoleList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList> roleList;
             @XmlAttribute(name = "SystemId", required = true)
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
@@ -645,7 +644,7 @@ public class SystemRoleType {
              *   &lt;complexContent>
              *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
              *       &lt;sequence>
-             *         &lt;element name="Role" maxOccurs="unbounded">
+             *         &lt;element name="Role" maxOccurs="unbounded" minOccurs="0">
              *           &lt;complexType>
              *             &lt;complexContent>
              *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -655,7 +654,7 @@ public class SystemRoleType {
              *                       &lt;complexContent>
              *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
              *                           &lt;sequence>
-             *                             &lt;element name="RoleScope" maxOccurs="unbounded">
+             *                             &lt;element name="RoleScope" maxOccurs="unbounded" minOccurs="0">
              *                               &lt;complexType>
              *                                 &lt;complexContent>
              *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -664,7 +663,7 @@ public class SystemRoleType {
              *                                       &lt;element name="RoleScopeRefId" minOccurs="0">
              *                                         &lt;complexType>
              *                                           &lt;simpleContent>
-             *                                             &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+             *                                             &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
              *                                               &lt;attribute name="SIF_RefObject" use="required">
              *                                                 &lt;simpleType>
              *                                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -708,7 +707,7 @@ public class SystemRoleType {
             })
             public static class RoleList {
 
-                @XmlElement(name = "Role", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+                @XmlElement(name = "Role", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
                 protected List<SystemRoleType.SystemContextList.SystemContext.RoleList.Role> role;
 
                 /**
@@ -756,7 +755,7 @@ public class SystemRoleType {
                  *             &lt;complexContent>
                  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
                  *                 &lt;sequence>
-                 *                   &lt;element name="RoleScope" maxOccurs="unbounded">
+                 *                   &lt;element name="RoleScope" maxOccurs="unbounded" minOccurs="0">
                  *                     &lt;complexType>
                  *                       &lt;complexContent>
                  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -765,7 +764,7 @@ public class SystemRoleType {
                  *                             &lt;element name="RoleScopeRefId" minOccurs="0">
                  *                               &lt;complexType>
                  *                                 &lt;simpleContent>
-                 *                                   &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+                 *                                   &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
                  *                                     &lt;attribute name="SIF_RefObject" use="required">
                  *                                       &lt;simpleType>
                  *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -804,7 +803,7 @@ public class SystemRoleType {
                 })
                 public static class Role {
 
-                    @XmlElementRef(name = "RoleScopeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "RoleScopeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
                     protected JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList> roleScopeList;
                     @XmlAttribute(name = "RoleId", required = true)
                     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
@@ -870,7 +869,7 @@ public class SystemRoleType {
                      *   &lt;complexContent>
                      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
                      *       &lt;sequence>
-                     *         &lt;element name="RoleScope" maxOccurs="unbounded">
+                     *         &lt;element name="RoleScope" maxOccurs="unbounded" minOccurs="0">
                      *           &lt;complexType>
                      *             &lt;complexContent>
                      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -879,7 +878,7 @@ public class SystemRoleType {
                      *                   &lt;element name="RoleScopeRefId" minOccurs="0">
                      *                     &lt;complexType>
                      *                       &lt;simpleContent>
-                     *                         &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+                     *                         &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
                      *                           &lt;attribute name="SIF_RefObject" use="required">
                      *                             &lt;simpleType>
                      *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -912,7 +911,7 @@ public class SystemRoleType {
                     })
                     public static class RoleScopeList {
 
-                        @XmlElement(name = "RoleScope", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+                        @XmlElement(name = "RoleScope", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
                         protected List<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope> roleScope;
 
                         /**
@@ -959,7 +958,7 @@ public class SystemRoleType {
                          *         &lt;element name="RoleScopeRefId" minOccurs="0">
                          *           &lt;complexType>
                          *             &lt;simpleContent>
-                         *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+                         *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
                          *                 &lt;attribute name="SIF_RefObject" use="required">
                          *                   &lt;simpleType>
                          *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -988,9 +987,9 @@ public class SystemRoleType {
                         })
                         public static class RoleScope {
 
-                            @XmlElementRef(name = "RoleScopeName", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+                            @XmlElementRef(name = "RoleScopeName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
                             protected JAXBElement<String> roleScopeName;
-                            @XmlElementRef(name = "RoleScopeRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+                            @XmlElementRef(name = "RoleScopeRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
                             protected JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId> roleScopeRefId;
 
                             /**
@@ -1050,7 +1049,7 @@ public class SystemRoleType {
                              * <pre>
                              * &lt;complexType>
                              *   &lt;simpleContent>
-                             *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>IdRefType">
+                             *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
                              *       &lt;attribute name="SIF_RefObject" use="required">
                              *         &lt;simpleType>
                              *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -1074,7 +1073,6 @@ public class SystemRoleType {
                             public static class RoleScopeRefId {
 
                                 @XmlValue
-                                @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
                                 protected String value;
                                 @XmlAttribute(name = "SIF_RefObject", required = true)
                                 @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AlertMessage" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AlertMessageType" maxOccurs="unbounded"/>
+ *         &lt;element name="AlertMessage" type="{http://www.sifassociation.org/datamodel/au/3.4}AlertMessageType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertMessagesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "AlertMessagesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "alertMessage"
 })
 public class AlertMessagesType {
 
-    @XmlElement(name = "AlertMessage", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "AlertMessage", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<AlertMessageType> alertMessage;
 
     /**

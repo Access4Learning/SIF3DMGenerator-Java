@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * &lt;complexType name="EmailType">
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
- *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsEmailTypeType" />
+ *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsEmailTypeType" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EmailType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "EmailType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "value"
 })
 public class EmailType {

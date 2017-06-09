@@ -21,9 +21,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubstituteItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType"/>
- *         &lt;element name="SubstituteItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
- *         &lt;element name="PNPCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}PNPCodeListType"/>
+ *         &lt;element name="SubstituteItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SubstituteItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="PNPCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}PNPCodeListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,19 +33,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SubstituteItemType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "SubstituteItemType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "substituteItemRefId",
     "substituteItemLocalId",
     "pnpCodeList"
 })
 public class SubstituteItemType {
 
-    @XmlElement(name = "SubstituteItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "SubstituteItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String substituteItemRefId;
-    @XmlElementRef(name = "SubstituteItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SubstituteItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> substituteItemLocalId;
-    @XmlElement(name = "PNPCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "PNPCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PNPCodeListType pnpCodeList;
 
     /**

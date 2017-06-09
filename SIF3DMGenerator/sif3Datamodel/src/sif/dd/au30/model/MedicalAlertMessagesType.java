@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="MedicalAlertMessage" type="{http://www.sifassociation.org/datamodel/au/3.4.1}MedicalAlertMessageType" maxOccurs="unbounded"/>
+ *         &lt;element name="MedicalAlertMessage" type="{http://www.sifassociation.org/datamodel/au/3.4}MedicalAlertMessageType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MedicalAlertMessagesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "MedicalAlertMessagesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "medicalAlertMessage"
 })
 public class MedicalAlertMessagesType {
 
-    @XmlElement(name = "MedicalAlertMessage", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "MedicalAlertMessage", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<MedicalAlertMessageType> medicalAlertMessage;
 
     /**

@@ -18,19 +18,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ParentLegalGuardian" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="PickupRights" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="LivesWith" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="AccessToRecords" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="ReceivesAssessmentReport" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="EmergencyContact" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="HasCustody" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="DisciplinaryContact" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="FeesBilling" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="FamilyMail" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ParentLegalGuardian" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="PickupRights" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="LivesWith" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="AccessToRecords" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ReceivesAssessmentReport" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="EmergencyContact" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="HasCustody" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="DisciplinaryContact" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="FeesBilling" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="FamilyMail" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ContactFlagsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ContactFlagsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "parentLegalGuardian",
     "pickupRights",
     "livesWith",
@@ -57,31 +57,31 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ContactFlagsType {
 
-    @XmlElementRef(name = "ParentLegalGuardian", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ParentLegalGuardian", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> parentLegalGuardian;
-    @XmlElementRef(name = "PickupRights", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PickupRights", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> pickupRights;
-    @XmlElementRef(name = "LivesWith", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "LivesWith", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> livesWith;
-    @XmlElementRef(name = "AccessToRecords", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AccessToRecords", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> accessToRecords;
-    @XmlElementRef(name = "ReceivesAssessmentReport", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ReceivesAssessmentReport", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> receivesAssessmentReport;
-    @XmlElementRef(name = "EmergencyContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmergencyContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> emergencyContact;
-    @XmlElementRef(name = "HasCustody", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "HasCustody", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> hasCustody;
-    @XmlElementRef(name = "DisciplinaryContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "DisciplinaryContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> disciplinaryContact;
-    @XmlElementRef(name = "AttendanceContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AttendanceContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> attendanceContact;
-    @XmlElementRef(name = "PrimaryCareProvider", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PrimaryCareProvider", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> primaryCareProvider;
-    @XmlElementRef(name = "FeesBilling", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FeesBilling", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> feesBilling;
-    @XmlElementRef(name = "FamilyMail", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FamilyMail", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> familyMail;
-    @XmlElementRef(name = "InterventionOrder", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "InterventionOrder", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> interventionOrder;
 
     /**

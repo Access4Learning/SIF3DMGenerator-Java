@@ -22,8 +22,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="RubricType" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="ScoreList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ScoreListType"/>
+ *         &lt;element name="RubricType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ScoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}ScoreListType" minOccurs="0"/>
  *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -34,20 +34,20 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NAPWritingRubricType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "NAPWritingRubricType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "rubricType",
     "scoreList",
     "descriptor"
 })
 public class NAPWritingRubricType {
 
-    @XmlElement(name = "RubricType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "RubricType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String rubricType;
-    @XmlElement(name = "ScoreList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "ScoreList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ScoreListType scoreList;
-    @XmlElementRef(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> descriptor;
 
     /**

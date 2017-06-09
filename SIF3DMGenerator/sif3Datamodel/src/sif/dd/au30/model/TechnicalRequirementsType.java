@@ -28,12 +28,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TechnicalRequirementsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "TechnicalRequirementsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "technicalRequirement"
 })
 public class TechnicalRequirementsType {
 
-    @XmlElementRef(name = "TechnicalRequirement", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "TechnicalRequirement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> technicalRequirement;
 
     /**

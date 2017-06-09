@@ -32,12 +32,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AuthorsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "AuthorsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "author"
 })
 public class AuthorsType {
 
-    @XmlElement(name = "Author", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "Author", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected List<String> author;

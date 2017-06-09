@@ -32,12 +32,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NAPLANClassListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "NAPLANClassListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "classCode"
 })
 public class NAPLANClassListType {
 
-    @XmlElement(name = "ClassCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "ClassCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected List<String> classCode;

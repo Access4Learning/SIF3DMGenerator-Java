@@ -32,12 +32,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MediaTypesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "MediaTypesType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "mediaType"
 })
 public class MediaTypesType {
 
-    @XmlElement(name = "MediaType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "MediaType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected List<String> mediaType;

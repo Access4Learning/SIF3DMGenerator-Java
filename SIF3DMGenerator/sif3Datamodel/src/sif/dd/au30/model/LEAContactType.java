@@ -19,8 +19,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PublishInDirectory" type="{http://www.sifassociation.org/datamodel/au/3.4.1}PublishInDirectoryType" minOccurs="0"/>
- *         &lt;element name="ContactInfo" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ContactInfoType"/>
+ *         &lt;element name="PublishInDirectory" type="{http://www.sifassociation.org/datamodel/au/3.4}PublishInDirectoryType" minOccurs="0"/>
+ *         &lt;element name="ContactInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}ContactInfoType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,15 +30,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LEAContactType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "LEAContactType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "publishInDirectory",
     "contactInfo"
 })
 public class LEAContactType {
 
-    @XmlElementRef(name = "PublishInDirectory", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PublishInDirectory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> publishInDirectory;
-    @XmlElement(name = "ContactInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "ContactInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ContactInfoType contactInfo;
 
     /**

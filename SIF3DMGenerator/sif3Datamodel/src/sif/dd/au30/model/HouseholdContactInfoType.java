@@ -20,12 +20,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
- *         &lt;element name="HouseholdContactId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="HouseholdContactId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="HouseholdSalutation" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="AddressList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AddressListType" minOccurs="0"/>
- *         &lt;element name="EmailList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}EmailListType" minOccurs="0"/>
- *         &lt;element name="PhoneNumberList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}PhoneNumberListType" minOccurs="0"/>
+ *         &lt;element name="AddressList" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressListType" minOccurs="0"/>
+ *         &lt;element name="EmailList" type="{http://www.sifassociation.org/datamodel/au/3.4}EmailListType" minOccurs="0"/>
+ *         &lt;element name="PhoneNumberList" type="{http://www.sifassociation.org/datamodel/au/3.4}PhoneNumberListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HouseholdContactInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "HouseholdContactInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "preferenceNumber",
     "householdContactId",
     "householdSalutation",
@@ -45,33 +45,41 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class HouseholdContactInfoType {
 
-    @XmlElement(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected long preferenceNumber;
-    @XmlElementRef(name = "HouseholdContactId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    protected Long preferenceNumber;
+    @XmlElementRef(name = "HouseholdContactId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> householdContactId;
-    @XmlElementRef(name = "HouseholdSalutation", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "HouseholdSalutation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> householdSalutation;
-    @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressListType> addressList;
-    @XmlElementRef(name = "EmailList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "EmailList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<EmailListType> emailList;
-    @XmlElementRef(name = "PhoneNumberList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PhoneNumberList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<PhoneNumberListType> phoneNumberList;
 
     /**
      * Gets the value of the preferenceNumber property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public long getPreferenceNumber() {
+    public Long getPreferenceNumber() {
         return preferenceNumber;
     }
 
     /**
      * Sets the value of the preferenceNumber property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setPreferenceNumber(long value) {
+    public void setPreferenceNumber(Long value) {
         this.preferenceNumber = value;
     }
 

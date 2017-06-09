@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="IdentityAssertion" maxOccurs="unbounded">
+ *         &lt;element name="IdentityAssertion" maxOccurs="unbounded" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
  *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>normalizedString">
@@ -42,12 +42,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "IdentityAssertionsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "IdentityAssertionsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "identityAssertion"
 })
 public class IdentityAssertionsType {
 
-    @XmlElement(name = "IdentityAssertion", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "IdentityAssertion", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<IdentityAssertionsType.IdentityAssertion> identityAssertion;
 
     /**

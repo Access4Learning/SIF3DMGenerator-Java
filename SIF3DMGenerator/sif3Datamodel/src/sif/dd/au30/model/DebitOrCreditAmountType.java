@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <pre>
  * &lt;complexType name="DebitOrCreditAmountType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4.1>MonetaryAmountType">
+ *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>MonetaryAmountType">
  *       &lt;attribute name="Type" use="required">
  *         &lt;simpleType>
  *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DebitOrCreditAmountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+@XmlType(name = "DebitOrCreditAmountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
 public class DebitOrCreditAmountType
     extends MonetaryAmountType
 {

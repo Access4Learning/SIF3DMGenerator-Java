@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RefIdType"/>
- *         &lt;element name="StudentContactPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RefIdType"/>
- *         &lt;element name="Relationship" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RelationshipType"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="StudentContactPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="Relationship" type="{http://www.sifassociation.org/datamodel/au/3.4}RelationshipType" minOccurs="0"/>
  *         &lt;element name="ParentRelationshipStatus" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -34,15 +34,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="HouseholdList" type="{http://www.sifassociation.org/datamodel/au/3.4.1}HouseholdListType" minOccurs="0"/>
- *         &lt;element name="ContactFlags" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ContactFlagsType" minOccurs="0"/>
- *         &lt;element name="MainlySpeaksEnglishAtHome" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="HouseholdList" type="{http://www.sifassociation.org/datamodel/au/3.4}HouseholdListType" minOccurs="0"/>
+ *         &lt;element name="ContactFlags" type="{http://www.sifassociation.org/datamodel/au/3.4}ContactFlagsType" minOccurs="0"/>
+ *         &lt;element name="MainlySpeaksEnglishAtHome" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ContactSequence" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="ContactSequenceSource" type="{http://www.sifassociation.org/datamodel/au/3.4.1}AUCodeSetsSourceCodeTypeType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4.1}SIF_ExtendedElementsType" minOccurs="0"/>
+ *         &lt;element name="ContactSequenceSource" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSourceCodeTypeType" minOccurs="0"/>
+ *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
+ *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="StudentContactRelationshipRefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4.1}IdRefType" />
+ *       &lt;attribute name="StudentContactRelationshipRefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -51,7 +51,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentContactRelationshipType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "StudentContactRelationshipType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "studentPersonalRefId",
     "studentContactPersonalRefId",
     "relationship",
@@ -66,29 +66,29 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentContactRelationshipType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "StudentContactPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "StudentContactPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentContactPersonalRefId;
-    @XmlElement(name = "Relationship", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "Relationship", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected RelationshipType relationship;
-    @XmlElementRef(name = "ParentRelationshipStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ParentRelationshipStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> parentRelationshipStatus;
-    @XmlElementRef(name = "HouseholdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "HouseholdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<HouseholdListType> householdList;
-    @XmlElementRef(name = "ContactFlags", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ContactFlags", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ContactFlagsType> contactFlags;
-    @XmlElementRef(name = "MainlySpeaksEnglishAtHome", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "MainlySpeaksEnglishAtHome", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> mainlySpeaksEnglishAtHome;
-    @XmlElementRef(name = "ContactSequence", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ContactSequence", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> contactSequence;
-    @XmlElementRef(name = "ContactSequenceSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ContactSequenceSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsSourceCodeTypeType> contactSequenceSource;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
     @XmlAttribute(name = "StudentContactRelationshipRefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

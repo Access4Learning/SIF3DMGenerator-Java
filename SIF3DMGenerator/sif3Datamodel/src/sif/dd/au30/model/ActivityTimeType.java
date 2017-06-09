@@ -25,11 +25,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Duration" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>unsignedInt">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSUnsignedIntOrEmpty">
  *                 &lt;attribute name="Units" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -57,7 +57,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ActivityTimeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ActivityTimeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "creationDate",
     "duration",
     "startDate",
@@ -66,16 +66,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ActivityTimeType {
 
-    @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+    @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar creationDate;
-    @XmlElementRef(name = "Duration", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Duration", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ActivityTimeType.Duration> duration;
-    @XmlElementRef(name = "StartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "StartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> startDate;
-    @XmlElementRef(name = "FinishDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "FinishDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> finishDate;
-    @XmlElementRef(name = "DueDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "DueDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> dueDate;
 
     /**
@@ -207,7 +207,7 @@ public class ActivityTimeType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>unsignedInt">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSUnsignedIntOrEmpty">
      *       &lt;attribute name="Units" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -233,8 +233,7 @@ public class ActivityTimeType {
     public static class Duration {
 
         @XmlValue
-        @XmlSchemaType(name = "unsignedInt")
-        protected long value;
+        protected String value;
         @XmlAttribute(name = "Units", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String units;
@@ -242,16 +241,24 @@ public class ActivityTimeType {
         /**
          * Gets the value of the value property.
          * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
-        public long getValue() {
+        public String getValue() {
             return value;
         }
 
         /**
          * Sets the value of the value property.
          * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
-        public void setValue(long value) {
+        public void setValue(String value) {
             this.value = value;
         }
 

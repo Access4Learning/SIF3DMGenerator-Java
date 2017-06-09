@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="RoomInfo" type="{http://www.sifassociation.org/datamodel/au/3.4.1}RoomInfoType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="RoomInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}RoomInfoType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,12 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RoomInfoCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "RoomInfoCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "roomInfo"
 })
 public class RoomInfoCollectionType {
 
-    @XmlElement(name = "RoomInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "RoomInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<RoomInfoType> roomInfo;
 
     /**

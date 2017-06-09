@@ -30,7 +30,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReportDataObjectType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ReportDataObjectType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "any"
 })
 public class ReportDataObjectType {

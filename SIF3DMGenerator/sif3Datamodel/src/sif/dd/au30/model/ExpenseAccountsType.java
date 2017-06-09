@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="ExpenseAccountType" type="{http://www.w3.org/2001/XMLSchema}anyType" minOccurs="0"/>
- *         &lt;element name="ExpenseAccount" type="{http://www.sifassociation.org/datamodel/au/3.4.1}ExpenseAccountType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ExpenseAccount" type="{http://www.sifassociation.org/datamodel/au/3.4}ExpenseAccountType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,15 +32,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExpenseAccountsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ExpenseAccountsType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "expenseAccountType",
     "expenseAccount"
 })
 public class ExpenseAccountsType {
 
-    @XmlElementRef(name = "ExpenseAccountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "ExpenseAccountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Object> expenseAccountType;
-    @XmlElement(name = "ExpenseAccount", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "ExpenseAccount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<ExpenseAccountType> expenseAccount;
 
     /**

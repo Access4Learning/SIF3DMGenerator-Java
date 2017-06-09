@@ -37,12 +37,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PromotionInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "PromotionInfoType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "promotionStatus"
 })
 public class PromotionInfoType {
 
-    @XmlElementRef(name = "PromotionStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "PromotionStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> promotionStatus;
 
     /**

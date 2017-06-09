@@ -32,7 +32,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExtendedContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "ExtendedContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "content"
 })
 @XmlSeeAlso({
@@ -62,9 +62,9 @@ public class ExtendedContentType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link String }
      * {@link Object }
      * {@link Element }
-     * {@link String }
      * 
      * 
      */

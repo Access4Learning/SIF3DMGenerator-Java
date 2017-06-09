@@ -30,7 +30,7 @@ import org.w3c.dom.Element;
  *               &lt;complexContent>
  *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                   &lt;sequence>
- *                     &lt;any processContents='lax'/>
+ *                     &lt;any processContents='lax' minOccurs="0"/>
  *                   &lt;/sequence>
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                 &lt;/restriction>
@@ -51,7 +51,7 @@ import org.w3c.dom.Element;
  *           &lt;element name="BinaryData">
  *             &lt;complexType>
  *               &lt;simpleContent>
- *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
+ *                 &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
  *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -64,7 +64,7 @@ import org.w3c.dom.Element;
  *               &lt;complexContent>
  *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                   &lt;sequence>
- *                     &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
+ *                     &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *                   &lt;/sequence>
  *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -82,7 +82,7 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbstractContentElementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", propOrder = {
+@XmlType(name = "AbstractContentElementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "xmlData",
     "textData",
     "binaryData",
@@ -90,13 +90,13 @@ import org.w3c.dom.Element;
 })
 public class AbstractContentElementType {
 
-    @XmlElement(name = "XMLData", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "XMLData", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AbstractContentElementType.XMLData xmlData;
-    @XmlElement(name = "TextData", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "TextData", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AbstractContentElementType.TextData textData;
-    @XmlElement(name = "BinaryData", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "BinaryData", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AbstractContentElementType.BinaryData binaryData;
-    @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1")
+    @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AbstractContentElementType.Reference reference;
 
     /**
@@ -204,7 +204,7 @@ public class AbstractContentElementType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
      *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -222,7 +222,7 @@ public class AbstractContentElementType {
     public static class BinaryData {
 
         @XmlValue
-        protected byte[] value;
+        protected String value;
         @XmlAttribute(name = "MIMEType", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         @XmlSchemaType(name = "token")
@@ -241,9 +241,10 @@ public class AbstractContentElementType {
          * 
          * @return
          *     possible object is
-         *     byte[]
+         *     {@link String }
+         *     
          */
-        public byte[] getValue() {
+        public String getValue() {
             return value;
         }
 
@@ -252,9 +253,10 @@ public class AbstractContentElementType {
          * 
          * @param value
          *     allowed object is
-         *     byte[]
+         *     {@link String }
+         *     
          */
-        public void setValue(byte[] value) {
+        public void setValue(String value) {
             this.value = value;
         }
 
@@ -343,7 +345,7 @@ public class AbstractContentElementType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
+     *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
      *       &lt;/sequence>
      *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -360,7 +362,7 @@ public class AbstractContentElementType {
     })
     public static class Reference {
 
-        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/datamodel/au/3.4.1", required = true)
+        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
         @XmlSchemaType(name = "anyURI")
         protected String url;
         @XmlAttribute(name = "MIMEType", required = true)
@@ -596,7 +598,7 @@ public class AbstractContentElementType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;any processContents='lax'/>
+     *         &lt;any processContents='lax' minOccurs="0"/>
      *       &lt;/sequence>
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
      *     &lt;/restriction>
