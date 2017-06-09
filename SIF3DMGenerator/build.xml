@@ -178,10 +178,10 @@
 		</antcall>
 	</target>
 
-	<target name="12-jar-dd-au34" depends="compile-dd" description="Create jar file for SIF AU 3.4">
+	<target name="12-jar-dd-au341" depends="compile-dd" description="Create jar file for SIF AU 3.4.1">
 		<antcall target="jar-dd">
 			<param name="locale" value="au"/>
-			<param name="sifddversion" value="3.4"/>
+			<param name="sifddversion" value="3.4.1"/>
 			<param name="srcDir" value="au30"/>
 		</antcall>
 	</target>
