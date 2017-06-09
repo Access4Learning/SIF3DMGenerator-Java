@@ -39,7 +39,7 @@ As of March 21, 2017 the following SIF Locale Data Models are supported by this 
 2. Remove all java classes in the sif3Datamodel/src/sif/dd/au30/model source directory.
 3. Copy the generated POJOs from step 1) to the directory of step 2).
 4. Run the 10-jar-dd-au13for30 (SIF AU 1.3 data model), 11-jar-dd-au14for30 (SIF AU 1.4 data model) or 
-   12-jar-dd-au34 (SIF AU 3.4 data model) ant target respectively.
+   12-jar-dd-au341 (SIF AU 3.4.1 data model) ant target respectively.
    This will build a jar file into the build/dist directory. This jar file can now be used in your
    SIF3 Project.
   
@@ -77,8 +77,13 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 
 ## Version from March 21, 2017
 - Added SIF AU 3.4.1 XSD (data/input/XSD/sifau30/au3.4.1 directory) and generated data model classes 
-  for SIF AU 3.4.1 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.1 Data Model.
+  for SIF AU 3.4.1 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.1 Data Model. This is using au/3.4.1 namespace.
+  This Namespace is now replaced with au/3.4. (see June 9, 2017 release below).
 
+## Version from June 9, 2017
+- Added SIF AU 3.4.1 XSD (data/input/XSD/sifau30/au3.4.1 directory) and generated data model classes for officially released SIF AU 3.4.1. 
+  for SIF AU 3.4.1 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.1 Data Model. This is using au/3.4 namespace.
+  
 # Download Instructions
 How to download this project:
 
