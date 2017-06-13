@@ -26,9 +26,29 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSchoolCoEdStatusType {
 
+
+    /**
+     * Co-Educational
+     * 
+     */
     C,
+
+    /**
+     * Female
+     * 
+     */
     F,
+
+    /**
+     * Male
+     * 
+     */
     M,
+
+    /**
+     * Redacted for privacy
+     * 
+     */
     ZZREDACTED;
 
     public String value() {

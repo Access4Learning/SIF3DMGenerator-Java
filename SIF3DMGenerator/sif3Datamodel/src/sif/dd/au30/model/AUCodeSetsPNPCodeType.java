@@ -38,21 +38,101 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsPNPCodeType {
 
+
+    /**
+     * Alternative items - audio
+     * 
+     */
     AIA,
+
+    /**
+     * Alternative items - motor assistive
+     * 
+     */
     AIM,
+
+    /**
+     * Alternative items - visual
+     * 
+     */
     AIV,
+
+    /**
+     * Assistive technology
+     * 
+     */
     AST,
+
+    /**
+     * Alternative Items: both audio and motor assistive
+     * 
+     */
     AAM,
+
+    /**
+     * Alternative Items: both video and motor assistive
+     * 
+     */
     AVM,
+
+    /**
+     * Alternative Items: audio, visual and motor assistive
+     * 
+     */
     ALL,
+
+    /**
+     * Colour contrast modification
+     * 
+     */
     COL,
+
+    /**
+     * Braille hardcopy
+     * 
+     */
     BRA,
+
+    /**
+     * Extra Time - 5 mins per 30 min or part thereof
+     * 
+     */
     ETA,
+
+    /**
+     * Extra Time - 10 mins per 30 min or part thereof
+     * 
+     */
     ETB,
+
+    /**
+     * Extra Time - 15 mins per 30 min or part thereof
+     * 
+     */
     ETC,
+
+    /**
+     * Oral sign/support
+     * 
+     */
     OSS,
+
+    /**
+     * Rest break
+     * 
+     */
     RBK,
+
+    /**
+     * Scribe
+     * 
+     */
     SCR,
+
+    /**
+     * NAPLAN Support person
+     * 
+     */
     SUP;
 
     public String value() {

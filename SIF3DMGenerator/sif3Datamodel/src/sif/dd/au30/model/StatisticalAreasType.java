@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * A list of Statistical Areas assoicated with an address that will be referenced back to ABS 1270.  Only applicable to a physical address, e.g. not relevant for a Post Office Box.
+ * 
  * <p>Java class for StatisticalAreasType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * This object represents the description of a test item as context for response; may be exemplar item instead of the actual item.
+ * 
  * <p>Java class for NAPTestItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TestItemContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItemContentType" minOccurs="0"/>
+ *         &lt;element name="TestItemContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItemContentType"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -42,7 +44,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class NAPTestItemType {
 
-    @XmlElement(name = "TestItemContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestItemContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected NAPTestItemContentType testItemContent;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;

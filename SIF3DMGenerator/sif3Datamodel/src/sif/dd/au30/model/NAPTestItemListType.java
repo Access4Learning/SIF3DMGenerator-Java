@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TestItem" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItem2Type" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TestItem" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItem2Type" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class NAPTestItemListType {
 
-    @XmlElement(name = "TestItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected List<NAPTestItem2Type> testItem;
 
     /**

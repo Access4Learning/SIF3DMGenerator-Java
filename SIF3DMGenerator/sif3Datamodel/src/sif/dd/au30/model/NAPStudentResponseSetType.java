@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Capture of student’s responses to a NAP test.
+ * 
  * <p>Java class for NAPStudentResponseSetType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,17 +26,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ReportExclusionFlag" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="ReportExclusionFlag" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="CalibrationSampleFlag" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="EquatingSampleFlag" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *         &lt;element name="PathTakenForDomain" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ParallelTest" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="PathTakenForDomain" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="ParallelTest" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="PlatformStudentIdentifier" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="PlatformStudentIdentifier" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="NAPTestRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="DomainScore" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainScoreType" minOccurs="0"/>
- *         &lt;element name="TestletList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPStudentResponseTestletListType" minOccurs="0"/>
+ *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="DomainScore" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainScoreType"/>
+ *         &lt;element name="TestletList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPStudentResponseTestletListType"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -65,32 +67,32 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class NAPStudentResponseSetType {
 
     @XmlElement(name = "ReportExclusionFlag", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected Boolean reportExclusionFlag;
+    protected boolean reportExclusionFlag;
     @XmlElementRef(name = "CalibrationSampleFlag", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> calibrationSampleFlag;
     @XmlElementRef(name = "EquatingSampleFlag", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> equatingSampleFlag;
-    @XmlElement(name = "PathTakenForDomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PathTakenForDomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String pathTakenForDomain;
-    @XmlElement(name = "ParallelTest", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ParallelTest", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String parallelTest;
     @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentPersonalRefId;
-    @XmlElement(name = "PlatformStudentIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PlatformStudentIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String platformStudentIdentifier;
     @XmlElementRef(name = "NAPTestRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestRefId;
-    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestLocalId;
-    @XmlElement(name = "DomainScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "DomainScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected DomainScoreType domainScore;
-    @XmlElement(name = "TestletList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestletList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected NAPStudentResponseTestletListType testletList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
@@ -103,24 +105,16 @@ public class NAPStudentResponseSetType {
     /**
      * Gets the value of the reportExclusionFlag property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
      */
-    public Boolean isReportExclusionFlag() {
+    public boolean isReportExclusionFlag() {
         return reportExclusionFlag;
     }
 
     /**
      * Sets the value of the reportExclusionFlag property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
      */
-    public void setReportExclusionFlag(Boolean value) {
+    public void setReportExclusionFlag(boolean value) {
         this.reportExclusionFlag = value;
     }
 

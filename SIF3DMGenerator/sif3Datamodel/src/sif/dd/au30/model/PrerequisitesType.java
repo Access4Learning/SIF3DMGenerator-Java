@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Skills or competencies the student must have to engage in activity.
+ * 
  * <p>Java class for PrerequisitesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

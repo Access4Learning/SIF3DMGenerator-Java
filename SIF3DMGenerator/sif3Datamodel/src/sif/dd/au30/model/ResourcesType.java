@@ -11,6 +11,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * A GUID reference to a SIF LearningResource object that supports this activity
+ * 
  * <p>Java class for ResourcesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -18,7 +20,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <pre>
  * &lt;complexType name="ResourcesType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+ *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
  *       &lt;attribute name="ResourceType" use="required">
  *         &lt;simpleType>
  *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -43,13 +45,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 public class ResourcesType {
 
     @XmlValue
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String value;
     @XmlAttribute(name = "ResourceType", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String resourceType;
 
     /**
-     * Gets the value of the value property.
+     * A reference to a RefId.
      * 
      * @return
      *     possible object is

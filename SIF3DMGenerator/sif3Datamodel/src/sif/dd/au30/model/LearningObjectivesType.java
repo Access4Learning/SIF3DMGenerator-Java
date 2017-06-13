@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Educational objectives of the activity.
+ * 
  * <p>Java class for LearningObjectivesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

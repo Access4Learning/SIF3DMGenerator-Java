@@ -24,14 +24,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="RawScore" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="ScaledScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="ScaledScoreLogitValue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="ScaledScoreStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="ScaledScoreLogitStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="StudentDomainBand" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="StudentProficiency" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="PlausibleScaledValueList" type="{http://www.sifassociation.org/datamodel/au/3.4}PlausibleScaledValueListType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="RawScore" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="ScaledScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="ScaledScoreLogitValue" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="ScaledScoreStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="ScaledScoreLogitStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="StudentDomainBand" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+ *         &lt;element name="StudentProficiency" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="PlausibleScaledValueList" type="{http://www.sifassociation.org/datamodel/au/3.4}PlausibleScaledValueListType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -53,23 +53,23 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class DomainScoreType {
 
-    @XmlElement(name = "RawScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "RawScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal rawScore;
-    @XmlElement(name = "ScaledScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ScaledScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal scaledScoreValue;
-    @XmlElement(name = "ScaledScoreLogitValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ScaledScoreLogitValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal scaledScoreLogitValue;
-    @XmlElement(name = "ScaledScoreStandardError", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ScaledScoreStandardError", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal scaledScoreStandardError;
-    @XmlElement(name = "ScaledScoreLogitStandardError", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ScaledScoreLogitStandardError", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal scaledScoreLogitStandardError;
-    @XmlElement(name = "StudentDomainBand", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentDomainBand", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigInteger studentDomainBand;
-    @XmlElement(name = "StudentProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String studentProficiency;
-    @XmlElement(name = "PlausibleScaledValueList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PlausibleScaledValueList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected List<PlausibleScaledValueListType> plausibleScaledValueList;
 
     /**

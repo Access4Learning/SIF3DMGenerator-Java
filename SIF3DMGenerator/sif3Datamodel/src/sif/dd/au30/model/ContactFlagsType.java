@@ -9,6 +9,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * 
+ *         Contains Yes/No characteristics of the contact person's role.  Provide a Yes value for all that apply.
+ *         At least one of the child elements of ContactFlags must have a Yes value.
+ *         Do not publish the StudentContactRelationship instance if one of the child elements does not have a Yes value.
+ *       
+ * 
  * <p>Java class for ContactFlagsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

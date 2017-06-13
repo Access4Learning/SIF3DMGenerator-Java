@@ -46,49 +46,164 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSchoolLevelType {
 
+
+    /**
+     * Camp
+     * 
+     */
     @XmlEnumValue("Camp")
     CAMP("Camp"),
+
+    /**
+     * Community College
+     * 
+     */
     @XmlEnumValue("Commty")
     COMMTY("Commty"),
+
+    /**
+     * Early Childhood
+     * 
+     */
     @XmlEnumValue("EarlyCh")
     EARLY_CH("EarlyCh"),
+
+    /**
+     * Junior Primary
+     * 
+     */
     @XmlEnumValue("JunPri")
     JUN_PRI("JunPri"),
+
+    /**
+     * Kindergarten only
+     * 
+     */
     @XmlEnumValue("Kgarten")
     KGARTEN("Kgarten"),
+
+    /**
+     * Preschool/Kindergarten
+     * 
+     */
     @XmlEnumValue("Kind")
     KIND("Kind"),
+
+    /**
+     * Language
+     * 
+     */
     @XmlEnumValue("Lang")
     LANG("Lang"),
+
+    /**
+     * Maternal Child Health Centre
+     * 
+     */
     MCH("MCH"),
+
+    /**
+     * Middle School
+     * 
+     */
     @XmlEnumValue("Middle")
     MIDDLE("Middle"),
+
+    /**
+     * Other
+     * 
+     */
     @XmlEnumValue("Other")
     OTHER("Other"),
+
+    /**
+     * PreSchool only
+     * 
+     */
     @XmlEnumValue("PreSch")
     PRE_SCH("PreSch"),
+
+    /**
+     * Primary/Secondary Combined
+     * 
+     */
     @XmlEnumValue("Pri/Sec")
     PRI_SEC("Pri/Sec"),
+
+    /**
+     * Special/Primary/Secondary Combined
+     * 
+     */
     @XmlEnumValue("Spec/P-12")
     SPEC_P_12("Spec/P-12"),
+
+    /**
+     * Special/Primary Combined
+     * 
+     */
     @XmlEnumValue("Spec/Pri")
     SPEC_PRI("Spec/Pri"),
+
+    /**
+     * Special/Secondary Combined
+     * 
+     */
     @XmlEnumValue("Spec/Sec")
     SPEC_SEC("Spec/Sec"),
+
+    /**
+     * Primary
+     * 
+     */
     @XmlEnumValue("Prim")
     PRIM("Prim"),
+
+    /**
+     * Secondary
+     * 
+     */
     @XmlEnumValue("Sec")
     SEC("Sec"),
+
+    /**
+     * Senior Secondary School
+     * 
+     */
     @XmlEnumValue("Senior")
     SENIOR("Senior"),
+
+    /**
+     * Special
+     * 
+     */
     @XmlEnumValue("Special")
     SPECIAL("Special"),
+
+    /**
+     * Specific Purpose
+     * 
+     */
     @XmlEnumValue("Specif")
     SPECIF("Specif"),
+
+    /**
+     * SupportCentre
+     * 
+     */
     @XmlEnumValue("Supp")
     SUPP("Supp"),
+
+    /**
+     * Unknown
+     * 
+     */
     @XmlEnumValue("Unknown")
     UNKNOWN("Unknown"),
+
+    /**
+     * Redacted for privacy
+     * 
+     */
     ZZREDACTED("ZZREDACTED");
     private final String value;
 

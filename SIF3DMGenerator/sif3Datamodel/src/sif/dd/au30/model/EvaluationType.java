@@ -13,6 +13,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * Evaluation/review of resource.
+ * 
  * <p>Java class for EvaluationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

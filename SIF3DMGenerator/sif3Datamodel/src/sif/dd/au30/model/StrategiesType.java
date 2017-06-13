@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Teaching/learning strategies used in the learning resource.
+ * 
  * <p>Java class for StrategiesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

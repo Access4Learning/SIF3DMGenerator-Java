@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Subscore" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPSubscoreType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Subscore" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPSubscoreType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class NAPSubscoreListType {
 
-    @XmlElement(name = "Subscore", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Subscore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected List<NAPSubscoreType> subscore;
 
     /**

@@ -16,6 +16,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * 
+ *         The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
+ *       
+ * 
  * <p>Java class for TimeTableType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,18 +30,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="DaysPerCycle" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="PeriodsPerDay" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="DaysPerCycle" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
+ *         &lt;element name="PeriodsPerDay" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
  *         &lt;element name="TeachingPeriodsPerDay" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="SchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="TimeTableCreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="TimeTableDayList" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeTableDayListType" minOccurs="0"/>
+ *         &lt;element name="TimeTableDayList" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeTableDayListType"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -71,20 +75,20 @@ public class TimeTableType {
 
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected XMLGregorianCalendar schoolYear;
     @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> localId;
-    @XmlElement(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String title;
     @XmlElement(name = "DaysPerCycle", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected Long daysPerCycle;
+    protected long daysPerCycle;
     @XmlElement(name = "PeriodsPerDay", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected Long periodsPerDay;
+    protected long periodsPerDay;
     @XmlElementRef(name = "TeachingPeriodsPerDay", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> teachingPeriodsPerDay;
     @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -97,7 +101,7 @@ public class TimeTableType {
     protected JAXBElement<XMLGregorianCalendar> startDate;
     @XmlElementRef(name = "EndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> endDate;
-    @XmlElement(name = "TimeTableDayList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TimeTableDayList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected TimeTableDayListType timeTableDayList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
@@ -206,48 +210,32 @@ public class TimeTableType {
     /**
      * Gets the value of the daysPerCycle property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
      */
-    public Long getDaysPerCycle() {
+    public long getDaysPerCycle() {
         return daysPerCycle;
     }
 
     /**
      * Sets the value of the daysPerCycle property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
      */
-    public void setDaysPerCycle(Long value) {
+    public void setDaysPerCycle(long value) {
         this.daysPerCycle = value;
     }
 
     /**
      * Gets the value of the periodsPerDay property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
      */
-    public Long getPeriodsPerDay() {
+    public long getPeriodsPerDay() {
         return periodsPerDay;
     }
 
     /**
      * Sets the value of the periodsPerDay property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
      */
-    public void setPeriodsPerDay(Long value) {
+    public void setPeriodsPerDay(long value) {
         this.periodsPerDay = value;
     }
 

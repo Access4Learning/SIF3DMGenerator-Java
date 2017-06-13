@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CountryOfCitizenship" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="CountryOfCitizenship" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class CountryListType {
 
-    @XmlElement(name = "CountryOfCitizenship", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CountryOfCitizenship", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> countryOfCitizenship;
 

@@ -8,6 +8,11 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * 
+ *         Extends BaseNameType to allow for Type attribute values excluding "name of record."  Used for other names to
+ *         be included in addition to the name of record in objects.
+ *       
+ * 
  * <p>Java class for OtherNameType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

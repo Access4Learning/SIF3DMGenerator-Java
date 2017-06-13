@@ -15,6 +15,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * This object defines information related to a school calendar day in a given school calendar year. If both CalendarDate and CalendarSummary objects are supported, there must be an instance of this object for each date between CalendarSummary StartDate and EndDate, inclusive.
+ * 
  * <p>Java class for CalendarDateType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,11 +26,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="CalendarSummaryRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="CalendarDateType" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarDateInfoType" minOccurs="0"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="CalendarSummaryRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
+ *         &lt;element name="CalendarDateType" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarDateInfoType"/>
  *         &lt;element name="CalendarDateNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="StudentAttendance" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceInfoType" minOccurs="0"/>
  *         &lt;element name="TeacherAttendance" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceInfoType" minOccurs="0"/>
@@ -60,18 +62,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class CalendarDate {
 
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
-    @XmlElement(name = "CalendarSummaryRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CalendarSummaryRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String calendarSummaryRefId;
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected XMLGregorianCalendar schoolYear;
-    @XmlElement(name = "CalendarDateType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CalendarDateType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected CalendarDateInfoType calendarDateType;
     @XmlElementRef(name = "CalendarDateNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> calendarDateNumber;

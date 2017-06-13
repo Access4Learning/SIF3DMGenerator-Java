@@ -27,10 +27,35 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsStaffStatusType {
 
+
+    /**
+     * Active
+     * 
+     */
     A,
+
+    /**
+     * Inactive
+     * 
+     */
     I,
+
+    /**
+     * Suspended
+     * 
+     */
     S,
+
+    /**
+     * On Leave
+     * 
+     */
     O,
+
+    /**
+     * Redacted for privacy
+     * 
+     */
     ZZREDACTED;
 
     public String value() {

@@ -15,6 +15,8 @@ import javax.xml.datatype.Duration;
 
 
 /**
+ * Scores received by the student for teach item in the testlet
+ * 
  * <p>Java class for NAPTestletResponseItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,14 +26,14 @@ import javax.xml.datatype.Duration;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="NAPTestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
  *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="Response" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Response" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ResponseCorrectness" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPResponseCorrectnessType" minOccurs="0"/>
  *         &lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="LapsedTimeItem" type="{http://www.w3.org/2001/XMLSchema}duration" minOccurs="0"/>
- *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="ItemWeight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="LapsedTimeItem" type="{http://www.w3.org/2001/XMLSchema}duration"/>
+ *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+ *         &lt;element name="ItemWeight" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="SubscoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPSubscoreListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -55,22 +57,22 @@ import javax.xml.datatype.Duration;
 })
 public class NAPTestletResponseItemType {
 
-    @XmlElement(name = "NAPTestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "NAPTestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String napTestItemRefId;
     @XmlElementRef(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestItemLocalId;
-    @XmlElement(name = "Response", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Response", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected String response;
     @XmlElementRef(name = "ResponseCorrectness", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsNAPResponseCorrectnessType> responseCorrectness;
     @XmlElementRef(name = "Score", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> score;
-    @XmlElement(name = "LapsedTimeItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LapsedTimeItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected Duration lapsedTimeItem;
-    @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigInteger sequenceNumber;
-    @XmlElement(name = "ItemWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ItemWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal itemWeight;
     @XmlElementRef(name = "SubscoreList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<NAPSubscoreListType> subscoreList;

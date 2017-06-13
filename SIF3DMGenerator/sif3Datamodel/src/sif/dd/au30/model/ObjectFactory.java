@@ -150,52 +150,126 @@ public class ObjectFactory {
     private final static QName _TermInfos_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermInfos");
     private final static QName _StudentPersonals_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentPersonals");
     private final static QName _ScheduledActivity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScheduledActivity");
-    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleScopeRefId");
-    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleScopeName");
-    private final static QName _TeacherCoverTypeSupervision_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Supervision");
-    private final static QName _TeacherCoverTypeStartTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartTime");
-    private final static QName _TeacherCoverTypeStaffLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffLocalId");
-    private final static QName _TeacherCoverTypeCredit_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Credit");
-    private final static QName _TeacherCoverTypeFinishTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinishTime");
-    private final static QName _TeacherCoverTypeWeighting_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Weighting");
-    private final static QName _RoomInfoTypeCapacity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Capacity");
-    private final static QName _RoomInfoTypeLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalId");
-    private final static QName _RoomInfoTypePhoneNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PhoneNumber");
-    private final static QName _RoomInfoTypeStaffList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffList");
-    private final static QName _RoomInfoTypeSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Size");
-    private final static QName _RoomInfoTypeHomeroomNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeroomNumber");
-    private final static QName _RoomInfoTypeDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Description");
-    private final static QName _RoomInfoTypeSIFExtendedElements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SIF_ExtendedElements");
-    private final static QName _RoomInfoTypeBuilding_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Building");
-    private final static QName _RoomInfoTypeSIFMetadata_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SIF_Metadata");
-    private final static QName _RoomInfoTypeRoomType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomType");
-    private final static QName _TimeTableSubjectTypeOtherCodeList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherCodeList");
-    private final static QName _TimeTableSubjectTypeSchoolYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolYear");
-    private final static QName _TimeTableSubjectTypeAcademicYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AcademicYear");
-    private final static QName _TimeTableSubjectTypeFaculty_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Faculty");
-    private final static QName _TimeTableSubjectTypeSemester_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Semester");
-    private final static QName _TimeTableSubjectTypeAcademicYearRange_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AcademicYearRange");
-    private final static QName _TimeTableSubjectTypeCourseLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseLocalId");
-    private final static QName _TimeTableSubjectTypeSubjectType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectType");
-    private final static QName _TimeTableSubjectTypeProposedMinClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProposedMinClassSize");
-    private final static QName _TimeTableSubjectTypeSchoolInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolInfoRefId");
-    private final static QName _TimeTableSubjectTypeSchoolCourseInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCourseInfoRefId");
-    private final static QName _TimeTableSubjectTypeProposedMaxClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProposedMaxClassSize");
-    private final static QName _TimeTableSubjectTypeSchoolLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolLocalId");
-    private final static QName _TimeTableSubjectTypeSubjectShortName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectShortName");
-    private final static QName _TotalEnrollmentsTypeTotalStudents_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TotalStudents");
-    private final static QName _TotalEnrollmentsTypeGirls_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Girls");
-    private final static QName _TotalEnrollmentsTypeBoys_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Boys");
-    private final static QName _ContactTypeName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Name");
-    private final static QName _ContactTypeAddress_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Address");
-    private final static QName _ContactTypeEmail_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Email");
+    private final static QName _StudentContactPersonalTypeLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalId");
+    private final static QName _StudentContactPersonalTypeNonSchoolEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NonSchoolEducation");
+    private final static QName _StudentContactPersonalTypeEmploymentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmploymentType");
+    private final static QName _StudentContactPersonalTypeOtherIdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherIdList");
+    private final static QName _StudentContactPersonalTypeSIFExtendedElements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SIF_ExtendedElements");
+    private final static QName _StudentContactPersonalTypeSIFMetadata_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SIF_Metadata");
+    private final static QName _StudentContactPersonalTypeSchoolEducationalLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolEducationalLevel");
+    private final static QName _ScheduledActivityTypeDayId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DayId");
+    private final static QName _ScheduledActivityTypeLocation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Location");
+    private final static QName _ScheduledActivityTypeActivityType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityType");
+    private final static QName _ScheduledActivityTypePeriodId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PeriodId");
+    private final static QName _ScheduledActivityTypeTimeTableCellRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableCellRefId");
+    private final static QName _ScheduledActivityTypeCellType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CellType");
+    private final static QName _ScheduledActivityTypeAddressList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AddressList");
+    private final static QName _ScheduledActivityTypeActivityComment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityComment");
+    private final static QName _ScheduledActivityTypeTimeTableRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableRefId");
+    private final static QName _ScheduledActivityTypeTeacherList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeacherList");
+    private final static QName _ScheduledActivityTypeTimeTableSubjectRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableSubjectRefId");
+    private final static QName _ScheduledActivityTypeActivityName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityName");
+    private final static QName _ScheduledActivityTypeTeachingGroupList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupList");
+    private final static QName _ScheduledActivityTypeRoomList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomList");
+    private final static QName _ScheduledActivityTypeStudentList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentList");
+    private final static QName _ScheduledActivityTypeYearLevels_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "YearLevels");
+    private final static QName _ScheduledActivityTypeOverride_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Override");
+    private final static QName _TechnicalRequirementsTypeTechnicalRequirement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TechnicalRequirement");
+    private final static QName _LearningStandardItemTypeStandardIdentifierYearLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "YearLevel");
+    private final static QName _LearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AlternateIdentificationCodes");
+    private final static QName _LearningStandardItemTypeStandardIdentifierBenchmark_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Benchmark");
+    private final static QName _LearningStandardItemTypeStandardIdentifierIndicatorNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IndicatorNumber");
+    private final static QName _AddressStreetTypeApartmentNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentNumber");
+    private final static QName _AddressStreetTypeStreetNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetNumber");
+    private final static QName _AddressStreetTypeStreetSuffix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetSuffix");
+    private final static QName _AddressStreetTypeStreetType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetType");
+    private final static QName _AddressStreetTypeComplex_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Complex");
+    private final static QName _AddressStreetTypeApartmentNumberSuffix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentNumberSuffix");
+    private final static QName _AddressStreetTypeApartmentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentType");
+    private final static QName _AddressStreetTypeLine2_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Line2");
+    private final static QName _AddressStreetTypeStreetPrefix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetPrefix");
+    private final static QName _AddressStreetTypeLine3_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Line3");
+    private final static QName _AddressStreetTypeApartmentNumberPrefix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentNumberPrefix");
+    private final static QName _AddressStreetTypeStreetName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetName");
+    private final static QName _SchoolProgramTypeOtherCodeList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherCodeList");
+    private final static QName _SchoolProgramTypeCategory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Category");
+    private final static QName _AttendanceTimeTypeDurationValue_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DurationValue");
+    private final static QName _AttendanceTimeTypeAttendanceNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AttendanceNote");
+    private final static QName _SectionInfoTypeSchoolCourseInfoOverride_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCourseInfoOverride");
+    private final static QName _SectionInfoTypeCourseSectionCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseSectionCode");
+    private final static QName _SectionInfoTypeSchoolYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolYear");
+    private final static QName _SectionInfoTypeTermInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermInfoRefId");
+    private final static QName _SectionInfoTypeMediumOfInstruction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MediumOfInstruction");
+    private final static QName _SectionInfoTypeLanguageOfInstruction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LanguageOfInstruction");
+    private final static QName _SectionInfoTypeDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Description");
+    private final static QName _SectionInfoTypeSectionCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SectionCode");
+    private final static QName _SectionInfoTypeSummerSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SummerSchool");
+    private final static QName _SectionInfoTypeLocationOfInstruction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationOfInstruction");
+    private final static QName _SectionInfoTypeCountForAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CountForAttendance");
+    private final static QName _TeachingGroupTypeCurriculumLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CurriculumLevel");
+    private final static QName _TeachingGroupTypeTeachingGroupPeriodList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupPeriodList");
+    private final static QName _TeachingGroupTypeLongName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LongName");
+    private final static QName _TeachingGroupTypeSemester_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Semester");
+    private final static QName _TeachingGroupTypeGroupType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GroupType");
+    private final static QName _TeachingGroupTypeSchoolCourseLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCourseLocalId");
+    private final static QName _TeachingGroupTypeMaxClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MaxClassSize");
+    private final static QName _TeachingGroupTypeSet_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Set");
+    private final static QName _TeachingGroupTypeSchoolInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolInfoRefId");
+    private final static QName _TeachingGroupTypeBlock_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Block");
+    private final static QName _TeachingGroupTypeSchoolCourseInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCourseInfoRefId");
+    private final static QName _TeachingGroupTypeSchoolLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolLocalId");
+    private final static QName _TeachingGroupTypeMinClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MinClassSize");
+    private final static QName _TeachingGroupTypeTimeTableSubjectLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableSubjectLocalId");
+    private final static QName _TimeTableCellTypeTimeTableLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableLocalId");
+    private final static QName _TimeTableCellTypeTeachingGroupLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupLocalId");
+    private final static QName _TimeTableCellTypeSubjectLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectLocalId");
+    private final static QName _TimeTableCellTypeStaffLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffLocalId");
+    private final static QName _TimeTableCellTypeRoomInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomInfoRefId");
+    private final static QName _TimeTableCellTypeStaffPersonalRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffPersonalRefId");
+    private final static QName _TimeTableCellTypeRoomNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomNumber");
+    private final static QName _TeachingGroupPeriodTypeStartTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartTime");
+    private final static QName _LearningStandardDocumentTypeCopyrightHolder_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Holder");
+    private final static QName _LearningStandardDocumentTypeCopyrightDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Date");
+    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleScopeList");
+    private final static QName _NAPStudentResponseSetTypeStudentPersonalRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentPersonalRefId");
+    private final static QName _NAPStudentResponseSetTypeEquatingSampleFlag_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EquatingSampleFlag");
+    private final static QName _NAPStudentResponseSetTypeCalibrationSampleFlag_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CalibrationSampleFlag");
+    private final static QName _NAPStudentResponseSetTypeNAPTestRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPTestRefId");
+    private final static QName _StaffAssignmentTypeStaffActivity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffActivity");
+    private final static QName _StaffAssignmentTypeCalendarSummaryList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CalendarSummaryList");
+    private final static QName _StaffAssignmentTypeEmploymentStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmploymentStatus");
+    private final static QName _StaffAssignmentTypeJobStartDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobStartDate");
+    private final static QName _StaffAssignmentTypeJobEndDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobEndDate");
+    private final static QName _StaffAssignmentTypeCasualReliefTeacher_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CasualReliefTeacher");
+    private final static QName _StaffAssignmentTypeHouse_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "House");
+    private final static QName _StaffAssignmentTypeHomegroup_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Homegroup");
+    private final static QName _StaffAssignmentTypeJobFTE_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobFTE");
+    private final static QName _StaffAssignmentTypeJobFunction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobFunction");
+    private final static QName _StaffAssignmentTypeStaffSubjectList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffSubjectList");
+    private final static QName _TermInfoTypeAttendanceTerm_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AttendanceTerm");
+    private final static QName _TermInfoTypeTermSpan_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermSpan");
+    private final static QName _TermInfoTypeTrack_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Track");
+    private final static QName _TermInfoTypeTermCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermCode");
+    private final static QName _TermInfoTypeMarkingTerm_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MarkingTerm");
+    private final static QName _TermInfoTypeRelativeDuration_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelativeDuration");
+    private final static QName _TermInfoTypeSchedulingTerm_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchedulingTerm");
+    private final static QName _VisaSubClassTypeVisaStatisticalCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VisaStatisticalCode");
+    private final static QName _VisaSubClassTypeATEExpiryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ATEExpiryDate");
+    private final static QName _VisaSubClassTypeVisaExpiryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VisaExpiryDate");
+    private final static QName _VisaSubClassTypeATEStartDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ATEStartDate");
+    private final static QName _StudentPeriodAttendanceTypeSessionInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SessionInfoRefId");
+    private final static QName _StudentPeriodAttendanceTypeTimeIn_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeIn");
+    private final static QName _StudentPeriodAttendanceTypeScheduledActivityRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScheduledActivityRefId");
+    private final static QName _StudentPeriodAttendanceTypeAuditInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AuditInfo");
+    private final static QName _StudentPeriodAttendanceTypeTimetablePeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimetablePeriod");
+    private final static QName _StudentPeriodAttendanceTypeTimeOut_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeOut");
+    private final static QName _StudentPeriodAttendanceTypeAttendanceComment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AttendanceComment");
     private final static QName _SchoolInfoTypeStateProvinceId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StateProvinceId");
     private final static QName _SchoolInfoTypeOtherLEA_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherLEA");
     private final static QName _SchoolInfoTypeBoardingSchoolStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BoardingSchoolStatus");
     private final static QName _SchoolInfoTypeSessionType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SessionType");
     private final static QName _SchoolInfoTypeSchoolDistrictLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolDistrictLocalId");
     private final static QName _SchoolInfoTypeACARAId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ACARAId");
-    private final static QName _SchoolInfoTypeAddressList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AddressList");
     private final static QName _SchoolInfoTypeOperationalStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OperationalStatus");
     private final static QName _SchoolInfoTypeJurisdictionLowerHouse_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JurisdictionLowerHouse");
     private final static QName _SchoolInfoTypeSchoolCoEdStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCoEdStatus");
@@ -205,14 +279,12 @@ public class ObjectFactory {
     private final static QName _SchoolInfoTypeSchoolType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolType");
     private final static QName _SchoolInfoTypeIndependentSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IndependentSchool");
     private final static QName _SchoolInfoTypeSchoolContactList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolContactList");
-    private final static QName _SchoolInfoTypeYearLevels_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "YearLevels");
     private final static QName _SchoolInfoTypeSchoolEmailList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolEmailList");
     private final static QName _SchoolInfoTypePrincipalInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PrincipalInfo");
     private final static QName _SchoolInfoTypeReligiousAffiliation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReligiousAffiliation");
     private final static QName _SchoolInfoTypeSchoolURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolURL");
     private final static QName _SchoolInfoTypeSLA_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SLA");
     private final static QName _SchoolInfoTypeCampus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Campus");
-    private final static QName _SchoolInfoTypeOtherIdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherIdList");
     private final static QName _SchoolInfoTypeFederalElectorate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FederalElectorate");
     private final static QName _SchoolInfoTypeEntityOpen_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Entity_Open");
     private final static QName _SchoolInfoTypeLocalGovernmentArea_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalGovernmentArea");
@@ -226,21 +298,186 @@ public class ObjectFactory {
     private final static QName _SchoolInfoTypePhoneNumberList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PhoneNumberList");
     private final static QName _SchoolInfoTypeEntityClose_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Entity_Close");
     private final static QName _SchoolInfoTypeSchoolFocusList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolFocusList");
-    private final static QName _ActivityTimeTypeFinishDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinishDate");
-    private final static QName _ActivityTimeTypeDuration_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Duration");
-    private final static QName _ActivityTimeTypeDueDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DueDate");
-    private final static QName _ActivityTimeTypeStartDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartDate");
+    private final static QName _TotalEnrollmentsTypeTotalStudents_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TotalStudents");
+    private final static QName _TotalEnrollmentsTypeGirls_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Girls");
+    private final static QName _TotalEnrollmentsTypeBoys_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Boys");
+    private final static QName _SchoolCourseInfoOverrideTypeStateCourseCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StateCourseCode");
+    private final static QName _SchoolCourseInfoOverrideTypeCourseCredits_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseCredits");
+    private final static QName _SchoolCourseInfoOverrideTypeDistrictCourseCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DistrictCourseCode");
+    private final static QName _SchoolCourseInfoOverrideTypeCourseTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseTitle");
+    private final static QName _SchoolCourseInfoOverrideTypeCourseCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseCode");
+    private final static QName _SchoolCourseInfoOverrideTypeSubjectArea_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectArea");
+    private final static QName _SchoolCourseInfoOverrideTypeInstructionalLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "InstructionalLevel");
+    private final static QName _SchoolProgramsTypeSchoolProgramList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolProgramList");
+    private final static QName _TimeTableTypeSchoolName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolName");
+    private final static QName _TimeTableTypeTimeTableCreationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableCreationDate");
+    private final static QName _TimeTableTypeEndDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndDate");
+    private final static QName _TimeTableTypeTeachingPeriodsPerDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingPeriodsPerDay");
+    private final static QName _TimeTableTypeStartDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartDate");
+    private final static QName _PurchasingItemTypeExpenseAccounts_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExpenseAccounts");
+    private final static QName _PurchasingItemTypeTaxRate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TaxRate");
+    private final static QName _PurchasingItemTypeQuantityDelivered_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "QuantityDelivered");
+    private final static QName _PurchasingItemTypeItemNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ItemNumber");
+    private final static QName _PurchasingItemTypeTotalCost_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TotalCost");
+    private final static QName _PurchasingItemTypeCancelledOrder_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CancelledOrder");
+    private final static QName _PurchasingItemTypeUnitCost_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "UnitCost");
+    private final static QName _PurchasingItemTypeQuantity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Quantity");
+    private final static QName _ContactInfoTypeRole_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Role");
+    private final static QName _ContactInfoTypeAddress_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Address");
+    private final static QName _ContactInfoTypeEmailList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmailList");
+    private final static QName _ContactInfoTypePositionTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PositionTitle");
+    private final static QName _SchoolContactTypePublishInDirectory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PublishInDirectory");
+    private final static QName _StudentSectionEnrollmentTypeEntryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EntryDate");
+    private final static QName _StudentSectionEnrollmentTypeExitDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExitDate");
+    private final static QName _EvaluationTypeName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Name");
     private final static QName _LanguageBaseTypeDialect_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Dialect");
     private final static QName _LanguageBaseTypeLanguageType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LanguageType");
+    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleList");
+    private final static QName _AggregateStatisticFactTypeExcluded_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Excluded");
+    private final static QName _LEAInfoTypeEducationAgencyType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EducationAgencyType");
+    private final static QName _LEAInfoTypeLEAContactList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LEAContactList");
+    private final static QName _LEAInfoTypeLEAURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LEAURL");
+    private final static QName _NAPWritingRubricTypeDescriptor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Descriptor");
+    private final static QName _LifeCycleTypeCreated_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Created");
+    private final static QName _LifeCycleTypeModificationHistory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ModificationHistory");
+    private final static QName _LifeCycleTypeTimeElements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeElements");
+    private final static QName _TeacherCoverTypeSupervision_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Supervision");
+    private final static QName _TeacherCoverTypeCredit_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Credit");
+    private final static QName _TeacherCoverTypeFinishTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinishTime");
+    private final static QName _TeacherCoverTypeWeighting_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Weighting");
+    private final static QName _PrincipalInfoTypeContactTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactTitle");
+    private final static QName _SoftwareRequirementTypeOS_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OS");
+    private final static QName _SoftwareRequirementTypeVersion_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Version");
+    private final static QName _SoftwareRequirementTypeVendor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Vendor");
+    private final static QName _StudentSubjectChoiceTypePreferenceNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferenceNumber");
+    private final static QName _StudentSubjectChoiceTypeOtherSchoolLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherSchoolLocalId");
+    private final static QName _StudentSubjectChoiceTypeStudyDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudyDescription");
+    private final static QName _NAPTestletContentTypeLocationInStage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationInStage");
+    private final static QName _NAPTestletContentTypeNode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Node");
+    private final static QName _DebtorTypeDiscount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Discount");
+    private final static QName _DebtorTypeBillingName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BillingName");
+    private final static QName _DebtorTypeBillingNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BillingNote");
+    private final static QName _ExpenseAccountTypeAccountingPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccountingPeriod");
+    private final static QName _ExpenseAccountTypeFinancialAccountRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinancialAccountRefId");
+    private final static QName _ExpenseAccountsTypeExpenseAccountType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExpenseAccountType");
+    private final static QName _LifeCycleTypeCreatedCreators_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Creators");
+    private final static QName _VendorInfoTypeBPay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BPay");
+    private final static QName _VendorInfoTypeAccountName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccountName");
+    private final static QName _VendorInfoTypeContactInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactInfo");
+    private final static QName _VendorInfoTypeABN_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ABN");
+    private final static QName _VendorInfoTypePaymentTerms_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PaymentTerms");
+    private final static QName _VendorInfoTypeAccountNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccountNumber");
+    private final static QName _VendorInfoTypeBSB_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BSB");
+    private final static QName _VendorInfoTypeCustomerId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CustomerId");
+    private final static QName _VendorInfoTypeRegisteredForGST_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RegisteredForGST");
+    private final static QName _PurchaseOrderTypeUpdateDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "UpdateDate");
+    private final static QName _PurchaseOrderTypeTaxAmount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TaxAmount");
+    private final static QName _PurchaseOrderTypeTotalAmount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TotalAmount");
+    private final static QName _PurchaseOrderTypeCreationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreationDate");
+    private final static QName _PurchaseOrderTypeFullyDelivered_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FullyDelivered");
+    private final static QName _PurchaseOrderTypeEmployeePersonalRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmployeePersonalRefId");
+    private final static QName _PurchaseOrderTypeOriginalPurchaseOrderRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OriginalPurchaseOrderRefId");
+    private final static QName _PurchaseOrderTypeChargedLocationInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ChargedLocationInfoRefId");
+    private final static QName _StudentMostRecentContainerTypeParent2Language_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2Language");
+    private final static QName _StudentMostRecentContainerTypeParent2EmploymentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2EmploymentType");
+    private final static QName _StudentMostRecentContainerTypeParent1Language_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1Language");
+    private final static QName _StudentMostRecentContainerTypeLocalCampusId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalCampusId");
+    private final static QName _StudentMostRecentContainerTypeParent1EmploymentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1EmploymentType");
+    private final static QName _StudentMostRecentContainerTypeParent1SchoolEducationLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1SchoolEducationLevel");
+    private final static QName _StudentMostRecentContainerTypeFFPOS_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FFPOS");
+    private final static QName _StudentMostRecentContainerTypeParent2SchoolEducationLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2SchoolEducationLevel");
+    private final static QName _StudentMostRecentContainerTypeSchoolACARAId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolACARAId");
+    private final static QName _StudentMostRecentContainerTypeTestLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TestLevel");
+    private final static QName _StudentMostRecentContainerTypeClassCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ClassCode");
+    private final static QName _StudentMostRecentContainerTypeHomeroomLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeroomLocalId");
+    private final static QName _StudentMostRecentContainerTypeParent1NonSchoolEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1NonSchoolEducation");
+    private final static QName _StudentMostRecentContainerTypeParent2NonSchoolEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2NonSchoolEducation");
+    private final static QName _StudentMostRecentContainerTypeOtherEnrollmentSchoolACARAId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherEnrollmentSchoolACARAId");
+    private final static QName _StudentMostRecentContainerTypeReportingSchoolId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReportingSchoolId");
+    private final static QName _StudentMostRecentContainerTypeFTE_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FTE");
+    private final static QName _ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDelimiter_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ColumnDelimiter");
+    private final static QName _ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ColumnDescription");
+    private final static QName _StudentActivityParticipationTypeParticipationComment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParticipationComment");
+    private final static QName _StudentActivityParticipationTypeRecognitionList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RecognitionList");
+    private final static QName _StudentActivityInfoTypeCurricularStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CurricularStatus");
+    private final static QName _StudentActivityInfoTypeStudentActivityLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentActivityLevel");
+    private final static QName _NAPTestletResponseTypeNAPTestletRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPTestletRefId");
+    private final static QName _ChargedLocationInfoTypeParentChargedLocationInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentChargedLocationInfoRefId");
+    private final static QName _AdjustmentContainerTypeBookletType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BookletType");
+    private final static QName _StudentPersonalTypeDisability_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Disability");
+    private final static QName _StudentPersonalTypeAlertMessages_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AlertMessages");
+    private final static QName _StudentPersonalTypeOnTimeGraduationYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OnTimeGraduationYear");
+    private final static QName _StudentPersonalTypePrePrimaryEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PrePrimaryEducation");
+    private final static QName _StudentPersonalTypeEconomicDisadvantage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EconomicDisadvantage");
+    private final static QName _StudentPersonalTypeYoungCarersRole_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "YoungCarersRole");
+    private final static QName _StudentPersonalTypeOfflineDelivery_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OfflineDelivery");
+    private final static QName _StudentPersonalTypeSensitive_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Sensitive");
+    private final static QName _StudentPersonalTypeAcceptableUsePolicy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AcceptableUsePolicy");
+    private final static QName _StudentPersonalTypeESL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ESL");
+    private final static QName _StudentPersonalTypeMedicalAlertMessages_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MedicalAlertMessages");
+    private final static QName _StudentPersonalTypeHomeSchooledStudent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeSchooledStudent");
+    private final static QName _StudentPersonalTypeProjectedGraduationYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProjectedGraduationYear");
+    private final static QName _StudentPersonalTypeEducationSupport_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EducationSupport");
+    private final static QName _StudentPersonalTypeGraduationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GraduationDate");
+    private final static QName _StudentPersonalTypeIntegrationAide_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IntegrationAide");
+    private final static QName _StudentPersonalTypeMostRecent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MostRecent");
+    private final static QName _StudentPersonalTypeGiftedTalented_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GiftedTalented");
+    private final static QName _StudentPersonalTypeESLDateAssessed_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ESLDateAssessed");
+    private final static QName _StudentPersonalTypeFirstAUSchoolEnrollment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FirstAUSchoolEnrollment");
+    private final static QName _StudentPersonalTypeElectronicIdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ElectronicIdList");
+    private final static QName _ResourceUsageTypeResourceUsageContentTypeLocalDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalDescription");
+    private final static QName _ContactTypePhoneNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PhoneNumber");
+    private final static QName _ContactTypeEmail_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Email");
+    private final static QName _TimeElementTypeSpanGaps_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SpanGaps");
+    private final static QName _TimeElementTypeEndDateTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndDateTime");
+    private final static QName _TimeElementTypeStartDateTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartDateTime");
+    private final static QName _PaymentReceiptTypeChequeNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ChequeNumber");
+    private final static QName _PaymentReceiptTypeTransactionNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TransactionNote");
+    private final static QName _PaymentReceiptTypeDebtorRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DebtorRefId");
+    private final static QName _PaymentReceiptTypeVendorInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VendorInfoRefId");
+    private final static QName _PaymentReceiptTypeTransactionDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TransactionDescription");
+    private final static QName _PaymentReceiptTypeTransactionMethod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TransactionMethod");
+    private final static QName _PaymentReceiptTypeInvoiceRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "InvoiceRefId");
+    private final static QName _PaymentReceiptTypeFinancialAccountRefIdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinancialAccountRefIdList");
+    private final static QName _BaseNameTypeFamilyName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FamilyName");
+    private final static QName _BaseNameTypePreferredFamilyName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferredFamilyName");
+    private final static QName _BaseNameTypePreferredFamilyNameFirst_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferredFamilyNameFirst");
+    private final static QName _BaseNameTypeTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Title");
+    private final static QName _BaseNameTypeMiddleName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MiddleName");
+    private final static QName _BaseNameTypePreferredGivenName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferredGivenName");
+    private final static QName _BaseNameTypeFamilyNameFirst_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FamilyNameFirst");
+    private final static QName _BaseNameTypeGivenName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GivenName");
+    private final static QName _BaseNameTypeFullName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FullName");
+    private final static QName _BaseNameTypeSuffix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Suffix");
+    private final static QName _CalendarDateTeacherAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeacherAttendance");
+    private final static QName _CalendarDateAdministratorAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AdministratorAttendance");
+    private final static QName _CalendarDateStudentAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentAttendance");
+    private final static QName _CalendarDateCalendarDateNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CalendarDateNumber");
+    private final static QName _AddressTypeRadioContact_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RadioContact");
+    private final static QName _AddressTypeMapReference_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MapReference");
+    private final static QName _AddressTypeAddressGlobalUID_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AddressGlobalUID");
+    private final static QName _AddressTypeStateProvince_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StateProvince");
+    private final static QName _AddressTypeCountry_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Country");
+    private final static QName _AddressTypeEffectiveToDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EffectiveToDate");
+    private final static QName _AddressTypeEffectiveFromDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EffectiveFromDate");
+    private final static QName _AddressTypeCommunity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Community");
+    private final static QName _AddressTypeStatisticalAreas_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StatisticalAreas");
+    private final static QName _AddressTypeGridLocation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GridLocation");
+    private final static QName _GradingAssignmentTypeGradingCategory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GradingCategory");
+    private final static QName _GradingAssignmentTypeMaxAttemptsAllowed_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MaxAttemptsAllowed");
+    private final static QName _GradingAssignmentTypeDetailedDescriptionURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DetailedDescriptionURL");
+    private final static QName _GradingAssignmentTypeTeachingGroupRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupRefId");
+    private final static QName _GradingAssignmentTypeCreateDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreateDate");
+    private final static QName _GradingAssignmentTypeDetailedDescriptionBinary_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DetailedDescriptionBinary");
+    private final static QName _GradingAssignmentTypeDueDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DueDate");
+    private final static QName _GradingAssignmentTypeWeight_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Weight");
     private final static QName _DemographicsTypeDateOfDeath_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DateOfDeath");
-    private final static QName _DemographicsTypeVisaStatisticalCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VisaStatisticalCode");
     private final static QName _DemographicsTypeLanguageList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LanguageList");
     private final static QName _DemographicsTypePlaceOfBirth_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PlaceOfBirth");
     private final static QName _DemographicsTypeLBOTE_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LBOTE");
     private final static QName _DemographicsTypeAustralianCitizenshipStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AustralianCitizenshipStatus");
     private final static QName _DemographicsTypeCulturalBackground_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CulturalBackground");
     private final static QName _DemographicsTypeBirthDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BirthDate");
-    private final static QName _DemographicsTypeVisaExpiryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VisaExpiryDate");
     private final static QName _DemographicsTypeBirthDateVerification_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BirthDateVerification");
     private final static QName _DemographicsTypeImmunisationCertificateStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ImmunisationCertificateStatus");
     private final static QName _DemographicsTypeVisaSubClassList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VisaSubClassList");
@@ -259,60 +496,35 @@ public class ObjectFactory {
     private final static QName _DemographicsTypeDwellingArrangement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DwellingArrangement");
     private final static QName _DemographicsTypeStateOfBirth_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StateOfBirth");
     private final static QName _DemographicsTypeVisaSubClass_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VisaSubClass");
-    private final static QName _VisaSubClassTypeATEExpiryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ATEExpiryDate");
-    private final static QName _VisaSubClassTypeATEStartDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ATEStartDate");
-    private final static QName _AttendanceTimeTypeDurationValue_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DurationValue");
-    private final static QName _AttendanceTimeTypeAttendanceNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AttendanceNote");
-    private final static QName _StudentSectionEnrollmentTypeEntryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EntryDate");
-    private final static QName _StudentSectionEnrollmentTypeExitDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExitDate");
-    private final static QName _StimulusTypeWordCount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "WordCount");
-    private final static QName _StimulusTypeTextType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TextType");
-    private final static QName _StimulusTypeTextGenre_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TextGenre");
-    private final static QName _FinancialAccountTypeParentAccountRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentAccountRefId");
-    private final static QName _FinancialAccountTypeChargedLocationInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ChargedLocationInfoRefId");
-    private final static QName _StudentContactRelationshipTypeContactSequenceSource_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactSequenceSource");
-    private final static QName _StudentContactRelationshipTypeMainlySpeaksEnglishAtHome_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MainlySpeaksEnglishAtHome");
-    private final static QName _StudentContactRelationshipTypeContactFlags_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactFlags");
-    private final static QName _StudentContactRelationshipTypeHouseholdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdList");
-    private final static QName _StudentContactRelationshipTypeContactSequence_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactSequence");
-    private final static QName _StudentContactRelationshipTypeParentRelationshipStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentRelationshipStatus");
-    private final static QName _DebtorTypeDiscount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Discount");
-    private final static QName _DebtorTypeBillingName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BillingName");
-    private final static QName _DebtorTypeBillingNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BillingNote");
-    private final static QName _StudentMostRecentContainerTypeYearLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "YearLevel");
-    private final static QName _StudentMostRecentContainerTypeParent2Language_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2Language");
-    private final static QName _StudentMostRecentContainerTypeParent2EmploymentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2EmploymentType");
-    private final static QName _StudentMostRecentContainerTypeParent1Language_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1Language");
-    private final static QName _StudentMostRecentContainerTypeLocalCampusId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalCampusId");
-    private final static QName _StudentMostRecentContainerTypeParent1EmploymentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1EmploymentType");
-    private final static QName _StudentMostRecentContainerTypeParent1SchoolEducationLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1SchoolEducationLevel");
-    private final static QName _StudentMostRecentContainerTypeFFPOS_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FFPOS");
-    private final static QName _StudentMostRecentContainerTypeParent2SchoolEducationLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2SchoolEducationLevel");
-    private final static QName _StudentMostRecentContainerTypeSchoolACARAId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolACARAId");
-    private final static QName _StudentMostRecentContainerTypeTestLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TestLevel");
-    private final static QName _StudentMostRecentContainerTypeHomegroup_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Homegroup");
-    private final static QName _StudentMostRecentContainerTypeClassCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ClassCode");
-    private final static QName _StudentMostRecentContainerTypeHomeroomLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeroomLocalId");
-    private final static QName _StudentMostRecentContainerTypeParent1NonSchoolEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent1NonSchoolEducation");
-    private final static QName _StudentMostRecentContainerTypeParent2NonSchoolEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Parent2NonSchoolEducation");
-    private final static QName _StudentMostRecentContainerTypeOtherEnrollmentSchoolACARAId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherEnrollmentSchoolACARAId");
-    private final static QName _StudentMostRecentContainerTypeReportingSchoolId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReportingSchoolId");
-    private final static QName _StudentMostRecentContainerTypeFTE_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FTE");
-    private final static QName _TimeTablePeriodTypeEndTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndTime");
-    private final static QName _TimeTablePeriodTypeInstructionalMinutes_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "InstructionalMinutes");
-    private final static QName _TimeTablePeriodTypeUseInAttendanceCalculations_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "UseInAttendanceCalculations");
-    private final static QName _TimeTablePeriodTypeRegularSchoolPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RegularSchoolPeriod");
-    private final static QName _TimeTablePeriodTypeBellPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BellPeriod");
-    private final static QName _StaffAssignmentTypeStaffActivity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffActivity");
-    private final static QName _StaffAssignmentTypeCalendarSummaryList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CalendarSummaryList");
-    private final static QName _StaffAssignmentTypeEmploymentStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmploymentStatus");
-    private final static QName _StaffAssignmentTypeJobStartDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobStartDate");
-    private final static QName _StaffAssignmentTypeJobEndDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobEndDate");
-    private final static QName _StaffAssignmentTypeCasualReliefTeacher_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CasualReliefTeacher");
-    private final static QName _StaffAssignmentTypeHouse_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "House");
-    private final static QName _StaffAssignmentTypeJobFTE_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobFTE");
-    private final static QName _StaffAssignmentTypeJobFunction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "JobFunction");
-    private final static QName _StaffAssignmentTypeStaffSubjectList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffSubjectList");
+    private final static QName _ResourceBookingTypeKeepOld_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "KeepOld");
+    private final static QName _ResourceBookingTypeReason_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Reason");
+    private final static QName _ResourceBookingTypeToPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ToPeriod");
+    private final static QName _ResourceBookingTypeFromPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FromPeriod");
+    private final static QName _ResourceBookingTypeResourceRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ResourceRefId");
+    private final static QName _LearningStandardDocumentTypeAuthors_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Authors");
+    private final static QName _LearningStandardDocumentTypeLocalArchiveDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalArchiveDate");
+    private final static QName _LearningStandardDocumentTypeEndOfLifeDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndOfLifeDate");
+    private final static QName _LearningStandardDocumentTypeDocumentDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DocumentDate");
+    private final static QName _LearningStandardDocumentTypeLocalAdoptionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalAdoptionDate");
+    private final static QName _LearningStandardDocumentTypeCopyright_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Copyright");
+    private final static QName _LearningStandardDocumentTypeRelatedLearningStandards_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelatedLearningStandards");
+    private final static QName _LearningStandardDocumentTypeRichDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RichDescription");
+    private final static QName _LearningStandardDocumentTypeRepositoryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RepositoryDate");
+    private final static QName _LearningStandardDocumentTypeOrganizationContactPoint_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OrganizationContactPoint");
+    private final static QName _CampusContainerTypeParentSchoolId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentSchoolId");
+    private final static QName _CampusContainerTypeCampusType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CampusType");
+    private final static QName _SessionInfoTypeRollMarked_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RollMarked");
+    private final static QName _SessionInfoTypeStaffPersonalLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffPersonalLocalId");
+    private final static QName _LocationTypeLocationRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationRefId");
+    private final static QName _LocationTypeLocationName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationName");
+    private final static QName _TeachingGroupStudentTypeStudentLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentLocalId");
+    private final static QName _GradingAssignmentScoreTypeScoreDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScoreDescription");
+    private final static QName _GradingAssignmentScoreTypeScorePoints_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScorePoints");
+    private final static QName _GradingAssignmentScoreTypeScorePercent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScorePercent");
+    private final static QName _GradingAssignmentScoreTypeScoreLetter_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScoreLetter");
+    private final static QName _PhoneNumberTypePreference_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Preference");
+    private final static QName _PhoneNumberTypeListedStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ListedStatus");
+    private final static QName _PhoneNumberTypeExtension_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Extension");
     private final static QName _ContactFlagsTypeReceivesAssessmentReport_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReceivesAssessmentReport");
     private final static QName _ContactFlagsTypeFeesBilling_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FeesBilling");
     private final static QName _ContactFlagsTypeHasCustody_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HasCustody");
@@ -326,11 +538,60 @@ public class ObjectFactory {
     private final static QName _ContactFlagsTypeLivesWith_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LivesWith");
     private final static QName _ContactFlagsTypeDisciplinaryContact_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DisciplinaryContact");
     private final static QName _ContactFlagsTypeAccessToRecords_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccessToRecords");
-    private final static QName _PhoneNumberTypePreference_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Preference");
-    private final static QName _PhoneNumberTypeListedStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ListedStatus");
-    private final static QName _PhoneNumberTypeExtension_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Extension");
-    private final static QName _AggregateCharacteristicInfoTypeElementName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ElementName");
-    private final static QName _AggregateStatisticInfoTypeLocation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Location");
+    private final static QName _RoomInfoTypeCapacity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Capacity");
+    private final static QName _RoomInfoTypeStaffList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffList");
+    private final static QName _RoomInfoTypeSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Size");
+    private final static QName _RoomInfoTypeHomeroomNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeroomNumber");
+    private final static QName _RoomInfoTypeBuilding_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Building");
+    private final static QName _RoomInfoTypeRoomType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomType");
+    private final static QName _ComponentTypeAssociatedObjects_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AssociatedObjects");
+    private final static QName _ComponentTypeStrategies_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Strategies");
+    private final static QName _TimeTableSubjectTypeAcademicYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AcademicYear");
+    private final static QName _TimeTableSubjectTypeFaculty_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Faculty");
+    private final static QName _TimeTableSubjectTypeAcademicYearRange_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AcademicYearRange");
+    private final static QName _TimeTableSubjectTypeCourseLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseLocalId");
+    private final static QName _TimeTableSubjectTypeSubjectType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectType");
+    private final static QName _TimeTableSubjectTypeProposedMinClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProposedMinClassSize");
+    private final static QName _TimeTableSubjectTypeProposedMaxClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProposedMaxClassSize");
+    private final static QName _TimeTableSubjectTypeSubjectShortName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectShortName");
+    private final static QName _CalendarSummaryTypeLastInstructionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LastInstructionDate");
+    private final static QName _CalendarSummaryTypeFirstInstructionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FirstInstructionDate");
+    private final static QName _CalendarSummaryTypeInstructionalMinutes_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "InstructionalMinutes");
+    private final static QName _CalendarSummaryTypeMinutesPerDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MinutesPerDay");
+    private final static QName _PersonPictureTypeOKToPublish_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OKToPublish");
+    private final static QName _NAPTestScoreSummaryTypeDomainBottomNational60Percent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainBottomNational60Percent");
+    private final static QName _NAPTestScoreSummaryTypeDomainSchoolAverage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainSchoolAverage");
+    private final static QName _NAPTestScoreSummaryTypeDomainJurisdictionAverage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainJurisdictionAverage");
+    private final static QName _NAPTestScoreSummaryTypeDomainTopNational60Percent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainTopNational60Percent");
+    private final static QName _NAPTestScoreSummaryTypeDomainNationalAverage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainNationalAverage");
+    private final static QName _TimeTablePeriodTypeEndTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndTime");
+    private final static QName _TimeTablePeriodTypeUseInAttendanceCalculations_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "UseInAttendanceCalculations");
+    private final static QName _TimeTablePeriodTypeRegularSchoolPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RegularSchoolPeriod");
+    private final static QName _TimeTablePeriodTypeBellPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BellPeriod");
+    private final static QName _SubstituteItemTypeSubstituteItemLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubstituteItemLocalId");
+    private final static QName _StudentAttendanceSummaryTypeDaysTardy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DaysTardy");
+    private final static QName _StudentAttendanceSummaryTypeStartDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartDay");
+    private final static QName _StudentAttendanceSummaryTypeEndDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndDay");
+    private final static QName _IdentityTypePasswordList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PasswordList");
+    private final static QName _IdentityTypeIdentityAssertions_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IdentityAssertions");
+    private final static QName _IdentityTypeAuthenticationSourceGlobalUID_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AuthenticationSourceGlobalUID");
+    private final static QName _ActivityTypeLearningObjectives_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LearningObjectives");
+    private final static QName _ActivityTypeEssentialMaterials_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EssentialMaterials");
+    private final static QName _ActivityTypeStudents_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Students");
+    private final static QName _ActivityTypePoints_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Points");
+    private final static QName _ActivityTypeAssessmentRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AssessmentRefId");
+    private final static QName _ActivityTypeTechnicalRequirements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TechnicalRequirements");
+    private final static QName _ActivityTypeActivityWeight_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityWeight");
+    private final static QName _ActivityTypeSoftwareRequirementList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SoftwareRequirementList");
+    private final static QName _ActivityTypePrerequisites_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Prerequisites");
+    private final static QName _ActivityTypeEvaluation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Evaluation");
+    private final static QName _ActivityTypePreamble_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Preamble");
+    private final static QName _ActivityTypeSourceObjects_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SourceObjects");
+    private final static QName _ActivityTypeLearningStandards_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LearningStandards");
+    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleScopeRefId");
+    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleScopeName");
+    private final static QName _HouseholdContactInfoTypeHouseholdContactId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdContactId");
+    private final static QName _HouseholdContactInfoTypeHouseholdSalutation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdSalutation");
     private final static QName _AggregateStatisticInfoTypeEffectiveDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EffectiveDate");
     private final static QName _AggregateStatisticInfoTypeExpirationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExpirationDate");
     private final static QName _AggregateStatisticInfoTypeApprovalDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApprovalDate");
@@ -339,16 +600,23 @@ public class ObjectFactory {
     private final static QName _AggregateStatisticInfoTypeDiscontinueDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DiscontinueDate");
     private final static QName _AggregateStatisticInfoTypeExclusionRules_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExclusionRules");
     private final static QName _AggregateStatisticInfoTypeSource_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Source");
-    private final static QName _VendorInfoTypeBPay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BPay");
-    private final static QName _VendorInfoTypeAccountName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccountName");
-    private final static QName _VendorInfoTypeContactInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactInfo");
-    private final static QName _VendorInfoTypeABN_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ABN");
-    private final static QName _VendorInfoTypePaymentTerms_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PaymentTerms");
-    private final static QName _VendorInfoTypeAccountNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccountNumber");
-    private final static QName _VendorInfoTypeBSB_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BSB");
-    private final static QName _VendorInfoTypeCustomerId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CustomerId");
-    private final static QName _VendorInfoTypeRegisteredForGST_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RegisteredForGST");
-    private final static QName _NAPTestletCodeFrameTypeNAPTestletRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPTestletRefId");
+    private final static QName _NAPTestletResponseItemTypeNAPTestItemLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPTestItemLocalId");
+    private final static QName _NAPTestletResponseItemTypeScore_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Score");
+    private final static QName _NAPTestletResponseItemTypeResponseCorrectness_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ResponseCorrectness");
+    private final static QName _NAPTestletResponseItemTypeSubscoreList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubscoreList");
+    private final static QName _SchoolCourseInfoTypeCourseContent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseContent");
+    private final static QName _SchoolCourseInfoTypeSubjectAreaList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectAreaList");
+    private final static QName _SchoolCourseInfoTypeCoreAcademicCourse_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CoreAcademicCourse");
+    private final static QName _SchoolCourseInfoTypeGraduationRequirement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GraduationRequirement");
+    private final static QName _SchoolCourseInfoTypeDepartment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Department");
+    private final static QName _JournalTypeApprovedBy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApprovedBy");
+    private final static QName _JournalTypeNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Note");
+    private final static QName _JournalTypeApprovedDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApprovedDate");
+    private final static QName _JournalTypeCreatedBy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreatedBy");
+    private final static QName _JournalTypeCreatedDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreatedDate");
+    private final static QName _JournalTypeGSTCodeOriginal_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GSTCodeOriginal");
+    private final static QName _JournalTypeGSTCodeReplacement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GSTCodeReplacement");
+    private final static QName _JournalTypeOriginatingTransactionRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OriginatingTransactionRefId");
     private final static QName _LearningResourceTypeSubjectAreas_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectAreas");
     private final static QName _LearningResourceTypeLearningResourcePackageRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LearningResourcePackageRefId");
     private final static QName _LearningResourceTypeAuthor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Author");
@@ -359,231 +627,6 @@ public class ObjectFactory {
     private final static QName _LearningResourceTypeAgreementDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AgreementDate");
     private final static QName _LearningResourceTypeEvaluations_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Evaluations");
     private final static QName _LearningResourceTypeStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Status");
-    private final static QName _LearningResourceTypeLearningStandards_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LearningStandards");
-    private final static QName _LEAContactTypePublishInDirectory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PublishInDirectory");
-    private final static QName _TimeTableTypeSchoolName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolName");
-    private final static QName _TimeTableTypeTimeTableCreationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableCreationDate");
-    private final static QName _TimeTableTypeEndDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndDate");
-    private final static QName _TimeTableTypeTeachingPeriodsPerDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingPeriodsPerDay");
-    private final static QName _SessionInfoTypeRollMarked_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RollMarked");
-    private final static QName _SessionInfoTypeRoomNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomNumber");
-    private final static QName _SessionInfoTypeStaffPersonalLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffPersonalLocalId");
-    private final static QName _IdentityTypePasswordList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PasswordList");
-    private final static QName _IdentityTypeIdentityAssertions_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IdentityAssertions");
-    private final static QName _IdentityTypeAuthenticationSourceGlobalUID_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AuthenticationSourceGlobalUID");
-    private final static QName _StudentSchoolEnrollmentTypeCalendar_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Calendar");
-    private final static QName _StudentSchoolEnrollmentTypeHomeroom_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Homeroom");
-    private final static QName _StudentSchoolEnrollmentTypeCounselor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Counselor");
-    private final static QName _StudentSchoolEnrollmentTypeAdvisor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Advisor");
-    private final static QName _StudentSchoolEnrollmentTypeExitType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExitType");
-    private final static QName _StudentSchoolEnrollmentTypePreviousSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreviousSchool");
-    private final static QName _StudentSchoolEnrollmentTypeDestinationSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DestinationSchool");
-    private final static QName _StudentSchoolEnrollmentTypeIndividualLearningPlan_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IndividualLearningPlan");
-    private final static QName _StudentSchoolEnrollmentTypePromotionInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PromotionInfo");
-    private final static QName _StudentSchoolEnrollmentTypeACARASchoolId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ACARASchoolId");
-    private final static QName _StudentSchoolEnrollmentTypeEntryType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EntryType");
-    private final static QName _StudentSchoolEnrollmentTypeFTPTStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FTPTStatus");
-    private final static QName _StudentSchoolEnrollmentTypeStudentSubjectChoiceList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentSubjectChoiceList");
-    private final static QName _StudentSchoolEnrollmentTypeExitStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExitStatus");
-    private final static QName _StudentSchoolEnrollmentTypeCatchmentStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CatchmentStatus");
-    private final static QName _StudentSchoolEnrollmentTypeReportingSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReportingSchool");
-    private final static QName _StudentSchoolEnrollmentTypeRecordClosureReason_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RecordClosureReason");
-    private final static QName _NAPTestScoreSummaryTypeNAPTestRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPTestRefId");
-    private final static QName _NAPTestScoreSummaryTypeDomainBottomNational60Percent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainBottomNational60Percent");
-    private final static QName _NAPTestScoreSummaryTypeDomainSchoolAverage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainSchoolAverage");
-    private final static QName _NAPTestScoreSummaryTypeDomainJurisdictionAverage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainJurisdictionAverage");
-    private final static QName _NAPTestScoreSummaryTypeDomainTopNational60Percent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainTopNational60Percent");
-    private final static QName _NAPTestScoreSummaryTypeDomainNationalAverage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DomainNationalAverage");
-    private final static QName _PrincipalInfoTypeContactTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactTitle");
-    private final static QName _PrincipalInfoTypeEmailList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmailList");
-    private final static QName _ContactInfoTypeRole_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Role");
-    private final static QName _ContactInfoTypePositionTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PositionTitle");
-    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleList");
-    private final static QName _TimeTableCellTypeTimeTableLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableLocalId");
-    private final static QName _TimeTableCellTypeTeachingGroupLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupLocalId");
-    private final static QName _TimeTableCellTypeSubjectLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectLocalId");
-    private final static QName _TimeTableCellTypeTeacherList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeacherList");
-    private final static QName _TimeTableCellTypeRoomInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomInfoRefId");
-    private final static QName _TimeTableCellTypeStaffPersonalRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StaffPersonalRefId");
-    private final static QName _TimeTableCellTypeRoomList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoomList");
-    private final static QName _InvoiceTypeTaxAmount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TaxAmount");
-    private final static QName _InvoiceTypeTaxRate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TaxRate");
-    private final static QName _InvoiceTypeApprovedBy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApprovedBy");
-    private final static QName _InvoiceTypeVoluntary_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Voluntary");
-    private final static QName _InvoiceTypeFormNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FormNumber");
-    private final static QName _InvoiceTypeRelatedPurchaseOrderRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelatedPurchaseOrderRefId");
-    private final static QName _InvoiceTypeNetAmount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NetAmount");
-    private final static QName _InvoiceTypeAccountingPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AccountingPeriod");
-    private final static QName _InvoiceTypeCreatedBy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreatedBy");
-    private final static QName _InvoiceTypeItemDetail_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ItemDetail");
-    private final static QName _InvoiceTypePurchasingItems_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PurchasingItems");
-    private final static QName _InvoiceTypeTaxType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TaxType");
-    private final static QName _InvoiceTypeFinancialAccountRefIdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinancialAccountRefIdList");
-    private final static QName _TimeElementTypeSpanGapsSpanGapEndDateTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndDateTime");
-    private final static QName _TimeElementTypeSpanGapsSpanGapStartDateTime_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartDateTime");
-    private final static QName _LearningStandardDocumentTypeAuthors_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Authors");
-    private final static QName _LearningStandardDocumentTypeLocalArchiveDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalArchiveDate");
-    private final static QName _LearningStandardDocumentTypeEndOfLifeDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndOfLifeDate");
-    private final static QName _LearningStandardDocumentTypeDocumentDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DocumentDate");
-    private final static QName _LearningStandardDocumentTypeLocalAdoptionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalAdoptionDate");
-    private final static QName _LearningStandardDocumentTypeCopyright_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Copyright");
-    private final static QName _LearningStandardDocumentTypeRelatedLearningStandards_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelatedLearningStandards");
-    private final static QName _LearningStandardDocumentTypeRichDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RichDescription");
-    private final static QName _LearningStandardDocumentTypeRepositoryDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RepositoryDate");
-    private final static QName _LearningStandardDocumentTypeOrganizationContactPoint_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OrganizationContactPoint");
-    private final static QName _GradingAssignmentScoreTypeStudentPersonalRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentPersonalRefId");
-    private final static QName _GradingAssignmentScoreTypeScoreDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScoreDescription");
-    private final static QName _GradingAssignmentScoreTypeTeachingGroupRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupRefId");
-    private final static QName _GradingAssignmentScoreTypeScorePoints_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScorePoints");
-    private final static QName _GradingAssignmentScoreTypeScorePercent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScorePercent");
-    private final static QName _GradingAssignmentScoreTypeScoreLetter_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScoreLetter");
-    private final static QName _LocationTypeLocationRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationRefId");
-    private final static QName _LocationTypeLocationName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationName");
-    private final static QName _SchoolCourseInfoOverrideTypeStateCourseCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StateCourseCode");
-    private final static QName _SchoolCourseInfoOverrideTypeCourseCredits_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseCredits");
-    private final static QName _SchoolCourseInfoOverrideTypeDistrictCourseCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DistrictCourseCode");
-    private final static QName _SchoolCourseInfoOverrideTypeCourseTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseTitle");
-    private final static QName _SchoolCourseInfoOverrideTypeCourseCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseCode");
-    private final static QName _SchoolCourseInfoOverrideTypeSubjectArea_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectArea");
-    private final static QName _SchoolCourseInfoOverrideTypeInstructionalLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "InstructionalLevel");
-    private final static QName _AddressStreetTypeApartmentNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentNumber");
-    private final static QName _AddressStreetTypeStreetNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetNumber");
-    private final static QName _AddressStreetTypeStreetSuffix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetSuffix");
-    private final static QName _AddressStreetTypeStreetType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetType");
-    private final static QName _AddressStreetTypeComplex_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Complex");
-    private final static QName _AddressStreetTypeApartmentNumberSuffix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentNumberSuffix");
-    private final static QName _AddressStreetTypeApartmentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentType");
-    private final static QName _AddressStreetTypeLine2_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Line2");
-    private final static QName _AddressStreetTypeStreetPrefix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetPrefix");
-    private final static QName _AddressStreetTypeLine3_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Line3");
-    private final static QName _AddressStreetTypeApartmentNumberPrefix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApartmentNumberPrefix");
-    private final static QName _AddressStreetTypeStreetName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StreetName");
-    private final static QName _PurchaseOrderTypeUpdateDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "UpdateDate");
-    private final static QName _PurchaseOrderTypeTotalAmount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TotalAmount");
-    private final static QName _PurchaseOrderTypeCreationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreationDate");
-    private final static QName _PurchaseOrderTypeFullyDelivered_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FullyDelivered");
-    private final static QName _PurchaseOrderTypeEmployeePersonalRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmployeePersonalRefId");
-    private final static QName _PurchaseOrderTypeOriginalPurchaseOrderRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OriginalPurchaseOrderRefId");
-    private final static QName _SIFMetadataTypeEducationFilter_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EducationFilter");
-    private final static QName _SIFMetadataTypeLifeCycle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LifeCycle");
-    private final static QName _SIFMetadataTypeTimeElements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeElements");
-    private final static QName _LEAInfoTypeEducationAgencyType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EducationAgencyType");
-    private final static QName _LEAInfoTypeLEAContactList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LEAContactList");
-    private final static QName _LEAInfoTypeLEAURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LEAURL");
-    private final static QName _CalendarSummaryTypeLastInstructionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LastInstructionDate");
-    private final static QName _CalendarSummaryTypeFirstInstructionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FirstInstructionDate");
-    private final static QName _CalendarSummaryTypeGraduationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GraduationDate");
-    private final static QName _CalendarSummaryTypeMinutesPerDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MinutesPerDay");
-    private final static QName _StudentPeriodAttendanceTypeSessionInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SessionInfoRefId");
-    private final static QName _StudentPeriodAttendanceTypeTimeIn_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeIn");
-    private final static QName _StudentPeriodAttendanceTypeScheduledActivityRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ScheduledActivityRefId");
-    private final static QName _StudentPeriodAttendanceTypeAuditInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AuditInfo");
-    private final static QName _StudentPeriodAttendanceTypeTimetablePeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimetablePeriod");
-    private final static QName _StudentPeriodAttendanceTypeTimeOut_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeOut");
-    private final static QName _StudentPeriodAttendanceTypeAttendanceComment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AttendanceComment");
-    private final static QName _LearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AlternateIdentificationCodes");
-    private final static QName _LearningStandardItemTypeStandardIdentifierBenchmark_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Benchmark");
-    private final static QName _LearningStandardItemTypeStandardIdentifierIndicatorNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IndicatorNumber");
-    private final static QName _TechnicalRequirementsTypeTechnicalRequirement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TechnicalRequirement");
-    private final static QName _SectionInfoTypeSchoolCourseInfoOverride_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCourseInfoOverride");
-    private final static QName _SectionInfoTypeCourseSectionCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseSectionCode");
-    private final static QName _SectionInfoTypeTermInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermInfoRefId");
-    private final static QName _SectionInfoTypeMediumOfInstruction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MediumOfInstruction");
-    private final static QName _SectionInfoTypeLanguageOfInstruction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LanguageOfInstruction");
-    private final static QName _SectionInfoTypeSectionCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SectionCode");
-    private final static QName _SectionInfoTypeSummerSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SummerSchool");
-    private final static QName _SectionInfoTypeLocationOfInstruction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationOfInstruction");
-    private final static QName _SectionInfoTypeCountForAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CountForAttendance");
-    private final static QName _SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RoleScopeList");
-    private final static QName _PromotionInfoTypePromotionStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PromotionStatus");
-    private final static QName _SchoolProgramTypeCategory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Category");
-    private final static QName _AddressTypeRadioContact_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RadioContact");
-    private final static QName _AddressTypeMapReference_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MapReference");
-    private final static QName _AddressTypeAddressGlobalUID_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AddressGlobalUID");
-    private final static QName _AddressTypeStateProvince_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StateProvince");
-    private final static QName _AddressTypeCountry_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Country");
-    private final static QName _AddressTypeEffectiveToDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EffectiveToDate");
-    private final static QName _AddressTypeEffectiveFromDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EffectiveFromDate");
-    private final static QName _AddressTypeCommunity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Community");
-    private final static QName _AddressTypeStatisticalAreas_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StatisticalAreas");
-    private final static QName _AddressTypeGridLocation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GridLocation");
-    private final static QName _StudentActivityInfoTypeCurricularStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CurricularStatus");
-    private final static QName _StudentActivityInfoTypeStudentActivityLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentActivityLevel");
-    private final static QName _EquipmentInfoTypeSIFRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SIF_RefId");
-    private final static QName _EquipmentInfoTypeInvoiceRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "InvoiceRefId");
-    private final static QName _EquipmentInfoTypeAssetNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AssetNumber");
-    private final static QName _EquipmentInfoTypePurchaseOrderRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PurchaseOrderRefId");
-    private final static QName _EquipmentInfoTypeEquipmentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EquipmentType");
-    private final static QName _StudentActivityParticipationTypeParticipationComment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParticipationComment");
-    private final static QName _StudentActivityParticipationTypeRecognitionList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RecognitionList");
-    private final static QName _ResourceUsageTypeResourceUsageContentTypeLocalDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocalDescription");
-    private final static QName _TimeElementTypeSpanGaps_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SpanGaps");
-    private final static QName _TeachingGroupStudentTypeStudentLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentLocalId");
-    private final static QName _TeachingGroupTypeCurriculumLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CurriculumLevel");
-    private final static QName _TeachingGroupTypeTeachingGroupPeriodList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupPeriodList");
-    private final static QName _TeachingGroupTypeLongName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LongName");
-    private final static QName _TeachingGroupTypeGroupType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GroupType");
-    private final static QName _TeachingGroupTypeSchoolCourseLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolCourseLocalId");
-    private final static QName _TeachingGroupTypeMaxClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MaxClassSize");
-    private final static QName _TeachingGroupTypeSet_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Set");
-    private final static QName _TeachingGroupTypeBlock_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Block");
-    private final static QName _TeachingGroupTypeTimeTableSubjectRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableSubjectRefId");
-    private final static QName _TeachingGroupTypeMinClassSize_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MinClassSize");
-    private final static QName _TeachingGroupTypeStudentList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentList");
-    private final static QName _TeachingGroupTypeTimeTableSubjectLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableSubjectLocalId");
-    private final static QName _NAPTestletContentTypeLocationInStage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LocationInStage");
-    private final static QName _NAPTestletContentTypeNode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Node");
-    private final static QName _NAPEventStudentLinkTypePSIOtherIdMatch_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PSIOtherIdMatch");
-    private final static QName _NAPEventStudentLinkTypeExemptionReason_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExemptionReason");
-    private final static QName _NAPEventStudentLinkTypeDevice_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Device");
-    private final static QName _NAPEventStudentLinkTypePossibleDuplicate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PossibleDuplicate");
-    private final static QName _NAPEventStudentLinkTypeTestDisruptionList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TestDisruptionList");
-    private final static QName _NAPEventStudentLinkTypeDOBRange_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DOBRange");
-    private final static QName _NAPEventStudentLinkTypeNAPJurisdiction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPJurisdiction");
-    private final static QName _NAPEventStudentLinkTypeAdjustment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Adjustment");
-    private final static QName _NAPEventStudentLinkTypeSchoolGeolocation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolGeolocation");
-    private final static QName _NAPEventStudentLinkTypeReportingSchoolName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReportingSchoolName");
-    private final static QName _NAPEventStudentLinkTypePersonalDetailsChanged_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PersonalDetailsChanged");
-    private final static QName _PurchasingItemTypeExpenseAccounts_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExpenseAccounts");
-    private final static QName _PurchasingItemTypeQuantityDelivered_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "QuantityDelivered");
-    private final static QName _PurchasingItemTypeItemNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ItemNumber");
-    private final static QName _PurchasingItemTypeTotalCost_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TotalCost");
-    private final static QName _PurchasingItemTypeCancelledOrder_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CancelledOrder");
-    private final static QName _PurchasingItemTypeUnitCost_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "UnitCost");
-    private final static QName _PurchasingItemTypeQuantity_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Quantity");
-    private final static QName _LifeCycleTypeCreated_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Created");
-    private final static QName _LifeCycleTypeModificationHistory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ModificationHistory");
-    private final static QName _BaseNameTypeFamilyName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FamilyName");
-    private final static QName _BaseNameTypePreferredFamilyName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferredFamilyName");
-    private final static QName _BaseNameTypePreferredFamilyNameFirst_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferredFamilyNameFirst");
-    private final static QName _BaseNameTypeTitle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Title");
-    private final static QName _BaseNameTypeMiddleName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MiddleName");
-    private final static QName _BaseNameTypePreferredGivenName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferredGivenName");
-    private final static QName _BaseNameTypeFamilyNameFirst_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FamilyNameFirst");
-    private final static QName _BaseNameTypeGivenName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GivenName");
-    private final static QName _BaseNameTypeFullName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FullName");
-    private final static QName _BaseNameTypeSuffix_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Suffix");
-    private final static QName _HouseholdContactInfoTypeHouseholdContactId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdContactId");
-    private final static QName _HouseholdContactInfoTypeHouseholdSalutation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdSalutation");
-    private final static QName _ScheduledActivityTypeDayId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DayId");
-    private final static QName _ScheduledActivityTypeActivityType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityType");
-    private final static QName _ScheduledActivityTypePeriodId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PeriodId");
-    private final static QName _ScheduledActivityTypeTimeTableCellRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableCellRefId");
-    private final static QName _ScheduledActivityTypeCellType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CellType");
-    private final static QName _ScheduledActivityTypeActivityComment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityComment");
-    private final static QName _ScheduledActivityTypeTimeTableRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TimeTableRefId");
-    private final static QName _ScheduledActivityTypeActivityName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityName");
-    private final static QName _ScheduledActivityTypeTeachingGroupList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeachingGroupList");
-    private final static QName _ScheduledActivityTypeOverride_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Override");
-    private final static QName _NAPTestItemContentTypeWritingGenre_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "WritingGenre");
-    private final static QName _NAPTestItemContentTypeNAPWritingRubricList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPWritingRubricList");
-    private final static QName _NAPTestItemContentTypeItemSubstitutedForList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ItemSubstitutedForList");
-    private final static QName _NAPTestItemContentTypeStimulusList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StimulusList");
-    private final static QName _NAPTestItemContentTypeContentDescriptionList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContentDescriptionList");
-    private final static QName _NAPTestItemContentTypeMultipleChoiceOptionCount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MultipleChoiceOptionCount");
-    private final static QName _NAPTestItemContentTypeExemplarURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExemplarURL");
-    private final static QName _NAPTestItemContentTypeCorrectAnswer_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CorrectAnswer");
-    private final static QName _ExpenseAccountTypeFinancialAccountRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinancialAccountRefId");
     private final static QName _LearningStandardItemTypeStandardIdentifier_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StandardIdentifier");
     private final static QName _LearningStandardItemTypeStatementCodes_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StatementCodes");
     private final static QName _LearningStandardItemTypeRelatedLearningStandardItems_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelatedLearningStandardItems");
@@ -594,48 +637,18 @@ public class ObjectFactory {
     private final static QName _LearningStandardItemTypeStatements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Statements");
     private final static QName _LearningStandardItemTypeLevel5_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Level5");
     private final static QName _LearningStandardItemTypePredecessorItems_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PredecessorItems");
-    private final static QName _StudentPersonalTypeDisability_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Disability");
-    private final static QName _StudentPersonalTypeAlertMessages_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AlertMessages");
-    private final static QName _StudentPersonalTypeOnTimeGraduationYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OnTimeGraduationYear");
-    private final static QName _StudentPersonalTypePrePrimaryEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PrePrimaryEducation");
-    private final static QName _StudentPersonalTypeEconomicDisadvantage_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EconomicDisadvantage");
-    private final static QName _StudentPersonalTypeYoungCarersRole_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "YoungCarersRole");
-    private final static QName _StudentPersonalTypeOfflineDelivery_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OfflineDelivery");
-    private final static QName _StudentPersonalTypeSensitive_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Sensitive");
-    private final static QName _StudentPersonalTypeAcceptableUsePolicy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AcceptableUsePolicy");
-    private final static QName _StudentPersonalTypeESL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ESL");
-    private final static QName _StudentPersonalTypeMedicalAlertMessages_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MedicalAlertMessages");
-    private final static QName _StudentPersonalTypeHomeSchooledStudent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeSchooledStudent");
-    private final static QName _StudentPersonalTypeProjectedGraduationYear_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProjectedGraduationYear");
-    private final static QName _StudentPersonalTypeEducationSupport_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EducationSupport");
-    private final static QName _StudentPersonalTypeIntegrationAide_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IntegrationAide");
-    private final static QName _StudentPersonalTypeMostRecent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MostRecent");
-    private final static QName _StudentPersonalTypeGiftedTalented_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GiftedTalented");
-    private final static QName _StudentPersonalTypeESLDateAssessed_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ESLDateAssessed");
-    private final static QName _StudentPersonalTypeFirstAUSchoolEnrollment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FirstAUSchoolEnrollment");
-    private final static QName _StudentPersonalTypeElectronicIdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ElectronicIdList");
-    private final static QName _StudentContactPersonalTypeNonSchoolEducation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NonSchoolEducation");
-    private final static QName _StudentContactPersonalTypeEmploymentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EmploymentType");
-    private final static QName _StudentContactPersonalTypeSchoolEducationalLevel_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolEducationalLevel");
-    private final static QName _StudentAttendanceSummaryTypeDaysTardy_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DaysTardy");
-    private final static QName _StudentAttendanceSummaryTypeStartDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StartDay");
-    private final static QName _StudentAttendanceSummaryTypeEndDay_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EndDay");
-    private final static QName _SchoolCourseInfoTypeCourseContent_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CourseContent");
-    private final static QName _SchoolCourseInfoTypeSubjectAreaList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubjectAreaList");
-    private final static QName _SchoolCourseInfoTypeCoreAcademicCourse_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CoreAcademicCourse");
-    private final static QName _SchoolCourseInfoTypeGraduationRequirement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GraduationRequirement");
-    private final static QName _SchoolCourseInfoTypeDepartment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Department");
-    private final static QName _PaymentReceiptTypeChequeNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ChequeNumber");
-    private final static QName _PaymentReceiptTypeTransactionNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TransactionNote");
-    private final static QName _PaymentReceiptTypeDebtorRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DebtorRefId");
-    private final static QName _PaymentReceiptTypeVendorInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "VendorInfoRefId");
-    private final static QName _PaymentReceiptTypeTransactionDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TransactionDescription");
-    private final static QName _PaymentReceiptTypeTransactionMethod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TransactionMethod");
-    private final static QName _AdjustmentContainerTypeBookletType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "BookletType");
-    private final static QName _LearningStandardDocumentTypeCopyrightHolder_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Holder");
-    private final static QName _LearningStandardDocumentTypeCopyrightDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Date");
-    private final static QName _ExpenseAccountsTypeExpenseAccountType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExpenseAccountType");
-    private final static QName _SubstituteItemTypeSubstituteItemLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubstituteItemLocalId");
+    private final static QName _StudentDailyAttendanceTypeAbsenceValue_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AbsenceValue");
+    private final static QName _StudentDailyAttendanceTypeDayValue_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DayValue");
+    private final static QName _InvoiceTypeVoluntary_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Voluntary");
+    private final static QName _InvoiceTypeFormNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FormNumber");
+    private final static QName _InvoiceTypeRelatedPurchaseOrderRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelatedPurchaseOrderRefId");
+    private final static QName _InvoiceTypeNetAmount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NetAmount");
+    private final static QName _InvoiceTypeItemDetail_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ItemDetail");
+    private final static QName _InvoiceTypePurchasingItems_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PurchasingItems");
+    private final static QName _InvoiceTypeTaxType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TaxType");
+    private final static QName _StimulusTypeWordCount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "WordCount");
+    private final static QName _StimulusTypeTextType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TextType");
+    private final static QName _StimulusTypeTextGenre_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TextGenre");
     private final static QName _StudentParticipationTypeEntryPerson_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EntryPerson");
     private final static QName _StudentParticipationTypeEvaluationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EvaluationDate");
     private final static QName _StudentParticipationTypeReevaluationDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReevaluationDate");
@@ -659,78 +672,65 @@ public class ObjectFactory {
     private final static QName _StudentParticipationTypeEvaluationExtensionDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EvaluationExtensionDate");
     private final static QName _StudentParticipationTypeProgramPlacementDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ProgramPlacementDate");
     private final static QName _StudentParticipationTypeReferralSource_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReferralSource");
-    private final static QName _TermInfoTypeAttendanceTerm_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AttendanceTerm");
-    private final static QName _TermInfoTypeTermSpan_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermSpan");
-    private final static QName _TermInfoTypeTrack_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Track");
-    private final static QName _TermInfoTypeTermCode_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TermCode");
-    private final static QName _TermInfoTypeMarkingTerm_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MarkingTerm");
-    private final static QName _TermInfoTypeRelativeDuration_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RelativeDuration");
-    private final static QName _TermInfoTypeSchedulingTerm_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchedulingTerm");
-    private final static QName _GradingAssignmentTypeGradingCategory_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GradingCategory");
-    private final static QName _GradingAssignmentTypeMaxAttemptsAllowed_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MaxAttemptsAllowed");
-    private final static QName _GradingAssignmentTypeDetailedDescriptionURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DetailedDescriptionURL");
-    private final static QName _GradingAssignmentTypeCreateDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreateDate");
-    private final static QName _GradingAssignmentTypeDetailedDescriptionBinary_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DetailedDescriptionBinary");
-    private final static QName _GradingAssignmentTypeWeight_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Weight");
-    private final static QName _LifeCycleTypeCreatedCreators_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Creators");
-    private final static QName _NAPTestletResponseItemTypeNAPTestItemLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPTestItemLocalId");
-    private final static QName _NAPTestletResponseItemTypeScore_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Score");
-    private final static QName _NAPTestletResponseItemTypeResponseCorrectness_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ResponseCorrectness");
-    private final static QName _NAPTestletResponseItemTypeSubscoreList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SubscoreList");
-    private final static QName _StudentSubjectChoiceTypePreferenceNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreferenceNumber");
-    private final static QName _StudentSubjectChoiceTypeOtherSchoolLocalId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherSchoolLocalId");
-    private final static QName _StudentSubjectChoiceTypeStudyDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudyDescription");
-    private final static QName _SoftwareRequirementTypeOS_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OS");
-    private final static QName _SoftwareRequirementTypeVersion_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Version");
-    private final static QName _SoftwareRequirementTypeVendor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Vendor");
-    private final static QName _AggregateStatisticFactTypeExcluded_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Excluded");
-    private final static QName _StudentDailyAttendanceTypeAbsenceValue_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AbsenceValue");
-    private final static QName _StudentDailyAttendanceTypeDayValue_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DayValue");
-    private final static QName _JournalTypeNote_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Note");
-    private final static QName _JournalTypeApprovedDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ApprovedDate");
-    private final static QName _JournalTypeCreatedDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CreatedDate");
-    private final static QName _JournalTypeGSTCodeOriginal_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GSTCodeOriginal");
-    private final static QName _JournalTypeGSTCodeReplacement_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "GSTCodeReplacement");
-    private final static QName _JournalTypeOriginatingTransactionRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OriginatingTransactionRefId");
+    private final static QName _ResourceUsageTypeResourceReportLineListResourceReportLineSIFRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SIF_RefId");
+    private final static QName _AggregateCharacteristicInfoTypeElementName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ElementName");
+    private final static QName _PromotionInfoTypePromotionStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PromotionStatus");
+    private final static QName _NAPEventStudentLinkTypePSIOtherIdMatch_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PSIOtherIdMatch");
+    private final static QName _NAPEventStudentLinkTypeExemptionReason_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExemptionReason");
+    private final static QName _NAPEventStudentLinkTypeDevice_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Device");
+    private final static QName _NAPEventStudentLinkTypePossibleDuplicate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PossibleDuplicate");
+    private final static QName _NAPEventStudentLinkTypeTestDisruptionList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TestDisruptionList");
+    private final static QName _NAPEventStudentLinkTypeDOBRange_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DOBRange");
+    private final static QName _NAPEventStudentLinkTypeNAPJurisdiction_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPJurisdiction");
+    private final static QName _NAPEventStudentLinkTypeAdjustment_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Adjustment");
+    private final static QName _NAPEventStudentLinkTypeSchoolGeolocation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolGeolocation");
+    private final static QName _NAPEventStudentLinkTypeReportingSchoolName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReportingSchoolName");
+    private final static QName _NAPEventStudentLinkTypePersonalDetailsChanged_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PersonalDetailsChanged");
+    private final static QName _FinancialAccountTypeParentAccountRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentAccountRefId");
     private final static QName _PersonInfoTypeHouseholdContactInfoList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdContactInfoList");
     private final static QName _PersonInfoTypeOtherNames_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OtherNames");
     private final static QName _PersonInfoTypeDemographics_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Demographics");
-    private final static QName _SchoolProgramsTypeSchoolProgramList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SchoolProgramList");
-    private final static QName _ChargedLocationInfoTypeParentChargedLocationInfoRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentChargedLocationInfoRefId");
-    private final static QName _NAPWritingRubricTypeDescriptor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Descriptor");
-    private final static QName _CalendarDateTeacherAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TeacherAttendance");
-    private final static QName _CalendarDateAdministratorAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AdministratorAttendance");
-    private final static QName _CalendarDateStudentAttendance_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentAttendance");
-    private final static QName _CalendarDateCalendarDateNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CalendarDateNumber");
-    private final static QName _ResourceBookingTypeKeepOld_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "KeepOld");
-    private final static QName _ResourceBookingTypeReason_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Reason");
-    private final static QName _ResourceBookingTypeToPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ToPeriod");
-    private final static QName _ResourceBookingTypeFromPeriod_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FromPeriod");
-    private final static QName _ResourceBookingTypeResourceRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ResourceRefId");
-    private final static QName _ActivityTypeLearningObjectives_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LearningObjectives");
-    private final static QName _ActivityTypeEssentialMaterials_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EssentialMaterials");
-    private final static QName _ActivityTypeStudents_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Students");
-    private final static QName _ActivityTypePoints_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Points");
-    private final static QName _ActivityTypeAssessmentRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AssessmentRefId");
-    private final static QName _ActivityTypeTechnicalRequirements_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "TechnicalRequirements");
-    private final static QName _ActivityTypeActivityWeight_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ActivityWeight");
-    private final static QName _ActivityTypeSoftwareRequirementList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SoftwareRequirementList");
-    private final static QName _ActivityTypePrerequisites_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Prerequisites");
-    private final static QName _ActivityTypeEvaluation_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Evaluation");
-    private final static QName _ActivityTypePreamble_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Preamble");
-    private final static QName _ActivityTypeSourceObjects_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SourceObjects");
+    private final static QName _StudentSchoolEnrollmentTypeCalendar_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Calendar");
+    private final static QName _StudentSchoolEnrollmentTypeHomeroom_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Homeroom");
+    private final static QName _StudentSchoolEnrollmentTypeCounselor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Counselor");
+    private final static QName _StudentSchoolEnrollmentTypeAdvisor_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Advisor");
+    private final static QName _StudentSchoolEnrollmentTypeExitType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExitType");
+    private final static QName _StudentSchoolEnrollmentTypePreviousSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PreviousSchool");
+    private final static QName _StudentSchoolEnrollmentTypeDestinationSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "DestinationSchool");
+    private final static QName _StudentSchoolEnrollmentTypeIndividualLearningPlan_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "IndividualLearningPlan");
+    private final static QName _StudentSchoolEnrollmentTypePromotionInfo_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PromotionInfo");
+    private final static QName _StudentSchoolEnrollmentTypeACARASchoolId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ACARASchoolId");
+    private final static QName _StudentSchoolEnrollmentTypeEntryType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EntryType");
+    private final static QName _StudentSchoolEnrollmentTypeFTPTStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FTPTStatus");
+    private final static QName _StudentSchoolEnrollmentTypeStudentSubjectChoiceList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StudentSubjectChoiceList");
+    private final static QName _StudentSchoolEnrollmentTypeExitStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExitStatus");
+    private final static QName _StudentSchoolEnrollmentTypeCatchmentStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CatchmentStatus");
+    private final static QName _StudentSchoolEnrollmentTypeReportingSchool_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ReportingSchool");
+    private final static QName _StudentSchoolEnrollmentTypeRecordClosureReason_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "RecordClosureReason");
     private final static QName _StaffMostRecentContainerTypeHomeGroup_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HomeGroup");
     private final static QName _StaffMostRecentContainerTypeNAPLANClassList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPLANClassList");
-    private final static QName _ComponentTypeAssociatedObjects_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AssociatedObjects");
-    private final static QName _ComponentTypeStrategies_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Strategies");
-    private final static QName _CampusContainerTypeParentSchoolId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentSchoolId");
-    private final static QName _CampusContainerTypeCampusType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CampusType");
-    private final static QName _ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDelimiter_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ColumnDelimiter");
-    private final static QName _ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDescription_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ColumnDescription");
     private final static QName _LearningStandardItemTypeStandardSettingBodySettingBodyName_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "SettingBodyName");
-    private final static QName _PersonPictureTypeOKToPublish_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "OKToPublish");
-    private final static QName _NAPStudentResponseSetTypeEquatingSampleFlag_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EquatingSampleFlag");
-    private final static QName _NAPStudentResponseSetTypeCalibrationSampleFlag_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CalibrationSampleFlag");
+    private final static QName _ActivityTimeTypeFinishDate_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "FinishDate");
+    private final static QName _ActivityTimeTypeDuration_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "Duration");
+    private final static QName _EquipmentInfoTypeAssetNumber_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "AssetNumber");
+    private final static QName _EquipmentInfoTypePurchaseOrderRefId_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "PurchaseOrderRefId");
+    private final static QName _EquipmentInfoTypeEquipmentType_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EquipmentType");
+    private final static QName _NAPTestItemContentTypeWritingGenre_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "WritingGenre");
+    private final static QName _NAPTestItemContentTypeNAPWritingRubricList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "NAPWritingRubricList");
+    private final static QName _NAPTestItemContentTypeItemSubstitutedForList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ItemSubstitutedForList");
+    private final static QName _NAPTestItemContentTypeStimulusList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "StimulusList");
+    private final static QName _NAPTestItemContentTypeContentDescriptionList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContentDescriptionList");
+    private final static QName _NAPTestItemContentTypeMultipleChoiceOptionCount_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MultipleChoiceOptionCount");
+    private final static QName _NAPTestItemContentTypeExemplarURL_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ExemplarURL");
+    private final static QName _NAPTestItemContentTypeCorrectAnswer_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "CorrectAnswer");
+    private final static QName _SIFMetadataTypeEducationFilter_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "EducationFilter");
+    private final static QName _SIFMetadataTypeLifeCycle_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "LifeCycle");
+    private final static QName _StudentContactRelationshipTypeContactSequenceSource_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactSequenceSource");
+    private final static QName _StudentContactRelationshipTypeMainlySpeaksEnglishAtHome_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "MainlySpeaksEnglishAtHome");
+    private final static QName _StudentContactRelationshipTypeContactFlags_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactFlags");
+    private final static QName _StudentContactRelationshipTypeHouseholdList_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "HouseholdList");
+    private final static QName _StudentContactRelationshipTypeContactSequence_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ContactSequence");
+    private final static QName _StudentContactRelationshipTypeParentRelationshipStatus_QNAME = new QName("http://www.sifassociation.org/datamodel/au/3.4", "ParentRelationshipStatus");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: sif.dd.au30.model
@@ -4908,398 +4908,1492 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleScopeRefId", scope = SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class)
-    public JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId> createSystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeRefId(SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId value) {
-        return new JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId>(_SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeRefId_QNAME, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId.class, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = StudentContactPersonalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentContactPersonalTypeLocalId(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, StudentContactPersonalType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleScopeName", scope = SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeName(String value) {
-        return new JAXBElement<String>(_SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeName_QNAME, String.class, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsTeacherCoverSupervisionType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Supervision", scope = TeacherCoverType.class)
-    public JAXBElement<AUCodeSetsTeacherCoverSupervisionType> createTeacherCoverTypeSupervision(AUCodeSetsTeacherCoverSupervisionType value) {
-        return new JAXBElement<AUCodeSetsTeacherCoverSupervisionType>(_TeacherCoverTypeSupervision_QNAME, AUCodeSetsTeacherCoverSupervisionType.class, TeacherCoverType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = TeacherCoverType.class)
-    public JAXBElement<XMLGregorianCalendar> createTeacherCoverTypeStartTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeStartTime_QNAME, XMLGregorianCalendar.class, TeacherCoverType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NonSchoolEducation", scope = StudentContactPersonalType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentContactPersonalTypeNonSchoolEducation(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeNonSchoolEducation_QNAME, String.class, StudentContactPersonalType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TeacherCoverType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeacherCoverTypeStaffLocalId(String value) {
-        return new JAXBElement<String>(_TeacherCoverTypeStaffLocalId_QNAME, String.class, TeacherCoverType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmploymentType", scope = StudentContactPersonalType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentContactPersonalTypeEmploymentType(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeEmploymentType_QNAME, String.class, StudentContactPersonalType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsTeacherCoverCreditType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Credit", scope = TeacherCoverType.class)
-    public JAXBElement<AUCodeSetsTeacherCoverCreditType> createTeacherCoverTypeCredit(AUCodeSetsTeacherCoverCreditType value) {
-        return new JAXBElement<AUCodeSetsTeacherCoverCreditType>(_TeacherCoverTypeCredit_QNAME, AUCodeSetsTeacherCoverCreditType.class, TeacherCoverType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinishTime", scope = TeacherCoverType.class)
-    public JAXBElement<XMLGregorianCalendar> createTeacherCoverTypeFinishTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeFinishTime_QNAME, XMLGregorianCalendar.class, TeacherCoverType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Weighting", scope = TeacherCoverType.class)
-    public JAXBElement<BigDecimal> createTeacherCoverTypeWeighting(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_TeacherCoverTypeWeighting_QNAME, BigDecimal.class, TeacherCoverType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Capacity", scope = RoomInfoType.class)
-    public JAXBElement<Long> createRoomInfoTypeCapacity(Long value) {
-        return new JAXBElement<Long>(_RoomInfoTypeCapacity_QNAME, Long.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = RoomInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createRoomInfoTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumber", scope = RoomInfoType.class)
-    public JAXBElement<PhoneNumberType> createRoomInfoTypePhoneNumber(PhoneNumberType value) {
-        return new JAXBElement<PhoneNumberType>(_RoomInfoTypePhoneNumber_QNAME, PhoneNumberType.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StaffListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffList", scope = RoomInfoType.class)
-    public JAXBElement<StaffListType> createRoomInfoTypeStaffList(StaffListType value) {
-        return new JAXBElement<StaffListType>(_RoomInfoTypeStaffList_QNAME, StaffListType.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Size", scope = RoomInfoType.class)
-    public JAXBElement<BigDecimal> createRoomInfoTypeSize(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_RoomInfoTypeSize_QNAME, BigDecimal.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HomeroomNumber", scope = RoomInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createRoomInfoTypeHomeroomNumber(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeHomeroomNumber_QNAME, String.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = RoomInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createRoomInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, RoomInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = StudentContactPersonalType.class)
+    public JAXBElement<OtherIdListType> createStudentContactPersonalTypeOtherIdList(OtherIdListType value) {
+        return new JAXBElement<OtherIdListType>(_StudentContactPersonalTypeOtherIdList_QNAME, OtherIdListType.class, StudentContactPersonalType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = RoomInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createRoomInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, RoomInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Building", scope = RoomInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createRoomInfoTypeBuilding(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeBuilding_QNAME, String.class, RoomInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentContactPersonalType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentContactPersonalTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentContactPersonalType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = RoomInfoType.class)
-    public JAXBElement<SIFMetadataType> createRoomInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, RoomInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentContactPersonalType.class)
+    public JAXBElement<SIFMetadataType> createStudentContactPersonalTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentContactPersonalType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomType", scope = RoomInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolEducationalLevel", scope = StudentContactPersonalType.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createRoomInfoTypeRoomType(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeRoomType_QNAME, String.class, RoomInfoType.class, value);
+    public JAXBElement<String> createStudentContactPersonalTypeSchoolEducationalLevel(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeSchoolEducationalLevel_QNAME, String.class, StudentContactPersonalType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = TimeTableSubjectType.class)
-    public JAXBElement<OtherCodeListType> createTimeTableSubjectTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, TimeTableSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPTestTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = TimeTableSubjectType.class)
-    public JAXBElement<XMLGregorianCalendar> createTimeTableSubjectTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, TimeTableSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestType.class)
+    public JAXBElement<SIFMetadataType> createNAPTestTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DayId", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeDayId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeDayId_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Location", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeLocation(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeLocation_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsScheduledActivityTypeType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityType", scope = ScheduledActivityType.class)
+    public JAXBElement<AUCodeSetsScheduledActivityTypeType> createScheduledActivityTypeActivityType(AUCodeSetsScheduledActivityTypeType value) {
+        return new JAXBElement<AUCodeSetsScheduledActivityTypeType>(_ScheduledActivityTypeActivityType_QNAME, AUCodeSetsScheduledActivityTypeType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PeriodId", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypePeriodId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypePeriodId_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableCellRefId", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeTimeTableCellRefId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableCellRefId_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CellType", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeCellType(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeCellType_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = ScheduledActivityType.class)
+    public JAXBElement<AddressListType> createScheduledActivityTypeAddressList(AddressListType value) {
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityComment", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeActivityComment(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeActivityComment_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableRefId", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeTimeTableRefId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableRefId_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ScheduledTeacherListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherList", scope = ScheduledActivityType.class)
+    public JAXBElement<ScheduledTeacherListType> createScheduledActivityTypeTeacherList(ScheduledTeacherListType value) {
+        return new JAXBElement<ScheduledTeacherListType>(_ScheduledActivityTypeTeacherList_QNAME, ScheduledTeacherListType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectRefId", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeTimeTableSubjectRefId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableSubjectRefId_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityName", scope = ScheduledActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createScheduledActivityTypeActivityName(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeActivityName_QNAME, String.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TeachingGroupListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupList", scope = ScheduledActivityType.class)
+    public JAXBElement<TeachingGroupListType> createScheduledActivityTypeTeachingGroupList(TeachingGroupListType value) {
+        return new JAXBElement<TeachingGroupListType>(_ScheduledActivityTypeTeachingGroupList_QNAME, TeachingGroupListType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RoomListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomList", scope = ScheduledActivityType.class)
+    public JAXBElement<RoomListType> createScheduledActivityTypeRoomList(RoomListType value) {
+        return new JAXBElement<RoomListType>(_ScheduledActivityTypeRoomList_QNAME, RoomListType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentList", scope = ScheduledActivityType.class)
+    public JAXBElement<StudentsType> createScheduledActivityTypeStudentList(StudentsType value) {
+        return new JAXBElement<StudentsType>(_ScheduledActivityTypeStudentList_QNAME, StudentsType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ScheduledActivityType.class)
+    public JAXBElement<SIFExtendedElementsType> createScheduledActivityTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = ScheduledActivityType.class)
+    public JAXBElement<YearLevelsType> createScheduledActivityTypeYearLevels(YearLevelsType value) {
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ScheduledActivityType.class)
+    public JAXBElement<SIFMetadataType> createScheduledActivityTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ScheduledActivityOverrideType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Override", scope = ScheduledActivityType.class)
+    public JAXBElement<ScheduledActivityOverrideType> createScheduledActivityTypeOverride(ScheduledActivityOverrideType value) {
+        return new JAXBElement<ScheduledActivityOverrideType>(_ScheduledActivityTypeOverride_QNAME, ScheduledActivityOverrideType.class, ScheduledActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TechnicalRequirement", scope = TechnicalRequirementsType.class)
+    public JAXBElement<String> createTechnicalRequirementsTypeTechnicalRequirement(String value) {
+        return new JAXBElement<String>(_TechnicalRequirementsTypeTechnicalRequirement_QNAME, String.class, TechnicalRequirementsType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AcademicYear", scope = TimeTableSubjectType.class)
-    public JAXBElement<YearLevelType> createTimeTableSubjectTypeAcademicYear(YearLevelType value) {
-        return new JAXBElement<YearLevelType>(_TimeTableSubjectTypeAcademicYear_QNAME, YearLevelType.class, TimeTableSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevel", scope = LearningStandardItemType.StandardIdentifier.class)
+    public JAXBElement<YearLevelType> createLearningStandardItemTypeStandardIdentifierYearLevel(YearLevelType value) {
+        return new JAXBElement<YearLevelType>(_LearningStandardItemTypeStandardIdentifierYearLevel_QNAME, YearLevelType.class, LearningStandardItemType.StandardIdentifier.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AlternateIdentificationCodes", scope = LearningStandardItemType.StandardIdentifier.class)
+    public JAXBElement<LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes> createLearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes(LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes value) {
+        return new JAXBElement<LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes>(_LearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes_QNAME, LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes.class, LearningStandardItemType.StandardIdentifier.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Faculty", scope = TimeTableSubjectType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Benchmark", scope = LearningStandardItemType.StandardIdentifier.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeFaculty(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeFaculty_QNAME, String.class, TimeTableSubjectType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Semester", scope = TimeTableSubjectType.class)
-    public JAXBElement<Long> createTimeTableSubjectTypeSemester(Long value) {
-        return new JAXBElement<Long>(_TimeTableSubjectTypeSemester_QNAME, Long.class, TimeTableSubjectType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearRangeType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AcademicYearRange", scope = TimeTableSubjectType.class)
-    public JAXBElement<YearRangeType> createTimeTableSubjectTypeAcademicYearRange(YearRangeType value) {
-        return new JAXBElement<YearRangeType>(_TimeTableSubjectTypeAcademicYearRange_QNAME, YearRangeType.class, TimeTableSubjectType.class, value);
+    public JAXBElement<String> createLearningStandardItemTypeStandardIdentifierBenchmark(String value) {
+        return new JAXBElement<String>(_LearningStandardItemTypeStandardIdentifierBenchmark_QNAME, String.class, LearningStandardItemType.StandardIdentifier.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseLocalId", scope = TimeTableSubjectType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IndicatorNumber", scope = LearningStandardItemType.StandardIdentifier.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeCourseLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeCourseLocalId_QNAME, String.class, TimeTableSubjectType.class, value);
+    public JAXBElement<String> createLearningStandardItemTypeStandardIdentifierIndicatorNumber(String value) {
+        return new JAXBElement<String>(_LearningStandardItemTypeStandardIdentifierIndicatorNumber_QNAME, String.class, LearningStandardItemType.StandardIdentifier.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectType", scope = TimeTableSubjectType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentNumber", scope = AddressStreetType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeSubjectType(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSubjectType_QNAME, String.class, TimeTableSubjectType.class, value);
+    public JAXBElement<String> createAddressStreetTypeApartmentNumber(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeApartmentNumber_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetNumber", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeStreetNumber(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeStreetNumber_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetSuffix", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeStreetSuffix(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeStreetSuffix_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetType", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeStreetType(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeStreetType_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Complex", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeComplex(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeComplex_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentNumberSuffix", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeApartmentNumberSuffix(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeApartmentNumberSuffix_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentType", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeApartmentType(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeApartmentType_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Line2", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeLine2(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeLine2_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetPrefix", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeStreetPrefix(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeStreetPrefix_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Line3", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeLine3(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeLine3_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentNumberPrefix", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeApartmentNumberPrefix(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeApartmentNumberPrefix_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetName", scope = AddressStreetType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressStreetTypeStreetName(String value) {
+        return new JAXBElement<String>(_AddressStreetTypeStreetName_QNAME, String.class, AddressStreetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = SchoolProgramType.class)
+    public JAXBElement<OtherCodeListType> createSchoolProgramTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, SchoolProgramType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Category", scope = SchoolProgramType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolProgramTypeCategory(String value) {
+        return new JAXBElement<String>(_SchoolProgramTypeCategory_QNAME, String.class, SchoolProgramType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ProposedMinClassSize", scope = TimeTableSubjectType.class)
-    public JAXBElement<BigDecimal> createTimeTableSubjectTypeProposedMinClassSize(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_TimeTableSubjectTypeProposedMinClassSize_QNAME, BigDecimal.class, TimeTableSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DurationValue", scope = AttendanceTimeType.class)
+    public JAXBElement<BigDecimal> createAttendanceTimeTypeDurationValue(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_AttendanceTimeTypeDurationValue_QNAME, BigDecimal.class, AttendanceTimeType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TimeTableSubjectType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, TimeTableSubjectType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseInfoRefId", scope = TimeTableSubjectType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeSchoolCourseInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolCourseInfoRefId_QNAME, String.class, TimeTableSubjectType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ProposedMaxClassSize", scope = TimeTableSubjectType.class)
-    public JAXBElement<BigDecimal> createTimeTableSubjectTypeProposedMaxClassSize(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_TimeTableSubjectTypeProposedMaxClassSize_QNAME, BigDecimal.class, TimeTableSubjectType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TimeTableSubjectType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceNote", scope = AttendanceTimeType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, TimeTableSubjectType.class, value);
+    public JAXBElement<String> createAttendanceTimeTypeAttendanceNote(String value) {
+        return new JAXBElement<String>(_AttendanceTimeTypeAttendanceNote_QNAME, String.class, AttendanceTimeType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SchoolCourseInfoOverrideType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseInfoOverride", scope = SectionInfoType.class)
+    public JAXBElement<SchoolCourseInfoOverrideType> createSectionInfoTypeSchoolCourseInfoOverride(SchoolCourseInfoOverrideType value) {
+        return new JAXBElement<SchoolCourseInfoOverrideType>(_SectionInfoTypeSchoolCourseInfoOverride_QNAME, SchoolCourseInfoOverrideType.class, SectionInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectShortName", scope = TimeTableSubjectType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseSectionCode", scope = SectionInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableSubjectTypeSubjectShortName(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSubjectShortName_QNAME, String.class, TimeTableSubjectType.class, value);
+    public JAXBElement<String> createSectionInfoTypeCourseSectionCode(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeCourseSectionCode_QNAME, String.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = SectionInfoType.class)
+    public JAXBElement<XMLGregorianCalendar> createSectionInfoTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermInfoRefId", scope = SectionInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSectionInfoTypeTermInfoRefId(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeTermInfoRefId_QNAME, String.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MediumOfInstructionType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MediumOfInstruction", scope = SectionInfoType.class)
+    public JAXBElement<MediumOfInstructionType> createSectionInfoTypeMediumOfInstruction(MediumOfInstructionType value) {
+        return new JAXBElement<MediumOfInstructionType>(_SectionInfoTypeMediumOfInstruction_QNAME, MediumOfInstructionType.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LanguageOfInstructionType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LanguageOfInstruction", scope = SectionInfoType.class)
+    public JAXBElement<LanguageOfInstructionType> createSectionInfoTypeLanguageOfInstruction(LanguageOfInstructionType value) {
+        return new JAXBElement<LanguageOfInstructionType>(_SectionInfoTypeLanguageOfInstruction_QNAME, LanguageOfInstructionType.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = SectionInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSectionInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SectionCode", scope = SectionInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSectionInfoTypeSectionCode(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeSectionCode_QNAME, String.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SummerSchool", scope = SectionInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSectionInfoTypeSummerSchool(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeSummerSchool_QNAME, String.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocationOfInstructionType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationOfInstruction", scope = SectionInfoType.class)
+    public JAXBElement<LocationOfInstructionType> createSectionInfoTypeLocationOfInstruction(LocationOfInstructionType value) {
+        return new JAXBElement<LocationOfInstructionType>(_SectionInfoTypeLocationOfInstruction_QNAME, LocationOfInstructionType.class, SectionInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TimeTableSubjectType.class)
-    public JAXBElement<SIFExtendedElementsType> createTimeTableSubjectTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TimeTableSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SectionInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createSectionInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SectionInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TimeTableSubjectType.class)
-    public JAXBElement<SIFMetadataType> createTimeTableSubjectTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, TimeTableSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SectionInfoType.class)
+    public JAXBElement<SIFMetadataType> createSectionInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, SectionInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TotalStudents", scope = TotalEnrollmentsType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTotalEnrollmentsTypeTotalStudents(String value) {
-        return new JAXBElement<String>(_TotalEnrollmentsTypeTotalStudents_QNAME, String.class, TotalEnrollmentsType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CountForAttendance", scope = SectionInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSectionInfoTypeCountForAttendance(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeCountForAttendance_QNAME, String.class, SectionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = AttendanceCodeType.class)
+    public JAXBElement<OtherCodeListType> createAttendanceCodeTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, AttendanceCodeType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Girls", scope = TotalEnrollmentsType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CurriculumLevel", scope = TeachingGroupType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTotalEnrollmentsTypeGirls(String value) {
-        return new JAXBElement<String>(_TotalEnrollmentsTypeGirls_QNAME, String.class, TotalEnrollmentsType.class, value);
+    public JAXBElement<String> createTeachingGroupTypeCurriculumLevel(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeCurriculumLevel_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TeachingGroupPeriodListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupPeriodList", scope = TeachingGroupType.class)
+    public JAXBElement<TeachingGroupPeriodListType> createTeachingGroupTypeTeachingGroupPeriodList(TeachingGroupPeriodListType value) {
+        return new JAXBElement<TeachingGroupPeriodListType>(_TeachingGroupTypeTeachingGroupPeriodList_QNAME, TeachingGroupPeriodListType.class, TeachingGroupType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Boys", scope = TotalEnrollmentsType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LongName", scope = TeachingGroupType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTotalEnrollmentsTypeBoys(String value) {
-        return new JAXBElement<String>(_TotalEnrollmentsTypeBoys_QNAME, String.class, TotalEnrollmentsType.class, value);
+    public JAXBElement<String> createTeachingGroupTypeLongName(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeLongName_QNAME, String.class, TeachingGroupType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumber", scope = ContactType.class)
-    public JAXBElement<PhoneNumberType> createContactTypePhoneNumber(PhoneNumberType value) {
-        return new JAXBElement<PhoneNumberType>(_RoomInfoTypePhoneNumber_QNAME, PhoneNumberType.class, ContactType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Semester", scope = TeachingGroupType.class)
+    public JAXBElement<Long> createTeachingGroupTypeSemester(Long value) {
+        return new JAXBElement<Long>(_TeachingGroupTypeSemester_QNAME, Long.class, TeachingGroupType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NameType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = ContactType.class)
-    public JAXBElement<NameType> createContactTypeName(NameType value) {
-        return new JAXBElement<NameType>(_ContactTypeName_QNAME, NameType.class, ContactType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GroupType", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeGroupType(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeGroupType_QNAME, String.class, TeachingGroupType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Address", scope = ContactType.class)
-    public JAXBElement<AddressType> createContactTypeAddress(AddressType value) {
-        return new JAXBElement<AddressType>(_ContactTypeAddress_QNAME, AddressType.class, ContactType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseLocalId", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeSchoolCourseLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolCourseLocalId_QNAME, String.class, TeachingGroupType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EmailType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Email", scope = ContactType.class)
-    public JAXBElement<EmailType> createContactTypeEmail(EmailType value) {
-        return new JAXBElement<EmailType>(_ContactTypeEmail_QNAME, EmailType.class, ContactType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MaxClassSize", scope = TeachingGroupType.class)
+    public JAXBElement<BigInteger> createTeachingGroupTypeMaxClassSize(BigInteger value) {
+        return new JAXBElement<BigInteger>(_TeachingGroupTypeMaxClassSize_QNAME, BigInteger.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Set", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeSet(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSet_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TeacherListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherList", scope = TeachingGroupType.class)
+    public JAXBElement<TeacherListType> createTeachingGroupTypeTeacherList(TeacherListType value) {
+        return new JAXBElement<TeacherListType>(_ScheduledActivityTypeTeacherList_QNAME, TeacherListType.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Block", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeBlock(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeBlock_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseInfoRefId", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeSchoolCourseInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolCourseInfoRefId_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectRefId", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeTimeTableSubjectRefId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableSubjectRefId_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MinClassSize", scope = TeachingGroupType.class)
+    public JAXBElement<BigInteger> createTeachingGroupTypeMinClassSize(BigInteger value) {
+        return new JAXBElement<BigInteger>(_TeachingGroupTypeMinClassSize_QNAME, BigInteger.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentList", scope = TeachingGroupType.class)
+    public JAXBElement<StudentListType> createTeachingGroupTypeStudentList(StudentListType value) {
+        return new JAXBElement<StudentListType>(_ScheduledActivityTypeStudentList_QNAME, StudentListType.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectLocalId", scope = TeachingGroupType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTypeTimeTableSubjectLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeTimeTableSubjectLocalId_QNAME, String.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TeachingGroupType.class)
+    public JAXBElement<SIFExtendedElementsType> createTeachingGroupTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TeachingGroupType.class)
+    public JAXBElement<SIFMetadataType> createTeachingGroupTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, TeachingGroupType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableLocalId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeTimeTableLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeTimeTableLocalId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupLocalId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeTeachingGroupLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeTeachingGroupLocalId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectLocalId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeSubjectLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeSubjectLocalId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeStaffLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeStaffLocalId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ScheduledTeacherListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherList", scope = TimeTableCellType.class)
+    public JAXBElement<ScheduledTeacherListType> createTimeTableCellTypeTeacherList(ScheduledTeacherListType value) {
+        return new JAXBElement<ScheduledTeacherListType>(_ScheduledActivityTypeTeacherList_QNAME, ScheduledTeacherListType.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomInfoRefId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeRoomInfoRefId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeRoomInfoRefId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffPersonalRefId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeStaffPersonalRefId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeStaffPersonalRefId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RoomListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomList", scope = TimeTableCellType.class)
+    public JAXBElement<RoomListType> createTimeTableCellTypeRoomList(RoomListType value) {
+        return new JAXBElement<RoomListType>(_ScheduledActivityTypeRoomList_QNAME, RoomListType.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomNumber", scope = TimeTableCellType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableCellTypeRoomNumber(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeRoomNumber_QNAME, String.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TimeTableCellType.class)
+    public JAXBElement<SIFExtendedElementsType> createTimeTableCellTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TimeTableCellType.class)
+    public JAXBElement<SIFMetadataType> createTimeTableCellTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, TimeTableCellType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = TeachingGroupPeriodType.class)
+    public JAXBElement<XMLGregorianCalendar> createTeachingGroupPeriodTypeStartTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TeachingGroupPeriodTypeStartTime_QNAME, XMLGregorianCalendar.class, TeachingGroupPeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TeachingGroupPeriodType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupPeriodTypeStaffLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeStaffLocalId_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PeriodId", scope = TeachingGroupPeriodType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupPeriodTypePeriodId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypePeriodId_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableCellRefId", scope = TeachingGroupPeriodType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupPeriodTypeTimeTableCellRefId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableCellRefId_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CellType", scope = TeachingGroupPeriodType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupPeriodTypeCellType(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeCellType_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomNumber", scope = TeachingGroupPeriodType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupPeriodTypeRoomNumber(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeRoomNumber_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Holder", scope = LearningStandardDocumentType.Copyright.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createLearningStandardDocumentTypeCopyrightHolder(String value) {
+        return new JAXBElement<String>(_LearningStandardDocumentTypeCopyrightHolder_QNAME, String.class, LearningStandardDocumentType.Copyright.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Date", scope = LearningStandardDocumentType.Copyright.class)
+    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeCopyrightDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeCopyrightDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.Copyright.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ReferralSourceType.class)
+    public JAXBElement<OtherCodeListType> createReferralSourceTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, ReferralSourceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleScopeList", scope = SystemRoleType.SystemContextList.SystemContext.RoleList.Role.class)
+    public JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList> createSystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeList(SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList value) {
+        return new JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList>(_SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeList_QNAME, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.class, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = EnglishProficiencyType.class)
+    public JAXBElement<OtherCodeListType> createEnglishProficiencyTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, EnglishProficiencyType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = NAPStudentResponseSetType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPStudentResponseSetTypeStudentPersonalRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeStudentPersonalRefId_QNAME, String.class, NAPStudentResponseSetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EquatingSampleFlag", scope = NAPStudentResponseSetType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPStudentResponseSetTypeEquatingSampleFlag(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeEquatingSampleFlag_QNAME, String.class, NAPStudentResponseSetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CalibrationSampleFlag", scope = NAPStudentResponseSetType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPStudentResponseSetTypeCalibrationSampleFlag(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeCalibrationSampleFlag_QNAME, String.class, NAPStudentResponseSetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPStudentResponseSetType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPStudentResponseSetTypeNAPTestRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeNAPTestRefId_QNAME, String.class, NAPStudentResponseSetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPStudentResponseSetType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPStudentResponseSetTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPStudentResponseSetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPStudentResponseSetType.class)
+    public JAXBElement<SIFMetadataType> createNAPStudentResponseSetTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPStudentResponseSetType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StaffActivityExtensionType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffActivity", scope = StaffAssignmentType.class)
+    public JAXBElement<StaffActivityExtensionType> createStaffAssignmentTypeStaffActivity(StaffActivityExtensionType value) {
+        return new JAXBElement<StaffActivityExtensionType>(_StaffAssignmentTypeStaffActivity_QNAME, StaffActivityExtensionType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CalendarSummaryListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CalendarSummaryList", scope = StaffAssignmentType.class)
+    public JAXBElement<CalendarSummaryListType> createStaffAssignmentTypeCalendarSummaryList(CalendarSummaryListType value) {
+        return new JAXBElement<CalendarSummaryListType>(_StaffAssignmentTypeCalendarSummaryList_QNAME, CalendarSummaryListType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsStaffStatusType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmploymentStatus", scope = StaffAssignmentType.class)
+    public JAXBElement<AUCodeSetsStaffStatusType> createStaffAssignmentTypeEmploymentStatus(AUCodeSetsStaffStatusType value) {
+        return new JAXBElement<AUCodeSetsStaffStatusType>(_StaffAssignmentTypeEmploymentStatus_QNAME, AUCodeSetsStaffStatusType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StaffAssignmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStaffAssignmentTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobStartDate", scope = StaffAssignmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStaffAssignmentTypeJobStartDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StaffAssignmentTypeJobStartDate_QNAME, XMLGregorianCalendar.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = StaffAssignmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStaffAssignmentTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobEndDate", scope = StaffAssignmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStaffAssignmentTypeJobEndDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StaffAssignmentTypeJobEndDate_QNAME, XMLGregorianCalendar.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CasualReliefTeacher", scope = StaffAssignmentType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStaffAssignmentTypeCasualReliefTeacher(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StaffAssignmentTypeCasualReliefTeacher_QNAME, AUCodeSetsYesOrNoCategoryType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "House", scope = StaffAssignmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStaffAssignmentTypeHouse(String value) {
+        return new JAXBElement<String>(_StaffAssignmentTypeHouse_QNAME, String.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homegroup", scope = StaffAssignmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStaffAssignmentTypeHomegroup(String value) {
+        return new JAXBElement<String>(_StaffAssignmentTypeHomegroup_QNAME, String.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobFTE", scope = StaffAssignmentType.class)
+    public JAXBElement<BigDecimal> createStaffAssignmentTypeJobFTE(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_StaffAssignmentTypeJobFTE_QNAME, BigDecimal.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobFunction", scope = StaffAssignmentType.class)
+    public JAXBElement<String> createStaffAssignmentTypeJobFunction(String value) {
+        return new JAXBElement<String>(_StaffAssignmentTypeJobFunction_QNAME, String.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StaffAssignmentType.class)
+    public JAXBElement<SIFExtendedElementsType> createStaffAssignmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = StaffAssignmentType.class)
+    public JAXBElement<YearLevelsType> createStaffAssignmentTypeYearLevels(YearLevelsType value) {
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StaffAssignmentType.class)
+    public JAXBElement<SIFMetadataType> createStaffAssignmentTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StaffSubjectListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffSubjectList", scope = StaffAssignmentType.class)
+    public JAXBElement<StaffSubjectListType> createStaffAssignmentTypeStaffSubjectList(StaffSubjectListType value) {
+        return new JAXBElement<StaffSubjectListType>(_StaffAssignmentTypeStaffSubjectList_QNAME, StaffSubjectListType.class, StaffAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceTerm", scope = TermInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createTermInfoTypeAttendanceTerm(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_TermInfoTypeAttendanceTerm_QNAME, AUCodeSetsYesOrNoCategoryType.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermSpan", scope = TermInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTermInfoTypeTermSpan(String value) {
+        return new JAXBElement<String>(_TermInfoTypeTermSpan_QNAME, String.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Track", scope = TermInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTermInfoTypeTrack(String value) {
+        return new JAXBElement<String>(_TermInfoTypeTrack_QNAME, String.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermCode", scope = TermInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTermInfoTypeTermCode(String value) {
+        return new JAXBElement<String>(_TermInfoTypeTermCode_QNAME, String.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = TermInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTermInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MarkingTerm", scope = TermInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createTermInfoTypeMarkingTerm(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_TermInfoTypeMarkingTerm_QNAME, AUCodeSetsYesOrNoCategoryType.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TermInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createTermInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RelativeDuration", scope = TermInfoType.class)
+    public JAXBElement<BigDecimal> createTermInfoTypeRelativeDuration(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_TermInfoTypeRelativeDuration_QNAME, BigDecimal.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TermInfoType.class)
+    public JAXBElement<SIFMetadataType> createTermInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchedulingTerm", scope = TermInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createTermInfoTypeSchedulingTerm(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_TermInfoTypeSchedulingTerm_QNAME, AUCodeSetsYesOrNoCategoryType.class, TermInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VisaStatisticalCode", scope = VisaSubClassType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVisaSubClassTypeVisaStatisticalCode(String value) {
+        return new JAXBElement<String>(_VisaSubClassTypeVisaStatisticalCode_QNAME, String.class, VisaSubClassType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ATEExpiryDate", scope = VisaSubClassType.class)
+    public JAXBElement<XMLGregorianCalendar> createVisaSubClassTypeATEExpiryDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_VisaSubClassTypeATEExpiryDate_QNAME, XMLGregorianCalendar.class, VisaSubClassType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VisaExpiryDate", scope = VisaSubClassType.class)
+    public JAXBElement<XMLGregorianCalendar> createVisaSubClassTypeVisaExpiryDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_VisaSubClassTypeVisaExpiryDate_QNAME, XMLGregorianCalendar.class, VisaSubClassType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ATEStartDate", scope = VisaSubClassType.class)
+    public JAXBElement<XMLGregorianCalendar> createVisaSubClassTypeATEStartDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_VisaSubClassTypeATEStartDate_QNAME, XMLGregorianCalendar.class, VisaSubClassType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SessionInfoRefId", scope = StudentPeriodAttendanceType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentPeriodAttendanceTypeSessionInfoRefId(String value) {
+        return new JAXBElement<String>(_StudentPeriodAttendanceTypeSessionInfoRefId_QNAME, String.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeIn", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPeriodAttendanceTypeTimeIn(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeIn_QNAME, XMLGregorianCalendar.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScheduledActivityRefId", scope = StudentPeriodAttendanceType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentPeriodAttendanceTypeScheduledActivityRefId(String value) {
+        return new JAXBElement<String>(_StudentPeriodAttendanceTypeScheduledActivityRefId_QNAME, String.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AuditInfoType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AuditInfo", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<AuditInfoType> createStudentPeriodAttendanceTypeAuditInfo(AuditInfoType value) {
+        return new JAXBElement<AuditInfoType>(_StudentPeriodAttendanceTypeAuditInfo_QNAME, AuditInfoType.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPeriodAttendanceTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimetablePeriod", scope = StudentPeriodAttendanceType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentPeriodAttendanceTypeTimetablePeriod(String value) {
+        return new JAXBElement<String>(_StudentPeriodAttendanceTypeTimetablePeriod_QNAME, String.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeOut", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPeriodAttendanceTypeTimeOut(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeOut_QNAME, XMLGregorianCalendar.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceComment", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<String> createStudentPeriodAttendanceTypeAttendanceComment(String value) {
+        return new JAXBElement<String>(_StudentPeriodAttendanceTypeAttendanceComment_QNAME, String.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentPeriodAttendanceTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentPeriodAttendanceType.class)
+    public JAXBElement<SIFMetadataType> createStudentPeriodAttendanceTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentPeriodAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SystemRoleType.class)
+    public JAXBElement<SIFExtendedElementsType> createSystemRoleTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SystemRoleType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SystemRoleType.class)
+    public JAXBElement<SIFMetadataType> createSystemRoleTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, SystemRoleType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = LifeCycleType.ModificationHistory.Modified.class)
+    public JAXBElement<String> createLifeCycleTypeModificationHistoryModifiedDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, LifeCycleType.ModificationHistory.Modified.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = CatchmentStatusContainerType.class)
+    public JAXBElement<OtherCodeListType> createCatchmentStatusContainerTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, CatchmentStatusContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = LocationOfInstructionType.class)
+    public JAXBElement<OtherCodeListType> createLocationOfInstructionTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, LocationOfInstructionType.class, value);
     }
 
     /**
@@ -5366,7 +6460,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = SchoolInfoType.class)
     public JAXBElement<AddressListType> createSchoolInfoTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, SchoolInfoType.class, value);
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, SchoolInfoType.class, value);
     }
 
     /**
@@ -5414,7 +6508,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = SchoolInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     public JAXBElement<String> createSchoolInfoTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, SchoolInfoType.class, value);
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, SchoolInfoType.class, value);
     }
 
     /**
@@ -5468,7 +6562,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = SchoolInfoType.class)
     public JAXBElement<YearLevelsType> createSchoolInfoTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, SchoolInfoType.class, value);
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, SchoolInfoType.class, value);
     }
 
     /**
@@ -5533,7 +6627,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = SchoolInfoType.class)
     public JAXBElement<OtherIdListType> createSchoolInfoTypeOtherIdList(OtherIdListType value) {
-        return new JAXBElement<OtherIdListType>(_SchoolInfoTypeOtherIdList_QNAME, OtherIdListType.class, SchoolInfoType.class, value);
+        return new JAXBElement<OtherIdListType>(_StudentContactPersonalTypeOtherIdList_QNAME, OtherIdListType.class, SchoolInfoType.class, value);
     }
 
     /**
@@ -5628,7 +6722,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SchoolInfoType.class)
     public JAXBElement<SIFExtendedElementsType> createSchoolInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SchoolInfoType.class, value);
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SchoolInfoType.class, value);
     }
 
     /**
@@ -5637,7 +6731,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SchoolInfoType.class)
     public JAXBElement<SIFMetadataType> createSchoolInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, SchoolInfoType.class, value);
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, SchoolInfoType.class, value);
     }
 
     /**
@@ -5678,39 +6772,480 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinishDate", scope = ActivityTimeType.class)
-    public JAXBElement<XMLGregorianCalendar> createActivityTimeTypeFinishDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeFinishDate_QNAME, XMLGregorianCalendar.class, ActivityTimeType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TotalStudents", scope = TotalEnrollmentsType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTotalEnrollmentsTypeTotalStudents(String value) {
+        return new JAXBElement<String>(_TotalEnrollmentsTypeTotalStudents_QNAME, String.class, TotalEnrollmentsType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActivityTimeType.Duration }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Duration", scope = ActivityTimeType.class)
-    public JAXBElement<ActivityTimeType.Duration> createActivityTimeTypeDuration(ActivityTimeType.Duration value) {
-        return new JAXBElement<ActivityTimeType.Duration>(_ActivityTimeTypeDuration_QNAME, ActivityTimeType.Duration.class, ActivityTimeType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Girls", scope = TotalEnrollmentsType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTotalEnrollmentsTypeGirls(String value) {
+        return new JAXBElement<String>(_TotalEnrollmentsTypeGirls_QNAME, String.class, TotalEnrollmentsType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Boys", scope = TotalEnrollmentsType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTotalEnrollmentsTypeBoys(String value) {
+        return new JAXBElement<String>(_TotalEnrollmentsTypeBoys_QNAME, String.class, TotalEnrollmentsType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateCourseCode", scope = SchoolCourseInfoOverrideType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoOverrideTypeStateCourseCode(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeStateCourseCode_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseCredits", scope = SchoolCourseInfoOverrideType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoOverrideTypeCourseCredits(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseCredits_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DistrictCourseCode", scope = SchoolCourseInfoOverrideType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoOverrideTypeDistrictCourseCode(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeDistrictCourseCode_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseTitle", scope = SchoolCourseInfoOverrideType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoOverrideTypeCourseTitle(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseTitle_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseCode", scope = SchoolCourseInfoOverrideType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoOverrideTypeCourseCode(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseCode_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectArea", scope = SchoolCourseInfoOverrideType.class)
+    public JAXBElement<SubjectAreaType> createSchoolCourseInfoOverrideTypeSubjectArea(SubjectAreaType value) {
+        return new JAXBElement<SubjectAreaType>(_SchoolCourseInfoOverrideTypeSubjectArea_QNAME, SubjectAreaType.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalLevel", scope = SchoolCourseInfoOverrideType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoOverrideTypeInstructionalLevel(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeInstructionalLevel_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestItemType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPTestItemTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestItemType.class)
+    public JAXBElement<SIFMetadataType> createNAPTestItemTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SchoolProgramListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolProgramList", scope = SchoolProgramsType.class)
+    public JAXBElement<SchoolProgramListType> createSchoolProgramsTypeSchoolProgramList(SchoolProgramListType value) {
+        return new JAXBElement<SchoolProgramListType>(_SchoolProgramsTypeSchoolProgramList_QNAME, SchoolProgramListType.class, SchoolProgramsType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DueDate", scope = ActivityTimeType.class)
-    public JAXBElement<XMLGregorianCalendar> createActivityTimeTypeDueDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeDueDate_QNAME, XMLGregorianCalendar.class, ActivityTimeType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = SchoolProgramsType.class)
+    public JAXBElement<XMLGregorianCalendar> createSchoolProgramsTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, SchoolProgramsType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SchoolProgramsType.class)
+    public JAXBElement<SIFExtendedElementsType> createSchoolProgramsTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SchoolProgramsType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SchoolProgramsType.class)
+    public JAXBElement<SIFMetadataType> createSchoolProgramsTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, SchoolProgramsType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = TimeTableType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableTypeLocalId(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolName", scope = TimeTableType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableTypeSchoolName(String value) {
+        return new JAXBElement<String>(_TimeTableTypeSchoolName_QNAME, String.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TimeTableType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTableTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, TimeTableType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = ActivityTimeType.class)
-    public JAXBElement<XMLGregorianCalendar> createActivityTimeTypeStartDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeStartDate_QNAME, XMLGregorianCalendar.class, ActivityTimeType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableCreationDate", scope = TimeTableType.class)
+    public JAXBElement<XMLGregorianCalendar> createTimeTableTypeTimeTableCreationDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeTimeTableCreationDate_QNAME, XMLGregorianCalendar.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = TimeTableType.class)
+    public JAXBElement<XMLGregorianCalendar> createTimeTableTypeEndDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TimeTableType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingPeriodsPerDay", scope = TimeTableType.class)
+    public JAXBElement<Long> createTimeTableTypeTeachingPeriodsPerDay(Long value) {
+        return new JAXBElement<Long>(_TimeTableTypeTeachingPeriodsPerDay_QNAME, Long.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TimeTableType.class)
+    public JAXBElement<SIFExtendedElementsType> createTimeTableTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TimeTableType.class)
+    public JAXBElement<SIFMetadataType> createTimeTableTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = TimeTableType.class)
+    public JAXBElement<XMLGregorianCalendar> createTimeTableTypeStartDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeStartDate_QNAME, XMLGregorianCalendar.class, TimeTableType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExpenseAccountsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExpenseAccounts", scope = PurchasingItemType.class)
+    public JAXBElement<ExpenseAccountsType> createPurchasingItemTypeExpenseAccounts(ExpenseAccountsType value) {
+        return new JAXBElement<ExpenseAccountsType>(_PurchasingItemTypeExpenseAccounts_QNAME, ExpenseAccountsType.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = PurchasingItemType.class)
+    public JAXBElement<BigDecimal> createPurchasingItemTypeTaxRate(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_PurchasingItemTypeTaxRate_QNAME, BigDecimal.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "QuantityDelivered", scope = PurchasingItemType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPurchasingItemTypeQuantityDelivered(String value) {
+        return new JAXBElement<String>(_PurchasingItemTypeQuantityDelivered_QNAME, String.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ItemNumber", scope = PurchasingItemType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPurchasingItemTypeItemNumber(String value) {
+        return new JAXBElement<String>(_PurchasingItemTypeItemNumber_QNAME, String.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TotalCost", scope = PurchasingItemType.class)
+    public JAXBElement<MonetaryAmountType> createPurchasingItemTypeTotalCost(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_PurchasingItemTypeTotalCost_QNAME, MonetaryAmountType.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CancelledOrder", scope = PurchasingItemType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPurchasingItemTypeCancelledOrder(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PurchasingItemTypeCancelledOrder_QNAME, AUCodeSetsYesOrNoCategoryType.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "UnitCost", scope = PurchasingItemType.class)
+    public JAXBElement<MonetaryAmountType> createPurchasingItemTypeUnitCost(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_PurchasingItemTypeUnitCost_QNAME, MonetaryAmountType.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Quantity", scope = PurchasingItemType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPurchasingItemTypeQuantity(String value) {
+        return new JAXBElement<String>(_PurchasingItemTypeQuantity_QNAME, String.class, PurchasingItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Role", scope = ContactInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createContactInfoTypeRole(String value) {
+        return new JAXBElement<String>(_ContactInfoTypeRole_QNAME, String.class, ContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Address", scope = ContactInfoType.class)
+    public JAXBElement<AddressType> createContactInfoTypeAddress(AddressType value) {
+        return new JAXBElement<AddressType>(_ContactInfoTypeAddress_QNAME, AddressType.class, ContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EmailListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = ContactInfoType.class)
+    public JAXBElement<EmailListType> createContactInfoTypeEmailList(EmailListType value) {
+        return new JAXBElement<EmailListType>(_ContactInfoTypeEmailList_QNAME, EmailListType.class, ContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = ContactInfoType.class)
+    public JAXBElement<PhoneNumberListType> createContactInfoTypePhoneNumberList(PhoneNumberListType value) {
+        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, ContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PositionTitle", scope = ContactInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createContactInfoTypePositionTitle(String value) {
+        return new JAXBElement<String>(_ContactInfoTypePositionTitle_QNAME, String.class, ContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PublishInDirectory", scope = SchoolContactType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSchoolContactTypePublishInDirectory(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SchoolContactTypePublishInDirectory_QNAME, AUCodeSetsYesOrNoCategoryType.class, SchoolContactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPCodeFrameType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPCodeFrameTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPCodeFrameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPCodeFrameType.class)
+    public JAXBElement<SIFMetadataType> createNAPCodeFrameTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPCodeFrameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EntryDate", scope = StudentSectionEnrollmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentSectionEnrollmentTypeEntryDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentSectionEnrollmentTypeEntryDate_QNAME, XMLGregorianCalendar.class, StudentSectionEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StudentSectionEnrollmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentSectionEnrollmentTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StudentSectionEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitDate", scope = StudentSectionEnrollmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentSectionEnrollmentTypeExitDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentSectionEnrollmentTypeExitDate_QNAME, XMLGregorianCalendar.class, StudentSectionEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentSectionEnrollmentType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentSectionEnrollmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentSectionEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentSectionEnrollmentType.class)
+    public JAXBElement<SIFMetadataType> createStudentSectionEnrollmentTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentSectionEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = EvaluationType.class)
+    public JAXBElement<String> createEvaluationTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, EvaluationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NameType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = EvaluationType.class)
+    public JAXBElement<NameType> createEvaluationTypeName(NameType value) {
+        return new JAXBElement<NameType>(_EvaluationTypeName_QNAME, NameType.class, EvaluationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Date", scope = EvaluationType.class)
+    public JAXBElement<XMLGregorianCalendar> createEvaluationTypeDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeCopyrightDate_QNAME, XMLGregorianCalendar.class, EvaluationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentEntryContainerType.class)
+    public JAXBElement<OtherCodeListType> createStudentEntryContainerTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentEntryContainerType.class, value);
     }
 
     /**
@@ -5719,7 +7254,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = LanguageBaseType.class)
     public JAXBElement<OtherCodeListType> createLanguageBaseTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, LanguageBaseType.class, value);
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, LanguageBaseType.class, value);
     }
 
     /**
@@ -5743,6 +7278,2119 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ProgramStatusType.class)
+    public JAXBElement<OtherCodeListType> createProgramStatusTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, ProgramStatusType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SystemRoleType.SystemContextList.SystemContext.RoleList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleList", scope = SystemRoleType.SystemContextList.SystemContext.class)
+    public JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList> createSystemRoleTypeSystemContextListSystemContextRoleList(SystemRoleType.SystemContextList.SystemContext.RoleList value) {
+        return new JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList>(_SystemRoleTypeSystemContextListSystemContextRoleList_QNAME, SystemRoleType.SystemContextList.SystemContext.RoleList.class, SystemRoleType.SystemContextList.SystemContext.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Excluded", scope = AggregateStatisticFactType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createAggregateStatisticFactTypeExcluded(String value) {
+        return new JAXBElement<String>(_AggregateStatisticFactTypeExcluded_QNAME, String.class, AggregateStatisticFactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = AggregateStatisticFactType.class)
+    public JAXBElement<SIFExtendedElementsType> createAggregateStatisticFactTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, AggregateStatisticFactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = AggregateStatisticFactType.class)
+    public JAXBElement<SIFMetadataType> createAggregateStatisticFactTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, AggregateStatisticFactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = LEAInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createLEAInfoTypeStateProvinceId(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SLA", scope = LEAInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createLEAInfoTypeSLA(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeSLA_QNAME, String.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AgencyType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EducationAgencyType", scope = LEAInfoType.class)
+    public JAXBElement<AgencyType> createLEAInfoTypeEducationAgencyType(AgencyType value) {
+        return new JAXBElement<AgencyType>(_LEAInfoTypeEducationAgencyType_QNAME, AgencyType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LEAContactListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LEAContactList", scope = LEAInfoType.class)
+    public JAXBElement<LEAContactListType> createLEAInfoTypeLEAContactList(LEAContactListType value) {
+        return new JAXBElement<LEAContactListType>(_LEAInfoTypeLEAContactList_QNAME, LEAContactListType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = LEAInfoType.class)
+    public JAXBElement<AddressListType> createLEAInfoTypeAddressList(AddressListType value) {
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsOperationalStatusType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OperationalStatus", scope = LEAInfoType.class)
+    public JAXBElement<AUCodeSetsOperationalStatusType> createLEAInfoTypeOperationalStatus(AUCodeSetsOperationalStatusType value) {
+        return new JAXBElement<AUCodeSetsOperationalStatusType>(_SchoolInfoTypeOperationalStatus_QNAME, AUCodeSetsOperationalStatusType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CommonwealthId", scope = LEAInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createLEAInfoTypeCommonwealthId(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeCommonwealthId_QNAME, String.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = LEAInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createLEAInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JurisdictionLowerHouse", scope = LEAInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createLEAInfoTypeJurisdictionLowerHouse(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeJurisdictionLowerHouse_QNAME, String.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = LEAInfoType.class)
+    public JAXBElement<SIFMetadataType> createLEAInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LEAURL", scope = LEAInfoType.class)
+    public JAXBElement<String> createLEAInfoTypeLEAURL(String value) {
+        return new JAXBElement<String>(_LEAInfoTypeLEAURL_QNAME, String.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = LEAInfoType.class)
+    public JAXBElement<PhoneNumberListType> createLEAInfoTypePhoneNumberList(PhoneNumberListType value) {
+        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, LEAInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Descriptor", scope = NAPWritingRubricType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createNAPWritingRubricTypeDescriptor(String value) {
+        return new JAXBElement<String>(_NAPWritingRubricTypeDescriptor_QNAME, String.class, NAPWritingRubricType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningStandardItems", scope = EducationFilterType.class)
+    public JAXBElement<LearningStandardsType> createEducationFilterTypeLearningStandardItems(LearningStandardsType value) {
+        return new JAXBElement<LearningStandardsType>(_LearningStandardItems_QNAME, LearningStandardsType.class, EducationFilterType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.Created }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Created", scope = LifeCycleType.class)
+    public JAXBElement<LifeCycleType.Created> createLifeCycleTypeCreated(LifeCycleType.Created value) {
+        return new JAXBElement<LifeCycleType.Created>(_LifeCycleTypeCreated_QNAME, LifeCycleType.Created.class, LifeCycleType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.ModificationHistory }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ModificationHistory", scope = LifeCycleType.class)
+    public JAXBElement<LifeCycleType.ModificationHistory> createLifeCycleTypeModificationHistory(LifeCycleType.ModificationHistory value) {
+        return new JAXBElement<LifeCycleType.ModificationHistory>(_LifeCycleTypeModificationHistory_QNAME, LifeCycleType.ModificationHistory.class, LifeCycleType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.TimeElements }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeElements", scope = LifeCycleType.class)
+    public JAXBElement<LifeCycleType.TimeElements> createLifeCycleTypeTimeElements(LifeCycleType.TimeElements value) {
+        return new JAXBElement<LifeCycleType.TimeElements>(_LifeCycleTypeTimeElements_QNAME, LifeCycleType.TimeElements.class, LifeCycleType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPTestletType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPTestletTypeNAPTestRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeNAPTestRefId_QNAME, String.class, NAPTestletType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestletType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPTestletTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestletType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestletType.class)
+    public JAXBElement<SIFMetadataType> createNAPTestletTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestletType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsTeacherCoverSupervisionType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Supervision", scope = TeacherCoverType.class)
+    public JAXBElement<AUCodeSetsTeacherCoverSupervisionType> createTeacherCoverTypeSupervision(AUCodeSetsTeacherCoverSupervisionType value) {
+        return new JAXBElement<AUCodeSetsTeacherCoverSupervisionType>(_TeacherCoverTypeSupervision_QNAME, AUCodeSetsTeacherCoverSupervisionType.class, TeacherCoverType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = TeacherCoverType.class)
+    public JAXBElement<XMLGregorianCalendar> createTeacherCoverTypeStartTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TeachingGroupPeriodTypeStartTime_QNAME, XMLGregorianCalendar.class, TeacherCoverType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TeacherCoverType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeacherCoverTypeStaffLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeStaffLocalId_QNAME, String.class, TeacherCoverType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsTeacherCoverCreditType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Credit", scope = TeacherCoverType.class)
+    public JAXBElement<AUCodeSetsTeacherCoverCreditType> createTeacherCoverTypeCredit(AUCodeSetsTeacherCoverCreditType value) {
+        return new JAXBElement<AUCodeSetsTeacherCoverCreditType>(_TeacherCoverTypeCredit_QNAME, AUCodeSetsTeacherCoverCreditType.class, TeacherCoverType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinishTime", scope = TeacherCoverType.class)
+    public JAXBElement<XMLGregorianCalendar> createTeacherCoverTypeFinishTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeFinishTime_QNAME, XMLGregorianCalendar.class, TeacherCoverType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Weighting", scope = TeacherCoverType.class)
+    public JAXBElement<BigDecimal> createTeacherCoverTypeWeighting(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_TeacherCoverTypeWeighting_QNAME, BigDecimal.class, TeacherCoverType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactTitle", scope = PrincipalInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPrincipalInfoTypeContactTitle(String value) {
+        return new JAXBElement<String>(_PrincipalInfoTypeContactTitle_QNAME, String.class, PrincipalInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EmailListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = PrincipalInfoType.class)
+    public JAXBElement<EmailListType> createPrincipalInfoTypeEmailList(EmailListType value) {
+        return new JAXBElement<EmailListType>(_ContactInfoTypeEmailList_QNAME, EmailListType.class, PrincipalInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = PrincipalInfoType.class)
+    public JAXBElement<PhoneNumberListType> createPrincipalInfoTypePhoneNumberList(PhoneNumberListType value) {
+        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, PrincipalInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OS", scope = SoftwareRequirementType.class)
+    public JAXBElement<String> createSoftwareRequirementTypeOS(String value) {
+        return new JAXBElement<String>(_SoftwareRequirementTypeOS_QNAME, String.class, SoftwareRequirementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Version", scope = SoftwareRequirementType.class)
+    public JAXBElement<String> createSoftwareRequirementTypeVersion(String value) {
+        return new JAXBElement<String>(_SoftwareRequirementTypeVersion_QNAME, String.class, SoftwareRequirementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Vendor", scope = SoftwareRequirementType.class)
+    public JAXBElement<String> createSoftwareRequirementTypeVendor(String value) {
+        return new JAXBElement<String>(_SoftwareRequirementTypeVendor_QNAME, String.class, SoftwareRequirementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ReligionType.class)
+    public JAXBElement<OtherCodeListType> createReligionTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, ReligionType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferenceNumber", scope = StudentSubjectChoiceType.class)
+    public JAXBElement<Long> createStudentSubjectChoiceTypePreferenceNumber(Long value) {
+        return new JAXBElement<Long>(_StudentSubjectChoiceTypePreferenceNumber_QNAME, Long.class, StudentSubjectChoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherSchoolLocalId", scope = StudentSubjectChoiceType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentSubjectChoiceTypeOtherSchoolLocalId(String value) {
+        return new JAXBElement<String>(_StudentSubjectChoiceTypeOtherSchoolLocalId_QNAME, String.class, StudentSubjectChoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudyDescription", scope = StudentSubjectChoiceType.class)
+    public JAXBElement<SubjectAreaType> createStudentSubjectChoiceTypeStudyDescription(SubjectAreaType value) {
+        return new JAXBElement<SubjectAreaType>(_StudentSubjectChoiceTypeStudyDescription_QNAME, SubjectAreaType.class, StudentSubjectChoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationInStage", scope = NAPTestletContentType.class)
+    public JAXBElement<BigInteger> createNAPTestletContentTypeLocationInStage(BigInteger value) {
+        return new JAXBElement<BigInteger>(_NAPTestletContentTypeLocationInStage_QNAME, BigInteger.class, NAPTestletContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Node", scope = NAPTestletContentType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPTestletContentTypeNode(String value) {
+        return new JAXBElement<String>(_NAPTestletContentTypeNode_QNAME, String.class, NAPTestletContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = ActivityType.Evaluation.class)
+    public JAXBElement<String> createActivityTypeEvaluationDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, ActivityType.Evaluation.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Discount", scope = DebtorType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createDebtorTypeDiscount(String value) {
+        return new JAXBElement<String>(_DebtorTypeDiscount_QNAME, String.class, DebtorType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BillingName", scope = DebtorType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createDebtorTypeBillingName(String value) {
+        return new JAXBElement<String>(_DebtorTypeBillingName_QNAME, String.class, DebtorType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = DebtorType.class)
+    public JAXBElement<AddressListType> createDebtorTypeAddressList(AddressListType value) {
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, DebtorType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BillingNote", scope = DebtorType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createDebtorTypeBillingNote(String value) {
+        return new JAXBElement<String>(_DebtorTypeBillingNote_QNAME, String.class, DebtorType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = DebtorType.class)
+    public JAXBElement<SIFExtendedElementsType> createDebtorTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, DebtorType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = DebtorType.class)
+    public JAXBElement<SIFMetadataType> createDebtorTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, DebtorType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ResourceUsageType.class)
+    public JAXBElement<SIFExtendedElementsType> createResourceUsageTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ResourceUsageType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ResourceUsageType.class)
+    public JAXBElement<SIFMetadataType> createResourceUsageTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, ResourceUsageType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountingPeriod", scope = ExpenseAccountType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createExpenseAccountTypeAccountingPeriod(String value) {
+        return new JAXBElement<String>(_ExpenseAccountTypeAccountingPeriod_QNAME, String.class, ExpenseAccountType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinancialAccountRefId", scope = ExpenseAccountType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createExpenseAccountTypeFinancialAccountRefId(String value) {
+        return new JAXBElement<String>(_ExpenseAccountTypeFinancialAccountRefId_QNAME, String.class, ExpenseAccountType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TeachingGroupTeacherType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTeacherTypeStaffLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeStaffLocalId_QNAME, String.class, TeachingGroupTeacherType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffPersonalRefId", scope = TeachingGroupTeacherType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupTeacherTypeStaffPersonalRefId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeStaffPersonalRefId_QNAME, String.class, TeachingGroupTeacherType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NameOfRecordType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = TeachingGroupTeacherType.class)
+    public JAXBElement<NameOfRecordType> createTeachingGroupTeacherTypeName(NameOfRecordType value) {
+        return new JAXBElement<NameOfRecordType>(_EvaluationTypeName_QNAME, NameOfRecordType.class, TeachingGroupTeacherType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExpenseAccountType", scope = ExpenseAccountsType.class)
+    public JAXBElement<Object> createExpenseAccountsTypeExpenseAccountType(Object value) {
+        return new JAXBElement<Object>(_ExpenseAccountsTypeExpenseAccountType_QNAME, Object.class, ExpenseAccountsType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.Created.Creators }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Creators", scope = LifeCycleType.Created.class)
+    public JAXBElement<LifeCycleType.Created.Creators> createLifeCycleTypeCreatedCreators(LifeCycleType.Created.Creators value) {
+        return new JAXBElement<LifeCycleType.Created.Creators>(_LifeCycleTypeCreatedCreators_QNAME, LifeCycleType.Created.Creators.class, LifeCycleType.Created.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BPay", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypeBPay(String value) {
+        return new JAXBElement<String>(_VendorInfoTypeBPay_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountName", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypeAccountName(String value) {
+        return new JAXBElement<String>(_VendorInfoTypeAccountName_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ContactInfoType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactInfo", scope = VendorInfoType.class)
+    public JAXBElement<ContactInfoType> createVendorInfoTypeContactInfo(ContactInfoType value) {
+        return new JAXBElement<ContactInfoType>(_VendorInfoTypeContactInfo_QNAME, ContactInfoType.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ABN", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypeABN(String value) {
+        return new JAXBElement<String>(_VendorInfoTypeABN_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PaymentTerms", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypePaymentTerms(String value) {
+        return new JAXBElement<String>(_VendorInfoTypePaymentTerms_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = VendorInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createVendorInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = VendorInfoType.class)
+    public JAXBElement<SIFMetadataType> createVendorInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountNumber", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypeAccountNumber(String value) {
+        return new JAXBElement<String>(_VendorInfoTypeAccountNumber_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BSB", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypeBSB(String value) {
+        return new JAXBElement<String>(_VendorInfoTypeBSB_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CustomerId", scope = VendorInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createVendorInfoTypeCustomerId(String value) {
+        return new JAXBElement<String>(_VendorInfoTypeCustomerId_QNAME, String.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RegisteredForGST", scope = VendorInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createVendorInfoTypeRegisteredForGST(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_VendorInfoTypeRegisteredForGST_QNAME, AUCodeSetsYesOrNoCategoryType.class, VendorInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "UpdateDate", scope = PurchaseOrderType.class)
+    public JAXBElement<XMLGregorianCalendar> createPurchaseOrderTypeUpdateDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_PurchaseOrderTypeUpdateDate_QNAME, XMLGregorianCalendar.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxAmount", scope = PurchaseOrderType.class)
+    public JAXBElement<MonetaryAmountType> createPurchaseOrderTypeTaxAmount(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_PurchaseOrderTypeTaxAmount_QNAME, MonetaryAmountType.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TotalAmount", scope = PurchaseOrderType.class)
+    public JAXBElement<MonetaryAmountType> createPurchaseOrderTypeTotalAmount(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_PurchaseOrderTypeTotalAmount_QNAME, MonetaryAmountType.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = PurchaseOrderType.class)
+    public JAXBElement<BigDecimal> createPurchaseOrderTypeTaxRate(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_PurchasingItemTypeTaxRate_QNAME, BigDecimal.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreationDate", scope = PurchaseOrderType.class)
+    public JAXBElement<XMLGregorianCalendar> createPurchaseOrderTypeCreationDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_PurchaseOrderTypeCreationDate_QNAME, XMLGregorianCalendar.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FullyDelivered", scope = PurchaseOrderType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPurchaseOrderTypeFullyDelivered(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PurchaseOrderTypeFullyDelivered_QNAME, AUCodeSetsYesOrNoCategoryType.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmployeePersonalRefId", scope = PurchaseOrderType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPurchaseOrderTypeEmployeePersonalRefId(String value) {
+        return new JAXBElement<String>(_PurchaseOrderTypeEmployeePersonalRefId_QNAME, String.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OriginalPurchaseOrderRefId", scope = PurchaseOrderType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPurchaseOrderTypeOriginalPurchaseOrderRefId(String value) {
+        return new JAXBElement<String>(_PurchaseOrderTypeOriginalPurchaseOrderRefId_QNAME, String.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = PurchaseOrderType.class)
+    public JAXBElement<SIFExtendedElementsType> createPurchaseOrderTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = PurchaseOrderType.class)
+    public JAXBElement<SIFMetadataType> createPurchaseOrderTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = PurchaseOrderType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPurchaseOrderTypeChargedLocationInfoRefId(String value) {
+        return new JAXBElement<String>(_PurchaseOrderTypeChargedLocationInfoRefId_QNAME, String.class, PurchaseOrderType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevel", scope = StudentMostRecentContainerType.class)
+    public JAXBElement<YearLevelType> createStudentMostRecentContainerTypeYearLevel(YearLevelType value) {
+        return new JAXBElement<YearLevelType>(_LearningStandardItemTypeStandardIdentifierYearLevel_QNAME, YearLevelType.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2Language", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent2Language(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2Language_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2EmploymentType", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent2EmploymentType(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2EmploymentType_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1Language", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent1Language(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1Language_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalCampusId", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeLocalCampusId(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeLocalCampusId_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1EmploymentType", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent1EmploymentType(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1EmploymentType_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1SchoolEducationLevel", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent1SchoolEducationLevel(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1SchoolEducationLevel_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FFPOS", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeFFPOS(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeFFPOS_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2SchoolEducationLevel", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent2SchoolEducationLevel(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2SchoolEducationLevel_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolACARAId", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeSchoolACARAId(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeSchoolACARAId_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TestLevel", scope = StudentMostRecentContainerType.class)
+    public JAXBElement<YearLevelType> createStudentMostRecentContainerTypeTestLevel(YearLevelType value) {
+        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeTestLevel_QNAME, YearLevelType.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homegroup", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeHomegroup(String value) {
+        return new JAXBElement<String>(_StaffAssignmentTypeHomegroup_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ClassCode", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeClassCode(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeClassCode_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HomeroomLocalId", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeHomeroomLocalId(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeHomeroomLocalId_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1NonSchoolEducation", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent1NonSchoolEducation(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1NonSchoolEducation_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2NonSchoolEducation", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeParent2NonSchoolEducation(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2NonSchoolEducation_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherEnrollmentSchoolACARAId", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeOtherEnrollmentSchoolACARAId(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeOtherEnrollmentSchoolACARAId_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ReportingSchoolId", scope = StudentMostRecentContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentMostRecentContainerTypeReportingSchoolId(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeReportingSchoolId_QNAME, String.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTE", scope = StudentMostRecentContainerType.class)
+    public JAXBElement<BigDecimal> createStudentMostRecentContainerTypeFTE(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_StudentMostRecentContainerTypeFTE_QNAME, BigDecimal.class, StudentMostRecentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ColumnDelimiter", scope = ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDelimiter(String value) {
+        return new JAXBElement<String>(_ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDelimiter_QNAME, String.class, ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ColumnDescription", scope = ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDescription(String value) {
+        return new JAXBElement<String>(_ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDescription_QNAME, String.class, ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Role", scope = StudentActivityParticipationType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentActivityParticipationTypeRole(String value) {
+        return new JAXBElement<String>(_ContactInfoTypeRole_QNAME, String.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StudentActivityParticipationType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentActivityParticipationTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParticipationComment", scope = StudentActivityParticipationType.class)
+    public JAXBElement<String> createStudentActivityParticipationTypeParticipationComment(String value) {
+        return new JAXBElement<String>(_StudentActivityParticipationTypeParticipationComment_QNAME, String.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RecognitionListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RecognitionList", scope = StudentActivityParticipationType.class)
+    public JAXBElement<RecognitionListType> createStudentActivityParticipationTypeRecognitionList(RecognitionListType value) {
+        return new JAXBElement<RecognitionListType>(_StudentActivityParticipationTypeRecognitionList_QNAME, RecognitionListType.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = StudentActivityParticipationType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentActivityParticipationTypeEndDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentActivityParticipationType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentActivityParticipationTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentActivityParticipationType.class)
+    public JAXBElement<SIFMetadataType> createStudentActivityParticipationTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = StudentActivityParticipationType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentActivityParticipationTypeStartDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeStartDate_QNAME, XMLGregorianCalendar.class, StudentActivityParticipationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocationType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Location", scope = StudentActivityInfoType.class)
+    public JAXBElement<LocationType> createStudentActivityInfoTypeLocation(LocationType value) {
+        return new JAXBElement<LocationType>(_ScheduledActivityTypeLocation_QNAME, LocationType.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = StudentActivityInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentActivityInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CurricularStatus", scope = StudentActivityInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentActivityInfoTypeCurricularStatus(String value) {
+        return new JAXBElement<String>(_StudentActivityInfoTypeCurricularStatus_QNAME, String.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentActivityInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentActivityInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = StudentActivityInfoType.class)
+    public JAXBElement<YearLevelsType> createStudentActivityInfoTypeYearLevels(YearLevelsType value) {
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentActivityInfoType.class)
+    public JAXBElement<SIFMetadataType> createStudentActivityInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentActivityLevel", scope = StudentActivityInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentActivityInfoTypeStudentActivityLevel(String value) {
+        return new JAXBElement<String>(_StudentActivityInfoTypeStudentActivityLevel_QNAME, String.class, StudentActivityInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestletRefId", scope = NAPTestletResponseType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPTestletResponseTypeNAPTestletRefId(String value) {
+        return new JAXBElement<String>(_NAPTestletResponseTypeNAPTestletRefId_QNAME, String.class, NAPTestletResponseType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = ChargedLocationInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createChargedLocationInfoTypeStateProvinceId(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = ChargedLocationInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createChargedLocationInfoTypeLocalId(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentChargedLocationInfoRefId", scope = ChargedLocationInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createChargedLocationInfoTypeParentChargedLocationInfoRefId(String value) {
+        return new JAXBElement<String>(_ChargedLocationInfoTypeParentChargedLocationInfoRefId_QNAME, String.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = ChargedLocationInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createChargedLocationInfoTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = ChargedLocationInfoType.class)
+    public JAXBElement<AddressListType> createChargedLocationInfoTypeAddressList(AddressListType value) {
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = ChargedLocationInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createChargedLocationInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ChargedLocationInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createChargedLocationInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ChargedLocationInfoType.class)
+    public JAXBElement<SIFMetadataType> createChargedLocationInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = ChargedLocationInfoType.class)
+    public JAXBElement<PhoneNumberListType> createChargedLocationInfoTypePhoneNumberList(PhoneNumberListType value) {
+        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, ChargedLocationInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BookletType", scope = AdjustmentContainerType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createAdjustmentContainerTypeBookletType(String value) {
+        return new JAXBElement<String>(_AdjustmentContainerTypeBookletType_QNAME, String.class, AdjustmentContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = StudentPersonalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentPersonalTypeStateProvinceId(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Disability", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeDisability(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeDisability_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AlertMessagesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AlertMessages", scope = StudentPersonalType.class)
+    public JAXBElement<AlertMessagesType> createStudentPersonalTypeAlertMessages(AlertMessagesType value) {
+        return new JAXBElement<AlertMessagesType>(_StudentPersonalTypeAlertMessages_QNAME, AlertMessagesType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OnTimeGraduationYear", scope = StudentPersonalType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeOnTimeGraduationYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeOnTimeGraduationYear_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PrePrimaryEducation", scope = StudentPersonalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentPersonalTypePrePrimaryEducation(String value) {
+        return new JAXBElement<String>(_StudentPersonalTypePrePrimaryEducation_QNAME, String.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EconomicDisadvantage", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeEconomicDisadvantage(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeEconomicDisadvantage_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YoungCarersRole", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeYoungCarersRole(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeYoungCarersRole_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = StudentPersonalType.class)
+    public JAXBElement<OtherIdListType> createStudentPersonalTypeOtherIdList(OtherIdListType value) {
+        return new JAXBElement<OtherIdListType>(_StudentContactPersonalTypeOtherIdList_QNAME, OtherIdListType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OfflineDelivery", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeOfflineDelivery(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeOfflineDelivery_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Sensitive", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeSensitive(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeSensitive_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AcceptableUsePolicy", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeAcceptableUsePolicy(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeAcceptableUsePolicy_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ESL", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeESL(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeESL_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MedicalAlertMessagesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MedicalAlertMessages", scope = StudentPersonalType.class)
+    public JAXBElement<MedicalAlertMessagesType> createStudentPersonalTypeMedicalAlertMessages(MedicalAlertMessagesType value) {
+        return new JAXBElement<MedicalAlertMessagesType>(_StudentPersonalTypeMedicalAlertMessages_QNAME, MedicalAlertMessagesType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HomeSchooledStudent", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeHomeSchooledStudent(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeHomeSchooledStudent_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ProjectedGraduationYear", scope = StudentPersonalType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeProjectedGraduationYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeProjectedGraduationYear_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EducationSupport", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeEducationSupport(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeEducationSupport_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GraduationDate", scope = StudentPersonalType.class)
+    public JAXBElement<String> createStudentPersonalTypeGraduationDate(String value) {
+        return new JAXBElement<String>(_StudentPersonalTypeGraduationDate_QNAME, String.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IntegrationAide", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeIntegrationAide(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeIntegrationAide_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentMostRecentContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MostRecent", scope = StudentPersonalType.class)
+    public JAXBElement<StudentMostRecentContainerType> createStudentPersonalTypeMostRecent(StudentMostRecentContainerType value) {
+        return new JAXBElement<StudentMostRecentContainerType>(_StudentPersonalTypeMostRecent_QNAME, StudentMostRecentContainerType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GiftedTalented", scope = StudentPersonalType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeGiftedTalented(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeGiftedTalented_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ESLDateAssessed", scope = StudentPersonalType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeESLDateAssessed(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeESLDateAssessed_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FirstAUSchoolEnrollment", scope = StudentPersonalType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeFirstAUSchoolEnrollment(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeFirstAUSchoolEnrollment_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicIdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ElectronicIdList", scope = StudentPersonalType.class)
+    public JAXBElement<ElectronicIdListType> createStudentPersonalTypeElectronicIdList(ElectronicIdListType value) {
+        return new JAXBElement<ElectronicIdListType>(_StudentPersonalTypeElectronicIdList_QNAME, ElectronicIdListType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentPersonalType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentPersonalTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentPersonalType.class)
+    public JAXBElement<SIFMetadataType> createStudentPersonalTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalDescription", scope = ResourceUsageType.ResourceUsageContentType.class)
+    public JAXBElement<String> createResourceUsageTypeResourceUsageContentTypeLocalDescription(String value) {
+        return new JAXBElement<String>(_ResourceUsageTypeResourceUsageContentTypeLocalDescription_QNAME, String.class, ResourceUsageType.ResourceUsageContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumber", scope = ContactType.class)
+    public JAXBElement<PhoneNumberType> createContactTypePhoneNumber(PhoneNumberType value) {
+        return new JAXBElement<PhoneNumberType>(_ContactTypePhoneNumber_QNAME, PhoneNumberType.class, ContactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NameType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = ContactType.class)
+    public JAXBElement<NameType> createContactTypeName(NameType value) {
+        return new JAXBElement<NameType>(_EvaluationTypeName_QNAME, NameType.class, ContactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Address", scope = ContactType.class)
+    public JAXBElement<AddressType> createContactTypeAddress(AddressType value) {
+        return new JAXBElement<AddressType>(_ContactInfoTypeAddress_QNAME, AddressType.class, ContactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EmailType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Email", scope = ContactType.class)
+    public JAXBElement<EmailType> createContactTypeEmail(EmailType value) {
+        return new JAXBElement<EmailType>(_ContactTypeEmail_QNAME, EmailType.class, ContactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PublishInDirectory", scope = LEAContactType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createLEAContactTypePublishInDirectory(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SchoolContactTypePublishInDirectory_QNAME, AUCodeSetsYesOrNoCategoryType.class, LEAContactType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TimeElementType.SpanGaps }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SpanGaps", scope = TimeElementType.class)
+    public JAXBElement<TimeElementType.SpanGaps> createTimeElementTypeSpanGaps(TimeElementType.SpanGaps value) {
+        return new JAXBElement<TimeElementType.SpanGaps>(_TimeElementTypeSpanGaps_QNAME, TimeElementType.SpanGaps.class, TimeElementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDateTime", scope = TimeElementType.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    public JAXBElement<java.util.Calendar> createTimeElementTypeEndDateTime(java.util.Calendar value) {
+        return new JAXBElement<java.util.Calendar>(_TimeElementTypeEndDateTime_QNAME, java.util.Calendar.class, TimeElementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDateTime", scope = TimeElementType.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    public JAXBElement<java.util.Calendar> createTimeElementTypeStartDateTime(java.util.Calendar value) {
+        return new JAXBElement<java.util.Calendar>(_TimeElementTypeStartDateTime_QNAME, java.util.Calendar.class, TimeElementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxAmount", scope = PaymentReceiptType.class)
+    public JAXBElement<MonetaryAmountType> createPaymentReceiptTypeTaxAmount(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_PurchaseOrderTypeTaxAmount_QNAME, MonetaryAmountType.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = PaymentReceiptType.class)
+    public JAXBElement<BigDecimal> createPaymentReceiptTypeTaxRate(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_PurchasingItemTypeTaxRate_QNAME, BigDecimal.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChequeNumber", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeChequeNumber(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeChequeNumber_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TransactionNote", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeTransactionNote(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeTransactionNote_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DebtorRefId", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeDebtorRefId(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeDebtorRefId_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountingPeriod", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeAccountingPeriod(String value) {
+        return new JAXBElement<String>(_ExpenseAccountTypeAccountingPeriod_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VendorInfoRefId", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeVendorInfoRefId(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeVendorInfoRefId_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeChargedLocationInfoRefId(String value) {
+        return new JAXBElement<String>(_PurchaseOrderTypeChargedLocationInfoRefId_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TransactionDescription", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeTransactionDescription(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeTransactionDescription_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TransactionMethod", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeTransactionMethod(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeTransactionMethod_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InvoiceRefId", scope = PaymentReceiptType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPaymentReceiptTypeInvoiceRefId(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeInvoiceRefId_QNAME, String.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = PaymentReceiptType.class)
+    public JAXBElement<SIFExtendedElementsType> createPaymentReceiptTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = PaymentReceiptType.class)
+    public JAXBElement<SIFMetadataType> createPaymentReceiptTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FinancialAccountRefIdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinancialAccountRefIdList", scope = PaymentReceiptType.class)
+    public JAXBElement<FinancialAccountRefIdListType> createPaymentReceiptTypeFinancialAccountRefIdList(FinancialAccountRefIdListType value) {
+        return new JAXBElement<FinancialAccountRefIdListType>(_PaymentReceiptTypeFinancialAccountRefIdList_QNAME, FinancialAccountRefIdListType.class, PaymentReceiptType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FamilyName", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypeFamilyName(String value) {
+        return new JAXBElement<String>(_BaseNameTypeFamilyName_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferredFamilyName", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypePreferredFamilyName(String value) {
+        return new JAXBElement<String>(_BaseNameTypePreferredFamilyName_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferredFamilyNameFirst", scope = BaseNameType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createBaseNameTypePreferredFamilyNameFirst(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_BaseNameTypePreferredFamilyNameFirst_QNAME, AUCodeSetsYesOrNoCategoryType.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Title", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypeTitle(String value) {
+        return new JAXBElement<String>(_BaseNameTypeTitle_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MiddleName", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypeMiddleName(String value) {
+        return new JAXBElement<String>(_BaseNameTypeMiddleName_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferredGivenName", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypePreferredGivenName(String value) {
+        return new JAXBElement<String>(_BaseNameTypePreferredGivenName_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FamilyNameFirst", scope = BaseNameType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createBaseNameTypeFamilyNameFirst(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_BaseNameTypeFamilyNameFirst_QNAME, AUCodeSetsYesOrNoCategoryType.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GivenName", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypeGivenName(String value) {
+        return new JAXBElement<String>(_BaseNameTypeGivenName_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FullName", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypeFullName(String value) {
+        return new JAXBElement<String>(_BaseNameTypeFullName_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Suffix", scope = BaseNameType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createBaseNameTypeSuffix(String value) {
+        return new JAXBElement<String>(_BaseNameTypeSuffix_QNAME, String.class, BaseNameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = DwellingArrangementType.class)
+    public JAXBElement<OtherCodeListType> createDwellingArrangementTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, DwellingArrangementType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectArea", scope = ACStrandSubjectAreaType.class)
+    public JAXBElement<SubjectAreaType> createACStrandSubjectAreaTypeSubjectArea(SubjectAreaType value) {
+        return new JAXBElement<SubjectAreaType>(_SchoolCourseInfoOverrideTypeSubjectArea_QNAME, SubjectAreaType.class, ACStrandSubjectAreaType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = StaffPersonalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStaffPersonalTypeStateProvinceId(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsStaffStatusType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmploymentStatus", scope = StaffPersonalType.class)
+    public JAXBElement<AUCodeSetsStaffStatusType> createStaffPersonalTypeEmploymentStatus(AUCodeSetsStaffStatusType value) {
+        return new JAXBElement<AUCodeSetsStaffStatusType>(_StaffAssignmentTypeEmploymentStatus_QNAME, AUCodeSetsStaffStatusType.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Title", scope = StaffPersonalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStaffPersonalTypeTitle(String value) {
+        return new JAXBElement<String>(_BaseNameTypeTitle_QNAME, String.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = StaffPersonalType.class)
+    public JAXBElement<OtherIdListType> createStaffPersonalTypeOtherIdList(OtherIdListType value) {
+        return new JAXBElement<OtherIdListType>(_StudentContactPersonalTypeOtherIdList_QNAME, OtherIdListType.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StaffMostRecentContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MostRecent", scope = StaffPersonalType.class)
+    public JAXBElement<StaffMostRecentContainerType> createStaffPersonalTypeMostRecent(StaffMostRecentContainerType value) {
+        return new JAXBElement<StaffMostRecentContainerType>(_StudentPersonalTypeMostRecent_QNAME, StaffMostRecentContainerType.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicIdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ElectronicIdList", scope = StaffPersonalType.class)
+    public JAXBElement<ElectronicIdListType> createStaffPersonalTypeElectronicIdList(ElectronicIdListType value) {
+        return new JAXBElement<ElectronicIdListType>(_StudentPersonalTypeElectronicIdList_QNAME, ElectronicIdListType.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StaffPersonalType.class)
+    public JAXBElement<SIFExtendedElementsType> createStaffPersonalTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StaffPersonalType.class)
+    public JAXBElement<SIFMetadataType> createStaffPersonalTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StaffPersonalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AttendanceInfoType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherAttendance", scope = CalendarDate.class)
+    public JAXBElement<AttendanceInfoType> createCalendarDateTeacherAttendance(AttendanceInfoType value) {
+        return new JAXBElement<AttendanceInfoType>(_CalendarDateTeacherAttendance_QNAME, AttendanceInfoType.class, CalendarDate.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AttendanceInfoType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AdministratorAttendance", scope = CalendarDate.class)
+    public JAXBElement<AttendanceInfoType> createCalendarDateAdministratorAttendance(AttendanceInfoType value) {
+        return new JAXBElement<AttendanceInfoType>(_CalendarDateAdministratorAttendance_QNAME, AttendanceInfoType.class, CalendarDate.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AttendanceInfoType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentAttendance", scope = CalendarDate.class)
+    public JAXBElement<AttendanceInfoType> createCalendarDateStudentAttendance(AttendanceInfoType value) {
+        return new JAXBElement<AttendanceInfoType>(_CalendarDateStudentAttendance_QNAME, AttendanceInfoType.class, CalendarDate.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = CalendarDate.class)
+    public JAXBElement<SIFExtendedElementsType> createCalendarDateSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, CalendarDate.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = CalendarDate.class)
+    public JAXBElement<SIFMetadataType> createCalendarDateSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, CalendarDate.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CalendarDateNumber", scope = CalendarDate.class)
+    public JAXBElement<Long> createCalendarDateCalendarDateNumber(Long value) {
+        return new JAXBElement<Long>(_CalendarDateCalendarDateNumber_QNAME, Long.class, CalendarDate.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = AddressType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressTypeLocalId(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RadioContact", scope = AddressType.class)
+    public JAXBElement<String> createAddressTypeRadioContact(String value) {
+        return new JAXBElement<String>(_AddressTypeRadioContact_QNAME, String.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link MapReferenceType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MapReference", scope = AddressType.class)
+    public JAXBElement<MapReferenceType> createAddressTypeMapReference(MapReferenceType value) {
+        return new JAXBElement<MapReferenceType>(_AddressTypeMapReference_QNAME, MapReferenceType.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressGlobalUID", scope = AddressType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createAddressTypeAddressGlobalUID(String value) {
+        return new JAXBElement<String>(_AddressTypeAddressGlobalUID_QNAME, String.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvince", scope = AddressType.class)
+    public JAXBElement<String> createAddressTypeStateProvince(String value) {
+        return new JAXBElement<String>(_AddressTypeStateProvince_QNAME, String.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Country", scope = AddressType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createAddressTypeCountry(String value) {
+        return new JAXBElement<String>(_AddressTypeCountry_QNAME, String.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EffectiveToDate", scope = AddressType.class)
+    public JAXBElement<XMLGregorianCalendar> createAddressTypeEffectiveToDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_AddressTypeEffectiveToDate_QNAME, XMLGregorianCalendar.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EffectiveFromDate", scope = AddressType.class)
+    public JAXBElement<XMLGregorianCalendar> createAddressTypeEffectiveFromDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_AddressTypeEffectiveFromDate_QNAME, XMLGregorianCalendar.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Community", scope = AddressType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createAddressTypeCommunity(String value) {
+        return new JAXBElement<String>(_AddressTypeCommunity_QNAME, String.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StatisticalAreasType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StatisticalAreas", scope = AddressType.class)
+    public JAXBElement<StatisticalAreasType> createAddressTypeStatisticalAreas(StatisticalAreasType value) {
+        return new JAXBElement<StatisticalAreasType>(_AddressTypeStatisticalAreas_QNAME, StatisticalAreasType.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GridLocationType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GridLocation", scope = AddressType.class)
+    public JAXBElement<GridLocationType> createAddressTypeGridLocation(GridLocationType value) {
+        return new JAXBElement<GridLocationType>(_AddressTypeGridLocation_QNAME, GridLocationType.class, AddressType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GradingCategory", scope = GradingAssignmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentTypeGradingCategory(String value) {
+        return new JAXBElement<String>(_GradingAssignmentTypeGradingCategory_QNAME, String.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = GradingAssignmentType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MaxAttemptsAllowed", scope = GradingAssignmentType.class)
+    public JAXBElement<BigInteger> createGradingAssignmentTypeMaxAttemptsAllowed(BigInteger value) {
+        return new JAXBElement<BigInteger>(_GradingAssignmentTypeMaxAttemptsAllowed_QNAME, BigInteger.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DetailedDescriptionURL", scope = GradingAssignmentType.class)
+    public JAXBElement<String> createGradingAssignmentTypeDetailedDescriptionURL(String value) {
+        return new JAXBElement<String>(_GradingAssignmentTypeDetailedDescriptionURL_QNAME, String.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupRefId", scope = GradingAssignmentType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentTypeTeachingGroupRefId(String value) {
+        return new JAXBElement<String>(_GradingAssignmentTypeTeachingGroupRefId_QNAME, String.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreateDate", scope = GradingAssignmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createGradingAssignmentTypeCreateDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_GradingAssignmentTypeCreateDate_QNAME, XMLGregorianCalendar.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = GradingAssignmentType.class)
+    public JAXBElement<SIFExtendedElementsType> createGradingAssignmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = GradingAssignmentType.class)
+    public JAXBElement<SIFMetadataType> createGradingAssignmentTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DetailedDescriptionBinary", scope = GradingAssignmentType.class)
+    public JAXBElement<byte[]> createGradingAssignmentTypeDetailedDescriptionBinary(byte[] value) {
+        return new JAXBElement<byte[]>(_GradingAssignmentTypeDetailedDescriptionBinary_QNAME, byte[].class, GradingAssignmentType.class, ((byte[]) value));
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DueDate", scope = GradingAssignmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createGradingAssignmentTypeDueDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_GradingAssignmentTypeDueDate_QNAME, XMLGregorianCalendar.class, GradingAssignmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Weight", scope = GradingAssignmentType.class)
+    public JAXBElement<BigDecimal> createGradingAssignmentTypeWeight(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_GradingAssignmentTypeWeight_QNAME, BigDecimal.class, GradingAssignmentType.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
@@ -5758,7 +9406,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VisaStatisticalCode", scope = DemographicsType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     public JAXBElement<String> createDemographicsTypeVisaStatisticalCode(String value) {
-        return new JAXBElement<String>(_DemographicsTypeVisaStatisticalCode_QNAME, String.class, DemographicsType.class, value);
+        return new JAXBElement<String>(_VisaSubClassTypeVisaStatisticalCode_QNAME, String.class, DemographicsType.class, value);
     }
 
     /**
@@ -5824,7 +9472,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VisaExpiryDate", scope = DemographicsType.class)
     public JAXBElement<XMLGregorianCalendar> createDemographicsTypeVisaExpiryDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_DemographicsTypeVisaExpiryDate_QNAME, XMLGregorianCalendar.class, DemographicsType.class, value);
+        return new JAXBElement<XMLGregorianCalendar>(_VisaSubClassTypeVisaExpiryDate_QNAME, XMLGregorianCalendar.class, DemographicsType.class, value);
     }
 
     /**
@@ -5997,784 +9645,479 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VisaStatisticalCode", scope = VisaSubClassType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVisaSubClassTypeVisaStatisticalCode(String value) {
-        return new JAXBElement<String>(_DemographicsTypeVisaStatisticalCode_QNAME, String.class, VisaSubClassType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ATEExpiryDate", scope = VisaSubClassType.class)
-    public JAXBElement<XMLGregorianCalendar> createVisaSubClassTypeATEExpiryDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_VisaSubClassTypeATEExpiryDate_QNAME, XMLGregorianCalendar.class, VisaSubClassType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VisaExpiryDate", scope = VisaSubClassType.class)
-    public JAXBElement<XMLGregorianCalendar> createVisaSubClassTypeVisaExpiryDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_DemographicsTypeVisaExpiryDate_QNAME, XMLGregorianCalendar.class, VisaSubClassType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ATEStartDate", scope = VisaSubClassType.class)
-    public JAXBElement<XMLGregorianCalendar> createVisaSubClassTypeATEStartDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_VisaSubClassTypeATEStartDate_QNAME, XMLGregorianCalendar.class, VisaSubClassType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningStandardItems", scope = EducationFilterType.class)
-    public JAXBElement<LearningStandardsType> createEducationFilterTypeLearningStandardItems(LearningStandardsType value) {
-        return new JAXBElement<LearningStandardsType>(_LearningStandardItems_QNAME, LearningStandardsType.class, EducationFilterType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DurationValue", scope = AttendanceTimeType.class)
-    public JAXBElement<BigDecimal> createAttendanceTimeTypeDurationValue(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_AttendanceTimeTypeDurationValue_QNAME, BigDecimal.class, AttendanceTimeType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "KeepOld", scope = ResourceBookingType.class)
+    public JAXBElement<Boolean> createResourceBookingTypeKeepOld(Boolean value) {
+        return new JAXBElement<Boolean>(_ResourceBookingTypeKeepOld_QNAME, Boolean.class, ResourceBookingType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceNote", scope = AttendanceTimeType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScheduledActivityRefId", scope = ResourceBookingType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createResourceBookingTypeScheduledActivityRefId(String value) {
+        return new JAXBElement<String>(_StudentPeriodAttendanceTypeScheduledActivityRefId_QNAME, String.class, ResourceBookingType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Reason", scope = ResourceBookingType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAttendanceTimeTypeAttendanceNote(String value) {
-        return new JAXBElement<String>(_AttendanceTimeTypeAttendanceNote_QNAME, String.class, AttendanceTimeType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EntryDate", scope = StudentSectionEnrollmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentSectionEnrollmentTypeEntryDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentSectionEnrollmentTypeEntryDate_QNAME, XMLGregorianCalendar.class, StudentSectionEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StudentSectionEnrollmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentSectionEnrollmentTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StudentSectionEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitDate", scope = StudentSectionEnrollmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentSectionEnrollmentTypeExitDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentSectionEnrollmentTypeExitDate_QNAME, XMLGregorianCalendar.class, StudentSectionEnrollmentType.class, value);
+    public JAXBElement<String> createResourceBookingTypeReason(String value) {
+        return new JAXBElement<String>(_ResourceBookingTypeReason_QNAME, String.class, ResourceBookingType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentSectionEnrollmentType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentSectionEnrollmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentSectionEnrollmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ResourceBookingType.class)
+    public JAXBElement<SIFExtendedElementsType> createResourceBookingTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ResourceBookingType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentSectionEnrollmentType.class)
-    public JAXBElement<SIFMetadataType> createStudentSectionEnrollmentTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentSectionEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = EnglishProficiencyType.class)
-    public JAXBElement<OtherCodeListType> createEnglishProficiencyTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, EnglishProficiencyType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "WordCount", scope = StimulusType.class)
-    public JAXBElement<BigInteger> createStimulusTypeWordCount(BigInteger value) {
-        return new JAXBElement<BigInteger>(_StimulusTypeWordCount_QNAME, BigInteger.class, StimulusType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ResourceBookingType.class)
+    public JAXBElement<SIFMetadataType> createResourceBookingTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, ResourceBookingType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TextType", scope = StimulusType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ToPeriod", scope = ResourceBookingType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStimulusTypeTextType(String value) {
-        return new JAXBElement<String>(_StimulusTypeTextType_QNAME, String.class, StimulusType.class, value);
+    public JAXBElement<String> createResourceBookingTypeToPeriod(String value) {
+        return new JAXBElement<String>(_ResourceBookingTypeToPeriod_QNAME, String.class, ResourceBookingType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TextGenre", scope = StimulusType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FromPeriod", scope = ResourceBookingType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStimulusTypeTextGenre(String value) {
-        return new JAXBElement<String>(_StimulusTypeTextGenre_QNAME, String.class, StimulusType.class, value);
+    public JAXBElement<String> createResourceBookingTypeFromPeriod(String value) {
+        return new JAXBElement<String>(_ResourceBookingTypeFromPeriod_QNAME, String.class, ResourceBookingType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResourceBookingType.ResourceRefId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ResourceRefId", scope = ResourceBookingType.class)
+    public JAXBElement<ResourceBookingType.ResourceRefId> createResourceBookingTypeResourceRefId(ResourceBookingType.ResourceRefId value) {
+        return new JAXBElement<ResourceBookingType.ResourceRefId>(_ResourceBookingTypeResourceRefId_QNAME, ResourceBookingType.ResourceRefId.class, ResourceBookingType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AuthorsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Authors", scope = LearningStandardDocumentType.class)
+    public JAXBElement<AuthorsType> createLearningStandardDocumentTypeAuthors(AuthorsType value) {
+        return new JAXBElement<AuthorsType>(_LearningStandardDocumentTypeAuthors_QNAME, AuthorsType.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalArchiveDate", scope = LearningStandardDocumentType.class)
+    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeLocalArchiveDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeLocalArchiveDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndOfLifeDate", scope = LearningStandardDocumentType.class)
+    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeEndOfLifeDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeEndOfLifeDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DocumentDate", scope = LearningStandardDocumentType.class)
+    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeDocumentDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeDocumentDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = FinancialAccountType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createFinancialAccountTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, FinancialAccountType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = LearningStandardDocumentType.class)
+    public JAXBElement<String> createLearningStandardDocumentTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalAdoptionDate", scope = LearningStandardDocumentType.class)
+    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeLocalAdoptionDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeLocalAdoptionDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardDocumentType.Copyright }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Copyright", scope = LearningStandardDocumentType.class)
+    public JAXBElement<LearningStandardDocumentType.Copyright> createLearningStandardDocumentTypeCopyright(LearningStandardDocumentType.Copyright value) {
+        return new JAXBElement<LearningStandardDocumentType.Copyright>(_LearningStandardDocumentTypeCopyright_QNAME, LearningStandardDocumentType.Copyright.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardsDocumentType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RelatedLearningStandards", scope = LearningStandardDocumentType.class)
+    public JAXBElement<LearningStandardsDocumentType> createLearningStandardDocumentTypeRelatedLearningStandards(LearningStandardsDocumentType value) {
+        return new JAXBElement<LearningStandardsDocumentType>(_LearningStandardDocumentTypeRelatedLearningStandards_QNAME, LearningStandardsDocumentType.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractContentElementType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RichDescription", scope = LearningStandardDocumentType.class)
+    public JAXBElement<AbstractContentElementType> createLearningStandardDocumentTypeRichDescription(AbstractContentElementType value) {
+        return new JAXBElement<AbstractContentElementType>(_LearningStandardDocumentTypeRichDescription_QNAME, AbstractContentElementType.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RepositoryDate", scope = LearningStandardDocumentType.class)
+    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeRepositoryDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeRepositoryDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = FinancialAccountType.class)
-    public JAXBElement<SIFExtendedElementsType> createFinancialAccountTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, FinancialAccountType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = FinancialAccountType.class)
-    public JAXBElement<SIFMetadataType> createFinancialAccountTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, FinancialAccountType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentAccountRefId", scope = FinancialAccountType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFinancialAccountTypeParentAccountRefId(String value) {
-        return new JAXBElement<String>(_FinancialAccountTypeParentAccountRefId_QNAME, String.class, FinancialAccountType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = FinancialAccountType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createFinancialAccountTypeChargedLocationInfoRefId(String value) {
-        return new JAXBElement<String>(_FinancialAccountTypeChargedLocationInfoRefId_QNAME, String.class, FinancialAccountType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = DwellingArrangementType.class)
-    public JAXBElement<OtherCodeListType> createDwellingArrangementTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, DwellingArrangementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = SubjectAreaType.class)
-    public JAXBElement<OtherCodeListType> createSubjectAreaTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, SubjectAreaType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsSourceCodeTypeType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactSequenceSource", scope = StudentContactRelationshipType.class)
-    public JAXBElement<AUCodeSetsSourceCodeTypeType> createStudentContactRelationshipTypeContactSequenceSource(AUCodeSetsSourceCodeTypeType value) {
-        return new JAXBElement<AUCodeSetsSourceCodeTypeType>(_StudentContactRelationshipTypeContactSequenceSource_QNAME, AUCodeSetsSourceCodeTypeType.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MainlySpeaksEnglishAtHome", scope = StudentContactRelationshipType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentContactRelationshipTypeMainlySpeaksEnglishAtHome(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentContactRelationshipTypeMainlySpeaksEnglishAtHome_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ContactFlagsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactFlags", scope = StudentContactRelationshipType.class)
-    public JAXBElement<ContactFlagsType> createStudentContactRelationshipTypeContactFlags(ContactFlagsType value) {
-        return new JAXBElement<ContactFlagsType>(_StudentContactRelationshipTypeContactFlags_QNAME, ContactFlagsType.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HouseholdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HouseholdList", scope = StudentContactRelationshipType.class)
-    public JAXBElement<HouseholdListType> createStudentContactRelationshipTypeHouseholdList(HouseholdListType value) {
-        return new JAXBElement<HouseholdListType>(_StudentContactRelationshipTypeHouseholdList_QNAME, HouseholdListType.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactSequence", scope = StudentContactRelationshipType.class)
-    public JAXBElement<Long> createStudentContactRelationshipTypeContactSequence(Long value) {
-        return new JAXBElement<Long>(_StudentContactRelationshipTypeContactSequence_QNAME, Long.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentContactRelationshipType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentContactRelationshipTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentContactRelationshipType.class)
-    public JAXBElement<SIFMetadataType> createStudentContactRelationshipTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentRelationshipStatus", scope = StudentContactRelationshipType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentContactRelationshipTypeParentRelationshipStatus(String value) {
-        return new JAXBElement<String>(_StudentContactRelationshipTypeParentRelationshipStatus_QNAME, String.class, StudentContactRelationshipType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Discount", scope = DebtorType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createDebtorTypeDiscount(String value) {
-        return new JAXBElement<String>(_DebtorTypeDiscount_QNAME, String.class, DebtorType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BillingName", scope = DebtorType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createDebtorTypeBillingName(String value) {
-        return new JAXBElement<String>(_DebtorTypeBillingName_QNAME, String.class, DebtorType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = DebtorType.class)
-    public JAXBElement<AddressListType> createDebtorTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, DebtorType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BillingNote", scope = DebtorType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createDebtorTypeBillingNote(String value) {
-        return new JAXBElement<String>(_DebtorTypeBillingNote_QNAME, String.class, DebtorType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = DebtorType.class)
-    public JAXBElement<SIFExtendedElementsType> createDebtorTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, DebtorType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = DebtorType.class)
-    public JAXBElement<SIFMetadataType> createDebtorTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, DebtorType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevel", scope = StudentMostRecentContainerType.class)
-    public JAXBElement<YearLevelType> createStudentMostRecentContainerTypeYearLevel(YearLevelType value) {
-        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeYearLevel_QNAME, YearLevelType.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2Language", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent2Language(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2Language_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2EmploymentType", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent2EmploymentType(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2EmploymentType_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1Language", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent1Language(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1Language_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalCampusId", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeLocalCampusId(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeLocalCampusId_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1EmploymentType", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent1EmploymentType(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1EmploymentType_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1SchoolEducationLevel", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent1SchoolEducationLevel(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1SchoolEducationLevel_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FFPOS", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeFFPOS(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeFFPOS_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2SchoolEducationLevel", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent2SchoolEducationLevel(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2SchoolEducationLevel_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolACARAId", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeSchoolACARAId(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeSchoolACARAId_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TestLevel", scope = StudentMostRecentContainerType.class)
-    public JAXBElement<YearLevelType> createStudentMostRecentContainerTypeTestLevel(YearLevelType value) {
-        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeTestLevel_QNAME, YearLevelType.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homegroup", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeHomegroup(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeHomegroup_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ClassCode", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeClassCode(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeClassCode_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HomeroomLocalId", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeHomeroomLocalId(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeHomeroomLocalId_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent1NonSchoolEducation", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent1NonSchoolEducation(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent1NonSchoolEducation_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Parent2NonSchoolEducation", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeParent2NonSchoolEducation(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeParent2NonSchoolEducation_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherEnrollmentSchoolACARAId", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeOtherEnrollmentSchoolACARAId(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeOtherEnrollmentSchoolACARAId_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ReportingSchoolId", scope = StudentMostRecentContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentMostRecentContainerTypeReportingSchoolId(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeReportingSchoolId_QNAME, String.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTE", scope = StudentMostRecentContainerType.class)
-    public JAXBElement<BigDecimal> createStudentMostRecentContainerTypeFTE(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_StudentMostRecentContainerTypeFTE_QNAME, BigDecimal.class, StudentMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StaffActivityExtensionType.class)
-    public JAXBElement<OtherCodeListType> createStaffActivityExtensionTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, StaffActivityExtensionType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentActivityType.class)
-    public JAXBElement<OtherCodeListType> createStudentActivityTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = TimeTablePeriodType.class)
-    public JAXBElement<XMLGregorianCalendar> createTimeTablePeriodTypeStartTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeStartTime_QNAME, XMLGregorianCalendar.class, TimeTablePeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndTime", scope = TimeTablePeriodType.class)
-    public JAXBElement<XMLGregorianCalendar> createTimeTablePeriodTypeEndTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTablePeriodTypeEndTime_QNAME, XMLGregorianCalendar.class, TimeTablePeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalMinutes", scope = TimeTablePeriodType.class)
-    public JAXBElement<Long> createTimeTablePeriodTypeInstructionalMinutes(Long value) {
-        return new JAXBElement<Long>(_TimeTablePeriodTypeInstructionalMinutes_QNAME, Long.class, TimeTablePeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "UseInAttendanceCalculations", scope = TimeTablePeriodType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTablePeriodTypeUseInAttendanceCalculations(String value) {
-        return new JAXBElement<String>(_TimeTablePeriodTypeUseInAttendanceCalculations_QNAME, String.class, TimeTablePeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RegularSchoolPeriod", scope = TimeTablePeriodType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTablePeriodTypeRegularSchoolPeriod(String value) {
-        return new JAXBElement<String>(_TimeTablePeriodTypeRegularSchoolPeriod_QNAME, String.class, TimeTablePeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BellPeriod", scope = TimeTablePeriodType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTablePeriodTypeBellPeriod(String value) {
-        return new JAXBElement<String>(_TimeTablePeriodTypeBellPeriod_QNAME, String.class, TimeTablePeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = AttendanceCodeType.class)
-    public JAXBElement<OtherCodeListType> createAttendanceCodeTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, AttendanceCodeType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ReligionType.class)
-    public JAXBElement<OtherCodeListType> createReligionTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, ReligionType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StaffActivityExtensionType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffActivity", scope = StaffAssignmentType.class)
-    public JAXBElement<StaffActivityExtensionType> createStaffAssignmentTypeStaffActivity(StaffActivityExtensionType value) {
-        return new JAXBElement<StaffActivityExtensionType>(_StaffAssignmentTypeStaffActivity_QNAME, StaffActivityExtensionType.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CalendarSummaryListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CalendarSummaryList", scope = StaffAssignmentType.class)
-    public JAXBElement<CalendarSummaryListType> createStaffAssignmentTypeCalendarSummaryList(CalendarSummaryListType value) {
-        return new JAXBElement<CalendarSummaryListType>(_StaffAssignmentTypeCalendarSummaryList_QNAME, CalendarSummaryListType.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsStaffStatusType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmploymentStatus", scope = StaffAssignmentType.class)
-    public JAXBElement<AUCodeSetsStaffStatusType> createStaffAssignmentTypeEmploymentStatus(AUCodeSetsStaffStatusType value) {
-        return new JAXBElement<AUCodeSetsStaffStatusType>(_StaffAssignmentTypeEmploymentStatus_QNAME, AUCodeSetsStaffStatusType.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StaffAssignmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStaffAssignmentTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobStartDate", scope = StaffAssignmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStaffAssignmentTypeJobStartDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StaffAssignmentTypeJobStartDate_QNAME, XMLGregorianCalendar.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = StaffAssignmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStaffAssignmentTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobEndDate", scope = StaffAssignmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStaffAssignmentTypeJobEndDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StaffAssignmentTypeJobEndDate_QNAME, XMLGregorianCalendar.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CasualReliefTeacher", scope = StaffAssignmentType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStaffAssignmentTypeCasualReliefTeacher(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StaffAssignmentTypeCasualReliefTeacher_QNAME, AUCodeSetsYesOrNoCategoryType.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "House", scope = StaffAssignmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStaffAssignmentTypeHouse(String value) {
-        return new JAXBElement<String>(_StaffAssignmentTypeHouse_QNAME, String.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homegroup", scope = StaffAssignmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStaffAssignmentTypeHomegroup(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeHomegroup_QNAME, String.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobFTE", scope = StaffAssignmentType.class)
-    public JAXBElement<BigDecimal> createStaffAssignmentTypeJobFTE(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_StaffAssignmentTypeJobFTE_QNAME, BigDecimal.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JobFunction", scope = StaffAssignmentType.class)
-    public JAXBElement<String> createStaffAssignmentTypeJobFunction(String value) {
-        return new JAXBElement<String>(_StaffAssignmentTypeJobFunction_QNAME, String.class, StaffAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StaffAssignmentType.class)
-    public JAXBElement<SIFExtendedElementsType> createStaffAssignmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StaffAssignmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = LearningStandardDocumentType.class)
+    public JAXBElement<SIFExtendedElementsType> createLearningStandardDocumentTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LearningStandardDocumentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = StaffAssignmentType.class)
-    public JAXBElement<YearLevelsType> createStaffAssignmentTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, StaffAssignmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = LearningStandardDocumentType.class)
+    public JAXBElement<YearLevelsType> createLearningStandardDocumentTypeYearLevels(YearLevelsType value) {
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, LearningStandardDocumentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StaffAssignmentType.class)
-    public JAXBElement<SIFMetadataType> createStaffAssignmentTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StaffAssignmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = LearningStandardDocumentType.class)
+    public JAXBElement<SIFMetadataType> createLearningStandardDocumentTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, LearningStandardDocumentType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StaffSubjectListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffSubjectList", scope = StaffAssignmentType.class)
-    public JAXBElement<StaffSubjectListType> createStaffAssignmentTypeStaffSubjectList(StaffSubjectListType value) {
-        return new JAXBElement<StaffSubjectListType>(_StaffAssignmentTypeStaffSubjectList_QNAME, StaffSubjectListType.class, StaffAssignmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OrganizationContactPoint", scope = LearningStandardDocumentType.class)
+    public JAXBElement<String> createLearningStandardDocumentTypeOrganizationContactPoint(String value) {
+        return new JAXBElement<String>(_LearningStandardDocumentTypeOrganizationContactPoint_QNAME, String.class, LearningStandardDocumentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentSchoolId", scope = CampusContainerType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createCampusContainerTypeParentSchoolId(String value) {
+        return new JAXBElement<String>(_CampusContainerTypeParentSchoolId_QNAME, String.class, CampusContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsSchoolLevelType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CampusType", scope = CampusContainerType.class)
+    public JAXBElement<AUCodeSetsSchoolLevelType> createCampusContainerTypeCampusType(AUCodeSetsSchoolLevelType value) {
+        return new JAXBElement<AUCodeSetsSchoolLevelType>(_CampusContainerTypeCampusType_QNAME, AUCodeSetsSchoolLevelType.class, CampusContainerType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ProgramFundingSourceType.class)
+    public JAXBElement<OtherCodeListType> createProgramFundingSourceTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, ProgramFundingSourceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ProgramAvailabilityType.class)
+    public JAXBElement<OtherCodeListType> createProgramAvailabilityTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, ProgramAvailabilityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = SessionInfoType.class)
+    public JAXBElement<XMLGregorianCalendar> createSessionInfoTypeStartTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TeachingGroupPeriodTypeStartTime_QNAME, XMLGregorianCalendar.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RollMarked", scope = SessionInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSessionInfoTypeRollMarked(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SessionInfoTypeRollMarked_QNAME, AUCodeSetsYesOrNoCategoryType.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = SessionInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSessionInfoTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomNumber", scope = SessionInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSessionInfoTypeRoomNumber(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeRoomNumber_QNAME, String.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SessionInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createSessionInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SessionInfoType.class)
+    public JAXBElement<SIFMetadataType> createSessionInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffPersonalLocalId", scope = SessionInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSessionInfoTypeStaffPersonalLocalId(String value) {
+        return new JAXBElement<String>(_SessionInfoTypeStaffPersonalLocalId_QNAME, String.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinishTime", scope = SessionInfoType.class)
+    public JAXBElement<XMLGregorianCalendar> createSessionInfoTypeFinishTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeFinishTime_QNAME, XMLGregorianCalendar.class, SessionInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LocationType.LocationRefId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationRefId", scope = LocationType.class)
+    public JAXBElement<LocationType.LocationRefId> createLocationTypeLocationRefId(LocationType.LocationRefId value) {
+        return new JAXBElement<LocationType.LocationRefId>(_LocationTypeLocationRefId_QNAME, LocationType.LocationRefId.class, LocationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationName", scope = LocationType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createLocationTypeLocationName(String value) {
+        return new JAXBElement<String>(_LocationTypeLocationName_QNAME, String.class, LocationType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentLocalId", scope = TeachingGroupStudentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupStudentTypeStudentLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupStudentTypeStudentLocalId_QNAME, String.class, TeachingGroupStudentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = TeachingGroupStudentType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTeachingGroupStudentTypeStudentPersonalRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeStudentPersonalRefId_QNAME, String.class, TeachingGroupStudentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NameOfRecordType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = TeachingGroupStudentType.class)
+    public JAXBElement<NameOfRecordType> createTeachingGroupStudentTypeName(NameOfRecordType value) {
+        return new JAXBElement<NameOfRecordType>(_EvaluationTypeName_QNAME, NameOfRecordType.class, TeachingGroupStudentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = GradingAssignmentScoreType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentScoreTypeStudentPersonalRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeStudentPersonalRefId_QNAME, String.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = GradingAssignmentScoreType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentScoreTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScoreDescription", scope = GradingAssignmentScoreType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentScoreTypeScoreDescription(String value) {
+        return new JAXBElement<String>(_GradingAssignmentScoreTypeScoreDescription_QNAME, String.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupRefId", scope = GradingAssignmentScoreType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentScoreTypeTeachingGroupRefId(String value) {
+        return new JAXBElement<String>(_GradingAssignmentTypeTeachingGroupRefId_QNAME, String.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScorePoints", scope = GradingAssignmentScoreType.class)
+    public JAXBElement<Long> createGradingAssignmentScoreTypeScorePoints(Long value) {
+        return new JAXBElement<Long>(_GradingAssignmentScoreTypeScorePoints_QNAME, Long.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = GradingAssignmentScoreType.class)
+    public JAXBElement<SIFExtendedElementsType> createGradingAssignmentScoreTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScorePercent", scope = GradingAssignmentScoreType.class)
+    public JAXBElement<BigDecimal> createGradingAssignmentScoreTypeScorePercent(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_GradingAssignmentScoreTypeScorePercent_QNAME, BigDecimal.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = GradingAssignmentScoreType.class)
+    public JAXBElement<SIFMetadataType> createGradingAssignmentScoreTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScoreLetter", scope = GradingAssignmentScoreType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createGradingAssignmentScoreTypeScoreLetter(String value) {
+        return new JAXBElement<String>(_GradingAssignmentScoreTypeScoreLetter_QNAME, String.class, GradingAssignmentScoreType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Preference", scope = PhoneNumberType.class)
+    public JAXBElement<Long> createPhoneNumberTypePreference(Long value) {
+        return new JAXBElement<Long>(_PhoneNumberTypePreference_QNAME, Long.class, PhoneNumberType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ListedStatus", scope = PhoneNumberType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPhoneNumberTypeListedStatus(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PhoneNumberTypeListedStatus_QNAME, AUCodeSetsYesOrNoCategoryType.class, PhoneNumberType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Extension", scope = PhoneNumberType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createPhoneNumberTypeExtension(String value) {
+        return new JAXBElement<String>(_PhoneNumberTypeExtension_QNAME, String.class, PhoneNumberType.class, value);
     }
 
     /**
@@ -6898,74 +10241,954 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Preference", scope = PhoneNumberType.class)
-    public JAXBElement<Long> createPhoneNumberTypePreference(Long value) {
-        return new JAXBElement<Long>(_PhoneNumberTypePreference_QNAME, Long.class, PhoneNumberType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ListedStatus", scope = PhoneNumberType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPhoneNumberTypeListedStatus(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PhoneNumberTypeListedStatus_QNAME, AUCodeSetsYesOrNoCategoryType.class, PhoneNumberType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Capacity", scope = RoomInfoType.class)
+    public JAXBElement<Long> createRoomInfoTypeCapacity(Long value) {
+        return new JAXBElement<Long>(_RoomInfoTypeCapacity_QNAME, Long.class, RoomInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Extension", scope = PhoneNumberType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = RoomInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPhoneNumberTypeExtension(String value) {
-        return new JAXBElement<String>(_PhoneNumberTypeExtension_QNAME, String.class, PhoneNumberType.class, value);
+    public JAXBElement<String> createRoomInfoTypeLocalId(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, RoomInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumber", scope = RoomInfoType.class)
+    public JAXBElement<PhoneNumberType> createRoomInfoTypePhoneNumber(PhoneNumberType value) {
+        return new JAXBElement<PhoneNumberType>(_ContactTypePhoneNumber_QNAME, PhoneNumberType.class, RoomInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StaffListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffList", scope = RoomInfoType.class)
+    public JAXBElement<StaffListType> createRoomInfoTypeStaffList(StaffListType value) {
+        return new JAXBElement<StaffListType>(_RoomInfoTypeStaffList_QNAME, StaffListType.class, RoomInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Size", scope = RoomInfoType.class)
+    public JAXBElement<BigDecimal> createRoomInfoTypeSize(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_RoomInfoTypeSize_QNAME, BigDecimal.class, RoomInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ElementName", scope = AggregateCharacteristicInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAggregateCharacteristicInfoTypeElementName(String value) {
-        return new JAXBElement<String>(_AggregateCharacteristicInfoTypeElementName_QNAME, String.class, AggregateCharacteristicInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HomeroomNumber", scope = RoomInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createRoomInfoTypeHomeroomNumber(String value) {
+        return new JAXBElement<String>(_RoomInfoTypeHomeroomNumber_QNAME, String.class, RoomInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = AggregateCharacteristicInfoType.class)
-    public JAXBElement<String> createAggregateCharacteristicInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, AggregateCharacteristicInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = RoomInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createRoomInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, RoomInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = AggregateCharacteristicInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createAggregateCharacteristicInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, AggregateCharacteristicInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = RoomInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createRoomInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, RoomInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Building", scope = RoomInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createRoomInfoTypeBuilding(String value) {
+        return new JAXBElement<String>(_RoomInfoTypeBuilding_QNAME, String.class, RoomInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = AggregateCharacteristicInfoType.class)
-    public JAXBElement<SIFMetadataType> createAggregateCharacteristicInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, AggregateCharacteristicInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = RoomInfoType.class)
+    public JAXBElement<SIFMetadataType> createRoomInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, RoomInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomType", scope = RoomInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createRoomInfoTypeRoomType(String value) {
+        return new JAXBElement<String>(_RoomInfoTypeRoomType_QNAME, String.class, RoomInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestletRefId", scope = NAPTestletCodeFrameType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPTestletCodeFrameTypeNAPTestletRefId(String value) {
+        return new JAXBElement<String>(_NAPTestletResponseTypeNAPTestletRefId_QNAME, String.class, NAPTestletCodeFrameType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AssociatedObjectsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AssociatedObjects", scope = ComponentType.class)
+    public JAXBElement<AssociatedObjectsType> createComponentTypeAssociatedObjects(AssociatedObjectsType value) {
+        return new JAXBElement<AssociatedObjectsType>(_ComponentTypeAssociatedObjects_QNAME, AssociatedObjectsType.class, ComponentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StrategiesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Strategies", scope = ComponentType.class)
+    public JAXBElement<StrategiesType> createComponentTypeStrategies(StrategiesType value) {
+        return new JAXBElement<StrategiesType>(_ComponentTypeStrategies_QNAME, StrategiesType.class, ComponentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = ComponentType.class)
+    public JAXBElement<String> createComponentTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, ComponentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ProgramStatusType.class)
-    public JAXBElement<OtherCodeListType> createProgramStatusTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, ProgramStatusType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = TimeTableSubjectType.class)
+    public JAXBElement<OtherCodeListType> createTimeTableSubjectTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = TimeTableSubjectType.class)
+    public JAXBElement<XMLGregorianCalendar> createTimeTableSubjectTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AcademicYear", scope = TimeTableSubjectType.class)
+    public JAXBElement<YearLevelType> createTimeTableSubjectTypeAcademicYear(YearLevelType value) {
+        return new JAXBElement<YearLevelType>(_TimeTableSubjectTypeAcademicYear_QNAME, YearLevelType.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Faculty", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeFaculty(String value) {
+        return new JAXBElement<String>(_TimeTableSubjectTypeFaculty_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Semester", scope = TimeTableSubjectType.class)
+    public JAXBElement<Long> createTimeTableSubjectTypeSemester(Long value) {
+        return new JAXBElement<Long>(_TeachingGroupTypeSemester_QNAME, Long.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearRangeType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AcademicYearRange", scope = TimeTableSubjectType.class)
+    public JAXBElement<YearRangeType> createTimeTableSubjectTypeAcademicYearRange(YearRangeType value) {
+        return new JAXBElement<YearRangeType>(_TimeTableSubjectTypeAcademicYearRange_QNAME, YearRangeType.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseLocalId", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeCourseLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableSubjectTypeCourseLocalId_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectType", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeSubjectType(String value) {
+        return new JAXBElement<String>(_TimeTableSubjectTypeSubjectType_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ProposedMinClassSize", scope = TimeTableSubjectType.class)
+    public JAXBElement<BigDecimal> createTimeTableSubjectTypeProposedMinClassSize(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_TimeTableSubjectTypeProposedMinClassSize_QNAME, BigDecimal.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseInfoRefId", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeSchoolCourseInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolCourseInfoRefId_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ProposedMaxClassSize", scope = TimeTableSubjectType.class)
+    public JAXBElement<BigDecimal> createTimeTableSubjectTypeProposedMaxClassSize(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_TimeTableSubjectTypeProposedMaxClassSize_QNAME, BigDecimal.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectShortName", scope = TimeTableSubjectType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createTimeTableSubjectTypeSubjectShortName(String value) {
+        return new JAXBElement<String>(_TimeTableSubjectTypeSubjectShortName_QNAME, String.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TimeTableSubjectType.class)
+    public JAXBElement<SIFExtendedElementsType> createTimeTableSubjectTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TimeTableSubjectType.class)
+    public JAXBElement<SIFMetadataType> createTimeTableSubjectTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, TimeTableSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LastInstructionDate", scope = CalendarSummaryType.class)
+    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeLastInstructionDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_CalendarSummaryTypeLastInstructionDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FirstInstructionDate", scope = CalendarSummaryType.class)
+    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeFirstInstructionDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_CalendarSummaryTypeFirstInstructionDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalMinutes", scope = CalendarSummaryType.class)
+    public JAXBElement<Long> createCalendarSummaryTypeInstructionalMinutes(Long value) {
+        return new JAXBElement<Long>(_CalendarSummaryTypeInstructionalMinutes_QNAME, Long.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GraduationDate", scope = CalendarSummaryType.class)
+    public JAXBElement<String> createCalendarSummaryTypeGraduationDate(String value) {
+        return new JAXBElement<String>(_StudentPersonalTypeGraduationDate_QNAME, String.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MinutesPerDay", scope = CalendarSummaryType.class)
+    public JAXBElement<Long> createCalendarSummaryTypeMinutesPerDay(Long value) {
+        return new JAXBElement<Long>(_CalendarSummaryTypeMinutesPerDay_QNAME, Long.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = CalendarSummaryType.class)
+    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeEndDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = CalendarSummaryType.class)
+    public JAXBElement<String> createCalendarSummaryTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = CalendarSummaryType.class)
+    public JAXBElement<SIFExtendedElementsType> createCalendarSummaryTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = CalendarSummaryType.class)
+    public JAXBElement<YearLevelsType> createCalendarSummaryTypeYearLevels(YearLevelsType value) {
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = CalendarSummaryType.class)
+    public JAXBElement<SIFMetadataType> createCalendarSummaryTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = CalendarSummaryType.class)
+    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeStartDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeStartDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OKToPublish", scope = PersonPictureType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPersonPictureTypeOKToPublish(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PersonPictureTypeOKToPublish_QNAME, AUCodeSetsYesOrNoCategoryType.class, PersonPictureType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = PersonPictureType.class)
+    public JAXBElement<SIFExtendedElementsType> createPersonPictureTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, PersonPictureType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = PersonPictureType.class)
+    public JAXBElement<SIFMetadataType> createPersonPictureTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, PersonPictureType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = NAPTestScoreSummaryType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPTestScoreSummaryTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPTestScoreSummaryType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPTestScoreSummaryTypeNAPTestRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeNAPTestRefId_QNAME, String.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainBottomNational60Percent", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainBottomNational60Percent(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainBottomNational60Percent_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainSchoolAverage", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainSchoolAverage(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainSchoolAverage_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPTestScoreSummaryTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<SIFMetadataType> createNAPTestScoreSummaryTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainJurisdictionAverage", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainJurisdictionAverage(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainJurisdictionAverage_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainTopNational60Percent", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainTopNational60Percent(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainTopNational60Percent_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainNationalAverage", scope = NAPTestScoreSummaryType.class)
+    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainNationalAverage(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainNationalAverage_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = TimeTablePeriodType.class)
+    public JAXBElement<XMLGregorianCalendar> createTimeTablePeriodTypeStartTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TeachingGroupPeriodTypeStartTime_QNAME, XMLGregorianCalendar.class, TimeTablePeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndTime", scope = TimeTablePeriodType.class)
+    public JAXBElement<XMLGregorianCalendar> createTimeTablePeriodTypeEndTime(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTablePeriodTypeEndTime_QNAME, XMLGregorianCalendar.class, TimeTablePeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalMinutes", scope = TimeTablePeriodType.class)
+    public JAXBElement<Long> createTimeTablePeriodTypeInstructionalMinutes(Long value) {
+        return new JAXBElement<Long>(_CalendarSummaryTypeInstructionalMinutes_QNAME, Long.class, TimeTablePeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "UseInAttendanceCalculations", scope = TimeTablePeriodType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTablePeriodTypeUseInAttendanceCalculations(String value) {
+        return new JAXBElement<String>(_TimeTablePeriodTypeUseInAttendanceCalculations_QNAME, String.class, TimeTablePeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RegularSchoolPeriod", scope = TimeTablePeriodType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTablePeriodTypeRegularSchoolPeriod(String value) {
+        return new JAXBElement<String>(_TimeTablePeriodTypeRegularSchoolPeriod_QNAME, String.class, TimeTablePeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BellPeriod", scope = TimeTablePeriodType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createTimeTablePeriodTypeBellPeriod(String value) {
+        return new JAXBElement<String>(_TimeTablePeriodTypeBellPeriod_QNAME, String.class, TimeTablePeriodType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubstituteItemLocalId", scope = SubstituteItemType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSubstituteItemTypeSubstituteItemLocalId(String value) {
+        return new JAXBElement<String>(_SubstituteItemTypeSubstituteItemLocalId_QNAME, String.class, SubstituteItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DaysTardy", scope = StudentAttendanceSummaryType.class)
+    public JAXBElement<BigDecimal> createStudentAttendanceSummaryTypeDaysTardy(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_StudentAttendanceSummaryTypeDaysTardy_QNAME, BigDecimal.class, StudentAttendanceSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDay", scope = StudentAttendanceSummaryType.class)
+    public JAXBElement<Long> createStudentAttendanceSummaryTypeStartDay(Long value) {
+        return new JAXBElement<Long>(_StudentAttendanceSummaryTypeStartDay_QNAME, Long.class, StudentAttendanceSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentAttendanceSummaryType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentAttendanceSummaryTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentAttendanceSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDay", scope = StudentAttendanceSummaryType.class)
+    public JAXBElement<Long> createStudentAttendanceSummaryTypeEndDay(Long value) {
+        return new JAXBElement<Long>(_StudentAttendanceSummaryTypeEndDay_QNAME, Long.class, StudentAttendanceSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentAttendanceSummaryType.class)
+    public JAXBElement<SIFMetadataType> createStudentAttendanceSummaryTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentAttendanceSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTE", scope = StudentAttendanceSummaryType.class)
+    public JAXBElement<BigDecimal> createStudentAttendanceSummaryTypeFTE(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_StudentMostRecentContainerTypeFTE_QNAME, BigDecimal.class, StudentAttendanceSummaryType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectLocalId", scope = StaffSubjectType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStaffSubjectTypeSubjectLocalId(String value) {
+        return new JAXBElement<String>(_TimeTableCellTypeSubjectLocalId_QNAME, String.class, StaffSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectRefId", scope = StaffSubjectType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStaffSubjectTypeTimeTableSubjectRefId(String value) {
+        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableSubjectRefId_QNAME, String.class, StaffSubjectType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = SubjectAreaType.class)
+    public JAXBElement<OtherCodeListType> createSubjectAreaTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, SubjectAreaType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PasswordListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PasswordList", scope = IdentityType.class)
+    public JAXBElement<PasswordListType> createIdentityTypePasswordList(PasswordListType value) {
+        return new JAXBElement<PasswordListType>(_IdentityTypePasswordList_QNAME, PasswordListType.class, IdentityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link IdentityAssertionsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IdentityAssertions", scope = IdentityType.class)
+    public JAXBElement<IdentityAssertionsType> createIdentityTypeIdentityAssertions(IdentityAssertionsType value) {
+        return new JAXBElement<IdentityAssertionsType>(_IdentityTypeIdentityAssertions_QNAME, IdentityAssertionsType.class, IdentityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AuthenticationSourceGlobalUID", scope = IdentityType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createIdentityTypeAuthenticationSourceGlobalUID(String value) {
+        return new JAXBElement<String>(_IdentityTypeAuthenticationSourceGlobalUID_QNAME, String.class, IdentityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = IdentityType.class)
+    public JAXBElement<SIFExtendedElementsType> createIdentityTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, IdentityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = IdentityType.class)
+    public JAXBElement<SIFMetadataType> createIdentityTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, IdentityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AlternateIdentificationCodes", scope = AlternateIdentificationCodesType.class)
+    public JAXBElement<Object> createAlternateIdentificationCodesTypeAlternateIdentificationCodes(Object value) {
+        return new JAXBElement<Object>(_LearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes_QNAME, Object.class, AlternateIdentificationCodesType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningObjectivesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningObjectives", scope = ActivityType.class)
+    public JAXBElement<LearningObjectivesType> createActivityTypeLearningObjectives(LearningObjectivesType value) {
+        return new JAXBElement<LearningObjectivesType>(_ActivityTypeLearningObjectives_QNAME, LearningObjectivesType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EssentialMaterialsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EssentialMaterials", scope = ActivityType.class)
+    public JAXBElement<EssentialMaterialsType> createActivityTypeEssentialMaterials(EssentialMaterialsType value) {
+        return new JAXBElement<EssentialMaterialsType>(_ActivityTypeEssentialMaterials_QNAME, EssentialMaterialsType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Title", scope = ActivityType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createActivityTypeTitle(String value) {
+        return new JAXBElement<String>(_BaseNameTypeTitle_QNAME, String.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Students", scope = ActivityType.class)
+    public JAXBElement<StudentsType> createActivityTypeStudents(StudentsType value) {
+        return new JAXBElement<StudentsType>(_ActivityTypeStudents_QNAME, StudentsType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Points", scope = ActivityType.class)
+    public JAXBElement<Long> createActivityTypePoints(Long value) {
+        return new JAXBElement<Long>(_ActivityTypePoints_QNAME, Long.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AssessmentRefId", scope = ActivityType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createActivityTypeAssessmentRefId(String value) {
+        return new JAXBElement<String>(_ActivityTypeAssessmentRefId_QNAME, String.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TechnicalRequirementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TechnicalRequirements", scope = ActivityType.class)
+    public JAXBElement<TechnicalRequirementsType> createActivityTypeTechnicalRequirements(TechnicalRequirementsType value) {
+        return new JAXBElement<TechnicalRequirementsType>(_ActivityTypeTechnicalRequirements_QNAME, TechnicalRequirementsType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityWeight", scope = ActivityType.class)
+    public JAXBElement<BigDecimal> createActivityTypeActivityWeight(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_ActivityTypeActivityWeight_QNAME, BigDecimal.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SoftwareRequirementListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SoftwareRequirementList", scope = ActivityType.class)
+    public JAXBElement<SoftwareRequirementListType> createActivityTypeSoftwareRequirementList(SoftwareRequirementListType value) {
+        return new JAXBElement<SoftwareRequirementListType>(_ActivityTypeSoftwareRequirementList_QNAME, SoftwareRequirementListType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PrerequisitesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Prerequisites", scope = ActivityType.class)
+    public JAXBElement<PrerequisitesType> createActivityTypePrerequisites(PrerequisitesType value) {
+        return new JAXBElement<PrerequisitesType>(_ActivityTypePrerequisites_QNAME, PrerequisitesType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningResourcesType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningResources", scope = ActivityType.class)
+    public JAXBElement<LearningResourcesType> createActivityTypeLearningResources(LearningResourcesType value) {
+        return new JAXBElement<LearningResourcesType>(_LearningResources_QNAME, LearningResourcesType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MaxAttemptsAllowed", scope = ActivityType.class)
+    public JAXBElement<Long> createActivityTypeMaxAttemptsAllowed(Long value) {
+        return new JAXBElement<Long>(_GradingAssignmentTypeMaxAttemptsAllowed_QNAME, Long.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActivityType.Evaluation }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Evaluation", scope = ActivityType.class)
+    public JAXBElement<ActivityType.Evaluation> createActivityTypeEvaluation(ActivityType.Evaluation value) {
+        return new JAXBElement<ActivityType.Evaluation>(_ActivityTypeEvaluation_QNAME, ActivityType.Evaluation.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Preamble", scope = ActivityType.class)
+    public JAXBElement<String> createActivityTypePreamble(String value) {
+        return new JAXBElement<String>(_ActivityTypePreamble_QNAME, String.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SourceObjectsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SourceObjects", scope = ActivityType.class)
+    public JAXBElement<SourceObjectsType> createActivityTypeSourceObjects(SourceObjectsType value) {
+        return new JAXBElement<SourceObjectsType>(_ActivityTypeSourceObjects_QNAME, SourceObjectsType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ActivityType.class)
+    public JAXBElement<SIFExtendedElementsType> createActivityTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningStandards", scope = ActivityType.class)
+    public JAXBElement<LearningStandardsType> createActivityTypeLearningStandards(LearningStandardsType value) {
+        return new JAXBElement<LearningStandardsType>(_ActivityTypeLearningStandards_QNAME, LearningStandardsType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ActivityType.class)
+    public JAXBElement<SIFMetadataType> createActivityTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectArea", scope = ActivityType.class)
+    public JAXBElement<SubjectAreaType> createActivityTypeSubjectArea(SubjectAreaType value) {
+        return new JAXBElement<SubjectAreaType>(_SchoolCourseInfoOverrideTypeSubjectArea_QNAME, SubjectAreaType.class, ActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleScopeRefId", scope = SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class)
+    public JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId> createSystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeRefId(SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId value) {
+        return new JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId>(_SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeRefId_QNAME, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.RoleScopeRefId.class, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleScopeName", scope = SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeName(String value) {
+        return new JAXBElement<String>(_SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeListRoleScopeRoleScopeName_QNAME, String.class, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.RoleScope.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HouseholdContactId", scope = HouseholdContactInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createHouseholdContactInfoTypeHouseholdContactId(String value) {
+        return new JAXBElement<String>(_HouseholdContactInfoTypeHouseholdContactId_QNAME, String.class, HouseholdContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = HouseholdContactInfoType.class)
+    public JAXBElement<AddressListType> createHouseholdContactInfoTypeAddressList(AddressListType value) {
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, HouseholdContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HouseholdSalutation", scope = HouseholdContactInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createHouseholdContactInfoTypeHouseholdSalutation(String value) {
+        return new JAXBElement<String>(_HouseholdContactInfoTypeHouseholdSalutation_QNAME, String.class, HouseholdContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EmailListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = HouseholdContactInfoType.class)
+    public JAXBElement<EmailListType> createHouseholdContactInfoTypeEmailList(EmailListType value) {
+        return new JAXBElement<EmailListType>(_ContactInfoTypeEmailList_QNAME, EmailListType.class, HouseholdContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = HouseholdContactInfoType.class)
+    public JAXBElement<PhoneNumberListType> createHouseholdContactInfoTypePhoneNumberList(PhoneNumberListType value) {
+        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, HouseholdContactInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = RelationshipType.class)
+    public JAXBElement<OtherCodeListType> createRelationshipTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, RelationshipType.class, value);
     }
 
     /**
@@ -6974,7 +11197,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Location", scope = AggregateStatisticInfoType.class)
     public JAXBElement<LocationType> createAggregateStatisticInfoTypeLocation(LocationType value) {
-        return new JAXBElement<LocationType>(_AggregateStatisticInfoTypeLocation_QNAME, LocationType.class, AggregateStatisticInfoType.class, value);
+        return new JAXBElement<LocationType>(_ScheduledActivityTypeLocation_QNAME, LocationType.class, AggregateStatisticInfoType.class, value);
     }
 
     /**
@@ -7057,7 +11280,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = AggregateStatisticInfoType.class)
     public JAXBElement<SIFExtendedElementsType> createAggregateStatisticInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, AggregateStatisticInfoType.class, value);
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, AggregateStatisticInfoType.class, value);
     }
 
     /**
@@ -7066,123 +11289,292 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = AggregateStatisticInfoType.class)
     public JAXBElement<SIFMetadataType> createAggregateStatisticInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, AggregateStatisticInfoType.class, value);
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, AggregateStatisticInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BPay", scope = VendorInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestItemLocalId", scope = NAPTestletResponseItemType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypeBPay(String value) {
-        return new JAXBElement<String>(_VendorInfoTypeBPay_QNAME, String.class, VendorInfoType.class, value);
+    public JAXBElement<String> createNAPTestletResponseItemTypeNAPTestItemLocalId(String value) {
+        return new JAXBElement<String>(_NAPTestletResponseItemTypeNAPTestItemLocalId_QNAME, String.class, NAPTestletResponseItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Score", scope = NAPTestletResponseItemType.class)
+    public JAXBElement<BigDecimal> createNAPTestletResponseItemTypeScore(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_NAPTestletResponseItemTypeScore_QNAME, BigDecimal.class, NAPTestletResponseItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsNAPResponseCorrectnessType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ResponseCorrectness", scope = NAPTestletResponseItemType.class)
+    public JAXBElement<AUCodeSetsNAPResponseCorrectnessType> createNAPTestletResponseItemTypeResponseCorrectness(AUCodeSetsNAPResponseCorrectnessType value) {
+        return new JAXBElement<AUCodeSetsNAPResponseCorrectnessType>(_NAPTestletResponseItemTypeResponseCorrectness_QNAME, AUCodeSetsNAPResponseCorrectnessType.class, NAPTestletResponseItemType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NAPSubscoreListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubscoreList", scope = NAPTestletResponseItemType.class)
+    public JAXBElement<NAPSubscoreListType> createNAPTestletResponseItemTypeSubscoreList(NAPSubscoreListType value) {
+        return new JAXBElement<NAPSubscoreListType>(_NAPTestletResponseItemTypeSubscoreList_QNAME, NAPSubscoreListType.class, NAPTestletResponseItemType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountName", scope = VendorInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseContent", scope = SchoolCourseInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypeAccountName(String value) {
-        return new JAXBElement<String>(_VendorInfoTypeAccountName_QNAME, String.class, VendorInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ContactInfoType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactInfo", scope = VendorInfoType.class)
-    public JAXBElement<ContactInfoType> createVendorInfoTypeContactInfo(ContactInfoType value) {
-        return new JAXBElement<ContactInfoType>(_VendorInfoTypeContactInfo_QNAME, ContactInfoType.class, VendorInfoType.class, value);
+    public JAXBElement<String> createSchoolCourseInfoTypeCourseContent(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoTypeCourseContent_QNAME, String.class, SchoolCourseInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ABN", scope = VendorInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DistrictCourseCode", scope = SchoolCourseInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypeABN(String value) {
-        return new JAXBElement<String>(_VendorInfoTypeABN_QNAME, String.class, VendorInfoType.class, value);
+    public JAXBElement<String> createSchoolCourseInfoTypeDistrictCourseCode(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeDistrictCourseCode_QNAME, String.class, SchoolCourseInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PaymentTerms", scope = VendorInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseCredits", scope = SchoolCourseInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypePaymentTerms(String value) {
-        return new JAXBElement<String>(_VendorInfoTypePaymentTerms_QNAME, String.class, VendorInfoType.class, value);
+    public JAXBElement<String> createSchoolCourseInfoTypeCourseCredits(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseCredits_QNAME, String.class, SchoolCourseInfoType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = VendorInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createVendorInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, VendorInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = VendorInfoType.class)
-    public JAXBElement<SIFMetadataType> createVendorInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, VendorInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = SchoolCourseInfoType.class)
+    public JAXBElement<XMLGregorianCalendar> createSchoolCourseInfoTypeSchoolYear(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_SectionInfoTypeSchoolYear_QNAME, XMLGregorianCalendar.class, SchoolCourseInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountNumber", scope = VendorInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypeAccountNumber(String value) {
-        return new JAXBElement<String>(_VendorInfoTypeAccountNumber_QNAME, String.class, VendorInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermInfoRefId", scope = SchoolCourseInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoTypeTermInfoRefId(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeTermInfoRefId_QNAME, String.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectAreaList", scope = SchoolCourseInfoType.class)
+    public JAXBElement<SubjectAreaListType> createSchoolCourseInfoTypeSubjectAreaList(SubjectAreaListType value) {
+        return new JAXBElement<SubjectAreaListType>(_SchoolCourseInfoTypeSubjectAreaList_QNAME, SubjectAreaListType.class, SchoolCourseInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BSB", scope = VendorInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = SchoolCourseInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypeBSB(String value) {
-        return new JAXBElement<String>(_VendorInfoTypeBSB_QNAME, String.class, VendorInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CustomerId", scope = VendorInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createVendorInfoTypeCustomerId(String value) {
-        return new JAXBElement<String>(_VendorInfoTypeCustomerId_QNAME, String.class, VendorInfoType.class, value);
+    public JAXBElement<String> createSchoolCourseInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, SchoolCourseInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RegisteredForGST", scope = VendorInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createVendorInfoTypeRegisteredForGST(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_VendorInfoTypeRegisteredForGST_QNAME, AUCodeSetsYesOrNoCategoryType.class, VendorInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CoreAcademicCourse", scope = SchoolCourseInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSchoolCourseInfoTypeCoreAcademicCourse(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SchoolCourseInfoTypeCoreAcademicCourse_QNAME, AUCodeSetsYesOrNoCategoryType.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GraduationRequirement", scope = SchoolCourseInfoType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSchoolCourseInfoTypeGraduationRequirement(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SchoolCourseInfoTypeGraduationRequirement_QNAME, AUCodeSetsYesOrNoCategoryType.class, SchoolCourseInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestletRefId", scope = NAPTestletCodeFrameType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPTestletCodeFrameTypeNAPTestletRefId(String value) {
-        return new JAXBElement<String>(_NAPTestletCodeFrameTypeNAPTestletRefId_QNAME, String.class, NAPTestletCodeFrameType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateCourseCode", scope = SchoolCourseInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoTypeStateCourseCode(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeStateCourseCode_QNAME, String.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Department", scope = SchoolCourseInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoTypeDepartment(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoTypeDepartment_QNAME, String.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = SchoolCourseInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoTypeSchoolLocalId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SchoolCourseInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createSchoolCourseInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SchoolCourseInfoType.class)
+    public JAXBElement<SIFMetadataType> createSchoolCourseInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalLevel", scope = SchoolCourseInfoType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createSchoolCourseInfoTypeInstructionalLevel(String value) {
+        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeInstructionalLevel_QNAME, String.class, SchoolCourseInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StaffActivityExtensionType.class)
+    public JAXBElement<OtherCodeListType> createStaffActivityExtensionTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, StaffActivityExtensionType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApprovedBy", scope = JournalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createJournalTypeApprovedBy(String value) {
+        return new JAXBElement<String>(_JournalTypeApprovedBy_QNAME, String.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Note", scope = JournalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createJournalTypeNote(String value) {
+        return new JAXBElement<String>(_JournalTypeNote_QNAME, String.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApprovedDate", scope = JournalType.class)
+    public JAXBElement<XMLGregorianCalendar> createJournalTypeApprovedDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_JournalTypeApprovedDate_QNAME, XMLGregorianCalendar.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreatedBy", scope = JournalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createJournalTypeCreatedBy(String value) {
+        return new JAXBElement<String>(_JournalTypeCreatedBy_QNAME, String.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreatedDate", scope = JournalType.class)
+    public JAXBElement<XMLGregorianCalendar> createJournalTypeCreatedDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_JournalTypeCreatedDate_QNAME, XMLGregorianCalendar.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GSTCodeOriginal", scope = JournalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createJournalTypeGSTCodeOriginal(String value) {
+        return new JAXBElement<String>(_JournalTypeGSTCodeOriginal_QNAME, String.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GSTCodeReplacement", scope = JournalType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createJournalTypeGSTCodeReplacement(String value) {
+        return new JAXBElement<String>(_JournalTypeGSTCodeReplacement_QNAME, String.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link JournalType.OriginatingTransactionRefId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OriginatingTransactionRefId", scope = JournalType.class)
+    public JAXBElement<JournalType.OriginatingTransactionRefId> createJournalTypeOriginatingTransactionRefId(JournalType.OriginatingTransactionRefId value) {
+        return new JAXBElement<JournalType.OriginatingTransactionRefId>(_JournalTypeOriginatingTransactionRefId_QNAME, JournalType.OriginatingTransactionRefId.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = JournalType.class)
+    public JAXBElement<SIFExtendedElementsType> createJournalTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, JournalType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = JournalType.class)
+    public JAXBElement<SIFMetadataType> createJournalTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, JournalType.class, value);
     }
 
     /**
@@ -7200,7 +11592,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Location", scope = LearningResourceType.class)
     public JAXBElement<LearningResourceType.Location> createLearningResourceTypeLocation(LearningResourceType.Location value) {
-        return new JAXBElement<LearningResourceType.Location>(_AggregateStatisticInfoTypeLocation_QNAME, LearningResourceType.Location.class, LearningResourceType.class, value);
+        return new JAXBElement<LearningResourceType.Location>(_ScheduledActivityTypeLocation_QNAME, LearningResourceType.Location.class, LearningResourceType.class, value);
     }
 
     /**
@@ -7238,7 +11630,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = LearningResourceType.class)
     public JAXBElement<String> createLearningResourceTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, LearningResourceType.class, value);
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, LearningResourceType.class, value);
     }
 
     /**
@@ -7302,7 +11694,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = LearningResourceType.class)
     public JAXBElement<SIFExtendedElementsType> createLearningResourceTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LearningResourceType.class, value);
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LearningResourceType.class, value);
     }
 
     /**
@@ -7311,7 +11703,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningStandards", scope = LearningResourceType.class)
     public JAXBElement<LearningStandardsType> createLearningResourceTypeLearningStandards(LearningStandardsType value) {
-        return new JAXBElement<LearningStandardsType>(_LearningResourceTypeLearningStandards_QNAME, LearningStandardsType.class, LearningResourceType.class, value);
+        return new JAXBElement<LearningStandardsType>(_ActivityTypeLearningStandards_QNAME, LearningStandardsType.class, LearningResourceType.class, value);
     }
 
     /**
@@ -7320,7 +11712,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = LearningResourceType.class)
     public JAXBElement<YearLevelsType> createLearningResourceTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, LearningResourceType.class, value);
+        return new JAXBElement<YearLevelsType>(_ScheduledActivityTypeYearLevels_QNAME, YearLevelsType.class, LearningResourceType.class, value);
     }
 
     /**
@@ -7329,3524 +11721,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = LearningResourceType.class)
     public JAXBElement<SIFMetadataType> createLearningResourceTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, LearningResourceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PublishInDirectory", scope = LEAContactType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createLEAContactTypePublishInDirectory(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_LEAContactTypePublishInDirectory_QNAME, AUCodeSetsYesOrNoCategoryType.class, LEAContactType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestletRefId", scope = NAPTestletResponseType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPTestletResponseTypeNAPTestletRefId(String value) {
-        return new JAXBElement<String>(_NAPTestletCodeFrameTypeNAPTestletRefId_QNAME, String.class, NAPTestletResponseType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = TimeTableType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolName", scope = TimeTableType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableTypeSchoolName(String value) {
-        return new JAXBElement<String>(_TimeTableTypeSchoolName_QNAME, String.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TimeTableType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTableTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableCreationDate", scope = TimeTableType.class)
-    public JAXBElement<XMLGregorianCalendar> createTimeTableTypeTimeTableCreationDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeTimeTableCreationDate_QNAME, XMLGregorianCalendar.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = TimeTableType.class)
-    public JAXBElement<XMLGregorianCalendar> createTimeTableTypeEndDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TimeTableType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingPeriodsPerDay", scope = TimeTableType.class)
-    public JAXBElement<Long> createTimeTableTypeTeachingPeriodsPerDay(Long value) {
-        return new JAXBElement<Long>(_TimeTableTypeTeachingPeriodsPerDay_QNAME, Long.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TimeTableType.class)
-    public JAXBElement<SIFExtendedElementsType> createTimeTableTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TimeTableType.class)
-    public JAXBElement<SIFMetadataType> createTimeTableTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = TimeTableType.class)
-    public JAXBElement<XMLGregorianCalendar> createTimeTableTypeStartDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeStartDate_QNAME, XMLGregorianCalendar.class, TimeTableType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = SessionInfoType.class)
-    public JAXBElement<XMLGregorianCalendar> createSessionInfoTypeStartTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeStartTime_QNAME, XMLGregorianCalendar.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RollMarked", scope = SessionInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSessionInfoTypeRollMarked(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SessionInfoTypeRollMarked_QNAME, AUCodeSetsYesOrNoCategoryType.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = SessionInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSessionInfoTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomNumber", scope = SessionInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSessionInfoTypeRoomNumber(String value) {
-        return new JAXBElement<String>(_SessionInfoTypeRoomNumber_QNAME, String.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SessionInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createSessionInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SessionInfoType.class)
-    public JAXBElement<SIFMetadataType> createSessionInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffPersonalLocalId", scope = SessionInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSessionInfoTypeStaffPersonalLocalId(String value) {
-        return new JAXBElement<String>(_SessionInfoTypeStaffPersonalLocalId_QNAME, String.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinishTime", scope = SessionInfoType.class)
-    public JAXBElement<XMLGregorianCalendar> createSessionInfoTypeFinishTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeFinishTime_QNAME, XMLGregorianCalendar.class, SessionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SystemRoleType.class)
-    public JAXBElement<SIFExtendedElementsType> createSystemRoleTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SystemRoleType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SystemRoleType.class)
-    public JAXBElement<SIFMetadataType> createSystemRoleTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, SystemRoleType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = MediumOfInstructionType.class)
-    public JAXBElement<OtherCodeListType> createMediumOfInstructionTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, MediumOfInstructionType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PasswordListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PasswordList", scope = IdentityType.class)
-    public JAXBElement<PasswordListType> createIdentityTypePasswordList(PasswordListType value) {
-        return new JAXBElement<PasswordListType>(_IdentityTypePasswordList_QNAME, PasswordListType.class, IdentityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link IdentityAssertionsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IdentityAssertions", scope = IdentityType.class)
-    public JAXBElement<IdentityAssertionsType> createIdentityTypeIdentityAssertions(IdentityAssertionsType value) {
-        return new JAXBElement<IdentityAssertionsType>(_IdentityTypeIdentityAssertions_QNAME, IdentityAssertionsType.class, IdentityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AuthenticationSourceGlobalUID", scope = IdentityType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createIdentityTypeAuthenticationSourceGlobalUID(String value) {
-        return new JAXBElement<String>(_IdentityTypeAuthenticationSourceGlobalUID_QNAME, String.class, IdentityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = IdentityType.class)
-    public JAXBElement<SIFExtendedElementsType> createIdentityTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, IdentityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = IdentityType.class)
-    public JAXBElement<SIFMetadataType> createIdentityTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, IdentityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Calendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Calendar", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentSchoolEnrollmentType.Calendar> createStudentSchoolEnrollmentTypeCalendar(StudentSchoolEnrollmentType.Calendar value) {
-        return new JAXBElement<StudentSchoolEnrollmentType.Calendar>(_StudentSchoolEnrollmentTypeCalendar_QNAME, StudentSchoolEnrollmentType.Calendar.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Homeroom }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homeroom", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentSchoolEnrollmentType.Homeroom> createStudentSchoolEnrollmentTypeHomeroom(StudentSchoolEnrollmentType.Homeroom value) {
-        return new JAXBElement<StudentSchoolEnrollmentType.Homeroom>(_StudentSchoolEnrollmentTypeHomeroom_QNAME, StudentSchoolEnrollmentType.Homeroom.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Counselor }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Counselor", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentSchoolEnrollmentType.Counselor> createStudentSchoolEnrollmentTypeCounselor(StudentSchoolEnrollmentType.Counselor value) {
-        return new JAXBElement<StudentSchoolEnrollmentType.Counselor>(_StudentSchoolEnrollmentTypeCounselor_QNAME, StudentSchoolEnrollmentType.Counselor.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Advisor }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Advisor", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentSchoolEnrollmentType.Advisor> createStudentSchoolEnrollmentTypeAdvisor(StudentSchoolEnrollmentType.Advisor value) {
-        return new JAXBElement<StudentSchoolEnrollmentType.Advisor>(_StudentSchoolEnrollmentTypeAdvisor_QNAME, StudentSchoolEnrollmentType.Advisor.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentExitContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitType", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentExitContainerType> createStudentSchoolEnrollmentTypeExitType(StudentExitContainerType value) {
-        return new JAXBElement<StudentExitContainerType>(_StudentSchoolEnrollmentTypeExitType_QNAME, StudentExitContainerType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreviousSchool", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypePreviousSchool(String value) {
-        return new JAXBElement<String>(_StudentSchoolEnrollmentTypePreviousSchool_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TestLevel", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<YearLevelType> createStudentSchoolEnrollmentTypeTestLevel(YearLevelType value) {
-        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeTestLevel_QNAME, YearLevelType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DestinationSchool", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeDestinationSchool(String value) {
-        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeDestinationSchool_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ClassCode", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeClassCode(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeClassCode_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IndividualLearningPlan", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentSchoolEnrollmentTypeIndividualLearningPlan(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentSchoolEnrollmentTypeIndividualLearningPlan_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevel", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<YearLevelType> createStudentSchoolEnrollmentTypeYearLevel(YearLevelType value) {
-        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeYearLevel_QNAME, YearLevelType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PromotionInfoType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PromotionInfo", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<PromotionInfoType> createStudentSchoolEnrollmentTypePromotionInfo(PromotionInfoType value) {
-        return new JAXBElement<PromotionInfoType>(_StudentSchoolEnrollmentTypePromotionInfo_QNAME, PromotionInfoType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ACARASchoolId", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeACARASchoolId(String value) {
-        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeACARASchoolId_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentEntryContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EntryType", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentEntryContainerType> createStudentSchoolEnrollmentTypeEntryType(StudentEntryContainerType value) {
-        return new JAXBElement<StudentEntryContainerType>(_StudentSchoolEnrollmentTypeEntryType_QNAME, StudentEntryContainerType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTPTStatus", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeFTPTStatus(String value) {
-        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeFTPTStatus_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitDate", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentSchoolEnrollmentTypeExitDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentSectionEnrollmentTypeExitDate_QNAME, XMLGregorianCalendar.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FFPOS", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeFFPOS(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeFFPOS_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSubjectChoiceListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentSubjectChoiceList", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentSubjectChoiceListType> createStudentSchoolEnrollmentTypeStudentSubjectChoiceList(StudentSubjectChoiceListType value) {
-        return new JAXBElement<StudentSubjectChoiceListType>(_StudentSchoolEnrollmentTypeStudentSubjectChoiceList_QNAME, StudentSubjectChoiceListType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentExitStatusContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitStatus", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<StudentExitStatusContainerType> createStudentSchoolEnrollmentTypeExitStatus(StudentExitStatusContainerType value) {
-        return new JAXBElement<StudentExitStatusContainerType>(_StudentSchoolEnrollmentTypeExitStatus_QNAME, StudentExitStatusContainerType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "House", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeHouse(String value) {
-        return new JAXBElement<String>(_StaffAssignmentTypeHouse_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CatchmentStatusContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CatchmentStatus", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<CatchmentStatusContainerType> createStudentSchoolEnrollmentTypeCatchmentStatus(CatchmentStatusContainerType value) {
-        return new JAXBElement<CatchmentStatusContainerType>(_StudentSchoolEnrollmentTypeCatchmentStatus_QNAME, CatchmentStatusContainerType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homegroup", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeHomegroup(String value) {
-        return new JAXBElement<String>(_StudentMostRecentContainerTypeHomegroup_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ReportingSchool", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentSchoolEnrollmentTypeReportingSchool(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentSchoolEnrollmentTypeReportingSchool_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RecordClosureReason", scope = StudentSchoolEnrollmentType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentSchoolEnrollmentTypeRecordClosureReason(String value) {
-        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeRecordClosureReason_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentSchoolEnrollmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<SIFMetadataType> createStudentSchoolEnrollmentTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTE", scope = StudentSchoolEnrollmentType.class)
-    public JAXBElement<BigDecimal> createStudentSchoolEnrollmentTypeFTE(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_StudentMostRecentContainerTypeFTE_QNAME, BigDecimal.class, StudentSchoolEnrollmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = NAPTestScoreSummaryType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPTestScoreSummaryTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPTestScoreSummaryType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPTestScoreSummaryTypeNAPTestRefId(String value) {
-        return new JAXBElement<String>(_NAPTestScoreSummaryTypeNAPTestRefId_QNAME, String.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainBottomNational60Percent", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainBottomNational60Percent(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainBottomNational60Percent_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainSchoolAverage", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainSchoolAverage(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainSchoolAverage_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPTestScoreSummaryTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<SIFMetadataType> createNAPTestScoreSummaryTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainJurisdictionAverage", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainJurisdictionAverage(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainJurisdictionAverage_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainTopNational60Percent", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainTopNational60Percent(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainTopNational60Percent_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DomainNationalAverage", scope = NAPTestScoreSummaryType.class)
-    public JAXBElement<BigDecimal> createNAPTestScoreSummaryTypeDomainNationalAverage(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_NAPTestScoreSummaryTypeDomainNationalAverage_QNAME, BigDecimal.class, NAPTestScoreSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = LocationOfInstructionType.class)
-    public JAXBElement<OtherCodeListType> createLocationOfInstructionTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, LocationOfInstructionType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactTitle", scope = PrincipalInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPrincipalInfoTypeContactTitle(String value) {
-        return new JAXBElement<String>(_PrincipalInfoTypeContactTitle_QNAME, String.class, PrincipalInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EmailListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = PrincipalInfoType.class)
-    public JAXBElement<EmailListType> createPrincipalInfoTypeEmailList(EmailListType value) {
-        return new JAXBElement<EmailListType>(_PrincipalInfoTypeEmailList_QNAME, EmailListType.class, PrincipalInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = PrincipalInfoType.class)
-    public JAXBElement<PhoneNumberListType> createPrincipalInfoTypePhoneNumberList(PhoneNumberListType value) {
-        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, PrincipalInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Role", scope = ContactInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createContactInfoTypeRole(String value) {
-        return new JAXBElement<String>(_ContactInfoTypeRole_QNAME, String.class, ContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Address", scope = ContactInfoType.class)
-    public JAXBElement<AddressType> createContactInfoTypeAddress(AddressType value) {
-        return new JAXBElement<AddressType>(_ContactTypeAddress_QNAME, AddressType.class, ContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EmailListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = ContactInfoType.class)
-    public JAXBElement<EmailListType> createContactInfoTypeEmailList(EmailListType value) {
-        return new JAXBElement<EmailListType>(_PrincipalInfoTypeEmailList_QNAME, EmailListType.class, ContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = ContactInfoType.class)
-    public JAXBElement<PhoneNumberListType> createContactInfoTypePhoneNumberList(PhoneNumberListType value) {
-        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, ContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PositionTitle", scope = ContactInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createContactInfoTypePositionTitle(String value) {
-        return new JAXBElement<String>(_ContactInfoTypePositionTitle_QNAME, String.class, ContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentEntryContainerType.class)
-    public JAXBElement<OtherCodeListType> createStudentEntryContainerTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentEntryContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SystemRoleType.SystemContextList.SystemContext.RoleList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleList", scope = SystemRoleType.SystemContextList.SystemContext.class)
-    public JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList> createSystemRoleTypeSystemContextListSystemContextRoleList(SystemRoleType.SystemContextList.SystemContext.RoleList value) {
-        return new JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList>(_SystemRoleTypeSystemContextListSystemContextRoleList_QNAME, SystemRoleType.SystemContextList.SystemContext.RoleList.class, SystemRoleType.SystemContextList.SystemContext.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableLocalId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeTimeTableLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeTimeTableLocalId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupLocalId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeTeachingGroupLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeTeachingGroupLocalId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectLocalId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeSubjectLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeSubjectLocalId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeStaffLocalId(String value) {
-        return new JAXBElement<String>(_TeacherCoverTypeStaffLocalId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ScheduledTeacherListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherList", scope = TimeTableCellType.class)
-    public JAXBElement<ScheduledTeacherListType> createTimeTableCellTypeTeacherList(ScheduledTeacherListType value) {
-        return new JAXBElement<ScheduledTeacherListType>(_TimeTableCellTypeTeacherList_QNAME, ScheduledTeacherListType.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomInfoRefId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeRoomInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeRoomInfoRefId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffPersonalRefId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeStaffPersonalRefId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeStaffPersonalRefId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RoomListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomList", scope = TimeTableCellType.class)
-    public JAXBElement<RoomListType> createTimeTableCellTypeRoomList(RoomListType value) {
-        return new JAXBElement<RoomListType>(_TimeTableCellTypeRoomList_QNAME, RoomListType.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomNumber", scope = TimeTableCellType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTimeTableCellTypeRoomNumber(String value) {
-        return new JAXBElement<String>(_SessionInfoTypeRoomNumber_QNAME, String.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TimeTableCellType.class)
-    public JAXBElement<SIFExtendedElementsType> createTimeTableCellTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TimeTableCellType.class)
-    public JAXBElement<SIFMetadataType> createTimeTableCellTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, TimeTableCellType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxAmount", scope = InvoiceType.class)
-    public JAXBElement<MonetaryAmountType> createInvoiceTypeTaxAmount(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_InvoiceTypeTaxAmount_QNAME, MonetaryAmountType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = InvoiceType.class)
-    public JAXBElement<BigDecimal> createInvoiceTypeTaxRate(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_InvoiceTypeTaxRate_QNAME, BigDecimal.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApprovedBy", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeApprovedBy(String value) {
-        return new JAXBElement<String>(_InvoiceTypeApprovedBy_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Voluntary", scope = InvoiceType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createInvoiceTypeVoluntary(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_InvoiceTypeVoluntary_QNAME, AUCodeSetsYesOrNoCategoryType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FormNumber", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeFormNumber(String value) {
-        return new JAXBElement<String>(_InvoiceTypeFormNumber_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RelatedPurchaseOrderRefId", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeRelatedPurchaseOrderRefId(String value) {
-        return new JAXBElement<String>(_InvoiceTypeRelatedPurchaseOrderRefId_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NetAmount", scope = InvoiceType.class)
-    public JAXBElement<MonetaryAmountType> createInvoiceTypeNetAmount(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_InvoiceTypeNetAmount_QNAME, MonetaryAmountType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DueDate", scope = InvoiceType.class)
-    public JAXBElement<XMLGregorianCalendar> createInvoiceTypeDueDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeDueDate_QNAME, XMLGregorianCalendar.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountingPeriod", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeAccountingPeriod(String value) {
-        return new JAXBElement<String>(_InvoiceTypeAccountingPeriod_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeChargedLocationInfoRefId(String value) {
-        return new JAXBElement<String>(_FinancialAccountTypeChargedLocationInfoRefId_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreatedBy", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeCreatedBy(String value) {
-        return new JAXBElement<String>(_InvoiceTypeCreatedBy_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ItemDetail", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeItemDetail(String value) {
-        return new JAXBElement<String>(_InvoiceTypeItemDetail_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = InvoiceType.class)
-    public JAXBElement<SIFExtendedElementsType> createInvoiceTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = InvoiceType.class)
-    public JAXBElement<SIFMetadataType> createInvoiceTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PurchasingItemsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PurchasingItems", scope = InvoiceType.class)
-    public JAXBElement<PurchasingItemsType> createInvoiceTypePurchasingItems(PurchasingItemsType value) {
-        return new JAXBElement<PurchasingItemsType>(_InvoiceTypePurchasingItems_QNAME, PurchasingItemsType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxType", scope = InvoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createInvoiceTypeTaxType(String value) {
-        return new JAXBElement<String>(_InvoiceTypeTaxType_QNAME, String.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FinancialAccountRefIdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinancialAccountRefIdList", scope = InvoiceType.class)
-    public JAXBElement<FinancialAccountRefIdListType> createInvoiceTypeFinancialAccountRefIdList(FinancialAccountRefIdListType value) {
-        return new JAXBElement<FinancialAccountRefIdListType>(_InvoiceTypeFinancialAccountRefIdList_QNAME, FinancialAccountRefIdListType.class, InvoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDateTime", scope = TimeElementType.SpanGaps.SpanGap.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
-    public JAXBElement<java.util.Calendar> createTimeElementTypeSpanGapsSpanGapEndDateTime(java.util.Calendar value) {
-        return new JAXBElement<java.util.Calendar>(_TimeElementTypeSpanGapsSpanGapEndDateTime_QNAME, java.util.Calendar.class, TimeElementType.SpanGaps.SpanGap.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDateTime", scope = TimeElementType.SpanGaps.SpanGap.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
-    public JAXBElement<java.util.Calendar> createTimeElementTypeSpanGapsSpanGapStartDateTime(java.util.Calendar value) {
-        return new JAXBElement<java.util.Calendar>(_TimeElementTypeSpanGapsSpanGapStartDateTime_QNAME, java.util.Calendar.class, TimeElementType.SpanGaps.SpanGap.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPCodeFrameType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPCodeFrameTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPCodeFrameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPCodeFrameType.class)
-    public JAXBElement<SIFMetadataType> createNAPCodeFrameTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPCodeFrameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = ActivityType.Evaluation.class)
-    public JAXBElement<String> createActivityTypeEvaluationDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, ActivityType.Evaluation.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AuthorsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Authors", scope = LearningStandardDocumentType.class)
-    public JAXBElement<AuthorsType> createLearningStandardDocumentTypeAuthors(AuthorsType value) {
-        return new JAXBElement<AuthorsType>(_LearningStandardDocumentTypeAuthors_QNAME, AuthorsType.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalArchiveDate", scope = LearningStandardDocumentType.class)
-    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeLocalArchiveDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeLocalArchiveDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndOfLifeDate", scope = LearningStandardDocumentType.class)
-    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeEndOfLifeDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeEndOfLifeDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DocumentDate", scope = LearningStandardDocumentType.class)
-    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeDocumentDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeDocumentDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = LearningStandardDocumentType.class)
-    public JAXBElement<String> createLearningStandardDocumentTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalAdoptionDate", scope = LearningStandardDocumentType.class)
-    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeLocalAdoptionDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeLocalAdoptionDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardDocumentType.Copyright }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Copyright", scope = LearningStandardDocumentType.class)
-    public JAXBElement<LearningStandardDocumentType.Copyright> createLearningStandardDocumentTypeCopyright(LearningStandardDocumentType.Copyright value) {
-        return new JAXBElement<LearningStandardDocumentType.Copyright>(_LearningStandardDocumentTypeCopyright_QNAME, LearningStandardDocumentType.Copyright.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardsDocumentType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RelatedLearningStandards", scope = LearningStandardDocumentType.class)
-    public JAXBElement<LearningStandardsDocumentType> createLearningStandardDocumentTypeRelatedLearningStandards(LearningStandardsDocumentType value) {
-        return new JAXBElement<LearningStandardsDocumentType>(_LearningStandardDocumentTypeRelatedLearningStandards_QNAME, LearningStandardsDocumentType.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractContentElementType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RichDescription", scope = LearningStandardDocumentType.class)
-    public JAXBElement<AbstractContentElementType> createLearningStandardDocumentTypeRichDescription(AbstractContentElementType value) {
-        return new JAXBElement<AbstractContentElementType>(_LearningStandardDocumentTypeRichDescription_QNAME, AbstractContentElementType.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RepositoryDate", scope = LearningStandardDocumentType.class)
-    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeRepositoryDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeRepositoryDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = LearningStandardDocumentType.class)
-    public JAXBElement<SIFExtendedElementsType> createLearningStandardDocumentTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = LearningStandardDocumentType.class)
-    public JAXBElement<YearLevelsType> createLearningStandardDocumentTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = LearningStandardDocumentType.class)
-    public JAXBElement<SIFMetadataType> createLearningStandardDocumentTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OrganizationContactPoint", scope = LearningStandardDocumentType.class)
-    public JAXBElement<String> createLearningStandardDocumentTypeOrganizationContactPoint(String value) {
-        return new JAXBElement<String>(_LearningStandardDocumentTypeOrganizationContactPoint_QNAME, String.class, LearningStandardDocumentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = GradingAssignmentScoreType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentScoreTypeStudentPersonalRefId(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeStudentPersonalRefId_QNAME, String.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = GradingAssignmentScoreType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentScoreTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScoreDescription", scope = GradingAssignmentScoreType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentScoreTypeScoreDescription(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeScoreDescription_QNAME, String.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupRefId", scope = GradingAssignmentScoreType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentScoreTypeTeachingGroupRefId(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeTeachingGroupRefId_QNAME, String.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScorePoints", scope = GradingAssignmentScoreType.class)
-    public JAXBElement<Long> createGradingAssignmentScoreTypeScorePoints(Long value) {
-        return new JAXBElement<Long>(_GradingAssignmentScoreTypeScorePoints_QNAME, Long.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = GradingAssignmentScoreType.class)
-    public JAXBElement<SIFExtendedElementsType> createGradingAssignmentScoreTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScorePercent", scope = GradingAssignmentScoreType.class)
-    public JAXBElement<BigDecimal> createGradingAssignmentScoreTypeScorePercent(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_GradingAssignmentScoreTypeScorePercent_QNAME, BigDecimal.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = GradingAssignmentScoreType.class)
-    public JAXBElement<SIFMetadataType> createGradingAssignmentScoreTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScoreLetter", scope = GradingAssignmentScoreType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentScoreTypeScoreLetter(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeScoreLetter_QNAME, String.class, GradingAssignmentScoreType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocationType.LocationRefId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationRefId", scope = LocationType.class)
-    public JAXBElement<LocationType.LocationRefId> createLocationTypeLocationRefId(LocationType.LocationRefId value) {
-        return new JAXBElement<LocationType.LocationRefId>(_LocationTypeLocationRefId_QNAME, LocationType.LocationRefId.class, LocationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationName", scope = LocationType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createLocationTypeLocationName(String value) {
-        return new JAXBElement<String>(_LocationTypeLocationName_QNAME, String.class, LocationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateCourseCode", scope = SchoolCourseInfoOverrideType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoOverrideTypeStateCourseCode(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeStateCourseCode_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseCredits", scope = SchoolCourseInfoOverrideType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoOverrideTypeCourseCredits(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseCredits_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DistrictCourseCode", scope = SchoolCourseInfoOverrideType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoOverrideTypeDistrictCourseCode(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeDistrictCourseCode_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseTitle", scope = SchoolCourseInfoOverrideType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoOverrideTypeCourseTitle(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseTitle_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseCode", scope = SchoolCourseInfoOverrideType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoOverrideTypeCourseCode(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseCode_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectArea", scope = SchoolCourseInfoOverrideType.class)
-    public JAXBElement<SubjectAreaType> createSchoolCourseInfoOverrideTypeSubjectArea(SubjectAreaType value) {
-        return new JAXBElement<SubjectAreaType>(_SchoolCourseInfoOverrideTypeSubjectArea_QNAME, SubjectAreaType.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalLevel", scope = SchoolCourseInfoOverrideType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoOverrideTypeInstructionalLevel(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeInstructionalLevel_QNAME, String.class, SchoolCourseInfoOverrideType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentNumber", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeApartmentNumber(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeApartmentNumber_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetNumber", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeStreetNumber(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeStreetNumber_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetSuffix", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeStreetSuffix(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeStreetSuffix_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetType", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeStreetType(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeStreetType_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Complex", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeComplex(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeComplex_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentNumberSuffix", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeApartmentNumberSuffix(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeApartmentNumberSuffix_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentType", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeApartmentType(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeApartmentType_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Line2", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeLine2(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeLine2_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetPrefix", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeStreetPrefix(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeStreetPrefix_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Line3", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeLine3(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeLine3_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApartmentNumberPrefix", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeApartmentNumberPrefix(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeApartmentNumberPrefix_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StreetName", scope = AddressStreetType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressStreetTypeStreetName(String value) {
-        return new JAXBElement<String>(_AddressStreetTypeStreetName_QNAME, String.class, AddressStreetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestItemType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPTestItemTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestItemType.class)
-    public JAXBElement<SIFMetadataType> createNAPTestItemTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "UpdateDate", scope = PurchaseOrderType.class)
-    public JAXBElement<XMLGregorianCalendar> createPurchaseOrderTypeUpdateDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_PurchaseOrderTypeUpdateDate_QNAME, XMLGregorianCalendar.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxAmount", scope = PurchaseOrderType.class)
-    public JAXBElement<MonetaryAmountType> createPurchaseOrderTypeTaxAmount(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_InvoiceTypeTaxAmount_QNAME, MonetaryAmountType.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TotalAmount", scope = PurchaseOrderType.class)
-    public JAXBElement<MonetaryAmountType> createPurchaseOrderTypeTotalAmount(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_PurchaseOrderTypeTotalAmount_QNAME, MonetaryAmountType.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = PurchaseOrderType.class)
-    public JAXBElement<BigDecimal> createPurchaseOrderTypeTaxRate(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_InvoiceTypeTaxRate_QNAME, BigDecimal.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreationDate", scope = PurchaseOrderType.class)
-    public JAXBElement<XMLGregorianCalendar> createPurchaseOrderTypeCreationDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_PurchaseOrderTypeCreationDate_QNAME, XMLGregorianCalendar.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FullyDelivered", scope = PurchaseOrderType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPurchaseOrderTypeFullyDelivered(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PurchaseOrderTypeFullyDelivered_QNAME, AUCodeSetsYesOrNoCategoryType.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmployeePersonalRefId", scope = PurchaseOrderType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPurchaseOrderTypeEmployeePersonalRefId(String value) {
-        return new JAXBElement<String>(_PurchaseOrderTypeEmployeePersonalRefId_QNAME, String.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OriginalPurchaseOrderRefId", scope = PurchaseOrderType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPurchaseOrderTypeOriginalPurchaseOrderRefId(String value) {
-        return new JAXBElement<String>(_PurchaseOrderTypeOriginalPurchaseOrderRefId_QNAME, String.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = PurchaseOrderType.class)
-    public JAXBElement<SIFExtendedElementsType> createPurchaseOrderTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = PurchaseOrderType.class)
-    public JAXBElement<SIFMetadataType> createPurchaseOrderTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = PurchaseOrderType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPurchaseOrderTypeChargedLocationInfoRefId(String value) {
-        return new JAXBElement<String>(_FinancialAccountTypeChargedLocationInfoRefId_QNAME, String.class, PurchaseOrderType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectArea", scope = ACStrandSubjectAreaType.class)
-    public JAXBElement<SubjectAreaType> createACStrandSubjectAreaTypeSubjectArea(SubjectAreaType value) {
-        return new JAXBElement<SubjectAreaType>(_SchoolCourseInfoOverrideTypeSubjectArea_QNAME, SubjectAreaType.class, ACStrandSubjectAreaType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EducationFilterType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EducationFilter", scope = SIFMetadataType.class)
-    public JAXBElement<EducationFilterType> createSIFMetadataTypeEducationFilter(EducationFilterType value) {
-        return new JAXBElement<EducationFilterType>(_SIFMetadataTypeEducationFilter_QNAME, EducationFilterType.class, SIFMetadataType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LifeCycle", scope = SIFMetadataType.class)
-    public JAXBElement<LifeCycleType> createSIFMetadataTypeLifeCycle(LifeCycleType value) {
-        return new JAXBElement<LifeCycleType>(_SIFMetadataTypeLifeCycle_QNAME, LifeCycleType.class, SIFMetadataType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType.TimeElements }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeElements", scope = SIFMetadataType.class)
-    public JAXBElement<SIFMetadataType.TimeElements> createSIFMetadataTypeTimeElements(SIFMetadataType.TimeElements value) {
-        return new JAXBElement<SIFMetadataType.TimeElements>(_SIFMetadataTypeTimeElements_QNAME, SIFMetadataType.TimeElements.class, SIFMetadataType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = LEAInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createLEAInfoTypeStateProvinceId(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SLA", scope = LEAInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createLEAInfoTypeSLA(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeSLA_QNAME, String.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AgencyType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EducationAgencyType", scope = LEAInfoType.class)
-    public JAXBElement<AgencyType> createLEAInfoTypeEducationAgencyType(AgencyType value) {
-        return new JAXBElement<AgencyType>(_LEAInfoTypeEducationAgencyType_QNAME, AgencyType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LEAContactListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LEAContactList", scope = LEAInfoType.class)
-    public JAXBElement<LEAContactListType> createLEAInfoTypeLEAContactList(LEAContactListType value) {
-        return new JAXBElement<LEAContactListType>(_LEAInfoTypeLEAContactList_QNAME, LEAContactListType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = LEAInfoType.class)
-    public JAXBElement<AddressListType> createLEAInfoTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsOperationalStatusType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OperationalStatus", scope = LEAInfoType.class)
-    public JAXBElement<AUCodeSetsOperationalStatusType> createLEAInfoTypeOperationalStatus(AUCodeSetsOperationalStatusType value) {
-        return new JAXBElement<AUCodeSetsOperationalStatusType>(_SchoolInfoTypeOperationalStatus_QNAME, AUCodeSetsOperationalStatusType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CommonwealthId", scope = LEAInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createLEAInfoTypeCommonwealthId(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeCommonwealthId_QNAME, String.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = LEAInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createLEAInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "JurisdictionLowerHouse", scope = LEAInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createLEAInfoTypeJurisdictionLowerHouse(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeJurisdictionLowerHouse_QNAME, String.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = LEAInfoType.class)
-    public JAXBElement<SIFMetadataType> createLEAInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LEAURL", scope = LEAInfoType.class)
-    public JAXBElement<String> createLEAInfoTypeLEAURL(String value) {
-        return new JAXBElement<String>(_LEAInfoTypeLEAURL_QNAME, String.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = LEAInfoType.class)
-    public JAXBElement<PhoneNumberListType> createLEAInfoTypePhoneNumberList(PhoneNumberListType value) {
-        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, LEAInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LastInstructionDate", scope = CalendarSummaryType.class)
-    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeLastInstructionDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_CalendarSummaryTypeLastInstructionDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FirstInstructionDate", scope = CalendarSummaryType.class)
-    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeFirstInstructionDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_CalendarSummaryTypeFirstInstructionDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalMinutes", scope = CalendarSummaryType.class)
-    public JAXBElement<Long> createCalendarSummaryTypeInstructionalMinutes(Long value) {
-        return new JAXBElement<Long>(_TimeTablePeriodTypeInstructionalMinutes_QNAME, Long.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GraduationDate", scope = CalendarSummaryType.class)
-    public JAXBElement<String> createCalendarSummaryTypeGraduationDate(String value) {
-        return new JAXBElement<String>(_CalendarSummaryTypeGraduationDate_QNAME, String.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MinutesPerDay", scope = CalendarSummaryType.class)
-    public JAXBElement<Long> createCalendarSummaryTypeMinutesPerDay(Long value) {
-        return new JAXBElement<Long>(_CalendarSummaryTypeMinutesPerDay_QNAME, Long.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = CalendarSummaryType.class)
-    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeEndDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = CalendarSummaryType.class)
-    public JAXBElement<String> createCalendarSummaryTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = CalendarSummaryType.class)
-    public JAXBElement<SIFExtendedElementsType> createCalendarSummaryTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = CalendarSummaryType.class)
-    public JAXBElement<YearLevelsType> createCalendarSummaryTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = CalendarSummaryType.class)
-    public JAXBElement<SIFMetadataType> createCalendarSummaryTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = CalendarSummaryType.class)
-    public JAXBElement<XMLGregorianCalendar> createCalendarSummaryTypeStartDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeStartDate_QNAME, XMLGregorianCalendar.class, CalendarSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TeachingGroupTeacherType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTeacherTypeStaffLocalId(String value) {
-        return new JAXBElement<String>(_TeacherCoverTypeStaffLocalId_QNAME, String.class, TeachingGroupTeacherType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffPersonalRefId", scope = TeachingGroupTeacherType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTeacherTypeStaffPersonalRefId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeStaffPersonalRefId_QNAME, String.class, TeachingGroupTeacherType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NameOfRecordType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = TeachingGroupTeacherType.class)
-    public JAXBElement<NameOfRecordType> createTeachingGroupTeacherTypeName(NameOfRecordType value) {
-        return new JAXBElement<NameOfRecordType>(_ContactTypeName_QNAME, NameOfRecordType.class, TeachingGroupTeacherType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SessionInfoRefId", scope = StudentPeriodAttendanceType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentPeriodAttendanceTypeSessionInfoRefId(String value) {
-        return new JAXBElement<String>(_StudentPeriodAttendanceTypeSessionInfoRefId_QNAME, String.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeIn", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPeriodAttendanceTypeTimeIn(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeIn_QNAME, XMLGregorianCalendar.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScheduledActivityRefId", scope = StudentPeriodAttendanceType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentPeriodAttendanceTypeScheduledActivityRefId(String value) {
-        return new JAXBElement<String>(_StudentPeriodAttendanceTypeScheduledActivityRefId_QNAME, String.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AuditInfoType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AuditInfo", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<AuditInfoType> createStudentPeriodAttendanceTypeAuditInfo(AuditInfoType value) {
-        return new JAXBElement<AuditInfoType>(_StudentPeriodAttendanceTypeAuditInfo_QNAME, AuditInfoType.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPeriodAttendanceTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimetablePeriod", scope = StudentPeriodAttendanceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentPeriodAttendanceTypeTimetablePeriod(String value) {
-        return new JAXBElement<String>(_StudentPeriodAttendanceTypeTimetablePeriod_QNAME, String.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeOut", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPeriodAttendanceTypeTimeOut(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeOut_QNAME, XMLGregorianCalendar.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceComment", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<String> createStudentPeriodAttendanceTypeAttendanceComment(String value) {
-        return new JAXBElement<String>(_StudentPeriodAttendanceTypeAttendanceComment_QNAME, String.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentPeriodAttendanceTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentPeriodAttendanceType.class)
-    public JAXBElement<SIFMetadataType> createStudentPeriodAttendanceTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentPeriodAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevel", scope = LearningStandardItemType.StandardIdentifier.class)
-    public JAXBElement<YearLevelType> createLearningStandardItemTypeStandardIdentifierYearLevel(YearLevelType value) {
-        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeYearLevel_QNAME, YearLevelType.class, LearningStandardItemType.StandardIdentifier.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AlternateIdentificationCodes", scope = LearningStandardItemType.StandardIdentifier.class)
-    public JAXBElement<LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes> createLearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes(LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes value) {
-        return new JAXBElement<LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes>(_LearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes_QNAME, LearningStandardItemType.StandardIdentifier.AlternateIdentificationCodes.class, LearningStandardItemType.StandardIdentifier.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Benchmark", scope = LearningStandardItemType.StandardIdentifier.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createLearningStandardItemTypeStandardIdentifierBenchmark(String value) {
-        return new JAXBElement<String>(_LearningStandardItemTypeStandardIdentifierBenchmark_QNAME, String.class, LearningStandardItemType.StandardIdentifier.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IndicatorNumber", scope = LearningStandardItemType.StandardIdentifier.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createLearningStandardItemTypeStandardIdentifierIndicatorNumber(String value) {
-        return new JAXBElement<String>(_LearningStandardItemTypeStandardIdentifierIndicatorNumber_QNAME, String.class, LearningStandardItemType.StandardIdentifier.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TechnicalRequirement", scope = TechnicalRequirementsType.class)
-    public JAXBElement<String> createTechnicalRequirementsTypeTechnicalRequirement(String value) {
-        return new JAXBElement<String>(_TechnicalRequirementsTypeTechnicalRequirement_QNAME, String.class, TechnicalRequirementsType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SchoolCourseInfoOverrideType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseInfoOverride", scope = SectionInfoType.class)
-    public JAXBElement<SchoolCourseInfoOverrideType> createSectionInfoTypeSchoolCourseInfoOverride(SchoolCourseInfoOverrideType value) {
-        return new JAXBElement<SchoolCourseInfoOverrideType>(_SectionInfoTypeSchoolCourseInfoOverride_QNAME, SchoolCourseInfoOverrideType.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseSectionCode", scope = SectionInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSectionInfoTypeCourseSectionCode(String value) {
-        return new JAXBElement<String>(_SectionInfoTypeCourseSectionCode_QNAME, String.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = SectionInfoType.class)
-    public JAXBElement<XMLGregorianCalendar> createSectionInfoTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermInfoRefId", scope = SectionInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSectionInfoTypeTermInfoRefId(String value) {
-        return new JAXBElement<String>(_SectionInfoTypeTermInfoRefId_QNAME, String.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MediumOfInstructionType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MediumOfInstruction", scope = SectionInfoType.class)
-    public JAXBElement<MediumOfInstructionType> createSectionInfoTypeMediumOfInstruction(MediumOfInstructionType value) {
-        return new JAXBElement<MediumOfInstructionType>(_SectionInfoTypeMediumOfInstruction_QNAME, MediumOfInstructionType.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LanguageOfInstructionType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LanguageOfInstruction", scope = SectionInfoType.class)
-    public JAXBElement<LanguageOfInstructionType> createSectionInfoTypeLanguageOfInstruction(LanguageOfInstructionType value) {
-        return new JAXBElement<LanguageOfInstructionType>(_SectionInfoTypeLanguageOfInstruction_QNAME, LanguageOfInstructionType.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = SectionInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSectionInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SectionCode", scope = SectionInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSectionInfoTypeSectionCode(String value) {
-        return new JAXBElement<String>(_SectionInfoTypeSectionCode_QNAME, String.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SummerSchool", scope = SectionInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSectionInfoTypeSummerSchool(String value) {
-        return new JAXBElement<String>(_SectionInfoTypeSummerSchool_QNAME, String.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocationOfInstructionType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationOfInstruction", scope = SectionInfoType.class)
-    public JAXBElement<LocationOfInstructionType> createSectionInfoTypeLocationOfInstruction(LocationOfInstructionType value) {
-        return new JAXBElement<LocationOfInstructionType>(_SectionInfoTypeLocationOfInstruction_QNAME, LocationOfInstructionType.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SectionInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createSectionInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SectionInfoType.class)
-    public JAXBElement<SIFMetadataType> createSectionInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CountForAttendance", scope = SectionInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSectionInfoTypeCountForAttendance(String value) {
-        return new JAXBElement<String>(_SectionInfoTypeCountForAttendance_QNAME, String.class, SectionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoleScopeList", scope = SystemRoleType.SystemContextList.SystemContext.RoleList.Role.class)
-    public JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList> createSystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeList(SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList value) {
-        return new JAXBElement<SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList>(_SystemRoleTypeSystemContextListSystemContextRoleListRoleRoleScopeList_QNAME, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.RoleScopeList.class, SystemRoleType.SystemContextList.SystemContext.RoleList.Role.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PromotionStatus", scope = PromotionInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPromotionInfoTypePromotionStatus(String value) {
-        return new JAXBElement<String>(_PromotionInfoTypePromotionStatus_QNAME, String.class, PromotionInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = SchoolProgramType.class)
-    public JAXBElement<OtherCodeListType> createSchoolProgramTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, SchoolProgramType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Category", scope = SchoolProgramType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolProgramTypeCategory(String value) {
-        return new JAXBElement<String>(_SchoolProgramTypeCategory_QNAME, String.class, SchoolProgramType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = AddressType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RadioContact", scope = AddressType.class)
-    public JAXBElement<String> createAddressTypeRadioContact(String value) {
-        return new JAXBElement<String>(_AddressTypeRadioContact_QNAME, String.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MapReferenceType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MapReference", scope = AddressType.class)
-    public JAXBElement<MapReferenceType> createAddressTypeMapReference(MapReferenceType value) {
-        return new JAXBElement<MapReferenceType>(_AddressTypeMapReference_QNAME, MapReferenceType.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressGlobalUID", scope = AddressType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAddressTypeAddressGlobalUID(String value) {
-        return new JAXBElement<String>(_AddressTypeAddressGlobalUID_QNAME, String.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvince", scope = AddressType.class)
-    public JAXBElement<String> createAddressTypeStateProvince(String value) {
-        return new JAXBElement<String>(_AddressTypeStateProvince_QNAME, String.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Country", scope = AddressType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAddressTypeCountry(String value) {
-        return new JAXBElement<String>(_AddressTypeCountry_QNAME, String.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EffectiveToDate", scope = AddressType.class)
-    public JAXBElement<XMLGregorianCalendar> createAddressTypeEffectiveToDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_AddressTypeEffectiveToDate_QNAME, XMLGregorianCalendar.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EffectiveFromDate", scope = AddressType.class)
-    public JAXBElement<XMLGregorianCalendar> createAddressTypeEffectiveFromDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_AddressTypeEffectiveFromDate_QNAME, XMLGregorianCalendar.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Community", scope = AddressType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createAddressTypeCommunity(String value) {
-        return new JAXBElement<String>(_AddressTypeCommunity_QNAME, String.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StatisticalAreasType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StatisticalAreas", scope = AddressType.class)
-    public JAXBElement<StatisticalAreasType> createAddressTypeStatisticalAreas(StatisticalAreasType value) {
-        return new JAXBElement<StatisticalAreasType>(_AddressTypeStatisticalAreas_QNAME, StatisticalAreasType.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GridLocationType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GridLocation", scope = AddressType.class)
-    public JAXBElement<GridLocationType> createAddressTypeGridLocation(GridLocationType value) {
-        return new JAXBElement<GridLocationType>(_AddressTypeGridLocation_QNAME, GridLocationType.class, AddressType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentExitStatusContainerType.class)
-    public JAXBElement<OtherCodeListType> createStudentExitStatusContainerTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentExitStatusContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LocationType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Location", scope = StudentActivityInfoType.class)
-    public JAXBElement<LocationType> createStudentActivityInfoTypeLocation(LocationType value) {
-        return new JAXBElement<LocationType>(_AggregateStatisticInfoTypeLocation_QNAME, LocationType.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = StudentActivityInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentActivityInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CurricularStatus", scope = StudentActivityInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentActivityInfoTypeCurricularStatus(String value) {
-        return new JAXBElement<String>(_StudentActivityInfoTypeCurricularStatus_QNAME, String.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentActivityInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentActivityInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = StudentActivityInfoType.class)
-    public JAXBElement<YearLevelsType> createStudentActivityInfoTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentActivityInfoType.class)
-    public JAXBElement<SIFMetadataType> createStudentActivityInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentActivityLevel", scope = StudentActivityInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentActivityInfoTypeStudentActivityLevel(String value) {
-        return new JAXBElement<String>(_StudentActivityInfoTypeStudentActivityLevel_QNAME, String.class, StudentActivityInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EquipmentInfoType.SIFRefId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_RefId", scope = EquipmentInfoType.class)
-    public JAXBElement<EquipmentInfoType.SIFRefId> createEquipmentInfoTypeSIFRefId(EquipmentInfoType.SIFRefId value) {
-        return new JAXBElement<EquipmentInfoType.SIFRefId>(_EquipmentInfoTypeSIFRefId_QNAME, EquipmentInfoType.SIFRefId.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InvoiceRefId", scope = EquipmentInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createEquipmentInfoTypeInvoiceRefId(String value) {
-        return new JAXBElement<String>(_EquipmentInfoTypeInvoiceRefId_QNAME, String.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AssetNumber", scope = EquipmentInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createEquipmentInfoTypeAssetNumber(String value) {
-        return new JAXBElement<String>(_EquipmentInfoTypeAssetNumber_QNAME, String.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PurchaseOrderRefId", scope = EquipmentInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createEquipmentInfoTypePurchaseOrderRefId(String value) {
-        return new JAXBElement<String>(_EquipmentInfoTypePurchaseOrderRefId_QNAME, String.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = EquipmentInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createEquipmentInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = EquipmentInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createEquipmentInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EquipmentType", scope = EquipmentInfoType.class)
-    public JAXBElement<String> createEquipmentInfoTypeEquipmentType(String value) {
-        return new JAXBElement<String>(_EquipmentInfoTypeEquipmentType_QNAME, String.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = EquipmentInfoType.class)
-    public JAXBElement<SIFMetadataType> createEquipmentInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, EquipmentInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Role", scope = StudentActivityParticipationType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentActivityParticipationTypeRole(String value) {
-        return new JAXBElement<String>(_ContactInfoTypeRole_QNAME, String.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = StudentActivityParticipationType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentActivityParticipationTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParticipationComment", scope = StudentActivityParticipationType.class)
-    public JAXBElement<String> createStudentActivityParticipationTypeParticipationComment(String value) {
-        return new JAXBElement<String>(_StudentActivityParticipationTypeParticipationComment_QNAME, String.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RecognitionListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RecognitionList", scope = StudentActivityParticipationType.class)
-    public JAXBElement<RecognitionListType> createStudentActivityParticipationTypeRecognitionList(RecognitionListType value) {
-        return new JAXBElement<RecognitionListType>(_StudentActivityParticipationTypeRecognitionList_QNAME, RecognitionListType.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = StudentActivityParticipationType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentActivityParticipationTypeEndDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentActivityParticipationType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentActivityParticipationTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentActivityParticipationType.class)
-    public JAXBElement<SIFMetadataType> createStudentActivityParticipationTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = StudentActivityParticipationType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentActivityParticipationTypeStartDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeStartDate_QNAME, XMLGregorianCalendar.class, StudentActivityParticipationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalDescription", scope = ResourceUsageType.ResourceUsageContentType.class)
-    public JAXBElement<String> createResourceUsageTypeResourceUsageContentTypeLocalDescription(String value) {
-        return new JAXBElement<String>(_ResourceUsageTypeResourceUsageContentTypeLocalDescription_QNAME, String.class, ResourceUsageType.ResourceUsageContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TimeElementType.SpanGaps }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SpanGaps", scope = TimeElementType.class)
-    public JAXBElement<TimeElementType.SpanGaps> createTimeElementTypeSpanGaps(TimeElementType.SpanGaps value) {
-        return new JAXBElement<TimeElementType.SpanGaps>(_TimeElementTypeSpanGaps_QNAME, TimeElementType.SpanGaps.class, TimeElementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDateTime", scope = TimeElementType.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
-    public JAXBElement<java.util.Calendar> createTimeElementTypeEndDateTime(java.util.Calendar value) {
-        return new JAXBElement<java.util.Calendar>(_TimeElementTypeSpanGapsSpanGapEndDateTime_QNAME, java.util.Calendar.class, TimeElementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDateTime", scope = TimeElementType.class)
-    @XmlJavaTypeAdapter(Adapter1 .class)
-    public JAXBElement<java.util.Calendar> createTimeElementTypeStartDateTime(java.util.Calendar value) {
-        return new JAXBElement<java.util.Calendar>(_TimeElementTypeSpanGapsSpanGapStartDateTime_QNAME, java.util.Calendar.class, TimeElementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentLocalId", scope = TeachingGroupStudentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupStudentTypeStudentLocalId(String value) {
-        return new JAXBElement<String>(_TeachingGroupStudentTypeStudentLocalId_QNAME, String.class, TeachingGroupStudentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = TeachingGroupStudentType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupStudentTypeStudentPersonalRefId(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeStudentPersonalRefId_QNAME, String.class, TeachingGroupStudentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NameOfRecordType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = TeachingGroupStudentType.class)
-    public JAXBElement<NameOfRecordType> createTeachingGroupStudentTypeName(NameOfRecordType value) {
-        return new JAXBElement<NameOfRecordType>(_ContactTypeName_QNAME, NameOfRecordType.class, TeachingGroupStudentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPTestTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestType.class)
-    public JAXBElement<SIFMetadataType> createNAPTestTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CurriculumLevel", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeCurriculumLevel(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeCurriculumLevel_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TeachingGroupPeriodListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupPeriodList", scope = TeachingGroupType.class)
-    public JAXBElement<TeachingGroupPeriodListType> createTeachingGroupTypeTeachingGroupPeriodList(TeachingGroupPeriodListType value) {
-        return new JAXBElement<TeachingGroupPeriodListType>(_TeachingGroupTypeTeachingGroupPeriodList_QNAME, TeachingGroupPeriodListType.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LongName", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeLongName(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeLongName_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Semester", scope = TeachingGroupType.class)
-    public JAXBElement<Long> createTeachingGroupTypeSemester(Long value) {
-        return new JAXBElement<Long>(_TimeTableSubjectTypeSemester_QNAME, Long.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GroupType", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeGroupType(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeGroupType_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseLocalId", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeSchoolCourseLocalId(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeSchoolCourseLocalId_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MaxClassSize", scope = TeachingGroupType.class)
-    public JAXBElement<BigInteger> createTeachingGroupTypeMaxClassSize(BigInteger value) {
-        return new JAXBElement<BigInteger>(_TeachingGroupTypeMaxClassSize_QNAME, BigInteger.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Set", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeSet(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeSet_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TeacherListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherList", scope = TeachingGroupType.class)
-    public JAXBElement<TeacherListType> createTeachingGroupTypeTeacherList(TeacherListType value) {
-        return new JAXBElement<TeacherListType>(_TimeTableCellTypeTeacherList_QNAME, TeacherListType.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Block", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeBlock(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeBlock_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolCourseInfoRefId", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeSchoolCourseInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolCourseInfoRefId_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectRefId", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeTimeTableSubjectRefId(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeTimeTableSubjectRefId_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MinClassSize", scope = TeachingGroupType.class)
-    public JAXBElement<BigInteger> createTeachingGroupTypeMinClassSize(BigInteger value) {
-        return new JAXBElement<BigInteger>(_TeachingGroupTypeMinClassSize_QNAME, BigInteger.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentList", scope = TeachingGroupType.class)
-    public JAXBElement<StudentListType> createTeachingGroupTypeStudentList(StudentListType value) {
-        return new JAXBElement<StudentListType>(_TeachingGroupTypeStudentList_QNAME, StudentListType.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectLocalId", scope = TeachingGroupType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupTypeTimeTableSubjectLocalId(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeTimeTableSubjectLocalId_QNAME, String.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TeachingGroupType.class)
-    public JAXBElement<SIFExtendedElementsType> createTeachingGroupTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TeachingGroupType.class)
-    public JAXBElement<SIFMetadataType> createTeachingGroupTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, TeachingGroupType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocationInStage", scope = NAPTestletContentType.class)
-    public JAXBElement<BigInteger> createNAPTestletContentTypeLocationInStage(BigInteger value) {
-        return new JAXBElement<BigInteger>(_NAPTestletContentTypeLocationInStage_QNAME, BigInteger.class, NAPTestletContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Node", scope = NAPTestletContentType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPTestletContentTypeNode(String value) {
-        return new JAXBElement<String>(_NAPTestletContentTypeNode_QNAME, String.class, NAPTestletContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeStudentPersonalRefId(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeStudentPersonalRefId_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PSIOtherIdMatch", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<Boolean> createNAPEventStudentLinkTypePSIOtherIdMatch(Boolean value) {
-        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypePSIOtherIdMatch_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExemptionReason", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeExemptionReason(String value) {
-        return new JAXBElement<String>(_NAPEventStudentLinkTypeExemptionReason_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Device", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeDevice(String value) {
-        return new JAXBElement<String>(_NAPEventStudentLinkTypeDevice_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PossibleDuplicate", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<Boolean> createNAPEventStudentLinkTypePossibleDuplicate(Boolean value) {
-        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypePossibleDuplicate_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TestDisruptionListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TestDisruptionList", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<TestDisruptionListType> createNAPEventStudentLinkTypeTestDisruptionList(TestDisruptionListType value) {
-        return new JAXBElement<TestDisruptionListType>(_NAPEventStudentLinkTypeTestDisruptionList_QNAME, TestDisruptionListType.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DOBRange", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<Boolean> createNAPEventStudentLinkTypeDOBRange(Boolean value) {
-        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypeDOBRange_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeNAPTestRefId(String value) {
-        return new JAXBElement<String>(_NAPTestScoreSummaryTypeNAPTestRefId_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPJurisdiction", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeNAPJurisdiction(String value) {
-        return new JAXBElement<String>(_NAPEventStudentLinkTypeNAPJurisdiction_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AdjustmentContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Adjustment", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<AdjustmentContainerType> createNAPEventStudentLinkTypeAdjustment(AdjustmentContainerType value) {
-        return new JAXBElement<AdjustmentContainerType>(_NAPEventStudentLinkTypeAdjustment_QNAME, AdjustmentContainerType.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "System", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeSystem(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeSystem_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolGeolocation", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeSchoolGeolocation(String value) {
-        return new JAXBElement<String>(_NAPEventStudentLinkTypeSchoolGeolocation_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ReportingSchoolName", scope = NAPEventStudentLinkType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createNAPEventStudentLinkTypeReportingSchoolName(String value) {
-        return new JAXBElement<String>(_NAPEventStudentLinkTypeReportingSchoolName_QNAME, String.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPEventStudentLinkTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<SIFMetadataType> createNAPEventStudentLinkTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PersonalDetailsChanged", scope = NAPEventStudentLinkType.class)
-    public JAXBElement<Boolean> createNAPEventStudentLinkTypePersonalDetailsChanged(Boolean value) {
-        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypePersonalDetailsChanged_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExpenseAccountsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExpenseAccounts", scope = PurchasingItemType.class)
-    public JAXBElement<ExpenseAccountsType> createPurchasingItemTypeExpenseAccounts(ExpenseAccountsType value) {
-        return new JAXBElement<ExpenseAccountsType>(_PurchasingItemTypeExpenseAccounts_QNAME, ExpenseAccountsType.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = PurchasingItemType.class)
-    public JAXBElement<BigDecimal> createPurchasingItemTypeTaxRate(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_InvoiceTypeTaxRate_QNAME, BigDecimal.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "QuantityDelivered", scope = PurchasingItemType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPurchasingItemTypeQuantityDelivered(String value) {
-        return new JAXBElement<String>(_PurchasingItemTypeQuantityDelivered_QNAME, String.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ItemNumber", scope = PurchasingItemType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPurchasingItemTypeItemNumber(String value) {
-        return new JAXBElement<String>(_PurchasingItemTypeItemNumber_QNAME, String.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TotalCost", scope = PurchasingItemType.class)
-    public JAXBElement<MonetaryAmountType> createPurchasingItemTypeTotalCost(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_PurchasingItemTypeTotalCost_QNAME, MonetaryAmountType.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CancelledOrder", scope = PurchasingItemType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPurchasingItemTypeCancelledOrder(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PurchasingItemTypeCancelledOrder_QNAME, AUCodeSetsYesOrNoCategoryType.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "UnitCost", scope = PurchasingItemType.class)
-    public JAXBElement<MonetaryAmountType> createPurchasingItemTypeUnitCost(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_PurchasingItemTypeUnitCost_QNAME, MonetaryAmountType.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Quantity", scope = PurchasingItemType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPurchasingItemTypeQuantity(String value) {
-        return new JAXBElement<String>(_PurchasingItemTypeQuantity_QNAME, String.class, PurchasingItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = LanguageOfInstructionType.class)
-    public JAXBElement<OtherCodeListType> createLanguageOfInstructionTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, LanguageOfInstructionType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = AgencyType.class)
-    public JAXBElement<OtherCodeListType> createAgencyTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, AgencyType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.Created }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Created", scope = LifeCycleType.class)
-    public JAXBElement<LifeCycleType.Created> createLifeCycleTypeCreated(LifeCycleType.Created value) {
-        return new JAXBElement<LifeCycleType.Created>(_LifeCycleTypeCreated_QNAME, LifeCycleType.Created.class, LifeCycleType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.ModificationHistory }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ModificationHistory", scope = LifeCycleType.class)
-    public JAXBElement<LifeCycleType.ModificationHistory> createLifeCycleTypeModificationHistory(LifeCycleType.ModificationHistory value) {
-        return new JAXBElement<LifeCycleType.ModificationHistory>(_LifeCycleTypeModificationHistory_QNAME, LifeCycleType.ModificationHistory.class, LifeCycleType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.TimeElements }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeElements", scope = LifeCycleType.class)
-    public JAXBElement<LifeCycleType.TimeElements> createLifeCycleTypeTimeElements(LifeCycleType.TimeElements value) {
-        return new JAXBElement<LifeCycleType.TimeElements>(_SIFMetadataTypeTimeElements_QNAME, LifeCycleType.TimeElements.class, LifeCycleType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ProgramFundingSourceType.class)
-    public JAXBElement<OtherCodeListType> createProgramFundingSourceTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, ProgramFundingSourceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FamilyName", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypeFamilyName(String value) {
-        return new JAXBElement<String>(_BaseNameTypeFamilyName_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferredFamilyName", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypePreferredFamilyName(String value) {
-        return new JAXBElement<String>(_BaseNameTypePreferredFamilyName_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferredFamilyNameFirst", scope = BaseNameType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createBaseNameTypePreferredFamilyNameFirst(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_BaseNameTypePreferredFamilyNameFirst_QNAME, AUCodeSetsYesOrNoCategoryType.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Title", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypeTitle(String value) {
-        return new JAXBElement<String>(_BaseNameTypeTitle_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MiddleName", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypeMiddleName(String value) {
-        return new JAXBElement<String>(_BaseNameTypeMiddleName_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferredGivenName", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypePreferredGivenName(String value) {
-        return new JAXBElement<String>(_BaseNameTypePreferredGivenName_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FamilyNameFirst", scope = BaseNameType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createBaseNameTypeFamilyNameFirst(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_BaseNameTypeFamilyNameFirst_QNAME, AUCodeSetsYesOrNoCategoryType.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GivenName", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypeGivenName(String value) {
-        return new JAXBElement<String>(_BaseNameTypeGivenName_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FullName", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypeFullName(String value) {
-        return new JAXBElement<String>(_BaseNameTypeFullName_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Suffix", scope = BaseNameType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createBaseNameTypeSuffix(String value) {
-        return new JAXBElement<String>(_BaseNameTypeSuffix_QNAME, String.class, BaseNameType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HouseholdContactId", scope = HouseholdContactInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createHouseholdContactInfoTypeHouseholdContactId(String value) {
-        return new JAXBElement<String>(_HouseholdContactInfoTypeHouseholdContactId_QNAME, String.class, HouseholdContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = HouseholdContactInfoType.class)
-    public JAXBElement<AddressListType> createHouseholdContactInfoTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, HouseholdContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HouseholdSalutation", scope = HouseholdContactInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createHouseholdContactInfoTypeHouseholdSalutation(String value) {
-        return new JAXBElement<String>(_HouseholdContactInfoTypeHouseholdSalutation_QNAME, String.class, HouseholdContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EmailListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = HouseholdContactInfoType.class)
-    public JAXBElement<EmailListType> createHouseholdContactInfoTypeEmailList(EmailListType value) {
-        return new JAXBElement<EmailListType>(_PrincipalInfoTypeEmailList_QNAME, EmailListType.class, HouseholdContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = HouseholdContactInfoType.class)
-    public JAXBElement<PhoneNumberListType> createHouseholdContactInfoTypePhoneNumberList(PhoneNumberListType value) {
-        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, HouseholdContactInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DayId", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeDayId(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeDayId_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Location", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeLocation(String value) {
-        return new JAXBElement<String>(_AggregateStatisticInfoTypeLocation_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsScheduledActivityTypeType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityType", scope = ScheduledActivityType.class)
-    public JAXBElement<AUCodeSetsScheduledActivityTypeType> createScheduledActivityTypeActivityType(AUCodeSetsScheduledActivityTypeType value) {
-        return new JAXBElement<AUCodeSetsScheduledActivityTypeType>(_ScheduledActivityTypeActivityType_QNAME, AUCodeSetsScheduledActivityTypeType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PeriodId", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypePeriodId(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypePeriodId_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableCellRefId", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeTimeTableCellRefId(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableCellRefId_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CellType", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeCellType(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeCellType_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = ScheduledActivityType.class)
-    public JAXBElement<AddressListType> createScheduledActivityTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityComment", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeActivityComment(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeActivityComment_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableRefId", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeTimeTableRefId(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableRefId_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ScheduledTeacherListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherList", scope = ScheduledActivityType.class)
-    public JAXBElement<ScheduledTeacherListType> createScheduledActivityTypeTeacherList(ScheduledTeacherListType value) {
-        return new JAXBElement<ScheduledTeacherListType>(_TimeTableCellTypeTeacherList_QNAME, ScheduledTeacherListType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectRefId", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeTimeTableSubjectRefId(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeTimeTableSubjectRefId_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityName", scope = ScheduledActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createScheduledActivityTypeActivityName(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeActivityName_QNAME, String.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TeachingGroupListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupList", scope = ScheduledActivityType.class)
-    public JAXBElement<TeachingGroupListType> createScheduledActivityTypeTeachingGroupList(TeachingGroupListType value) {
-        return new JAXBElement<TeachingGroupListType>(_ScheduledActivityTypeTeachingGroupList_QNAME, TeachingGroupListType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RoomListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomList", scope = ScheduledActivityType.class)
-    public JAXBElement<RoomListType> createScheduledActivityTypeRoomList(RoomListType value) {
-        return new JAXBElement<RoomListType>(_TimeTableCellTypeRoomList_QNAME, RoomListType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentList", scope = ScheduledActivityType.class)
-    public JAXBElement<StudentsType> createScheduledActivityTypeStudentList(StudentsType value) {
-        return new JAXBElement<StudentsType>(_TeachingGroupTypeStudentList_QNAME, StudentsType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ScheduledActivityType.class)
-    public JAXBElement<SIFExtendedElementsType> createScheduledActivityTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevels", scope = ScheduledActivityType.class)
-    public JAXBElement<YearLevelsType> createScheduledActivityTypeYearLevels(YearLevelsType value) {
-        return new JAXBElement<YearLevelsType>(_SchoolInfoTypeYearLevels_QNAME, YearLevelsType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ScheduledActivityType.class)
-    public JAXBElement<SIFMetadataType> createScheduledActivityTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ScheduledActivityOverrideType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Override", scope = ScheduledActivityType.class)
-    public JAXBElement<ScheduledActivityOverrideType> createScheduledActivityTypeOverride(ScheduledActivityOverrideType value) {
-        return new JAXBElement<ScheduledActivityOverrideType>(_ScheduledActivityTypeOverride_QNAME, ScheduledActivityOverrideType.class, ScheduledActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsNAPWritingGenreType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "WritingGenre", scope = NAPTestItemContentType.class)
-    public JAXBElement<AUCodeSetsNAPWritingGenreType> createNAPTestItemContentTypeWritingGenre(AUCodeSetsNAPWritingGenreType value) {
-        return new JAXBElement<AUCodeSetsNAPWritingGenreType>(_NAPTestItemContentTypeWritingGenre_QNAME, AUCodeSetsNAPWritingGenreType.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NAPWritingRubricListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPWritingRubricList", scope = NAPTestItemContentType.class)
-    public JAXBElement<NAPWritingRubricListType> createNAPTestItemContentTypeNAPWritingRubricList(NAPWritingRubricListType value) {
-        return new JAXBElement<NAPWritingRubricListType>(_NAPTestItemContentTypeNAPWritingRubricList_QNAME, NAPWritingRubricListType.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubstituteItemListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ItemSubstitutedForList", scope = NAPTestItemContentType.class)
-    public JAXBElement<SubstituteItemListType> createNAPTestItemContentTypeItemSubstitutedForList(SubstituteItemListType value) {
-        return new JAXBElement<SubstituteItemListType>(_NAPTestItemContentTypeItemSubstitutedForList_QNAME, SubstituteItemListType.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StimulusListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StimulusList", scope = NAPTestItemContentType.class)
-    public JAXBElement<StimulusListType> createNAPTestItemContentTypeStimulusList(StimulusListType value) {
-        return new JAXBElement<StimulusListType>(_NAPTestItemContentTypeStimulusList_QNAME, StimulusListType.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ContentDescriptionListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContentDescriptionList", scope = NAPTestItemContentType.class)
-    public JAXBElement<ContentDescriptionListType> createNAPTestItemContentTypeContentDescriptionList(ContentDescriptionListType value) {
-        return new JAXBElement<ContentDescriptionListType>(_NAPTestItemContentTypeContentDescriptionList_QNAME, ContentDescriptionListType.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MultipleChoiceOptionCount", scope = NAPTestItemContentType.class)
-    public JAXBElement<Integer> createNAPTestItemContentTypeMultipleChoiceOptionCount(Integer value) {
-        return new JAXBElement<Integer>(_NAPTestItemContentTypeMultipleChoiceOptionCount_QNAME, Integer.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExemplarURL", scope = NAPTestItemContentType.class)
-    public JAXBElement<String> createNAPTestItemContentTypeExemplarURL(String value) {
-        return new JAXBElement<String>(_NAPTestItemContentTypeExemplarURL_QNAME, String.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CorrectAnswer", scope = NAPTestItemContentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createNAPTestItemContentTypeCorrectAnswer(String value) {
-        return new JAXBElement<String>(_NAPTestItemContentTypeCorrectAnswer_QNAME, String.class, NAPTestItemContentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountingPeriod", scope = ExpenseAccountType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createExpenseAccountTypeAccountingPeriod(String value) {
-        return new JAXBElement<String>(_InvoiceTypeAccountingPeriod_QNAME, String.class, ExpenseAccountType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinancialAccountRefId", scope = ExpenseAccountType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createExpenseAccountTypeFinancialAccountRefId(String value) {
-        return new JAXBElement<String>(_ExpenseAccountTypeFinancialAccountRefId_QNAME, String.class, ExpenseAccountType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentAttendanceTimeListType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentAttendanceTimeListTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentAttendanceTimeListType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentAttendanceTimeListType.class)
-    public JAXBElement<SIFMetadataType> createStudentAttendanceTimeListTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentAttendanceTimeListType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ResourceUsageType.class)
-    public JAXBElement<SIFExtendedElementsType> createResourceUsageTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ResourceUsageType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ResourceUsageType.class)
-    public JAXBElement<SIFMetadataType> createResourceUsageTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, ResourceUsageType.class, value);
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, LearningResourceType.class, value);
     }
 
     /**
@@ -10938,7 +11813,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = LearningStandardItemType.class)
     public JAXBElement<SIFExtendedElementsType> createLearningStandardItemTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LearningStandardItemType.class, value);
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, LearningStandardItemType.class, value);
     }
 
     /**
@@ -10947,7 +11822,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = LearningStandardItemType.class)
     public JAXBElement<SIFMetadataType> createLearningStandardItemTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, LearningStandardItemType.class, value);
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, LearningStandardItemType.class, value);
     }
 
     /**
@@ -10963,814 +11838,290 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ReferralSourceType.class)
-    public JAXBElement<OtherCodeListType> createReferralSourceTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, ReferralSourceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = StudentPersonalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentPersonalTypeStateProvinceId(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Disability", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeDisability(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeDisability_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AlertMessagesType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AlertMessages", scope = StudentPersonalType.class)
-    public JAXBElement<AlertMessagesType> createStudentPersonalTypeAlertMessages(AlertMessagesType value) {
-        return new JAXBElement<AlertMessagesType>(_StudentPersonalTypeAlertMessages_QNAME, AlertMessagesType.class, StudentPersonalType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = CalendarDateInfoType.class)
+    public JAXBElement<OtherCodeListType> createCalendarDateInfoTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, CalendarDateInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OnTimeGraduationYear", scope = StudentPersonalType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeOnTimeGraduationYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeOnTimeGraduationYear_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PrePrimaryEducation", scope = StudentPersonalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentPersonalTypePrePrimaryEducation(String value) {
-        return new JAXBElement<String>(_StudentPersonalTypePrePrimaryEducation_QNAME, String.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EconomicDisadvantage", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeEconomicDisadvantage(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeEconomicDisadvantage_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YoungCarersRole", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeYoungCarersRole(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeYoungCarersRole_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = StudentPersonalType.class)
-    public JAXBElement<OtherIdListType> createStudentPersonalTypeOtherIdList(OtherIdListType value) {
-        return new JAXBElement<OtherIdListType>(_SchoolInfoTypeOtherIdList_QNAME, OtherIdListType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OfflineDelivery", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeOfflineDelivery(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeOfflineDelivery_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Sensitive", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeSensitive(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeSensitive_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AcceptableUsePolicy", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeAcceptableUsePolicy(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeAcceptableUsePolicy_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ESL", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeESL(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeESL_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link MedicalAlertMessagesType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MedicalAlertMessages", scope = StudentPersonalType.class)
-    public JAXBElement<MedicalAlertMessagesType> createStudentPersonalTypeMedicalAlertMessages(MedicalAlertMessagesType value) {
-        return new JAXBElement<MedicalAlertMessagesType>(_StudentPersonalTypeMedicalAlertMessages_QNAME, MedicalAlertMessagesType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HomeSchooledStudent", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeHomeSchooledStudent(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeHomeSchooledStudent_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ProjectedGraduationYear", scope = StudentPersonalType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeProjectedGraduationYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeProjectedGraduationYear_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EducationSupport", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeEducationSupport(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeEducationSupport_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GraduationDate", scope = StudentPersonalType.class)
-    public JAXBElement<String> createStudentPersonalTypeGraduationDate(String value) {
-        return new JAXBElement<String>(_CalendarSummaryTypeGraduationDate_QNAME, String.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IntegrationAide", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeIntegrationAide(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeIntegrationAide_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentMostRecentContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MostRecent", scope = StudentPersonalType.class)
-    public JAXBElement<StudentMostRecentContainerType> createStudentPersonalTypeMostRecent(StudentMostRecentContainerType value) {
-        return new JAXBElement<StudentMostRecentContainerType>(_StudentPersonalTypeMostRecent_QNAME, StudentMostRecentContainerType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GiftedTalented", scope = StudentPersonalType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentPersonalTypeGiftedTalented(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentPersonalTypeGiftedTalented_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ESLDateAssessed", scope = StudentPersonalType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeESLDateAssessed(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeESLDateAssessed_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FirstAUSchoolEnrollment", scope = StudentPersonalType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentPersonalTypeFirstAUSchoolEnrollment(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPersonalTypeFirstAUSchoolEnrollment_QNAME, XMLGregorianCalendar.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicIdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ElectronicIdList", scope = StudentPersonalType.class)
-    public JAXBElement<ElectronicIdListType> createStudentPersonalTypeElectronicIdList(ElectronicIdListType value) {
-        return new JAXBElement<ElectronicIdListType>(_StudentPersonalTypeElectronicIdList_QNAME, ElectronicIdListType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentPersonalType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentPersonalTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentPersonalType.class)
-    public JAXBElement<SIFMetadataType> createStudentPersonalTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = StudentContactPersonalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentContactPersonalTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NonSchoolEducation", scope = StudentContactPersonalType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentContactPersonalTypeNonSchoolEducation(String value) {
-        return new JAXBElement<String>(_StudentContactPersonalTypeNonSchoolEducation_QNAME, String.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmploymentType", scope = StudentContactPersonalType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentContactPersonalTypeEmploymentType(String value) {
-        return new JAXBElement<String>(_StudentContactPersonalTypeEmploymentType_QNAME, String.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = StudentContactPersonalType.class)
-    public JAXBElement<OtherIdListType> createStudentContactPersonalTypeOtherIdList(OtherIdListType value) {
-        return new JAXBElement<OtherIdListType>(_SchoolInfoTypeOtherIdList_QNAME, OtherIdListType.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentContactPersonalType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentContactPersonalTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentContactPersonalType.class)
-    public JAXBElement<SIFMetadataType> createStudentContactPersonalTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolEducationalLevel", scope = StudentContactPersonalType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStudentContactPersonalTypeSchoolEducationalLevel(String value) {
-        return new JAXBElement<String>(_StudentContactPersonalTypeSchoolEducationalLevel_QNAME, String.class, StudentContactPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectLocalId", scope = StaffSubjectType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStaffSubjectTypeSubjectLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableCellTypeSubjectLocalId_QNAME, String.class, StaffSubjectType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableSubjectRefId", scope = StaffSubjectType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createStaffSubjectTypeTimeTableSubjectRefId(String value) {
-        return new JAXBElement<String>(_TeachingGroupTypeTimeTableSubjectRefId_QNAME, String.class, StaffSubjectType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeIn", scope = StudentDailyAttendanceType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentDailyAttendanceTypeTimeIn(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeIn_QNAME, XMLGregorianCalendar.class, StudentDailyAttendanceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DaysTardy", scope = StudentAttendanceSummaryType.class)
-    public JAXBElement<BigDecimal> createStudentAttendanceSummaryTypeDaysTardy(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_StudentAttendanceSummaryTypeDaysTardy_QNAME, BigDecimal.class, StudentAttendanceSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDay", scope = StudentAttendanceSummaryType.class)
-    public JAXBElement<Long> createStudentAttendanceSummaryTypeStartDay(Long value) {
-        return new JAXBElement<Long>(_StudentAttendanceSummaryTypeStartDay_QNAME, Long.class, StudentAttendanceSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentAttendanceSummaryType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentAttendanceSummaryTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentAttendanceSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDay", scope = StudentAttendanceSummaryType.class)
-    public JAXBElement<Long> createStudentAttendanceSummaryTypeEndDay(Long value) {
-        return new JAXBElement<Long>(_StudentAttendanceSummaryTypeEndDay_QNAME, Long.class, StudentAttendanceSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentAttendanceSummaryType.class)
-    public JAXBElement<SIFMetadataType> createStudentAttendanceSummaryTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentAttendanceSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTE", scope = StudentAttendanceSummaryType.class)
-    public JAXBElement<BigDecimal> createStudentAttendanceSummaryTypeFTE(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_StudentMostRecentContainerTypeFTE_QNAME, BigDecimal.class, StudentAttendanceSummaryType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AlternateIdentificationCodes", scope = AlternateIdentificationCodesType.class)
-    public JAXBElement<Object> createAlternateIdentificationCodesTypeAlternateIdentificationCodes(Object value) {
-        return new JAXBElement<Object>(_LearningStandardItemTypeStandardIdentifierAlternateIdentificationCodes_QNAME, Object.class, AlternateIdentificationCodesType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseContent", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeCourseContent(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoTypeCourseContent_QNAME, String.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DistrictCourseCode", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeDistrictCourseCode(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeDistrictCourseCode_QNAME, String.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CourseCredits", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeCourseCredits(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeCourseCredits_QNAME, String.class, SchoolCourseInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AbsenceValue", scope = StudentDailyAttendanceType.class)
+    public JAXBElement<BigDecimal> createStudentDailyAttendanceTypeAbsenceValue(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_StudentDailyAttendanceTypeAbsenceValue_QNAME, BigDecimal.class, StudentDailyAttendanceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = SchoolCourseInfoType.class)
-    public JAXBElement<XMLGregorianCalendar> createSchoolCourseInfoTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, SchoolCourseInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeOut", scope = StudentDailyAttendanceType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentDailyAttendanceTypeTimeOut(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeOut_QNAME, XMLGregorianCalendar.class, StudentDailyAttendanceType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsDayValueCodeType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermInfoRefId", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeTermInfoRefId(String value) {
-        return new JAXBElement<String>(_SectionInfoTypeTermInfoRefId_QNAME, String.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectAreaList", scope = SchoolCourseInfoType.class)
-    public JAXBElement<SubjectAreaListType> createSchoolCourseInfoTypeSubjectAreaList(SubjectAreaListType value) {
-        return new JAXBElement<SubjectAreaListType>(_SchoolCourseInfoTypeSubjectAreaList_QNAME, SubjectAreaListType.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CoreAcademicCourse", scope = SchoolCourseInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSchoolCourseInfoTypeCoreAcademicCourse(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SchoolCourseInfoTypeCoreAcademicCourse_QNAME, AUCodeSetsYesOrNoCategoryType.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GraduationRequirement", scope = SchoolCourseInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSchoolCourseInfoTypeGraduationRequirement(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_SchoolCourseInfoTypeGraduationRequirement_QNAME, AUCodeSetsYesOrNoCategoryType.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateCourseCode", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeStateCourseCode(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeStateCourseCode_QNAME, String.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Department", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeDepartment(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoTypeDepartment_QNAME, String.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = SchoolCourseInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, SchoolCourseInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DayValue", scope = StudentDailyAttendanceType.class)
+    public JAXBElement<AUCodeSetsDayValueCodeType> createStudentDailyAttendanceTypeDayValue(AUCodeSetsDayValueCodeType value) {
+        return new JAXBElement<AUCodeSetsDayValueCodeType>(_StudentDailyAttendanceTypeDayValue_QNAME, AUCodeSetsDayValueCodeType.class, StudentDailyAttendanceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SchoolCourseInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createSchoolCourseInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SchoolCourseInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SchoolCourseInfoType.class)
-    public JAXBElement<SIFMetadataType> createSchoolCourseInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, SchoolCourseInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentDailyAttendanceType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentDailyAttendanceTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentDailyAttendanceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InstructionalLevel", scope = SchoolCourseInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceNote", scope = StudentDailyAttendanceType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSchoolCourseInfoTypeInstructionalLevel(String value) {
-        return new JAXBElement<String>(_SchoolCourseInfoOverrideTypeInstructionalLevel_QNAME, String.class, SchoolCourseInfoType.class, value);
+    public JAXBElement<String> createStudentDailyAttendanceTypeAttendanceNote(String value) {
+        return new JAXBElement<String>(_AttendanceTimeTypeAttendanceNote_QNAME, String.class, StudentDailyAttendanceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentDailyAttendanceType.class)
+    public JAXBElement<SIFMetadataType> createStudentDailyAttendanceTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentDailyAttendanceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxAmount", scope = PaymentReceiptType.class)
-    public JAXBElement<MonetaryAmountType> createPaymentReceiptTypeTaxAmount(MonetaryAmountType value) {
-        return new JAXBElement<MonetaryAmountType>(_InvoiceTypeTaxAmount_QNAME, MonetaryAmountType.class, PaymentReceiptType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxAmount", scope = InvoiceType.class)
+    public JAXBElement<MonetaryAmountType> createInvoiceTypeTaxAmount(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_PurchaseOrderTypeTaxAmount_QNAME, MonetaryAmountType.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = PaymentReceiptType.class)
-    public JAXBElement<BigDecimal> createPaymentReceiptTypeTaxRate(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_InvoiceTypeTaxRate_QNAME, BigDecimal.class, PaymentReceiptType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxRate", scope = InvoiceType.class)
+    public JAXBElement<BigDecimal> createInvoiceTypeTaxRate(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_PurchasingItemTypeTaxRate_QNAME, BigDecimal.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChequeNumber", scope = PaymentReceiptType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApprovedBy", scope = InvoiceType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeChequeNumber(String value) {
-        return new JAXBElement<String>(_PaymentReceiptTypeChequeNumber_QNAME, String.class, PaymentReceiptType.class, value);
+    public JAXBElement<String> createInvoiceTypeApprovedBy(String value) {
+        return new JAXBElement<String>(_JournalTypeApprovedBy_QNAME, String.class, InvoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Voluntary", scope = InvoiceType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createInvoiceTypeVoluntary(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_InvoiceTypeVoluntary_QNAME, AUCodeSetsYesOrNoCategoryType.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TransactionNote", scope = PaymentReceiptType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FormNumber", scope = InvoiceType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeTransactionNote(String value) {
-        return new JAXBElement<String>(_PaymentReceiptTypeTransactionNote_QNAME, String.class, PaymentReceiptType.class, value);
+    public JAXBElement<String> createInvoiceTypeFormNumber(String value) {
+        return new JAXBElement<String>(_InvoiceTypeFormNumber_QNAME, String.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DebtorRefId", scope = PaymentReceiptType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RelatedPurchaseOrderRefId", scope = InvoiceType.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeDebtorRefId(String value) {
-        return new JAXBElement<String>(_PaymentReceiptTypeDebtorRefId_QNAME, String.class, PaymentReceiptType.class, value);
+    public JAXBElement<String> createInvoiceTypeRelatedPurchaseOrderRefId(String value) {
+        return new JAXBElement<String>(_InvoiceTypeRelatedPurchaseOrderRefId_QNAME, String.class, InvoiceType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link MonetaryAmountType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountingPeriod", scope = PaymentReceiptType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeAccountingPeriod(String value) {
-        return new JAXBElement<String>(_InvoiceTypeAccountingPeriod_QNAME, String.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "VendorInfoRefId", scope = PaymentReceiptType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeVendorInfoRefId(String value) {
-        return new JAXBElement<String>(_PaymentReceiptTypeVendorInfoRefId_QNAME, String.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = PaymentReceiptType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeChargedLocationInfoRefId(String value) {
-        return new JAXBElement<String>(_FinancialAccountTypeChargedLocationInfoRefId_QNAME, String.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TransactionDescription", scope = PaymentReceiptType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeTransactionDescription(String value) {
-        return new JAXBElement<String>(_PaymentReceiptTypeTransactionDescription_QNAME, String.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TransactionMethod", scope = PaymentReceiptType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeTransactionMethod(String value) {
-        return new JAXBElement<String>(_PaymentReceiptTypeTransactionMethod_QNAME, String.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InvoiceRefId", scope = PaymentReceiptType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createPaymentReceiptTypeInvoiceRefId(String value) {
-        return new JAXBElement<String>(_EquipmentInfoTypeInvoiceRefId_QNAME, String.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = PaymentReceiptType.class)
-    public JAXBElement<SIFExtendedElementsType> createPaymentReceiptTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = PaymentReceiptType.class)
-    public JAXBElement<SIFMetadataType> createPaymentReceiptTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FinancialAccountRefIdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinancialAccountRefIdList", scope = PaymentReceiptType.class)
-    public JAXBElement<FinancialAccountRefIdListType> createPaymentReceiptTypeFinancialAccountRefIdList(FinancialAccountRefIdListType value) {
-        return new JAXBElement<FinancialAccountRefIdListType>(_InvoiceTypeFinancialAccountRefIdList_QNAME, FinancialAccountRefIdListType.class, PaymentReceiptType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "BookletType", scope = AdjustmentContainerType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAdjustmentContainerTypeBookletType(String value) {
-        return new JAXBElement<String>(_AdjustmentContainerTypeBookletType_QNAME, String.class, AdjustmentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Holder", scope = LearningStandardDocumentType.Copyright.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createLearningStandardDocumentTypeCopyrightHolder(String value) {
-        return new JAXBElement<String>(_LearningStandardDocumentTypeCopyrightHolder_QNAME, String.class, LearningStandardDocumentType.Copyright.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NetAmount", scope = InvoiceType.class)
+    public JAXBElement<MonetaryAmountType> createInvoiceTypeNetAmount(MonetaryAmountType value) {
+        return new JAXBElement<MonetaryAmountType>(_InvoiceTypeNetAmount_QNAME, MonetaryAmountType.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Date", scope = LearningStandardDocumentType.Copyright.class)
-    public JAXBElement<XMLGregorianCalendar> createLearningStandardDocumentTypeCopyrightDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeCopyrightDate_QNAME, XMLGregorianCalendar.class, LearningStandardDocumentType.Copyright.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = CalendarDateInfoType.class)
-    public JAXBElement<OtherCodeListType> createCalendarDateInfoTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, CalendarDateInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DueDate", scope = InvoiceType.class)
+    public JAXBElement<XMLGregorianCalendar> createInvoiceTypeDueDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_GradingAssignmentTypeDueDate_QNAME, XMLGregorianCalendar.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = StaffPersonalType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AccountingPeriod", scope = InvoiceType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStaffPersonalTypeStateProvinceId(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, StaffPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsStaffStatusType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmploymentStatus", scope = StaffPersonalType.class)
-    public JAXBElement<AUCodeSetsStaffStatusType> createStaffPersonalTypeEmploymentStatus(AUCodeSetsStaffStatusType value) {
-        return new JAXBElement<AUCodeSetsStaffStatusType>(_StaffAssignmentTypeEmploymentStatus_QNAME, AUCodeSetsStaffStatusType.class, StaffPersonalType.class, value);
+    public JAXBElement<String> createInvoiceTypeAccountingPeriod(String value) {
+        return new JAXBElement<String>(_ExpenseAccountTypeAccountingPeriod_QNAME, String.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Title", scope = StaffPersonalType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = InvoiceType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createInvoiceTypeChargedLocationInfoRefId(String value) {
+        return new JAXBElement<String>(_PurchaseOrderTypeChargedLocationInfoRefId_QNAME, String.class, InvoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreatedBy", scope = InvoiceType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStaffPersonalTypeTitle(String value) {
-        return new JAXBElement<String>(_BaseNameTypeTitle_QNAME, String.class, StaffPersonalType.class, value);
+    public JAXBElement<String> createInvoiceTypeCreatedBy(String value) {
+        return new JAXBElement<String>(_JournalTypeCreatedBy_QNAME, String.class, InvoiceType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherIdListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherIdList", scope = StaffPersonalType.class)
-    public JAXBElement<OtherIdListType> createStaffPersonalTypeOtherIdList(OtherIdListType value) {
-        return new JAXBElement<OtherIdListType>(_SchoolInfoTypeOtherIdList_QNAME, OtherIdListType.class, StaffPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StaffMostRecentContainerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MostRecent", scope = StaffPersonalType.class)
-    public JAXBElement<StaffMostRecentContainerType> createStaffPersonalTypeMostRecent(StaffMostRecentContainerType value) {
-        return new JAXBElement<StaffMostRecentContainerType>(_StudentPersonalTypeMostRecent_QNAME, StaffMostRecentContainerType.class, StaffPersonalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ElectronicIdListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ElectronicIdList", scope = StaffPersonalType.class)
-    public JAXBElement<ElectronicIdListType> createStaffPersonalTypeElectronicIdList(ElectronicIdListType value) {
-        return new JAXBElement<ElectronicIdListType>(_StudentPersonalTypeElectronicIdList_QNAME, ElectronicIdListType.class, StaffPersonalType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ItemDetail", scope = InvoiceType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createInvoiceTypeItemDetail(String value) {
+        return new JAXBElement<String>(_InvoiceTypeItemDetail_QNAME, String.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StaffPersonalType.class)
-    public JAXBElement<SIFExtendedElementsType> createStaffPersonalTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StaffPersonalType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = InvoiceType.class)
+    public JAXBElement<SIFExtendedElementsType> createInvoiceTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StaffPersonalType.class)
-    public JAXBElement<SIFMetadataType> createStaffPersonalTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StaffPersonalType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = InvoiceType.class)
+    public JAXBElement<SIFMetadataType> createInvoiceTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, InvoiceType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PurchasingItemsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = CatchmentStatusContainerType.class)
-    public JAXBElement<OtherCodeListType> createCatchmentStatusContainerTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, CatchmentStatusContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentExitContainerType.class)
-    public JAXBElement<OtherCodeListType> createStudentExitContainerTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentExitContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExpenseAccountType", scope = ExpenseAccountsType.class)
-    public JAXBElement<Object> createExpenseAccountsTypeExpenseAccountType(Object value) {
-        return new JAXBElement<Object>(_ExpenseAccountsTypeExpenseAccountType_QNAME, Object.class, ExpenseAccountsType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PurchasingItems", scope = InvoiceType.class)
+    public JAXBElement<PurchasingItemsType> createInvoiceTypePurchasingItems(PurchasingItemsType value) {
+        return new JAXBElement<PurchasingItemsType>(_InvoiceTypePurchasingItems_QNAME, PurchasingItemsType.class, InvoiceType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubstituteItemLocalId", scope = SubstituteItemType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TaxType", scope = InvoiceType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createSubstituteItemTypeSubstituteItemLocalId(String value) {
-        return new JAXBElement<String>(_SubstituteItemTypeSubstituteItemLocalId_QNAME, String.class, SubstituteItemType.class, value);
+    public JAXBElement<String> createInvoiceTypeTaxType(String value) {
+        return new JAXBElement<String>(_InvoiceTypeTaxType_QNAME, String.class, InvoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FinancialAccountRefIdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinancialAccountRefIdList", scope = InvoiceType.class)
+    public JAXBElement<FinancialAccountRefIdListType> createInvoiceTypeFinancialAccountRefIdList(FinancialAccountRefIdListType value) {
+        return new JAXBElement<FinancialAccountRefIdListType>(_PaymentReceiptTypeFinancialAccountRefIdList_QNAME, FinancialAccountRefIdListType.class, InvoiceType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "WordCount", scope = StimulusType.class)
+    public JAXBElement<BigInteger> createStimulusTypeWordCount(BigInteger value) {
+        return new JAXBElement<BigInteger>(_StimulusTypeWordCount_QNAME, BigInteger.class, StimulusType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TextType", scope = StimulusType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStimulusTypeTextType(String value) {
+        return new JAXBElement<String>(_StimulusTypeTextType_QNAME, String.class, StimulusType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TextGenre", scope = StimulusType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStimulusTypeTextGenre(String value) {
+        return new JAXBElement<String>(_StimulusTypeTextGenre_QNAME, String.class, StimulusType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentAttendanceTimeListType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentAttendanceTimeListTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentAttendanceTimeListType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentAttendanceTimeListType.class)
+    public JAXBElement<SIFMetadataType> createStudentAttendanceTimeListTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentAttendanceTimeListType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentExitStatusContainerType.class)
+    public JAXBElement<OtherCodeListType> createStudentExitStatusContainerTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentExitStatusContainerType.class, value);
     }
 
     /**
@@ -11980,7 +12331,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentParticipationType.class)
     public JAXBElement<SIFExtendedElementsType> createStudentParticipationTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentParticipationType.class, value);
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentParticipationType.class, value);
     }
 
     /**
@@ -11998,536 +12349,320 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentParticipationType.class)
     public JAXBElement<SIFMetadataType> createStudentParticipationTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentParticipationType.class, value);
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentParticipationType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceTerm", scope = TermInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createTermInfoTypeAttendanceTerm(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_TermInfoTypeAttendanceTerm_QNAME, AUCodeSetsYesOrNoCategoryType.class, TermInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDateTime", scope = TimeElementType.SpanGaps.SpanGap.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    public JAXBElement<java.util.Calendar> createTimeElementTypeSpanGapsSpanGapEndDateTime(java.util.Calendar value) {
+        return new JAXBElement<java.util.Calendar>(_TimeElementTypeEndDateTime_QNAME, java.util.Calendar.class, TimeElementType.SpanGaps.SpanGap.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link java.util.Calendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermSpan", scope = TermInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTermInfoTypeTermSpan(String value) {
-        return new JAXBElement<String>(_TermInfoTypeTermSpan_QNAME, String.class, TermInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDateTime", scope = TimeElementType.SpanGaps.SpanGap.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    public JAXBElement<java.util.Calendar> createTimeElementTypeSpanGapsSpanGapStartDateTime(java.util.Calendar value) {
+        return new JAXBElement<java.util.Calendar>(_TimeElementTypeStartDateTime_QNAME, java.util.Calendar.class, TimeElementType.SpanGaps.SpanGap.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Track", scope = TermInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTermInfoTypeTrack(String value) {
-        return new JAXBElement<String>(_TermInfoTypeTrack_QNAME, String.class, TermInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_RefId", scope = ResourceUsageType.ResourceReportLineList.ResourceReportLine.class)
+    public JAXBElement<ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId> createResourceUsageTypeResourceReportLineListResourceReportLineSIFRefId(ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId value) {
+        return new JAXBElement<ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId>(_ResourceUsageTypeResourceReportLineListResourceReportLineSIFRefId_QNAME, ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId.class, ResourceUsageType.ResourceReportLineList.ResourceReportLine.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TermCode", scope = TermInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTermInfoTypeTermCode(String value) {
-        return new JAXBElement<String>(_TermInfoTypeTermCode_QNAME, String.class, TermInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = TermInfoType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTermInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, TermInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MarkingTerm", scope = TermInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createTermInfoTypeMarkingTerm(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_TermInfoTypeMarkingTerm_QNAME, AUCodeSetsYesOrNoCategoryType.class, TermInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = TermInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createTermInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, TermInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RelativeDuration", scope = TermInfoType.class)
-    public JAXBElement<BigDecimal> createTermInfoTypeRelativeDuration(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_TermInfoTypeRelativeDuration_QNAME, BigDecimal.class, TermInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = TermInfoType.class)
-    public JAXBElement<SIFMetadataType> createTermInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, TermInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchedulingTerm", scope = TermInfoType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createTermInfoTypeSchedulingTerm(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_TermInfoTypeSchedulingTerm_QNAME, AUCodeSetsYesOrNoCategoryType.class, TermInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = ResourceUsageType.ResourceReportLineList.ResourceReportLine.class)
+    public JAXBElement<XMLGregorianCalendar> createResourceUsageTypeResourceReportLineListResourceReportLineEndDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, ResourceUsageType.ResourceReportLineList.ResourceReportLine.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = ProgramAvailabilityType.class)
-    public JAXBElement<OtherCodeListType> createProgramAvailabilityTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, ProgramAvailabilityType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentExitContainerType.class)
+    public JAXBElement<OtherCodeListType> createStudentExitContainerTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentExitContainerType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GradingCategory", scope = GradingAssignmentType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentTypeGradingCategory(String value) {
-        return new JAXBElement<String>(_GradingAssignmentTypeGradingCategory_QNAME, String.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = GradingAssignmentType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ElementName", scope = AggregateCharacteristicInfoType.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MaxAttemptsAllowed", scope = GradingAssignmentType.class)
-    public JAXBElement<BigInteger> createGradingAssignmentTypeMaxAttemptsAllowed(BigInteger value) {
-        return new JAXBElement<BigInteger>(_GradingAssignmentTypeMaxAttemptsAllowed_QNAME, BigInteger.class, GradingAssignmentType.class, value);
+    public JAXBElement<String> createAggregateCharacteristicInfoTypeElementName(String value) {
+        return new JAXBElement<String>(_AggregateCharacteristicInfoTypeElementName_QNAME, String.class, AggregateCharacteristicInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DetailedDescriptionURL", scope = GradingAssignmentType.class)
-    public JAXBElement<String> createGradingAssignmentTypeDetailedDescriptionURL(String value) {
-        return new JAXBElement<String>(_GradingAssignmentTypeDetailedDescriptionURL_QNAME, String.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeachingGroupRefId", scope = GradingAssignmentType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createGradingAssignmentTypeTeachingGroupRefId(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeTeachingGroupRefId_QNAME, String.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreateDate", scope = GradingAssignmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createGradingAssignmentTypeCreateDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_GradingAssignmentTypeCreateDate_QNAME, XMLGregorianCalendar.class, GradingAssignmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = AggregateCharacteristicInfoType.class)
+    public JAXBElement<String> createAggregateCharacteristicInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, AggregateCharacteristicInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = GradingAssignmentType.class)
-    public JAXBElement<SIFExtendedElementsType> createGradingAssignmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, GradingAssignmentType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = AggregateCharacteristicInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createAggregateCharacteristicInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, AggregateCharacteristicInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = GradingAssignmentType.class)
-    public JAXBElement<SIFMetadataType> createGradingAssignmentTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DetailedDescriptionBinary", scope = GradingAssignmentType.class)
-    public JAXBElement<byte[]> createGradingAssignmentTypeDetailedDescriptionBinary(byte[] value) {
-        return new JAXBElement<byte[]>(_GradingAssignmentTypeDetailedDescriptionBinary_QNAME, byte[].class, GradingAssignmentType.class, ((byte[]) value));
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DueDate", scope = GradingAssignmentType.class)
-    public JAXBElement<XMLGregorianCalendar> createGradingAssignmentTypeDueDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeDueDate_QNAME, XMLGregorianCalendar.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Weight", scope = GradingAssignmentType.class)
-    public JAXBElement<BigDecimal> createGradingAssignmentTypeWeight(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_GradingAssignmentTypeWeight_QNAME, BigDecimal.class, GradingAssignmentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType.Created.Creators }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Creators", scope = LifeCycleType.Created.class)
-    public JAXBElement<LifeCycleType.Created.Creators> createLifeCycleTypeCreatedCreators(LifeCycleType.Created.Creators value) {
-        return new JAXBElement<LifeCycleType.Created.Creators>(_LifeCycleTypeCreatedCreators_QNAME, LifeCycleType.Created.Creators.class, LifeCycleType.Created.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = EvaluationType.class)
-    public JAXBElement<String> createEvaluationTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, EvaluationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NameType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Name", scope = EvaluationType.class)
-    public JAXBElement<NameType> createEvaluationTypeName(NameType value) {
-        return new JAXBElement<NameType>(_ContactTypeName_QNAME, NameType.class, EvaluationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Date", scope = EvaluationType.class)
-    public JAXBElement<XMLGregorianCalendar> createEvaluationTypeDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_LearningStandardDocumentTypeCopyrightDate_QNAME, XMLGregorianCalendar.class, EvaluationType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestItemLocalId", scope = NAPTestletResponseItemType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createNAPTestletResponseItemTypeNAPTestItemLocalId(String value) {
-        return new JAXBElement<String>(_NAPTestletResponseItemTypeNAPTestItemLocalId_QNAME, String.class, NAPTestletResponseItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Score", scope = NAPTestletResponseItemType.class)
-    public JAXBElement<BigDecimal> createNAPTestletResponseItemTypeScore(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_NAPTestletResponseItemTypeScore_QNAME, BigDecimal.class, NAPTestletResponseItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsNAPResponseCorrectnessType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ResponseCorrectness", scope = NAPTestletResponseItemType.class)
-    public JAXBElement<AUCodeSetsNAPResponseCorrectnessType> createNAPTestletResponseItemTypeResponseCorrectness(AUCodeSetsNAPResponseCorrectnessType value) {
-        return new JAXBElement<AUCodeSetsNAPResponseCorrectnessType>(_NAPTestletResponseItemTypeResponseCorrectness_QNAME, AUCodeSetsNAPResponseCorrectnessType.class, NAPTestletResponseItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NAPSubscoreListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubscoreList", scope = NAPTestletResponseItemType.class)
-    public JAXBElement<NAPSubscoreListType> createNAPTestletResponseItemTypeSubscoreList(NAPSubscoreListType value) {
-        return new JAXBElement<NAPSubscoreListType>(_NAPTestletResponseItemTypeSubscoreList_QNAME, NAPSubscoreListType.class, NAPTestletResponseItemType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreferenceNumber", scope = StudentSubjectChoiceType.class)
-    public JAXBElement<Long> createStudentSubjectChoiceTypePreferenceNumber(Long value) {
-        return new JAXBElement<Long>(_StudentSubjectChoiceTypePreferenceNumber_QNAME, Long.class, StudentSubjectChoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherSchoolLocalId", scope = StudentSubjectChoiceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentSubjectChoiceTypeOtherSchoolLocalId(String value) {
-        return new JAXBElement<String>(_StudentSubjectChoiceTypeOtherSchoolLocalId_QNAME, String.class, StudentSubjectChoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudyDescription", scope = StudentSubjectChoiceType.class)
-    public JAXBElement<SubjectAreaType> createStudentSubjectChoiceTypeStudyDescription(SubjectAreaType value) {
-        return new JAXBElement<SubjectAreaType>(_StudentSubjectChoiceTypeStudyDescription_QNAME, SubjectAreaType.class, StudentSubjectChoiceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OS", scope = SoftwareRequirementType.class)
-    public JAXBElement<String> createSoftwareRequirementTypeOS(String value) {
-        return new JAXBElement<String>(_SoftwareRequirementTypeOS_QNAME, String.class, SoftwareRequirementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Version", scope = SoftwareRequirementType.class)
-    public JAXBElement<String> createSoftwareRequirementTypeVersion(String value) {
-        return new JAXBElement<String>(_SoftwareRequirementTypeVersion_QNAME, String.class, SoftwareRequirementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Vendor", scope = SoftwareRequirementType.class)
-    public JAXBElement<String> createSoftwareRequirementTypeVendor(String value) {
-        return new JAXBElement<String>(_SoftwareRequirementTypeVendor_QNAME, String.class, SoftwareRequirementType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Excluded", scope = AggregateStatisticFactType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createAggregateStatisticFactTypeExcluded(String value) {
-        return new JAXBElement<String>(_AggregateStatisticFactTypeExcluded_QNAME, String.class, AggregateStatisticFactType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = AggregateStatisticFactType.class)
-    public JAXBElement<SIFExtendedElementsType> createAggregateStatisticFactTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, AggregateStatisticFactType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = AggregateStatisticFactType.class)
-    public JAXBElement<SIFMetadataType> createAggregateStatisticFactTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, AggregateStatisticFactType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = AggregateCharacteristicInfoType.class)
+    public JAXBElement<SIFMetadataType> createAggregateCharacteristicInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, AggregateCharacteristicInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = RelationshipType.class)
-    public JAXBElement<OtherCodeListType> createRelationshipTypeOtherCodeList(OtherCodeListType value) {
-        return new JAXBElement<OtherCodeListType>(_TimeTableSubjectTypeOtherCodeList_QNAME, OtherCodeListType.class, RelationshipType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = AgencyType.class)
+    public JAXBElement<OtherCodeListType> createAgencyTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, AgencyType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeIn", scope = StudentDailyAttendanceType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentDailyAttendanceTypeTimeIn(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeIn_QNAME, XMLGregorianCalendar.class, StudentDailyAttendanceType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PromotionStatus", scope = PromotionInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createPromotionInfoTypePromotionStatus(String value) {
+        return new JAXBElement<String>(_PromotionInfoTypePromotionStatus_QNAME, String.class, PromotionInfoType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AbsenceValue", scope = StudentDailyAttendanceType.class)
-    public JAXBElement<BigDecimal> createStudentDailyAttendanceTypeAbsenceValue(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_StudentDailyAttendanceTypeAbsenceValue_QNAME, BigDecimal.class, StudentDailyAttendanceType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeStudentPersonalRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeStudentPersonalRefId_QNAME, String.class, NAPEventStudentLinkType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeOut", scope = StudentDailyAttendanceType.class)
-    public JAXBElement<XMLGregorianCalendar> createStudentDailyAttendanceTypeTimeOut(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_StudentPeriodAttendanceTypeTimeOut_QNAME, XMLGregorianCalendar.class, StudentDailyAttendanceType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PSIOtherIdMatch", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<Boolean> createNAPEventStudentLinkTypePSIOtherIdMatch(Boolean value) {
+        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypePSIOtherIdMatch_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsDayValueCodeType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DayValue", scope = StudentDailyAttendanceType.class)
-    public JAXBElement<AUCodeSetsDayValueCodeType> createStudentDailyAttendanceTypeDayValue(AUCodeSetsDayValueCodeType value) {
-        return new JAXBElement<AUCodeSetsDayValueCodeType>(_StudentDailyAttendanceTypeDayValue_QNAME, AUCodeSetsDayValueCodeType.class, StudentDailyAttendanceType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExemptionReason", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeExemptionReason(String value) {
+        return new JAXBElement<String>(_NAPEventStudentLinkTypeExemptionReason_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Device", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeDevice(String value) {
+        return new JAXBElement<String>(_NAPEventStudentLinkTypeDevice_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeSchoolInfoRefId(String value) {
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolInfoRefId_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PossibleDuplicate", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<Boolean> createNAPEventStudentLinkTypePossibleDuplicate(Boolean value) {
+        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypePossibleDuplicate_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link TestDisruptionListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TestDisruptionList", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<TestDisruptionListType> createNAPEventStudentLinkTypeTestDisruptionList(TestDisruptionListType value) {
+        return new JAXBElement<TestDisruptionListType>(_NAPEventStudentLinkTypeTestDisruptionList_QNAME, TestDisruptionListType.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DOBRange", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<Boolean> createNAPEventStudentLinkTypeDOBRange(Boolean value) {
+        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypeDOBRange_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeNAPTestRefId(String value) {
+        return new JAXBElement<String>(_NAPStudentResponseSetTypeNAPTestRefId_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPJurisdiction", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeNAPJurisdiction(String value) {
+        return new JAXBElement<String>(_NAPEventStudentLinkTypeNAPJurisdiction_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AdjustmentContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Adjustment", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<AdjustmentContainerType> createNAPEventStudentLinkTypeAdjustment(AdjustmentContainerType value) {
+        return new JAXBElement<AdjustmentContainerType>(_NAPEventStudentLinkTypeAdjustment_QNAME, AdjustmentContainerType.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "System", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeSystem(String value) {
+        return new JAXBElement<String>(_SchoolInfoTypeSystem_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolGeolocation", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeSchoolGeolocation(String value) {
+        return new JAXBElement<String>(_NAPEventStudentLinkTypeSchoolGeolocation_QNAME, String.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ReportingSchoolName", scope = NAPEventStudentLinkType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createNAPEventStudentLinkTypeReportingSchoolName(String value) {
+        return new JAXBElement<String>(_NAPEventStudentLinkTypeReportingSchoolName_QNAME, String.class, NAPEventStudentLinkType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentDailyAttendanceType.class)
-    public JAXBElement<SIFExtendedElementsType> createStudentDailyAttendanceTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentDailyAttendanceType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AttendanceNote", scope = StudentDailyAttendanceType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createStudentDailyAttendanceTypeAttendanceNote(String value) {
-        return new JAXBElement<String>(_AttendanceTimeTypeAttendanceNote_QNAME, String.class, StudentDailyAttendanceType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<SIFExtendedElementsType> createNAPEventStudentLinkTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPEventStudentLinkType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentDailyAttendanceType.class)
-    public JAXBElement<SIFMetadataType> createStudentDailyAttendanceTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentDailyAttendanceType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<SIFMetadataType> createNAPEventStudentLinkTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPEventStudentLinkType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PersonalDetailsChanged", scope = NAPEventStudentLinkType.class)
+    public JAXBElement<Boolean> createNAPEventStudentLinkTypePersonalDetailsChanged(Boolean value) {
+        return new JAXBElement<Boolean>(_NAPEventStudentLinkTypePersonalDetailsChanged_QNAME, Boolean.class, NAPEventStudentLinkType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApprovedBy", scope = JournalType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = FinancialAccountType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createJournalTypeApprovedBy(String value) {
-        return new JAXBElement<String>(_InvoiceTypeApprovedBy_QNAME, String.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Note", scope = JournalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createJournalTypeNote(String value) {
-        return new JAXBElement<String>(_JournalTypeNote_QNAME, String.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ApprovedDate", scope = JournalType.class)
-    public JAXBElement<XMLGregorianCalendar> createJournalTypeApprovedDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_JournalTypeApprovedDate_QNAME, XMLGregorianCalendar.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreatedBy", scope = JournalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createJournalTypeCreatedBy(String value) {
-        return new JAXBElement<String>(_InvoiceTypeCreatedBy_QNAME, String.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CreatedDate", scope = JournalType.class)
-    public JAXBElement<XMLGregorianCalendar> createJournalTypeCreatedDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_JournalTypeCreatedDate_QNAME, XMLGregorianCalendar.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GSTCodeOriginal", scope = JournalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createJournalTypeGSTCodeOriginal(String value) {
-        return new JAXBElement<String>(_JournalTypeGSTCodeOriginal_QNAME, String.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "GSTCodeReplacement", scope = JournalType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createJournalTypeGSTCodeReplacement(String value) {
-        return new JAXBElement<String>(_JournalTypeGSTCodeReplacement_QNAME, String.class, JournalType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link JournalType.OriginatingTransactionRefId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OriginatingTransactionRefId", scope = JournalType.class)
-    public JAXBElement<JournalType.OriginatingTransactionRefId> createJournalTypeOriginatingTransactionRefId(JournalType.OriginatingTransactionRefId value) {
-        return new JAXBElement<JournalType.OriginatingTransactionRefId>(_JournalTypeOriginatingTransactionRefId_QNAME, JournalType.OriginatingTransactionRefId.class, JournalType.class, value);
+    public JAXBElement<String> createFinancialAccountTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, FinancialAccountType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = JournalType.class)
-    public JAXBElement<SIFExtendedElementsType> createJournalTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, JournalType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = FinancialAccountType.class)
+    public JAXBElement<SIFExtendedElementsType> createFinancialAccountTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, FinancialAccountType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = JournalType.class)
-    public JAXBElement<SIFMetadataType> createJournalTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, JournalType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = FinancialAccountType.class)
+    public JAXBElement<SIFMetadataType> createFinancialAccountTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, FinancialAccountType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentAccountRefId", scope = FinancialAccountType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFinancialAccountTypeParentAccountRefId(String value) {
+        return new JAXBElement<String>(_FinancialAccountTypeParentAccountRefId_QNAME, String.class, FinancialAccountType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ChargedLocationInfoRefId", scope = FinancialAccountType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createFinancialAccountTypeChargedLocationInfoRefId(String value) {
+        return new JAXBElement<String>(_PurchaseOrderTypeChargedLocationInfoRefId_QNAME, String.class, FinancialAccountType.class, value);
     }
 
     /**
@@ -12563,7 +12698,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = PersonInfoType.class)
     public JAXBElement<AddressListType> createPersonInfoTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, PersonInfoType.class, value);
+        return new JAXBElement<AddressListType>(_ScheduledActivityTypeAddressList_QNAME, AddressListType.class, PersonInfoType.class, value);
     }
 
     /**
@@ -12572,7 +12707,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EmailList", scope = PersonInfoType.class)
     public JAXBElement<EmailListType> createPersonInfoTypeEmailList(EmailListType value) {
-        return new JAXBElement<EmailListType>(_PrincipalInfoTypeEmailList_QNAME, EmailListType.class, PersonInfoType.class, value);
+        return new JAXBElement<EmailListType>(_ContactInfoTypeEmailList_QNAME, EmailListType.class, PersonInfoType.class, value);
     }
 
     /**
@@ -12585,475 +12720,265 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SchoolProgramListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Calendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolProgramList", scope = SchoolProgramsType.class)
-    public JAXBElement<SchoolProgramListType> createSchoolProgramsTypeSchoolProgramList(SchoolProgramListType value) {
-        return new JAXBElement<SchoolProgramListType>(_SchoolProgramsTypeSchoolProgramList_QNAME, SchoolProgramListType.class, SchoolProgramsType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Calendar", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentSchoolEnrollmentType.Calendar> createStudentSchoolEnrollmentTypeCalendar(StudentSchoolEnrollmentType.Calendar value) {
+        return new JAXBElement<StudentSchoolEnrollmentType.Calendar>(_StudentSchoolEnrollmentTypeCalendar_QNAME, StudentSchoolEnrollmentType.Calendar.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Homeroom }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolYear", scope = SchoolProgramsType.class)
-    public JAXBElement<XMLGregorianCalendar> createSchoolProgramsTypeSchoolYear(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableSubjectTypeSchoolYear_QNAME, XMLGregorianCalendar.class, SchoolProgramsType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homeroom", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentSchoolEnrollmentType.Homeroom> createStudentSchoolEnrollmentTypeHomeroom(StudentSchoolEnrollmentType.Homeroom value) {
+        return new JAXBElement<StudentSchoolEnrollmentType.Homeroom>(_StudentSchoolEnrollmentTypeHomeroom_QNAME, StudentSchoolEnrollmentType.Homeroom.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Counselor }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = SchoolProgramsType.class)
-    public JAXBElement<SIFExtendedElementsType> createSchoolProgramsTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, SchoolProgramsType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = SchoolProgramsType.class)
-    public JAXBElement<SIFMetadataType> createSchoolProgramsTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, SchoolProgramsType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Counselor", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentSchoolEnrollmentType.Counselor> createStudentSchoolEnrollmentTypeCounselor(StudentSchoolEnrollmentType.Counselor value) {
+        return new JAXBElement<StudentSchoolEnrollmentType.Counselor>(_StudentSchoolEnrollmentTypeCounselor_QNAME, StudentSchoolEnrollmentType.Counselor.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StateProvinceId", scope = ChargedLocationInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = StudentSchoolEnrollmentType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createChargedLocationInfoTypeStateProvinceId(String value) {
-        return new JAXBElement<String>(_SchoolInfoTypeStateProvinceId_QNAME, String.class, ChargedLocationInfoType.class, value);
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeLocalId(String value) {
+        return new JAXBElement<String>(_StudentContactPersonalTypeLocalId_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSchoolEnrollmentType.Advisor }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Advisor", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentSchoolEnrollmentType.Advisor> createStudentSchoolEnrollmentTypeAdvisor(StudentSchoolEnrollmentType.Advisor value) {
+        return new JAXBElement<StudentSchoolEnrollmentType.Advisor>(_StudentSchoolEnrollmentTypeAdvisor_QNAME, StudentSchoolEnrollmentType.Advisor.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentExitContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitType", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentExitContainerType> createStudentSchoolEnrollmentTypeExitType(StudentExitContainerType value) {
+        return new JAXBElement<StudentExitContainerType>(_StudentSchoolEnrollmentTypeExitType_QNAME, StudentExitContainerType.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LocalId", scope = ChargedLocationInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PreviousSchool", scope = StudentSchoolEnrollmentType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createChargedLocationInfoTypeLocalId(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeLocalId_QNAME, String.class, ChargedLocationInfoType.class, value);
+    public JAXBElement<String> createStudentSchoolEnrollmentTypePreviousSchool(String value) {
+        return new JAXBElement<String>(_StudentSchoolEnrollmentTypePreviousSchool_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TestLevel", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<YearLevelType> createStudentSchoolEnrollmentTypeTestLevel(YearLevelType value) {
+        return new JAXBElement<YearLevelType>(_StudentMostRecentContainerTypeTestLevel_QNAME, YearLevelType.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentChargedLocationInfoRefId", scope = ChargedLocationInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createChargedLocationInfoTypeParentChargedLocationInfoRefId(String value) {
-        return new JAXBElement<String>(_ChargedLocationInfoTypeParentChargedLocationInfoRefId_QNAME, String.class, ChargedLocationInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolInfoRefId", scope = ChargedLocationInfoType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createChargedLocationInfoTypeSchoolInfoRefId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolInfoRefId_QNAME, String.class, ChargedLocationInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddressListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AddressList", scope = ChargedLocationInfoType.class)
-    public JAXBElement<AddressListType> createChargedLocationInfoTypeAddressList(AddressListType value) {
-        return new JAXBElement<AddressListType>(_SchoolInfoTypeAddressList_QNAME, AddressListType.class, ChargedLocationInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = ChargedLocationInfoType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DestinationSchool", scope = StudentSchoolEnrollmentType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createChargedLocationInfoTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, ChargedLocationInfoType.class, value);
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeDestinationSchool(String value) {
+        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeDestinationSchool_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ChargedLocationInfoType.class)
-    public JAXBElement<SIFExtendedElementsType> createChargedLocationInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ChargedLocationInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ChargedLocationInfoType.class)
-    public JAXBElement<SIFMetadataType> createChargedLocationInfoTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, ChargedLocationInfoType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PhoneNumberListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PhoneNumberList", scope = ChargedLocationInfoType.class)
-    public JAXBElement<PhoneNumberListType> createChargedLocationInfoTypePhoneNumberList(PhoneNumberListType value) {
-        return new JAXBElement<PhoneNumberListType>(_SchoolInfoTypePhoneNumberList_QNAME, PhoneNumberListType.class, ChargedLocationInfoType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ClassCode", scope = StudentSchoolEnrollmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeClassCode(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeClassCode_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PublishInDirectory", scope = SchoolContactType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createSchoolContactTypePublishInDirectory(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_LEAContactTypePublishInDirectory_QNAME, AUCodeSetsYesOrNoCategoryType.class, SchoolContactType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "IndividualLearningPlan", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentSchoolEnrollmentTypeIndividualLearningPlan(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentSchoolEnrollmentTypeIndividualLearningPlan_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link YearLevelType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "YearLevel", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<YearLevelType> createStudentSchoolEnrollmentTypeYearLevel(YearLevelType value) {
+        return new JAXBElement<YearLevelType>(_LearningStandardItemTypeStandardIdentifierYearLevel_QNAME, YearLevelType.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PromotionInfoType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PromotionInfo", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<PromotionInfoType> createStudentSchoolEnrollmentTypePromotionInfo(PromotionInfoType value) {
+        return new JAXBElement<PromotionInfoType>(_StudentSchoolEnrollmentTypePromotionInfo_QNAME, PromotionInfoType.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Descriptor", scope = NAPWritingRubricType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ACARASchoolId", scope = StudentSchoolEnrollmentType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createNAPWritingRubricTypeDescriptor(String value) {
-        return new JAXBElement<String>(_NAPWritingRubricTypeDescriptor_QNAME, String.class, NAPWritingRubricType.class, value);
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeACARASchoolId(String value) {
+        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeACARASchoolId_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentEntryContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EntryType", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentEntryContainerType> createStudentSchoolEnrollmentTypeEntryType(StudentEntryContainerType value) {
+        return new JAXBElement<StudentEntryContainerType>(_StudentSchoolEnrollmentTypeEntryType_QNAME, StudentEntryContainerType.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPTestletType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTPTStatus", scope = StudentSchoolEnrollmentType.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPTestletTypeNAPTestRefId(String value) {
-        return new JAXBElement<String>(_NAPTestScoreSummaryTypeNAPTestRefId_QNAME, String.class, NAPTestletType.class, value);
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeFTPTStatus(String value) {
+        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeFTPTStatus_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitDate", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<XMLGregorianCalendar> createStudentSchoolEnrollmentTypeExitDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_StudentSectionEnrollmentTypeExitDate_QNAME, XMLGregorianCalendar.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FFPOS", scope = StudentSchoolEnrollmentType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeFFPOS(String value) {
+        return new JAXBElement<String>(_StudentMostRecentContainerTypeFFPOS_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentSubjectChoiceListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentSubjectChoiceList", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentSubjectChoiceListType> createStudentSchoolEnrollmentTypeStudentSubjectChoiceList(StudentSubjectChoiceListType value) {
+        return new JAXBElement<StudentSubjectChoiceListType>(_StudentSchoolEnrollmentTypeStudentSubjectChoiceList_QNAME, StudentSubjectChoiceListType.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentExitStatusContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExitStatus", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<StudentExitStatusContainerType> createStudentSchoolEnrollmentTypeExitStatus(StudentExitStatusContainerType value) {
+        return new JAXBElement<StudentExitStatusContainerType>(_StudentSchoolEnrollmentTypeExitStatus_QNAME, StudentExitStatusContainerType.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "House", scope = StudentSchoolEnrollmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeHouse(String value) {
+        return new JAXBElement<String>(_StaffAssignmentTypeHouse_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CatchmentStatusContainerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CatchmentStatus", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<CatchmentStatusContainerType> createStudentSchoolEnrollmentTypeCatchmentStatus(CatchmentStatusContainerType value) {
+        return new JAXBElement<CatchmentStatusContainerType>(_StudentSchoolEnrollmentTypeCatchmentStatus_QNAME, CatchmentStatusContainerType.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Homegroup", scope = StudentSchoolEnrollmentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeHomegroup(String value) {
+        return new JAXBElement<String>(_StaffAssignmentTypeHomegroup_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ReportingSchool", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentSchoolEnrollmentTypeReportingSchool(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentSchoolEnrollmentTypeReportingSchool_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentSchoolEnrollmentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RecordClosureReason", scope = StudentSchoolEnrollmentType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createStudentSchoolEnrollmentTypeRecordClosureReason(String value) {
+        return new JAXBElement<String>(_StudentSchoolEnrollmentTypeRecordClosureReason_QNAME, String.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPTestletType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPTestletTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPTestletType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentSchoolEnrollmentTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPTestletType.class)
-    public JAXBElement<SIFMetadataType> createNAPTestletTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPTestletType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AttendanceInfoType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TeacherAttendance", scope = CalendarDate.class)
-    public JAXBElement<AttendanceInfoType> createCalendarDateTeacherAttendance(AttendanceInfoType value) {
-        return new JAXBElement<AttendanceInfoType>(_CalendarDateTeacherAttendance_QNAME, AttendanceInfoType.class, CalendarDate.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AttendanceInfoType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AdministratorAttendance", scope = CalendarDate.class)
-    public JAXBElement<AttendanceInfoType> createCalendarDateAdministratorAttendance(AttendanceInfoType value) {
-        return new JAXBElement<AttendanceInfoType>(_CalendarDateAdministratorAttendance_QNAME, AttendanceInfoType.class, CalendarDate.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AttendanceInfoType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentAttendance", scope = CalendarDate.class)
-    public JAXBElement<AttendanceInfoType> createCalendarDateStudentAttendance(AttendanceInfoType value) {
-        return new JAXBElement<AttendanceInfoType>(_CalendarDateStudentAttendance_QNAME, AttendanceInfoType.class, CalendarDate.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = CalendarDate.class)
-    public JAXBElement<SIFExtendedElementsType> createCalendarDateSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, CalendarDate.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = CalendarDate.class)
-    public JAXBElement<SIFMetadataType> createCalendarDateSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, CalendarDate.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CalendarDateNumber", scope = CalendarDate.class)
-    public JAXBElement<Long> createCalendarDateCalendarDateNumber(Long value) {
-        return new JAXBElement<Long>(_CalendarDateCalendarDateNumber_QNAME, Long.class, CalendarDate.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Boolean }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "KeepOld", scope = ResourceBookingType.class)
-    public JAXBElement<Boolean> createResourceBookingTypeKeepOld(Boolean value) {
-        return new JAXBElement<Boolean>(_ResourceBookingTypeKeepOld_QNAME, Boolean.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ScheduledActivityRefId", scope = ResourceBookingType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createResourceBookingTypeScheduledActivityRefId(String value) {
-        return new JAXBElement<String>(_StudentPeriodAttendanceTypeScheduledActivityRefId_QNAME, String.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Reason", scope = ResourceBookingType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createResourceBookingTypeReason(String value) {
-        return new JAXBElement<String>(_ResourceBookingTypeReason_QNAME, String.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ResourceBookingType.class)
-    public JAXBElement<SIFExtendedElementsType> createResourceBookingTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ResourceBookingType.class)
-    public JAXBElement<SIFMetadataType> createResourceBookingTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ToPeriod", scope = ResourceBookingType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createResourceBookingTypeToPeriod(String value) {
-        return new JAXBElement<String>(_ResourceBookingTypeToPeriod_QNAME, String.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FromPeriod", scope = ResourceBookingType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createResourceBookingTypeFromPeriod(String value) {
-        return new JAXBElement<String>(_ResourceBookingTypeFromPeriod_QNAME, String.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResourceBookingType.ResourceRefId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ResourceRefId", scope = ResourceBookingType.class)
-    public JAXBElement<ResourceBookingType.ResourceRefId> createResourceBookingTypeResourceRefId(ResourceBookingType.ResourceRefId value) {
-        return new JAXBElement<ResourceBookingType.ResourceRefId>(_ResourceBookingTypeResourceRefId_QNAME, ResourceBookingType.ResourceRefId.class, ResourceBookingType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningObjectivesType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningObjectives", scope = ActivityType.class)
-    public JAXBElement<LearningObjectivesType> createActivityTypeLearningObjectives(LearningObjectivesType value) {
-        return new JAXBElement<LearningObjectivesType>(_ActivityTypeLearningObjectives_QNAME, LearningObjectivesType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EssentialMaterialsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EssentialMaterials", scope = ActivityType.class)
-    public JAXBElement<EssentialMaterialsType> createActivityTypeEssentialMaterials(EssentialMaterialsType value) {
-        return new JAXBElement<EssentialMaterialsType>(_ActivityTypeEssentialMaterials_QNAME, EssentialMaterialsType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Title", scope = ActivityType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createActivityTypeTitle(String value) {
-        return new JAXBElement<String>(_BaseNameTypeTitle_QNAME, String.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Students", scope = ActivityType.class)
-    public JAXBElement<StudentsType> createActivityTypeStudents(StudentsType value) {
-        return new JAXBElement<StudentsType>(_ActivityTypeStudents_QNAME, StudentsType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Points", scope = ActivityType.class)
-    public JAXBElement<Long> createActivityTypePoints(Long value) {
-        return new JAXBElement<Long>(_ActivityTypePoints_QNAME, Long.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AssessmentRefId", scope = ActivityType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createActivityTypeAssessmentRefId(String value) {
-        return new JAXBElement<String>(_ActivityTypeAssessmentRefId_QNAME, String.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TechnicalRequirementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TechnicalRequirements", scope = ActivityType.class)
-    public JAXBElement<TechnicalRequirementsType> createActivityTypeTechnicalRequirements(TechnicalRequirementsType value) {
-        return new JAXBElement<TechnicalRequirementsType>(_ActivityTypeTechnicalRequirements_QNAME, TechnicalRequirementsType.class, ActivityType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<SIFMetadataType> createStudentSchoolEnrollmentTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ActivityWeight", scope = ActivityType.class)
-    public JAXBElement<BigDecimal> createActivityTypeActivityWeight(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_ActivityTypeActivityWeight_QNAME, BigDecimal.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SoftwareRequirementListType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SoftwareRequirementList", scope = ActivityType.class)
-    public JAXBElement<SoftwareRequirementListType> createActivityTypeSoftwareRequirementList(SoftwareRequirementListType value) {
-        return new JAXBElement<SoftwareRequirementListType>(_ActivityTypeSoftwareRequirementList_QNAME, SoftwareRequirementListType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PrerequisitesType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Prerequisites", scope = ActivityType.class)
-    public JAXBElement<PrerequisitesType> createActivityTypePrerequisites(PrerequisitesType value) {
-        return new JAXBElement<PrerequisitesType>(_ActivityTypePrerequisites_QNAME, PrerequisitesType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningResourcesType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningResources", scope = ActivityType.class)
-    public JAXBElement<LearningResourcesType> createActivityTypeLearningResources(LearningResourcesType value) {
-        return new JAXBElement<LearningResourcesType>(_LearningResources_QNAME, LearningResourcesType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MaxAttemptsAllowed", scope = ActivityType.class)
-    public JAXBElement<Long> createActivityTypeMaxAttemptsAllowed(Long value) {
-        return new JAXBElement<Long>(_GradingAssignmentTypeMaxAttemptsAllowed_QNAME, Long.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActivityType.Evaluation }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Evaluation", scope = ActivityType.class)
-    public JAXBElement<ActivityType.Evaluation> createActivityTypeEvaluation(ActivityType.Evaluation value) {
-        return new JAXBElement<ActivityType.Evaluation>(_ActivityTypeEvaluation_QNAME, ActivityType.Evaluation.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Preamble", scope = ActivityType.class)
-    public JAXBElement<String> createActivityTypePreamble(String value) {
-        return new JAXBElement<String>(_ActivityTypePreamble_QNAME, String.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SourceObjectsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SourceObjects", scope = ActivityType.class)
-    public JAXBElement<SourceObjectsType> createActivityTypeSourceObjects(SourceObjectsType value) {
-        return new JAXBElement<SourceObjectsType>(_ActivityTypeSourceObjects_QNAME, SourceObjectsType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = ActivityType.class)
-    public JAXBElement<SIFExtendedElementsType> createActivityTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LearningStandardsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LearningStandards", scope = ActivityType.class)
-    public JAXBElement<LearningStandardsType> createActivityTypeLearningStandards(LearningStandardsType value) {
-        return new JAXBElement<LearningStandardsType>(_LearningResourceTypeLearningStandards_QNAME, LearningStandardsType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = ActivityType.class)
-    public JAXBElement<SIFMetadataType> createActivityTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, ActivityType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubjectAreaType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SubjectArea", scope = ActivityType.class)
-    public JAXBElement<SubjectAreaType> createActivityTypeSubjectArea(SubjectAreaType value) {
-        return new JAXBElement<SubjectAreaType>(_SchoolCourseInfoOverrideTypeSubjectArea_QNAME, SubjectAreaType.class, ActivityType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FTE", scope = StudentSchoolEnrollmentType.class)
+    public JAXBElement<BigDecimal> createStudentSchoolEnrollmentTypeFTE(BigDecimal value) {
+        return new JAXBElement<BigDecimal>(_StudentMostRecentContainerTypeFTE_QNAME, BigDecimal.class, StudentSchoolEnrollmentType.class, value);
     }
 
     /**
@@ -13083,7 +13008,7 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SchoolLocalId", scope = StaffMostRecentContainerType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     public JAXBElement<String> createStaffMostRecentContainerTypeSchoolLocalId(String value) {
-        return new JAXBElement<String>(_TimeTableSubjectTypeSchoolLocalId_QNAME, String.class, StaffMostRecentContainerType.class, value);
+        return new JAXBElement<String>(_TeachingGroupTypeSchoolLocalId_QNAME, String.class, StaffMostRecentContainerType.class, value);
     }
 
     /**
@@ -13103,99 +13028,6 @@ public class ObjectFactory {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     public JAXBElement<String> createStaffMostRecentContainerTypeLocalCampusId(String value) {
         return new JAXBElement<String>(_StudentMostRecentContainerTypeLocalCampusId_QNAME, String.class, StaffMostRecentContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AssociatedObjectsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AssociatedObjects", scope = ComponentType.class)
-    public JAXBElement<AssociatedObjectsType> createComponentTypeAssociatedObjects(AssociatedObjectsType value) {
-        return new JAXBElement<AssociatedObjectsType>(_ComponentTypeAssociatedObjects_QNAME, AssociatedObjectsType.class, ComponentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StrategiesType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Strategies", scope = ComponentType.class)
-    public JAXBElement<StrategiesType> createComponentTypeStrategies(StrategiesType value) {
-        return new JAXBElement<StrategiesType>(_ComponentTypeStrategies_QNAME, StrategiesType.class, ComponentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = ComponentType.class)
-    public JAXBElement<String> createComponentTypeDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, ComponentType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentSchoolId", scope = CampusContainerType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createCampusContainerTypeParentSchoolId(String value) {
-        return new JAXBElement<String>(_CampusContainerTypeParentSchoolId_QNAME, String.class, CampusContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsSchoolLevelType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CampusType", scope = CampusContainerType.class)
-    public JAXBElement<AUCodeSetsSchoolLevelType> createCampusContainerTypeCampusType(AUCodeSetsSchoolLevelType value) {
-        return new JAXBElement<AUCodeSetsSchoolLevelType>(_CampusContainerTypeCampusType_QNAME, AUCodeSetsSchoolLevelType.class, CampusContainerType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ColumnDelimiter", scope = ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDelimiter(String value) {
-        return new JAXBElement<String>(_ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDelimiter_QNAME, String.class, ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ColumnDescription", scope = ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDescription(String value) {
-        return new JAXBElement<String>(_ResourceUsageTypeResourceReportColumnListResourceReportColumnColumnDescription_QNAME, String.class, ResourceUsageType.ResourceReportColumnList.ResourceReportColumn.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = LifeCycleType.ModificationHistory.Modified.class)
-    public JAXBElement<String> createLifeCycleTypeModificationHistoryModifiedDescription(String value) {
-        return new JAXBElement<String>(_RoomInfoTypeDescription_QNAME, String.class, LifeCycleType.ModificationHistory.Modified.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_RefId", scope = ResourceUsageType.ResourceReportLineList.ResourceReportLine.class)
-    public JAXBElement<ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId> createResourceUsageTypeResourceReportLineListResourceReportLineSIFRefId(ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId value) {
-        return new JAXBElement<ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId>(_EquipmentInfoTypeSIFRefId_QNAME, ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId.class, ResourceUsageType.ResourceReportLineList.ResourceReportLine.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EndDate", scope = ResourceUsageType.ResourceReportLineList.ResourceReportLine.class)
-    public JAXBElement<XMLGregorianCalendar> createResourceUsageTypeResourceReportLineListResourceReportLineEndDate(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeEndDate_QNAME, XMLGregorianCalendar.class, ResourceUsageType.ResourceReportLineList.ResourceReportLine.class, value);
     }
 
     /**
@@ -13221,144 +13053,312 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartTime", scope = TeachingGroupPeriodType.class)
-    public JAXBElement<XMLGregorianCalendar> createTeachingGroupPeriodTypeStartTime(XMLGregorianCalendar value) {
-        return new JAXBElement<XMLGregorianCalendar>(_TeacherCoverTypeStartTime_QNAME, XMLGregorianCalendar.class, TeachingGroupPeriodType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "FinishDate", scope = ActivityTimeType.class)
+    public JAXBElement<XMLGregorianCalendar> createActivityTimeTypeFinishDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_ActivityTimeTypeFinishDate_QNAME, XMLGregorianCalendar.class, ActivityTimeType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActivityTimeType.Duration }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Duration", scope = ActivityTimeType.class)
+    public JAXBElement<ActivityTimeType.Duration> createActivityTimeTypeDuration(ActivityTimeType.Duration value) {
+        return new JAXBElement<ActivityTimeType.Duration>(_ActivityTimeTypeDuration_QNAME, ActivityTimeType.Duration.class, ActivityTimeType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "DueDate", scope = ActivityTimeType.class)
+    public JAXBElement<XMLGregorianCalendar> createActivityTimeTypeDueDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_GradingAssignmentTypeDueDate_QNAME, XMLGregorianCalendar.class, ActivityTimeType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StartDate", scope = ActivityTimeType.class)
+    public JAXBElement<XMLGregorianCalendar> createActivityTimeTypeStartDate(XMLGregorianCalendar value) {
+        return new JAXBElement<XMLGregorianCalendar>(_TimeTableTypeStartDate_QNAME, XMLGregorianCalendar.class, ActivityTimeType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EquipmentInfoType.SIFRefId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_RefId", scope = EquipmentInfoType.class)
+    public JAXBElement<EquipmentInfoType.SIFRefId> createEquipmentInfoTypeSIFRefId(EquipmentInfoType.SIFRefId value) {
+        return new JAXBElement<EquipmentInfoType.SIFRefId>(_ResourceUsageTypeResourceReportLineListResourceReportLineSIFRefId_QNAME, EquipmentInfoType.SIFRefId.class, EquipmentInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StaffLocalId", scope = TeachingGroupPeriodType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupPeriodTypeStaffLocalId(String value) {
-        return new JAXBElement<String>(_TeacherCoverTypeStaffLocalId_QNAME, String.class, TeachingGroupPeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PeriodId", scope = TeachingGroupPeriodType.class)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupPeriodTypePeriodId(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypePeriodId_QNAME, String.class, TeachingGroupPeriodType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeTableCellRefId", scope = TeachingGroupPeriodType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "InvoiceRefId", scope = EquipmentInfoType.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupPeriodTypeTimeTableCellRefId(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeTimeTableCellRefId_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    public JAXBElement<String> createEquipmentInfoTypeInvoiceRefId(String value) {
+        return new JAXBElement<String>(_PaymentReceiptTypeInvoiceRefId_QNAME, String.class, EquipmentInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CellType", scope = TeachingGroupPeriodType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "AssetNumber", scope = EquipmentInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupPeriodTypeCellType(String value) {
-        return new JAXBElement<String>(_ScheduledActivityTypeCellType_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    public JAXBElement<String> createEquipmentInfoTypeAssetNumber(String value) {
+        return new JAXBElement<String>(_EquipmentInfoTypeAssetNumber_QNAME, String.class, EquipmentInfoType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "RoomNumber", scope = TeachingGroupPeriodType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "PurchaseOrderRefId", scope = EquipmentInfoType.class)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    public JAXBElement<String> createEquipmentInfoTypePurchaseOrderRefId(String value) {
+        return new JAXBElement<String>(_EquipmentInfoTypePurchaseOrderRefId_QNAME, String.class, EquipmentInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "Description", scope = EquipmentInfoType.class)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    public JAXBElement<String> createTeachingGroupPeriodTypeRoomNumber(String value) {
-        return new JAXBElement<String>(_SessionInfoTypeRoomNumber_QNAME, String.class, TeachingGroupPeriodType.class, value);
+    public JAXBElement<String> createEquipmentInfoTypeDescription(String value) {
+        return new JAXBElement<String>(_SectionInfoTypeDescription_QNAME, String.class, EquipmentInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = EquipmentInfoType.class)
+    public JAXBElement<SIFExtendedElementsType> createEquipmentInfoTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, EquipmentInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EquipmentType", scope = EquipmentInfoType.class)
+    public JAXBElement<String> createEquipmentInfoTypeEquipmentType(String value) {
+        return new JAXBElement<String>(_EquipmentInfoTypeEquipmentType_QNAME, String.class, EquipmentInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = EquipmentInfoType.class)
+    public JAXBElement<SIFMetadataType> createEquipmentInfoTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, EquipmentInfoType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = MediumOfInstructionType.class)
+    public JAXBElement<OtherCodeListType> createMediumOfInstructionTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, MediumOfInstructionType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = LanguageOfInstructionType.class)
+    public JAXBElement<OtherCodeListType> createLanguageOfInstructionTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, LanguageOfInstructionType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsNAPWritingGenreType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "WritingGenre", scope = NAPTestItemContentType.class)
+    public JAXBElement<AUCodeSetsNAPWritingGenreType> createNAPTestItemContentTypeWritingGenre(AUCodeSetsNAPWritingGenreType value) {
+        return new JAXBElement<AUCodeSetsNAPWritingGenreType>(_NAPTestItemContentTypeWritingGenre_QNAME, AUCodeSetsNAPWritingGenreType.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NAPWritingRubricListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPWritingRubricList", scope = NAPTestItemContentType.class)
+    public JAXBElement<NAPWritingRubricListType> createNAPTestItemContentTypeNAPWritingRubricList(NAPWritingRubricListType value) {
+        return new JAXBElement<NAPWritingRubricListType>(_NAPTestItemContentTypeNAPWritingRubricList_QNAME, NAPWritingRubricListType.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubstituteItemListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ItemSubstitutedForList", scope = NAPTestItemContentType.class)
+    public JAXBElement<SubstituteItemListType> createNAPTestItemContentTypeItemSubstitutedForList(SubstituteItemListType value) {
+        return new JAXBElement<SubstituteItemListType>(_NAPTestItemContentTypeItemSubstitutedForList_QNAME, SubstituteItemListType.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StimulusListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StimulusList", scope = NAPTestItemContentType.class)
+    public JAXBElement<StimulusListType> createNAPTestItemContentTypeStimulusList(StimulusListType value) {
+        return new JAXBElement<StimulusListType>(_NAPTestItemContentTypeStimulusList_QNAME, StimulusListType.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ContentDescriptionListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContentDescriptionList", scope = NAPTestItemContentType.class)
+    public JAXBElement<ContentDescriptionListType> createNAPTestItemContentTypeContentDescriptionList(ContentDescriptionListType value) {
+        return new JAXBElement<ContentDescriptionListType>(_NAPTestItemContentTypeContentDescriptionList_QNAME, ContentDescriptionListType.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MultipleChoiceOptionCount", scope = NAPTestItemContentType.class)
+    public JAXBElement<Integer> createNAPTestItemContentTypeMultipleChoiceOptionCount(Integer value) {
+        return new JAXBElement<Integer>(_NAPTestItemContentTypeMultipleChoiceOptionCount_QNAME, Integer.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ExemplarURL", scope = NAPTestItemContentType.class)
+    public JAXBElement<String> createNAPTestItemContentTypeExemplarURL(String value) {
+        return new JAXBElement<String>(_NAPTestItemContentTypeExemplarURL_QNAME, String.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CorrectAnswer", scope = NAPTestItemContentType.class)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    public JAXBElement<String> createNAPTestItemContentTypeCorrectAnswer(String value) {
+        return new JAXBElement<String>(_NAPTestItemContentTypeCorrectAnswer_QNAME, String.class, NAPTestItemContentType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OtherCodeListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OtherCodeList", scope = StudentActivityType.class)
+    public JAXBElement<OtherCodeListType> createStudentActivityTypeOtherCodeList(OtherCodeListType value) {
+        return new JAXBElement<OtherCodeListType>(_SchoolProgramTypeOtherCodeList_QNAME, OtherCodeListType.class, StudentActivityType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EducationFilterType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EducationFilter", scope = SIFMetadataType.class)
+    public JAXBElement<EducationFilterType> createSIFMetadataTypeEducationFilter(EducationFilterType value) {
+        return new JAXBElement<EducationFilterType>(_SIFMetadataTypeEducationFilter_QNAME, EducationFilterType.class, SIFMetadataType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LifeCycleType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "LifeCycle", scope = SIFMetadataType.class)
+    public JAXBElement<LifeCycleType> createSIFMetadataTypeLifeCycle(LifeCycleType value) {
+        return new JAXBElement<LifeCycleType>(_SIFMetadataTypeLifeCycle_QNAME, LifeCycleType.class, SIFMetadataType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType.TimeElements }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "TimeElements", scope = SIFMetadataType.class)
+    public JAXBElement<SIFMetadataType.TimeElements> createSIFMetadataTypeTimeElements(SIFMetadataType.TimeElements value) {
+        return new JAXBElement<SIFMetadataType.TimeElements>(_LifeCycleTypeTimeElements_QNAME, SIFMetadataType.TimeElements.class, SIFMetadataType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsSourceCodeTypeType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactSequenceSource", scope = StudentContactRelationshipType.class)
+    public JAXBElement<AUCodeSetsSourceCodeTypeType> createStudentContactRelationshipTypeContactSequenceSource(AUCodeSetsSourceCodeTypeType value) {
+        return new JAXBElement<AUCodeSetsSourceCodeTypeType>(_StudentContactRelationshipTypeContactSequenceSource_QNAME, AUCodeSetsSourceCodeTypeType.class, StudentContactRelationshipType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "OKToPublish", scope = PersonPictureType.class)
-    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createPersonPictureTypeOKToPublish(AUCodeSetsYesOrNoCategoryType value) {
-        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_PersonPictureTypeOKToPublish_QNAME, AUCodeSetsYesOrNoCategoryType.class, PersonPictureType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "MainlySpeaksEnglishAtHome", scope = StudentContactRelationshipType.class)
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> createStudentContactRelationshipTypeMainlySpeaksEnglishAtHome(AUCodeSetsYesOrNoCategoryType value) {
+        return new JAXBElement<AUCodeSetsYesOrNoCategoryType>(_StudentContactRelationshipTypeMainlySpeaksEnglishAtHome_QNAME, AUCodeSetsYesOrNoCategoryType.class, StudentContactRelationshipType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ContactFlagsType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactFlags", scope = StudentContactRelationshipType.class)
+    public JAXBElement<ContactFlagsType> createStudentContactRelationshipTypeContactFlags(ContactFlagsType value) {
+        return new JAXBElement<ContactFlagsType>(_StudentContactRelationshipTypeContactFlags_QNAME, ContactFlagsType.class, StudentContactRelationshipType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link HouseholdListType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "HouseholdList", scope = StudentContactRelationshipType.class)
+    public JAXBElement<HouseholdListType> createStudentContactRelationshipTypeHouseholdList(HouseholdListType value) {
+        return new JAXBElement<HouseholdListType>(_StudentContactRelationshipTypeHouseholdList_QNAME, HouseholdListType.class, StudentContactRelationshipType.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ContactSequence", scope = StudentContactRelationshipType.class)
+    public JAXBElement<Long> createStudentContactRelationshipTypeContactSequence(Long value) {
+        return new JAXBElement<Long>(_StudentContactRelationshipTypeContactSequence_QNAME, Long.class, StudentContactRelationshipType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = PersonPictureType.class)
-    public JAXBElement<SIFExtendedElementsType> createPersonPictureTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, PersonPictureType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = StudentContactRelationshipType.class)
+    public JAXBElement<SIFExtendedElementsType> createStudentContactRelationshipTypeSIFExtendedElements(SIFExtendedElementsType value) {
+        return new JAXBElement<SIFExtendedElementsType>(_StudentContactPersonalTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, StudentContactRelationshipType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = PersonPictureType.class)
-    public JAXBElement<SIFMetadataType> createPersonPictureTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, PersonPictureType.class, value);
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = StudentContactRelationshipType.class)
+    public JAXBElement<SIFMetadataType> createStudentContactRelationshipTypeSIFMetadata(SIFMetadataType value) {
+        return new JAXBElement<SIFMetadataType>(_StudentContactPersonalTypeSIFMetadata_QNAME, SIFMetadataType.class, StudentContactRelationshipType.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "StudentPersonalRefId", scope = NAPStudentResponseSetType.class)
+    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "ParentRelationshipStatus", scope = StudentContactRelationshipType.class)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPStudentResponseSetTypeStudentPersonalRefId(String value) {
-        return new JAXBElement<String>(_GradingAssignmentScoreTypeStudentPersonalRefId_QNAME, String.class, NAPStudentResponseSetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "EquatingSampleFlag", scope = NAPStudentResponseSetType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPStudentResponseSetTypeEquatingSampleFlag(String value) {
-        return new JAXBElement<String>(_NAPStudentResponseSetTypeEquatingSampleFlag_QNAME, String.class, NAPStudentResponseSetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "CalibrationSampleFlag", scope = NAPStudentResponseSetType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPStudentResponseSetTypeCalibrationSampleFlag(String value) {
-        return new JAXBElement<String>(_NAPStudentResponseSetTypeCalibrationSampleFlag_QNAME, String.class, NAPStudentResponseSetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "NAPTestRefId", scope = NAPStudentResponseSetType.class)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    public JAXBElement<String> createNAPStudentResponseSetTypeNAPTestRefId(String value) {
-        return new JAXBElement<String>(_NAPTestScoreSummaryTypeNAPTestRefId_QNAME, String.class, NAPStudentResponseSetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_ExtendedElements", scope = NAPStudentResponseSetType.class)
-    public JAXBElement<SIFExtendedElementsType> createNAPStudentResponseSetTypeSIFExtendedElements(SIFExtendedElementsType value) {
-        return new JAXBElement<SIFExtendedElementsType>(_RoomInfoTypeSIFExtendedElements_QNAME, SIFExtendedElementsType.class, NAPStudentResponseSetType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.sifassociation.org/datamodel/au/3.4", name = "SIF_Metadata", scope = NAPStudentResponseSetType.class)
-    public JAXBElement<SIFMetadataType> createNAPStudentResponseSetTypeSIFMetadata(SIFMetadataType value) {
-        return new JAXBElement<SIFMetadataType>(_RoomInfoTypeSIFMetadata_QNAME, SIFMetadataType.class, NAPStudentResponseSetType.class, value);
+    public JAXBElement<String> createStudentContactRelationshipTypeParentRelationshipStatus(String value) {
+        return new JAXBElement<String>(_StudentContactRelationshipTypeParentRelationshipStatus_QNAME, String.class, StudentContactRelationshipType.class, value);
     }
 
 }

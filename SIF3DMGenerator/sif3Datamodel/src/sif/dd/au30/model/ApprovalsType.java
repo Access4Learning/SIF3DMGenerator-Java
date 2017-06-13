@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Authorizations to use this resource. For example, this resource may be included as part of the district's standard curriculum model.
+ * 
  * <p>Java class for ApprovalsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

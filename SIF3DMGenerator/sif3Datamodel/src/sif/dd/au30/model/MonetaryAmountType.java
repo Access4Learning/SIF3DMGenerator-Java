@@ -1,6 +1,7 @@
 
 package sif.dd.au30.model;
 
+import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -10,6 +11,8 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
+ * A monetary amount.
+ * 
  * <p>Java class for MonetaryAmountType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -17,7 +20,7 @@ import javax.xml.bind.annotation.XmlValue;
  * <pre>
  * &lt;complexType name="MonetaryAmountType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSDecimalOrEmpty">
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
  *       &lt;attribute name="Currency" type="{http://www.sifassociation.org/datamodel/au/3.4}ISO4217CurrencyNamesAndCodeElementsType" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
@@ -36,7 +39,7 @@ import javax.xml.bind.annotation.XmlValue;
 public class MonetaryAmountType {
 
     @XmlValue
-    protected String value;
+    protected BigDecimal value;
     @XmlAttribute(name = "Currency")
     protected ISO4217CurrencyNamesAndCodeElementsType currency;
 
@@ -45,10 +48,10 @@ public class MonetaryAmountType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    public String getValue() {
+    public BigDecimal getValue() {
         return value;
     }
 
@@ -57,10 +60,10 @@ public class MonetaryAmountType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    public void setValue(String value) {
+    public void setValue(BigDecimal value) {
         this.value = value;
     }
 

@@ -25,8 +25,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPTestItemMarkingTypeType {
 
+
+    /**
+     * Auto Scoring
+     * 
+     */
     AS,
+
+    /**
+     * Manual Marking
+     * 
+     */
     MM,
+
+    /**
+     * Auto Essay Scoring
+     * 
+     */
     AES;
 
     public String value() {

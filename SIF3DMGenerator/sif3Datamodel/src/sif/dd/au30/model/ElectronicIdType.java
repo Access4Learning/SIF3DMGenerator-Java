@@ -13,6 +13,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ *         Common element used to specify entity identifiers that are read by electronic equipment. 
+ *       
+ * 
  * <p>Java class for ElectronicIdType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

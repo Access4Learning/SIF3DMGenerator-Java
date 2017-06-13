@@ -13,6 +13,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ *         The Australian Standard Geographical Classification (ASGC) has now been replaced with the Australian Statistical Geography Standard (ASGS).
+ *         The level and method that this is collected would need to be discussed as the lowest level is now a lot lower than the previous classification to allow for more accurate data analysis and reporting.
+ *         There are different levels of spatial unit references by this code set and a MeshBlock refers to the lowest level of this classification.
+ * 		The spatial unit should be validated against the correct classification which is being elaborated upon. The referenced levels are coded in these volumes of ABS 1270 		
+ *       
+ * 
  * <p>Java class for StatisticalAreaType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

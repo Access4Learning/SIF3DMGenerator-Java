@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Co-curricular or extra-curricular activities (e.g., student organizations, inter-school sports, athletics, publications, band, orchestra, and service activities) in which students may participate.
+ * 
  * <p>Java class for StudentActivityInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,9 +26,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="StudentActivityType" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentActivityType" minOccurs="0"/>
+ *         &lt;element name="StudentActivityType" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentActivityType"/>
  *         &lt;element name="StudentActivityLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
  *         &lt;element name="CurricularStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsActivityTypeType" minOccurs="0"/>
@@ -56,13 +58,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentActivityInfoType {
 
-    @XmlElement(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String title;
     @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "StudentActivityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentActivityType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected StudentActivityType studentActivityType;
     @XmlElementRef(name = "StudentActivityLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentActivityLevel;

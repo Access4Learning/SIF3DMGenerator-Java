@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Allows an agent to include data not yet defined within a SIF data object as name/value pairs.
+ * 
  * <p>Java class for SIF_ExtendedElementsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -88,6 +90,8 @@ public class SIFExtendedElementsType {
 
 
     /**
+     * A name/value pair, the name being contained in the Name attribute, the value being the element content.
+     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.

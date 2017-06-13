@@ -9,6 +9,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Container for the NAP Proficiency Levels
+ * 
  * <p>Java class for DomainProficiencyContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -18,14 +20,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Level1Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level1Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level2Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level2Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level3Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level3Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level4Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Level4Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Level1Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level1Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level2Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level2Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level3Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level3Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level4Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Level4Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,21 +49,21 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class DomainProficiencyContainerType {
 
-    @XmlElement(name = "Level1Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level1Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level1Lower;
-    @XmlElement(name = "Level1Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level1Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level1Upper;
-    @XmlElement(name = "Level2Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level2Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level2Lower;
-    @XmlElement(name = "Level2Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level2Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level2Upper;
-    @XmlElement(name = "Level3Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level3Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level3Lower;
-    @XmlElement(name = "Level3Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level3Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level3Upper;
-    @XmlElement(name = "Level4Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level4Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level4Lower;
-    @XmlElement(name = "Level4Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Level4Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal level4Upper;
 
     /**

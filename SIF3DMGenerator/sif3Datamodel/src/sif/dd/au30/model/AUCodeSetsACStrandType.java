@@ -38,21 +38,101 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsACStrandType {
 
+
+    /**
+     * The arts
+     * 
+     */
     A,
+
+    /**
+     * Economics and business
+     * 
+     */
     B,
+
+    /**
+     * Civics and citizenship
+     * 
+     */
     C,
+
+    /**
+     * Design and technologies
+     * 
+     */
     D,
+
+    /**
+     * English
+     * 
+     */
     E,
+
+    /**
+     * Geography
+     * 
+     */
     G,
+
+    /**
+     * History
+     * 
+     */
     H,
+
+    /**
+     * Digital technologies
+     * 
+     */
     I,
+
+    /**
+     * Languages
+     * 
+     */
     L,
+
+    /**
+     * Mathematics
+     * 
+     */
     M,
+
+    /**
+     * Health and physical education
+     * 
+     */
     P,
+
+    /**
+     * Science
+     * 
+     */
     S,
+
+    /**
+     * Humanities and social sciences
+     * 
+     */
     U,
+
+    /**
+     * Technology
+     * 
+     */
     T,
+
+    /**
+     * Work Studies
+     * 
+     */
     W,
+
+    /**
+     * Redacted for privacy
+     * 
+     */
     ZZREDACTED;
 
     public String value() {

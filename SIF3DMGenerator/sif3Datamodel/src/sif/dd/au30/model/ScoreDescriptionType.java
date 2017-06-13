@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,9 +38,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class ScoreDescriptionType {
 
-    @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal scoreValue;
-    @XmlElement(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String descriptor;

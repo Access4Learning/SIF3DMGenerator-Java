@@ -17,6 +17,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * 
+ *         This purpose of this object is to define and communicate the subject or distinct piece of curriculum that needs to be scheduled by the time table generator.  This is a new object proposed to meet SIF-AU needs.  Reviews of the existing specifications identified two relevant objects - SchoolCourseInfo, defined in SIF US 2.2 specification and SchoolGroup, defined within the SIF UK 1.1 specification.  These objects appear to have some similar context but seem overly complex considering that Australian requirements, which are limited to the Student Administration System or Curriculum Delivery System providing base information to the Time Tabling application about what curriculum offerings are being proposed.
+ * 
+ *         When this data is sent in a Request/Response only those subjects that are relevant to be scheduled (or active), should be sent to the TimeTabling application.
+ *       
+ * 
  * <p>Java class for TimeTableSubjectType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,14 +32,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="AcademicYear" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
  *         &lt;element name="AcademicYearRange" type="{http://www.sifassociation.org/datamodel/au/3.4}YearRangeType" minOccurs="0"/>
  *         &lt;element name="CourseLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="Faculty" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectShortName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SubjectLongName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="SubjectLongName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="SubjectType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ProposedMaxClassSize" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="ProposedMinClassSize" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
@@ -76,7 +82,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TimeTableSubjectType {
 
-    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String subjectLocalId;
     @XmlElementRef(name = "AcademicYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -91,7 +97,7 @@ public class TimeTableSubjectType {
     protected JAXBElement<String> faculty;
     @XmlElementRef(name = "SubjectShortName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> subjectShortName;
-    @XmlElement(name = "SubjectLongName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SubjectLongName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String subjectLongName;

@@ -26,9 +26,29 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsEnrollmentTimeFrameType {
 
+
+    /**
+     * Current
+     * 
+     */
     C,
+
+    /**
+     * Future
+     * 
+     */
     F,
+
+    /**
+     * Historical
+     * 
+     */
     H,
+
+    /**
+     * Redacted for privacy
+     * 
+     */
     ZZREDACTED;
 
     public String value() {

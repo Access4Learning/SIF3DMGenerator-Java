@@ -18,6 +18,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * 
+ *         This object contains an amount to be invoiced to an outside entity (typically a creditor or debtor). This object can include school fees. The object is also used for payments to an outside entity (using debit amounts), where those payments are not for goods and services (PurchaseOrder object): e.g. credit notes, reimbursements, rebates.     
+ * 
  * <p>Java class for InvoiceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,10 +30,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="InvoicedEntity" minOccurs="0">
+ *         &lt;element name="InvoicedEntity">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -44,10 +47,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/complexType>
  *         &lt;/element>
  *         &lt;element name="FormNumber" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="BillingDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="TransactionDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="BilledAmount" type="{http://www.sifassociation.org/datamodel/au/3.4}DebitOrCreditAmountType" minOccurs="0"/>
- *         &lt;element name="Ledger" minOccurs="0">
+ *         &lt;element name="BillingDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="TransactionDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="BilledAmount" type="{http://www.sifassociation.org/datamodel/au/3.4}DebitOrCreditAmountType"/>
+ *         &lt;element name="Ledger">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *               &lt;enumeration value="Creditor"/>
@@ -108,20 +111,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class InvoiceType {
 
-    @XmlElement(name = "InvoicedEntity", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "InvoicedEntity", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected InvoiceType.InvoicedEntity invoicedEntity;
     @XmlElementRef(name = "FormNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> formNumber;
-    @XmlElement(name = "BillingDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "BillingDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar billingDate;
-    @XmlElement(name = "TransactionDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TransactionDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String transactionDescription;
-    @XmlElement(name = "BilledAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "BilledAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected DebitOrCreditAmountType billedAmount;
-    @XmlElement(name = "Ledger", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Ledger", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String ledger;
     @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -714,6 +717,8 @@ public class InvoiceType {
 
 
     /**
+     * Id of the entity being billed for this billing activity.
+     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -721,7 +726,7 @@ public class InvoiceType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -744,13 +749,14 @@ public class InvoiceType {
     public static class InvoicedEntity {
 
         @XmlValue
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String sifRefObject;
 
         /**
-         * Gets the value of the value property.
+         * A reference to a RefId.
          * 
          * @return
          *     possible object is

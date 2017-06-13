@@ -26,9 +26,29 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsImmunisationCertificateStatusType {
 
+
+    /**
+     * Complete
+     * 
+     */
     C,
+
+    /**
+     * Incomplete
+     * 
+     */
     I,
+
+    /**
+     * Not Sighted
+     * 
+     */
     N,
+
+    /**
+     * Redacted for privacy
+     * 
+     */
     ZZREDACTED;
 
     public String value() {
