@@ -1,11 +1,11 @@
-<project name="SIF3DMGenerator" basedir="." default="10-jar-dd-au13for30">
+<project name="SIF3DMGenerator" basedir="." default="00-env">
 
 	<property name="project.basedir" value="${basedir}"/>
 
 	<!-- *************************** -->
 	<!-- Load default property files -->
 	<!-- *************************** -->
-	<!--property file="${project.basedir}/script/ant.properties"/-->
+	<property file="${project.basedir}/ant.properties"/>
 
 	<!-- ********************* -->
 	<!-- Environment Variables -->
@@ -49,6 +49,9 @@
 		<echo message="build.dir: ${build.dir}"/>
 		<echo message="class.dir: ${class.dir}"/>
 		<echo message="dist.dir: ${dist.dir}"/>
+		<echo message="sif.local: ${sif.local}"/>
+		<echo message="sif.dm.version: ${sif.dm.version}"/>
+		<echo message="sif.dm.version.nodot: ${sif.dm.version.nodot}"/>
 	</target>
 
 	<!-- Clean environment. -->
@@ -82,27 +85,9 @@
     <!-- ********************* -->
     <!-- AU Data Model Section -->
     <!-- ********************* -->
-	<target name="20-generate-AU13for30" depends="init" description="Generate POJOs using JAXB">
+	<target name="10-generate-AU-DM" depends="init" description="Generate POJOs using JAXB for SIF AU">
 		<antcall target="generate-au-pojo">
-			<param name="sifddversion" value="1.3"/>
-		</antcall>
-	</target>
-
-	<target name="21-generate-AU14for30" depends="init" description="Generate POJOs using JAXB">
-		<antcall target="generate-au-pojo">
-			<param name="sifddversion" value="1.4"/>
-		</antcall>
-	</target>
-
-	<target name="22-generate-AU34" depends="init" description="Generate POJOs using JAXB">
-		<antcall target="generate-au-pojo">
-			<param name="sifddversion" value="3.4"/>
-		</antcall>
-	</target>
-
-	<target name="23-generate-AU341" depends="init" description="Generate POJOs using JAXB">
-		<antcall target="generate-au-pojo">
-			<param name="sifddversion" value="3.4.1"/>
+			<param name="sifddversion" value="${sif.dm.version}"/>
 		</antcall>
 	</target>
 	
@@ -127,15 +112,9 @@
     <!-- ********************* -->
     <!-- US Data Model Section -->
     <!-- ********************* -->
-	<target name="30-generate-US32" depends="init" description="Create all US 3.2 POJOs based on XSD Directories">
+	<target name="20-generate-US-DM" depends="init" description="Create all US POJOs (includes xPress) based on XSD Directories">
 		<antcall target="generate-na-pojo">
-			<param name="sifddversion" value="32"/>
-		</antcall>
-	</target>
-	
-	<target name="31-generate-US33" depends="init" description="Create all US 3.3 POJOs (includes xPress) based on XSD Directories">
-		<antcall target="generate-na-pojo">
-			<param name="sifddversion" value="33"/>
+			<param name="sifddversion" value="${sif.dm.version.nodot}"/>
 		</antcall>
 	</target>
 
@@ -162,26 +141,10 @@
     <!-- ********************* -->
     <!-- AU Data Model Section -->
     <!-- ********************* -->
-	<target name="10-jar-dd-au13for30" depends="compile-dd" description="Create jar file for SIF AU 1.3/3.0">
+	<target name="15-jar-AU-DM" depends="compile-dd" description="Create jar file for SIF AU">
 		<antcall target="jar-dd">
-			<param name="locale" value="au"/>
-			<param name="sifddversion" value="1.3"/>
-			<param name="srcDir" value="au30"/>
-		</antcall>
-	</target>
-
-	<target name="11-jar-dd-au14for30" depends="compile-dd" description="Create jar file for SIF AU 1.4/3.0">
-		<antcall target="jar-dd">
-			<param name="locale" value="au"/>
-			<param name="sifddversion" value="1.4"/>
-			<param name="srcDir" value="au30"/>
-		</antcall>
-	</target>
-
-	<target name="12-jar-dd-au341" depends="compile-dd" description="Create jar file for SIF AU 3.4.1">
-		<antcall target="jar-dd">
-			<param name="locale" value="au"/>
-			<param name="sifddversion" value="3.4.1"/>
+			<param name="locale" value="${sif.local}"/>
+			<param name="sifddversion" value="${sif.dm.version}"/>
 			<param name="srcDir" value="au30"/>
 		</antcall>
 	</target>
@@ -189,19 +152,11 @@
     <!-- ********************* -->
     <!-- NA Data Model Section -->
     <!-- ********************* -->
-	<target name="15-jar-dd-us32" depends="compile-dd" description="Create jar file for SIF NA 3.2">
+	<target name="25-jar-US-DM" depends="compile-dd" description="Create jar file for SIF NA">
 		<antcall target="jar-dd">
-			<param name="locale" value="us"/>
-			<param name="sifddversion" value="3.2"/>
-			<param name="srcDir" value="us32"/>
-		</antcall>
-	</target>
-
-	<target name="16-jar-dd-us33" depends="compile-dd" description="Create jar file for SIF NA 3.3">
-		<antcall target="jar-dd">
-			<param name="locale" value="us"/>
-			<param name="sifddversion" value="3.3"/>
-			<param name="srcDir" value="us33"/>
+			<param name="locale" value="${sif.local}"/>
+			<param name="sifddversion" value="${sif.dm.version}"/>
+			<param name="srcDir" value="us${sif.dm.version.nodot}"/>
 		</antcall>
 	</target>
 
