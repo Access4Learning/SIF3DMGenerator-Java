@@ -13,10 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *       This object contains information about the people who are referenced as student contacts.
- *     
- * 
  * <p>Java class for StudentContactPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

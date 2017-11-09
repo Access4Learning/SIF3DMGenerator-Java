@@ -14,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Source objects assigned to students.
- * 
  * <p>Java class for SourceObjectsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -91,8 +89,6 @@ public class SourceObjectsType {
 
 
     /**
-     * GUID assigned to the source object.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -132,7 +128,7 @@ public class SourceObjectsType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

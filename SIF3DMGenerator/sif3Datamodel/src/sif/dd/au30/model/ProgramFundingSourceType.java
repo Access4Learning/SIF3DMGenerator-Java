@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Funding source of the special program
- * 
  * <p>Java class for ProgramFundingSourceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

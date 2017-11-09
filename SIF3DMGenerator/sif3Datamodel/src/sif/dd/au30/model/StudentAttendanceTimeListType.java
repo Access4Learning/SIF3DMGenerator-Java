@@ -15,10 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides more detail about the attendance spans for a single student during the
- * 				day: it provides more detailed information than the single TimeIn and TimeOut elements in
- * 				StudentDailyAttendance.
- * 
  * <p>Java class for StudentAttendanceTimeListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -33,6 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
  *         &lt;element name="AttendanceTimes" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceTimesType"/>
+ *         &lt;element name="PeriodAttendances" type="{http://www.sifassociation.org/datamodel/au/3.4}PeriodAttendancesType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -51,6 +48,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "date",
     "schoolYear",
     "attendanceTimes",
+    "periodAttendances",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -69,6 +67,8 @@ public class StudentAttendanceTimeListType {
     protected XMLGregorianCalendar schoolYear;
     @XmlElement(name = "AttendanceTimes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AttendanceTimesType attendanceTimes;
+    @XmlElementRef(name = "PeriodAttendances", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PeriodAttendancesType> periodAttendances;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -195,6 +195,30 @@ public class StudentAttendanceTimeListType {
      */
     public void setAttendanceTimes(AttendanceTimesType value) {
         this.attendanceTimes = value;
+    }
+
+    /**
+     * Gets the value of the periodAttendances property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link PeriodAttendancesType }{@code >}
+     *     
+     */
+    public JAXBElement<PeriodAttendancesType> getPeriodAttendances() {
+        return periodAttendances;
+    }
+
+    /**
+     * Sets the value of the periodAttendances property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link PeriodAttendancesType }{@code >}
+     *     
+     */
+    public void setPeriodAttendances(JAXBElement<PeriodAttendancesType> value) {
+        this.periodAttendances = value;
     }
 
     /**

@@ -15,9 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         ChargedLocationInfo represents a location in a school system. It can be used to associate accounts and purchase orders with particular schools or other cost centres.      
- * 
  * <p>Java class for ChargedLocationInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

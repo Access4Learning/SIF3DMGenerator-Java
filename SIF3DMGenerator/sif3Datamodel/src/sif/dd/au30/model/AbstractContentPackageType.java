@@ -16,13 +16,6 @@ import org.w3c.dom.Element;
 
 
 /**
- * 
- *         An abstract type for derived content package types, elements and objects.  This structure may be used verbatim, optionally extending
- *         with additional attributes, or may be redefined to include only a subset of child elements and/or to add validation to XML
- *         contained in XMLData.  Only one instance of XMLData, TextData, BinaryData or
- *         Reference can occur in a single instance.
- *       
- * 
  * <p>Java class for AbstractContentPackageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -664,8 +657,8 @@ public class AbstractContentPackageType {
          * 
          * @return
          *     possible object is
-         *     {@link Element }
          *     {@link Object }
+         *     {@link Element }
          *     
          */
         public Object getAny() {
@@ -677,8 +670,8 @@ public class AbstractContentPackageType {
          * 
          * @param value
          *     allowed object is
-         *     {@link Element }
          *     {@link Object }
+         *     {@link Element }
          *     
          */
         public void setAny(Object value) {

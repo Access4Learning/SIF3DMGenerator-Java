@@ -17,11 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object contains information related to learning resources that may be used in educational settings. These
- *         include textbooks, Internet content, educational software, videos and DVDs, supplemental print material, etc.
- *       
- * 
  * <p>Java class for LearningResourceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

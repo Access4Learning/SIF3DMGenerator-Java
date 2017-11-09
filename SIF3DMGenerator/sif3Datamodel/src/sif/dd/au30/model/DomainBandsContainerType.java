@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Container for the NAP Domain Bands - Upper and Lower
- * 
  * <p>Java class for DomainBandsContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

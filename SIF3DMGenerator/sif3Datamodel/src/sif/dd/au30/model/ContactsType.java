@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Contains contact information about resource authors.
- * 
  * <p>Java class for ContactsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

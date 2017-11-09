@@ -16,9 +16,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *           This object represents any resource object that is not already described in SIF AU by an existing object (such as RoomInfo or LearningResource). It is intended for use with ResourceBooking, so it can represent any bookable resource; but it is not limited to that usage. While the obvious type of equipment described for booking purposes are things like computers and projectors, the types of equipment that can be booked depends on the educational organisation, and can easily extend to things like vehicles or animals.      
- * 
  * <p>Java class for EquipmentInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -385,8 +382,6 @@ public class EquipmentInfoType {
 
 
     /**
-     * The SIF RefId of the owner/location of the equipment.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -426,7 +421,7 @@ public class EquipmentInfoType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

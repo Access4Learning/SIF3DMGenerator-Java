@@ -5,19 +5,11 @@ import java.math.BigDecimal;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Container for elements reflecting the most recent enrollment of a student.  If the student is
- *         currently enrolled in the district, the elements contain current information.
- *       
- * 
  * <p>Java class for StudentMostRecentContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -52,7 +44,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="TestLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
  *         &lt;element name="Homegroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ClassCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="MembershipType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolEnrollmentTypeType"/>
+ *         &lt;element name="MembershipType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolEnrollmentTypeType" minOccurs="0"/>
  *         &lt;element name="FFPOS" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsFFPOSStatusCodeType" minOccurs="0"/>
  *         &lt;element name="ReportingSchoolId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="OtherEnrollmentSchoolACARAId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
@@ -124,9 +116,8 @@ public class StudentMostRecentContainerType {
     protected JAXBElement<String> homegroup;
     @XmlElementRef(name = "ClassCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> classCode;
-    @XmlElement(name = "MembershipType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String membershipType;
+    @XmlElementRef(name = "MembershipType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> membershipType;
     @XmlElementRef(name = "FFPOS", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> ffpos;
     @XmlElementRef(name = "ReportingSchoolId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -547,10 +538,10 @@ public class StudentMostRecentContainerType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getMembershipType() {
+    public JAXBElement<String> getMembershipType() {
         return membershipType;
     }
 
@@ -559,10 +550,10 @@ public class StudentMostRecentContainerType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setMembershipType(String value) {
+    public void setMembershipType(JAXBElement<String> value) {
         this.membershipType = value;
     }
 

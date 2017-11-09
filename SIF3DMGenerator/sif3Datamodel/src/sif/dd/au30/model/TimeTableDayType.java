@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This element identifies a ‘day’ in a TimeTable.
- * 
  * <p>Java class for TimeTableDayType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

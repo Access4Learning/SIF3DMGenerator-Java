@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Lesson or activity-sized portions of a resource.
- * 
  * <p>Java class for ComponentsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

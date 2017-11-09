@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Subject(s) Staff member is eligible to teach.
- * 
  * <p>Java class for StaffSubjectListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

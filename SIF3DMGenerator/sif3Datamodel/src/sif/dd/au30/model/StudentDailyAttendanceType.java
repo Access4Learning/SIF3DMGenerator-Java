@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides daily attendance information for a particular student in a particular school on a particular date.
- * 
  * <p>Java class for StudentDailyAttendanceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

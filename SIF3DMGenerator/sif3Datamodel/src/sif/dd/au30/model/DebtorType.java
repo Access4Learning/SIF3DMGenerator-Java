@@ -14,9 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object is used to capture general information about debtors.
- * 
  * <p>Java class for DebtorType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -283,8 +280,6 @@ public class DebtorType {
 
 
     /**
-     * Id of the entity referred to by this object (e.g., student, employee, organization).
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -324,7 +319,7 @@ public class DebtorType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Containter for Year Level of Enrolments.
- * 
  * <p>Java class for YearLevelEnrollmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

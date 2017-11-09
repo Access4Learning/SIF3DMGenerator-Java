@@ -16,10 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         A curriculum standards document or the like published by a national, state, district, school site, professional association or other interested party. The LearningStandardDocument reflects an expectation of student work.
- *       
- * 
  * <p>Java class for LearningStandardDocumentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

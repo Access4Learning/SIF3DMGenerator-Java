@@ -19,12 +19,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *       This object contains information related to curriculum standards statements "standards" or "benchmarks" or the like
- *       within the document. Each LearningStandardItem reflects an individual standard statement and may occur
- *       at several levels within a hierarchially structured document.
- *     
- * 
  * <p>Java class for LearningStandardItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -660,8 +654,6 @@ public class LearningStandardItemType {
 
 
         /**
-         * A relationship between the current standard item and another standard item.
-         * 
          * <p>Java class for anonymous complex type.
          * 
          * <p>The following schema fragment specifies the expected content contained within this class.
@@ -704,7 +696,7 @@ public class LearningStandardItemType {
             protected String relationshipType;
 
             /**
-             * A reference to a RefId.
+             * Gets the value of the value property.
              * 
              * @return
              *     possible object is

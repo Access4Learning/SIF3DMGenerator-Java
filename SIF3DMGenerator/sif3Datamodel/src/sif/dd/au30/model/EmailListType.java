@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of e-mail addresses associated with an individual or organization.
- * 
  * <p>Java class for EmailListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Optional campus details.
- * 
  * <p>Java class for CampusContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

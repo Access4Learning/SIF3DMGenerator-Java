@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * List of awards and other types of recognition given to the student for this activity. 
- * 
  * <p>Java class for RecognitionListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

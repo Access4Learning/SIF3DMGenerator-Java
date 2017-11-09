@@ -15,11 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         List of other codes or strings that crosswalk to or serve as translations of the Code element paired with this common element.  If Code changes
- *         and OtherCodes are supported, both Code and all associated OtherCode elements must be present.
- *       
- * 
  * <p>Java class for OtherCodeListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,10 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         List of year levels.
- *       
- * 
  * <p>Java class for YearLevelsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

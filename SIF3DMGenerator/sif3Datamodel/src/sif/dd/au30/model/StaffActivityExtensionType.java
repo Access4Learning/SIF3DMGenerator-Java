@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * The purpose of the Teacher's role as related to students. Equivalent to 'JobFunction' in US Object.
- * 
  * <p>Java class for StaffActivityExtensionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

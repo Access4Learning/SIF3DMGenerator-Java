@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Lists an "other" identifier associated with the entity.
- * 
  * <p>Java class for OtherIdType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

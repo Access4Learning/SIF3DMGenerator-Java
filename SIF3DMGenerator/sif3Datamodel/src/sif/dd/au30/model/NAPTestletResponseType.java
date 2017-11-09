@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="NAPTestletRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="NAPTestletLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="TestletSubScore" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="TestletSubScore" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="ItemResponseList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestletItemResponseListType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -48,8 +48,8 @@ public class NAPTestletResponseType {
     @XmlElement(name = "NAPTestletLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestletLocalId;
-    @XmlElement(name = "TestletSubScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected BigDecimal testletSubScore;
+    @XmlElementRef(name = "TestletSubScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> testletSubScore;
     @XmlElement(name = "ItemResponseList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected NAPTestletItemResponseListType itemResponseList;
 
@@ -106,10 +106,10 @@ public class NAPTestletResponseType {
      * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
+     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public BigDecimal getTestletSubScore() {
+    public JAXBElement<BigDecimal> getTestletSubScore() {
         return testletSubScore;
     }
 
@@ -118,10 +118,10 @@ public class NAPTestletResponseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
+     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
      *     
      */
-    public void setTestletSubScore(BigDecimal value) {
+    public void setTestletSubScore(JAXBElement<BigDecimal> value) {
         this.testletSubScore = value;
     }
 

@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
- * A monetary amount.
- * 
  * <p>Java class for MonetaryAmountType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

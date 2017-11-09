@@ -18,10 +18,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object provides information about a particular assignment, allows applications to synchronize each other's assignment tables, gathers the definition for a GradingAssignmentScore object, etc.  
- *       
- * 
  * <p>Java class for GradingAssignmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

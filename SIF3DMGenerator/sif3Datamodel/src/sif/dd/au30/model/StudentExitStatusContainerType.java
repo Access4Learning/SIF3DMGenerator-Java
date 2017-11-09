@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Container element for exit status codes.
- * 
  * <p>Java class for StudentExitStatusContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

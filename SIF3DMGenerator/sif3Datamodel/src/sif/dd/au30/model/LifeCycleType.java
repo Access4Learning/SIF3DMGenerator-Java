@@ -16,10 +16,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This common metadata element describes the life cycle of the object it represents, based on the IEEE LOM LifeCycle element [LOM].
- *       
- * 
  * <p>Java class for LifeCycleType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

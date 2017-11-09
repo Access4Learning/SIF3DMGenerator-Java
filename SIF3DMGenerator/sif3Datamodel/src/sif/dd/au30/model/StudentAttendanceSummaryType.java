@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides a summary of a student's daily attendance and membership information for a given school during the time period between the StartDate and EndDate, inclusive.  As such, there may be multiple instances of this object for a student in a school over the course of a school year.
- * 
  * <p>Java class for StudentAttendanceSummaryType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

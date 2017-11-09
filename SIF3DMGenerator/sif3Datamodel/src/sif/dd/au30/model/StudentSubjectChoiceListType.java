@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of Student Subject Choices where available.
- * 
  * <p>Java class for StudentSubjectChoiceListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

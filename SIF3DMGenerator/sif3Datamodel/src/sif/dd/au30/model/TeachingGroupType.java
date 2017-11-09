@@ -17,10 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object identifies a particular Teaching Group or class in a particular a time table.
- *       
- * 
  * <p>Java class for TeachingGroupType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

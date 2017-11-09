@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object is for course information.
- * 
  * <p>Java class for SchoolCourseInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

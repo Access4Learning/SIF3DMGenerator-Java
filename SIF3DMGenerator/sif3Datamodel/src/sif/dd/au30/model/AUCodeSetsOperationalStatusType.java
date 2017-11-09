@@ -19,7 +19,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="P"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="U"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -29,48 +28,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsOperationalStatusType {
 
-
-    /**
-     * Building or Construction Started
-     * 
-     */
     B,
-
-    /**
-     * Closed
-     * 
-     */
     C,
-
-    /**
-     * Open
-     * 
-     */
     O,
-
-    /**
-     * Pending
-     * 
-     */
     P,
-
-    /**
-     * Site
-     * 
-     */
     S,
-
-    /**
-     * Unstaffed
-     * 
-     */
-    U,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    U;
 
     public String value() {
         return name();

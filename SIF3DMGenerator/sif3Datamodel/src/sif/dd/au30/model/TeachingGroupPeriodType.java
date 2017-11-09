@@ -13,8 +13,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Timeslot information that can be published by an SIS which is a subset of information available in the TimeTableCell object.
- * 
  * <p>Java class for TeachingGroupPeriodType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

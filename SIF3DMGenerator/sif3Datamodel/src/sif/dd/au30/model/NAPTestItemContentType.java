@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Contents of a Test Item in the context of NAP.
- * 
  * <p>Java class for NAPTestItemContentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -43,7 +41,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ItemDifficultyLogit5SE" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="ItemDifficultyLogit62SE" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="ItemProficiencyBand" type="{http://www.w3.org/2001/XMLSchema}integer"/>
- *         &lt;element name="ItemProficiencyLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="ItemProficiencyLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ExemplarURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="ItemSubstitutedForList" type="{http://www.sifassociation.org/datamodel/au/3.4}SubstituteItemListType" minOccurs="0"/>
  *         &lt;element name="ContentDescriptionList" type="{http://www.sifassociation.org/datamodel/au/3.4}ContentDescriptionListType" minOccurs="0"/>
@@ -126,10 +124,8 @@ public class NAPTestItemContentType {
     protected BigDecimal itemDifficultyLogit62SE;
     @XmlElement(name = "ItemProficiencyBand", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigInteger itemProficiencyBand;
-    @XmlElement(name = "ItemProficiencyLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String itemProficiencyLevel;
+    @XmlElementRef(name = "ItemProficiencyLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> itemProficiencyLevel;
     @XmlElementRef(name = "ExemplarURL", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> exemplarURL;
     @XmlElementRef(name = "ItemSubstitutedForList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -546,10 +542,10 @@ public class NAPTestItemContentType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getItemProficiencyLevel() {
+    public JAXBElement<String> getItemProficiencyLevel() {
         return itemProficiencyLevel;
     }
 
@@ -558,10 +554,10 @@ public class NAPTestItemContentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setItemProficiencyLevel(String value) {
+    public void setItemProficiencyLevel(JAXBElement<String> value) {
         this.itemProficiencyLevel = value;
     }
 

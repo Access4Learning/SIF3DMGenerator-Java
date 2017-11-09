@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Breakdown of times that the student entered or returned to school.
- * 
  * <p>Java class for AttendanceTimesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

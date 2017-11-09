@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Type of Religion if any
- * 
  * <p>Java class for ReligionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

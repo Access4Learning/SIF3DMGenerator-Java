@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Subjects Students Choose
- * 
  * <p>Java class for StudentSubjectChoiceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -16,10 +16,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object contains all of the information about a school's room. This object may contain a reference to a room type so that it may represent anything from a gym, cafeteria, to a standard classroom. The StaffList element usually contains the homeroom teacher.
- *       
- * 
  * <p>Java class for RoomInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Previous, alternate or other names or aliases associated with a person.
- * 
  * <p>Java class for OtherNamesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

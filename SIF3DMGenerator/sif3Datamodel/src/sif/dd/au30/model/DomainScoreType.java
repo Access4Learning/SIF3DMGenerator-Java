@@ -5,13 +5,12 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -30,7 +29,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ScaledScoreStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="ScaledScoreLogitStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="StudentDomainBand" type="{http://www.w3.org/2001/XMLSchema}integer"/>
- *         &lt;element name="StudentProficiency" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="StudentProficiency" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="PlausibleScaledValueList" type="{http://www.sifassociation.org/datamodel/au/3.4}PlausibleScaledValueListType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -65,10 +64,8 @@ public class DomainScoreType {
     protected BigDecimal scaledScoreLogitStandardError;
     @XmlElement(name = "StudentDomainBand", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigInteger studentDomainBand;
-    @XmlElement(name = "StudentProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String studentProficiency;
+    @XmlElementRef(name = "StudentProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> studentProficiency;
     @XmlElement(name = "PlausibleScaledValueList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected List<PlausibleScaledValueListType> plausibleScaledValueList;
 
@@ -221,10 +218,10 @@ public class DomainScoreType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getStudentProficiency() {
+    public JAXBElement<String> getStudentProficiency() {
         return studentProficiency;
     }
 
@@ -233,10 +230,10 @@ public class DomainScoreType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setStudentProficiency(String value) {
+    public void setStudentProficiency(JAXBElement<String> value) {
         this.studentProficiency = value;
     }
 

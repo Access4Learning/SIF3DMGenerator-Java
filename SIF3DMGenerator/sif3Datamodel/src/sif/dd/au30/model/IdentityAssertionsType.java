@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * The list of identity assertions for this user.
- * 
  * <p>Java class for IdentityAssertionsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

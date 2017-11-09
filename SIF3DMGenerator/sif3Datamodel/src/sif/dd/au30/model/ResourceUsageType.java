@@ -19,10 +19,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- * 			This object tracks resource usage by a student or staff member at a school over a defined time period.
- * 		  
- * 
  * <p>Java class for ResourceUsageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -775,8 +771,6 @@ public class ResourceUsageType {
 
 
             /**
-             * SIF RefId that identifies the student, staff or group whose usage is being tracked.
-             * 
              * <p>Java class for anonymous complex type.
              * 
              * <p>The following schema fragment specifies the expected content contained within this class.
@@ -815,7 +809,7 @@ public class ResourceUsageType {
                 protected String sifRefObject;
 
                 /**
-                 * A reference to a RefId.
+                 * Gets the value of the value property.
                  * 
                  * @return
                  *     possible object is

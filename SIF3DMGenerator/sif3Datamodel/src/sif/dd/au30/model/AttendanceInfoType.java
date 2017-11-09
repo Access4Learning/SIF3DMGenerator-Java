@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Information describing how the day relates to attendance.
- * 
  * <p>Java class for AttendanceInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

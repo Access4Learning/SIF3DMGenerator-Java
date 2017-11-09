@@ -14,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group for statistical purposes.
- * 
  * <p>Java class for AggregateCharacteristicInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

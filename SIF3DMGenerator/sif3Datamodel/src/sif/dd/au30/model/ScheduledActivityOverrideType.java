@@ -11,8 +11,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.
- * 
  * <p>Java class for ScheduledActivityOverrideType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -152,9 +152,6 @@ public class LocationType {
 
 
     /**
-     * 
-     *       RefId of the location object if the location is a SIF Object such as 
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -193,7 +190,7 @@ public class LocationType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

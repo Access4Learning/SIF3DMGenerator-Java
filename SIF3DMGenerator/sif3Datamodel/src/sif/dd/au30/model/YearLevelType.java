@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Year or academic level.
- * 
  * <p>Java class for YearLevelType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains all the personal information related to the student.
- * 
  * <p>Java class for StudentPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

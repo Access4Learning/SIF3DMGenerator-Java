@@ -17,8 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object represents a student’s attempt to undergo NAP assessment in a particular test.
- * 
  * <p>Java class for NAPEventStudentLinkType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -42,9 +40,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ParticipationCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPParticipationCodeType"/>
  *         &lt;element name="ParticipationText" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="Device" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *         &lt;element name="LapsedTimeTest" type="{http://www.w3.org/2001/XMLSchema}duration"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="LapsedTimeTest" type="{http://www.w3.org/2001/XMLSchema}duration" minOccurs="0"/>
  *         &lt;element name="ExemptionReason" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="PersonalDetailsChanged" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="PSIOtherIdMatch" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
@@ -127,14 +125,12 @@ public class NAPEventStudentLinkType {
     protected String participationText;
     @XmlElementRef(name = "Device", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> device;
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar date;
-    @XmlElement(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlSchemaType(name = "time")
-    protected XMLGregorianCalendar startTime;
-    @XmlElement(name = "LapsedTimeTest", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected Duration lapsedTimeTest;
+    @XmlElementRef(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> date;
+    @XmlElementRef(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> startTime;
+    @XmlElementRef(name = "LapsedTimeTest", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Duration> lapsedTimeTest;
     @XmlElementRef(name = "ExemptionReason", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> exemptionReason;
     @XmlElementRef(name = "PersonalDetailsChanged", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -498,10 +494,10 @@ public class NAPEventStudentLinkType {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public XMLGregorianCalendar getDate() {
+    public JAXBElement<XMLGregorianCalendar> getDate() {
         return date;
     }
 
@@ -510,10 +506,10 @@ public class NAPEventStudentLinkType {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public void setDate(XMLGregorianCalendar value) {
+    public void setDate(JAXBElement<XMLGregorianCalendar> value) {
         this.date = value;
     }
 
@@ -522,10 +518,10 @@ public class NAPEventStudentLinkType {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public XMLGregorianCalendar getStartTime() {
+    public JAXBElement<XMLGregorianCalendar> getStartTime() {
         return startTime;
     }
 
@@ -534,10 +530,10 @@ public class NAPEventStudentLinkType {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public void setStartTime(XMLGregorianCalendar value) {
+    public void setStartTime(JAXBElement<XMLGregorianCalendar> value) {
         this.startTime = value;
     }
 
@@ -546,10 +542,10 @@ public class NAPEventStudentLinkType {
      * 
      * @return
      *     possible object is
-     *     {@link Duration }
+     *     {@link JAXBElement }{@code <}{@link Duration }{@code >}
      *     
      */
-    public Duration getLapsedTimeTest() {
+    public JAXBElement<Duration> getLapsedTimeTest() {
         return lapsedTimeTest;
     }
 
@@ -558,10 +554,10 @@ public class NAPEventStudentLinkType {
      * 
      * @param value
      *     allowed object is
-     *     {@link Duration }
+     *     {@link JAXBElement }{@code <}{@link Duration }{@code >}
      *     
      */
-    public void setLapsedTimeTest(Duration value) {
+    public void setLapsedTimeTest(JAXBElement<Duration> value) {
         this.lapsedTimeTest = value;
     }
 

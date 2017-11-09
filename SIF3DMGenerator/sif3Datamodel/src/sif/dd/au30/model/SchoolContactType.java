@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Information on contact persons for this school.
- * 
  * <p>Java class for SchoolContactType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

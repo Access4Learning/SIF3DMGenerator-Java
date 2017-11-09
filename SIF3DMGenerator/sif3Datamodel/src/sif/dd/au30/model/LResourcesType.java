@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Learning resources that support this activity.
- * 
  * <p>Java class for LResourcesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

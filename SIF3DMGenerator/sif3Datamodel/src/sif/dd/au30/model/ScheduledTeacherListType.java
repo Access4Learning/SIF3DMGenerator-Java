@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.
- * 
  * <p>Java class for ScheduledTeacherListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

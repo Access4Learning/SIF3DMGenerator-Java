@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Information about which staff member created this record.
- * 
  * <p>Java class for CreationUserType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

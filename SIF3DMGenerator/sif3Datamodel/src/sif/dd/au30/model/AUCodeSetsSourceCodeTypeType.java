@@ -18,7 +18,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="P"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="T"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -28,42 +27,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSourceCodeTypeType {
 
-
-    /**
-     * Provided by the child (ie pupil)
-     * 
-     */
     C,
-
-    /**
-     * Other 
-     * 
-     */
     O,
-
-    /**
-     * Provided by the parent
-     * 
-     */
     P,
-
-    /**
-     * Ascribed by the current school
-     * 
-     */
     S,
-
-    /**
-     * Ascribed by a previous school
-     * 
-     */
-    T,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    T;
 
     public String value() {
         return name();

@@ -18,7 +18,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Extra"/>
  *     &lt;enumeration value="Underload"/>
  *     &lt;enumeration value="Casual"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -28,40 +27,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsTeacherCoverCreditType {
 
-
-    /**
-     * The cover is taken as replacement for a cancelled class
-     * 
-     */
     @XmlEnumValue("In-Lieu")
     IN_LIEU("In-Lieu"),
-
-    /**
-     * The cover counts towards the teacher's extras quota
-     * 
-     */
     @XmlEnumValue("Extra")
     EXTRA("Extra"),
-
-    /**
-     * The cover is not counted as an extra because the teacher is underloaded on the cyclical timetable
-     * 
-     */
     @XmlEnumValue("Underload")
     UNDERLOAD("Underload"),
-
-    /**
-     * The event is supervised by a casual teacher
-     * 
-     */
     @XmlEnumValue("Casual")
-    CASUAL("Casual"),
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED("ZZREDACTED");
+    CASUAL("Casual");
     private final String value;
 
     AUCodeSetsTeacherCoverCreditType(String v) {

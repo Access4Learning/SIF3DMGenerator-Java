@@ -15,8 +15,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="C"/>
  *     &lt;enumeration value="I"/>
+ *     &lt;enumeration value="IU"/>
+ *     &lt;enumeration value="IN"/>
+ *     &lt;enumeration value="IM"/>
+ *     &lt;enumeration value="IO"/>
  *     &lt;enumeration value="N"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -26,30 +29,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsImmunisationCertificateStatusType {
 
-
-    /**
-     * Complete
-     * 
-     */
     C,
-
-    /**
-     * Incomplete
-     * 
-     */
     I,
-
-    /**
-     * Not Sighted
-     * 
-     */
-    N,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    IU,
+    IN,
+    IM,
+    IO,
+    N;
 
     public String value() {
         return name();

@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * The classification of the education agency within the geographic boundaries of a state according to the level of administrative and operational control.
- * 
  * <p>Java class for AgencyType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

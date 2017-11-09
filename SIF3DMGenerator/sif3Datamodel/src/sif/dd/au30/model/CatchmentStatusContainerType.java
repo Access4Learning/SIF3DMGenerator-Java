@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Container element for location of an individual's legal residence relative to (within or outside) the boundaries of the school for this enrolment. Enrolment Catchment Status.
- * 
  * <p>Java class for CatchmentStatusContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

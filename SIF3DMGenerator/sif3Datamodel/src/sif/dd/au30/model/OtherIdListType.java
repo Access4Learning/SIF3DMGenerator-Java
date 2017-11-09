@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Lists all "other" identifiers associated with the entity.
- * 
  * <p>Java class for OtherIdListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

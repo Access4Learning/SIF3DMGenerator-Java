@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.
- * 
  * <p>Java class for PhoneNumberType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

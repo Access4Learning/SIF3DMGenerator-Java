@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Teacher associated with the Teaching group –  may or may not be the teacher timetabled in the schedule
- * 
  * <p>Java class for TeachingGroupTeacherType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

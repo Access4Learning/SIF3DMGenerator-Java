@@ -15,9 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object contains basic vendor information (commonly known as creditors).
- * 
  * <p>Java class for VendorInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

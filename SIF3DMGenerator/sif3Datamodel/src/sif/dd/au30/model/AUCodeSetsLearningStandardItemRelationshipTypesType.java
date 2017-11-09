@@ -17,7 +17,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Content"/>
  *     &lt;enumeration value="PD"/>
  *     &lt;enumeration value="State"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -27,32 +26,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsLearningStandardItemRelationshipTypesType {
 
-
-    /**
-     * A link to another state or school content standard.
-     * 
-     */
     @XmlEnumValue("Content")
     CONTENT("Content"),
-
-    /**
-     * Personal Development
-     * 
-     */
     PD("PD"),
-
-    /**
-     * A link to a standard from another state. The purpose of this is to express relationships between state standards.
-     * 
-     */
     @XmlEnumValue("State")
-    STATE("State"),
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED("ZZREDACTED");
+    STATE("State");
     private final String value;
 
     AUCodeSetsLearningStandardItemRelationshipTypesType(String v) {

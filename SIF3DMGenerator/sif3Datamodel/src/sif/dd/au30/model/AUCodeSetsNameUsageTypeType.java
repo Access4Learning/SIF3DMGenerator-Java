@@ -23,7 +23,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="PRV"/>
  *     &lt;enumeration value="STG"/>
  *     &lt;enumeration value="TRB"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -33,72 +32,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNameUsageTypeType {
 
-
-    /**
-     * Also known as or alias
-     * 
-     */
     AKA,
-
-    /**
-     * Name at Birth
-     * 
-     */
     BTH,
-
-    /**
-     * Legal Name of the client as defined by the organisation which collects it (legal not defined in this standard)
-     * 
-     */
     LGL,
-
-    /**
-     * Maiden Name
-     * 
-     */
     MDN,
-
-    /**
-     * New born identification name
-     * 
-     */
     NEW,
-
-    /**
-     * Non specific name usage type
-     * 
-     */
     OTH,
-
-    /**
-     * Preferred name
-     * 
-     */
     PRF,
-
-    /**
-     * Previous name
-     * 
-     */
     PRV,
-
-    /**
-     * Stage name
-     * 
-     */
     STG,
-
-    /**
-     * Tribal Name
-     * 
-     */
-    TRB,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    TRB;
 
     public String value() {
         return name();

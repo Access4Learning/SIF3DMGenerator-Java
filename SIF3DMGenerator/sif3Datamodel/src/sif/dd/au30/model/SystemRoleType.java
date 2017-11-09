@@ -18,10 +18,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *           The SystemRole Object defines the systems that a user has access to, the roles they perform within those systems, and the scope of those roles within the particular system.
- *         
- * 
  * <p>Java class for SystemRoleType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -283,8 +279,6 @@ public class SystemRoleType {
 
 
     /**
-     * The SIF RefId that provides the source Object for this SystemRole Object.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -324,7 +318,7 @@ public class SystemRoleType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is
@@ -1049,8 +1043,6 @@ public class SystemRoleType {
 
 
                             /**
-                             * The  SIF_RefId that provides  the source Object for this RoleScope.
-                             * 
                              * <p>Java class for anonymous complex type.
                              * 
                              * <p>The following schema fragment specifies the expected content contained within this class.
@@ -1089,7 +1081,7 @@ public class SystemRoleType {
                                 protected String sifRefObject;
 
                                 /**
-                                 * A reference to a RefId.
+                                 * Gets the value of the value property.
                                  * 
                                  * @return
                                  *     possible object is

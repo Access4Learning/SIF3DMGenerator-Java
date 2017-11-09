@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object is used to adjust balances between accounts. It is typically used to correct chart of account coding errors (e.g. created invoices for parents against the maths chart of account code when it should have been English).
- * 
  * <p>Java class for JournalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -452,8 +450,6 @@ public class JournalType {
 
 
     /**
-     * RefId of the originating transaction which requires adjustment. This could be an Invoice, PaymentReceipt or PurchaseOrder.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -492,7 +488,7 @@ public class JournalType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

@@ -17,11 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object defines information related to a student's enrollment.  StudentSchoolEnrollment
- *         instances must not span multiple school years.
- *       
- * 
  * <p>Java class for StudentSchoolEnrollmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -136,6 +131,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="PreviousSchool" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="DestinationSchool" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StudentSubjectChoiceList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentSubjectChoiceListType" minOccurs="0"/>
+ *         &lt;element name="StartedAtSchoolDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -181,6 +177,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "previousSchool",
     "destinationSchool",
     "studentSubjectChoiceList",
+    "startedAtSchoolDate",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -254,6 +251,8 @@ public class StudentSchoolEnrollmentType {
     protected JAXBElement<String> destinationSchool;
     @XmlElementRef(name = "StudentSubjectChoiceList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StudentSubjectChoiceListType> studentSubjectChoiceList;
+    @XmlElementRef(name = "StartedAtSchoolDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> startedAtSchoolDate;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -1031,6 +1030,30 @@ public class StudentSchoolEnrollmentType {
     }
 
     /**
+     * Gets the value of the startedAtSchoolDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getStartedAtSchoolDate() {
+        return startedAtSchoolDate;
+    }
+
+    /**
+     * Sets the value of the startedAtSchoolDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setStartedAtSchoolDate(JAXBElement<XMLGregorianCalendar> value) {
+        this.startedAtSchoolDate = value;
+    }
+
+    /**
      * Gets the value of the sifMetadata property.
      * 
      * @return
@@ -1104,8 +1127,6 @@ public class StudentSchoolEnrollmentType {
 
 
     /**
-     * Staff member assigned as an advisor.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -1142,7 +1163,7 @@ public class StudentSchoolEnrollmentType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is
@@ -1193,8 +1214,6 @@ public class StudentSchoolEnrollmentType {
 
 
     /**
-     * The calendar assigned to this enrollment. 
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -1231,7 +1250,7 @@ public class StudentSchoolEnrollmentType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is
@@ -1282,8 +1301,6 @@ public class StudentSchoolEnrollmentType {
 
 
     /**
-     * Staff member assigned as an advisor.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -1320,7 +1337,7 @@ public class StudentSchoolEnrollmentType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is
@@ -1371,8 +1388,6 @@ public class StudentSchoolEnrollmentType {
 
 
     /**
-     * Homeroom for this enrollment.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -1409,7 +1424,7 @@ public class StudentSchoolEnrollmentType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

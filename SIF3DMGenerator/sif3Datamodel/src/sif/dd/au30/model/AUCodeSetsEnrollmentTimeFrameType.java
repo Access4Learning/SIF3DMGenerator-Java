@@ -16,7 +16,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="C"/>
  *     &lt;enumeration value="F"/>
  *     &lt;enumeration value="H"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -26,30 +25,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsEnrollmentTimeFrameType {
 
-
-    /**
-     * Current
-     * 
-     */
     C,
-
-    /**
-     * Future
-     * 
-     */
     F,
-
-    /**
-     * Historical
-     * 
-     */
-    H,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    H;
 
     public String value() {
         return name();

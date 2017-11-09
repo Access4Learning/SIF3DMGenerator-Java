@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object defines information related to a school calendar day in a given school calendar year. If both CalendarDate and CalendarSummary objects are supported, there must be an instance of this object for each date between CalendarSummary StartDate and EndDate, inclusive.
- * 
  * <p>Java class for CalendarDateType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,7 +25,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="CalendarSummaryRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="CalendarSummaryRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
  *         &lt;element name="CalendarDateType" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarDateInfoType"/>
@@ -65,9 +63,8 @@ public class CalendarDate {
     @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
-    @XmlElement(name = "CalendarSummaryRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String calendarSummaryRefId;
+    @XmlElementRef(name = "CalendarSummaryRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> calendarSummaryRefId;
     @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
@@ -120,10 +117,10 @@ public class CalendarDate {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getCalendarSummaryRefId() {
+    public JAXBElement<String> getCalendarSummaryRefId() {
         return calendarSummaryRefId;
     }
 
@@ -132,10 +129,10 @@ public class CalendarDate {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setCalendarSummaryRefId(String value) {
+    public void setCalendarSummaryRefId(JAXBElement<String> value) {
         this.calendarSummaryRefId = value;
     }
 

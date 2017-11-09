@@ -9,12 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Contains Yes/No characteristics of the contact person's role.  Provide a Yes value for all that apply.
- *         At least one of the child elements of ContactFlags must have a Yes value.
- *         Do not publish the StudentContactRelationship instance if one of the child elements does not have a Yes value.
- *       
- * 
  * <p>Java class for ContactFlagsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -35,6 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="AttendanceContact" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="PrimaryCareProvider" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="FeesBilling" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="FeesAccess" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="FamilyMail" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="InterventionOrder" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -58,6 +53,7 @@ import javax.xml.bind.annotation.XmlType;
     "attendanceContact",
     "primaryCareProvider",
     "feesBilling",
+    "feesAccess",
     "familyMail",
     "interventionOrder"
 })
@@ -85,6 +81,8 @@ public class ContactFlagsType {
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> primaryCareProvider;
     @XmlElementRef(name = "FeesBilling", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> feesBilling;
+    @XmlElementRef(name = "FeesAccess", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> feesAccess;
     @XmlElementRef(name = "FamilyMail", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> familyMail;
     @XmlElementRef(name = "InterventionOrder", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -352,6 +350,30 @@ public class ContactFlagsType {
      */
     public void setFeesBilling(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.feesBilling = value;
+    }
+
+    /**
+     * Gets the value of the feesAccess property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getFeesAccess() {
+        return feesAccess;
+    }
+
+    /**
+     * Sets the value of the feesAccess property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setFeesAccess(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.feesAccess = value;
     }
 
     /**

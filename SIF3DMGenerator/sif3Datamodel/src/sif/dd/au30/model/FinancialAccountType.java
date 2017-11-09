@@ -16,10 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object communicates information about a financial account.
- *       
- * 
  * <p>Java class for FinancialAccountType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

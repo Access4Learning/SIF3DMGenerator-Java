@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Listing of line items from original purchase order. Included to indicate any variation between the items, item cost, or item quantity ordered, and what has been delivered.
- * 
  * <p>Java class for PurchasingItemsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

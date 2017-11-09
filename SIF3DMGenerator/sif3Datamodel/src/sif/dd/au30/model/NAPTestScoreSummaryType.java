@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object represents a the summary of aggregate scores in a NAP test for a school.
- * 
  * <p>Java class for NAPTestScoreSummaryType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

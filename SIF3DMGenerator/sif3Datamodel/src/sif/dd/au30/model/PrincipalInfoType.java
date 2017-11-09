@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Information about the campus or school principal.
- * 
  * <p>Java class for PrincipalInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

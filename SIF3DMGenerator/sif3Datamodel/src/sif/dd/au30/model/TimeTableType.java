@@ -16,10 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         The purpose of this object is to define a schedule or Time Table structure/skeleton for the school.  The Time Table is produced by the Time Tabling software.  Once the Time Table is produced, the time tabling software creates the schedule based on business rules and constraints to fit into the time table structure.
- *       
- * 
  * <p>Java class for TimeTableType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

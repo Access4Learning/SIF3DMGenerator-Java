@@ -17,8 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains information pertaining to student eligibility for and participation in an individualized special program such as special education, ESL, etc.
- * 
  * <p>Java class for StudentParticipationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -880,8 +878,6 @@ public class StudentParticipationType {
 
 
     /**
-     * The GUID of the school responsible for coordinating the student's program participation.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -918,7 +914,7 @@ public class StudentParticipationType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

@@ -10,10 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Base type, without attributes, for Name elements, primarily to allow structure to be leveraged with different Type attribute values.
- *       
- * 
  * <p>Java class for BaseNameType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Gross amount to be billed, including any tax. Can be credit (e.g. for family credit notes, reimbursements, rebates).
- * 
  * <p>Java class for DebitOrCreditAmountType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

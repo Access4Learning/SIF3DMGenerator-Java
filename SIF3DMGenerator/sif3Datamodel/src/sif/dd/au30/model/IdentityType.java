@@ -14,10 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object allows a system that stores network identities and/or passwords to share them with other applications through SIF. The provider of the Identity object may only support providing an identity or a password, or it may support both.
- *       
- * 
  * <p>Java class for IdentityType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -295,10 +291,6 @@ public class IdentityType {
 
 
     /**
-     * 
-     *         The SIF RefId of a StudentPersonal, StaffPersonal, or StudentContactPersonal object.
-     *       
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -337,7 +329,7 @@ public class IdentityType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

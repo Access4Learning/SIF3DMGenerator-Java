@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides a summary of a school's calendar information for a given school year.  A school may have more than one calendar per school year (e.g., one calendar for Kindergarten students, one for special education students, one for seniors, or one for each calendar track), and each may have different days in session, start and end dates, minutes per day, instructional minutes, etc.
- * 
  * <p>Java class for CalendarSummaryType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

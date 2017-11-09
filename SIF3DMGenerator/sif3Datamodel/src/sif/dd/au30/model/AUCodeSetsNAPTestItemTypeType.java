@@ -14,8 +14,8 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;simpleType name="AUCodeSetsNAPTestItemTypeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
- *     &lt;enumeration value="CO"/>
  *     &lt;enumeration value="ET"/>
+ *     &lt;enumeration value="CO"/>
  *     &lt;enumeration value="HS"/>
  *     &lt;enumeration value="HT"/>
  *     &lt;enumeration value="IA"/>
@@ -42,119 +42,24 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPTestItemTypeType {
 
-
-    /**
-     * Composite
-     * 
-     */
-    CO("CO"),
-
-    /**
-     * Extended text
-     * 
-     */
     ET("ET"),
-
-    /**
-     * Hot spot
-     * 
-     */
+    CO("CO"),
     HS("HS"),
-
-    /**
-     * Hot text
-     * 
-     */
     HT("HT"),
-
-    /**
-     * Interactive associate
-     * 
-     */
     IA("IA"),
-
-    /**
-     * Inline choice
-     * 
-     */
     IC("IC"),
-
-    /**
-     * Interactive graphic associate
-     * 
-     */
     IGA("IGA"),
-
-    /**
-     * Interactive graphic gap match
-     * 
-     */
     IGGM("IGGM"),
-
-    /**
-     * Interactive gap match
-     * 
-     */
     IGM("IGM"),
-
-    /**
-     * Interactive graphic order
-     * 
-     */
     IGO("IGO"),
-
-    /**
-     * Interactive match
-     * 
-     */
     IM("IM"),
-
-    /**
-     * Order interaction
-     * 
-     */
     IO("IO"),
-
-    /**
-     * Multiple choice
-     * 
-     */
     MC("MC"),
-
-    /**
-     * Multiple choices
-     * 
-     */
     MCS("MCS"),
-
-    /**
-     * Position object
-     * 
-     */
     PO("PO"),
-
-    /**
-     * Slider
-     * 
-     */
     SL("SL"),
-
-    /**
-     * Select point
-     * 
-     */
     SP("SP"),
-
-    /**
-     * Text entry
-     * 
-     */
     TE("TE"),
-
-    /**
-     * Unknown
-     * 
-     */
     @XmlEnumValue("Unknown")
     UNKNOWN("Unknown");
     private final String value;

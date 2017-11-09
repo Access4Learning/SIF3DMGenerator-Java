@@ -17,8 +17,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * A common metadata element designed to contain time data, both self-defined and by type.
- * 
  * <p>Java class for TimeElementType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of Students in this Teaching Group
- * 
  * <p>Java class for StudentListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

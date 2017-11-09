@@ -14,8 +14,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Substructure to allow representing instances where teachers only take subsets of an event. Most typically, this occurs with exam supervision, where each teacher gets a 1-period duty. It also happens with schools with e.g. 4 long periods per day: a period of 1hr20mins can be split into 2 halves of 40 minutes each.
- * 
  * <p>Java class for TeacherCoverType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object represents an assessment assigned in the context of NAP, targeted at a particular domain and year level.
- * 
  * <p>Java class for NAPTestType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -16,10 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object provides the link between Period Attendance and the school's timetable.  It allows subject and teaching group information to be communicated to/from the attendance system.
- *       
- * 
  * <p>Java class for SessionInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

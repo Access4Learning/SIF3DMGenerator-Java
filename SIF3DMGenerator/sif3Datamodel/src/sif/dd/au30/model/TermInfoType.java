@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides information about a term; i.e., a reportable period of time.
- * 
  * <p>Java class for TermInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

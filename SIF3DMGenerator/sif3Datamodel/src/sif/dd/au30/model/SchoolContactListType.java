@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of contact persons associated with a school.
- * 
  * <p>Java class for SchoolContactListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

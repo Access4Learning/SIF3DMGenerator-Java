@@ -18,8 +18,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains information about the school or campus.
- * 
  * <p>Java class for SchoolInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -83,6 +81,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Entity_Open" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Entity_Close" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="SchoolGroupList" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolGroupListType" minOccurs="0"/>
+ *         &lt;element name="SchoolTimeZone" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianTimeZoneType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -136,6 +135,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "entityOpen",
     "entityClose",
     "schoolGroupList",
+    "schoolTimeZone",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -223,6 +223,8 @@ public class SchoolInfoType {
     protected JAXBElement<XMLGregorianCalendar> entityClose;
     @XmlElementRef(name = "SchoolGroupList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SchoolGroupListType> schoolGroupList;
+    @XmlElementRef(name = "SchoolTimeZone", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsAustralianTimeZoneType> schoolTimeZone;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -1192,6 +1194,30 @@ public class SchoolInfoType {
     }
 
     /**
+     * Gets the value of the schoolTimeZone property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsAustralianTimeZoneType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsAustralianTimeZoneType> getSchoolTimeZone() {
+        return schoolTimeZone;
+    }
+
+    /**
+     * Sets the value of the schoolTimeZone property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsAustralianTimeZoneType }{@code >}
+     *     
+     */
+    public void setSchoolTimeZone(JAXBElement<AUCodeSetsAustralianTimeZoneType> value) {
+        this.schoolTimeZone = value;
+    }
+
+    /**
      * Gets the value of the sifMetadata property.
      * 
      * @return
@@ -1265,8 +1291,6 @@ public class SchoolInfoType {
 
 
     /**
-     * The ID (GUID) of another related education agency, such as a regional service agency.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -1303,7 +1327,7 @@ public class SchoolInfoType {
         protected String sifRefObject;
 
         /**
-         * An object or element identifier.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

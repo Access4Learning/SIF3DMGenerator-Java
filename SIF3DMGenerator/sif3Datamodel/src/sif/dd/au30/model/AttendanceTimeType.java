@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Time span that the student entered or returned to school
- * 
  * <p>Java class for AttendanceTimeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,6 +24,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="AttendanceType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="AttendanceCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceCodeType"/>
  *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAttendanceStatusType"/>
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
@@ -37,6 +36,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
+ *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="AttendanceNote" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -48,15 +48,19 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AttendanceTimeType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "attendanceType",
     "attendanceCode",
     "attendanceStatus",
     "startTime",
     "endTime",
     "durationValue",
+    "timeTableSubjectRefId",
     "attendanceNote"
 })
 public class AttendanceTimeType {
 
+    @XmlElementRef(name = "AttendanceType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> attendanceType;
     @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AttendanceCodeType attendanceCode;
     @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
@@ -70,8 +74,34 @@ public class AttendanceTimeType {
     protected XMLGregorianCalendar endTime;
     @XmlElementRef(name = "DurationValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> durationValue;
+    @XmlElementRef(name = "TimeTableSubjectRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> timeTableSubjectRefId;
     @XmlElementRef(name = "AttendanceNote", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> attendanceNote;
+
+    /**
+     * Gets the value of the attendanceType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getAttendanceType() {
+        return attendanceType;
+    }
+
+    /**
+     * Sets the value of the attendanceType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setAttendanceType(JAXBElement<String> value) {
+        this.attendanceType = value;
+    }
 
     /**
      * Gets the value of the attendanceCode property.
@@ -191,6 +221,30 @@ public class AttendanceTimeType {
      */
     public void setDurationValue(JAXBElement<BigDecimal> value) {
         this.durationValue = value;
+    }
+
+    /**
+     * Gets the value of the timeTableSubjectRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getTimeTableSubjectRefId() {
+        return timeTableSubjectRefId;
+    }
+
+    /**
+     * Sets the value of the timeTableSubjectRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setTimeTableSubjectRefId(JAXBElement<String> value) {
+        this.timeTableSubjectRefId = value;
     }
 
     /**

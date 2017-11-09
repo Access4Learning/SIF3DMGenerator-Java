@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains information about the person's picture.
- * 
  * <p>Java class for PersonPictureType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -262,8 +260,6 @@ public class PersonPictureType {
 
 
     /**
-     * The GUID of the personal object to which this picture is linked
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -302,7 +298,7 @@ public class PersonPictureType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is
@@ -353,10 +349,6 @@ public class PersonPictureType {
 
 
     /**
-     * 
-     *         This element defines the picture. If the Type attribute is URL, this is the location of the picture in [JPEG] format; if Type is JPEG, this is the [JPEG] image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of [RFC 2045].
-     *       
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -386,7 +378,7 @@ public class PersonPictureType {
         protected String type;
 
         /**
-         * Allows for a URL or a Base-64 encoding.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

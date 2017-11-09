@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of funding sources
- * 
  * <p>Java class for ProgramFundingSourcesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -15,10 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object provides a broader range of scheduled activities than just normal teaching classes (as covered by SessionInfo).
- *       
- * 
  * <p>Java class for ScheduledActivityType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

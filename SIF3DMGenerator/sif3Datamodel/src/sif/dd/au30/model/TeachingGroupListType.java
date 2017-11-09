@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Teaching groups which are scheduled to attend the event. Not required for cyclical events, as this would be expected to be provided from TimeTableCell/TeachingGroup instead.
- * 
  * <p>Java class for TeachingGroupListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

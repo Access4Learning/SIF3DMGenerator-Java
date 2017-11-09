@@ -16,7 +16,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="C"/>
  *     &lt;enumeration value="F"/>
  *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -26,30 +25,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSchoolCoEdStatusType {
 
-
-    /**
-     * Co-Educational
-     * 
-     */
     C,
-
-    /**
-     * Female
-     * 
-     */
     F,
-
-    /**
-     * Male
-     * 
-     */
-    M,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    M;
 
     public String value() {
         return name();

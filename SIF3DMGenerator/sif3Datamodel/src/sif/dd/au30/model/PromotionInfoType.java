@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Information on a student's promotion, retention, or demotion related to this enrollment instance.
- * 
  * <p>Java class for PromotionInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

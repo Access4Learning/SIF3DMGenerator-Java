@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Language in which the section is taught.
- * 
  * <p>Java class for LanguageOfInstructionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -8,8 +8,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Year Span.
- * 
  * <p>Java class for YearRangeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

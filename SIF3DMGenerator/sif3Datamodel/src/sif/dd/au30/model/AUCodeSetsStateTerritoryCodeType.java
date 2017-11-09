@@ -23,7 +23,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="WA"/>
  *     &lt;enumeration value="XXX"/>
  *     &lt;enumeration value="OTH"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -33,72 +32,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsStateTerritoryCodeType {
 
-
-    /**
-     * Australian Capital Territory
-     * 
-     */
     ACT,
-
-    /**
-     * New South Wales
-     * 
-     */
     NSW,
-
-    /**
-     * Northern Territory
-     * 
-     */
     NT,
-
-    /**
-     * Queensland
-     * 
-     */
     QLD,
-
-    /**
-     * South Australia
-     * 
-     */
     SA,
-
-    /**
-     * Tasmania
-     * 
-     */
     TAS,
-
-    /**
-     * Victoria
-     * 
-     */
     VIC,
-
-    /**
-     * Western Australia
-     * 
-     */
     WA,
-
-    /**
-     * Not Provided
-     * 
-     */
     XXX,
-
-    /**
-     * Other Territories
-     * 
-     */
-    OTH,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    OTH;
 
     public String value() {
         return name();

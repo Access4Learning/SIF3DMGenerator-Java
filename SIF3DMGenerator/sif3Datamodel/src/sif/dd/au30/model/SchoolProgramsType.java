@@ -14,10 +14,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *       This object contains information about Programs offered by a school.
- *     
- * 
  * <p>Java class for SchoolProgramsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

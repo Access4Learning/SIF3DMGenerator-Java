@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Description of the location in which the section is taught.
- * 
  * <p>Java class for LocationOfInstructionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -17,7 +17,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="U"/>
  *     &lt;enumeration value="X"/>
  *     &lt;enumeration value="Y"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -27,36 +26,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsYesOrNoCategoryType {
 
-
-    /**
-     * No
-     * 
-     */
     N,
-
-    /**
-     * Unknown
-     * 
-     */
     U,
-
-    /**
-     * Not Provided
-     * 
-     */
     X,
-
-    /**
-     * Yes
-     * 
-     */
-    Y,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    Y;
 
     public String value() {
         return name();

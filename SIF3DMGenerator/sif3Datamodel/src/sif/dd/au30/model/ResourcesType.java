@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * A GUID reference to a SIF LearningResource object that supports this activity
- * 
  * <p>Java class for ResourcesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -52,7 +50,7 @@ public class ResourcesType {
     protected String resourceType;
 
     /**
-     * A reference to a RefId.
+     * Gets the value of the value property.
      * 
      * @return
      *     possible object is

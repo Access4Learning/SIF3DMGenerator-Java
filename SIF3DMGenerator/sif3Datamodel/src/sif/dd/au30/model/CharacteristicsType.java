@@ -12,10 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Reference to one or more AggregateCharacteristicInfo objects.
- *       
- * 
  * <p>Java class for CharacteristicsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

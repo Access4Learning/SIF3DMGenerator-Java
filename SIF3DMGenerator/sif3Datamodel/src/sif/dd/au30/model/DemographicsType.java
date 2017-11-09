@@ -10,10 +10,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Demographics information about the student, contact, staff member, etc. 
- *       
- * 
  * <p>Java class for DemographicsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -50,6 +46,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ImmunisationCertificateStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsImmunisationCertificateStatusType" minOccurs="0"/>
  *         &lt;element name="CulturalBackground" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType" minOccurs="0"/>
  *         &lt;element name="MaritalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsMaritalStatusAIHWType" minOccurs="0"/>
+ *         &lt;element name="MedicareNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -86,7 +83,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "lbote",
     "immunisationCertificateStatus",
     "culturalBackground",
-    "maritalStatus"
+    "maritalStatus",
+    "medicareNumber"
 })
 public class DemographicsType {
 
@@ -144,6 +142,8 @@ public class DemographicsType {
     protected JAXBElement<String> culturalBackground;
     @XmlElementRef(name = "MaritalStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> maritalStatus;
+    @XmlElementRef(name = "MedicareNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> medicareNumber;
 
     /**
      * Gets the value of the indigenousStatus property.
@@ -791,6 +791,30 @@ public class DemographicsType {
      */
     public void setMaritalStatus(JAXBElement<String> value) {
         this.maritalStatus = value;
+    }
+
+    /**
+     * Gets the value of the medicareNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getMedicareNumber() {
+        return medicareNumber;
+    }
+
+    /**
+     * Sets the value of the medicareNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setMedicareNumber(JAXBElement<String> value) {
+        this.medicareNumber = value;
     }
 
 }

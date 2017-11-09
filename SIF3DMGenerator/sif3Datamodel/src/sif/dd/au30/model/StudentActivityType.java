@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Information regarding the co-curricular or extra-curricular activity. 
- * 
  * <p>Java class for StudentActivityType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

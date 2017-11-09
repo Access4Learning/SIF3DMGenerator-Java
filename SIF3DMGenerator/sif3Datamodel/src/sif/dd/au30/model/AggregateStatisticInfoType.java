@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object defines the data that is being aggregated as well as the type of measurement that is being performed.
- * 
  * <p>Java class for AggregateStatisticInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

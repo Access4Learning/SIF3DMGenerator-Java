@@ -18,9 +18,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object contains an amount to be invoiced to an outside entity (typically a creditor or debtor). This object can include school fees. The object is also used for payments to an outside entity (using debit amounts), where those payments are not for goods and services (PurchaseOrder object): e.g. credit notes, reimbursements, rebates.     
- * 
  * <p>Java class for InvoiceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -717,8 +714,6 @@ public class InvoiceType {
 
 
     /**
-     * Id of the entity being billed for this billing activity.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -756,7 +751,7 @@ public class InvoiceType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

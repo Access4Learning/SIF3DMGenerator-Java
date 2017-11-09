@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of subject areas.
- * 
  * <p>Java class for ACStrandAreaListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

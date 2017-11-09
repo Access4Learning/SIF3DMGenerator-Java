@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * List containing the education focus codes of the campus/school.
- * 
  * <p>Java class for SchoolFocusListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

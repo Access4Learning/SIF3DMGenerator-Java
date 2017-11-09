@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Co-curricular or extra-curricular activities (e.g., student organizations, inter-school sports, athletics, publications, band, orchestra, and service activities) in which students may participate.
- * 
  * <p>Java class for StudentActivityInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

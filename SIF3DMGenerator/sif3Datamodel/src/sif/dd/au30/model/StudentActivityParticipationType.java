@@ -14,10 +14,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *       This object provides information on a co-curricular or extra-curricular activity in which a student participates during a given school year.
- *     
- * 
  * <p>Java class for StudentActivityParticipationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

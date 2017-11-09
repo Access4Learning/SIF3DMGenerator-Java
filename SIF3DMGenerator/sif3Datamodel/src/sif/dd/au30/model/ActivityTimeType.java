@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Time structures for the activity.
- * 
  * <p>Java class for ActivityTimeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

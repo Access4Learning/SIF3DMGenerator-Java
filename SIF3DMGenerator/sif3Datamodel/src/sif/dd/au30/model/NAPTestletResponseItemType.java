@@ -9,14 +9,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
 
 
 /**
- * Scores received by the student for teach item in the testlet
- * 
  * <p>Java class for NAPTestletResponseItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,12 +24,12 @@ import javax.xml.datatype.Duration;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="Response" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="ResponseCorrectness" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPResponseCorrectnessType" minOccurs="0"/>
+ *         &lt;element name="NAPTestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="Response" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ResponseCorrectness" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPResponseCorrectnessType"/>
  *         &lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="LapsedTimeItem" type="{http://www.w3.org/2001/XMLSchema}duration"/>
+ *         &lt;element name="LapsedTimeItem" type="{http://www.w3.org/2001/XMLSchema}duration" minOccurs="0"/>
  *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer"/>
  *         &lt;element name="ItemWeight" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="SubscoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPSubscoreListType" minOccurs="0"/>
@@ -57,19 +55,19 @@ import javax.xml.datatype.Duration;
 })
 public class NAPTestletResponseItemType {
 
-    @XmlElement(name = "NAPTestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String napTestItemRefId;
-    @XmlElementRef(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> napTestItemLocalId;
-    @XmlElement(name = "Response", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected String response;
-    @XmlElementRef(name = "ResponseCorrectness", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<AUCodeSetsNAPResponseCorrectnessType> responseCorrectness;
+    @XmlElementRef(name = "NAPTestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> napTestItemRefId;
+    @XmlElement(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String napTestItemLocalId;
+    @XmlElementRef(name = "Response", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> response;
+    @XmlElement(name = "ResponseCorrectness", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    protected AUCodeSetsNAPResponseCorrectnessType responseCorrectness;
     @XmlElementRef(name = "Score", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> score;
-    @XmlElement(name = "LapsedTimeItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected Duration lapsedTimeItem;
+    @XmlElementRef(name = "LapsedTimeItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Duration> lapsedTimeItem;
     @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigInteger sequenceNumber;
     @XmlElement(name = "ItemWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
@@ -82,10 +80,10 @@ public class NAPTestletResponseItemType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getNAPTestItemRefId() {
+    public JAXBElement<String> getNAPTestItemRefId() {
         return napTestItemRefId;
     }
 
@@ -94,10 +92,10 @@ public class NAPTestletResponseItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setNAPTestItemRefId(String value) {
+    public void setNAPTestItemRefId(JAXBElement<String> value) {
         this.napTestItemRefId = value;
     }
 
@@ -106,10 +104,10 @@ public class NAPTestletResponseItemType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getNAPTestItemLocalId() {
+    public String getNAPTestItemLocalId() {
         return napTestItemLocalId;
     }
 
@@ -118,10 +116,10 @@ public class NAPTestletResponseItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setNAPTestItemLocalId(JAXBElement<String> value) {
+    public void setNAPTestItemLocalId(String value) {
         this.napTestItemLocalId = value;
     }
 
@@ -130,10 +128,10 @@ public class NAPTestletResponseItemType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getResponse() {
+    public JAXBElement<String> getResponse() {
         return response;
     }
 
@@ -142,10 +140,10 @@ public class NAPTestletResponseItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setResponse(String value) {
+    public void setResponse(JAXBElement<String> value) {
         this.response = value;
     }
 
@@ -154,10 +152,10 @@ public class NAPTestletResponseItemType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link AUCodeSetsNAPResponseCorrectnessType }{@code >}
+     *     {@link AUCodeSetsNAPResponseCorrectnessType }
      *     
      */
-    public JAXBElement<AUCodeSetsNAPResponseCorrectnessType> getResponseCorrectness() {
+    public AUCodeSetsNAPResponseCorrectnessType getResponseCorrectness() {
         return responseCorrectness;
     }
 
@@ -166,10 +164,10 @@ public class NAPTestletResponseItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link AUCodeSetsNAPResponseCorrectnessType }{@code >}
+     *     {@link AUCodeSetsNAPResponseCorrectnessType }
      *     
      */
-    public void setResponseCorrectness(JAXBElement<AUCodeSetsNAPResponseCorrectnessType> value) {
+    public void setResponseCorrectness(AUCodeSetsNAPResponseCorrectnessType value) {
         this.responseCorrectness = value;
     }
 
@@ -202,10 +200,10 @@ public class NAPTestletResponseItemType {
      * 
      * @return
      *     possible object is
-     *     {@link Duration }
+     *     {@link JAXBElement }{@code <}{@link Duration }{@code >}
      *     
      */
-    public Duration getLapsedTimeItem() {
+    public JAXBElement<Duration> getLapsedTimeItem() {
         return lapsedTimeItem;
     }
 
@@ -214,10 +212,10 @@ public class NAPTestletResponseItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link Duration }
+     *     {@link JAXBElement }{@code <}{@link Duration }{@code >}
      *     
      */
-    public void setLapsedTimeItem(Duration value) {
+    public void setLapsedTimeItem(JAXBElement<Duration> value) {
         this.lapsedTimeItem = value;
     }
 

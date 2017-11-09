@@ -14,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * References from component to associated elements within another SIF object.
- * 
  * <p>Java class for AssociatedObjectsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -82,8 +80,6 @@ public class AssociatedObjectsType {
 
 
     /**
-     * Reference from component to associated elements within another SIF object.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -114,7 +110,7 @@ public class AssociatedObjectsType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

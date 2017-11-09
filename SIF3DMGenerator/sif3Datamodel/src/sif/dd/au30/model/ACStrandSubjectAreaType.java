@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Subject matter of a student's study as codified under the Australian Curriculum.
- * 
  * <p>Java class for ACStrandSubjectAreaType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

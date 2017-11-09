@@ -30,53 +30,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPParticipationCodeType {
 
-
-    /**
-     * Present
-     * 
-     */
     P,
-
-    /**
-     * Absent
-     * 
-     */
     A,
-
-    /**
-     * Cancelled
-     * 
-     */
     C,
-
-    /**
-     * Exempt
-     * 
-     */
     E,
-
-    /**
-     * Withdrawn
-     * 
-     */
     W,
-
-    /**
-     * Sanctioned Abandonment
-     * 
-     */
     S,
-
-    /**
-     * Refused
-     * 
-     */
     R,
-
-    /**
-     * No Longer Enrolled
-     * 
-     */
     X;
 
     public String value() {

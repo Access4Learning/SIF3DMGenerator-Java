@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Container for TimeTableDays in Schedule
- * 
  * <p>Java class for TimeTableDayListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

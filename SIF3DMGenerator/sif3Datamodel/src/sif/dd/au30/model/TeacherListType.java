@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A List of teachers associated with the group –  may or may not include the teacher timetabled in the schedule.
- * 
  * <p>Java class for TeacherListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

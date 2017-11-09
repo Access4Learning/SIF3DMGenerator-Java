@@ -16,7 +16,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="Gov"/>
  *     &lt;enumeration value="NG"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -26,25 +25,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSchoolSectorCodeType {
 
-
-    /**
-     * Government School
-     * 
-     */
     @XmlEnumValue("Gov")
     GOV("Gov"),
-
-    /**
-     * Non-Government School
-     * 
-     */
-    NG("NG"),
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED("ZZREDACTED");
+    NG("NG");
     private final String value;
 
     AUCodeSetsSchoolSectorCodeType(String v) {

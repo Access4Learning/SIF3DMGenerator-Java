@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object contains information about a school district, region, or other Local, State or Jurisdiction Educational Authority.
- * 
  * <p>Java class for LEAInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

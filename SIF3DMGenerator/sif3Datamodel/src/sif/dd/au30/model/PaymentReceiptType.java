@@ -17,9 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object complements the Invoice object, and contains information about the payment of a Invoice object.
- * 
  * <p>Java class for PaymentReceiptType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

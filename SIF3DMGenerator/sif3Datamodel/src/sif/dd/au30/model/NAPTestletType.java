@@ -14,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object represents a student’s attempt to undergo NAP assessment in a particular test.
- * 
  * <p>Java class for NAPTestletType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

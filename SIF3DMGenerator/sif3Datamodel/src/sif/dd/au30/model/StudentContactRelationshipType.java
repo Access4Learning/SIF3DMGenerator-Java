@@ -13,10 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *       This object defines a relationship between a contact person and a student.
- *     
- * 
  * <p>Java class for StudentContactRelationshipType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -43,6 +39,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="MainlySpeaksEnglishAtHome" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ContactSequence" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="ContactSequenceSource" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSourceCodeTypeType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -65,6 +62,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "mainlySpeaksEnglishAtHome",
     "contactSequence",
     "contactSequenceSource",
+    "schoolInfoRefId",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -90,6 +88,8 @@ public class StudentContactRelationshipType {
     protected JAXBElement<Long> contactSequence;
     @XmlElementRef(name = "ContactSequenceSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsSourceCodeTypeType> contactSequenceSource;
+    @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> schoolInfoRefId;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -312,6 +312,30 @@ public class StudentContactRelationshipType {
      */
     public void setContactSequenceSource(JAXBElement<AUCodeSetsSourceCodeTypeType> value) {
         this.contactSequenceSource = value;
+    }
+
+    /**
+     * Gets the value of the schoolInfoRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getSchoolInfoRefId() {
+        return schoolInfoRefId;
+    }
+
+    /**
+     * Sets the value of the schoolInfoRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setSchoolInfoRefId(JAXBElement<String> value) {
+        this.schoolInfoRefId = value;
     }
 
     /**

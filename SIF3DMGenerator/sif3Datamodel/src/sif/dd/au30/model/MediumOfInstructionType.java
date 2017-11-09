@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Medium through which the student receives instructional communication from the teacher.
- * 
  * <p>Java class for MediumOfInstructionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

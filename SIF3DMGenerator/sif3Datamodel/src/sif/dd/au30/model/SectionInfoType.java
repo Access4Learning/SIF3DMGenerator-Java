@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object provides information about the section, the specific time period a session of the course meets. Australian Implementations have been using TeachingGroup as a representation of a class;
- * 
  * <p>Java class for SectionInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

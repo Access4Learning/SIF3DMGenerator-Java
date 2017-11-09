@@ -17,9 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object provides information down to the line item level for purchase orders.
- * 
  * <p>Java class for PurchaseOrderType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

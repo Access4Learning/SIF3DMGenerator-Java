@@ -15,11 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object defines information related to a staff member's assignment(s); commonly, this will be a school
- *         assignment.
- *       
- * 
  * <p>Java class for StaffAssignmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

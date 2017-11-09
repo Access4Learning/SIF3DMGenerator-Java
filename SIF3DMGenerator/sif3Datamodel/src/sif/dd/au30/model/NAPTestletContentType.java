@@ -15,8 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Contents of a Teslet in the context of NAP.
- * 
  * <p>Java class for NAPTestletContentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -14,10 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object contains all the personal information relating to a staff member, who might be a teacher or other employee of the school or district.
- *       
- * 
  * <p>Java class for StaffPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

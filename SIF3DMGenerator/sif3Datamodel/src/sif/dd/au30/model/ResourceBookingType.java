@@ -17,10 +17,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *           This object represents a booking for any resource for a single contiguous time period. This could be either a room or another resource, such as equipment.
- *       
- * 
  * <p>Java class for ResourceBookingType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -432,8 +428,6 @@ public class ResourceBookingType {
 
 
     /**
-     * The ID (GUID) of the resource being booked. Provided only if the resource being booked is a SIF object with a GUID.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -472,7 +466,7 @@ public class ResourceBookingType {
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of electronic identifiers associated with an entity.
- * 
  * <p>Java class for ElectronicIdListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

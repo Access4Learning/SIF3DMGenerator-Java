@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object represents the description of a test item as context for response; may be exemplar item instead of the actual item.
- * 
  * <p>Java class for NAPTestItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -15,10 +15,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This object provides score information about a particular assignment. 
- *       
- * 
  * <p>Java class for GradingAssignmentScoreType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

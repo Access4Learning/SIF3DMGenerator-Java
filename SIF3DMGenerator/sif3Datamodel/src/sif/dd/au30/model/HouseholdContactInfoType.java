@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Common element used to supply information about a particular household a person is a member of.
- * 
  * <p>Java class for HouseholdContactInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

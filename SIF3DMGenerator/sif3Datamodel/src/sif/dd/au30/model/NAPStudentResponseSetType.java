@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
@@ -15,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Capture of student’s responses to a NAP test.
- * 
  * <p>Java class for NAPStudentResponseSetType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -29,14 +26,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ReportExclusionFlag" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="CalibrationSampleFlag" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="EquatingSampleFlag" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
- *         &lt;element name="PathTakenForDomain" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="ParallelTest" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="PathTakenForDomain" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ParallelTest" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="PlatformStudentIdentifier" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="NAPTestRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="DomainScore" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainScoreType"/>
- *         &lt;element name="TestletList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPStudentResponseTestletListType"/>
+ *         &lt;element name="DomainScore" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainScoreType" minOccurs="0"/>
+ *         &lt;element name="TestletList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPStudentResponseTestletListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -72,14 +69,10 @@ public class NAPStudentResponseSetType {
     protected JAXBElement<String> calibrationSampleFlag;
     @XmlElementRef(name = "EquatingSampleFlag", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> equatingSampleFlag;
-    @XmlElement(name = "PathTakenForDomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String pathTakenForDomain;
-    @XmlElement(name = "ParallelTest", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String parallelTest;
+    @XmlElementRef(name = "PathTakenForDomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> pathTakenForDomain;
+    @XmlElementRef(name = "ParallelTest", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> parallelTest;
     @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentPersonalRefId;
     @XmlElement(name = "PlatformStudentIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
@@ -90,10 +83,10 @@ public class NAPStudentResponseSetType {
     @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestLocalId;
-    @XmlElement(name = "DomainScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected DomainScoreType domainScore;
-    @XmlElement(name = "TestletList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected NAPStudentResponseTestletListType testletList;
+    @XmlElementRef(name = "DomainScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<DomainScoreType> domainScore;
+    @XmlElementRef(name = "TestletList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<NAPStudentResponseTestletListType> testletList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -171,10 +164,10 @@ public class NAPStudentResponseSetType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getPathTakenForDomain() {
+    public JAXBElement<String> getPathTakenForDomain() {
         return pathTakenForDomain;
     }
 
@@ -183,10 +176,10 @@ public class NAPStudentResponseSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setPathTakenForDomain(String value) {
+    public void setPathTakenForDomain(JAXBElement<String> value) {
         this.pathTakenForDomain = value;
     }
 
@@ -195,10 +188,10 @@ public class NAPStudentResponseSetType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getParallelTest() {
+    public JAXBElement<String> getParallelTest() {
         return parallelTest;
     }
 
@@ -207,10 +200,10 @@ public class NAPStudentResponseSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setParallelTest(String value) {
+    public void setParallelTest(JAXBElement<String> value) {
         this.parallelTest = value;
     }
 
@@ -315,10 +308,10 @@ public class NAPStudentResponseSetType {
      * 
      * @return
      *     possible object is
-     *     {@link DomainScoreType }
+     *     {@link JAXBElement }{@code <}{@link DomainScoreType }{@code >}
      *     
      */
-    public DomainScoreType getDomainScore() {
+    public JAXBElement<DomainScoreType> getDomainScore() {
         return domainScore;
     }
 
@@ -327,10 +320,10 @@ public class NAPStudentResponseSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link DomainScoreType }
+     *     {@link JAXBElement }{@code <}{@link DomainScoreType }{@code >}
      *     
      */
-    public void setDomainScore(DomainScoreType value) {
+    public void setDomainScore(JAXBElement<DomainScoreType> value) {
         this.domainScore = value;
     }
 
@@ -339,10 +332,10 @@ public class NAPStudentResponseSetType {
      * 
      * @return
      *     possible object is
-     *     {@link NAPStudentResponseTestletListType }
+     *     {@link JAXBElement }{@code <}{@link NAPStudentResponseTestletListType }{@code >}
      *     
      */
-    public NAPStudentResponseTestletListType getTestletList() {
+    public JAXBElement<NAPStudentResponseTestletListType> getTestletList() {
         return testletList;
     }
 
@@ -351,10 +344,10 @@ public class NAPStudentResponseSetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link NAPStudentResponseTestletListType }
+     *     {@link JAXBElement }{@code <}{@link NAPStudentResponseTestletListType }{@code >}
      *     
      */
-    public void setTestletList(NAPStudentResponseTestletListType value) {
+    public void setTestletList(JAXBElement<NAPStudentResponseTestletListType> value) {
         this.testletList = value;
     }
 

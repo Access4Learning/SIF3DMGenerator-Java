@@ -12,8 +12,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * A sub-element containing an authorization to use this resource. For example, this resource may be included as part of the district's standard curriculum model.
- * 
  * <p>Java class for ApprovalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

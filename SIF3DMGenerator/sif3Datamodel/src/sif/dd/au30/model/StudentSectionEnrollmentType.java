@@ -14,8 +14,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains information about a student's enrollment in a section of a course.
- * 
  * <p>Java class for StudentSectionEnrollmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

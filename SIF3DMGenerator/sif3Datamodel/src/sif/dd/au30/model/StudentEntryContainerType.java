@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Container elements for EntryType information
- * 
  * <p>Java class for StudentEntryContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

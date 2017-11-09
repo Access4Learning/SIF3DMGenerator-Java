@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Code that defines the relationship of one person to another.
- * 
  * <p>Java class for RelationshipType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

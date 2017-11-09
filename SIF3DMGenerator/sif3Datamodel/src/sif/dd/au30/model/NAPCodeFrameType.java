@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object replicates the codeframe information about each NAPLAN test (per year level and domain), as a tree of GUIDs pointing to the relevant testlet and item/stimulus objects, so that the structure of the test can be traversed within one object.
- * 
  * <p>Java class for NAPCodeFrameType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

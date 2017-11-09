@@ -9,10 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         This element contains a map location. The GridLocation element is utilized within the Address element.
- *       
- * 
  * <p>Java class for GridLocationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

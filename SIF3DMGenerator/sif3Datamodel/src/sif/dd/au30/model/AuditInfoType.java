@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * An audit trail to help determine who entered this event and when.
- * 
  * <p>Java class for AuditInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

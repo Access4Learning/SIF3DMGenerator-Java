@@ -14,11 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         The work assigned to students, an educational event planned by a teacher to deliver a particular educational concept
- *         or skill.
- *       
- * 
  * <p>Java class for ActivityType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

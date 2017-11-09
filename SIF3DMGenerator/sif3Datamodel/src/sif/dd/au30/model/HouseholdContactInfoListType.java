@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of Households this Person is associated with
- * 
  * <p>Java class for HouseholdContactInfoListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

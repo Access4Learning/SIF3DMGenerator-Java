@@ -12,8 +12,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Contents of an assessment assigned in the context of NAP, targeted at a particular domain and year level.
- * 
  * <p>Java class for NAPTestContentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

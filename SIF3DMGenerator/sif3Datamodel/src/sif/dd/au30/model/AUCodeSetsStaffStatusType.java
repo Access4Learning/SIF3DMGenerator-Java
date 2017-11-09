@@ -17,7 +17,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="I"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="O"/>
- *     &lt;enumeration value="ZZREDACTED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -27,36 +26,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsStaffStatusType {
 
-
-    /**
-     * Active
-     * 
-     */
     A,
-
-    /**
-     * Inactive
-     * 
-     */
     I,
-
-    /**
-     * Suspended
-     * 
-     */
     S,
-
-    /**
-     * On Leave
-     * 
-     */
-    O,
-
-    /**
-     * Redacted for privacy
-     * 
-     */
-    ZZREDACTED;
+    O;
 
     public String value() {
         return name();

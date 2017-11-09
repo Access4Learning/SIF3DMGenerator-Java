@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * A lesson or activity-sized portion of a resource.
- * 
  * <p>Java class for ComponentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

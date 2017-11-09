@@ -14,8 +14,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This object is the actual value of a statistical measurement. It is always associated with one statistic and one or more characteristics.
- * 
  * <p>Java class for AggregateStatisticFactType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
