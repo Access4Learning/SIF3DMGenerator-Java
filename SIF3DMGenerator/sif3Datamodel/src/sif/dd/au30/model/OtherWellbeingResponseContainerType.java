@@ -19,7 +19,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="OtherResonseDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="OtherResponseDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="OtherResponseType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="OtherResponseDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="OtherResponseNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -34,7 +34,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OtherWellbeingResponseContainerType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "otherResonseDate",
+    "otherResponseDate",
     "otherResponseType",
     "otherResponseDescription",
     "otherResponseNotes",
@@ -42,8 +42,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class OtherWellbeingResponseContainerType {
 
-    @XmlElementRef(name = "OtherResonseDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<XMLGregorianCalendar> otherResonseDate;
+    @XmlElementRef(name = "OtherResponseDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> otherResponseDate;
     @XmlElementRef(name = "OtherResponseType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> otherResponseType;
     @XmlElementRef(name = "OtherResponseDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -54,27 +54,27 @@ public class OtherWellbeingResponseContainerType {
     protected JAXBElement<AUCodeSetsWellbeingStatusType> status;
 
     /**
-     * Gets the value of the otherResonseDate property.
+     * Gets the value of the otherResponseDate property.
      * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public JAXBElement<XMLGregorianCalendar> getOtherResonseDate() {
-        return otherResonseDate;
+    public JAXBElement<XMLGregorianCalendar> getOtherResponseDate() {
+        return otherResponseDate;
     }
 
     /**
-     * Sets the value of the otherResonseDate property.
+     * Sets the value of the otherResponseDate property.
      * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      *     
      */
-    public void setOtherResonseDate(JAXBElement<XMLGregorianCalendar> value) {
-        this.otherResonseDate = value;
+    public void setOtherResponseDate(JAXBElement<XMLGregorianCalendar> value) {
+        this.otherResponseDate = value;
     }
 
     /**

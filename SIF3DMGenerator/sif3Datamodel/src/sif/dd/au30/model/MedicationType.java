@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="Dosage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Frequency" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="AdmistrationInformation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="AdministrationInformation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Method" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "MedicationType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "dosage",
     "frequency",
-    "admistrationInformation",
+    "administrationInformation",
     "method"
 })
 public class MedicationType {
@@ -43,8 +43,8 @@ public class MedicationType {
     protected JAXBElement<String> dosage;
     @XmlElementRef(name = "Frequency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> frequency;
-    @XmlElementRef(name = "AdmistrationInformation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> admistrationInformation;
+    @XmlElementRef(name = "AdministrationInformation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> administrationInformation;
     @XmlElementRef(name = "Method", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> method;
 
@@ -97,27 +97,27 @@ public class MedicationType {
     }
 
     /**
-     * Gets the value of the admistrationInformation property.
+     * Gets the value of the administrationInformation property.
      * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public JAXBElement<String> getAdmistrationInformation() {
-        return admistrationInformation;
+    public JAXBElement<String> getAdministrationInformation() {
+        return administrationInformation;
     }
 
     /**
-     * Sets the value of the admistrationInformation property.
+     * Sets the value of the administrationInformation property.
      * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setAdmistrationInformation(JAXBElement<String> value) {
-        this.admistrationInformation = value;
+    public void setAdministrationInformation(JAXBElement<String> value) {
+        this.administrationInformation = value;
     }
 
     /**

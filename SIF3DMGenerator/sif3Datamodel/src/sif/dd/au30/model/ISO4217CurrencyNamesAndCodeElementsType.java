@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="BSD"/>
  *     &lt;enumeration value="BTN"/>
  *     &lt;enumeration value="BWP"/>
- *     &lt;enumeration value="BYR"/>
+ *     &lt;enumeration value="BYN"/>
  *     &lt;enumeration value="BZD"/>
  *     &lt;enumeration value="CAD"/>
  *     &lt;enumeration value="CDF"/>
@@ -100,7 +100,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="LKR"/>
  *     &lt;enumeration value="LRD"/>
  *     &lt;enumeration value="LSL"/>
- *     &lt;enumeration value="LTL"/>
  *     &lt;enumeration value="LYD"/>
  *     &lt;enumeration value="MAD"/>
  *     &lt;enumeration value="MDL"/>
@@ -164,6 +163,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="UGX"/>
  *     &lt;enumeration value="USD"/>
  *     &lt;enumeration value="USN"/>
+ *     &lt;enumeration value="UYI"/>
  *     &lt;enumeration value="UYU"/>
  *     &lt;enumeration value="UZS"/>
  *     &lt;enumeration value="VEF"/>
@@ -189,9 +189,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="XXX"/>
  *     &lt;enumeration value="YER"/>
  *     &lt;enumeration value="ZAR"/>
- *     &lt;enumeration value="ZMK"/>
- *     &lt;enumeration value="ZWN"/>
- *     &lt;enumeration value="REDACTED"/>
+ *     &lt;enumeration value="ZMW"/>
+ *     &lt;enumeration value="ZWL"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -225,7 +224,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     BSD,
     BTN,
     BWP,
-    BYR,
+    BYN,
     BZD,
     CAD,
     CDF,
@@ -288,7 +287,6 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     LKR,
     LRD,
     LSL,
-    LTL,
     LYD,
     MAD,
     MDL,
@@ -352,6 +350,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     UGX,
     USD,
     USN,
+    UYI,
     UYU,
     UZS,
     VEF,
@@ -377,9 +376,8 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     XXX,
     YER,
     ZAR,
-    ZMK,
-    ZWN,
-    REDACTED;
+    ZMW,
+    ZWL;
 
     public String value() {
         return name();

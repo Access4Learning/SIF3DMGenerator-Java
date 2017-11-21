@@ -1,7 +1,7 @@
 <!--
-		SIF Implementation Specification (Australia) 3.4.2 (October 26, 2017) Infrastructure Version: v3
+		SIF Implementation Specification (Australia) 3.4.2 (November 14, 2017) Infrastructure Version: v3
 	-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/au/3.4" targetNamespace="http://www.sifassociation.org/datamodel/au/3.4" elementFormDefault="qualified" version="3.4.2"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/au/3.4" targetNamespace="http://www.sifassociation.org/datamodel/au/3.4" elementFormDefault="qualified"
 >
   <!--SIFAU-->
 
@@ -8212,7 +8212,7 @@
       <xs:enumeration value="BSD" />
       <xs:enumeration value="BTN" />
       <xs:enumeration value="BWP" />
-      <xs:enumeration value="BYR" />
+      <xs:enumeration value="BYN" />
       <xs:enumeration value="BZD" />
       <xs:enumeration value="CAD" />
       <xs:enumeration value="CDF" />
@@ -8275,7 +8275,6 @@
       <xs:enumeration value="LKR" />
       <xs:enumeration value="LRD" />
       <xs:enumeration value="LSL" />
-      <xs:enumeration value="LTL" />
       <xs:enumeration value="LYD" />
       <xs:enumeration value="MAD" />
       <xs:enumeration value="MDL" />
@@ -8339,6 +8338,7 @@
       <xs:enumeration value="UGX" />
       <xs:enumeration value="USD" />
       <xs:enumeration value="USN" />
+      <xs:enumeration value="UYI" />
       <xs:enumeration value="UYU" />
       <xs:enumeration value="UZS" />
       <xs:enumeration value="VEF" />
@@ -8364,9 +8364,8 @@
       <xs:enumeration value="XXX" />
       <xs:enumeration value="YER" />
       <xs:enumeration value="ZAR" />
-      <xs:enumeration value="ZMK" />
-      <xs:enumeration value="ZWN" />
-      <xs:enumeration value="REDACTED" />
+      <xs:enumeration value="ZMW" />
+      <xs:enumeration value="ZWL" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -8385,7 +8384,7 @@
     <xs:sequence>
       <xs:element name="Dosage" minOccurs="0" nillable="true" type="xs:string" />
       <xs:element name="Frequency" minOccurs="0" nillable="true" type="xs:string" />
-      <xs:element name="AdmistrationInformation" minOccurs="0" nillable="true" type="xs:string" />
+      <xs:element name="AdministrationInformation" minOccurs="0" nillable="true" type="xs:string" />
       <xs:element name="Method" minOccurs="0" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -8446,7 +8445,7 @@
   <xs:complexType name="WellbeingEventLocationDetailsType">
     <xs:sequence>
       <xs:element name="EventLocation" type="AUCodeSetsWellbeingEventLocationType" />
-      <xs:element name="Class" minOccurs="0" nillable="true" type="xs:date" />
+      <xs:element name="Class" minOccurs="0" nillable="true" type="xs:string" />
       <xs:element name="FurtherLocationNotes" minOccurs="0" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -8606,7 +8605,7 @@
 
   <xs:complexType name="OtherWellbeingResponseContainerType">
     <xs:sequence>
-      <xs:element name="OtherResonseDate" minOccurs="0" nillable="true" type="xs:date" />
+      <xs:element name="OtherResponseDate" minOccurs="0" nillable="true" type="xs:date" />
       <xs:element name="OtherResponseType" minOccurs="0" nillable="true" type="xs:string" />
       <xs:element name="OtherResponseDescription" minOccurs="0" nillable="true" type="xs:string" />
       <xs:element name="OtherResponseNotes" minOccurs="0" nillable="true" type="xs:string" />

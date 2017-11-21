@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -21,7 +20,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="EventLocation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventLocationType"/>
- *         &lt;element name="Class" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="Class" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="FurtherLocationNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -42,7 +41,7 @@ public class WellbeingEventLocationDetailsType {
     @XmlElement(name = "EventLocation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsWellbeingEventLocationType eventLocation;
     @XmlElementRef(name = "Class", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<XMLGregorianCalendar> clazz;
+    protected JAXBElement<String> clazz;
     @XmlElementRef(name = "FurtherLocationNotes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> furtherLocationNotes;
 
@@ -75,10 +74,10 @@ public class WellbeingEventLocationDetailsType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public JAXBElement<XMLGregorianCalendar> getClazz() {
+    public JAXBElement<String> getClazz() {
         return clazz;
     }
 
@@ -87,10 +86,10 @@ public class WellbeingEventLocationDetailsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setClazz(JAXBElement<XMLGregorianCalendar> value) {
+    public void setClazz(JAXBElement<String> value) {
         this.clazz = value;
     }
 
