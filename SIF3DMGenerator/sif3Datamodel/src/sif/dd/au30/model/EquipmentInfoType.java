@@ -25,9 +25,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="AssetNumber" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="InvoiceRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="PurchaseOrderRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
@@ -48,7 +48,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="SIF_RefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -89,13 +89,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class EquipmentInfoType {
 
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String name;
     @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
     @XmlElementRef(name = "AssetNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -389,7 +389,7 @@ public class EquipmentInfoType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -414,7 +414,6 @@ public class EquipmentInfoType {
     public static class SIFRefId {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

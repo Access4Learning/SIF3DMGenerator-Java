@@ -24,8 +24,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="TermInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
@@ -82,10 +82,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class SectionInfoType {
 
-    @XmlElement(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolCourseInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolCourseInfoRefId;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
     @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

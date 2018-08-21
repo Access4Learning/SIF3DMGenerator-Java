@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TestContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestContentType"/>
+ *         &lt;element name="TestContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestContentType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class NAPTestType {
 
-    @XmlElement(name = "TestContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TestContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NAPTestContentType testContent;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;

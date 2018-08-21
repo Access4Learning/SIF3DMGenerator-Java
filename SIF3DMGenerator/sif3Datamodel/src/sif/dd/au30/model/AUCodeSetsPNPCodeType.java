@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="AVM"/>
  *     &lt;enumeration value="ALL"/>
  *     &lt;enumeration value="COL"/>
- *     &lt;enumeration value="BRA"/>
+ *     &lt;enumeration value="OFF"/>
  *     &lt;enumeration value="ETA"/>
  *     &lt;enumeration value="ETB"/>
  *     &lt;enumeration value="ETC"/>
@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="RBK"/>
  *     &lt;enumeration value="SCR"/>
  *     &lt;enumeration value="SUP"/>
+ *     &lt;enumeration value="ETD"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -46,14 +47,15 @@ public enum AUCodeSetsPNPCodeType {
     AVM,
     ALL,
     COL,
-    BRA,
+    OFF,
     ETA,
     ETB,
     ETC,
     OSS,
     RBK,
     SCR,
-    SUP;
+    SUP,
+    ETD;
 
     public String value() {
         return name();

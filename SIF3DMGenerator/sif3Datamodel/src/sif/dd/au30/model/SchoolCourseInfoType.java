@@ -25,15 +25,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="TermInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="CourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="CourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StateCourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="DistrictCourseCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectAreaList" type="{http://www.sifassociation.org/datamodel/au/3.4}SubjectAreaListType" minOccurs="0"/>
- *         &lt;element name="CourseTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="CourseTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="InstructionalLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="CourseCredits" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -75,7 +75,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class SchoolCourseInfoType {
 
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
     @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -84,7 +84,7 @@ public class SchoolCourseInfoType {
     protected JAXBElement<XMLGregorianCalendar> schoolYear;
     @XmlElementRef(name = "TermInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> termInfoRefId;
-    @XmlElement(name = "CourseCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "CourseCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String courseCode;
@@ -94,7 +94,7 @@ public class SchoolCourseInfoType {
     protected JAXBElement<String> districtCourseCode;
     @XmlElementRef(name = "SubjectAreaList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SubjectAreaListType> subjectAreaList;
-    @XmlElement(name = "CourseTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "CourseTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String courseTitle;

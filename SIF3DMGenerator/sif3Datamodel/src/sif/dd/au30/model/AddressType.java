@@ -27,11 +27,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element name="EffectiveFromDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="EffectiveToDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="Street" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressStreetType"/>
- *         &lt;element name="City" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Street" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressStreetType" minOccurs="0"/>
+ *         &lt;element name="City" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StateProvince" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceType" minOccurs="0"/>
  *         &lt;element name="Country" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" minOccurs="0"/>
- *         &lt;element name="PostalCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="PostalCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="GridLocation" type="{http://www.sifassociation.org/datamodel/au/3.4}GridLocationType" minOccurs="0"/>
  *         &lt;element name="MapReference" type="{http://www.sifassociation.org/datamodel/au/3.4}MapReferenceType" minOccurs="0"/>
  *         &lt;element name="RadioContact" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -72,9 +72,9 @@ public class AddressType {
     protected JAXBElement<XMLGregorianCalendar> effectiveFromDate;
     @XmlElementRef(name = "EffectiveToDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> effectiveToDate;
-    @XmlElement(name = "Street", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Street", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AddressStreetType street;
-    @XmlElement(name = "City", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "City", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String city;
@@ -82,7 +82,7 @@ public class AddressType {
     protected JAXBElement<String> stateProvince;
     @XmlElementRef(name = "Country", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> country;
-    @XmlElement(name = "PostalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PostalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String postalCode;

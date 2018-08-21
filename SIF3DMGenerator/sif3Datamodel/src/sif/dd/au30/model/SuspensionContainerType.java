@@ -22,7 +22,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SuspensionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSuspensionCategoryType"/>
+ *         &lt;element name="SuspensionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSuspensionCategoryType" minOccurs="0"/>
  *         &lt;element name="WithdrawalTimeList" type="{http://www.sifassociation.org/datamodel/au/3.4}WithdrawalTimeListType" minOccurs="0"/>
  *         &lt;element name="Duration" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="AdvisementDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
@@ -51,7 +51,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class SuspensionContainerType {
 
-    @XmlElement(name = "SuspensionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SuspensionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsSuspensionCategoryType suspensionCategory;
     @XmlElementRef(name = "WithdrawalTimeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<WithdrawalTimeListType> withdrawalTimeList;

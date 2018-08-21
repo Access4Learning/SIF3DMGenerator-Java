@@ -20,7 +20,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassCodeType"/>
+ *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassCodeType" minOccurs="0"/>
  *         &lt;element name="VisaExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="ATEExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="ATEStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
@@ -43,7 +43,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class VisaSubClassType {
 
-    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String code;
     @XmlElementRef(name = "VisaExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> visaExpiryDate;

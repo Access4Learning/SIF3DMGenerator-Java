@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType"/>
- *         &lt;element name="StudentContactPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType"/>
- *         &lt;element name="Relationship" type="{http://www.sifassociation.org/datamodel/au/3.4}RelationshipType"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="StudentContactPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
+ *         &lt;element name="Relationship" type="{http://www.sifassociation.org/datamodel/au/3.4}RelationshipType" minOccurs="0"/>
  *         &lt;element name="ParentRelationshipStatus" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -68,13 +68,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentContactRelationshipType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "StudentContactPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentContactPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentContactPersonalRefId;
-    @XmlElement(name = "Relationship", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Relationship", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected RelationshipType relationship;
     @XmlElementRef(name = "ParentRelationshipStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> parentRelationshipStatus;

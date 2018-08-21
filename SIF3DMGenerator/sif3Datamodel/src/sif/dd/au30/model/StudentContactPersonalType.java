@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
- *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType"/>
+ *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
  *         &lt;element name="EmploymentType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
  *         &lt;element name="SchoolEducationalLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}EducationalLevelType" minOccurs="0"/>
  *         &lt;element name="NonSchoolEducation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
@@ -56,7 +56,7 @@ public class StudentContactPersonalType {
     protected JAXBElement<String> localId;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherIdListType> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonInfoType personInfo;
     @XmlElementRef(name = "EmploymentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> employmentType;

@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="AssociatedObject" maxOccurs="unbounded" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}ObjectNameType" />
  *               &lt;/extension>
  *             &lt;/simpleContent>
@@ -87,7 +87,7 @@ public class AssociatedObjectsType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}ObjectNameType" />
      *     &lt;/extension>
      *   &lt;/simpleContent>
@@ -103,7 +103,6 @@ public class AssociatedObjectsType {
     public static class AssociatedObject {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

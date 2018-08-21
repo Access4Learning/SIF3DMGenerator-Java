@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Withdrawal" type="{http://www.sifassociation.org/datamodel/au/3.4}WithdrawalType" maxOccurs="unbounded"/>
+ *         &lt;element name="Withdrawal" type="{http://www.sifassociation.org/datamodel/au/3.4}WithdrawalType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class WithdrawalTimeListType {
 
-    @XmlElement(name = "Withdrawal", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Withdrawal", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<WithdrawalType> withdrawal;
 
     /**

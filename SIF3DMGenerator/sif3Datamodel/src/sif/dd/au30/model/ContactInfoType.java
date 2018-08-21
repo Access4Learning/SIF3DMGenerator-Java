@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Name" type="{http://www.sifassociation.org/datamodel/au/3.4}NameType"/>
+ *         &lt;element name="Name" type="{http://www.sifassociation.org/datamodel/au/3.4}NameType" minOccurs="0"/>
  *         &lt;element name="PositionTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Role" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Address" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressType" minOccurs="0"/>
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ContactInfoType {
 
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NameType name;
     @XmlElementRef(name = "PositionTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> positionTitle;

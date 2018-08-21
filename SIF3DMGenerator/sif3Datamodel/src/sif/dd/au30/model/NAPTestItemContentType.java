@@ -24,23 +24,23 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="ItemName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="ItemType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestItemTypeType"/>
- *         &lt;element name="Subdomain" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="ItemName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ItemType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestItemTypeType" minOccurs="0"/>
+ *         &lt;element name="Subdomain" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="WritingGenre" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPWritingGenreType" minOccurs="0"/>
- *         &lt;element name="ItemDescriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="ReleasedStatus" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="MarkingType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestItemMarkingTypeType"/>
+ *         &lt;element name="ItemDescriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ReleasedStatus" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="MarkingType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestItemMarkingTypeType" minOccurs="0"/>
  *         &lt;element name="MultipleChoiceOptionCount" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="CorrectAnswer" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="MaximumScore" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="ItemDifficulty" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="ItemDifficultyLogit5" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="ItemDifficultyLogit62" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="ItemDifficultyLogit5SE" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="ItemDifficultyLogit62SE" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="ItemProficiencyBand" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+ *         &lt;element name="MaximumScore" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ItemDifficulty" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ItemDifficultyLogit5" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ItemDifficultyLogit62" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ItemDifficultyLogit5SE" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ItemDifficultyLogit62SE" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ItemProficiencyBand" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="ItemProficiencyLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ExemplarURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="ItemSubstitutedForList" type="{http://www.sifassociation.org/datamodel/au/3.4}SubstituteItemListType" minOccurs="0"/>
@@ -83,46 +83,46 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class NAPTestItemContentType {
 
-    @XmlElement(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestItemLocalId;
-    @XmlElement(name = "ItemName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String itemName;
-    @XmlElement(name = "ItemType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsNAPTestItemTypeType itemType;
-    @XmlElement(name = "Subdomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Subdomain", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String subdomain;
     @XmlElementRef(name = "WritingGenre", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsNAPWritingGenreType> writingGenre;
-    @XmlElement(name = "ItemDescriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemDescriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String itemDescriptor;
     @XmlElement(name = "ReleasedStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected boolean releasedStatus;
-    @XmlElement(name = "MarkingType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    protected Boolean releasedStatus;
+    @XmlElement(name = "MarkingType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsNAPTestItemMarkingTypeType markingType;
     @XmlElementRef(name = "MultipleChoiceOptionCount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Integer> multipleChoiceOptionCount;
     @XmlElementRef(name = "CorrectAnswer", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> correctAnswer;
-    @XmlElement(name = "MaximumScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "MaximumScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal maximumScore;
-    @XmlElement(name = "ItemDifficulty", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemDifficulty", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal itemDifficulty;
-    @XmlElement(name = "ItemDifficultyLogit5", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemDifficultyLogit5", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal itemDifficultyLogit5;
-    @XmlElement(name = "ItemDifficultyLogit62", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemDifficultyLogit62", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal itemDifficultyLogit62;
-    @XmlElement(name = "ItemDifficultyLogit5SE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemDifficultyLogit5SE", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal itemDifficultyLogit5SE;
-    @XmlElement(name = "ItemDifficultyLogit62SE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemDifficultyLogit62SE", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal itemDifficultyLogit62SE;
-    @XmlElement(name = "ItemProficiencyBand", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemProficiencyBand", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigInteger itemProficiencyBand;
     @XmlElementRef(name = "ItemProficiencyLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> itemProficiencyLevel;
@@ -284,16 +284,24 @@ public class NAPTestItemContentType {
     /**
      * Gets the value of the releasedStatus property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public boolean isReleasedStatus() {
+    public Boolean isReleasedStatus() {
         return releasedStatus;
     }
 
     /**
      * Sets the value of the releasedStatus property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setReleasedStatus(boolean value) {
+    public void setReleasedStatus(Boolean value) {
         this.releasedStatus = value;
     }
 

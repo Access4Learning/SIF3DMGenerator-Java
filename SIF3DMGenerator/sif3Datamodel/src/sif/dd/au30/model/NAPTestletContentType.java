@@ -24,11 +24,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestletLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="TestletName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="NAPTestletLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="TestletName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Node" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="LocationInStage" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="TestletMaximumScore" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="TestletMaximumScore" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,10 +47,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class NAPTestletContentType {
 
-    @XmlElement(name = "NAPTestletLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "NAPTestletLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestletLocalId;
-    @XmlElement(name = "TestletName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TestletName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String testletName;
@@ -58,7 +58,7 @@ public class NAPTestletContentType {
     protected JAXBElement<String> node;
     @XmlElementRef(name = "LocationInStage", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigInteger> locationInStage;
-    @XmlElement(name = "TestletMaximumScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TestletMaximumScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal testletMaximumScore;
 
     /**

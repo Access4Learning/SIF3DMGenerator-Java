@@ -25,19 +25,19 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="EventId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="WellbeingEventNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="WellbeingEventCategoryClass" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventCategoryClassType"/>
+ *         &lt;element name="WellbeingEventCategoryClass" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventCategoryClassType" minOccurs="0"/>
  *         &lt;element name="WellbeingEventCategoryList" type="{http://www.sifassociation.org/datamodel/au/3.4}WellbeingEventCategoryListType" minOccurs="0"/>
  *         &lt;element name="ReportingStaffRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="WellbeingEventLocationDetails" type="{http://www.sifassociation.org/datamodel/au/3.4}WellbeingEventLocationDetailsType" minOccurs="0"/>
  *         &lt;element name="WellbeingEventCreationTimeStamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="WellbeingEventDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="WellbeingEventDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="WellbeingEventTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="WellbeingEventDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="WellbeingEventTimePeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventTimePeriodType"/>
+ *         &lt;element name="WellbeingEventTimePeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventTimePeriodType" minOccurs="0"/>
  *         &lt;element name="ConfidentialFlag" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="PersonInvolvementList" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInvolvementListType" minOccurs="0"/>
  *         &lt;element name="FollowUpActionList" type="{http://www.sifassociation.org/datamodel/au/3.4}FollowUpActionListType" minOccurs="0"/>
@@ -79,17 +79,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class WellbeingEventType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
     @XmlElementRef(name = "EventId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> eventId;
     @XmlElementRef(name = "WellbeingEventNotes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> wellbeingEventNotes;
-    @XmlElement(name = "WellbeingEventCategoryClass", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WellbeingEventCategoryClass", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsWellbeingEventCategoryClassType wellbeingEventCategoryClass;
     @XmlElementRef(name = "WellbeingEventCategoryList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<WellbeingEventCategoryListType> wellbeingEventCategoryList;
@@ -99,14 +99,14 @@ public class WellbeingEventType {
     protected JAXBElement<WellbeingEventLocationDetailsType> wellbeingEventLocationDetails;
     @XmlElementRef(name = "WellbeingEventCreationTimeStamp", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> wellbeingEventCreationTimeStamp;
-    @XmlElement(name = "WellbeingEventDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WellbeingEventDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar wellbeingEventDate;
     @XmlElementRef(name = "WellbeingEventTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> wellbeingEventTime;
     @XmlElementRef(name = "WellbeingEventDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> wellbeingEventDescription;
-    @XmlElement(name = "WellbeingEventTimePeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WellbeingEventTimePeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsWellbeingEventTimePeriodType wellbeingEventTimePeriod;
     @XmlElementRef(name = "ConfidentialFlag", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> confidentialFlag;

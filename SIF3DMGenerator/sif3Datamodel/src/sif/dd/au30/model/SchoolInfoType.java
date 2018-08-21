@@ -32,12 +32,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ACARAId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
- *         &lt;element name="SchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="SchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="LEAInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="OtherLEA" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>RefIdType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>RefIdTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -65,7 +65,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="OperationalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}OperationalStatusType" minOccurs="0"/>
  *         &lt;element name="FederalElectorate" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsFederalElectorateType" minOccurs="0"/>
  *         &lt;element name="Campus" type="{http://www.sifassociation.org/datamodel/au/3.4}CampusContainerType" minOccurs="0"/>
- *         &lt;element name="SchoolSector" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolSectorCodeType"/>
+ *         &lt;element name="SchoolSector" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolSectorCodeType" minOccurs="0"/>
  *         &lt;element name="IndependentSchool" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="NonGovSystemicStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSystemicStatusType" minOccurs="0"/>
  *         &lt;element name="System" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolSystemType" minOccurs="0"/>
@@ -151,7 +151,7 @@ public class SchoolInfoType {
     protected JAXBElement<String> acaraId;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherIdListType> otherIdList;
-    @XmlElement(name = "SchoolName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String schoolName;
@@ -191,7 +191,7 @@ public class SchoolInfoType {
     protected JAXBElement<String> federalElectorate;
     @XmlElementRef(name = "Campus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<CampusContainerType> campus;
-    @XmlElement(name = "SchoolSector", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolSector", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsSchoolSectorCodeType schoolSector;
     @XmlElementRef(name = "IndependentSchool", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> independentSchool;
@@ -1298,7 +1298,7 @@ public class SchoolInfoType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>RefIdType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>RefIdTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -1320,7 +1320,6 @@ public class SchoolInfoType {
     public static class OtherLEA {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

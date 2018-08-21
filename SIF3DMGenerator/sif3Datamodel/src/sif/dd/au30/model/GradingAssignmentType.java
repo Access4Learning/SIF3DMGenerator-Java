@@ -28,16 +28,24 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="TeachingGroupRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="StudentPersonalRefIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentsType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="GradingCategory" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="PointsPossible" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
+ *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="PointsPossible" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="CreateDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="DueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Weight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="MaxAttemptsAllowed" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="DetailedDescriptionURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="DetailedDescriptionBinary" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
+ *         &lt;element name="AssessmentType" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *         &lt;element name="LevelAssessed" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *         &lt;element name="AssignmentPurpose" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="SubAssignmentList" type="{http://www.sifassociation.org/datamodel/au/3.4}AssignmentListType" minOccurs="0"/>
+ *         &lt;element name="RubricScoringGuide" type="{http://www.sifassociation.org/datamodel/au/3.4}GenericRubricType" minOccurs="0"/>
+ *         &lt;element name="PrerequisiteList" type="{http://www.sifassociation.org/datamodel/au/3.4}PrerequisitesType" minOccurs="0"/>
+ *         &lt;element name="LearningStandardList" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -52,6 +60,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "GradingAssignmentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "teachingGroupRefId",
+    "studentPersonalRefIdList",
     "schoolInfoRefId",
     "gradingCategory",
     "description",
@@ -62,6 +71,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "maxAttemptsAllowed",
     "detailedDescriptionURL",
     "detailedDescriptionBinary",
+    "assessmentType",
+    "levelAssessed",
+    "assignmentPurpose",
+    "subAssignmentList",
+    "rubricScoringGuide",
+    "prerequisiteList",
+    "learningStandardList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -69,17 +85,19 @@ public class GradingAssignmentType {
 
     @XmlElementRef(name = "TeachingGroupRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> teachingGroupRefId;
+    @XmlElementRef(name = "StudentPersonalRefIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentsType> studentPersonalRefIdList;
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
     @XmlElementRef(name = "GradingCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> gradingCategory;
-    @XmlElement(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String description;
     @XmlElement(name = "PointsPossible", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected long pointsPossible;
+    protected Long pointsPossible;
     @XmlElementRef(name = "CreateDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> createDate;
     @XmlElementRef(name = "DueDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -92,6 +110,20 @@ public class GradingAssignmentType {
     protected JAXBElement<String> detailedDescriptionURL;
     @XmlElementRef(name = "DetailedDescriptionBinary", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<byte[]> detailedDescriptionBinary;
+    @XmlElementRef(name = "AssessmentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> assessmentType;
+    @XmlElementRef(name = "LevelAssessed", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> levelAssessed;
+    @XmlElementRef(name = "AssignmentPurpose", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> assignmentPurpose;
+    @XmlElementRef(name = "SubAssignmentList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AssignmentListType> subAssignmentList;
+    @XmlElementRef(name = "RubricScoringGuide", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<GenericRubricType> rubricScoringGuide;
+    @XmlElementRef(name = "PrerequisiteList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PrerequisitesType> prerequisiteList;
+    @XmlElementRef(name = "LearningStandardList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LearningStandardListType> learningStandardList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -122,6 +154,30 @@ public class GradingAssignmentType {
      */
     public void setTeachingGroupRefId(JAXBElement<String> value) {
         this.teachingGroupRefId = value;
+    }
+
+    /**
+     * Gets the value of the studentPersonalRefIdList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link StudentsType }{@code >}
+     *     
+     */
+    public JAXBElement<StudentsType> getStudentPersonalRefIdList() {
+        return studentPersonalRefIdList;
+    }
+
+    /**
+     * Sets the value of the studentPersonalRefIdList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link StudentsType }{@code >}
+     *     
+     */
+    public void setStudentPersonalRefIdList(JAXBElement<StudentsType> value) {
+        this.studentPersonalRefIdList = value;
     }
 
     /**
@@ -199,16 +255,24 @@ public class GradingAssignmentType {
     /**
      * Gets the value of the pointsPossible property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public long getPointsPossible() {
+    public Long getPointsPossible() {
         return pointsPossible;
     }
 
     /**
      * Sets the value of the pointsPossible property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setPointsPossible(long value) {
+    public void setPointsPossible(Long value) {
         this.pointsPossible = value;
     }
 
@@ -354,6 +418,174 @@ public class GradingAssignmentType {
      */
     public void setDetailedDescriptionBinary(JAXBElement<byte[]> value) {
         this.detailedDescriptionBinary = value;
+    }
+
+    /**
+     * Gets the value of the assessmentType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getAssessmentType() {
+        return assessmentType;
+    }
+
+    /**
+     * Sets the value of the assessmentType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setAssessmentType(JAXBElement<String> value) {
+        this.assessmentType = value;
+    }
+
+    /**
+     * Gets the value of the levelAssessed property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLevelAssessed() {
+        return levelAssessed;
+    }
+
+    /**
+     * Sets the value of the levelAssessed property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLevelAssessed(JAXBElement<String> value) {
+        this.levelAssessed = value;
+    }
+
+    /**
+     * Gets the value of the assignmentPurpose property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getAssignmentPurpose() {
+        return assignmentPurpose;
+    }
+
+    /**
+     * Sets the value of the assignmentPurpose property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setAssignmentPurpose(JAXBElement<String> value) {
+        this.assignmentPurpose = value;
+    }
+
+    /**
+     * Gets the value of the subAssignmentList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AssignmentListType }{@code >}
+     *     
+     */
+    public JAXBElement<AssignmentListType> getSubAssignmentList() {
+        return subAssignmentList;
+    }
+
+    /**
+     * Sets the value of the subAssignmentList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AssignmentListType }{@code >}
+     *     
+     */
+    public void setSubAssignmentList(JAXBElement<AssignmentListType> value) {
+        this.subAssignmentList = value;
+    }
+
+    /**
+     * Gets the value of the rubricScoringGuide property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link GenericRubricType }{@code >}
+     *     
+     */
+    public JAXBElement<GenericRubricType> getRubricScoringGuide() {
+        return rubricScoringGuide;
+    }
+
+    /**
+     * Sets the value of the rubricScoringGuide property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link GenericRubricType }{@code >}
+     *     
+     */
+    public void setRubricScoringGuide(JAXBElement<GenericRubricType> value) {
+        this.rubricScoringGuide = value;
+    }
+
+    /**
+     * Gets the value of the prerequisiteList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link PrerequisitesType }{@code >}
+     *     
+     */
+    public JAXBElement<PrerequisitesType> getPrerequisiteList() {
+        return prerequisiteList;
+    }
+
+    /**
+     * Sets the value of the prerequisiteList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link PrerequisitesType }{@code >}
+     *     
+     */
+    public void setPrerequisiteList(JAXBElement<PrerequisitesType> value) {
+        this.prerequisiteList = value;
+    }
+
+    /**
+     * Gets the value of the learningStandardList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LearningStandardListType }{@code >}
+     *     
+     */
+    public JAXBElement<LearningStandardListType> getLearningStandardList() {
+        return learningStandardList;
+    }
+
+    /**
+     * Sets the value of the learningStandardList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LearningStandardListType }{@code >}
+     *     
+     */
+    public void setLearningStandardList(JAXBElement<LearningStandardListType> value) {
+        this.learningStandardList = value;
     }
 
     /**

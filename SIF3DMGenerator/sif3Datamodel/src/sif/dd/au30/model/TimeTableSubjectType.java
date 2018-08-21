@@ -26,14 +26,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="AcademicYear" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
  *         &lt;element name="AcademicYearRange" type="{http://www.sifassociation.org/datamodel/au/3.4}YearRangeType" minOccurs="0"/>
  *         &lt;element name="CourseLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="SchoolCourseInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="Faculty" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectShortName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SubjectLongName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="SubjectLongName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SubjectType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ProposedMaxClassSize" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="ProposedMinClassSize" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
@@ -76,7 +76,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TimeTableSubjectType {
 
-    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String subjectLocalId;
     @XmlElementRef(name = "AcademicYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -91,7 +91,7 @@ public class TimeTableSubjectType {
     protected JAXBElement<String> faculty;
     @XmlElementRef(name = "SubjectShortName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> subjectShortName;
-    @XmlElement(name = "SubjectLongName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SubjectLongName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String subjectLongName;

@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -25,14 +26,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="StudentPersonalLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="StudentPersonalLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="TeachingGroupRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="GradingAssignmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="GradingAssignmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="DateGraded" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="ExpectedScore" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="ScorePoints" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="ScorePercent" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="ScoreLetter" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="ScoreDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="SubscoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPSubscoreListType" minOccurs="0"/>
+ *         &lt;element name="TeacherJudgement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="MarkInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="AssignmentScoreIteration" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -51,10 +59,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "teachingGroupRefId",
     "schoolInfoRefId",
     "gradingAssignmentRefId",
+    "staffPersonalRefId",
+    "dateGraded",
+    "expectedScore",
     "scorePoints",
     "scorePercent",
     "scoreLetter",
     "scoreDescription",
+    "subscoreList",
+    "teacherJudgement",
+    "markInfoRefId",
+    "assignmentScoreIteration",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -62,16 +77,22 @@ public class GradingAssignmentScoreType {
 
     @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentPersonalRefId;
-    @XmlElement(name = "StudentPersonalLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentPersonalLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String studentPersonalLocalId;
     @XmlElementRef(name = "TeachingGroupRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> teachingGroupRefId;
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElement(name = "GradingAssignmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "GradingAssignmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String gradingAssignmentRefId;
+    @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> staffPersonalRefId;
+    @XmlElementRef(name = "DateGraded", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> dateGraded;
+    @XmlElementRef(name = "ExpectedScore", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Boolean> expectedScore;
     @XmlElementRef(name = "ScorePoints", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> scorePoints;
     @XmlElementRef(name = "ScorePercent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -80,6 +101,14 @@ public class GradingAssignmentScoreType {
     protected JAXBElement<String> scoreLetter;
     @XmlElementRef(name = "ScoreDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> scoreDescription;
+    @XmlElementRef(name = "SubscoreList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<NAPSubscoreListType> subscoreList;
+    @XmlElementRef(name = "TeacherJudgement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> teacherJudgement;
+    @XmlElementRef(name = "MarkInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> markInfoRefId;
+    @XmlElementRef(name = "AssignmentScoreIteration", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> assignmentScoreIteration;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -209,6 +238,78 @@ public class GradingAssignmentScoreType {
     }
 
     /**
+     * Gets the value of the staffPersonalRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getStaffPersonalRefId() {
+        return staffPersonalRefId;
+    }
+
+    /**
+     * Sets the value of the staffPersonalRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setStaffPersonalRefId(JAXBElement<String> value) {
+        this.staffPersonalRefId = value;
+    }
+
+    /**
+     * Gets the value of the dateGraded property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getDateGraded() {
+        return dateGraded;
+    }
+
+    /**
+     * Sets the value of the dateGraded property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setDateGraded(JAXBElement<XMLGregorianCalendar> value) {
+        this.dateGraded = value;
+    }
+
+    /**
+     * Gets the value of the expectedScore property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
+     *     
+     */
+    public JAXBElement<Boolean> getExpectedScore() {
+        return expectedScore;
+    }
+
+    /**
+     * Sets the value of the expectedScore property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
+     *     
+     */
+    public void setExpectedScore(JAXBElement<Boolean> value) {
+        this.expectedScore = value;
+    }
+
+    /**
      * Gets the value of the scorePoints property.
      * 
      * @return
@@ -302,6 +403,102 @@ public class GradingAssignmentScoreType {
      */
     public void setScoreDescription(JAXBElement<String> value) {
         this.scoreDescription = value;
+    }
+
+    /**
+     * Gets the value of the subscoreList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link NAPSubscoreListType }{@code >}
+     *     
+     */
+    public JAXBElement<NAPSubscoreListType> getSubscoreList() {
+        return subscoreList;
+    }
+
+    /**
+     * Sets the value of the subscoreList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link NAPSubscoreListType }{@code >}
+     *     
+     */
+    public void setSubscoreList(JAXBElement<NAPSubscoreListType> value) {
+        this.subscoreList = value;
+    }
+
+    /**
+     * Gets the value of the teacherJudgement property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getTeacherJudgement() {
+        return teacherJudgement;
+    }
+
+    /**
+     * Sets the value of the teacherJudgement property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setTeacherJudgement(JAXBElement<String> value) {
+        this.teacherJudgement = value;
+    }
+
+    /**
+     * Gets the value of the markInfoRefId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getMarkInfoRefId() {
+        return markInfoRefId;
+    }
+
+    /**
+     * Sets the value of the markInfoRefId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setMarkInfoRefId(JAXBElement<String> value) {
+        this.markInfoRefId = value;
+    }
+
+    /**
+     * Gets the value of the assignmentScoreIteration property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getAssignmentScoreIteration() {
+        return assignmentScoreIteration;
+    }
+
+    /**
+     * Sets the value of the assignmentScoreIteration property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setAssignmentScoreIteration(JAXBElement<String> value) {
+        this.assignmentScoreIteration = value;
     }
 
     /**

@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Latitude">
+ *         &lt;element name="Latitude" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
  *               &lt;minInclusive value="-90"/>
@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="Longitude">
+ *         &lt;element name="Longitude" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
  *               &lt;minInclusive value="-180"/>
@@ -49,9 +49,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class GridLocationType {
 
-    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal latitude;
-    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal longitude;
 
     /**

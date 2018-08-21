@@ -24,10 +24,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="WellbeingAlertStartDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="WellbeingAlertStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="WellbeingAlertEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="WellbeingAlertCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingAlertCategoryType" minOccurs="0"/>
  *         &lt;element name="WellbeingAlertDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -64,16 +64,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class WellbeingAlertType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
-    @XmlElement(name = "WellbeingAlertStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WellbeingAlertStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar wellbeingAlertStartDate;
     @XmlElementRef(name = "WellbeingAlertEndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

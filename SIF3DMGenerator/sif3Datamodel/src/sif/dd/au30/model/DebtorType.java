@@ -23,10 +23,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="BilledEntity">
+ *         &lt;element name="BilledEntity" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class DebtorType {
 
-    @XmlElement(name = "BilledEntity", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "BilledEntity", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected DebtorType.BilledEntity billedEntity;
     @XmlElementRef(name = "AddressList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressListType> addressList;
@@ -287,7 +287,7 @@ public class DebtorType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -312,7 +312,6 @@ public class DebtorType {
     public static class BilledEntity {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

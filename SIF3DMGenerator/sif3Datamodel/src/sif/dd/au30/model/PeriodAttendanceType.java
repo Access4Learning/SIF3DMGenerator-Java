@@ -24,9 +24,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="AttendanceType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="AttendanceCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceCodeType"/>
- *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAttendanceStatusType"/>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="AttendanceCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceCodeType" minOccurs="0"/>
+ *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAttendanceStatusType" minOccurs="0"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="SessionInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="ScheduledActivityRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="TimetablePeriod" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -72,12 +72,12 @@ public class PeriodAttendanceType {
 
     @XmlElementRef(name = "AttendanceType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> attendanceType;
-    @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AttendanceCodeType attendanceCode;
-    @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String attendanceStatus;
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
     @XmlElementRef(name = "SessionInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

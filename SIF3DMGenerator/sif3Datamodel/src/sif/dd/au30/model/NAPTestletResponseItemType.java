@@ -25,13 +25,13 @@ import javax.xml.datatype.Duration;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="NAPTestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="NAPTestItemLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="Response" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="ResponseCorrectness" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPResponseCorrectnessType"/>
+ *         &lt;element name="ResponseCorrectness" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPResponseCorrectnessType" minOccurs="0"/>
  *         &lt;element name="Score" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="LapsedTimeItem" type="{http://www.w3.org/2001/XMLSchema}duration" minOccurs="0"/>
- *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer"/>
- *         &lt;element name="ItemWeight" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="ItemWeight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="SubscoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPSubscoreListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -57,20 +57,20 @@ public class NAPTestletResponseItemType {
 
     @XmlElementRef(name = "NAPTestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestItemRefId;
-    @XmlElement(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "NAPTestItemLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestItemLocalId;
     @XmlElementRef(name = "Response", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> response;
-    @XmlElement(name = "ResponseCorrectness", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ResponseCorrectness", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsNAPResponseCorrectnessType responseCorrectness;
     @XmlElementRef(name = "Score", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> score;
     @XmlElementRef(name = "LapsedTimeItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Duration> lapsedTimeItem;
-    @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigInteger sequenceNumber;
-    @XmlElement(name = "ItemWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ItemWeight", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal itemWeight;
     @XmlElementRef(name = "SubscoreList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<NAPSubscoreListType> subscoreList;

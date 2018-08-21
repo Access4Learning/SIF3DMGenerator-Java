@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="Students" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentsType" minOccurs="0"/>
  *         &lt;element name="SourceObjects" type="{http://www.sifassociation.org/datamodel/au/3.4}SourceObjectsType" minOccurs="0"/>
  *         &lt;element name="Points" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="ActivityTime" type="{http://www.sifassociation.org/datamodel/au/3.4}ActivityTimeType"/>
+ *         &lt;element name="ActivityTime" type="{http://www.sifassociation.org/datamodel/au/3.4}ActivityTimeType" minOccurs="0"/>
  *         &lt;element name="AssessmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="MaxAttemptsAllowed" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="ActivityWeight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
@@ -119,7 +119,7 @@ public class ActivityType {
     protected JAXBElement<SourceObjectsType> sourceObjects;
     @XmlElementRef(name = "Points", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> points;
-    @XmlElement(name = "ActivityTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ActivityTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ActivityTimeType activityTime;
     @XmlElementRef(name = "AssessmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> assessmentRefId;

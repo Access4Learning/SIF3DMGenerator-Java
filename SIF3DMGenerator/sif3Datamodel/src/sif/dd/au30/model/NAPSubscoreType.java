@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubscoreType" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="SubscoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="SubscoreType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="SubscoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,11 +38,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class NAPSubscoreType {
 
-    @XmlElement(name = "SubscoreType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SubscoreType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String subscoreType;
-    @XmlElement(name = "SubscoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SubscoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal subscoreValue;
 
     /**

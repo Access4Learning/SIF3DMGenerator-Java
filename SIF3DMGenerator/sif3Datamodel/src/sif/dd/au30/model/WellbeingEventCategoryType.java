@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="EventCategory">
+ *         &lt;element name="EventCategory" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;union>
  *               &lt;simpleType>
@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class WellbeingEventCategoryType {
 
-    @XmlElement(name = "EventCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "EventCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String eventCategory;
     @XmlElementRef(name = "WellbeingEventSubCategoryList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<WellbeingEventSubCategoryListType> wellbeingEventSubCategoryList;
