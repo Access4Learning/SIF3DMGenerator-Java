@@ -20,12 +20,13 @@ The reason for this project is that the actual SIF3 Framework becomes/remains in
 data model. It is expected that a specific SIF3 Project will include not only the SIF3 Framework 
 Libraries but also one of the Data Model libraries generated out of this project.
 
-As of November 7, 2017 the following SIF Locale Data Models are supported by this project
+As of October 2, 2018 the following SIF Locale Data Models are supported by this project
 - SIF AU 1.3 for Infrastructure 3.x (Should not be used)
 - SIF AU 1.4 for Infrastructure 3.x (Should not be used)
 - SIF AU 3.4 for Infrastructure 3.x
 - SIF AU 3.4.1 for Infrastructure 3.x
 - SIF AU 3.4.2 for Infrastructure 3.x
+- SIF AU 3.4.3 for Infrastructure 3.x
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
 
@@ -81,6 +82,11 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 - Added SIF AU 3.4.2 XSD (data/input/XSD/sifau30/au3.4.2 directory) and generated data model classes for officially released SIF AU 3.4.2. 
   for SIF AU 3.4.2 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.2 Data Model. This is using the au/3.4 namespace.
   
+## Version from October 2, 2018
+- Added SIF AU 3.4.3 XSD (data/input/XSD/sifau30/au3.4.3 directory) and generated data model classes for officially released SIF AU 3.4.3. 
+  for SIF AU 3.4.3 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.3 Data Model. This is using the au/3.4 namespace.
+- **Project now requires Java 8**. The Project is now built with Java 8 as the minimal java version. Libraries used by this project may require Java 8 in future.
+
 # Download Instructions
 How to download this project:
 
