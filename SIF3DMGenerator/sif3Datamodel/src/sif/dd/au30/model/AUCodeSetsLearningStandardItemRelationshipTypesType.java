@@ -26,9 +26,24 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsLearningStandardItemRelationshipTypesType {
 
+
+    /**
+     * A link to another state or school content standard.
+     * 
+     */
     @XmlEnumValue("Content")
     CONTENT("Content"),
+
+    /**
+     * Personal Development
+     * 
+     */
     PD("PD"),
+
+    /**
+     * A link to a standard from another state. The purpose of this is to express relationships between state standards.
+     * 
+     */
     @XmlEnumValue("State")
     STATE("State");
     private final String value;

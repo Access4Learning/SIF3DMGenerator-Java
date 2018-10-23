@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * A list of staff members who were involved with the grading of the student, or who were responsible for any associated teacher judgement/s.
+ * 
  * <p>Java class for StudentGradeMarkersListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

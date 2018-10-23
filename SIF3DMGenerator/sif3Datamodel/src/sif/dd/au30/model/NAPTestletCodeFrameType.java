@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * 
+ * 
  * <p>Java class for NAPTestletCodeFrameType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,8 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="NAPTestletRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="TestletContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestletContentType" minOccurs="0"/>
- *         &lt;element name="TestItemList" type="{http://www.sifassociation.org/datamodel/au/3.4}CodeFrameTestItemListType" minOccurs="0"/>
+ *         &lt;element name="TestletContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestletContentType"/>
+ *         &lt;element name="TestItemList" type="{http://www.sifassociation.org/datamodel/au/3.4}CodeFrameTestItemListType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -40,9 +42,9 @@ public class NAPTestletCodeFrameType {
 
     @XmlElementRef(name = "NAPTestletRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestletRefId;
-    @XmlElement(name = "TestletContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestletContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected NAPTestletContentType testletContent;
-    @XmlElement(name = "TestItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected CodeFrameTestItemListType testItemList;
 
     /**

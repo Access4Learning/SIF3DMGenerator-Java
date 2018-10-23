@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * A person (additional to the student) involved in a  Wellbeing event/response where required to be known.
+ * 
  * <p>Java class for PersonInvolvementType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -25,7 +27,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="PersonRefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -138,6 +140,8 @@ public class PersonInvolvementType {
 
 
     /**
+     * The RefId of the Person involved in the event, can be supplied if the Person is already a staff, student or student contact. 
+     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -145,7 +149,7 @@ public class PersonInvolvementType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -169,13 +173,14 @@ public class PersonInvolvementType {
     public static class PersonRefId {
 
         @XmlValue
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String sifRefObject;
 
         /**
-         * Gets the value of the value property.
+         * A reference to a RefId.
          * 
          * @return
          *     possible object is

@@ -10,6 +10,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * Container for details of an Award, where this response was in relation to a particular Award.
+ * 
  * <p>Java class for AwardContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

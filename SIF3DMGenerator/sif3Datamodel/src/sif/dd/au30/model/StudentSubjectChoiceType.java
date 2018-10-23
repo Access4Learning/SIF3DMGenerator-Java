@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * Subjects Students Choose
+ * 
  * <p>Java class for StudentSubjectChoiceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
- *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="StudyDescription" type="{http://www.sifassociation.org/datamodel/au/3.4}SubjectAreaType" minOccurs="0"/>
  *         &lt;element name="OtherSchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -44,7 +46,7 @@ public class StudentSubjectChoiceType {
 
     @XmlElementRef(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> preferenceNumber;
-    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String subjectLocalId;
     @XmlElementRef(name = "StudyDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

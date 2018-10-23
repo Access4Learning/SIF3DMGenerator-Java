@@ -26,10 +26,25 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsProgressLevelType {
 
+
+    /**
+     * Below level
+     * 
+     */
     @XmlEnumValue("Below")
     BELOW("Below"),
+
+    /**
+     * At level
+     * 
+     */
     @XmlEnumValue("At")
     AT("At"),
+
+    /**
+     * Above level
+     * 
+     */
     @XmlEnumValue("Above")
     ABOVE("Above");
     private final String value;

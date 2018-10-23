@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * This element represents a phone number and occurs within objects such as StudentPersonal, StaffPersonal, etc.
+ * 
  * <p>Java class for PhoneNumberType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,7 +26,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Number" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Number" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="Extension" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ListedStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="Preference" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
@@ -46,7 +48,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class PhoneNumberType {
 
-    @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Number", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String number;

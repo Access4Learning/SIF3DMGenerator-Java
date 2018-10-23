@@ -32,15 +32,65 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsStateTerritoryCodeType {
 
+
+    /**
+     * Australian Capital Territory
+     * 
+     */
     ACT,
+
+    /**
+     * New South Wales
+     * 
+     */
     NSW,
+
+    /**
+     * Northern Territory
+     * 
+     */
     NT,
+
+    /**
+     * Queensland
+     * 
+     */
     QLD,
+
+    /**
+     * South Australia
+     * 
+     */
     SA,
+
+    /**
+     * Tasmania
+     * 
+     */
     TAS,
+
+    /**
+     * Victoria
+     * 
+     */
     VIC,
+
+    /**
+     * Western Australia
+     * 
+     */
     WA,
+
+    /**
+     * Not Provided
+     * 
+     */
     XXX,
+
+    /**
+     * Other Territories
+     * 
+     */
     OTH;
 
     public String value() {

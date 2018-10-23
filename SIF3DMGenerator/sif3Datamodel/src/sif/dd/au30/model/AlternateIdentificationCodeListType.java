@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * A list of elements for an organization to utilize for an internal code.  This may be used for an alignment schema or other purposes that are only internal for the organization.
+ * 
  * <p>Java class for AlternateIdentificationCodeListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AlternateIdentificationCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="AlternateIdentificationCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,7 +39,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AlternateIdentificationCodeListType {
 
-    @XmlElement(name = "AlternateIdentificationCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "AlternateIdentificationCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected List<String> alternateIdentificationCode;

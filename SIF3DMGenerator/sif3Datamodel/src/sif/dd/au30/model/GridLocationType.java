@@ -9,6 +9,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * 
+ *         This element contains a map location. The GridLocation element is utilized within the Address element.
+ *       
+ * 
  * <p>Java class for GridLocationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -18,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Latitude" minOccurs="0">
+ *         &lt;element name="Latitude">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
  *               &lt;minInclusive value="-90"/>
@@ -26,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="Longitude" minOccurs="0">
+ *         &lt;element name="Longitude">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
  *               &lt;minInclusive value="-180"/>
@@ -49,9 +53,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class GridLocationType {
 
-    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Latitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal latitude;
-    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Longitude", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal longitude;
 
     /**

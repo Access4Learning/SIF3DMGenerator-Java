@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * GUID from the StudentPersonal  Object that identifies the student.
+ * 
  * <p>Java class for StudentsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

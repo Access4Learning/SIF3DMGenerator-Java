@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ * 
  * <p>Java class for StatementCodesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

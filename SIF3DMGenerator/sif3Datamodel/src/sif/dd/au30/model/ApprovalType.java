@@ -12,6 +12,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * A sub-element containing an authorization to use this resource. For example, this resource may be included as part of the district's standard curriculum model.
+ * 
  * <p>Java class for ApprovalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,8 +23,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Organization" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="Organization" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,11 +40,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ApprovalType {
 
-    @XmlElement(name = "Organization", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Organization", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String organization;
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
 

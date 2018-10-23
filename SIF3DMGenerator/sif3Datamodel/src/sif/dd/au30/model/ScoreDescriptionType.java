@@ -2,16 +2,17 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ * 
  * <p>Java class for ScoreDescriptionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +22,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="ScoreValue" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="Descriptor" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -38,12 +39,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class ScoreDescriptionType {
 
-    @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ScoreValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal scoreValue;
-    @XmlElement(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String descriptor;
+    @XmlElementRef(name = "Descriptor", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> descriptor;
 
     /**
      * Gets the value of the scoreValue property.
@@ -74,10 +73,10 @@ public class ScoreDescriptionType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getDescriptor() {
+    public JAXBElement<String> getDescriptor() {
         return descriptor;
     }
 
@@ -86,10 +85,10 @@ public class ScoreDescriptionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setDescriptor(String value) {
+    public void setDescriptor(JAXBElement<String> value) {
         this.descriptor = value;
     }
 

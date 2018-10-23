@@ -14,6 +14,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ *         This object contains all the personal information relating to a staff member, who might be a teacher or other employee of the school or district.
+ *       
+ * 
  * <p>Java class for StaffPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,11 +27,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
  *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}ElectronicIdListType" minOccurs="0"/>
  *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
- *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
+ *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType"/>
  *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="EmploymentStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsStaffStatusType" minOccurs="0"/>
  *         &lt;element name="MostRecent" type="{http://www.sifassociation.org/datamodel/au/3.4}StaffMostRecentContainerType" minOccurs="0"/>
@@ -57,7 +61,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StaffPersonalType {
 
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
     @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -66,7 +70,7 @@ public class StaffPersonalType {
     protected JAXBElement<ElectronicIdListType> electronicIdList;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherIdListType> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected PersonInfoType personInfo;
     @XmlElementRef(name = "Title", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> title;

@@ -16,6 +16,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * 
+ *         This object provides the link between Period Attendance and the school's timetable.  It allows subject and teaching group information to be communicated to/from the attendance system.
+ *       
+ * 
  * <p>Java class for SessionInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -25,18 +29,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="TimeTableCellRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="TimeTableSubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="TeachingGroupLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="TimeTableCellRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="TimeTableSubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="TeachingGroupLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StaffPersonalLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="RoomNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="SessionDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="SessionDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="RollMarked" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
@@ -73,21 +77,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class SessionInfoType {
 
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "TimeTableCellRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TimeTableCellRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String timeTableCellRefId;
-    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected XMLGregorianCalendar schoolYear;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
-    @XmlElement(name = "TimeTableSubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TimeTableSubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String timeTableSubjectLocalId;
-    @XmlElement(name = "TeachingGroupLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TeachingGroupLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String teachingGroupLocalId;
     @XmlElementRef(name = "SchoolLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -96,13 +100,13 @@ public class SessionInfoType {
     protected JAXBElement<String> staffPersonalLocalId;
     @XmlElementRef(name = "RoomNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> roomNumber;
-    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String dayId;
-    @XmlElement(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String periodId;
-    @XmlElement(name = "SessionDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SessionDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar sessionDate;
     @XmlElementRef(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group for statistical purposes.
+ * 
  * <p>Java class for AggregateCharacteristicInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,7 +26,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Definition" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *         &lt;element name="Definition" type="{http://www.w3.org/2001/XMLSchema}token"/>
  *         &lt;element name="ElementName" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
@@ -49,7 +51,7 @@ public class AggregateCharacteristicInfoType {
 
     @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
-    @XmlElement(name = "Definition", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Definition", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String definition;

@@ -11,6 +11,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * Container for details of a Detention.
+ * 
  * <p>Java class for DetentionContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,7 +22,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="DetentionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsDetentionCategoryType" minOccurs="0"/>
+ *         &lt;element name="DetentionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsDetentionCategoryType"/>
  *         &lt;element name="DetentionDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="DetentionLocation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DetentionNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -43,7 +45,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class DetentionContainerType {
 
-    @XmlElement(name = "DetentionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "DetentionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsDetentionCategoryType detentionCategory;
     @XmlElementRef(name = "DetentionDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> detentionDate;

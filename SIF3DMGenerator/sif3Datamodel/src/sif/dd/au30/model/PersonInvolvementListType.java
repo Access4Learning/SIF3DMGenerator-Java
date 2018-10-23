@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * List of People involved in the Wellbeing event/response.  Mandatory if more people than the student to which this event/response occurs is involved.
+ * 
  * <p>Java class for PersonInvolvementListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

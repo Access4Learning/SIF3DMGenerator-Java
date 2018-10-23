@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * A List of schedule information that can be published by an SIS which is a subset of information available in the TimeTableCell object.
+ * 
  * <p>Java class for TeachingGroupPeriodListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -19,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TeachingGroupPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}TeachingGroupPeriodType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TeachingGroupPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}TeachingGroupPeriodType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TeachingGroupPeriodListType {
 
-    @XmlElement(name = "TeachingGroupPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TeachingGroupPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected List<TeachingGroupPeriodType> teachingGroupPeriod;
 
     /**

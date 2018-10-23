@@ -17,6 +17,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * This object contains information pertaining to student eligibility for and participation in an individualized special program such as special education, ESL, etc.
+ * 
  * <p>Java class for StudentParticipationType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,14 +28,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="StudentParticipationAsOfDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="StudentParticipationAsOfDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *         &lt;element name="ProgramType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsStudentFamilyProgramTypeType" minOccurs="0"/>
  *         &lt;element name="ProgramFundingSources" type="{http://www.sifassociation.org/datamodel/au/3.4}ProgramFundingSourcesType" minOccurs="0"/>
- *         &lt;element name="ManagingSchool" minOccurs="0">
+ *         &lt;element name="ManagingSchool">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -118,17 +120,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class StudentParticipationType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "StudentParticipationAsOfDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentParticipationAsOfDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar studentParticipationAsOfDate;
     @XmlElementRef(name = "ProgramType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> programType;
     @XmlElementRef(name = "ProgramFundingSources", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ProgramFundingSourcesType> programFundingSources;
-    @XmlElement(name = "ManagingSchool", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ManagingSchool", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected StudentParticipationType.ManagingSchool managingSchool;
     @XmlElementRef(name = "ReferralDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> referralDate;
@@ -878,6 +880,8 @@ public class StudentParticipationType {
 
 
     /**
+     * The GUID of the school responsible for coordinating the student's program participation.
+     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -885,7 +889,7 @@ public class StudentParticipationType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -907,13 +911,14 @@ public class StudentParticipationType {
     public static class ManagingSchool {
 
         @XmlValue
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String sifRefObject;
 
         /**
-         * Gets the value of the value property.
+         * A reference to a RefId.
          * 
          * @return
          *     possible object is

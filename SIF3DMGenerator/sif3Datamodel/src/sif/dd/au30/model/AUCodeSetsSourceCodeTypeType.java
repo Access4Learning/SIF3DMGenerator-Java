@@ -27,10 +27,35 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSourceCodeTypeType {
 
+
+    /**
+     * Provided by the child (ie pupil)
+     * 
+     */
     C,
+
+    /**
+     * Other 
+     * 
+     */
     O,
+
+    /**
+     * Provided by the parent
+     * 
+     */
     P,
+
+    /**
+     * Ascribed by the current school
+     * 
+     */
     S,
+
+    /**
+     * Ascribed by a previous school
+     * 
+     */
     T;
 
     public String value() {

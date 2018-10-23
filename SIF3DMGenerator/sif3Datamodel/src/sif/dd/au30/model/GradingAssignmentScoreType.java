@@ -16,6 +16,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * 
+ *         This object provides score information about a particular assignment. 
+ *       
+ * 
  * <p>Java class for GradingAssignmentScoreType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,10 +30,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="StudentPersonalLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="StudentPersonalLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="TeachingGroupRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="GradingAssignmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="GradingAssignmentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
  *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="DateGraded" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="ExpectedScore" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
@@ -77,14 +81,14 @@ public class GradingAssignmentScoreType {
 
     @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentPersonalRefId;
-    @XmlElement(name = "StudentPersonalLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentPersonalLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String studentPersonalLocalId;
     @XmlElementRef(name = "TeachingGroupRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> teachingGroupRefId;
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElement(name = "GradingAssignmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "GradingAssignmentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String gradingAssignmentRefId;
     @XmlElementRef(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

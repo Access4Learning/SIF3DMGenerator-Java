@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * List of RefIds of financial account codes.
+ * 
  * <p>Java class for FinancialAccountRefIdListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

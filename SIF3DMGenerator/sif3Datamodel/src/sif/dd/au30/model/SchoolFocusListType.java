@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * List containing the education focus codes of the campus/school.
+ * 
  * <p>Java class for SchoolFocusListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolFocus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolFocusCodeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SchoolFocus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolFocusCodeType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +38,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class SchoolFocusListType {
 
-    @XmlElement(name = "SchoolFocus", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolFocus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> schoolFocus;
 

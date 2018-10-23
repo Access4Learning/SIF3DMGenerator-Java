@@ -32,19 +32,64 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingEventLocationType {
 
+
+    /**
+     * Off-site
+     * 
+     */
     @XmlEnumValue("Off")
     OFF("Off"),
+
+    /**
+     * On school site - not further defined
+     * 
+     */
     @XmlEnumValue("On")
     ON("On"),
+
+    /**
+     * School Excursion
+     * 
+     */
     @XmlEnumValue("Ex")
     EX("Ex"),
+
+    /**
+     * School Incursion
+     * 
+     */
     @XmlEnumValue("In")
     IN("In"),
+
+    /**
+     * Oval
+     * 
+     */
     @XmlEnumValue("Ov")
     OV("Ov"),
+
+    /**
+     * Playground
+     * 
+     */
     P("P"),
+
+    /**
+     * Library
+     * 
+     */
     L("L"),
+
+    /**
+     * Classroom
+     * 
+     */
     C("C"),
+
+    /**
+     * Other
+     * 
+     */
     O("O");
     private final String value;
 

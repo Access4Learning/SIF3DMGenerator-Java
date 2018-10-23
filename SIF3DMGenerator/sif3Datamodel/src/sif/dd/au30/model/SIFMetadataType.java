@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * A commonly defined container for metadata elements defined within SIF.
+ * 
  * <p>Java class for SIF_MetadataType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -28,13 +28,38 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsDayValueCodeType {
 
+
+    /**
+     * Morning
+     * 
+     */
     AM("AM"),
+
+    /**
+     * All Day
+     * 
+     */
     @XmlEnumValue("Full")
     FULL("Full"),
+
+    /**
+     * Not Applicable
+     * 
+     */
     @XmlEnumValue("N/A")
     N_A("N/A"),
+
+    /**
+     * Partial Day
+     * 
+     */
     @XmlEnumValue("Partial")
     PARTIAL("Partial"),
+
+    /**
+     * Afternoon
+     * 
+     */
     PM("PM");
     private final String value;
 

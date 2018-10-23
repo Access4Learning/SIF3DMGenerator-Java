@@ -12,6 +12,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ *         Reference to one or more AggregateCharacteristicInfo objects.
+ *       
+ * 
  * <p>Java class for CharacteristicsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +25,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AggregateCharacteristicInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="AggregateCharacteristicInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +40,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class CharacteristicsType {
 
-    @XmlElement(name = "AggregateCharacteristicInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "AggregateCharacteristicInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> aggregateCharacteristicInfoRefId;
 

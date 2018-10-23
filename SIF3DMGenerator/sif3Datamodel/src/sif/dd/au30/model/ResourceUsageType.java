@@ -19,6 +19,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * Note: WARNING This object has been marked for deprecation and is planned to be removed with the 3.5 SIF AU Data Model release. If you plan to use this object, please contact your SIF AU DSWG member, please note that it may become unavailable.
+ * 		  
+ * 
  * <p>Java class for ResourceUsageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -28,30 +31,30 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="ResourceUsageContentType" minOccurs="0">
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="ResourceUsageContentType">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsResourceUsageContentTypeType" minOccurs="0"/>
+ *                   &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsResourceUsageContentTypeType"/>
  *                   &lt;element name="LocalDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="ResourceReportColumnList" minOccurs="0">
+ *         &lt;element name="ResourceReportColumnList">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="ResourceReportColumn" maxOccurs="unbounded" minOccurs="0">
+ *                   &lt;element name="ResourceReportColumn" maxOccurs="unbounded">
  *                     &lt;complexType>
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element name="ColumnName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                             &lt;element name="ColumnName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *                             &lt;element name="ColumnDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                             &lt;element name="ColumnDelimiter" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                           &lt;/sequence>
@@ -64,12 +67,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="ResourceReportLineList" minOccurs="0">
+ *         &lt;element name="ResourceReportLineList">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="ResourceReportLine" maxOccurs="unbounded" minOccurs="0">
+ *                   &lt;element name="ResourceReportLine" maxOccurs="unbounded">
  *                     &lt;complexType>
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -77,7 +80,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                             &lt;element name="SIF_RefId" minOccurs="0">
  *                               &lt;complexType>
  *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+ *                                   &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
  *                                     &lt;attribute name="SIF_RefObject" use="required">
  *                                       &lt;simpleType>
  *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -91,10 +94,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *                                 &lt;/simpleContent>
  *                               &lt;/complexType>
  *                             &lt;/element>
- *                             &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *                             &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *                             &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *                             &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
- *                             &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                             &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType"/>
+ *                             &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *                           &lt;/sequence>
  *                         &lt;/restriction>
  *                       &lt;/complexContent>
@@ -127,14 +130,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ResourceUsageType {
 
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "ResourceUsageContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ResourceUsageContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected ResourceUsageType.ResourceUsageContentType resourceUsageContentType;
-    @XmlElement(name = "ResourceReportColumnList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ResourceReportColumnList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected ResourceUsageType.ResourceReportColumnList resourceReportColumnList;
-    @XmlElement(name = "ResourceReportLineList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ResourceReportLineList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected ResourceUsageType.ResourceReportLineList resourceReportLineList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
@@ -323,12 +326,12 @@ public class ResourceUsageType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="ResourceReportColumn" maxOccurs="unbounded" minOccurs="0">
+     *         &lt;element name="ResourceReportColumn" maxOccurs="unbounded">
      *           &lt;complexType>
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element name="ColumnName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                   &lt;element name="ColumnName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
      *                   &lt;element name="ColumnDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                   &lt;element name="ColumnDelimiter" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                 &lt;/sequence>
@@ -350,7 +353,7 @@ public class ResourceUsageType {
     })
     public static class ResourceReportColumnList {
 
-        @XmlElement(name = "ResourceReportColumn", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+        @XmlElement(name = "ResourceReportColumn", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
         protected List<ResourceUsageType.ResourceReportColumnList.ResourceReportColumn> resourceReportColumn;
 
         /**
@@ -393,7 +396,7 @@ public class ResourceUsageType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element name="ColumnName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *         &lt;element name="ColumnName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
          *         &lt;element name="ColumnDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *         &lt;element name="ColumnDelimiter" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *       &lt;/sequence>
@@ -412,7 +415,7 @@ public class ResourceUsageType {
         })
         public static class ResourceReportColumn {
 
-            @XmlElement(name = "ColumnName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+            @XmlElement(name = "ColumnName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String columnName;
@@ -508,7 +511,7 @@ public class ResourceUsageType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="ResourceReportLine" maxOccurs="unbounded" minOccurs="0">
+     *         &lt;element name="ResourceReportLine" maxOccurs="unbounded">
      *           &lt;complexType>
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -516,7 +519,7 @@ public class ResourceUsageType {
      *                   &lt;element name="SIF_RefId" minOccurs="0">
      *                     &lt;complexType>
      *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+     *                         &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
      *                           &lt;attribute name="SIF_RefObject" use="required">
      *                             &lt;simpleType>
      *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -530,10 +533,10 @@ public class ResourceUsageType {
      *                       &lt;/simpleContent>
      *                     &lt;/complexType>
      *                   &lt;/element>
-     *                   &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+     *                   &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
      *                   &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-     *                   &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
-     *                   &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                   &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType"/>
+     *                   &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
      *                 &lt;/sequence>
      *               &lt;/restriction>
      *             &lt;/complexContent>
@@ -553,7 +556,7 @@ public class ResourceUsageType {
     })
     public static class ResourceReportLineList {
 
-        @XmlElement(name = "ResourceReportLine", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+        @XmlElement(name = "ResourceReportLine", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
         protected List<ResourceUsageType.ResourceReportLineList.ResourceReportLine> resourceReportLine;
 
         /**
@@ -599,7 +602,7 @@ public class ResourceUsageType {
          *         &lt;element name="SIF_RefId" minOccurs="0">
          *           &lt;complexType>
          *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+         *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
          *                 &lt;attribute name="SIF_RefObject" use="required">
          *                   &lt;simpleType>
          *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -613,10 +616,10 @@ public class ResourceUsageType {
          *             &lt;/simpleContent>
          *           &lt;/complexType>
          *         &lt;/element>
-         *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+         *         &lt;element name="StartDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
          *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
-         *         &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
-         *         &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *         &lt;element name="CurrentCost" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType"/>
+         *         &lt;element name="ReportRow" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
          *       &lt;/sequence>
          *     &lt;/restriction>
          *   &lt;/complexContent>
@@ -637,14 +640,14 @@ public class ResourceUsageType {
 
             @XmlElementRef(name = "SIF_RefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<ResourceUsageType.ResourceReportLineList.ResourceReportLine.SIFRefId> sifRefId;
-            @XmlElement(name = "StartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+            @XmlElement(name = "StartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
             @XmlSchemaType(name = "date")
             protected XMLGregorianCalendar startDate;
             @XmlElementRef(name = "EndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
             protected JAXBElement<XMLGregorianCalendar> endDate;
-            @XmlElement(name = "CurrentCost", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+            @XmlElement(name = "CurrentCost", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
             protected MonetaryAmountType currentCost;
-            @XmlElement(name = "ReportRow", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+            @XmlElement(name = "ReportRow", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String reportRow;
@@ -771,6 +774,8 @@ public class ResourceUsageType {
 
 
             /**
+             * SIF RefId that identifies the student, staff or group whose usage is being tracked.
+             * 
              * <p>Java class for anonymous complex type.
              * 
              * <p>The following schema fragment specifies the expected content contained within this class.
@@ -778,7 +783,7 @@ public class ResourceUsageType {
              * <pre>
              * &lt;complexType>
              *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+             *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
              *       &lt;attribute name="SIF_RefObject" use="required">
              *         &lt;simpleType>
              *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -802,13 +807,14 @@ public class ResourceUsageType {
             public static class SIFRefId {
 
                 @XmlValue
+                @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
                 protected String value;
                 @XmlAttribute(name = "SIF_RefObject", required = true)
                 @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
                 protected String sifRefObject;
 
                 /**
-                 * Gets the value of the value property.
+                 * A reference to a RefId.
                  * 
                  * @return
                  *     possible object is
@@ -872,7 +878,7 @@ public class ResourceUsageType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsResourceUsageContentTypeType" minOccurs="0"/>
+     *         &lt;element name="Code" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsResourceUsageContentTypeType"/>
      *         &lt;element name="LocalDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
@@ -889,7 +895,7 @@ public class ResourceUsageType {
     })
     public static class ResourceUsageContentType {
 
-        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+        @XmlElement(name = "Code", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String code;
         @XmlElementRef(name = "LocalDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

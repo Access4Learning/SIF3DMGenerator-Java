@@ -12,6 +12,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * Contents of an assessment assigned in the context of NAP, targeted at a particular domain and year level.
+ * 
  * <p>Java class for NAPTestContentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,15 +23,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="TestName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="TestLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
- *         &lt;element name="TestType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestTypeType" minOccurs="0"/>
- *         &lt;element name="Domain" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestDomainType" minOccurs="0"/>
- *         &lt;element name="TestYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="StagesCount" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *         &lt;element name="DomainBands" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainBandsContainerType" minOccurs="0"/>
- *         &lt;element name="DomainProficiency" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainProficiencyContainerType" minOccurs="0"/>
+ *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="TestName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="TestLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType"/>
+ *         &lt;element name="TestType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestTypeType"/>
+ *         &lt;element name="Domain" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPTestDomainType"/>
+ *         &lt;element name="TestYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
+ *         &lt;element name="StagesCount" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="DomainBands" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainBandsContainerType"/>
+ *         &lt;element name="DomainProficiency" type="{http://www.sifassociation.org/datamodel/au/3.4}DomainProficiencyContainerType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -52,26 +54,26 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class NAPTestContentType {
 
-    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestLocalId;
-    @XmlElement(name = "TestName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String testName;
-    @XmlElement(name = "TestLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected YearLevelType testLevel;
-    @XmlElement(name = "TestType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsNAPTestTypeType testType;
-    @XmlElement(name = "Domain", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Domain", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsNAPTestDomainType domain;
-    @XmlElement(name = "TestYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TestYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected XMLGregorianCalendar testYear;
     @XmlElement(name = "StagesCount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected Integer stagesCount;
-    @XmlElement(name = "DomainBands", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected int stagesCount;
+    @XmlElement(name = "DomainBands", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected DomainBandsContainerType domainBands;
-    @XmlElement(name = "DomainProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "DomainProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected DomainProficiencyContainerType domainProficiency;
 
     /**
@@ -221,24 +223,16 @@ public class NAPTestContentType {
     /**
      * Gets the value of the stagesCount property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
      */
-    public Integer getStagesCount() {
+    public int getStagesCount() {
         return stagesCount;
     }
 
     /**
      * Sets the value of the stagesCount property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
      */
-    public void setStagesCount(Integer value) {
+    public void setStagesCount(int value) {
         this.stagesCount = value;
     }
 

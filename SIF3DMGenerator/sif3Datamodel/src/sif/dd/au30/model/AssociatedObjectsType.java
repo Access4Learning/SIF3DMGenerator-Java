@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * References from component to associated elements within another SIF object.
+ * 
  * <p>Java class for AssociatedObjectsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,7 +28,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="AssociatedObject" maxOccurs="unbounded" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
  *                 &lt;attribute name="SIF_RefObject" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}ObjectNameType" />
  *               &lt;/extension>
  *             &lt;/simpleContent>
@@ -80,6 +82,8 @@ public class AssociatedObjectsType {
 
 
     /**
+     * Reference from component to associated elements within another SIF object.
+     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -87,7 +91,7 @@ public class AssociatedObjectsType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
      *       &lt;attribute name="SIF_RefObject" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}ObjectNameType" />
      *     &lt;/extension>
      *   &lt;/simpleContent>
@@ -103,13 +107,14 @@ public class AssociatedObjectsType {
     public static class AssociatedObject {
 
         @XmlValue
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String sifRefObject;
 
         /**
-         * Gets the value of the value property.
+         * A reference to a RefId.
          * 
          * @return
          *     possible object is

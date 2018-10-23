@@ -15,6 +15,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ *         The purpose of this object is to identify a specific cell within a particular TimeTable.  A time table is a structure that represents all the available days and times (periods) for which a particular teaching group, or subject can be scheduled.
+ *       
+ * 
  * <p>Java class for TimeTableCellType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,9 +28,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TimeTableRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="TimeTableRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
  *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="TeachingGroupRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="TeachingGroupRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
  *         &lt;element name="RoomInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="TimeTableLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
@@ -34,9 +38,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="TeachingGroupLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="RoomNumber" type="{http://www.sifassociation.org/datamodel/au/3.4}HomeroomNumberType" minOccurs="0"/>
  *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="CellType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="CellType" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SchoolLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="TeacherList" type="{http://www.sifassociation.org/datamodel/au/3.4}ScheduledTeacherListType" minOccurs="0"/>
@@ -76,12 +80,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class TimeTableCellType {
 
-    @XmlElement(name = "TimeTableRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TimeTableRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String timeTableRefId;
     @XmlElementRef(name = "TimeTableSubjectRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> timeTableSubjectRefId;
-    @XmlElement(name = "TeachingGroupRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "TeachingGroupRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String teachingGroupRefId;
     @XmlElementRef(name = "RoomInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -98,13 +102,13 @@ public class TimeTableCellType {
     protected JAXBElement<String> roomNumber;
     @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> staffLocalId;
-    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String dayId;
-    @XmlElement(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String periodId;
-    @XmlElement(name = "CellType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CellType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String cellType;

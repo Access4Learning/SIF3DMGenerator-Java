@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Contains information about required software.
+ * 
  * <p>Java class for SoftwareRequirementListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

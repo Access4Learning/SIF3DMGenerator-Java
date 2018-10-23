@@ -29,12 +29,47 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsDetentionCategoryType {
 
+
+    /**
+     * Before School
+     * 
+     */
     B,
+
+    /**
+     * Recess
+     * 
+     */
     R,
+
+    /**
+     * Morning Recess
+     * 
+     */
     MR,
+
+    /**
+     * Afternoon Recess
+     * 
+     */
     AR,
+
+    /**
+     * After School
+     * 
+     */
     A,
+
+    /**
+     * Lunch
+     * 
+     */
     L,
+
+    /**
+     * Other
+     * 
+     */
     O;
 
     public String value() {

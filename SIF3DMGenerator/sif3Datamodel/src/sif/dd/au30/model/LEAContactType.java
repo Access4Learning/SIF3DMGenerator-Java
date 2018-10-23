@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Information on contact persons for this LEA.
+ * 
  * <p>Java class for LEAContactType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="PublishInDirectory" type="{http://www.sifassociation.org/datamodel/au/3.4}PublishInDirectoryType" minOccurs="0"/>
- *         &lt;element name="ContactInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}ContactInfoType" minOccurs="0"/>
+ *         &lt;element name="ContactInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}ContactInfoType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,7 +40,7 @@ public class LEAContactType {
 
     @XmlElementRef(name = "PublishInDirectory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> publishInDirectory;
-    @XmlElement(name = "ContactInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ContactInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected ContactInfoType contactInfo;
 
     /**

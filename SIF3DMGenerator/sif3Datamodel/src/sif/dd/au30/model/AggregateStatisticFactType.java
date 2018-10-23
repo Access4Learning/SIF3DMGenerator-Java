@@ -14,6 +14,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * This object is the actual value of a statistical measurement. It is always associated with one statistic and one or more characteristics.
+ * 
  * <p>Java class for AggregateStatisticFactType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,8 +25,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AggregateStatisticInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="Characteristics" type="{http://www.sifassociation.org/datamodel/au/3.4}CharacteristicsType" minOccurs="0"/>
+ *         &lt;element name="AggregateStatisticInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="Characteristics" type="{http://www.sifassociation.org/datamodel/au/3.4}CharacteristicsType"/>
  *         &lt;element name="Excluded" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -33,7 +35,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -56,14 +58,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AggregateStatisticFactType {
 
-    @XmlElement(name = "AggregateStatisticInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "AggregateStatisticInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String aggregateStatisticInfoRefId;
-    @XmlElement(name = "Characteristics", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Characteristics", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected CharacteristicsType characteristics;
     @XmlElementRef(name = "Excluded", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> excluded;
-    @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Value", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected BigDecimal value;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;

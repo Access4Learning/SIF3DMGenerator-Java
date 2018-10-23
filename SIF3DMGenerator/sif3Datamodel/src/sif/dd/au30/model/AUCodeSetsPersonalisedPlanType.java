@@ -30,14 +30,49 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsPersonalisedPlanType {
 
+
+    /**
+     * Medical
+     * 
+     */
     M("M"),
+
+    /**
+     * Attendance
+     * 
+     */
     @XmlEnumValue("At")
     AT("At"),
+
+    /**
+     * Academic
+     * 
+     */
     @XmlEnumValue("Ac")
     AC("Ac"),
+
+    /**
+     * Behavioural
+     * 
+     */
     B("B"),
+
+    /**
+     * Special Needs
+     * 
+     */
     S("S"),
+
+    /**
+     * Legal
+     * 
+     */
     L("L"),
+
+    /**
+     * Other
+     * 
+     */
     O("O");
     private final String value;
 

@@ -9,6 +9,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * A staff member, (or members), who were involved with the grading of the student, or who was responsible for any associated teacher judgement and their associated role.  Must be a current member of staff.
+ * 
  * <p>Java class for MarkerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

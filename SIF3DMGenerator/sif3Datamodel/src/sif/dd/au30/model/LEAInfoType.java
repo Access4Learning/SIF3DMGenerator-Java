@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * This object contains information about a school district, region, or other Local, State or Jurisdiction Educational Authority.
+ * 
  * <p>Java class for LEAInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,10 +26,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
  *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="LEAName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="LEAName" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="LEAURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="EducationAgencyType" type="{http://www.sifassociation.org/datamodel/au/3.4}AgencyType" minOccurs="0"/>
  *         &lt;element name="LEAContactList" type="{http://www.sifassociation.org/datamodel/au/3.4}LEAContactListType" minOccurs="0"/>
@@ -66,14 +68,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class LEAInfoType {
 
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
     @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
     @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> commonwealthId;
-    @XmlElement(name = "LEAName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LEAName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String leaName;

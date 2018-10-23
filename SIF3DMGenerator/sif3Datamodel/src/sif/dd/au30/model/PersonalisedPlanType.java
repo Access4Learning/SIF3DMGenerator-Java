@@ -15,6 +15,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * result of a Core Characteristic, Legal order, Pastoral Care info, ability or Student Behaviour. Will be a document, and the feeling in the room was that SIF would most usefully capture metadata around the document. Plans can be specific to a domain, but are still expected to aggregate information gathered about student in disparate locations. Extensive area and need to note in SIF only that information that needs to be transferred between systems or agencies.  Broad categories of Learning Plans that have been identified so far are Medical Plan, Learning Plan, Attendance Plan and Behavioural Plan.
+ * 
  * <p>Java class for PersonalisedPlanType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,10 +26,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="PersonalisedPlanCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPersonalisedPlanType" minOccurs="0"/>
- *         &lt;element name="PersonalisedPlanStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="PersonalisedPlanCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPersonalisedPlanType"/>
+ *         &lt;element name="PersonalisedPlanStartDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *         &lt;element name="PersonalisedPlanEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="PersonalisedPlanReviewDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="PersonalisedPlanNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -60,15 +62,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class PersonalisedPlanType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "PersonalisedPlanCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PersonalisedPlanCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsPersonalisedPlanType personalisedPlanCategory;
-    @XmlElement(name = "PersonalisedPlanStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PersonalisedPlanStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar personalisedPlanStartDate;
     @XmlElementRef(name = "PersonalisedPlanEndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

@@ -17,6 +17,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * This object represents a student's attempt to undergo NAP assessment in a particular test.
+ * 
  * <p>Java class for NAPEventStudentLinkType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,18 +29,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="PlatformStudentIdentifier" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="PlatformStudentIdentifier" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="SchoolACARAId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
  *         &lt;element name="NAPTestRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
- *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="SchoolSector" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolSectorCodeType" minOccurs="0"/>
+ *         &lt;element name="NAPTestLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="SchoolSector" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolSectorCodeType"/>
  *         &lt;element name="System" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolSystemType" minOccurs="0"/>
  *         &lt;element name="SchoolGeolocation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolLocationType" minOccurs="0"/>
  *         &lt;element name="ReportingSchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="NAPJurisdiction" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPJurisdictionType" minOccurs="0"/>
- *         &lt;element name="ParticipationCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPParticipationCodeType" minOccurs="0"/>
- *         &lt;element name="ParticipationText" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ParticipationCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNAPParticipationCodeType"/>
+ *         &lt;element name="ParticipationText" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="Device" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
@@ -94,20 +96,20 @@ public class NAPEventStudentLinkType {
 
     @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentPersonalRefId;
-    @XmlElement(name = "PlatformStudentIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "PlatformStudentIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String platformStudentIdentifier;
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
-    @XmlElement(name = "SchoolACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String schoolACARAId;
     @XmlElementRef(name = "NAPTestRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napTestRefId;
-    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "NAPTestLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String napTestLocalId;
-    @XmlElement(name = "SchoolSector", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "SchoolSector", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsSchoolSectorCodeType schoolSector;
     @XmlElementRef(name = "System", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> system;
@@ -117,9 +119,9 @@ public class NAPEventStudentLinkType {
     protected JAXBElement<String> reportingSchoolName;
     @XmlElementRef(name = "NAPJurisdiction", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> napJurisdiction;
-    @XmlElement(name = "ParticipationCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ParticipationCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected AUCodeSetsNAPParticipationCodeType participationCode;
-    @XmlElement(name = "ParticipationText", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ParticipationText", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String participationText;

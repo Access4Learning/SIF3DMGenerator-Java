@@ -20,6 +20,11 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="AAM"/>
  *     &lt;enumeration value="AVM"/>
  *     &lt;enumeration value="ALL"/>
+ *     &lt;enumeration value="BNB"/>
+ *     &lt;enumeration value="BNG"/>
+ *     &lt;enumeration value="BNL"/>
+ *     &lt;enumeration value="BNW"/>
+ *     &lt;enumeration value="BNY"/>
  *     &lt;enumeration value="COL"/>
  *     &lt;enumeration value="OFF"/>
  *     &lt;enumeration value="ETA"/>
@@ -30,6 +35,13 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="SCR"/>
  *     &lt;enumeration value="SUP"/>
  *     &lt;enumeration value="ETD"/>
+ *     &lt;enumeration value="CAL"/>
+ *     &lt;enumeration value="ENZ"/>
+ *     &lt;enumeration value="EST"/>
+ *     &lt;enumeration value="LFS"/>
+ *     &lt;enumeration value="RZL"/>
+ *     &lt;enumeration value="ZOF"/>
+ *     &lt;enumeration value="ZTFAO"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -39,23 +51,180 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsPNPCodeType {
 
+
+    /**
+     * Alternative items - audio
+     * 
+     */
     AIA,
+
+    /**
+     * Not In Use 2019
+     * 
+     */
     AIM,
+
+    /**
+     * Alternative items - visual
+     * 
+     */
     AIV,
+
+    /**
+     * Assistive technology
+     * 
+     */
     AST,
+
+    /**
+     * Not in Use 2019
+     * 
+     */
     AAM,
+
+    /**
+     * Not in Use 2019
+     * 
+     */
     AVM,
+
+    /**
+     * Not in Use 2019
+     * 
+     */
     ALL,
+
+    /**
+     * Colour contrast Black with Blue background
+     * 
+     */
+    BNB,
+
+    /**
+     * Colour contrast Black with Green background
+     * 
+     */
+    BNG,
+
+    /**
+     * Colour contrast Black with Lilac background
+     * 
+     */
+    BNL,
+
+    /**
+     * Colour contrast Black with White background
+     * 
+     */
+    BNW,
+
+    /**
+     * Colour contrast Black with Yellow background
+     * 
+     */
+    BNY,
+
+    /**
+     * Colour contrast modification
+     * 
+     */
     COL,
+
+    /**
+     * Braille, large print, black and white, electronic test format
+     * 
+     */
     OFF,
+
+    /**
+     * Extra Time - 5 mins per 30 min or part thereof
+     * 
+     */
     ETA,
+
+    /**
+     * Extra Time - 10 mins per 30 min or part thereof
+     * 
+     */
     ETB,
+
+    /**
+     * Extra Time - 15 mins per 30 min or part thereof
+     * 
+     */
     ETC,
+
+    /**
+     * Oral sign/support
+     * 
+     */
     OSS,
+
+    /**
+     * Rest break
+     * 
+     */
     RBK,
+
+    /**
+     * Scribe
+     * 
+     */
     SCR,
+
+    /**
+     * NAPLAN Support person
+     * 
+     */
     SUP,
-    ETD;
+
+    /**
+     * Extra Time - double total test time
+     * 
+     */
+    ETD,
+
+    /**
+     * Calculator Fit to Screen
+     * 
+     */
+    CAL,
+
+    /**
+     * Enable Zoom
+     * 
+     */
+    ENZ,
+
+    /**
+     * Editor Sticky Toolbar
+     * 
+     */
+    EST,
+
+    /**
+     * Larger Font Sizes
+     * 
+     */
+    LFS,
+
+    /**
+     * Remember Zoom Level
+     * 
+     */
+    RZL,
+
+    /**
+     * Zoomed Optimised Features
+     * 
+     */
+    ZOF,
+
+    /**
+     * Zoom to Always On
+     * 
+     */
+    ZTFAO;
 
     public String value() {
         return name();

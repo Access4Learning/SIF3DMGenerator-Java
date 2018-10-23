@@ -24,7 +24,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSystemicStatusType {
 
+
+    /**
+     * Non-Systemic
+     * 
+     */
     N,
+
+    /**
+     * Systemic
+     * 
+     */
     S;
 
     public String value() {

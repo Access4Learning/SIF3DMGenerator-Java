@@ -13,6 +13,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * 
+ *       This object contains information related to curriculum standards statements "standards" or "benchmarks" or the like
+ *       within the document. Each LearningStandardItem reflects an individual standard statement and may occur
+ *       at several levels within a hierarchially structured document.
+ *     
+ * 
  * <p>Java class for LearningStandardItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,14 +30,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="Resources" type="{http://www.sifassociation.org/datamodel/au/3.4}LResourcesType" minOccurs="0"/>
  *         &lt;element name="StandardSettingBody" type="{http://www.sifassociation.org/datamodel/au/3.4}StandardsSettingBodyType" minOccurs="0"/>
- *         &lt;element name="StandardHierarchyLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}StandardHierarchyLevelType" minOccurs="0"/>
+ *         &lt;element name="StandardHierarchyLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}StandardHierarchyLevelType"/>
  *         &lt;element name="PredecessorItems" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardsType" minOccurs="0"/>
  *         &lt;element name="StatementCodes" type="{http://www.sifassociation.org/datamodel/au/3.4}StatementCodesType" minOccurs="0"/>
  *         &lt;element name="Statements" type="{http://www.sifassociation.org/datamodel/au/3.4}StatementsType" minOccurs="0"/>
- *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
+ *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType"/>
  *         &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}ACStrandSubjectAreaType" minOccurs="0"/>
  *         &lt;element name="StandardIdentifier" type="{http://www.sifassociation.org/datamodel/au/3.4}StandardIdentifierType" minOccurs="0"/>
- *         &lt;element name="LearningStandardDocumentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="LearningStandardDocumentRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
  *         &lt;element name="RelatedLearningStandardItems" type="{http://www.sifassociation.org/datamodel/au/3.4}RelatedLearningStandardItemRefIdListType" minOccurs="0"/>
  *         &lt;element name="Level4" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Level5" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -70,7 +76,7 @@ public class LearningStandardItemType {
     protected JAXBElement<LResourcesType> resources;
     @XmlElementRef(name = "StandardSettingBody", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StandardsSettingBodyType> standardSettingBody;
-    @XmlElement(name = "StandardHierarchyLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StandardHierarchyLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected StandardHierarchyLevelType standardHierarchyLevel;
     @XmlElementRef(name = "PredecessorItems", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardsType> predecessorItems;
@@ -78,13 +84,13 @@ public class LearningStandardItemType {
     protected JAXBElement<StatementCodesType> statementCodes;
     @XmlElementRef(name = "Statements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StatementsType> statements;
-    @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected YearLevelsType yearLevels;
     @XmlElementRef(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ACStrandSubjectAreaType> acStrandSubjectArea;
     @XmlElementRef(name = "StandardIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StandardIdentifierType> standardIdentifier;
-    @XmlElement(name = "LearningStandardDocumentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "LearningStandardDocumentRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String learningStandardDocumentRefId;
     @XmlElementRef(name = "RelatedLearningStandardItems", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

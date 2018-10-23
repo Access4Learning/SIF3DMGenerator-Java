@@ -10,6 +10,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * Container for details of any other response that can not be classified by previous types.
+ * 
  * <p>Java class for OtherWellbeingResponseContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

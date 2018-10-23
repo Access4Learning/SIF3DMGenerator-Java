@@ -11,6 +11,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * This flag should be used to indicate whether or not this ScheduledActivity overrides a previous ScheduledActivity. In any initial provisioning this element should NOT be provided.
+ * 
  * <p>Java class for ScheduledActivityOverrideType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -18,7 +20,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <pre>
  * &lt;complexType name="ScheduledActivityOverrideType">
  *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>AUCodeSetsYesOrNoCategoryTypeOrEmpty">
+ *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>AUCodeSetsYesOrNoCategoryType">
  *       &lt;attribute name="DateOfOverride" type="{http://www.w3.org/2001/XMLSchema}date" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
@@ -34,7 +36,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class ScheduledActivityOverrideType {
 
     @XmlValue
-    protected String value;
+    protected AUCodeSetsYesOrNoCategoryType value;
     @XmlAttribute(name = "DateOfOverride")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateOfOverride;
@@ -44,10 +46,10 @@ public class ScheduledActivityOverrideType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link AUCodeSetsYesOrNoCategoryType }
      *     
      */
-    public String getValue() {
+    public AUCodeSetsYesOrNoCategoryType getValue() {
         return value;
     }
 
@@ -56,10 +58,10 @@ public class ScheduledActivityOverrideType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link AUCodeSetsYesOrNoCategoryType }
      *     
      */
-    public void setValue(String value) {
+    public void setValue(AUCodeSetsYesOrNoCategoryType value) {
         this.value = value;
     }
 

@@ -28,14 +28,39 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPTestDomainType {
 
+
+    /**
+     * Reading
+     * 
+     */
     @XmlEnumValue("Reading")
     READING("Reading"),
+
+    /**
+     * Writing
+     * 
+     */
     @XmlEnumValue("Writing")
     WRITING("Writing"),
+
+    /**
+     * Numeracy
+     * 
+     */
     @XmlEnumValue("Numeracy")
     NUMERACY("Numeracy"),
+
+    /**
+     * Spelling
+     * 
+     */
     @XmlEnumValue("Spelling")
     SPELLING("Spelling"),
+
+    /**
+     * Grammar and Punctuation
+     * 
+     */
     @XmlEnumValue("Grammar and Punctuation")
     GRAMMAR_AND_PUNCTUATION("Grammar and Punctuation");
     private final String value;

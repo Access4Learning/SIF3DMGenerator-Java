@@ -11,6 +11,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
+ * An audit trail to help determine who entered this event and when.
+ * 
  * <p>Java class for AuditInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,8 +22,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CreationUser" type="{http://www.sifassociation.org/datamodel/au/3.4}CreationUserType" minOccurs="0"/>
- *         &lt;element name="CreationDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="CreationUser" type="{http://www.sifassociation.org/datamodel/au/3.4}CreationUserType"/>
+ *         &lt;element name="CreationDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,9 +39,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AuditInfoType {
 
-    @XmlElement(name = "CreationUser", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "CreationUser", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected CreationUserType creationUser;
-    @XmlElement(name = "CreationDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = String.class)
+    @XmlElement(name = "CreationDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true, type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
     protected Calendar creationDateTime;

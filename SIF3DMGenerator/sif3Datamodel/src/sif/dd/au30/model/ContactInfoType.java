@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Common element used to supply information for a contact person at a school, LEA, or other institution.
+ * 
  * <p>Java class for ContactInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -19,9 +21,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Name" type="{http://www.sifassociation.org/datamodel/au/3.4}NameType" minOccurs="0"/>
+ *         &lt;element name="Name" type="{http://www.sifassociation.org/datamodel/au/3.4}NameType"/>
  *         &lt;element name="PositionTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Role" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="RegistrationDetails" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Qualifications" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Address" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressType" minOccurs="0"/>
  *         &lt;element name="EmailList" type="{http://www.sifassociation.org/datamodel/au/3.4}EmailListType" minOccurs="0"/>
  *         &lt;element name="PhoneNumberList" type="{http://www.sifassociation.org/datamodel/au/3.4}PhoneNumberListType" minOccurs="0"/>
@@ -38,18 +42,24 @@ import javax.xml.bind.annotation.XmlType;
     "name",
     "positionTitle",
     "role",
+    "registrationDetails",
+    "qualifications",
     "address",
     "emailList",
     "phoneNumberList"
 })
 public class ContactInfoType {
 
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected NameType name;
     @XmlElementRef(name = "PositionTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> positionTitle;
     @XmlElementRef(name = "Role", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> role;
+    @XmlElementRef(name = "RegistrationDetails", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> registrationDetails;
+    @XmlElementRef(name = "Qualifications", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> qualifications;
     @XmlElementRef(name = "Address", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressType> address;
     @XmlElementRef(name = "EmailList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -127,6 +137,54 @@ public class ContactInfoType {
      */
     public void setRole(JAXBElement<String> value) {
         this.role = value;
+    }
+
+    /**
+     * Gets the value of the registrationDetails property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getRegistrationDetails() {
+        return registrationDetails;
+    }
+
+    /**
+     * Sets the value of the registrationDetails property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setRegistrationDetails(JAXBElement<String> value) {
+        this.registrationDetails = value;
+    }
+
+    /**
+     * Gets the value of the qualifications property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getQualifications() {
+        return qualifications;
+    }
+
+    /**
+     * Sets the value of the qualifications property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setQualifications(JAXBElement<String> value) {
+        this.qualifications = value;
     }
 
     /**

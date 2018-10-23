@@ -30,13 +30,53 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSuspensionCategoryType {
 
+
+    /**
+     * Expulsion
+     * 
+     */
     E,
+
+    /**
+     * Whole Exclusion
+     * 
+     */
     WE,
+
+    /**
+     * Partial Exclusion
+     * 
+     */
     P,
+
+    /**
+     * InSchool
+     * 
+     */
     I,
+
+    /**
+     * Withdrawal
+     * 
+     */
     W,
+
+    /**
+     * Suspension
+     * 
+     */
     S,
+
+    /**
+     * Removal
+     * 
+     */
     R,
+
+    /**
+     * Other
+     * 
+     */
     O;
 
     public String value() {

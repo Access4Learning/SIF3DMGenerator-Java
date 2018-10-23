@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * List to contain information of any plans that may eventuate.
+ * 
  * <p>Java class for PlanRequiredListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

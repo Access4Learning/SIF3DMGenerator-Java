@@ -11,6 +11,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Common element used to supply information about a particular household a person is a member of.
+ * 
  * <p>Java class for HouseholdContactInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
  *         &lt;element name="HouseholdContactId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="HouseholdSalutation" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="AddressList" type="{http://www.sifassociation.org/datamodel/au/3.4}AddressListType" minOccurs="0"/>
@@ -47,7 +49,7 @@ public class HouseholdContactInfoType {
 
     @XmlElement(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected Long preferenceNumber;
+    protected long preferenceNumber;
     @XmlElementRef(name = "HouseholdContactId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> householdContactId;
     @XmlElementRef(name = "HouseholdSalutation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -62,24 +64,16 @@ public class HouseholdContactInfoType {
     /**
      * Gets the value of the preferenceNumber property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
      */
-    public Long getPreferenceNumber() {
+    public long getPreferenceNumber() {
         return preferenceNumber;
     }
 
     /**
      * Sets the value of the preferenceNumber property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
      */
-    public void setPreferenceNumber(Long value) {
+    public void setPreferenceNumber(long value) {
         this.preferenceNumber = value;
     }
 

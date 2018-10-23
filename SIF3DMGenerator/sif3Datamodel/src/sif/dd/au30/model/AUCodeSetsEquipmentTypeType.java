@@ -30,18 +30,53 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsEquipmentTypeType {
 
+
+    /**
+     * Desktop Computer
+     * 
+     */
     @XmlEnumValue("DesktopComputer")
     DESKTOP_COMPUTER("DesktopComputer"),
+
+    /**
+     * Laptop Computer
+     * 
+     */
     @XmlEnumValue("LaptopComputer")
     LAPTOP_COMPUTER("LaptopComputer"),
+
+    /**
+     * Tablet
+     * 
+     */
     @XmlEnumValue("Tablet")
     TABLET("Tablet"),
+
+    /**
+     * Overhead Projector
+     * 
+     */
     @XmlEnumValue("OverheadProjector")
     OVERHEAD_PROJECTOR("OverheadProjector"),
+
+    /**
+     * Slide Projector
+     * 
+     */
     @XmlEnumValue("SlideProjector")
     SLIDE_PROJECTOR("SlideProjector"),
+
+    /**
+     * Vehicle
+     * 
+     */
     @XmlEnumValue("Vehicle")
     VEHICLE("Vehicle"),
+
+    /**
+     * Other
+     * 
+     */
     @XmlEnumValue("Other")
     OTHER("Other");
     private final String value;

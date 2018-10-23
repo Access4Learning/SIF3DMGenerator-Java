@@ -14,6 +14,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
+ * This element describes the unique identifier for each LearningStandard.
+ * 
  * <p>Java class for StandardIdentifierType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,15 +25,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="YearCreated" type="{http://www.w3.org/2001/XMLSchema}gYear" minOccurs="0"/>
- *         &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}ACStrandSubjectAreaType" minOccurs="0"/>
- *         &lt;element name="StandardNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType" minOccurs="0"/>
+ *         &lt;element name="YearCreated" type="{http://www.w3.org/2001/XMLSchema}gYear"/>
+ *         &lt;element name="ACStrandSubjectArea" type="{http://www.sifassociation.org/datamodel/au/3.4}ACStrandSubjectAreaType"/>
+ *         &lt;element name="StandardNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="YearLevels" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelsType"/>
  *         &lt;element name="Benchmark" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
  *         &lt;element name="IndicatorNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="AlternateIdentificationCodes" type="{http://www.sifassociation.org/datamodel/au/3.4}AlternateIdentificationCodeListType" minOccurs="0"/>
- *         &lt;element name="Organization" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Organization" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -54,16 +56,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class StandardIdentifierType {
 
-    @XmlElement(name = "YearCreated", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "YearCreated", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlSchemaType(name = "gYear")
     protected XMLGregorianCalendar yearCreated;
-    @XmlElement(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "ACStrandSubjectArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected ACStrandSubjectAreaType acStrandSubjectArea;
-    @XmlElement(name = "StandardNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "StandardNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String standardNumber;
-    @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "YearLevels", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     protected YearLevelsType yearLevels;
     @XmlElementRef(name = "Benchmark", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> benchmark;
@@ -73,7 +75,7 @@ public class StandardIdentifierType {
     protected JAXBElement<String> indicatorNumber;
     @XmlElementRef(name = "AlternateIdentificationCodes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AlternateIdentificationCodeListType> alternateIdentificationCodes;
-    @XmlElement(name = "Organization", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlElement(name = "Organization", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String organization;

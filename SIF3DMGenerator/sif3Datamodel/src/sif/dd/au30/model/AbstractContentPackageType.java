@@ -16,6 +16,13 @@ import org.w3c.dom.Element;
 
 
 /**
+ * 
+ *         An abstract type for derived content package types, elements and objects.  This structure may be used verbatim, optionally extending
+ *         with additional attributes, or may be redefined to include only a subset of child elements and/or to add validation to XML
+ *         contained in XMLData.  Only one instance of XMLData, TextData, BinaryData or
+ *         Reference can occur in a single instance.
+ *       
+ * 
  * <p>Java class for AbstractContentPackageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -31,7 +38,7 @@ import org.w3c.dom.Element;
  *               &lt;complexContent>
  *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                   &lt;sequence>
- *                     &lt;any processContents='lax' minOccurs="0"/>
+ *                     &lt;any processContents='lax'/>
  *                   &lt;/sequence>
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                 &lt;/restriction>
@@ -52,7 +59,7 @@ import org.w3c.dom.Element;
  *           &lt;element name="BinaryData">
  *             &lt;complexType>
  *               &lt;simpleContent>
- *                 &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
+ *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
  *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -65,7 +72,7 @@ import org.w3c.dom.Element;
  *               &lt;complexContent>
  *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                   &lt;sequence>
- *                     &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
+ *                     &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
  *                   &lt;/sequence>
  *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
  *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -237,7 +244,7 @@ public class AbstractContentPackageType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>base64Binary">
      *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -255,7 +262,7 @@ public class AbstractContentPackageType {
     public static class BinaryData {
 
         @XmlValue
-        protected String value;
+        protected byte[] value;
         @XmlAttribute(name = "MIMEType", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         @XmlSchemaType(name = "token")
@@ -274,10 +281,9 @@ public class AbstractContentPackageType {
          * 
          * @return
          *     possible object is
-         *     {@link String }
-         *     
+         *     byte[]
          */
-        public String getValue() {
+        public byte[] getValue() {
             return value;
         }
 
@@ -286,10 +292,9 @@ public class AbstractContentPackageType {
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
-         *     
+         *     byte[]
          */
-        public void setValue(String value) {
+        public void setValue(byte[] value) {
             this.value = value;
         }
 
@@ -378,7 +383,7 @@ public class AbstractContentPackageType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
+     *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
      *       &lt;/sequence>
      *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
@@ -395,7 +400,7 @@ public class AbstractContentPackageType {
     })
     public static class Reference {
 
-        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
         @XmlSchemaType(name = "anyURI")
         protected String url;
         @XmlAttribute(name = "MIMEType", required = true)
@@ -631,7 +636,7 @@ public class AbstractContentPackageType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;any processContents='lax' minOccurs="0"/>
+     *         &lt;any processContents='lax'/>
      *       &lt;/sequence>
      *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
      *     &lt;/restriction>
@@ -659,8 +664,8 @@ public class AbstractContentPackageType {
          * 
          * @return
          *     possible object is
-         *     {@link Object }
          *     {@link Element }
+         *     {@link Object }
          *     
          */
         public Object getAny() {
@@ -672,8 +677,8 @@ public class AbstractContentPackageType {
          * 
          * @param value
          *     allowed object is
-         *     {@link Object }
          *     {@link Element }
+         *     {@link Object }
          *     
          */
         public void setAny(Object value) {

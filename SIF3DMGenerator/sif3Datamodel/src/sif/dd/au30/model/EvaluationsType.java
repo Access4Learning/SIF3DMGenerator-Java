@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
+ * Evaluations/review of the resource.
+ * 
  * <p>Java class for EvaluationsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
