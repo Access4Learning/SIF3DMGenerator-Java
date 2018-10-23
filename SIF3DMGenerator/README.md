@@ -87,6 +87,9 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
   for SIF AU 3.4.3 (sif.dd.au30 package). This represents the officially released SIF AU 3.4.3 Data Model. This is using the au/3.4 namespace.
 - **Project now requires Java 8**. The Project is now built with Java 8 as the minimal java version. Libraries used by this project may require Java 8 in future.
 
+## Version from October 23, 2018
+- Added SIF AU 3.4.4 XSD (data/input/XSD/sifau30/au3.4.4 directory) and generated data model classes for the draft of SIF AU 3.4.4. Note that this is an **early draft** for SIF AU 3.4.4 
+
 # Download Instructions
 How to download this project:
 
