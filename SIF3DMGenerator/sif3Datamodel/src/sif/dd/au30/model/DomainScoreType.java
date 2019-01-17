@@ -3,8 +3,6 @@ package sif.dd.au30.model;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -32,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="ScaledScoreLogitStandardError" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
  *         &lt;element name="StudentDomainBand" type="{http://www.w3.org/2001/XMLSchema}integer"/>
  *         &lt;element name="StudentProficiency" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="PlausibleScaledValueList" type="{http://www.sifassociation.org/datamodel/au/3.4}PlausibleScaledValueListType" maxOccurs="unbounded"/>
+ *         &lt;element name="PlausibleScaledValueList" type="{http://www.sifassociation.org/datamodel/au/3.4}PlausibleScaledValueListType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -69,7 +67,7 @@ public class DomainScoreType {
     @XmlElementRef(name = "StudentProficiency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> studentProficiency;
     @XmlElement(name = "PlausibleScaledValueList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    protected List<PlausibleScaledValueListType> plausibleScaledValueList;
+    protected PlausibleScaledValueListType plausibleScaledValueList;
 
     /**
      * Gets the value of the rawScore property.
@@ -242,30 +240,25 @@ public class DomainScoreType {
     /**
      * Gets the value of the plausibleScaledValueList property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the plausibleScaledValueList property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getPlausibleScaledValueList().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link PlausibleScaledValueListType }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link PlausibleScaledValueListType }
+     *     
      */
-    public List<PlausibleScaledValueListType> getPlausibleScaledValueList() {
-        if (plausibleScaledValueList == null) {
-            plausibleScaledValueList = new ArrayList<PlausibleScaledValueListType>();
-        }
-        return this.plausibleScaledValueList;
+    public PlausibleScaledValueListType getPlausibleScaledValueList() {
+        return plausibleScaledValueList;
+    }
+
+    /**
+     * Sets the value of the plausibleScaledValueList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PlausibleScaledValueListType }
+     *     
+     */
+    public void setPlausibleScaledValueList(PlausibleScaledValueListType value) {
+        this.plausibleScaledValueList = value;
     }
 
 }

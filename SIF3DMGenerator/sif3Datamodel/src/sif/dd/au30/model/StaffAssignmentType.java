@@ -54,6 +54,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Homegroup" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="House" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="CalendarSummaryList" type="{http://www.sifassociation.org/datamodel/au/3.4}CalendarSummaryListType" minOccurs="0"/>
+ *         &lt;element name="PreviousSchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -84,6 +85,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "homegroup",
     "house",
     "calendarSummaryList",
+    "previousSchoolName",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -125,6 +127,8 @@ public class StaffAssignmentType {
     protected JAXBElement<String> house;
     @XmlElementRef(name = "CalendarSummaryList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<CalendarSummaryListType> calendarSummaryList;
+    @XmlElementRef(name = "PreviousSchoolName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> previousSchoolName;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -539,6 +543,30 @@ public class StaffAssignmentType {
      */
     public void setCalendarSummaryList(JAXBElement<CalendarSummaryListType> value) {
         this.calendarSummaryList = value;
+    }
+
+    /**
+     * Gets the value of the previousSchoolName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getPreviousSchoolName() {
+        return previousSchoolName;
+    }
+
+    /**
+     * Sets the value of the previousSchoolName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setPreviousSchoolName(JAXBElement<String> value) {
+        this.previousSchoolName = value;
     }
 
     /**

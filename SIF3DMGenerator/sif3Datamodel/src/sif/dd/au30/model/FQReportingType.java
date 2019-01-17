@@ -7,8 +7,10 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
 
@@ -28,20 +30,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="FQYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
  *         &lt;element name="ReportingAuthority" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ReportingAuthoritySystem" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ReportingAuthorityCommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ReportingAuthorityCommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="SystemSubmission" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="SoftwareVendorInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}SoftwareVendorInfoContainerType" minOccurs="0"/>
- *         &lt;element name="EntityLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="EntityLevel" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
- *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
  *         &lt;element name="ACARAId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="EntityName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="EntityContact" type="{http://www.sifassociation.org/datamodel/au/3.4}EntityContactInfoType" minOccurs="0"/>
+ *         &lt;element name="EntityContact" type="{http://www.sifassociation.org/datamodel/au/3.4}EntityContactInfoType"/>
  *         &lt;element name="FQContextualQuestionList" type="{http://www.sifassociation.org/datamodel/au/3.4}FQContextualQuestionListType" minOccurs="0"/>
- *         &lt;element name="FQItemList" type="{http://www.sifassociation.org/datamodel/au/3.4}FQItemListType" minOccurs="0"/>
- *         &lt;element name="FQRuleList" type="{http://www.sifassociation.org/datamodel/au/3.4}FQRuleListType" minOccurs="0"/>
+ *         &lt;element name="FQReportComments" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="FQItemList" type="{http://www.sifassociation.org/datamodel/au/3.4}FQItemListType"/>
+ *         &lt;element name="AGRuleList" type="{http://www.sifassociation.org/datamodel/au/3.4}AGRuleListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -70,8 +73,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "entityName",
     "entityContact",
     "fqContextualQuestionList",
+    "fqReportComments",
     "fqItemList",
-    "fqRuleList",
+    "agRuleList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -83,34 +87,42 @@ public class FQReportingType {
     protected JAXBElement<String> reportingAuthority;
     @XmlElementRef(name = "ReportingAuthoritySystem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> reportingAuthoritySystem;
-    @XmlElementRef(name = "ReportingAuthorityCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> reportingAuthorityCommonwealthId;
+    @XmlElement(name = "ReportingAuthorityCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String reportingAuthorityCommonwealthId;
     @XmlElementRef(name = "SystemSubmission", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> systemSubmission;
     @XmlElementRef(name = "SoftwareVendorInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SoftwareVendorInfoContainerType> softwareVendorInfo;
-    @XmlElementRef(name = "EntityLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> entityLevel;
+    @XmlElement(name = "EntityLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String entityLevel;
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
     @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> localId;
     @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
-    @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> commonwealthId;
+    @XmlElement(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String commonwealthId;
     @XmlElementRef(name = "ACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> acaraId;
     @XmlElementRef(name = "EntityName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> entityName;
-    @XmlElementRef(name = "EntityContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<EntityContactInfoType> entityContact;
+    @XmlElement(name = "EntityContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    protected EntityContactInfoType entityContact;
     @XmlElementRef(name = "FQContextualQuestionList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<FQContextualQuestionListType> fqContextualQuestionList;
-    @XmlElementRef(name = "FQItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<FQItemListType> fqItemList;
-    @XmlElementRef(name = "FQRuleList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<FQRuleListType> fqRuleList;
+    @XmlElementRef(name = "FQReportComments", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> fqReportComments;
+    @XmlElement(name = "FQItemList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    protected FQItemListType fqItemList;
+    @XmlElementRef(name = "AGRuleList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AGRuleListType> agRuleList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -196,10 +208,10 @@ public class FQReportingType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getReportingAuthorityCommonwealthId() {
+    public String getReportingAuthorityCommonwealthId() {
         return reportingAuthorityCommonwealthId;
     }
 
@@ -208,10 +220,10 @@ public class FQReportingType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setReportingAuthorityCommonwealthId(JAXBElement<String> value) {
+    public void setReportingAuthorityCommonwealthId(String value) {
         this.reportingAuthorityCommonwealthId = value;
     }
 
@@ -268,10 +280,10 @@ public class FQReportingType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getEntityLevel() {
+    public String getEntityLevel() {
         return entityLevel;
     }
 
@@ -280,10 +292,10 @@ public class FQReportingType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setEntityLevel(JAXBElement<String> value) {
+    public void setEntityLevel(String value) {
         this.entityLevel = value;
     }
 
@@ -364,10 +376,10 @@ public class FQReportingType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getCommonwealthId() {
+    public String getCommonwealthId() {
         return commonwealthId;
     }
 
@@ -376,10 +388,10 @@ public class FQReportingType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setCommonwealthId(JAXBElement<String> value) {
+    public void setCommonwealthId(String value) {
         this.commonwealthId = value;
     }
 
@@ -436,10 +448,10 @@ public class FQReportingType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link EntityContactInfoType }{@code >}
+     *     {@link EntityContactInfoType }
      *     
      */
-    public JAXBElement<EntityContactInfoType> getEntityContact() {
+    public EntityContactInfoType getEntityContact() {
         return entityContact;
     }
 
@@ -448,10 +460,10 @@ public class FQReportingType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link EntityContactInfoType }{@code >}
+     *     {@link EntityContactInfoType }
      *     
      */
-    public void setEntityContact(JAXBElement<EntityContactInfoType> value) {
+    public void setEntityContact(EntityContactInfoType value) {
         this.entityContact = value;
     }
 
@@ -480,14 +492,38 @@ public class FQReportingType {
     }
 
     /**
+     * Gets the value of the fqReportComments property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getFQReportComments() {
+        return fqReportComments;
+    }
+
+    /**
+     * Sets the value of the fqReportComments property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setFQReportComments(JAXBElement<String> value) {
+        this.fqReportComments = value;
+    }
+
+    /**
      * Gets the value of the fqItemList property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link FQItemListType }{@code >}
+     *     {@link FQItemListType }
      *     
      */
-    public JAXBElement<FQItemListType> getFQItemList() {
+    public FQItemListType getFQItemList() {
         return fqItemList;
     }
 
@@ -496,35 +532,35 @@ public class FQReportingType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link FQItemListType }{@code >}
+     *     {@link FQItemListType }
      *     
      */
-    public void setFQItemList(JAXBElement<FQItemListType> value) {
+    public void setFQItemList(FQItemListType value) {
         this.fqItemList = value;
     }
 
     /**
-     * Gets the value of the fqRuleList property.
+     * Gets the value of the agRuleList property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link FQRuleListType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AGRuleListType }{@code >}
      *     
      */
-    public JAXBElement<FQRuleListType> getFQRuleList() {
-        return fqRuleList;
+    public JAXBElement<AGRuleListType> getAGRuleList() {
+        return agRuleList;
     }
 
     /**
-     * Sets the value of the fqRuleList property.
+     * Sets the value of the agRuleList property.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link FQRuleListType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AGRuleListType }{@code >}
      *     
      */
-    public void setFQRuleList(JAXBElement<FQRuleListType> value) {
-        this.fqRuleList = value;
+    public void setAGRuleList(JAXBElement<AGRuleListType> value) {
+        this.agRuleList = value;
     }
 
     /**

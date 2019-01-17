@@ -12,16 +12,16 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * 
  * 
- * <p>Java class for ScoreListType complex type.
+ * <p>Java class for PhotoPermissionListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ScoreListType">
+ * &lt;complexType name="PhotoPermissionListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Score" type="{http://www.sifassociation.org/datamodel/au/3.4}ScoreType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PhotoPermission" type="{http://www.sifassociation.org/datamodel/au/3.4}PhotoPermissionType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,41 +31,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ScoreListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "score"
+@XmlType(name = "PhotoPermissionListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "photoPermission"
 })
-public class ScoreListType {
+public class PhotoPermissionListType {
 
-    @XmlElement(name = "Score", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<ScoreType> score;
+    @XmlElement(name = "PhotoPermission", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<PhotoPermissionType> photoPermission;
 
     /**
-     * Gets the value of the score property.
+     * Gets the value of the photoPermission property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the score property.
+     * This is why there is not a <CODE>set</CODE> method for the photoPermission property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getScore().add(newItem);
+     *    getPhotoPermission().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ScoreType }
+     * {@link PhotoPermissionType }
      * 
      * 
      */
-    public List<ScoreType> getScore() {
-        if (score == null) {
-            score = new ArrayList<ScoreType>();
+    public List<PhotoPermissionType> getPhotoPermission() {
+        if (photoPermission == null) {
+            photoPermission = new ArrayList<PhotoPermissionType>();
         }
-        return this.score;
+        return this.photoPermission;
     }
 
 }

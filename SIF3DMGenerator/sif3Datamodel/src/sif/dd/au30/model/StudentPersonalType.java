@@ -49,6 +49,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="HomeSchooledStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="Sensitive" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="OfflineDelivery" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="ESLSupport" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="PrePrimaryEducation" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="FirstAUSchoolEnrollment" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
@@ -87,6 +88,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "homeSchooledStudent",
     "sensitive",
     "offlineDelivery",
+    "eslSupport",
     "prePrimaryEducation",
     "firstAUSchoolEnrollment",
     "sifMetadata",
@@ -141,6 +143,8 @@ public class StudentPersonalType {
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> sensitive;
     @XmlElementRef(name = "OfflineDelivery", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> offlineDelivery;
+    @XmlElementRef(name = "ESLSupport", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> eslSupport;
     @XmlElementRef(name = "PrePrimaryEducation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> prePrimaryEducation;
     @XmlElementRef(name = "FirstAUSchoolEnrollment", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -703,6 +707,30 @@ public class StudentPersonalType {
      */
     public void setOfflineDelivery(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.offlineDelivery = value;
+    }
+
+    /**
+     * Gets the value of the eslSupport property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getESLSupport() {
+        return eslSupport;
+    }
+
+    /**
+     * Sets the value of the eslSupport property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setESLSupport(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.eslSupport = value;
     }
 
     /**

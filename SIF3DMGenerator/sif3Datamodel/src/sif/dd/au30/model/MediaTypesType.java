@@ -13,9 +13,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Resource media types.
- *       
+ * Resource media types.
  * 
  * <p>Java class for MediaTypesType complex type.
  * 

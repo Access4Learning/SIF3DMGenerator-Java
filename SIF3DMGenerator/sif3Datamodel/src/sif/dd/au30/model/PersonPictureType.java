@@ -54,6 +54,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/complexType>
  *         &lt;/element>
  *         &lt;element name="OKToPublish" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="PhotoPermissionList" type="{http://www.sifassociation.org/datamodel/au/3.4}PhotoPermissionListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -71,6 +72,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "schoolYear",
     "pictureSource",
     "okToPublish",
+    "photoPermissionList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -84,6 +86,8 @@ public class PersonPictureType {
     protected PersonPictureType.PictureSource pictureSource;
     @XmlElementRef(name = "OKToPublish", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> okToPublish;
+    @XmlElementRef(name = "PhotoPermissionList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PhotoPermissionListType> photoPermissionList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -186,6 +190,30 @@ public class PersonPictureType {
      */
     public void setOKToPublish(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.okToPublish = value;
+    }
+
+    /**
+     * Gets the value of the photoPermissionList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link PhotoPermissionListType }{@code >}
+     *     
+     */
+    public JAXBElement<PhotoPermissionListType> getPhotoPermissionList() {
+        return photoPermissionList;
+    }
+
+    /**
+     * Sets the value of the photoPermissionList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link PhotoPermissionListType }{@code >}
+     *     
+     */
+    public void setPhotoPermissionList(JAXBElement<PhotoPermissionListType> value) {
+        this.photoPermissionList = value;
     }
 
     /**

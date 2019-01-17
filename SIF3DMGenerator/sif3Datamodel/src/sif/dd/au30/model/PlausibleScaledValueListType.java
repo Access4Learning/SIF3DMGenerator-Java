@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PlausibleScaledValue" type="{http://www.w3.org/2001/XMLSchema}decimal" maxOccurs="unbounded"/>
+ *         &lt;element name="PlausibleScaledValue" type="{http://www.w3.org/2001/XMLSchema}decimal" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PlausibleScaledValueListType {
 
-    @XmlElement(name = "PlausibleScaledValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PlausibleScaledValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<BigDecimal> plausibleScaledValue;
 
     /**

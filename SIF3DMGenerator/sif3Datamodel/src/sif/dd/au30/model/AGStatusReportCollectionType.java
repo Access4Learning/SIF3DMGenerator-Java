@@ -10,18 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- * 
- * <p>Java class for ScoreListType complex type.
+ * <p>Java class for AGStatusReportCollectionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ScoreListType">
+ * &lt;complexType name="AGStatusReportCollectionType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Score" type="{http://www.sifassociation.org/datamodel/au/3.4}ScoreType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="AGStatusReport" type="{http://www.sifassociation.org/datamodel/au/3.4}AGStatusReportType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ScoreListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "score"
+@XmlType(name = "AGStatusReportCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "agStatusReport"
 })
-public class ScoreListType {
+public class AGStatusReportCollectionType {
 
-    @XmlElement(name = "Score", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<ScoreType> score;
+    @XmlElement(name = "AGStatusReport", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<AGStatusReportType> agStatusReport;
 
     /**
-     * Gets the value of the score property.
+     * Gets the value of the agStatusReport property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the score property.
+     * This is why there is not a <CODE>set</CODE> method for the agStatusReport property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getScore().add(newItem);
+     *    getAGStatusReport().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ScoreType }
+     * {@link AGStatusReportType }
      * 
      * 
      */
-    public List<ScoreType> getScore() {
-        if (score == null) {
-            score = new ArrayList<ScoreType>();
+    public List<AGStatusReportType> getAGStatusReport() {
+        if (agStatusReport == null) {
+            agStatusReport = new ArrayList<AGStatusReportType>();
         }
-        return this.score;
+        return this.agStatusReport;
     }
 
 }

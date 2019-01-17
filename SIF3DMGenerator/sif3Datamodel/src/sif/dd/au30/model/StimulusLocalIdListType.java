@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StimulusLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" maxOccurs="unbounded"/>
+ *         &lt;element name="StimulusLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StimulusLocalIdListType {
 
-    @XmlElement(name = "StimulusLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StimulusLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected List<String> stimulusLocalId;
 

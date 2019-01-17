@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Container for a list of classes a teacher may be responsible for with regard to NAPLAN only.
+ * Container for a list of classes a teacher may be responsible for with regard to NAPLAN only.
  * 
  * <p>Java class for NAPLANClassListType complex type.
  * 

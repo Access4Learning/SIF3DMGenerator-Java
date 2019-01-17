@@ -134,9 +134,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;/element>
  *         &lt;element name="PromotionInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PromotionInfoType" minOccurs="0"/>
  *         &lt;element name="PreviousSchool" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="PreviousSchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="DestinationSchool" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="DestinationSchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StudentSubjectChoiceList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentSubjectChoiceListType" minOccurs="0"/>
  *         &lt;element name="StartedAtSchoolDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="StudentGroupList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentGroupListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -180,9 +183,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "recordClosureReason",
     "promotionInfo",
     "previousSchool",
+    "previousSchoolName",
     "destinationSchool",
+    "destinationSchoolName",
     "studentSubjectChoiceList",
     "startedAtSchoolDate",
+    "studentGroupList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -252,12 +258,18 @@ public class StudentSchoolEnrollmentType {
     protected JAXBElement<PromotionInfoType> promotionInfo;
     @XmlElementRef(name = "PreviousSchool", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> previousSchool;
+    @XmlElementRef(name = "PreviousSchoolName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> previousSchoolName;
     @XmlElementRef(name = "DestinationSchool", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> destinationSchool;
+    @XmlElementRef(name = "DestinationSchoolName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> destinationSchoolName;
     @XmlElementRef(name = "StudentSubjectChoiceList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<StudentSubjectChoiceListType> studentSubjectChoiceList;
     @XmlElementRef(name = "StartedAtSchoolDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> startedAtSchoolDate;
+    @XmlElementRef(name = "StudentGroupList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentGroupListType> studentGroupList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -987,6 +999,30 @@ public class StudentSchoolEnrollmentType {
     }
 
     /**
+     * Gets the value of the previousSchoolName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getPreviousSchoolName() {
+        return previousSchoolName;
+    }
+
+    /**
+     * Sets the value of the previousSchoolName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setPreviousSchoolName(JAXBElement<String> value) {
+        this.previousSchoolName = value;
+    }
+
+    /**
      * Gets the value of the destinationSchool property.
      * 
      * @return
@@ -1008,6 +1044,30 @@ public class StudentSchoolEnrollmentType {
      */
     public void setDestinationSchool(JAXBElement<String> value) {
         this.destinationSchool = value;
+    }
+
+    /**
+     * Gets the value of the destinationSchoolName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getDestinationSchoolName() {
+        return destinationSchoolName;
+    }
+
+    /**
+     * Sets the value of the destinationSchoolName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setDestinationSchoolName(JAXBElement<String> value) {
+        this.destinationSchoolName = value;
     }
 
     /**
@@ -1056,6 +1116,30 @@ public class StudentSchoolEnrollmentType {
      */
     public void setStartedAtSchoolDate(JAXBElement<XMLGregorianCalendar> value) {
         this.startedAtSchoolDate = value;
+    }
+
+    /**
+     * Gets the value of the studentGroupList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link StudentGroupListType }{@code >}
+     *     
+     */
+    public JAXBElement<StudentGroupListType> getStudentGroupList() {
+        return studentGroupList;
+    }
+
+    /**
+     * Sets the value of the studentGroupList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link StudentGroupListType }{@code >}
+     *     
+     */
+    public void setStudentGroupList(JAXBElement<StudentGroupListType> value) {
+        this.studentGroupList = value;
     }
 
     /**

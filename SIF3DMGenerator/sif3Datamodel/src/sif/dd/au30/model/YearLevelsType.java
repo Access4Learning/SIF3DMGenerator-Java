@@ -10,9 +10,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         List of year levels.
- *       
+ * List of year levels.
  * 
  * <p>Java class for YearLevelsType complex type.
  * 

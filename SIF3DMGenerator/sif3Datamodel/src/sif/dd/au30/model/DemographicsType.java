@@ -47,6 +47,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="VisaExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="VisaSubClassList" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassListType" minOccurs="0"/>
  *         &lt;element name="LBOTE" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="InterpreterRequired" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ImmunisationCertificateStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsImmunisationCertificateStatusType" minOccurs="0"/>
  *         &lt;element name="CulturalBackground" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType" minOccurs="0"/>
  *         &lt;element name="MaritalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsMaritalStatusAIHWType" minOccurs="0"/>
@@ -85,6 +86,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "visaExpiryDate",
     "visaSubClassList",
     "lbote",
+    "interpreterRequired",
     "immunisationCertificateStatus",
     "culturalBackground",
     "maritalStatus",
@@ -140,6 +142,8 @@ public class DemographicsType {
     protected JAXBElement<VisaSubClassListType> visaSubClassList;
     @XmlElementRef(name = "LBOTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> lbote;
+    @XmlElementRef(name = "InterpreterRequired", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> interpreterRequired;
     @XmlElementRef(name = "ImmunisationCertificateStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsImmunisationCertificateStatusType> immunisationCertificateStatus;
     @XmlElementRef(name = "CulturalBackground", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -723,6 +727,30 @@ public class DemographicsType {
      */
     public void setLBOTE(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.lbote = value;
+    }
+
+    /**
+     * Gets the value of the interpreterRequired property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getInterpreterRequired() {
+        return interpreterRequired;
+    }
+
+    /**
+     * Sets the value of the interpreterRequired property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setInterpreterRequired(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.interpreterRequired = value;
     }
 
     /**
