@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A listing of the teachers assigned to the activity, and the type of supervision they are credited with. If no teachers are listed, the activity is assumed to be unsupervised.
- * 
  * <p>Java class for ScheduledTeacherListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TeacherCover" type="{http://www.sifassociation.org/datamodel/au/3.4}TeacherCoverType" maxOccurs="unbounded"/>
+ *         &lt;element name="TeacherCover" type="{http://www.sifassociation.org/datamodel/au/3.4}TeacherCoverType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ScheduledTeacherListType {
 
-    @XmlElement(name = "TeacherCover", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TeacherCover", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<TeacherCoverType> teacherCover;
 
     /**

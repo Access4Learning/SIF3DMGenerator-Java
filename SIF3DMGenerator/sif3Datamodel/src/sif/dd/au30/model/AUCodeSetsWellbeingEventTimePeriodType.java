@@ -31,54 +31,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingEventTimePeriodType {
 
-
-    /**
-     * AM
-     * 
-     */
     AM("AM"),
-
-    /**
-     * PM
-     * 
-     */
     PM("PM"),
-
-    /**
-     * Recess
-     * 
-     */
     R("R"),
-
-    /**
-     * Before School
-     * 
-     */
     B("B"),
-
-    /**
-     * After School
-     * 
-     */
     A("A"),
-
-    /**
-     * Excursion
-     * 
-     */
     @XmlEnumValue("Ex")
     EX("Ex"),
-
-    /**
-     * Weekend
-     * 
-     */
     W("W"),
-
-    /**
-     * Other
-     * 
-     */
     O("O");
     private final String value;
 

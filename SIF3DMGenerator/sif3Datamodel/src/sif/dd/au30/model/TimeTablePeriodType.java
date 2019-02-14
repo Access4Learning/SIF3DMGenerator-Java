@@ -14,8 +14,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Container for TimeTablePeriods in a Time Table Day
- * 
  * <p>Java class for TimeTablePeriodType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -25,8 +23,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="PeriodTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="PeriodTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="BellPeriod" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -75,10 +73,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TimeTablePeriodType {
 
-    @XmlElement(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String periodId;
-    @XmlElement(name = "PeriodTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PeriodTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String periodTitle;

@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- * 
  * <p>Java class for CodeFrameTestItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,9 +20,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer"/>
- *         &lt;element name="TestItemContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItemContentType"/>
+ *         &lt;element name="TestItemRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SequenceNumber" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="TestItemContent" type="{http://www.sifassociation.org/datamodel/au/3.4}NAPTestItemContentType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,12 +39,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class CodeFrameTestItemType {
 
-    @XmlElement(name = "TestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TestItemRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String testItemRefId;
-    @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SequenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigInteger sequenceNumber;
-    @XmlElement(name = "TestItemContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TestItemContent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NAPTestItemContentType testItemContent;
 
     /**

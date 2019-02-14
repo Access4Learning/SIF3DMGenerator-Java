@@ -13,8 +13,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Timeslot information that can be published by an SIS which is a subset of information available in the TimeTableCell object.
- * 
  * <p>Java class for TeachingGroupPeriodType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,7 +25,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="TimeTableCellRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="RoomNumber" type="{http://www.sifassociation.org/datamodel/au/3.4}HomeroomNumberType" minOccurs="0"/>
  *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="PeriodId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="CellType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -57,7 +55,7 @@ public class TeachingGroupPeriodType {
     protected JAXBElement<String> roomNumber;
     @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> staffLocalId;
-    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String dayId;
     @XmlElementRef(name = "PeriodId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Students who belong to the TeachingGroup
- * 
  * <p>Java class for TeachingGroupStudentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

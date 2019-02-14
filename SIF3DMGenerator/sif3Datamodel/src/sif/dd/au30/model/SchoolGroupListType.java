@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- * 
  * <p>Java class for SchoolGroupListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,7 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SchoolGroup" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" maxOccurs="unbounded"/>
+ *         &lt;element name="SchoolGroup" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,7 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class SchoolGroupListType {
 
-    @XmlElement(name = "SchoolGroup", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolGroup", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected List<String> schoolGroup;
 

@@ -17,10 +17,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *           This object represents a booking for any resource for a single contiguous time period. This could be either a room or another resource, such as equipment.
- *       
- * 
  * <p>Java class for ResourceBookingType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -33,7 +29,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ResourceRefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -47,12 +43,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="ResourceLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
- *         &lt;element name="FinishDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="ResourceLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="FinishDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="FromPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="ToPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="Booker" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="Booker" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="Reason" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ScheduledActivityRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="KeepOld" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
@@ -86,14 +82,14 @@ public class ResourceBookingType {
 
     @XmlElementRef(name = "ResourceRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ResourceBookingType.ResourceRefId> resourceRefId;
-    @XmlElement(name = "ResourceLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ResourceLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String resourceLocalId;
-    @XmlElement(name = "StartDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true, type = String.class)
+    @XmlElement(name = "StartDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
     protected Calendar startDateTime;
-    @XmlElement(name = "FinishDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true, type = String.class)
+    @XmlElement(name = "FinishDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = String.class)
     @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
     protected Calendar finishDateTime;
@@ -101,7 +97,7 @@ public class ResourceBookingType {
     protected JAXBElement<String> fromPeriod;
     @XmlElementRef(name = "ToPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> toPeriod;
-    @XmlElement(name = "Booker", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Booker", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String booker;
     @XmlElementRef(name = "Reason", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -432,8 +428,6 @@ public class ResourceBookingType {
 
 
     /**
-     * The ID (GUID) of the resource being booked. Provided only if the resource being booked is a SIF object with a GUID.
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -441,7 +435,7 @@ public class ResourceBookingType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -465,14 +459,13 @@ public class ResourceBookingType {
     public static class ResourceRefId {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is

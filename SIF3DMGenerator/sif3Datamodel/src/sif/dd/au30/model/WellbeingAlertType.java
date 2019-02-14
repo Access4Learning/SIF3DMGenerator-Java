@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Alert indicating further intervention or knowledge required with regard to a student, which could be Medical, Legal or other. Can reflect both long-term attributes of a student (Characteristics) and short-term attributes (e.g. resulting from Events). They fulfil the need for something that can be sent, associated with the student to transfer information that carries basic, important information.  Lightweight, it needs to alert teachers and systems that this student has a 'concern' that needs to be known for 'duty of care'.  Currently in the SIF Model there exists the concept of 'medical alerts' and 'alerts', but these are lists of events that are carried with StudentPersonal: if anything is changed then for it to be recognised by consuming systems, they would need to re-consume StudentPersonal and ALL of the lists of alerts.  It was noted that this information needs to travel as the result of an event or a concern, not necessarily as a by-product of a change in StudentPersonal.
- * 
  * <p>Java class for WellbeingAlertType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,10 +24,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
- *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="WellbeingAlertStartDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="WellbeingAlertStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="WellbeingAlertEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="WellbeingAlertCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingAlertCategoryType" minOccurs="0"/>
  *         &lt;element name="WellbeingAlertDescription" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -66,16 +64,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class WellbeingAlertType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
-    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
-    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
-    @XmlElement(name = "WellbeingAlertStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WellbeingAlertStartDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar wellbeingAlertStartDate;
     @XmlElementRef(name = "WellbeingAlertEndDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

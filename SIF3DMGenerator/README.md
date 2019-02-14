@@ -27,7 +27,7 @@ As of October 2, 2018 the following SIF Locale Data Models are supported by this
 - SIF AU 3.4.1 for Infrastructure 3.x
 - SIF AU 3.4.2 for Infrastructure 3.x
 - SIF AU 3.4.3 for Infrastructure 3.x
-- SIF AU 3.4.4 (draft) for Infrastructure 3.x
+- SIF AU 3.4.4 for Infrastructure 3.x
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
 
@@ -97,6 +97,9 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 
 ## Version from Jan 31, 2019
 - Updated to SIF3 Framework library v0.14.1. 
+
+## Version from Feb 14, 2019
+- Updated with official SIF AU 3.4.4 release. XSD & POJOs. 
 
 # Download Instructions
 How to download this project:

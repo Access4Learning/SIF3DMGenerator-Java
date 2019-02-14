@@ -6,14 +6,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * The AG Reporting Object's response.
- * 
  * <p>Java class for AGReportingObjectResponseType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,7 +22,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="SubmittedRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="SubmittedRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SIFRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="HTTPStatusCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ErrorText" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -52,17 +51,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AGReportingObjectResponseType {
 
-    @XmlElement(name = "SubmittedRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String submittedRefId;
+    @XmlElementRef(name = "SubmittedRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> submittedRefId;
     @XmlElementRef(name = "SIFRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> sifRefId;
     @XmlElementRef(name = "HTTPStatusCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> httpStatusCode;
     @XmlElementRef(name = "ErrorText", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> errorText;
-    @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> commonwealthId;
+    @XmlElement(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String commonwealthId;
     @XmlElementRef(name = "EntityName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> entityName;
     @XmlElementRef(name = "AGSubmissionStatusCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -75,10 +75,10 @@ public class AGReportingObjectResponseType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getSubmittedRefId() {
+    public JAXBElement<String> getSubmittedRefId() {
         return submittedRefId;
     }
 
@@ -87,10 +87,10 @@ public class AGReportingObjectResponseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setSubmittedRefId(String value) {
+    public void setSubmittedRefId(JAXBElement<String> value) {
         this.submittedRefId = value;
     }
 
@@ -171,10 +171,10 @@ public class AGReportingObjectResponseType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getCommonwealthId() {
+    public String getCommonwealthId() {
         return commonwealthId;
     }
 
@@ -183,10 +183,10 @@ public class AGReportingObjectResponseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setCommonwealthId(JAXBElement<String> value) {
+    public void setCommonwealthId(String value) {
         this.commonwealthId = value;
     }
 

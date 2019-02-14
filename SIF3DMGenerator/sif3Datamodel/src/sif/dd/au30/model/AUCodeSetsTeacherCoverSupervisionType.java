@@ -26,25 +26,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsTeacherCoverSupervisionType {
 
-
-    /**
-     * Normal supervision
-     * 
-     */
     @XmlEnumValue("Normal")
     NORMAL("Normal"),
-
-    /**
-     * Minimal supervision
-     * 
-     */
     @XmlEnumValue("MinimalSupervision")
     MINIMAL_SUPERVISION("MinimalSupervision"),
-
-    /**
-     * The event is a merged class
-     * 
-     */
     @XmlEnumValue("MergedClass")
     MERGED_CLASS("MergedClass");
     private final String value;

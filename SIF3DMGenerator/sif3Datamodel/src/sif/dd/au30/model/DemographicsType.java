@@ -10,10 +10,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         Demographics information about the student, contact, staff member, etc. 
- *       
- * 
  * <p>Java class for DemographicsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

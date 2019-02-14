@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Essential materials required to engage in this activity.
- * 
  * <p>Java class for EssentialMaterialsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

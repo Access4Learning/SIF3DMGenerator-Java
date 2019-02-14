@@ -38,89 +38,19 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsAustralianTimeZoneType {
 
-
-    /**
-     * Australian Central Daylight Time	UTC +10:30
-     * 
-     */
     ACDT("ACDT"),
-
-    /**
-     * Australian Central Standard Time	UTC +9:30
-     * 
-     */
     ACST("ACST"),
-
-    /**
-     * Australian Central Time	UTC +9:30 / +10:30
-     * 
-     */
     ACT("ACT"),
-
-    /**
-     * Australian Central Western Standard Time	UTC +8:45
-     * 
-     */
     ACWST("ACWST"),
-
-    /**
-     * Australian Eastern Daylight Time	UTC +11
-     * 
-     */
     AEDT("AEDT"),
-
-    /**
-     * Australian Eastern Standard Time	UTC +10
-     * 
-     */
     AEST("AEST"),
-
-    /**
-     * Australian Eastern Time	UTC +10:00 / +11:00
-     * 
-     */
     AET("AET"),
-
-    /**
-     * Australian Western Daylight Time	UTC +9
-     * 
-     */
     AWDT("AWDT"),
-
-    /**
-     * Australian Western Standard Time	UTC +8
-     * 
-     */
     AWST("AWST"),
-
-    /**
-     * Christmas Island Time	UTC +7
-     * 
-     */
     CXT("CXT"),
-
-    /**
-     * Lord Howe Daylight Time	UTC +11
-     * 
-     */
     LHDT("LHDT"),
-
-    /**
-     * Lord Howe Standard Time	UTC +10:30
-     * 
-     */
     LHST("LHST"),
-
-    /**
-     * Norfolk Time	UTC +11
-     * 
-     */
     NFT("NFT"),
-
-    /**
-     * Other Time Zone not defined
-     * 
-     */
     @XmlEnumValue("Other")
     OTHER("Other");
     private final String value;

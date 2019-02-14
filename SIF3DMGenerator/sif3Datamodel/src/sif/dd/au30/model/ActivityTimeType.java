@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Time structures for the activity.
- * 
  * <p>Java class for ActivityTimeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,11 +25,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Duration" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>unsignedInt">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSUnsignedIntOrEmpty">
  *                 &lt;attribute name="Units" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -68,7 +66,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ActivityTimeType {
 
-    @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar creationDate;
     @XmlElementRef(name = "Duration", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -209,7 +207,7 @@ public class ActivityTimeType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>unsignedInt">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSUnsignedIntOrEmpty">
      *       &lt;attribute name="Units" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -235,8 +233,7 @@ public class ActivityTimeType {
     public static class Duration {
 
         @XmlValue
-        @XmlSchemaType(name = "unsignedInt")
-        protected long value;
+        protected String value;
         @XmlAttribute(name = "Units", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String units;
@@ -244,16 +241,24 @@ public class ActivityTimeType {
         /**
          * Gets the value of the value property.
          * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
-        public long getValue() {
+        public String getValue() {
             return value;
         }
 
         /**
          * Sets the value of the value property.
          * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
-        public void setValue(long value) {
+        public void setValue(String value) {
             this.value = value;
         }
 

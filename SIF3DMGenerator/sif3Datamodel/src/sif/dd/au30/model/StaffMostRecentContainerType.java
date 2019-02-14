@@ -9,9 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Container for elements reflecting the most recent assignment of a staff member. If the staff member is currently assigned, the elements contain current information.
- *       
- * 
  * <p>Java class for StaffMostRecentContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

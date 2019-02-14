@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Overall Student Grade. At least one numeric, percentage or letter must be provided as defined in the fields below.
- * 
  * <p>Java class for GradeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

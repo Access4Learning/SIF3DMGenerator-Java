@@ -25,18 +25,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPTestTypeType {
 
-
-    /**
-     * Normal
-     * 
-     */
     @XmlEnumValue("Normal")
     NORMAL("Normal"),
-
-    /**
-     * Equating
-     * 
-     */
     @XmlEnumValue("Equating")
     EQUATING("Equating");
     private final String value;

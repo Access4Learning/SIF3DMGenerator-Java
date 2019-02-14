@@ -26,29 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsYesOrNoCategoryType {
 
-
-    /**
-     * No
-     * 
-     */
     N,
-
-    /**
-     * Unknown
-     * 
-     */
     U,
-
-    /**
-     * Not Provided
-     * 
-     */
     X,
-
-    /**
-     * Yes
-     * 
-     */
     Y;
 
     public String value() {

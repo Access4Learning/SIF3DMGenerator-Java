@@ -25,18 +25,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsSchoolSectorCodeType {
 
-
-    /**
-     * Government School
-     * 
-     */
     @XmlEnumValue("Gov")
     GOV("Gov"),
-
-    /**
-     * Non-Government School
-     * 
-     */
     NG("NG");
     private final String value;
 

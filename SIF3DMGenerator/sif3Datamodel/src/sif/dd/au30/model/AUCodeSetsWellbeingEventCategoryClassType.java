@@ -26,29 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingEventCategoryClassType {
 
-
-    /**
-     * Positive
-     * 
-     */
     P,
-
-    /**
-     * Negative
-     * 
-     */
     N,
-
-    /**
-     * Data Record Only
-     * 
-     */
     D,
-
-    /**
-     * Other
-     * 
-     */
     O;
 
     public String value() {

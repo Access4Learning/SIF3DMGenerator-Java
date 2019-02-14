@@ -27,32 +27,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPResponseCorrectnessType {
 
-
-    /**
-     * Correct
-     * 
-     */
     @XmlEnumValue("Correct")
     CORRECT("Correct"),
-
-    /**
-     * Incorrect
-     * 
-     */
     @XmlEnumValue("Incorrect")
     INCORRECT("Incorrect"),
-
-    /**
-     * NotInPath
-     * 
-     */
     @XmlEnumValue("NotInPath")
     NOT_IN_PATH("NotInPath"),
-
-    /**
-     * NotAttempted
-     * 
-     */
     @XmlEnumValue("NotAttempted")
     NOT_ATTEMPTED("NotAttempted");
     private final String value;

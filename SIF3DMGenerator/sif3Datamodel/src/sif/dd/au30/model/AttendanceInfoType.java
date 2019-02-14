@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Information describing how the day relates to attendance.
- * 
  * <p>Java class for AttendanceInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +20,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CountsTowardAttendance">
+ *         &lt;element name="CountsTowardAttendance" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *               &lt;enumeration value="Yes"/>
@@ -30,7 +28,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="AttendanceValue">
+ *         &lt;element name="AttendanceValue" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
  *               &lt;minInclusive value="0"/>
@@ -54,10 +52,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AttendanceInfoType {
 
-    @XmlElement(name = "CountsTowardAttendance", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "CountsTowardAttendance", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String countsTowardAttendance;
-    @XmlElement(name = "AttendanceValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AttendanceValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal attendanceValue;
 
     /**

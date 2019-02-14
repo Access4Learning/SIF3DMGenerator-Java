@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains all the personal information related to the student.
- * 
  * <p>Java class for StudentPersonalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -28,11 +26,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element name="AlertMessages" type="{http://www.sifassociation.org/datamodel/au/3.4}AlertMessagesType" minOccurs="0"/>
  *         &lt;element name="MedicalAlertMessages" type="{http://www.sifassociation.org/datamodel/au/3.4}MedicalAlertMessagesType" minOccurs="0"/>
- *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
  *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}ElectronicIdListType" minOccurs="0"/>
  *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
- *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType"/>
+ *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
  *         &lt;element name="ProjectedGraduationYear" type="{http://www.sifassociation.org/datamodel/au/3.4}ProjectedGraduationYearType" minOccurs="0"/>
  *         &lt;element name="OnTimeGraduationYear" type="{http://www.sifassociation.org/datamodel/au/3.4}OnTimeGraduationYearType" minOccurs="0"/>
  *         &lt;element name="GraduationDate" type="{http://www.sifassociation.org/datamodel/au/3.4}GraduationDateType" minOccurs="0"/>
@@ -100,7 +98,7 @@ public class StudentPersonalType {
     protected JAXBElement<AlertMessagesType> alertMessages;
     @XmlElementRef(name = "MedicalAlertMessages", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<MedicalAlertMessagesType> medicalAlertMessages;
-    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String localId;
     @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -109,7 +107,7 @@ public class StudentPersonalType {
     protected JAXBElement<ElectronicIdListType> electronicIdList;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherIdListType> otherIdList;
-    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PersonInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonInfoType personInfo;
     @XmlElementRef(name = "ProjectedGraduationYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> projectedGraduationYear;

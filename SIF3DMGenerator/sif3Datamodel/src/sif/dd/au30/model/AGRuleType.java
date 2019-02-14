@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Rule.
- * 
  * <p>Java class for AGRuleType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

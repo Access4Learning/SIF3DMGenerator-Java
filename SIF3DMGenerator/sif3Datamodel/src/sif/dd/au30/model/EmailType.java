@@ -13,11 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This element represents an e-mail address of one of a number of types and occurs in objects such as
- *         StudentPersonal, StaffPersonal, StudentContactPersonal, etc.
- *       
- * 
  * <p>Java class for EmailType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

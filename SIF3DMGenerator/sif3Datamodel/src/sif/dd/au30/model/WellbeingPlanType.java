@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Repeatable Plan information.
- * 
  * <p>Java class for WellbeingPlanType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

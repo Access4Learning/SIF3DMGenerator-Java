@@ -29,47 +29,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsImmunisationCertificateStatusType {
 
-
-    /**
-     * Complete
-     * 
-     */
     C,
-
-    /**
-     * Incomplete no reason given
-     * 
-     */
     I,
-
-    /**
-     * Incomplete but Up to date
-     * 
-     */
     IU,
-
-    /**
-     * Incomplete and Not up to date
-     * 
-     */
     IN,
-
-    /**
-     * Incomplete - Medical Reason
-     * 
-     */
     IM,
-
-    /**
-     * Incomplete - Objection
-     * 
-     */
     IO,
-
-    /**
-     * Not Sighted or Not Provided
-     * 
-     */
     N;
 
     public String value() {

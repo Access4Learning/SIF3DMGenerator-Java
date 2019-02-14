@@ -19,6 +19,10 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="OKMediaRelease"/>
  *     &lt;enumeration value="School/College Newsletter"/>
  *     &lt;enumeration value="School/College Yearbook"/>
+ *     &lt;enumeration value="Jurisdiction Promotional"/>
+ *     &lt;enumeration value="Jurisdiction Educational"/>
+ *     &lt;enumeration value="OKPublishInfo"/>
+ *     &lt;enumeration value="OKOnLineServices"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -28,41 +32,24 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsPermissionCategoryCodeType {
 
-
-    /**
-     * OKPrintedMaterial
-     * 
-     */
     @XmlEnumValue("OKPrintedMaterial")
     OK_PRINTED_MATERIAL("OKPrintedMaterial"),
-
-    /**
-     * OKOnlineMaterial
-     * 
-     */
     @XmlEnumValue("OKOnlineMaterial")
     OK_ONLINE_MATERIAL("OKOnlineMaterial"),
-
-    /**
-     * OKMediaRelease
-     * 
-     */
     @XmlEnumValue("OKMediaRelease")
     OK_MEDIA_RELEASE("OKMediaRelease"),
-
-    /**
-     * School/College Newsletter
-     * 
-     */
     @XmlEnumValue("School/College Newsletter")
     SCHOOL_COLLEGE_NEWSLETTER("School/College Newsletter"),
-
-    /**
-     * School/College Yearbook
-     * 
-     */
     @XmlEnumValue("School/College Yearbook")
-    SCHOOL_COLLEGE_YEARBOOK("School/College Yearbook");
+    SCHOOL_COLLEGE_YEARBOOK("School/College Yearbook"),
+    @XmlEnumValue("Jurisdiction Promotional")
+    JURISDICTION_PROMOTIONAL("Jurisdiction Promotional"),
+    @XmlEnumValue("Jurisdiction Educational")
+    JURISDICTION_EDUCATIONAL("Jurisdiction Educational"),
+    @XmlEnumValue("OKPublishInfo")
+    OK_PUBLISH_INFO("OKPublishInfo"),
+    @XmlEnumValue("OKOnLineServices")
+    OK_ON_LINE_SERVICES("OKOnLineServices");
     private final String value;
 
     AUCodeSetsPermissionCategoryCodeType(String v) {

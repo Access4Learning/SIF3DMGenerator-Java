@@ -1,6 +1,8 @@
 
 package sif.dd.au30.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,8 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object contains information about the person's picture.
- * 
  * <p>Java class for PersonPictureType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -26,10 +26,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ParentObjectRefId">
+ *         &lt;element name="ParentObjectRefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
  *                 &lt;attribute name="SIF_RefObject" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -43,18 +43,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType"/>
- *         &lt;element name="PictureSource">
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="PictureSource" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>URIOrBinaryType">
+ *               &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>URIOrBinaryTypeOrEmpty">
  *                 &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPictureSourceType" />
  *               &lt;/extension>
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
  *         &lt;element name="OKToPublish" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
- *         &lt;element name="PhotoPermissionList" type="{http://www.sifassociation.org/datamodel/au/3.4}PhotoPermissionListType" minOccurs="0"/>
+ *         &lt;element name="PublishingPermissionList" type="{http://www.sifassociation.org/datamodel/au/3.4}PublishingPermissionListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -72,22 +72,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "schoolYear",
     "pictureSource",
     "okToPublish",
-    "photoPermissionList",
+    "publishingPermissionList",
     "sifMetadata",
     "sifExtendedElements"
 })
 public class PersonPictureType {
 
-    @XmlElement(name = "ParentObjectRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ParentObjectRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonPictureType.ParentObjectRefId parentObjectRefId;
-    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected XMLGregorianCalendar schoolYear;
-    @XmlElement(name = "PictureSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PictureSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected PersonPictureType.PictureSource pictureSource;
     @XmlElementRef(name = "OKToPublish", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> okToPublish;
-    @XmlElementRef(name = "PhotoPermissionList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<PhotoPermissionListType> photoPermissionList;
+    @XmlElementRef(name = "PublishingPermissionList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PublishingPermissionListType> publishingPermissionList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -193,27 +193,27 @@ public class PersonPictureType {
     }
 
     /**
-     * Gets the value of the photoPermissionList property.
+     * Gets the value of the publishingPermissionList property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link PhotoPermissionListType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PublishingPermissionListType }{@code >}
      *     
      */
-    public JAXBElement<PhotoPermissionListType> getPhotoPermissionList() {
-        return photoPermissionList;
+    public JAXBElement<PublishingPermissionListType> getPublishingPermissionList() {
+        return publishingPermissionList;
     }
 
     /**
-     * Sets the value of the photoPermissionList property.
+     * Sets the value of the publishingPermissionList property.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link PhotoPermissionListType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link PublishingPermissionListType }{@code >}
      *     
      */
-    public void setPhotoPermissionList(JAXBElement<PhotoPermissionListType> value) {
-        this.photoPermissionList = value;
+    public void setPublishingPermissionList(JAXBElement<PublishingPermissionListType> value) {
+        this.publishingPermissionList = value;
     }
 
     /**
@@ -290,8 +290,6 @@ public class PersonPictureType {
 
 
     /**
-     * The GUID of the personal object to which this picture is linked
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -299,7 +297,7 @@ public class PersonPictureType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>IdRefTypeOrEmpty">
      *       &lt;attribute name="SIF_RefObject" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -323,14 +321,13 @@ public class PersonPictureType {
     public static class ParentObjectRefId {
 
         @XmlValue
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String value;
         @XmlAttribute(name = "SIF_RefObject", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String sifRefObject;
 
         /**
-         * A reference to a RefId.
+         * Gets the value of the value property.
          * 
          * @return
          *     possible object is
@@ -381,10 +378,6 @@ public class PersonPictureType {
 
 
     /**
-     * 
-     *         This element defines the picture. If the Type attribute is URL, this is the location of the picture in [JPEG] format; if Type is JPEG, this is the [JPEG] image data encoded using the Base64 Content-Transfer-Encoding defined in Section 6.8 of [RFC 2045].
-     *       
-     * 
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.
@@ -392,7 +385,7 @@ public class PersonPictureType {
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>URIOrBinaryType">
+     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>URIOrBinaryTypeOrEmpty">
      *       &lt;attribute name="Type" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPictureSourceType" />
      *     &lt;/extension>
      *   &lt;/simpleContent>
@@ -408,33 +401,38 @@ public class PersonPictureType {
     public static class PictureSource {
 
         @XmlValue
-        protected String value;
+        protected List<String> value;
         @XmlAttribute(name = "Type", required = true)
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String type;
 
         /**
-         * Allows for a URL or a Base-64 encoding.
+         * Gets the value of the value property.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getValue() {
-            return value;
-        }
-
-        /**
-         * Sets the value of the value property.
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the value property.
          * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getValue().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link String }
+         * 
+         * 
          */
-        public void setValue(String value) {
-            this.value = value;
+        public List<String> getValue() {
+            if (value == null) {
+                value = new ArrayList<String>();
+            }
+            return this.value;
         }
 
         /**

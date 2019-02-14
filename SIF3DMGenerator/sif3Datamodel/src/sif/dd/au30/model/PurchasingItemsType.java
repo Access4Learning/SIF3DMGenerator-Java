@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Listing of line items from original purchase order. Included to indicate any variation between the items, item cost, or item quantity ordered, and what has been delivered.
- * 
  * <p>Java class for PurchasingItemsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PurchasingItem" type="{http://www.sifassociation.org/datamodel/au/3.4}PurchasingItemType" maxOccurs="unbounded"/>
+ *         &lt;element name="PurchasingItem" type="{http://www.sifassociation.org/datamodel/au/3.4}PurchasingItemType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PurchasingItemsType {
 
-    @XmlElement(name = "PurchasingItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PurchasingItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<PurchasingItemType> purchasingItem;
 
     /**

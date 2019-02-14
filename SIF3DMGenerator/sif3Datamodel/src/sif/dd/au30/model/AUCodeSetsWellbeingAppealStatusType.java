@@ -27,30 +27,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingAppealStatusType {
 
-
-    /**
-     * In Progress
-     * 
-     */
     N("N"),
-
-    /**
-     * Not Specified
-     * 
-     */
     @XmlEnumValue("N/S")
     N_S("N/S"),
-
-    /**
-     * Rejected
-     * 
-     */
     RE("RE"),
-
-    /**
-     * Successful
-     * 
-     */
     SU("SU");
     private final String value;
 

@@ -15,8 +15,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Time span that the student entered or returned to school
- * 
  * <p>Java class for AttendanceTimeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,10 +25,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="AttendanceType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="AttendanceCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceCodeType"/>
- *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAttendanceStatusType"/>
- *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
- *         &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time"/>
+ *         &lt;element name="AttendanceCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceCodeType" minOccurs="0"/>
+ *         &lt;element name="AttendanceStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAttendanceStatusType" minOccurs="0"/>
+ *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="EndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="DurationValue" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
@@ -63,15 +61,15 @@ public class AttendanceTimeType {
 
     @XmlElementRef(name = "AttendanceType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> attendanceType;
-    @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AttendanceCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AttendanceCodeType attendanceCode;
-    @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AttendanceStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String attendanceStatus;
-    @XmlElement(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar startTime;
-    @XmlElement(name = "EndTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "EndTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar endTime;
     @XmlElementRef(name = "DurationValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

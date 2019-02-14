@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of School Programs
- * 
  * <p>Java class for SchoolProgramListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

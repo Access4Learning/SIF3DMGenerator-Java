@@ -28,41 +28,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingResponseCategoryType {
 
-
-    /**
-     * Suspension
-     * 
-     */
     S,
-
-    /**
-     * Detention
-     * 
-     */
     D,
-
-    /**
-     * Award
-     * 
-     */
     A,
-
-    /**
-     * PlanRequired
-     * 
-     */
     P,
-
-    /**
-     * MultipleResponse
-     * 
-     */
     M,
-
-    /**
-     * Other
-     * 
-     */
     O;
 
     public String value() {

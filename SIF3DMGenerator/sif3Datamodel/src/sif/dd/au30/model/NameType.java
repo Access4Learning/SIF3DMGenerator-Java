@@ -8,12 +8,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *       The Name element, which could belong to a student, staff member, contact, etc. This element or a form of this element with a
- *       subset of Type values occurs within objects
- *       such as StudentPersonal, StudentContactPersonal, StaffPersonal, etc.
- *     
- * 
  * <p>Java class for NameType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

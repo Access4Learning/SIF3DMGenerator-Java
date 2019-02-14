@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This is an alert message that is associated with the student.
- * 
  * <p>Java class for AlertMessageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

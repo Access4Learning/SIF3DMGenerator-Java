@@ -16,8 +16,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * This object defines the data that is being aggregated as well as the type of measurement that is being performed.
- * 
  * <p>Java class for AggregateStatisticInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -27,7 +25,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StatisticName" type="{http://www.w3.org/2001/XMLSchema}token"/>
+ *         &lt;element name="StatisticName" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="CalculationRule" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
@@ -99,7 +97,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class AggregateStatisticInfoType {
 
-    @XmlElement(name = "StatisticName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StatisticName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "token")
     protected String statisticName;

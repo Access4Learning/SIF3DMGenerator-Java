@@ -10,11 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         Container for elements reflecting the most recent enrollment of a student.  If the student is
- *         currently enrolled in the district, the elements contain current information.
- *       
- * 
  * <p>Java class for StudentMostRecentContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- * 
  * <p>Java class for CountryList2Type complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,7 +21,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CountryOfResidency" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" maxOccurs="unbounded"/>
+ *         &lt;element name="CountryOfResidency" type="{http://www.sifassociation.org/datamodel/au/3.4}CountryType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,7 +36,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class CountryList2Type {
 
-    @XmlElement(name = "CountryOfResidency", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "CountryOfResidency", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected List<String> countryOfResidency;
 

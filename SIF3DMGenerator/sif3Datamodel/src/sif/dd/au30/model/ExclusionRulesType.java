@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Rules for which statistic may not be reported.
- * 
  * <p>Java class for ExclusionRulesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

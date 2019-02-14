@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Container for the NAP Domain Bands - Upper and Lower
- * 
  * <p>Java class for DomainBandsContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -20,26 +18,26 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Band1Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band1Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band2Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band2Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band3Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band3Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band4Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band4Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band5Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band5Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band6Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band6Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band7Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band7Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band8Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band8Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band9Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band9Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band10Lower" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
- *         &lt;element name="Band10Upper" type="{http://www.w3.org/2001/XMLSchema}decimal"/>
+ *         &lt;element name="Band1Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band1Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band2Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band2Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band3Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band3Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band4Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band4Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band5Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band5Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band6Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band6Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band7Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band7Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band8Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band8Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band9Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band9Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band10Lower" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="Band10Upper" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -73,45 +71,45 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class DomainBandsContainerType {
 
-    @XmlElement(name = "Band1Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band1Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band1Lower;
-    @XmlElement(name = "Band1Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band1Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band1Upper;
-    @XmlElement(name = "Band2Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band2Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band2Lower;
-    @XmlElement(name = "Band2Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band2Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band2Upper;
-    @XmlElement(name = "Band3Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band3Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band3Lower;
-    @XmlElement(name = "Band3Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band3Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band3Upper;
-    @XmlElement(name = "Band4Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band4Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band4Lower;
-    @XmlElement(name = "Band4Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band4Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band4Upper;
-    @XmlElement(name = "Band5Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band5Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band5Lower;
-    @XmlElement(name = "Band5Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band5Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band5Upper;
-    @XmlElement(name = "Band6Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band6Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band6Lower;
-    @XmlElement(name = "Band6Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band6Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band6Upper;
-    @XmlElement(name = "Band7Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band7Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band7Lower;
-    @XmlElement(name = "Band7Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band7Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band7Upper;
-    @XmlElement(name = "Band8Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band8Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band8Lower;
-    @XmlElement(name = "Band8Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band8Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band8Upper;
-    @XmlElement(name = "Band9Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band9Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band9Lower;
-    @XmlElement(name = "Band9Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band9Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band9Upper;
-    @XmlElement(name = "Band10Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band10Lower", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band10Lower;
-    @XmlElement(name = "Band10Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Band10Upper", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal band10Upper;
 
     /**

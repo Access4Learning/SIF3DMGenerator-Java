@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- * 
  * <p>Java class for NAPCodeFrameTestletListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

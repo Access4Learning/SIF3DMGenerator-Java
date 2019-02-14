@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Medical alert associated with the student.
- * 
  * <p>Java class for MedicalAlertMessageType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

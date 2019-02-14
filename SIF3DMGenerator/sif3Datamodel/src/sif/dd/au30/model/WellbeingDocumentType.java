@@ -11,8 +11,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Repeatable information of the location of any associated documents kept in relation. These include evidentiary documents, and action plans.
- * 
  * <p>Java class for WellbeingDocumentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +20,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Location" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="Location" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Sensitivity" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
  *         &lt;element name="DocumentType" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -47,7 +45,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class WellbeingDocumentType {
 
-    @XmlElement(name = "Location", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Location", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String location;
     @XmlElementRef(name = "Sensitivity", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> sensitivity;

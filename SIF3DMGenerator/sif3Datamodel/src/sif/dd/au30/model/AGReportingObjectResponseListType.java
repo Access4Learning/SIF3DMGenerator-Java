@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of the Reporting Objects being responsed to.
- * 
  * <p>Java class for AGReportingObjectResponseListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

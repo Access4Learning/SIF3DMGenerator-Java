@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * A lesson or activity-sized portion of a resource.
- * 
  * <p>Java class for ComponentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -24,8 +22,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="Reference" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Reference" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Strategies" type="{http://www.sifassociation.org/datamodel/au/3.4}StrategiesType" minOccurs="0"/>
  *         &lt;element name="AssociatedObjects" type="{http://www.sifassociation.org/datamodel/au/3.4}AssociatedObjectsType" minOccurs="0"/>
@@ -47,11 +45,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class ComponentType {
 
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String name;
-    @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String reference;
     @XmlElementRef(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> description;
