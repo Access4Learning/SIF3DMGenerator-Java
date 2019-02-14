@@ -25,18 +25,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsNAPWritingGenreType {
 
-
-    /**
-     * Persuasive
-     * 
-     */
     @XmlEnumValue("Persuasive")
     PERSUASIVE("Persuasive"),
-
-    /**
-     * Narrative
-     * 
-     */
     @XmlEnumValue("Narrative")
     NARRATIVE("Narrative");
     private final String value;

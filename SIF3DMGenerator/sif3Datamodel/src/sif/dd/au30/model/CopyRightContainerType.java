@@ -10,8 +10,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Copyright for document.
- * 
  * <p>Java class for CopyRightContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

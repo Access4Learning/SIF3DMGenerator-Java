@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of SubTypes associated with a Category.
- * 
  * <p>Java class for WellbeingEventSubCategoryListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="WellbeingEventSubCategory" maxOccurs="unbounded">
+ *         &lt;element name="WellbeingEventSubCategory" maxOccurs="unbounded" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;union>
  *               &lt;simpleType>
@@ -49,7 +47,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class WellbeingEventSubCategoryListType {
 
-    @XmlElement(name = "WellbeingEventSubCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WellbeingEventSubCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<String> wellbeingEventSubCategory;
 
     /**

@@ -8,19 +8,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * .
- * 
- * <p>Java class for PhotoPermissionType complex type.
+ * <p>Java class for PublishingPermissionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PhotoPermissionType">
+ * &lt;complexType name="PublishingPermissionType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PermissionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPermissionCategoryCodeType"/>
- *         &lt;element name="PermissionValue" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType"/>
+ *         &lt;element name="PermissionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPermissionCategoryCodeType" minOccurs="0"/>
+ *         &lt;element name="PermissionValue" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,15 +28,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhotoPermissionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "PublishingPermissionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "permissionCategory",
     "permissionValue"
 })
-public class PhotoPermissionType {
+public class PublishingPermissionType {
 
-    @XmlElement(name = "PermissionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PermissionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsPermissionCategoryCodeType permissionCategory;
-    @XmlElement(name = "PermissionValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "PermissionValue", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsYesOrNoCategoryType permissionValue;
 
     /**

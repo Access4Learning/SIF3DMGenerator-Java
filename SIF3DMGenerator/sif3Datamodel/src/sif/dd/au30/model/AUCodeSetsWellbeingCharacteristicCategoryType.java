@@ -46,146 +46,31 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingCharacteristicCategoryType {
 
-
-    /**
-     * Allergies - other
-     * 
-     */
     MAO("MAO"),
-
-    /**
-     * Auto-immune/Immune Disorders
-     * 
-     */
     MAIM("MAIM"),
-
-    /**
-     * Respiratory Disorder
-     * 
-     */
     MRD("MRD"),
-
-    /**
-     * Blood disorder
-     * 
-     */
     MB("MB"),
-
-    /**
-     * Heart Disease/ Disorder
-     * 
-     */
     MMD("MMD"),
-
-    /**
-     * Musculo - skeletal conditions
-     * 
-     */
     MMS("MMS"),
-
-    /**
-     * Endocrine and Metabolic Disorders
-     * 
-     */
     MEM("MEM"),
-
-    /**
-     * Childhood cancer
-     * 
-     */
     MC("MC"),
-
-    /**
-     * Allergy - Anaphylaxis
-     * 
-     */
     MAA("MAA"),
-
-    /**
-     * Mental and behavioural disorders
-     * 
-     */
     MH("MH"),
-
-    /**
-     * Diseases/conditions of the nervous system
-     * 
-     */
     MN("MN"),
-
-    /**
-     * Seizure disorders
-     * 
-     */
     MS("MS"),
-
-    /**
-     * Congenital malformations, deformations and chromosomal abnormalities
-     * 
-     */
     MCM("MCM"),
-
-    /**
-     * Infectious Diseases
-     * 
-     */
     MI("MI"),
-
-    /**
-     * Gastro Intestinal/Urinary conditions
-     * 
-     */
     MGI("MGI"),
-
-    /**
-     * Neuro/Developmental Disorders
-     * 
-     */
     MND("MND"),
-
-    /**
-     * Oral/Phalangeal Disorders
-     * 
-     */
     MO("MO"),
-
-    /**
-     * Deaf and Hard of Hearing
-     * 
-     */
     MD("MD"),
-
-    /**
-     * Optical/ Vision Disorder
-     * 
-     */
     MOP("MOP"),
-
-    /**
-     * Medical Other
-     * 
-     */
     @XmlEnumValue("M-Other")
     M_OTHER("M-Other"),
-
-    /**
-     * Disability Other
-     * 
-     */
     @XmlEnumValue("D-Other")
     D_OTHER("D-Other"),
-
-    /**
-     * Special Needs Other
-     * 
-     */
     @XmlEnumValue("S-Other")
     S_OTHER("S-Other"),
-
-    /**
-     * Other
-     * 
-     */
     @XmlEnumValue("Other")
     OTHER("Other");
     private final String value;

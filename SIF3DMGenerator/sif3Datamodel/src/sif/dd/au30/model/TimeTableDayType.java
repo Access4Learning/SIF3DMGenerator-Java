@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * This element identifies a 'day' in a TimeTable.
- * 
  * <p>Java class for TimeTableDayType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,9 +20,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
- *         &lt;element name="DayTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="TimeTablePeriodList" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeTablePeriodListType"/>
+ *         &lt;element name="DayId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="DayTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="TimeTablePeriodList" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeTablePeriodListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,14 +39,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class TimeTableDayType {
 
-    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "DayId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String dayId;
-    @XmlElement(name = "DayTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "DayTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String dayTitle;
-    @XmlElement(name = "TimeTablePeriodList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TimeTablePeriodList", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected TimeTablePeriodListType timeTablePeriodList;
 
     /**

@@ -13,8 +13,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Optional campus details.
- * 
  * <p>Java class for CampusContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -25,9 +23,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="ParentSchoolId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SchoolCampusId" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="SchoolCampusId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="CampusType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSchoolLevelType" minOccurs="0"/>
- *         &lt;element name="AdminStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType"/>
+ *         &lt;element name="AdminStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,13 +45,13 @@ public class CampusContainerType {
 
     @XmlElementRef(name = "ParentSchoolId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> parentSchoolId;
-    @XmlElement(name = "SchoolCampusId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "SchoolCampusId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String schoolCampusId;
     @XmlElementRef(name = "CampusType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsSchoolLevelType> campusType;
-    @XmlElement(name = "AdminStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AdminStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsYesOrNoCategoryType adminStatus;
 
     /**

@@ -1,7 +1,6 @@
 
 package sif.dd.au30.model;
 
-import java.util.Calendar;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,23 +16,24 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for AGStatusReportType complex type.
+ * <p>Java class for FinancialQuestionnaireSubmissionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AGStatusReportType">
+ * &lt;complexType name="FinancialQuestionnaireSubmissionType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="FQYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="ReportingAuthority" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ReportingAuthoritySystem" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ReportingAuthorityCommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SubmittedBy" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="SubmissionTimestamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="AGCollection" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="CollectionYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
- *         &lt;element name="AGReportingObjectResponseList" type="{http://www.sifassociation.org/datamodel/au/3.4}AGReportingObjectResponseListType" minOccurs="0"/>
+ *         &lt;element name="SystemSubmission" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="SoftwareVendorInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}SoftwareVendorInfoContainerType" minOccurs="0"/>
+ *         &lt;element name="SubmissionContact" type="{http://www.sifassociation.org/datamodel/au/3.4}EntityContactInfoType" minOccurs="0"/>
+ *         &lt;element name="FQReportComments" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="FQReportingList" type="{http://www.sifassociation.org/datamodel/au/3.4}FQReportingListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -46,38 +46,41 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AGStatusReportType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "FinancialQuestionnaireSubmissionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "fqYear",
     "reportingAuthority",
     "reportingAuthoritySystem",
     "reportingAuthorityCommonwealthId",
-    "submittedBy",
-    "submissionTimestamp",
-    "agCollection",
-    "collectionYear",
-    "agReportingObjectResponseList",
+    "systemSubmission",
+    "softwareVendorInfo",
+    "submissionContact",
+    "fqReportComments",
+    "fqReportingList",
     "sifMetadata",
     "sifExtendedElements"
 })
-public class AGStatusReportType {
+public class FinancialQuestionnaireSubmissionType {
 
-    @XmlElement(name = "ReportingAuthority", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String reportingAuthority;
+    @XmlElement(name = "FQYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected XMLGregorianCalendar fqYear;
+    @XmlElementRef(name = "ReportingAuthority", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> reportingAuthority;
     @XmlElementRef(name = "ReportingAuthoritySystem", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> reportingAuthoritySystem;
-    @XmlElementRef(name = "ReportingAuthorityCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> reportingAuthorityCommonwealthId;
-    @XmlElementRef(name = "SubmittedBy", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> submittedBy;
-    @XmlElementRef(name = "SubmissionTimestamp", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<Calendar> submissionTimestamp;
-    @XmlElementRef(name = "AGCollection", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> agCollection;
-    @XmlElement(name = "CollectionYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected XMLGregorianCalendar collectionYear;
-    @XmlElementRef(name = "AGReportingObjectResponseList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<AGReportingObjectResponseListType> agReportingObjectResponseList;
+    @XmlElement(name = "ReportingAuthorityCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String reportingAuthorityCommonwealthId;
+    @XmlElementRef(name = "SystemSubmission", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> systemSubmission;
+    @XmlElement(name = "SoftwareVendorInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected SoftwareVendorInfoContainerType softwareVendorInfo;
+    @XmlElement(name = "SubmissionContact", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected EntityContactInfoType submissionContact;
+    @XmlElementRef(name = "FQReportComments", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> fqReportComments;
+    @XmlElementRef(name = "FQReportingList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<FQReportingListType> fqReportingList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -87,14 +90,38 @@ public class AGStatusReportType {
     protected String refId;
 
     /**
+     * Gets the value of the fqYear property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getFQYear() {
+        return fqYear;
+    }
+
+    /**
+     * Sets the value of the fqYear property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setFQYear(XMLGregorianCalendar value) {
+        this.fqYear = value;
+    }
+
+    /**
      * Gets the value of the reportingAuthority property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getReportingAuthority() {
+    public JAXBElement<String> getReportingAuthority() {
         return reportingAuthority;
     }
 
@@ -103,10 +130,10 @@ public class AGStatusReportType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setReportingAuthority(String value) {
+    public void setReportingAuthority(JAXBElement<String> value) {
         this.reportingAuthority = value;
     }
 
@@ -139,10 +166,10 @@ public class AGStatusReportType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getReportingAuthorityCommonwealthId() {
+    public String getReportingAuthorityCommonwealthId() {
         return reportingAuthorityCommonwealthId;
     }
 
@@ -151,131 +178,131 @@ public class AGStatusReportType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setReportingAuthorityCommonwealthId(JAXBElement<String> value) {
+    public void setReportingAuthorityCommonwealthId(String value) {
         this.reportingAuthorityCommonwealthId = value;
     }
 
     /**
-     * Gets the value of the submittedBy property.
+     * Gets the value of the systemSubmission property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getSystemSubmission() {
+        return systemSubmission;
+    }
+
+    /**
+     * Sets the value of the systemSubmission property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setSystemSubmission(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.systemSubmission = value;
+    }
+
+    /**
+     * Gets the value of the softwareVendorInfo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SoftwareVendorInfoContainerType }
+     *     
+     */
+    public SoftwareVendorInfoContainerType getSoftwareVendorInfo() {
+        return softwareVendorInfo;
+    }
+
+    /**
+     * Sets the value of the softwareVendorInfo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SoftwareVendorInfoContainerType }
+     *     
+     */
+    public void setSoftwareVendorInfo(SoftwareVendorInfoContainerType value) {
+        this.softwareVendorInfo = value;
+    }
+
+    /**
+     * Gets the value of the submissionContact property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link EntityContactInfoType }
+     *     
+     */
+    public EntityContactInfoType getSubmissionContact() {
+        return submissionContact;
+    }
+
+    /**
+     * Sets the value of the submissionContact property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EntityContactInfoType }
+     *     
+     */
+    public void setSubmissionContact(EntityContactInfoType value) {
+        this.submissionContact = value;
+    }
+
+    /**
+     * Gets the value of the fqReportComments property.
      * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public JAXBElement<String> getSubmittedBy() {
-        return submittedBy;
+    public JAXBElement<String> getFQReportComments() {
+        return fqReportComments;
     }
 
     /**
-     * Sets the value of the submittedBy property.
+     * Sets the value of the fqReportComments property.
      * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setSubmittedBy(JAXBElement<String> value) {
-        this.submittedBy = value;
+    public void setFQReportComments(JAXBElement<String> value) {
+        this.fqReportComments = value;
     }
 
     /**
-     * Gets the value of the submissionTimestamp property.
+     * Gets the value of the fqReportingList property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link Calendar }{@code >}
+     *     {@link JAXBElement }{@code <}{@link FQReportingListType }{@code >}
      *     
      */
-    public JAXBElement<Calendar> getSubmissionTimestamp() {
-        return submissionTimestamp;
+    public JAXBElement<FQReportingListType> getFQReportingList() {
+        return fqReportingList;
     }
 
     /**
-     * Sets the value of the submissionTimestamp property.
+     * Sets the value of the fqReportingList property.
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link Calendar }{@code >}
+     *     {@link JAXBElement }{@code <}{@link FQReportingListType }{@code >}
      *     
      */
-    public void setSubmissionTimestamp(JAXBElement<Calendar> value) {
-        this.submissionTimestamp = value;
-    }
-
-    /**
-     * Gets the value of the agCollection property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
-     */
-    public JAXBElement<String> getAGCollection() {
-        return agCollection;
-    }
-
-    /**
-     * Sets the value of the agCollection property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
-     */
-    public void setAGCollection(JAXBElement<String> value) {
-        this.agCollection = value;
-    }
-
-    /**
-     * Gets the value of the collectionYear property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCollectionYear() {
-        return collectionYear;
-    }
-
-    /**
-     * Sets the value of the collectionYear property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCollectionYear(XMLGregorianCalendar value) {
-        this.collectionYear = value;
-    }
-
-    /**
-     * Gets the value of the agReportingObjectResponseList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link AGReportingObjectResponseListType }{@code >}
-     *     
-     */
-    public JAXBElement<AGReportingObjectResponseListType> getAGReportingObjectResponseList() {
-        return agReportingObjectResponseList;
-    }
-
-    /**
-     * Sets the value of the agReportingObjectResponseList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link AGReportingObjectResponseListType }{@code >}
-     *     
-     */
-    public void setAGReportingObjectResponseList(JAXBElement<AGReportingObjectResponseListType> value) {
-        this.agReportingObjectResponseList = value;
+    public void setFQReportingList(JAXBElement<FQReportingListType> value) {
+        this.fqReportingList = value;
     }
 
     /**

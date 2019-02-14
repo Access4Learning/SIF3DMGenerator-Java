@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Container for the location details of a WellbeingEvent.
- * 
  * <p>Java class for WellbeingEventLocationDetailsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="EventLocation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventLocationType"/>
+ *         &lt;element name="EventLocation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingEventLocationType" minOccurs="0"/>
  *         &lt;element name="Class" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="FurtherLocationNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
@@ -40,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class WellbeingEventLocationDetailsType {
 
-    @XmlElement(name = "EventLocation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "EventLocation", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsWellbeingEventLocationType eventLocation;
     @XmlElementRef(name = "Class", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> clazz;

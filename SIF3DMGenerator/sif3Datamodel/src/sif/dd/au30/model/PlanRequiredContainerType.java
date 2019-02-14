@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Container for Information outlining details of a possible Plan.  A Personalised Plan will be referenced by a separate Object.
- * 
  * <p>Java class for PlanRequiredContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Breakdown of times that the student entered or returned to school.
- * 
  * <p>Java class for AttendanceTimesType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AttendanceTime" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceTimeType" maxOccurs="unbounded"/>
+ *         &lt;element name="AttendanceTime" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceTimeType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class AttendanceTimesType {
 
-    @XmlElement(name = "AttendanceTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "AttendanceTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<AttendanceTimeType> attendanceTime;
 
     /**

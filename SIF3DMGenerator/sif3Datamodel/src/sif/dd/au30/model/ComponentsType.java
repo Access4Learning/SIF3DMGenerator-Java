@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Lesson or activity-sized portions of a resource.
- * 
  * <p>Java class for ComponentsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Component" type="{http://www.sifassociation.org/datamodel/au/3.4}ComponentType" maxOccurs="unbounded"/>
+ *         &lt;element name="Component" type="{http://www.sifassociation.org/datamodel/au/3.4}ComponentType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ComponentsType {
 
-    @XmlElement(name = "Component", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Component", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<ComponentType> component;
 
     /**

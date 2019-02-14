@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Repeatable Follow Up Action.
- * 
  * <p>Java class for FollowUpActionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

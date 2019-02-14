@@ -14,8 +14,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Substructure to allow representing instances where teachers only take subsets of an event. Most typically, this occurs with exam supervision, where each teacher gets a 1-period duty. It also happens with schools with e.g. 4 long periods per day: a period of 1hr20mins can be split into 2 halves of 40 minutes each.
- * 
  * <p>Java class for TeacherCoverType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -25,7 +23,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType"/>
+ *         &lt;element name="StaffPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="StaffLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
@@ -52,7 +50,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TeacherCoverType {
 
-    @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StaffPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String staffPersonalRefId;
     @XmlElementRef(name = "StaffLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

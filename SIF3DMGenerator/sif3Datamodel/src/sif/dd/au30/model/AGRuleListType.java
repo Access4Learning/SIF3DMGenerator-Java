@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of Rules associated with the Item.
- * 
  * <p>Java class for AGRuleListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

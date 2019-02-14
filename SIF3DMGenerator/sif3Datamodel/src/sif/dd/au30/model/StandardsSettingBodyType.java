@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * The name of the state or organization that authored and manages updates to the curriculum document (i.e., ACARA, NSW DET).
- * 
  * <p>Java class for StandardsSettingBodyType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

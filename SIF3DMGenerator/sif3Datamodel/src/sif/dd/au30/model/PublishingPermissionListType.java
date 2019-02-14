@@ -10,18 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A list of Rules associated with the Item.
- * 
- * <p>Java class for FQRuleListType complex type.
+ * <p>Java class for PublishingPermissionListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FQRuleListType">
+ * &lt;complexType name="PublishingPermissionListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="FQRule" type="{http://www.sifassociation.org/datamodel/au/3.4}FQRuleType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PublishingPermission" type="{http://www.sifassociation.org/datamodel/au/3.4}PublishingPermissionType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FQRuleListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "fqRule"
+@XmlType(name = "PublishingPermissionListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "publishingPermission"
 })
-public class FQRuleListType {
+public class PublishingPermissionListType {
 
-    @XmlElement(name = "FQRule", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<FQRuleType> fqRule;
+    @XmlElement(name = "PublishingPermission", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<PublishingPermissionType> publishingPermission;
 
     /**
-     * Gets the value of the fqRule property.
+     * Gets the value of the publishingPermission property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the fqRule property.
+     * This is why there is not a <CODE>set</CODE> method for the publishingPermission property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getFQRule().add(newItem);
+     *    getPublishingPermission().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link FQRuleType }
+     * {@link PublishingPermissionType }
      * 
      * 
      */
-    public List<FQRuleType> getFQRule() {
-        if (fqRule == null) {
-            fqRule = new ArrayList<FQRuleType>();
+    public List<PublishingPermissionType> getPublishingPermission() {
+        if (publishingPermission == null) {
+            publishingPermission = new ArrayList<PublishingPermissionType>();
         }
-        return this.fqRule;
+        return this.publishingPermission;
     }
 
 }

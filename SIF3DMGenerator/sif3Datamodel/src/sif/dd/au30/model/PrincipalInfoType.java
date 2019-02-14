@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Information about the campus or school principal.
- * 
  * <p>Java class for PrincipalInfoType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ContactName" type="{http://www.sifassociation.org/datamodel/au/3.4}NameOfRecordType"/>
+ *         &lt;element name="ContactName" type="{http://www.sifassociation.org/datamodel/au/3.4}NameOfRecordType" minOccurs="0"/>
  *         &lt;element name="ContactTitle" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="PhoneNumberList" type="{http://www.sifassociation.org/datamodel/au/3.4}PhoneNumberListType" minOccurs="0"/>
  *         &lt;element name="EmailList" type="{http://www.sifassociation.org/datamodel/au/3.4}EmailListType" minOccurs="0"/>
@@ -42,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PrincipalInfoType {
 
-    @XmlElement(name = "ContactName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "ContactName", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected NameOfRecordType contactName;
     @XmlElementRef(name = "ContactTitle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> contactTitle;

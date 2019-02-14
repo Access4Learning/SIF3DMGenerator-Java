@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of Operating system, network, and other technical requirements for the activity, if applicable.
- * 
  * <p>Java class for TechnicalRequirementsType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

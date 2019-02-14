@@ -10,11 +10,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         Extends BaseNameType to allow for one Type attribute value, indicating the name is the name of record;
- *         serves as the primary name in some SIF objects, including StudentPersonal.
- *       
- * 
  * <p>Java class for NameOfRecordType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

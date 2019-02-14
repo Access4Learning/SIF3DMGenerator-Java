@@ -8,8 +8,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Year Span.
- * 
  * <p>Java class for YearRangeType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -19,8 +17,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Start" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType"/>
- *         &lt;element name="End" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType"/>
+ *         &lt;element name="Start" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
+ *         &lt;element name="End" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,9 +34,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class YearRangeType {
 
-    @XmlElement(name = "Start", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Start", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected YearLevelType start;
-    @XmlElement(name = "End", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "End", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected YearLevelType end;
 
     /**

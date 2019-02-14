@@ -18,10 +18,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object provides information about a particular assignment, allows applications to synchronize each other's assignment tables, gathers the definition for a GradingAssignmentScore object, etc.  
- *       
- * 
  * <p>Java class for GradingAssignmentType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -35,8 +31,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="StudentPersonalRefIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentsType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="GradingCategory" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *         &lt;element name="PointsPossible" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
+ *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="PointsPossible" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="CreateDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="DueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Weight" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
@@ -95,13 +91,13 @@ public class GradingAssignmentType {
     protected JAXBElement<String> schoolInfoRefId;
     @XmlElementRef(name = "GradingCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> gradingCategory;
-    @XmlElement(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Description", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String description;
     @XmlElement(name = "PointsPossible", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected long pointsPossible;
+    protected Long pointsPossible;
     @XmlElementRef(name = "CreateDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> createDate;
     @XmlElementRef(name = "DueDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -259,16 +255,24 @@ public class GradingAssignmentType {
     /**
      * Gets the value of the pointsPossible property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public long getPointsPossible() {
+    public Long getPointsPossible() {
         return pointsPossible;
     }
 
     /**
      * Sets the value of the pointsPossible property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setPointsPossible(long value) {
+    public void setPointsPossible(Long value) {
         this.pointsPossible = value;
     }
 

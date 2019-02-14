@@ -12,8 +12,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * .
- * 
  * <p>Java class for StudentGroupType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,8 +21,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GroupCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsGroupCategoryCodeType"/>
- *         &lt;element name="GroupLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType"/>
+ *         &lt;element name="GroupCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsGroupCategoryCodeType" minOccurs="0"/>
+ *         &lt;element name="GroupLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="GroupDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -42,9 +40,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class StudentGroupType {
 
-    @XmlElement(name = "GroupCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "GroupCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsGroupCategoryCodeType groupCategory;
-    @XmlElement(name = "GroupLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "GroupLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String groupLocalId;
     @XmlElementRef(name = "GroupDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

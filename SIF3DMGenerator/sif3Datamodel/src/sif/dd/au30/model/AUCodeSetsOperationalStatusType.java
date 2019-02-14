@@ -28,41 +28,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsOperationalStatusType {
 
-
-    /**
-     * Building or Construction Started
-     * 
-     */
     B,
-
-    /**
-     * Closed
-     * 
-     */
     C,
-
-    /**
-     * Open
-     * 
-     */
     O,
-
-    /**
-     * Pending
-     * 
-     */
     P,
-
-    /**
-     * Site
-     * 
-     */
     S,
-
-    /**
-     * Unstaffed
-     * 
-     */
     U;
 
     public String value() {

@@ -10,18 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- * 
- * <p>Java class for DataDomainObligationListType complex type.
+ * <p>Java class for FQReportingListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DataDomainObligationListType">
+ * &lt;complexType name="FQReportingListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="DataDomainObligation" type="{http://www.sifassociation.org/datamodel/au/3.4}DataDomainObligationType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="FQReporting" type="{http://www.sifassociation.org/datamodel/au/3.4}FQReportingType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DataDomainObligationListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "dataDomainObligation"
+@XmlType(name = "FQReportingListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "fqReporting"
 })
-public class DataDomainObligationListType {
+public class FQReportingListType {
 
-    @XmlElement(name = "DataDomainObligation", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<DataDomainObligationType> dataDomainObligation;
+    @XmlElement(name = "FQReporting", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<FQReportingType> fqReporting;
 
     /**
-     * Gets the value of the dataDomainObligation property.
+     * Gets the value of the fqReporting property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the dataDomainObligation property.
+     * This is why there is not a <CODE>set</CODE> method for the fqReporting property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getDataDomainObligation().add(newItem);
+     *    getFQReporting().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link DataDomainObligationType }
+     * {@link FQReportingType }
      * 
      * 
      */
-    public List<DataDomainObligationType> getDataDomainObligation() {
-        if (dataDomainObligation == null) {
-            dataDomainObligation = new ArrayList<DataDomainObligationType>();
+    public List<FQReportingType> getFQReporting() {
+        if (fqReporting == null) {
+            fqReporting = new ArrayList<FQReportingType>();
         }
-        return this.dataDomainObligation;
+        return this.fqReporting;
     }
 
 }

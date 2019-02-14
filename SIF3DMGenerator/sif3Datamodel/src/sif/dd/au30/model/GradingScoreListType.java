@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Assignments that the student went through to achieve this summative assessment.
- * 
  * <p>Java class for GradingScoreListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

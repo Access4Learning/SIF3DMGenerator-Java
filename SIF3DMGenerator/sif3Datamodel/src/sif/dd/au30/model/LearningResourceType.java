@@ -17,11 +17,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * 
- *         This object contains information related to learning resources that may be used in educational settings. These
- *         include textbooks, Internet content, educational software, videos and DVDs, supplemental print material, etc.
- *       
- * 
  * <p>Java class for LearningResourceType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -31,7 +26,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Author" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Contacts" type="{http://www.sifassociation.org/datamodel/au/3.4}ContactsType" minOccurs="0"/>
  *         &lt;element name="Location" minOccurs="0">
@@ -52,7 +47,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="AgreementDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="Approvals" type="{http://www.sifassociation.org/datamodel/au/3.4}ApprovalsType" minOccurs="0"/>
  *         &lt;element name="Evaluations" type="{http://www.sifassociation.org/datamodel/au/3.4}EvaluationsType" minOccurs="0"/>
- *         &lt;element name="Components" type="{http://www.sifassociation.org/datamodel/au/3.4}ComponentsType"/>
+ *         &lt;element name="Components" type="{http://www.sifassociation.org/datamodel/au/3.4}ComponentsType" minOccurs="0"/>
  *         &lt;element name="LearningStandards" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardsType" minOccurs="0"/>
  *         &lt;element name="LearningResourcePackageRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
@@ -89,7 +84,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class LearningResourceType {
 
-    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String name;
@@ -117,7 +112,7 @@ public class LearningResourceType {
     protected JAXBElement<ApprovalsType> approvals;
     @XmlElementRef(name = "Evaluations", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<EvaluationsType> evaluations;
-    @XmlElement(name = "Components", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "Components", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected ComponentsType components;
     @XmlElementRef(name = "LearningStandards", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardsType> learningStandards;

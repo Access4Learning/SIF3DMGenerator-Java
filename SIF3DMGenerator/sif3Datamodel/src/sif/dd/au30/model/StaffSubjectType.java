@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * This element contains Staff subjects they are eligible to teach together with the teaching preference.
- * 
  * <p>Java class for StaffSubjectType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt"/>
+ *         &lt;element name="PreferenceNumber" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="SubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -43,7 +41,7 @@ public class StaffSubjectType {
 
     @XmlElement(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "unsignedInt")
-    protected long preferenceNumber;
+    protected Long preferenceNumber;
     @XmlElementRef(name = "SubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> subjectLocalId;
     @XmlElementRef(name = "TimeTableSubjectRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -52,16 +50,24 @@ public class StaffSubjectType {
     /**
      * Gets the value of the preferenceNumber property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
-    public long getPreferenceNumber() {
+    public Long getPreferenceNumber() {
         return preferenceNumber;
     }
 
     /**
      * Sets the value of the preferenceNumber property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setPreferenceNumber(long value) {
+    public void setPreferenceNumber(Long value) {
         this.preferenceNumber = value;
     }
 

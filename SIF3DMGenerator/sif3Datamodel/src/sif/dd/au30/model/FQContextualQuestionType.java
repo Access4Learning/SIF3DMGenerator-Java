@@ -8,8 +8,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * The FQItem contextual question.
- * 
  * <p>Java class for FQContextualQuestionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -19,8 +17,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="FQContext" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="FQAnswer" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="FQContext" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="FQAnswer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,9 +34,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FQContextualQuestionType {
 
-    @XmlElement(name = "FQContext", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "FQContext", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String fqContext;
-    @XmlElement(name = "FQAnswer", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "FQAnswer", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String fqAnswer;
 
     /**

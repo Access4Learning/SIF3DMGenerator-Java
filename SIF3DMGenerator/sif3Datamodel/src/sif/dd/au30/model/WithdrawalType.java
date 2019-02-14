@@ -12,8 +12,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * Repeatable Withdrawal.
- * 
  * <p>Java class for WithdrawalType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -23,7 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="WithdrawalDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *         &lt;element name="WithdrawalDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="WithdrawalStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="WithdrawalEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
@@ -48,7 +46,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class WithdrawalType {
 
-    @XmlElement(name = "WithdrawalDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "WithdrawalDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar withdrawalDate;
     @XmlElementRef(name = "WithdrawalStartTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)

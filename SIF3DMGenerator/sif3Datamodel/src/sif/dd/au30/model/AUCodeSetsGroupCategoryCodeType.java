@@ -28,39 +28,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsGroupCategoryCodeType {
 
-
-    /**
-     * Pastoral Group
-     * 
-     */
     @XmlEnumValue("PastoralGroup")
     PASTORAL_GROUP("PastoralGroup"),
-
-    /**
-     * Mentor Group
-     * 
-     */
     @XmlEnumValue("MentorGroup")
     MENTOR_GROUP("MentorGroup"),
-
-    /**
-     * Roll Group
-     * 
-     */
     @XmlEnumValue("RollGroup")
     ROLL_GROUP("RollGroup"),
-
-    /**
-     * After School Group
-     * 
-     */
     @XmlEnumValue("AfterSchoolGroup")
     AFTER_SCHOOL_GROUP("AfterSchoolGroup"),
-
-    /**
-     * Other Group
-     * 
-     */
     @XmlEnumValue("OtherGroup")
     OTHER_GROUP("OtherGroup");
     private final String value;

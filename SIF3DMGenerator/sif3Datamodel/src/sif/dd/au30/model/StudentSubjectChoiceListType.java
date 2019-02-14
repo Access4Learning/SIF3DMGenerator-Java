@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * List of Student Subject Choices where available.
- * 
  * <p>Java class for StudentSubjectChoiceListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentSubjectChoice" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentSubjectChoiceType" maxOccurs="unbounded"/>
+ *         &lt;element name="StudentSubjectChoice" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentSubjectChoiceType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StudentSubjectChoiceListType {
 
-    @XmlElement(name = "StudentSubjectChoice", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "StudentSubjectChoice", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<StudentSubjectChoiceType> studentSubjectChoice;
 
     /**

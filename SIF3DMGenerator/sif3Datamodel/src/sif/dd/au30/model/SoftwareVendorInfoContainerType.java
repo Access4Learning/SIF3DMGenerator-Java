@@ -1,16 +1,16 @@
 
 package sif.dd.au30.model;
 
-import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * Container for elements containing information on the Software Product and Vendor.
- * 
  * <p>Java class for SoftwareVendorInfoContainerType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -37,20 +37,24 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class SoftwareVendorInfoContainerType {
 
-    @XmlElementRef(name = "SoftwareProduct", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> softwareProduct;
-    @XmlElementRef(name = "SoftwareVersion", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> softwareVersion;
+    @XmlElement(name = "SoftwareProduct", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String softwareProduct;
+    @XmlElement(name = "SoftwareVersion", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String softwareVersion;
 
     /**
      * Gets the value of the softwareProduct property.
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getSoftwareProduct() {
+    public String getSoftwareProduct() {
         return softwareProduct;
     }
 
@@ -59,10 +63,10 @@ public class SoftwareVendorInfoContainerType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setSoftwareProduct(JAXBElement<String> value) {
+    public void setSoftwareProduct(String value) {
         this.softwareProduct = value;
     }
 
@@ -71,10 +75,10 @@ public class SoftwareVendorInfoContainerType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public JAXBElement<String> getSoftwareVersion() {
+    public String getSoftwareVersion() {
         return softwareVersion;
     }
 
@@ -83,10 +87,10 @@ public class SoftwareVendorInfoContainerType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link String }
      *     
      */
-    public void setSoftwareVersion(JAXBElement<String> value) {
+    public void setSoftwareVersion(String value) {
         this.softwareVersion = value;
     }
 

@@ -16,10 +16,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * 
- *         This common metadata element describes the life cycle of the object it represents, based on the IEEE LOM LifeCycle element [LOM].
- *       
- * 
  * <p>Java class for LifeCycleType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -34,19 +30,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *                   &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *                   &lt;element name="Creators" minOccurs="0">
  *                     &lt;complexType>
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element name="Creator" maxOccurs="unbounded">
+ *                             &lt;element name="Creator" maxOccurs="unbounded" minOccurs="0">
  *                               &lt;complexType>
  *                                 &lt;complexContent>
  *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                                     &lt;sequence>
- *                                       &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *                                       &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *                                       &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                                       &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *                                     &lt;/sequence>
  *                                   &lt;/restriction>
  *                                 &lt;/complexContent>
@@ -72,8 +68,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *                       &lt;complexContent>
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           &lt;sequence>
- *                             &lt;element name="By" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
- *                             &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *                             &lt;element name="By" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *                             &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *                             &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *                           &lt;/sequence>
  *                         &lt;/restriction>
@@ -202,19 +198,19 @@ public class LifeCycleType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+     *         &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
      *         &lt;element name="Creators" minOccurs="0">
      *           &lt;complexType>
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element name="Creator" maxOccurs="unbounded">
+     *                   &lt;element name="Creator" maxOccurs="unbounded" minOccurs="0">
      *                     &lt;complexType>
      *                       &lt;complexContent>
      *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                           &lt;sequence>
-     *                             &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-     *                             &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+     *                             &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                             &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
      *                           &lt;/sequence>
      *                         &lt;/restriction>
      *                       &lt;/complexContent>
@@ -240,7 +236,7 @@ public class LifeCycleType {
     })
     public static class Created {
 
-        @XmlElement(name = "DateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true, type = String.class)
+        @XmlElement(name = "DateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = String.class)
         @XmlJavaTypeAdapter(Adapter1 .class)
         @XmlSchemaType(name = "dateTime")
         protected Calendar dateTime;
@@ -306,13 +302,13 @@ public class LifeCycleType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element name="Creator" maxOccurs="unbounded">
+         *         &lt;element name="Creator" maxOccurs="unbounded" minOccurs="0">
          *           &lt;complexType>
          *             &lt;complexContent>
          *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *                 &lt;sequence>
-         *                   &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-         *                   &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+         *                   &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *                   &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
          *                 &lt;/sequence>
          *               &lt;/restriction>
          *             &lt;/complexContent>
@@ -332,7 +328,7 @@ public class LifeCycleType {
         })
         public static class Creators {
 
-            @XmlElement(name = "Creator", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+            @XmlElement(name = "Creator", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             protected List<LifeCycleType.Created.Creators.Creator> creator;
 
             /**
@@ -375,8 +371,8 @@ public class LifeCycleType {
              *   &lt;complexContent>
              *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
              *       &lt;sequence>
-             *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-             *         &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+             *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+             *         &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
              *       &lt;/sequence>
              *     &lt;/restriction>
              *   &lt;/complexContent>
@@ -392,11 +388,11 @@ public class LifeCycleType {
             })
             public static class Creator {
 
-                @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+                @XmlElement(name = "Name", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
                 @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
                 @XmlSchemaType(name = "normalizedString")
                 protected String name;
-                @XmlElement(name = "ID", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+                @XmlElement(name = "ID", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
                 @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
                 @XmlSchemaType(name = "normalizedString")
                 protected String id;
@@ -471,8 +467,8 @@ public class LifeCycleType {
      *             &lt;complexContent>
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 &lt;sequence>
-     *                   &lt;element name="By" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-     *                   &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+     *                   &lt;element name="By" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+     *                   &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
      *                   &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
      *                 &lt;/sequence>
      *               &lt;/restriction>
@@ -536,8 +532,8 @@ public class LifeCycleType {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;sequence>
-         *         &lt;element name="By" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
-         *         &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+         *         &lt;element name="By" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+         *         &lt;element name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
          *         &lt;element name="Description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
          *       &lt;/sequence>
          *     &lt;/restriction>
@@ -555,11 +551,11 @@ public class LifeCycleType {
         })
         public static class Modified {
 
-            @XmlElement(name = "By", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+            @XmlElement(name = "By", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
             @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
             @XmlSchemaType(name = "normalizedString")
             protected String by;
-            @XmlElement(name = "DateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true, type = String.class)
+            @XmlElement(name = "DateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = String.class)
             @XmlJavaTypeAdapter(Adapter1 .class)
             @XmlSchemaType(name = "dateTime")
             protected Calendar dateTime;

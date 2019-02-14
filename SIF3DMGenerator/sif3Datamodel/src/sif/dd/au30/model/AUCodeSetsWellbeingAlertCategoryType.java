@@ -29,47 +29,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingAlertCategoryType {
 
-
-    /**
-     * Medical
-     * 
-     */
     M,
-
-    /**
-     * Legal
-     * 
-     */
     L,
-
-    /**
-     * Discipline
-     * 
-     */
     D,
-
-    /**
-     * Educational
-     * 
-     */
     E,
-
-    /**
-     * SpecialNeeds/Disability
-     * 
-     */
     S,
-
-    /**
-     * Plan Review
-     * 
-     */
     P,
-
-    /**
-     * Other
-     * 
-     */
     O;
 
     public String value() {

@@ -10,8 +10,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * A List of teachers associated with the group - may or may not include the teacher timetabled in the schedule.
- * 
  * <p>Java class for TeacherListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -21,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TeachingGroupTeacher" type="{http://www.sifassociation.org/datamodel/au/3.4}TeachingGroupTeacherType" maxOccurs="unbounded"/>
+ *         &lt;element name="TeachingGroupTeacher" type="{http://www.sifassociation.org/datamodel/au/3.4}TeachingGroupTeacherType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TeacherListType {
 
-    @XmlElement(name = "TeachingGroupTeacher", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "TeachingGroupTeacher", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected List<TeachingGroupTeacherType> teachingGroupTeacher;
 
     /**

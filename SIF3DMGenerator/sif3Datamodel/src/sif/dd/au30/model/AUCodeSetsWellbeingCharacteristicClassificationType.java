@@ -26,29 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsWellbeingCharacteristicClassificationType {
 
-
-    /**
-     * Medical
-     * 
-     */
     M,
-
-    /**
-     * Disability
-     * 
-     */
     D,
-
-    /**
-     * SpecialNeeds
-     * 
-     */
     S,
-
-    /**
-     * Other
-     * 
-     */
     O;
 
     public String value() {

@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * The FQItem being reported on.
- * 
  * <p>Java class for FQItemType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
@@ -22,12 +20,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="FQItemCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="FQItemCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="TuitionAmount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="BoardingAmount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="SystemAmount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="DioceseAmount" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
- *         &lt;element name="FQComments" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="FQComments" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -47,7 +45,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FQItemType {
 
-    @XmlElement(name = "FQItemCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "FQItemCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String fqItemCode;
     @XmlElementRef(name = "TuitionAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> tuitionAmount;
@@ -57,7 +55,7 @@ public class FQItemType {
     protected JAXBElement<BigDecimal> systemAmount;
     @XmlElementRef(name = "DioceseAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> dioceseAmount;
-    @XmlElement(name = "FQComments", namespace = "http://www.sifassociation.org/datamodel/au/3.4", required = true)
+    @XmlElement(name = "FQComments", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected String fqComments;
 
     /**
