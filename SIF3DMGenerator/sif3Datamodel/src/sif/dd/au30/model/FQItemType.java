@@ -55,8 +55,8 @@ public class FQItemType {
     protected JAXBElement<BigDecimal> systemAmount;
     @XmlElementRef(name = "DioceseAmount", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> dioceseAmount;
-    @XmlElement(name = "FQComments", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected String fqComments;
+    @XmlElementRef(name = "FQComments", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> fqComments;
 
     /**
      * Gets the value of the fqItemCode property.
@@ -183,10 +183,10 @@ public class FQItemType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getFQComments() {
+    public JAXBElement<String> getFQComments() {
         return fqComments;
     }
 
@@ -195,10 +195,10 @@ public class FQItemType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setFQComments(String value) {
+    public void setFQComments(JAXBElement<String> value) {
         this.fqComments = value;
     }
 

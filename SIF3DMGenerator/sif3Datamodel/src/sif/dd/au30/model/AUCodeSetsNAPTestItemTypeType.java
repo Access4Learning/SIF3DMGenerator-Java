@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;simpleType name="AUCodeSetsNAPTestItemTypeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="ET"/>
- *     &lt;enumeration value="CO"/>
+ *     &lt;enumeration value="COMP"/>
  *     &lt;enumeration value="HS"/>
- *     &lt;enumeration value="HT"/>
+ *     &lt;enumeration value="TS"/>
  *     &lt;enumeration value="IA"/>
  *     &lt;enumeration value="IC"/>
  *     &lt;enumeration value="IGA"/>
@@ -43,9 +43,9 @@ import javax.xml.bind.annotation.XmlType;
 public enum AUCodeSetsNAPTestItemTypeType {
 
     ET("ET"),
-    CO("CO"),
+    COMP("COMP"),
     HS("HS"),
-    HT("HT"),
+    TS("TS"),
     IA("IA"),
     IC("IC"),
     IGA("IGA"),

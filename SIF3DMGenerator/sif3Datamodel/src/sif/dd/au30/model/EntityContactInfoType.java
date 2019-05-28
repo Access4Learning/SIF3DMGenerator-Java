@@ -60,10 +60,10 @@ public class EntityContactInfoType {
     protected JAXBElement<String> qualifications;
     @XmlElementRef(name = "Address", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AddressType> address;
-    @XmlElementRef(name = "Email", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<EmailType> email;
-    @XmlElementRef(name = "PhoneNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<PhoneNumberType> phoneNumber;
+    @XmlElement(name = "Email", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected EmailType email;
+    @XmlElement(name = "PhoneNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected PhoneNumberType phoneNumber;
 
     /**
      * Gets the value of the name property.
@@ -214,10 +214,10 @@ public class EntityContactInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link EmailType }{@code >}
+     *     {@link EmailType }
      *     
      */
-    public JAXBElement<EmailType> getEmail() {
+    public EmailType getEmail() {
         return email;
     }
 
@@ -226,10 +226,10 @@ public class EntityContactInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link EmailType }{@code >}
+     *     {@link EmailType }
      *     
      */
-    public void setEmail(JAXBElement<EmailType> value) {
+    public void setEmail(EmailType value) {
         this.email = value;
     }
 
@@ -238,10 +238,10 @@ public class EntityContactInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link PhoneNumberType }{@code >}
+     *     {@link PhoneNumberType }
      *     
      */
-    public JAXBElement<PhoneNumberType> getPhoneNumber() {
+    public PhoneNumberType getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -250,10 +250,10 @@ public class EntityContactInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link PhoneNumberType }{@code >}
+     *     {@link PhoneNumberType }
      *     
      */
-    public void setPhoneNumber(JAXBElement<PhoneNumberType> value) {
+    public void setPhoneNumber(PhoneNumberType value) {
         this.phoneNumber = value;
     }
 

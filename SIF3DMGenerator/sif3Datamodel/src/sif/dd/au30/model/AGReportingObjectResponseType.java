@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ErrorText" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="EntityName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="AGSubmissionStatusCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="AGSubmissionStatusCode" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAGSubmissionStatusType" minOccurs="0"/>
  *         &lt;element name="AGRuleList" type="{http://www.sifassociation.org/datamodel/au/3.4}AGRuleListType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -65,8 +65,8 @@ public class AGReportingObjectResponseType {
     protected String commonwealthId;
     @XmlElementRef(name = "EntityName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> entityName;
-    @XmlElementRef(name = "AGSubmissionStatusCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> agSubmissionStatusCode;
+    @XmlElement(name = "AGSubmissionStatusCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected AUCodeSetsAGSubmissionStatusType agSubmissionStatusCode;
     @XmlElementRef(name = "AGRuleList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AGRuleListType> agRuleList;
 
@@ -219,10 +219,10 @@ public class AGReportingObjectResponseType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link AUCodeSetsAGSubmissionStatusType }
      *     
      */
-    public JAXBElement<String> getAGSubmissionStatusCode() {
+    public AUCodeSetsAGSubmissionStatusType getAGSubmissionStatusCode() {
         return agSubmissionStatusCode;
     }
 
@@ -231,10 +231,10 @@ public class AGReportingObjectResponseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     {@link AUCodeSetsAGSubmissionStatusType }
      *     
      */
-    public void setAGSubmissionStatusCode(JAXBElement<String> value) {
+    public void setAGSubmissionStatusCode(AUCodeSetsAGSubmissionStatusType value) {
         this.agSubmissionStatusCode = value;
     }
 
