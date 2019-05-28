@@ -101,6 +101,9 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 ## Version from Feb 14, 2019
 - Updated with official SIF AU 3.4.4 release. XSD & POJOs. 
 
+## Version from May 28, 2019
+- Updated with final SIF AU 3.4.4 release. XSD & POJOs (includes errata). 
+
 # Download Instructions
 How to download this project:
 
