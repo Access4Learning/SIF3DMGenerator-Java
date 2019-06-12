@@ -19,7 +19,8 @@
 	<property name="class.dir" value="${build.dir}/classes" />
 	<property name="dist.dir" value="${build.dir}/dist" />
 	<property name="sifau.dd.file.name" value="SIF_Message.xsd"/>
-
+	<property name="sifunity.dd.file.name" value="SIF_Message.xsd"/>
+	
 	<property name="verbose" value="true" />
 
 	<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
@@ -133,6 +134,38 @@
 		</xjc>
 	</target>
 	
+    <!-- *************************** -->
+    <!-- NA Unity Data Model Section -->
+    <!-- *************************** -->
+	<target name="30-generate-NAUnity-DM" depends="init" description="Generate POJOs using JAXB for SIF NA Unity">
+		<antcall target="generate-unity-pojo">
+			<param name="sifddversion" value="${sif.dm.version}"/>
+		</antcall>
+	</target>
+	
+  	<!-- 
+       <arg value="-XautoNameResolution"/> fixes issue where two complex types only differ in 
+       case such as gridLocationType and GridLocationType. This will generate two different classes
+       called GridLocationType and GridLocationType2 (not ideal but it will build!).
+  	-->
+	<target name="generate-unity-pojo" depends="init" description="Generate POJOs using JAXB">
+		<echo message="Generate Pojos for Locale NA, Unity Data Model Version ${sifddversion} and Infrastructure 3.x"/>
+		<delete dir="${output.base.dir}/sifunity${sifddversion}/src" />
+		<mkdir dir="${output.base.dir}/sifunity${sifddversion}/src"/>
+		<mkdir dir="${input.base.dir}/XSD/sifna4x/temp"/>
+		<copy file="${input.base.dir}/XSD/sifna4x/unity${sifddversion}/${sifunity.dd.file.name}" tofile="${input.base.dir}/XSD/sifna4x/temp/${sifunity.dd.file.name}"/>
+		<xjc destdir="${output.base.dir}/sifunity${sifddversion}/src" 
+             package="sif.dd.unity.model" 
+             extension="true" 
+             header="false" 
+             source="2.0">
+			<schema  dir="${input.base.dir}/XSD/sifna4x/temp" includes="*.xsd"/>
+			<binding dir="${generator.dir}/config" includes="unityCustom.xjb"/>
+			<arg value="-npa"/>
+			<arg value="-XautoNameResolution"/>
+		</xjc>
+		<delete dir="${input.base.dir}/XSD/sifna4x/temp"/>
+	</target>
 
 	<!-- ********************************* -->
 	<!-- JAR Targets for Data Dictionaries -->
@@ -157,6 +190,17 @@
 			<param name="locale" value="${sif.local}"/>
 			<param name="sifddversion" value="${sif.dm.version}"/>
 			<param name="srcDir" value="us${sif.dm.version.nodot}"/>
+		</antcall>
+	</target>
+
+    <!-- ***************************** -->
+    <!-- NA Data Model Section - Unity -->
+    <!-- ***************************** -->
+	<target name="35-jar-NAUnity-DM" depends="compile-dd" description="Create jar file for SIF NA - Unity">
+		<antcall target="jar-dd">
+			<param name="locale" value="unity"/>
+			<param name="sifddversion" value="${sif.dm.version}"/>
+			<param name="srcDir" value="unity"/>
 		</antcall>
 	</target>
 

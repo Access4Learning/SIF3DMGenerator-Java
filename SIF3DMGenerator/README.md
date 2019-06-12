@@ -1,5 +1,5 @@
 # License
-> Copyright 2013 - 2016 Systemic Pty Ltd
+> Copyright 2013 - 2019 Systemic Pty Ltd
 > 
 > Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 > 
@@ -12,7 +12,7 @@ The SIF3 Data Model Generator is a Java Project to generate and build SIF3 Data 
 locales (AU, NA, UK etc). The Data models are build using XJC (JAXB Based POJO Generator) and XSDs. 
 The POJOs that are generated are JAXB annotated java classes.
 The main purpose of this project is to generate the SIF Locale specific Data Model classes that can
-be used with the SIF3 Framework (https://github.com/nsip/sif3-framework-java). In fact the provided
+be used with the SIF3 Framework (https://github.com/Access4Learning/sif3-framework-java). In fact the provided
 marshaller and unmarshaller classes in the sif3DMGenerator/src source directories ('conversion' package)
 are based on the SIF3 Framework marshaller and unmarshaller interfaces.
 
@@ -20,7 +20,7 @@ The reason for this project is that the actual SIF3 Framework becomes/remains in
 data model. It is expected that a specific SIF3 Project will include not only the SIF3 Framework 
 Libraries but also one of the Data Model libraries generated out of this project.
 
-As of October 2, 2018 the following SIF Locale Data Models are supported by this project
+As of June 12, 2019 the following SIF Locale Data Models are supported by this project
 - SIF AU 1.3 for Infrastructure 3.x (Should not be used)
 - SIF AU 1.4 for Infrastructure 3.x (Should not be used)
 - SIF AU 3.4 for Infrastructure 3.x
@@ -30,6 +30,7 @@ As of October 2, 2018 the following SIF Locale Data Models are supported by this
 - SIF AU 3.4.4 for Infrastructure 3.x
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
+- SIF NA Unity 4.0
 
 # Build Instructions using build.xml
 There is an ant.properties file at the top level of this project. This is the place where settings need to change to build
@@ -45,12 +46,20 @@ each locale (AU, US). Once these properties are set then follow the steps listed
    directory. This jar file can now be used in your SIF3 Project.
   
 ## SIF US:
-1.  Run the **20-generate-US-DM** (Generate POJOs for US Data Model) ant target. This will generate the Java POJOs for 
+1. Run the **20-generate-US-DM** (Generate POJOs for US Data Model) ant target. This will generate the Java POJOs for 
    the chosen data model. The POJOs can be found in the Generator/data/output/ directory.
 2. Remove all java classes in the sif3Datamodel/src/sif/dd/us<version>/model source directory.
 3. Copy the generated POJOs from step 1) to the directory of step 2).
 4. Run the **25-jar-US-DM** (Build jar for SIF US data model) ant target. This will build a jar file into the build/dist 
    directory. This jar file can now be used in your SIF3 Project.
+   
+## SIF US - Unity:
+1. Run the **30-generate-NAUnity-DM** (Generate POJOs for NA Unity Data Model) ant target. This will generate the Java 
+   POJOs for the chosen data model. The POJOs can be found in the Generator/data/output/ directory.
+2. Remove all java classes in the sif3Datamodel/src/unity/model source directory.
+3. Copy the generated POJOs from step 1) to the directory of step 2).
+4. Run the **35-jar-NAUnity-DM** (Build jar for SIF NA Unity data model) ant target. This will build a jar file into the
+   build/dist directory. This jar file can now be used in your SIF3 Project.
 
 # Version History and Update
 
@@ -104,6 +113,9 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 ## Version from May 28, 2019
 - Updated with final SIF AU 3.4.4 release. XSD & POJOs (includes errata). 
 
+## Version from June 12, 2019
+- Added NA Unity 4.0 support. 
+
 # Download Instructions
 How to download this project:
 
@@ -111,7 +123,7 @@ How to download this project:
 Click on the button marked "ZIP" available from the Code tab.
 
 ## Option 2 - Using a Git client.
-From the command-line type: git clone git://github.com/nsip/SIF3DMGenerator-Java.git
+From the command-line type: git clone git://github.com/Access4Learning/SIF3DMGenerator-Java.git
 
 Note that if you want to use this option but don't have the client installed, it can be 
 downloaded from http://git-scm.com/download.
