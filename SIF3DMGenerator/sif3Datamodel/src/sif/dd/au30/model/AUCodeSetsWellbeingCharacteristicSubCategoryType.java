@@ -99,6 +99,122 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="MCM-24"/>
  *     &lt;enumeration value="MCM-25"/>
  *     &lt;enumeration value="MCM-26"/>
+ *     &lt;enumeration value="MAIM-4"/>
+ *     &lt;enumeration value="MAO-1"/>
+ *     &lt;enumeration value="MAO-2"/>
+ *     &lt;enumeration value="MAO-3"/>
+ *     &lt;enumeration value="MAO-4"/>
+ *     &lt;enumeration value="MAO-5"/>
+ *     &lt;enumeration value="MAO-6"/>
+ *     &lt;enumeration value="MC-1"/>
+ *     &lt;enumeration value="MC-2"/>
+ *     &lt;enumeration value="MC-3"/>
+ *     &lt;enumeration value="MC-4"/>
+ *     &lt;enumeration value="MC-5"/>
+ *     &lt;enumeration value="MD-01"/>
+ *     &lt;enumeration value="MD-02"/>
+ *     &lt;enumeration value="MD-03"/>
+ *     &lt;enumeration value="MD-04"/>
+ *     &lt;enumeration value="MEM-1"/>
+ *     &lt;enumeration value="MEM-2"/>
+ *     &lt;enumeration value="MEM-3"/>
+ *     &lt;enumeration value="MEM-4"/>
+ *     &lt;enumeration value="MEM-5"/>
+ *     &lt;enumeration value="MEM-6"/>
+ *     &lt;enumeration value="MEM-7"/>
+ *     &lt;enumeration value="MGI-1"/>
+ *     &lt;enumeration value="MGI-2"/>
+ *     &lt;enumeration value="MGI-3"/>
+ *     &lt;enumeration value="MGI-4"/>
+ *     &lt;enumeration value="MGI-5"/>
+ *     &lt;enumeration value="MGI-6"/>
+ *     &lt;enumeration value="MGI-7"/>
+ *     &lt;enumeration value="MGI-8"/>
+ *     &lt;enumeration value="MGI-9"/>
+ *     &lt;enumeration value="MGI-10"/>
+ *     &lt;enumeration value="MGI-11"/>
+ *     &lt;enumeration value="MGI-12"/>
+ *     &lt;enumeration value="MGI-13"/>
+ *     &lt;enumeration value="MGI-14"/>
+ *     &lt;enumeration value="MGI-15"/>
+ *     &lt;enumeration value="MGI-16"/>
+ *     &lt;enumeration value="MGI-17"/>
+ *     &lt;enumeration value="MGI-18"/>
+ *     &lt;enumeration value="MGI-19"/>
+ *     &lt;enumeration value="MGI-20"/>
+ *     &lt;enumeration value="MH-19"/>
+ *     &lt;enumeration value="MH-20"/>
+ *     &lt;enumeration value="MMD-01"/>
+ *     &lt;enumeration value="MMD-02"/>
+ *     &lt;enumeration value="MMD-03"/>
+ *     &lt;enumeration value="MMD-04"/>
+ *     &lt;enumeration value="MMD-05"/>
+ *     &lt;enumeration value="MMD-06"/>
+ *     &lt;enumeration value="MMD-07"/>
+ *     &lt;enumeration value="MI-01"/>
+ *     &lt;enumeration value="MI-02"/>
+ *     &lt;enumeration value="MI-03"/>
+ *     &lt;enumeration value="MI-04"/>
+ *     &lt;enumeration value="MI-05"/>
+ *     &lt;enumeration value="MI-06"/>
+ *     &lt;enumeration value="MMS-16"/>
+ *     &lt;enumeration value="MMS-17"/>
+ *     &lt;enumeration value="MND-1"/>
+ *     &lt;enumeration value="MND-2"/>
+ *     &lt;enumeration value="MND-3"/>
+ *     &lt;enumeration value="MND-4"/>
+ *     &lt;enumeration value="MND-5"/>
+ *     &lt;enumeration value="MND-6"/>
+ *     &lt;enumeration value="MND-7"/>
+ *     &lt;enumeration value="MND-8"/>
+ *     &lt;enumeration value="MND-9"/>
+ *     &lt;enumeration value="MND-10"/>
+ *     &lt;enumeration value="MND-11"/>
+ *     &lt;enumeration value="MND-12"/>
+ *     &lt;enumeration value="MND-13"/>
+ *     &lt;enumeration value="MND-14"/>
+ *     &lt;enumeration value="MND-15"/>
+ *     &lt;enumeration value="MND-16"/>
+ *     &lt;enumeration value="MND-17"/>
+ *     &lt;enumeration value="MND-18"/>
+ *     &lt;enumeration value="MND-19"/>
+ *     &lt;enumeration value="MND-20"/>
+ *     &lt;enumeration value="MND-21"/>
+ *     &lt;enumeration value="MND-22"/>
+ *     &lt;enumeration value="MOP-1"/>
+ *     &lt;enumeration value="MOP-2"/>
+ *     &lt;enumeration value="MO-1"/>
+ *     &lt;enumeration value="MO-2"/>
+ *     &lt;enumeration value="MO-3"/>
+ *     &lt;enumeration value="MO-4"/>
+ *     &lt;enumeration value="MO-5"/>
+ *     &lt;enumeration value="MO-6"/>
+ *     &lt;enumeration value="MRD-1"/>
+ *     &lt;enumeration value="MRD-2"/>
+ *     &lt;enumeration value="MRD-3"/>
+ *     &lt;enumeration value="MRD-4"/>
+ *     &lt;enumeration value="MRD-5"/>
+ *     &lt;enumeration value="Other-1"/>
+ *     &lt;enumeration value="Other-2"/>
+ *     &lt;enumeration value="Other-3"/>
+ *     &lt;enumeration value="Other-4"/>
+ *     &lt;enumeration value="Other"/>
+ *     &lt;enumeration value="MN-1"/>
+ *     &lt;enumeration value="MN-2"/>
+ *     &lt;enumeration value="MN-3"/>
+ *     &lt;enumeration value="MN-4"/>
+ *     &lt;enumeration value="MN-5"/>
+ *     &lt;enumeration value="MN-6"/>
+ *     &lt;enumeration value="MN-7"/>
+ *     &lt;enumeration value="MN-8"/>
+ *     &lt;enumeration value="MN-9"/>
+ *     &lt;enumeration value="MN-10"/>
+ *     &lt;enumeration value="MN-11"/>
+ *     &lt;enumeration value="MN-12"/>
+ *     &lt;enumeration value="MN-13"/>
+ *     &lt;enumeration value="MN-14"/>
+ *     &lt;enumeration value="MN-15"/>
+ *     &lt;enumeration value="MN-16"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -277,7 +393,239 @@ public enum AUCodeSetsWellbeingCharacteristicSubCategoryType {
     @XmlEnumValue("MCM-25")
     MCM_25("MCM-25"),
     @XmlEnumValue("MCM-26")
-    MCM_26("MCM-26");
+    MCM_26("MCM-26"),
+    @XmlEnumValue("MAIM-4")
+    MAIM_4("MAIM-4"),
+    @XmlEnumValue("MAO-1")
+    MAO_1("MAO-1"),
+    @XmlEnumValue("MAO-2")
+    MAO_2("MAO-2"),
+    @XmlEnumValue("MAO-3")
+    MAO_3("MAO-3"),
+    @XmlEnumValue("MAO-4")
+    MAO_4("MAO-4"),
+    @XmlEnumValue("MAO-5")
+    MAO_5("MAO-5"),
+    @XmlEnumValue("MAO-6")
+    MAO_6("MAO-6"),
+    @XmlEnumValue("MC-1")
+    MC_1("MC-1"),
+    @XmlEnumValue("MC-2")
+    MC_2("MC-2"),
+    @XmlEnumValue("MC-3")
+    MC_3("MC-3"),
+    @XmlEnumValue("MC-4")
+    MC_4("MC-4"),
+    @XmlEnumValue("MC-5")
+    MC_5("MC-5"),
+    @XmlEnumValue("MD-01")
+    MD_01("MD-01"),
+    @XmlEnumValue("MD-02")
+    MD_02("MD-02"),
+    @XmlEnumValue("MD-03")
+    MD_03("MD-03"),
+    @XmlEnumValue("MD-04")
+    MD_04("MD-04"),
+    @XmlEnumValue("MEM-1")
+    MEM_1("MEM-1"),
+    @XmlEnumValue("MEM-2")
+    MEM_2("MEM-2"),
+    @XmlEnumValue("MEM-3")
+    MEM_3("MEM-3"),
+    @XmlEnumValue("MEM-4")
+    MEM_4("MEM-4"),
+    @XmlEnumValue("MEM-5")
+    MEM_5("MEM-5"),
+    @XmlEnumValue("MEM-6")
+    MEM_6("MEM-6"),
+    @XmlEnumValue("MEM-7")
+    MEM_7("MEM-7"),
+    @XmlEnumValue("MGI-1")
+    MGI_1("MGI-1"),
+    @XmlEnumValue("MGI-2")
+    MGI_2("MGI-2"),
+    @XmlEnumValue("MGI-3")
+    MGI_3("MGI-3"),
+    @XmlEnumValue("MGI-4")
+    MGI_4("MGI-4"),
+    @XmlEnumValue("MGI-5")
+    MGI_5("MGI-5"),
+    @XmlEnumValue("MGI-6")
+    MGI_6("MGI-6"),
+    @XmlEnumValue("MGI-7")
+    MGI_7("MGI-7"),
+    @XmlEnumValue("MGI-8")
+    MGI_8("MGI-8"),
+    @XmlEnumValue("MGI-9")
+    MGI_9("MGI-9"),
+    @XmlEnumValue("MGI-10")
+    MGI_10("MGI-10"),
+    @XmlEnumValue("MGI-11")
+    MGI_11("MGI-11"),
+    @XmlEnumValue("MGI-12")
+    MGI_12("MGI-12"),
+    @XmlEnumValue("MGI-13")
+    MGI_13("MGI-13"),
+    @XmlEnumValue("MGI-14")
+    MGI_14("MGI-14"),
+    @XmlEnumValue("MGI-15")
+    MGI_15("MGI-15"),
+    @XmlEnumValue("MGI-16")
+    MGI_16("MGI-16"),
+    @XmlEnumValue("MGI-17")
+    MGI_17("MGI-17"),
+    @XmlEnumValue("MGI-18")
+    MGI_18("MGI-18"),
+    @XmlEnumValue("MGI-19")
+    MGI_19("MGI-19"),
+    @XmlEnumValue("MGI-20")
+    MGI_20("MGI-20"),
+    @XmlEnumValue("MH-19")
+    MH_19("MH-19"),
+    @XmlEnumValue("MH-20")
+    MH_20("MH-20"),
+    @XmlEnumValue("MMD-01")
+    MMD_01("MMD-01"),
+    @XmlEnumValue("MMD-02")
+    MMD_02("MMD-02"),
+    @XmlEnumValue("MMD-03")
+    MMD_03("MMD-03"),
+    @XmlEnumValue("MMD-04")
+    MMD_04("MMD-04"),
+    @XmlEnumValue("MMD-05")
+    MMD_05("MMD-05"),
+    @XmlEnumValue("MMD-06")
+    MMD_06("MMD-06"),
+    @XmlEnumValue("MMD-07")
+    MMD_07("MMD-07"),
+    @XmlEnumValue("MI-01")
+    MI_01("MI-01"),
+    @XmlEnumValue("MI-02")
+    MI_02("MI-02"),
+    @XmlEnumValue("MI-03")
+    MI_03("MI-03"),
+    @XmlEnumValue("MI-04")
+    MI_04("MI-04"),
+    @XmlEnumValue("MI-05")
+    MI_05("MI-05"),
+    @XmlEnumValue("MI-06")
+    MI_06("MI-06"),
+    @XmlEnumValue("MMS-16")
+    MMS_16("MMS-16"),
+    @XmlEnumValue("MMS-17")
+    MMS_17("MMS-17"),
+    @XmlEnumValue("MND-1")
+    MND_1("MND-1"),
+    @XmlEnumValue("MND-2")
+    MND_2("MND-2"),
+    @XmlEnumValue("MND-3")
+    MND_3("MND-3"),
+    @XmlEnumValue("MND-4")
+    MND_4("MND-4"),
+    @XmlEnumValue("MND-5")
+    MND_5("MND-5"),
+    @XmlEnumValue("MND-6")
+    MND_6("MND-6"),
+    @XmlEnumValue("MND-7")
+    MND_7("MND-7"),
+    @XmlEnumValue("MND-8")
+    MND_8("MND-8"),
+    @XmlEnumValue("MND-9")
+    MND_9("MND-9"),
+    @XmlEnumValue("MND-10")
+    MND_10("MND-10"),
+    @XmlEnumValue("MND-11")
+    MND_11("MND-11"),
+    @XmlEnumValue("MND-12")
+    MND_12("MND-12"),
+    @XmlEnumValue("MND-13")
+    MND_13("MND-13"),
+    @XmlEnumValue("MND-14")
+    MND_14("MND-14"),
+    @XmlEnumValue("MND-15")
+    MND_15("MND-15"),
+    @XmlEnumValue("MND-16")
+    MND_16("MND-16"),
+    @XmlEnumValue("MND-17")
+    MND_17("MND-17"),
+    @XmlEnumValue("MND-18")
+    MND_18("MND-18"),
+    @XmlEnumValue("MND-19")
+    MND_19("MND-19"),
+    @XmlEnumValue("MND-20")
+    MND_20("MND-20"),
+    @XmlEnumValue("MND-21")
+    MND_21("MND-21"),
+    @XmlEnumValue("MND-22")
+    MND_22("MND-22"),
+    @XmlEnumValue("MOP-1")
+    MOP_1("MOP-1"),
+    @XmlEnumValue("MOP-2")
+    MOP_2("MOP-2"),
+    @XmlEnumValue("MO-1")
+    MO_1("MO-1"),
+    @XmlEnumValue("MO-2")
+    MO_2("MO-2"),
+    @XmlEnumValue("MO-3")
+    MO_3("MO-3"),
+    @XmlEnumValue("MO-4")
+    MO_4("MO-4"),
+    @XmlEnumValue("MO-5")
+    MO_5("MO-5"),
+    @XmlEnumValue("MO-6")
+    MO_6("MO-6"),
+    @XmlEnumValue("MRD-1")
+    MRD_1("MRD-1"),
+    @XmlEnumValue("MRD-2")
+    MRD_2("MRD-2"),
+    @XmlEnumValue("MRD-3")
+    MRD_3("MRD-3"),
+    @XmlEnumValue("MRD-4")
+    MRD_4("MRD-4"),
+    @XmlEnumValue("MRD-5")
+    MRD_5("MRD-5"),
+    @XmlEnumValue("Other-1")
+    OTHER_1("Other-1"),
+    @XmlEnumValue("Other-2")
+    OTHER_2("Other-2"),
+    @XmlEnumValue("Other-3")
+    OTHER_3("Other-3"),
+    @XmlEnumValue("Other-4")
+    OTHER_4("Other-4"),
+    @XmlEnumValue("Other")
+    OTHER("Other"),
+    @XmlEnumValue("MN-1")
+    MN_1("MN-1"),
+    @XmlEnumValue("MN-2")
+    MN_2("MN-2"),
+    @XmlEnumValue("MN-3")
+    MN_3("MN-3"),
+    @XmlEnumValue("MN-4")
+    MN_4("MN-4"),
+    @XmlEnumValue("MN-5")
+    MN_5("MN-5"),
+    @XmlEnumValue("MN-6")
+    MN_6("MN-6"),
+    @XmlEnumValue("MN-7")
+    MN_7("MN-7"),
+    @XmlEnumValue("MN-8")
+    MN_8("MN-8"),
+    @XmlEnumValue("MN-9")
+    MN_9("MN-9"),
+    @XmlEnumValue("MN-10")
+    MN_10("MN-10"),
+    @XmlEnumValue("MN-11")
+    MN_11("MN-11"),
+    @XmlEnumValue("MN-12")
+    MN_12("MN-12"),
+    @XmlEnumValue("MN-13")
+    MN_13("MN-13"),
+    @XmlEnumValue("MN-14")
+    MN_14("MN-14"),
+    @XmlEnumValue("MN-15")
+    MN_15("MN-15"),
+    @XmlEnumValue("MN-16")
+    MN_16("MN-16");
     private final String value;
 
     AUCodeSetsWellbeingCharacteristicSubCategoryType(String v) {

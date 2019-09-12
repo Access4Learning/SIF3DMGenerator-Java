@@ -40,6 +40,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="StartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="FinishTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="RollMarked" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -68,6 +69,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "startTime",
     "finishTime",
     "rollMarked",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -111,6 +113,8 @@ public class SessionInfoType {
     protected JAXBElement<XMLGregorianCalendar> finishTime;
     @XmlElementRef(name = "RollMarked", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> rollMarked;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -477,6 +481,30 @@ public class SessionInfoType {
      */
     public void setRollMarked(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.rollMarked = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

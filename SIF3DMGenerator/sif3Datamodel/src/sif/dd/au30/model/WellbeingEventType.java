@@ -26,6 +26,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="GroupIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="EventId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="WellbeingEventNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -43,6 +44,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="FollowUpActionList" type="{http://www.sifassociation.org/datamodel/au/3.4}FollowUpActionListType" minOccurs="0"/>
  *         &lt;element name="Status" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsWellbeingStatusType" minOccurs="0"/>
  *         &lt;element name="DocumentList" type="{http://www.sifassociation.org/datamodel/au/3.4}WellbeingDocumentListType" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -57,6 +59,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WellbeingEventType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "studentPersonalRefId",
+    "groupIndicator",
     "schoolInfoRefId",
     "eventId",
     "wellbeingEventNotes",
@@ -74,14 +77,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "followUpActionList",
     "status",
     "documentList",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
 public class WellbeingEventType {
 
-    @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String studentPersonalRefId;
+    @XmlElementRef(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> studentPersonalRefId;
+    @XmlElementRef(name = "GroupIndicator", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Boolean> groupIndicator;
     @XmlElement(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String schoolInfoRefId;
@@ -118,6 +123,8 @@ public class WellbeingEventType {
     protected JAXBElement<AUCodeSetsWellbeingStatusType> status;
     @XmlElementRef(name = "DocumentList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<WellbeingDocumentListType> documentList;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -131,10 +138,10 @@ public class WellbeingEventType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getStudentPersonalRefId() {
+    public JAXBElement<String> getStudentPersonalRefId() {
         return studentPersonalRefId;
     }
 
@@ -143,11 +150,35 @@ public class WellbeingEventType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setStudentPersonalRefId(String value) {
+    public void setStudentPersonalRefId(JAXBElement<String> value) {
         this.studentPersonalRefId = value;
+    }
+
+    /**
+     * Gets the value of the groupIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
+     *     
+     */
+    public JAXBElement<Boolean> getGroupIndicator() {
+        return groupIndicator;
+    }
+
+    /**
+     * Sets the value of the groupIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
+     *     
+     */
+    public void setGroupIndicator(JAXBElement<Boolean> value) {
+        this.groupIndicator = value;
     }
 
     /**
@@ -556,6 +587,30 @@ public class WellbeingEventType {
      */
     public void setDocumentList(JAXBElement<WellbeingDocumentListType> value) {
         this.documentList = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

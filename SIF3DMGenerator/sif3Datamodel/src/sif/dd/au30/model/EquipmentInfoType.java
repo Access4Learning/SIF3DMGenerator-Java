@@ -63,6 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/simpleContent>
  *           &lt;/complexType>
  *         &lt;/element>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -84,6 +85,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "purchaseOrderRefId",
     "equipmentType",
     "sifRefId",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -108,6 +110,8 @@ public class EquipmentInfoType {
     protected JAXBElement<String> equipmentType;
     @XmlElementRef(name = "SIF_RefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<EquipmentInfoType.SIFRefId> sifRefId;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -306,6 +310,30 @@ public class EquipmentInfoType {
      */
     public void setSIFRefId(JAXBElement<EquipmentInfoType.SIFRefId> value) {
         this.sifRefId = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="GradingScoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}GradingScoreListType" minOccurs="0"/>
  *         &lt;element name="Grade" type="{http://www.sifassociation.org/datamodel/au/3.4}GradeType" minOccurs="0"/>
  *         &lt;element name="TeacherJudgement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -65,6 +66,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "gradingScoreList",
     "grade",
     "teacherJudgement",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -101,6 +103,8 @@ public class StudentGradeType {
     protected JAXBElement<GradeType> grade;
     @XmlElementRef(name = "TeacherJudgement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> teacherJudgement;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -467,6 +471,30 @@ public class StudentGradeType {
      */
     public void setTeacherJudgement(JAXBElement<String> value) {
         this.teacherJudgement = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

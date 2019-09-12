@@ -48,6 +48,30 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="FFPOS" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsFFPOSStatusCodeType" minOccurs="0"/>
  *         &lt;element name="ReportingSchoolId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="OtherEnrollmentSchoolACARAId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
+ *         &lt;element name="OtherSchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="DisabilityLevelOfAdjustment" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *               &lt;enumeration value="QDTP"/>
+ *               &lt;enumeration value="Supplementary"/>
+ *               &lt;enumeration value="Substantial"/>
+ *               &lt;enumeration value="Extensive"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="DisabilityCategory" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *               &lt;enumeration value="Physical"/>
+ *               &lt;enumeration value="Cognitive"/>
+ *               &lt;enumeration value="Social-Emotional"/>
+ *               &lt;enumeration value="Sensory"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="CensusAge" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="DistanceEducationStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="BoardingStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsBoardingType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -78,7 +102,13 @@ import javax.xml.bind.annotation.XmlType;
     "membershipType",
     "ffpos",
     "reportingSchoolId",
-    "otherEnrollmentSchoolACARAId"
+    "otherEnrollmentSchoolACARAId",
+    "otherSchoolName",
+    "disabilityLevelOfAdjustment",
+    "disabilityCategory",
+    "censusAge",
+    "distanceEducationStudent",
+    "boardingStatus"
 })
 public class StudentMostRecentContainerType {
 
@@ -124,6 +154,18 @@ public class StudentMostRecentContainerType {
     protected JAXBElement<String> reportingSchoolId;
     @XmlElementRef(name = "OtherEnrollmentSchoolACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> otherEnrollmentSchoolACARAId;
+    @XmlElementRef(name = "OtherSchoolName", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> otherSchoolName;
+    @XmlElementRef(name = "DisabilityLevelOfAdjustment", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> disabilityLevelOfAdjustment;
+    @XmlElementRef(name = "DisabilityCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> disabilityCategory;
+    @XmlElementRef(name = "CensusAge", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<BigDecimal> censusAge;
+    @XmlElementRef(name = "DistanceEducationStudent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> distanceEducationStudent;
+    @XmlElementRef(name = "BoardingStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsBoardingType> boardingStatus;
 
     /**
      * Gets the value of the schoolLocalId property.
@@ -627,6 +669,150 @@ public class StudentMostRecentContainerType {
      */
     public void setOtherEnrollmentSchoolACARAId(JAXBElement<String> value) {
         this.otherEnrollmentSchoolACARAId = value;
+    }
+
+    /**
+     * Gets the value of the otherSchoolName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getOtherSchoolName() {
+        return otherSchoolName;
+    }
+
+    /**
+     * Sets the value of the otherSchoolName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setOtherSchoolName(JAXBElement<String> value) {
+        this.otherSchoolName = value;
+    }
+
+    /**
+     * Gets the value of the disabilityLevelOfAdjustment property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getDisabilityLevelOfAdjustment() {
+        return disabilityLevelOfAdjustment;
+    }
+
+    /**
+     * Sets the value of the disabilityLevelOfAdjustment property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setDisabilityLevelOfAdjustment(JAXBElement<String> value) {
+        this.disabilityLevelOfAdjustment = value;
+    }
+
+    /**
+     * Gets the value of the disabilityCategory property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getDisabilityCategory() {
+        return disabilityCategory;
+    }
+
+    /**
+     * Sets the value of the disabilityCategory property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setDisabilityCategory(JAXBElement<String> value) {
+        this.disabilityCategory = value;
+    }
+
+    /**
+     * Gets the value of the censusAge property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+     *     
+     */
+    public JAXBElement<BigDecimal> getCensusAge() {
+        return censusAge;
+    }
+
+    /**
+     * Sets the value of the censusAge property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+     *     
+     */
+    public void setCensusAge(JAXBElement<BigDecimal> value) {
+        this.censusAge = value;
+    }
+
+    /**
+     * Gets the value of the distanceEducationStudent property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getDistanceEducationStudent() {
+        return distanceEducationStudent;
+    }
+
+    /**
+     * Sets the value of the distanceEducationStudent property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setDistanceEducationStudent(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.distanceEducationStudent = value;
+    }
+
+    /**
+     * Gets the value of the boardingStatus property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsBoardingType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsBoardingType> getBoardingStatus() {
+        return boardingStatus;
+    }
+
+    /**
+     * Sets the value of the boardingStatus property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsBoardingType }{@code >}
+     *     
+     */
+    public void setBoardingStatus(JAXBElement<AUCodeSetsBoardingType> value) {
+        this.boardingStatus = value;
     }
 
 }

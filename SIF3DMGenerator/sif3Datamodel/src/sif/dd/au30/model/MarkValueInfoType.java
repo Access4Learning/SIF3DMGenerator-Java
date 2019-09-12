@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="ValidLetterMarkList" type="{http://www.sifassociation.org/datamodel/au/3.4}ValidLetterMarkListType" minOccurs="0"/>
  *         &lt;element name="Narrative" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="NarrativeMaximumSize" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -64,6 +65,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "validLetterMarkList",
     "narrative",
     "narrativeMaximumSize",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -98,6 +100,8 @@ public class MarkValueInfoType {
     protected String narrative;
     @XmlElementRef(name = "NarrativeMaximumSize", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> narrativeMaximumSize;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -440,6 +444,30 @@ public class MarkValueInfoType {
      */
     public void setNarrativeMaximumSize(JAXBElement<Long> value) {
         this.narrativeMaximumSize = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

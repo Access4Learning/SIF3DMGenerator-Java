@@ -108,7 +108,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="MMK"/>
  *     &lt;enumeration value="MNT"/>
  *     &lt;enumeration value="MOP"/>
- *     &lt;enumeration value="MRO"/>
+ *     &lt;enumeration value="MRU"/>
  *     &lt;enumeration value="MUR"/>
  *     &lt;enumeration value="MVR"/>
  *     &lt;enumeration value="MWK"/>
@@ -146,7 +146,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="SOS"/>
  *     &lt;enumeration value="SRD"/>
  *     &lt;enumeration value="SSP"/>
- *     &lt;enumeration value="STD"/>
+ *     &lt;enumeration value="STN"/>
  *     &lt;enumeration value="SVC"/>
  *     &lt;enumeration value="SYP"/>
  *     &lt;enumeration value="SZL"/>
@@ -166,7 +166,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="UYI"/>
  *     &lt;enumeration value="UYU"/>
  *     &lt;enumeration value="UZS"/>
- *     &lt;enumeration value="VEF"/>
+ *     &lt;enumeration value="VES"/>
  *     &lt;enumeration value="VND"/>
  *     &lt;enumeration value="VUV"/>
  *     &lt;enumeration value="WST"/>
@@ -295,7 +295,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     MMK,
     MNT,
     MOP,
-    MRO,
+    MRU,
     MUR,
     MVR,
     MWK,
@@ -333,7 +333,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     SOS,
     SRD,
     SSP,
-    STD,
+    STN,
     SVC,
     SYP,
     SZL,
@@ -353,7 +353,7 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     UYI,
     UYU,
     UZS,
-    VEF,
+    VES,
     VND,
     VUV,
     WST,

@@ -4,9 +4,7 @@ package sif.dd.au30.model;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -45,9 +43,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class HouseholdContactInfoType {
 
-    @XmlElement(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlSchemaType(name = "unsignedInt")
-    protected Long preferenceNumber;
+    @XmlElementRef(name = "PreferenceNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<Long> preferenceNumber;
     @XmlElementRef(name = "HouseholdContactId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> householdContactId;
     @XmlElementRef(name = "HouseholdSalutation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -64,10 +61,10 @@ public class HouseholdContactInfoType {
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link JAXBElement }{@code <}{@link Long }{@code >}
      *     
      */
-    public Long getPreferenceNumber() {
+    public JAXBElement<Long> getPreferenceNumber() {
         return preferenceNumber;
     }
 
@@ -76,10 +73,10 @@ public class HouseholdContactInfoType {
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link JAXBElement }{@code <}{@link Long }{@code >}
      *     
      */
-    public void setPreferenceNumber(Long value) {
+    public void setPreferenceNumber(JAXBElement<Long> value) {
         this.preferenceNumber = value;
     }
 

@@ -30,6 +30,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="AttendanceTimes" type="{http://www.sifassociation.org/datamodel/au/3.4}AttendanceTimesType" minOccurs="0"/>
  *         &lt;element name="PeriodAttendances" type="{http://www.sifassociation.org/datamodel/au/3.4}PeriodAttendancesType" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -49,6 +50,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "schoolYear",
     "attendanceTimes",
     "periodAttendances",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -69,6 +71,8 @@ public class StudentAttendanceTimeListType {
     protected AttendanceTimesType attendanceTimes;
     @XmlElementRef(name = "PeriodAttendances", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<PeriodAttendancesType> periodAttendances;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -219,6 +223,30 @@ public class StudentAttendanceTimeListType {
      */
     public void setPeriodAttendances(JAXBElement<PeriodAttendancesType> value) {
         this.periodAttendances = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

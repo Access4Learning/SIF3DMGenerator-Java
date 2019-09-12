@@ -23,6 +23,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="SuspensionCategory" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSuspensionCategoryType" minOccurs="0"/>
+ *         &lt;element name="SuspensionNotes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="WithdrawalTimeList" type="{http://www.sifassociation.org/datamodel/au/3.4}WithdrawalTimeListType" minOccurs="0"/>
  *         &lt;element name="Duration" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="AdvisementDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
@@ -41,6 +42,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SuspensionContainerType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "suspensionCategory",
+    "suspensionNotes",
     "withdrawalTimeList",
     "duration",
     "advisementDate",
@@ -53,6 +55,8 @@ public class SuspensionContainerType {
 
     @XmlElement(name = "SuspensionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected AUCodeSetsSuspensionCategoryType suspensionCategory;
+    @XmlElementRef(name = "SuspensionNotes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> suspensionNotes;
     @XmlElementRef(name = "WithdrawalTimeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<WithdrawalTimeListType> withdrawalTimeList;
     @XmlElementRef(name = "Duration", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -90,6 +94,30 @@ public class SuspensionContainerType {
      */
     public void setSuspensionCategory(AUCodeSetsSuspensionCategoryType value) {
         this.suspensionCategory = value;
+    }
+
+    /**
+     * Gets the value of the suspensionNotes property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getSuspensionNotes() {
+        return suspensionNotes;
+    }
+
+    /**
+     * Sets the value of the suspensionNotes property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setSuspensionNotes(JAXBElement<String> value) {
+        this.suspensionNotes = value;
     }
 
     /**

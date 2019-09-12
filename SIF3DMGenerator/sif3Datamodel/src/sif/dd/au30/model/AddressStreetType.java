@@ -4,12 +4,8 @@ package sif.dd.au30.model;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -61,10 +57,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 public class AddressStreetType {
 
-    @XmlElement(name = "Line1", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String line1;
+    @XmlElementRef(name = "Line1", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> line1;
     @XmlElementRef(name = "Line2", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> line2;
     @XmlElementRef(name = "Line3", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -95,10 +89,10 @@ public class AddressStreetType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getLine1() {
+    public JAXBElement<String> getLine1() {
         return line1;
     }
 
@@ -107,10 +101,10 @@ public class AddressStreetType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setLine1(String value) {
+    public void setLine1(JAXBElement<String> value) {
         this.line1 = value;
     }
 

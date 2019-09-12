@@ -42,6 +42,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Semester" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="OtherCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherCodeListType" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -71,6 +72,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "semester",
     "schoolYear",
     "otherCodeList",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -111,6 +113,8 @@ public class TimeTableSubjectType {
     protected JAXBElement<XMLGregorianCalendar> schoolYear;
     @XmlElementRef(name = "OtherCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<OtherCodeListType> otherCodeList;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -501,6 +505,30 @@ public class TimeTableSubjectType {
      */
     public void setOtherCodeList(JAXBElement<OtherCodeListType> value) {
         this.otherCodeList = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

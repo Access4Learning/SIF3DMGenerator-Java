@@ -23,7 +23,6 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="AET"/>
  *     &lt;enumeration value="AWDT"/>
  *     &lt;enumeration value="AWST"/>
- *     &lt;enumeration value="ACDT"/>
  *     &lt;enumeration value="CXT"/>
  *     &lt;enumeration value="LHDT"/>
  *     &lt;enumeration value="LHST"/>

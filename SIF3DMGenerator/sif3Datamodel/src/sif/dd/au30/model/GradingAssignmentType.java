@@ -46,6 +46,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="RubricScoringGuide" type="{http://www.sifassociation.org/datamodel/au/3.4}GenericRubricType" minOccurs="0"/>
  *         &lt;element name="PrerequisiteList" type="{http://www.sifassociation.org/datamodel/au/3.4}PrerequisitesType" minOccurs="0"/>
  *         &lt;element name="LearningStandardList" type="{http://www.sifassociation.org/datamodel/au/3.4}LearningStandardListType" minOccurs="0"/>
+ *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -78,6 +79,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "rubricScoringGuide",
     "prerequisiteList",
     "learningStandardList",
+    "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
 })
@@ -124,6 +126,8 @@ public class GradingAssignmentType {
     protected JAXBElement<PrerequisitesType> prerequisiteList;
     @XmlElementRef(name = "LearningStandardList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LearningStandardListType> learningStandardList;
+    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SIFMetadataType> sifMetadata;
     @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -586,6 +590,30 @@ public class GradingAssignmentType {
      */
     public void setLearningStandardList(JAXBElement<LearningStandardListType> value) {
         this.learningStandardList = value;
+    }
+
+    /**
+     * Gets the value of the localCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<LocalCodeListType> getLocalCodeList() {
+        return localCodeList;
+    }
+
+    /**
+     * Sets the value of the localCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
+     *     
+     */
+    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
+        this.localCodeList = value;
     }
 
     /**

@@ -17,6 +17,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="I"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="O"/>
+ *     &lt;enumeration value="N"/>
+ *     &lt;enumeration value="X"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -29,7 +31,9 @@ public enum AUCodeSetsStaffStatusType {
     A,
     I,
     S,
-    O;
+    O,
+    N,
+    X;
 
     public String value() {
         return name();
