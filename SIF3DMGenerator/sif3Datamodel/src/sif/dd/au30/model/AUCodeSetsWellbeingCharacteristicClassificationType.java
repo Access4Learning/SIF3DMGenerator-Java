@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="D"/>
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="O"/>
+ *     &lt;enumeration value="DP"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -29,7 +30,8 @@ public enum AUCodeSetsWellbeingCharacteristicClassificationType {
     M,
     D,
     S,
-    O;
+    O,
+    DP;
 
     public String value() {
         return name();

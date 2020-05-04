@@ -27,6 +27,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="InvoicedEntity" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
@@ -66,6 +67,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="ItemDetail" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="DueDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="FinancialAccountRefIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}FinancialAccountRefIdListType" minOccurs="0"/>
+ *         &lt;element name="AccountCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}AccountCodeListType" minOccurs="0"/>
  *         &lt;element name="AccountingPeriod" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="RelatedPurchaseOrderRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="PurchasingItems" type="{http://www.sifassociation.org/datamodel/au/3.4}PurchasingItemsType" minOccurs="0"/>
@@ -84,6 +86,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InvoiceType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "localId",
     "invoicedEntity",
     "formNumber",
     "billingDate",
@@ -100,6 +103,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "itemDetail",
     "dueDate",
     "financialAccountRefIdList",
+    "accountCodeList",
     "accountingPeriod",
     "relatedPurchaseOrderRefId",
     "purchasingItems",
@@ -110,6 +114,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class InvoiceType {
 
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> localId;
     @XmlElement(name = "InvoicedEntity", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected InvoiceType.InvoicedEntity invoicedEntity;
     @XmlElementRef(name = "FormNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -146,6 +152,8 @@ public class InvoiceType {
     protected JAXBElement<XMLGregorianCalendar> dueDate;
     @XmlElementRef(name = "FinancialAccountRefIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<FinancialAccountRefIdListType> financialAccountRefIdList;
+    @XmlElementRef(name = "AccountCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AccountCodeListType> accountCodeList;
     @XmlElementRef(name = "AccountingPeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> accountingPeriod;
     @XmlElementRef(name = "RelatedPurchaseOrderRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -163,6 +171,30 @@ public class InvoiceType {
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String refId;
+
+    /**
+     * Gets the value of the localId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLocalId() {
+        return localId;
+    }
+
+    /**
+     * Sets the value of the localId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLocalId(JAXBElement<String> value) {
+        this.localId = value;
+    }
 
     /**
      * Gets the value of the invoicedEntity property.
@@ -546,6 +578,30 @@ public class InvoiceType {
      */
     public void setFinancialAccountRefIdList(JAXBElement<FinancialAccountRefIdListType> value) {
         this.financialAccountRefIdList = value;
+    }
+
+    /**
+     * Gets the value of the accountCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AccountCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<AccountCodeListType> getAccountCodeList() {
+        return accountCodeList;
+    }
+
+    /**
+     * Sets the value of the accountCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AccountCodeListType }{@code >}
+     *     
+     */
+    public void setAccountCodeList(JAXBElement<AccountCodeListType> value) {
+        this.accountCodeList = value;
     }
 
     /**

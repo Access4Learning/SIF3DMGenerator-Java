@@ -5,7 +5,6 @@ import java.math.BigInteger;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -17,15 +16,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for TeachingGroupType complex type.
+ * <p>Java class for TeachingGroupScheduleType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TeachingGroupType">
+ * &lt;complexType name="TeachingGroupScheduleType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="EditorGUID" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="ShortName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -40,18 +40,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="SchoolCourseLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="TimeTableSubjectRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" minOccurs="0"/>
  *         &lt;element name="TimeTableSubjectLocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
- *         &lt;element name="KeyLearningArea" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsACStrandType" minOccurs="0"/>
  *         &lt;element name="Semester" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="StudentList" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentListType" minOccurs="0"/>
  *         &lt;element name="TeacherList" type="{http://www.sifassociation.org/datamodel/au/3.4}TeacherListType" minOccurs="0"/>
  *         &lt;element name="MinClassSize" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="MaxClassSize" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="TeachingGroupPeriodList" type="{http://www.sifassociation.org/datamodel/au/3.4}TeachingGroupPeriodListType" minOccurs="0"/>
- *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
- *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
- *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attribute name="RefId" use="required" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -60,7 +55,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TeachingGroupType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "TeachingGroupScheduleType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "editorGUID",
     "schoolYear",
     "localId",
     "shortName",
@@ -75,19 +71,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "schoolCourseLocalId",
     "timeTableSubjectRefId",
     "timeTableSubjectLocalId",
-    "keyLearningArea",
     "semester",
     "studentList",
     "teacherList",
     "minClassSize",
     "maxClassSize",
-    "teachingGroupPeriodList",
-    "localCodeList",
-    "sifMetadata",
-    "sifExtendedElements"
+    "teachingGroupPeriodList"
 })
-public class TeachingGroupType {
+public class TeachingGroupScheduleType {
 
+    @XmlElement(name = "EditorGUID", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String editorGUID;
     @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected XMLGregorianCalendar schoolYear;
     @XmlElement(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
@@ -119,8 +114,6 @@ public class TeachingGroupType {
     protected JAXBElement<String> timeTableSubjectRefId;
     @XmlElementRef(name = "TimeTableSubjectLocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> timeTableSubjectLocalId;
-    @XmlElementRef(name = "KeyLearningArea", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<AUCodeSetsACStrandType> keyLearningArea;
     @XmlElementRef(name = "Semester", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Long> semester;
     @XmlElementRef(name = "StudentList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -133,15 +126,30 @@ public class TeachingGroupType {
     protected JAXBElement<BigInteger> maxClassSize;
     @XmlElementRef(name = "TeachingGroupPeriodList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<TeachingGroupPeriodListType> teachingGroupPeriodList;
-    @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<LocalCodeListType> localCodeList;
-    @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFMetadataType> sifMetadata;
-    @XmlElementRef(name = "SIF_ExtendedElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFExtendedElementsType> sifExtendedElements;
-    @XmlAttribute(name = "RefId", required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String refId;
+
+    /**
+     * Gets the value of the editorGUID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEditorGUID() {
+        return editorGUID;
+    }
+
+    /**
+     * Sets the value of the editorGUID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEditorGUID(String value) {
+        this.editorGUID = value;
+    }
 
     /**
      * Gets the value of the schoolYear property.
@@ -480,30 +488,6 @@ public class TeachingGroupType {
     }
 
     /**
-     * Gets the value of the keyLearningArea property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link AUCodeSetsACStrandType }{@code >}
-     *     
-     */
-    public JAXBElement<AUCodeSetsACStrandType> getKeyLearningArea() {
-        return keyLearningArea;
-    }
-
-    /**
-     * Sets the value of the keyLearningArea property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link AUCodeSetsACStrandType }{@code >}
-     *     
-     */
-    public void setKeyLearningArea(JAXBElement<AUCodeSetsACStrandType> value) {
-        this.keyLearningArea = value;
-    }
-
-    /**
      * Gets the value of the semester property.
      * 
      * @return
@@ -645,102 +629,6 @@ public class TeachingGroupType {
      */
     public void setTeachingGroupPeriodList(JAXBElement<TeachingGroupPeriodListType> value) {
         this.teachingGroupPeriodList = value;
-    }
-
-    /**
-     * Gets the value of the localCodeList property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
-     *     
-     */
-    public JAXBElement<LocalCodeListType> getLocalCodeList() {
-        return localCodeList;
-    }
-
-    /**
-     * Sets the value of the localCodeList property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link LocalCodeListType }{@code >}
-     *     
-     */
-    public void setLocalCodeList(JAXBElement<LocalCodeListType> value) {
-        this.localCodeList = value;
-    }
-
-    /**
-     * Gets the value of the sifMetadata property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}
-     *     
-     */
-    public JAXBElement<SIFMetadataType> getSIFMetadata() {
-        return sifMetadata;
-    }
-
-    /**
-     * Sets the value of the sifMetadata property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SIFMetadataType }{@code >}
-     *     
-     */
-    public void setSIFMetadata(JAXBElement<SIFMetadataType> value) {
-        this.sifMetadata = value;
-    }
-
-    /**
-     * Gets the value of the sifExtendedElements property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}
-     *     
-     */
-    public JAXBElement<SIFExtendedElementsType> getSIFExtendedElements() {
-        return sifExtendedElements;
-    }
-
-    /**
-     * Sets the value of the sifExtendedElements property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SIFExtendedElementsType }{@code >}
-     *     
-     */
-    public void setSIFExtendedElements(JAXBElement<SIFExtendedElementsType> value) {
-        this.sifExtendedElements = value;
-    }
-
-    /**
-     * Gets the value of the refId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRefId() {
-        return refId;
-    }
-
-    /**
-     * Sets the value of the refId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRefId(String value) {
-        this.refId = value;
     }
 
 }

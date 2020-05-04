@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="D-Other"/>
  *     &lt;enumeration value="S-Other"/>
  *     &lt;enumeration value="Other"/>
+ *     &lt;enumeration value="DP"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -72,7 +73,8 @@ public enum AUCodeSetsWellbeingCharacteristicCategoryType {
     @XmlEnumValue("S-Other")
     S_OTHER("S-Other"),
     @XmlEnumValue("Other")
-    OTHER("Other");
+    OTHER("Other"),
+    DP("DP");
     private final String value;
 
     AUCodeSetsWellbeingCharacteristicCategoryType(String v) {

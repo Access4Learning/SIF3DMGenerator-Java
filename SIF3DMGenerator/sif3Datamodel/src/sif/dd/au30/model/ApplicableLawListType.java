@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for FQReportingListType complex type.
+ * <p>Java class for ApplicableLawListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FQReportingListType">
+ * &lt;complexType name="ApplicableLawListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="FQReporting" type="{http://www.sifassociation.org/datamodel/au/3.4}FQReportingType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ApplicableLaw" type="{http://www.sifassociation.org/datamodel/au/3.4}ApplicableLawType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FQReportingListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "fqReporting"
+@XmlType(name = "ApplicableLawListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "applicableLaw"
 })
-public class FQReportingListType {
+public class ApplicableLawListType {
 
-    @XmlElement(name = "FQReporting", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<FQReportingType> fqReporting;
+    @XmlElement(name = "ApplicableLaw", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<ApplicableLawType> applicableLaw;
 
     /**
-     * Gets the value of the fqReporting property.
+     * Gets the value of the applicableLaw property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the fqReporting property.
+     * This is why there is not a <CODE>set</CODE> method for the applicableLaw property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getFQReporting().add(newItem);
+     *    getApplicableLaw().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link FQReportingType }
+     * {@link ApplicableLawType }
      * 
      * 
      */
-    public List<FQReportingType> getFQReporting() {
-        if (fqReporting == null) {
-            fqReporting = new ArrayList<FQReportingType>();
+    public List<ApplicableLawType> getApplicableLaw() {
+        if (applicableLaw == null) {
+            applicableLaw = new ArrayList<ApplicableLawType>();
         }
-        return this.fqReporting;
+        return this.applicableLaw;
     }
 
 }

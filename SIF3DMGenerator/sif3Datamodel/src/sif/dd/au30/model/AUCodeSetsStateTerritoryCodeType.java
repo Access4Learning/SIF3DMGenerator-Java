@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;simpleType name="AUCodeSetsStateTerritoryCodeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *     &lt;enumeration value="AAT"/>
  *     &lt;enumeration value="ACT"/>
  *     &lt;enumeration value="NSW"/>
  *     &lt;enumeration value="NT"/>
@@ -32,6 +33,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsStateTerritoryCodeType {
 
+    AAT,
     ACT,
     NSW,
     NT,

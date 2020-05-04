@@ -67,8 +67,8 @@ public class StudentAttendanceTimeListType {
     protected XMLGregorianCalendar date;
     @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected XMLGregorianCalendar schoolYear;
-    @XmlElement(name = "AttendanceTimes", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AttendanceTimesType attendanceTimes;
+    @XmlElementRef(name = "AttendanceTimes", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AttendanceTimesType> attendanceTimes;
     @XmlElementRef(name = "PeriodAttendances", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<PeriodAttendancesType> periodAttendances;
     @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -182,10 +182,10 @@ public class StudentAttendanceTimeListType {
      * 
      * @return
      *     possible object is
-     *     {@link AttendanceTimesType }
+     *     {@link JAXBElement }{@code <}{@link AttendanceTimesType }{@code >}
      *     
      */
-    public AttendanceTimesType getAttendanceTimes() {
+    public JAXBElement<AttendanceTimesType> getAttendanceTimes() {
         return attendanceTimes;
     }
 
@@ -194,10 +194,10 @@ public class StudentAttendanceTimeListType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AttendanceTimesType }
+     *     {@link JAXBElement }{@code <}{@link AttendanceTimesType }{@code >}
      *     
      */
-    public void setAttendanceTimes(AttendanceTimesType value) {
+    public void setAttendanceTimes(JAXBElement<AttendanceTimesType> value) {
         this.attendanceTimes = value;
     }
 

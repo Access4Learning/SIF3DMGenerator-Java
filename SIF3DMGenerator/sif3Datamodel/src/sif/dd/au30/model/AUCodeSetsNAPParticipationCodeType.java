@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="R"/>
  *     &lt;enumeration value="X"/>
+ *     &lt;enumeration value="F"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -37,7 +38,8 @@ public enum AUCodeSetsNAPParticipationCodeType {
     W,
     S,
     R,
-    X;
+    X,
+    F;
 
     public String value() {
         return name();

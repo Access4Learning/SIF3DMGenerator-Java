@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for FQItemListType complex type.
+ * <p>Java class for TimeTableContainerCollectionType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FQItemListType">
+ * &lt;complexType name="TimeTableContainerCollectionType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="FQItem" type="{http://www.sifassociation.org/datamodel/au/3.4}FQItemType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TimeTableContainer" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeTableContainerType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FQItemListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "fqItem"
+@XmlType(name = "TimeTableContainerCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "timeTableContainer"
 })
-public class FQItemListType {
+public class TimeTableContainerCollectionType {
 
-    @XmlElement(name = "FQItem", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<FQItemType> fqItem;
+    @XmlElement(name = "TimeTableContainer", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<TimeTableContainerType> timeTableContainer;
 
     /**
-     * Gets the value of the fqItem property.
+     * Gets the value of the timeTableContainer property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the fqItem property.
+     * This is why there is not a <CODE>set</CODE> method for the timeTableContainer property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getFQItem().add(newItem);
+     *    getTimeTableContainer().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link FQItemType }
+     * {@link TimeTableContainerType }
      * 
      * 
      */
-    public List<FQItemType> getFQItem() {
-        if (fqItem == null) {
-            fqItem = new ArrayList<FQItemType>();
+    public List<TimeTableContainerType> getTimeTableContainer() {
+        if (timeTableContainer == null) {
+            timeTableContainer = new ArrayList<TimeTableContainerType>();
         }
-        return this.fqItem;
+        return this.timeTableContainer;
     }
 
 }

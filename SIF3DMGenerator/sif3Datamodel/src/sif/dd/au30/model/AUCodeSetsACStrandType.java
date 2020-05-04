@@ -2,6 +2,7 @@
 package sif.dd.au30.model;
 
 import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -28,6 +29,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="U"/>
  *     &lt;enumeration value="T"/>
  *     &lt;enumeration value="W"/>
+ *     &lt;enumeration value="ReligousStudies"/>
+ *     &lt;enumeration value="Other"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -37,28 +40,42 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum AUCodeSetsACStrandType {
 
-    A,
-    B,
-    C,
-    D,
-    E,
-    G,
-    H,
-    I,
-    L,
-    M,
-    P,
-    S,
-    U,
-    T,
-    W;
+    A("A"),
+    B("B"),
+    C("C"),
+    D("D"),
+    E("E"),
+    G("G"),
+    H("H"),
+    I("I"),
+    L("L"),
+    M("M"),
+    P("P"),
+    S("S"),
+    U("U"),
+    T("T"),
+    W("W"),
+    @XmlEnumValue("ReligousStudies")
+    RELIGOUS_STUDIES("ReligousStudies"),
+    @XmlEnumValue("Other")
+    OTHER("Other");
+    private final String value;
+
+    AUCodeSetsACStrandType(String v) {
+        value = v;
+    }
 
     public String value() {
-        return name();
+        return value;
     }
 
     public static AUCodeSetsACStrandType fromValue(String v) {
-        return valueOf(v);
+        for (AUCodeSetsACStrandType c: AUCodeSetsACStrandType.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

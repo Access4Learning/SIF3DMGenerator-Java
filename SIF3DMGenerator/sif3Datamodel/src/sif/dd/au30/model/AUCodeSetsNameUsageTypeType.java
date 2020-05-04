@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="PRV"/>
  *     &lt;enumeration value="STG"/>
  *     &lt;enumeration value="TRB"/>
+ *     &lt;enumeration value="PBN"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -41,7 +42,8 @@ public enum AUCodeSetsNameUsageTypeType {
     PRF,
     PRV,
     STG,
-    TRB;
+    TRB,
+    PBN;
 
     public String value() {
         return name();

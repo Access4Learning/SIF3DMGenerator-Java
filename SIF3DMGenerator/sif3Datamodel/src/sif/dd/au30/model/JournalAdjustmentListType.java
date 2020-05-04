@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for AGStatusReportCollectionType complex type.
+ * <p>Java class for JournalAdjustmentListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AGStatusReportCollectionType">
+ * &lt;complexType name="JournalAdjustmentListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AGStatusReport" type="{http://www.sifassociation.org/datamodel/au/3.4}AGStatusReportType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="JournalAdjustment" type="{http://www.sifassociation.org/datamodel/au/3.4}JournalAdjustmentType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AGStatusReportCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "agStatusReport"
+@XmlType(name = "JournalAdjustmentListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "journalAdjustment"
 })
-public class AGStatusReportCollectionType {
+public class JournalAdjustmentListType {
 
-    @XmlElement(name = "AGStatusReport", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<AGStatusReportType> agStatusReport;
+    @XmlElement(name = "JournalAdjustment", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<JournalAdjustmentType> journalAdjustment;
 
     /**
-     * Gets the value of the agStatusReport property.
+     * Gets the value of the journalAdjustment property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the agStatusReport property.
+     * This is why there is not a <CODE>set</CODE> method for the journalAdjustment property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getAGStatusReport().add(newItem);
+     *    getJournalAdjustment().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AGStatusReportType }
+     * {@link JournalAdjustmentType }
      * 
      * 
      */
-    public List<AGStatusReportType> getAGStatusReport() {
-        if (agStatusReport == null) {
-            agStatusReport = new ArrayList<AGStatusReportType>();
+    public List<JournalAdjustmentType> getJournalAdjustment() {
+        if (journalAdjustment == null) {
+            journalAdjustment = new ArrayList<JournalAdjustmentType>();
         }
-        return this.agStatusReport;
+        return this.journalAdjustment;
     }
 
 }

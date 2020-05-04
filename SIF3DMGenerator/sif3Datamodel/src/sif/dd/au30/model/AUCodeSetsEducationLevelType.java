@@ -16,6 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="Primary"/>
  *     &lt;enumeration value="Secondary"/>
+ *     &lt;enumeration value="Combined"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -28,7 +29,9 @@ public enum AUCodeSetsEducationLevelType {
     @XmlEnumValue("Primary")
     PRIMARY("Primary"),
     @XmlEnumValue("Secondary")
-    SECONDARY("Secondary");
+    SECONDARY("Secondary"),
+    @XmlEnumValue("Combined")
+    COMBINED("Combined");
     private final String value;
 
     AUCodeSetsEducationLevelType(String v) {

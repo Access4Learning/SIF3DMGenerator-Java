@@ -21,6 +21,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="S"/>
  *     &lt;enumeration value="L"/>
  *     &lt;enumeration value="O"/>
+ *     &lt;enumeration value="W"/>
+ *     &lt;enumeration value="R"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -38,7 +40,9 @@ public enum AUCodeSetsPersonalisedPlanType {
     B("B"),
     S("S"),
     L("L"),
-    O("O");
+    O("O"),
+    W("W"),
+    R("R");
     private final String value;
 
     AUCodeSetsPersonalisedPlanType(String v) {

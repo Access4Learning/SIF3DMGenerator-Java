@@ -215,6 +215,16 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="MN-14"/>
  *     &lt;enumeration value="MN-15"/>
  *     &lt;enumeration value="MN-16"/>
+ *     &lt;enumeration value="DP-1"/>
+ *     &lt;enumeration value="DP-2"/>
+ *     &lt;enumeration value="DP-3"/>
+ *     &lt;enumeration value="DP-4"/>
+ *     &lt;enumeration value="DP-5"/>
+ *     &lt;enumeration value="DP-6"/>
+ *     &lt;enumeration value="DP-7"/>
+ *     &lt;enumeration value="DP-8"/>
+ *     &lt;enumeration value="DP-9"/>
+ *     &lt;enumeration value="DP-10"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -625,7 +635,27 @@ public enum AUCodeSetsWellbeingCharacteristicSubCategoryType {
     @XmlEnumValue("MN-15")
     MN_15("MN-15"),
     @XmlEnumValue("MN-16")
-    MN_16("MN-16");
+    MN_16("MN-16"),
+    @XmlEnumValue("DP-1")
+    DP_1("DP-1"),
+    @XmlEnumValue("DP-2")
+    DP_2("DP-2"),
+    @XmlEnumValue("DP-3")
+    DP_3("DP-3"),
+    @XmlEnumValue("DP-4")
+    DP_4("DP-4"),
+    @XmlEnumValue("DP-5")
+    DP_5("DP-5"),
+    @XmlEnumValue("DP-6")
+    DP_6("DP-6"),
+    @XmlEnumValue("DP-7")
+    DP_7("DP-7"),
+    @XmlEnumValue("DP-8")
+    DP_8("DP-8"),
+    @XmlEnumValue("DP-9")
+    DP_9("DP-9"),
+    @XmlEnumValue("DP-10")
+    DP_10("DP-10");
     private final String value;
 
     AUCodeSetsWellbeingCharacteristicSubCategoryType(String v) {

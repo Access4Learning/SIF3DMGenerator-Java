@@ -25,6 +25,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="ParentAccountRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="AccountNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -37,9 +38,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *               &lt;enumeration value="Liability"/>
  *               &lt;enumeration value="Revenue"/>
  *               &lt;enumeration value="Expense"/>
+ *               &lt;enumeration value="Other"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
+ *         &lt;element name="AccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="CreationTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
  *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
@@ -56,12 +59,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FinancialAccountType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "localId",
     "parentAccountRefId",
     "chargedLocationInfoRefId",
     "accountNumber",
     "name",
     "description",
     "classType",
+    "accountCode",
     "creationDate",
     "creationTime",
     "localCodeList",
@@ -70,6 +75,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class FinancialAccountType {
 
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> localId;
     @XmlElementRef(name = "ParentAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> parentAccountRefId;
     @XmlElementRef(name = "ChargedLocationInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -87,6 +94,8 @@ public class FinancialAccountType {
     @XmlElement(name = "ClassType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String classType;
+    @XmlElementRef(name = "AccountCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> accountCode;
     @XmlElement(name = "CreationDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar creationDate;
@@ -102,6 +111,30 @@ public class FinancialAccountType {
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String refId;
+
+    /**
+     * Gets the value of the localId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLocalId() {
+        return localId;
+    }
+
+    /**
+     * Sets the value of the localId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLocalId(JAXBElement<String> value) {
+        this.localId = value;
+    }
 
     /**
      * Gets the value of the parentAccountRefId property.
@@ -245,6 +278,30 @@ public class FinancialAccountType {
      */
     public void setClassType(String value) {
         this.classType = value;
+    }
+
+    /**
+     * Gets the value of the accountCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getAccountCode() {
+        return accountCode;
+    }
+
+    /**
+     * Sets the value of the accountCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setAccountCode(JAXBElement<String> value) {
+        this.accountCode = value;
     }
 
     /**

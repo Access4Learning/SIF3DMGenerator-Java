@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for AGRuleListType complex type.
+ * <p>Java class for PaymentReceiptLineListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AGRuleListType">
+ * &lt;complexType name="PaymentReceiptLineListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="AGRule" type="{http://www.sifassociation.org/datamodel/au/3.4}AGRuleType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PaymentReceiptLine" type="{http://www.sifassociation.org/datamodel/au/3.4}PaymentReceiptLineType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AGRuleListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "agRule"
+@XmlType(name = "PaymentReceiptLineListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "paymentReceiptLine"
 })
-public class AGRuleListType {
+public class PaymentReceiptLineListType {
 
-    @XmlElement(name = "AGRule", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected List<AGRuleType> agRule;
+    @XmlElement(name = "PaymentReceiptLine", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<PaymentReceiptLineType> paymentReceiptLine;
 
     /**
-     * Gets the value of the agRule property.
+     * Gets the value of the paymentReceiptLine property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the agRule property.
+     * This is why there is not a <CODE>set</CODE> method for the paymentReceiptLine property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getAGRule().add(newItem);
+     *    getPaymentReceiptLine().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AGRuleType }
+     * {@link PaymentReceiptLineType }
      * 
      * 
      */
-    public List<AGRuleType> getAGRule() {
-        if (agRule == null) {
-            agRule = new ArrayList<AGRuleType>();
+    public List<PaymentReceiptLineType> getPaymentReceiptLine() {
+        if (paymentReceiptLine == null) {
+            paymentReceiptLine = new ArrayList<PaymentReceiptLineType>();
         }
-        return this.agRule;
+        return this.paymentReceiptLine;
     }
 
 }

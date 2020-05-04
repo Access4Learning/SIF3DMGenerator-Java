@@ -24,6 +24,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StudentPersonalRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
@@ -49,6 +50,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WellbeingAlertType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "localId",
     "studentPersonalRefId",
     "schoolInfoRefId",
     "date",
@@ -66,6 +68,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class WellbeingAlertType {
 
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> localId;
     @XmlElement(name = "StudentPersonalRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String studentPersonalRefId;
@@ -100,6 +104,30 @@ public class WellbeingAlertType {
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String refId;
+
+    /**
+     * Gets the value of the localId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLocalId() {
+        return localId;
+    }
+
+    /**
+     * Sets the value of the localId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLocalId(JAXBElement<String> value) {
+        this.localId = value;
+    }
 
     /**
      * Gets the value of the studentPersonalRefId property.

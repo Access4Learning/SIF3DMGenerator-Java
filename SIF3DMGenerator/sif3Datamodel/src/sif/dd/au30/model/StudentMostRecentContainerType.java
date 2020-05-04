@@ -56,6 +56,7 @@ import javax.xml.bind.annotation.XmlType;
  *               &lt;enumeration value="Supplementary"/>
  *               &lt;enumeration value="Substantial"/>
  *               &lt;enumeration value="Extensive"/>
+ *               &lt;enumeration value="None"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
@@ -66,6 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  *               &lt;enumeration value="Cognitive"/>
  *               &lt;enumeration value="Social-Emotional"/>
  *               &lt;enumeration value="Sensory"/>
+ *               &lt;enumeration value="None"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>

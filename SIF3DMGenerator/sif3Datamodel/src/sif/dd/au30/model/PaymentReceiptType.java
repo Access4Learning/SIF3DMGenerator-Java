@@ -26,6 +26,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="TransactionType" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -35,10 +36,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *               &lt;enumeration value="Creditor payment"/>
  *               &lt;enumeration value="Debtor receipt"/>
  *               &lt;enumeration value="Debtor payment"/>
+ *               &lt;enumeration value="Creditor Reverse Payment"/>
+ *               &lt;enumeration value="Creditor Reverse Receipt"/>
+ *               &lt;enumeration value="GL Reverse Payment"/>
+ *               &lt;enumeration value="GL Reverse Receipt"/>
+ *               &lt;enumeration value="Debtor Reverse Payment"/>
+ *               &lt;enumeration value="Debtor Reverse Receipt"/>
+ *               &lt;enumeration value="Employee Payroll"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
  *         &lt;element name="InvoiceRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="PaymentReceiptLineList" type="{http://www.sifassociation.org/datamodel/au/3.4}PaymentReceiptLineListType" minOccurs="0"/>
  *         &lt;element name="VendorInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="DebtorRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="ChargedLocationInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
@@ -46,6 +55,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="TransactionAmount" type="{http://www.sifassociation.org/datamodel/au/3.4}DebitOrCreditAmountType" minOccurs="0"/>
  *         &lt;element name="ReceivedTransactionId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="FinancialAccountRefIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}FinancialAccountRefIdListType" minOccurs="0"/>
+ *         &lt;element name="AccountCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}AccountCodeListType" minOccurs="0"/>
  *         &lt;element name="TransactionDescription" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="TaxRate" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
  *         &lt;element name="TaxAmount" type="{http://www.sifassociation.org/datamodel/au/3.4}MonetaryAmountType" minOccurs="0"/>
@@ -67,8 +77,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PaymentReceiptType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "localId",
     "transactionType",
     "invoiceRefId",
+    "paymentReceiptLineList",
     "vendorInfoRefId",
     "debtorRefId",
     "chargedLocationInfoRefId",
@@ -76,6 +88,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "transactionAmount",
     "receivedTransactionId",
     "financialAccountRefIdList",
+    "accountCodeList",
     "transactionDescription",
     "taxRate",
     "taxAmount",
@@ -89,11 +102,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class PaymentReceiptType {
 
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> localId;
     @XmlElement(name = "TransactionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String transactionType;
     @XmlElementRef(name = "InvoiceRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> invoiceRefId;
+    @XmlElementRef(name = "PaymentReceiptLineList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PaymentReceiptLineListType> paymentReceiptLineList;
     @XmlElementRef(name = "VendorInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> vendorInfoRefId;
     @XmlElementRef(name = "DebtorRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -111,6 +128,8 @@ public class PaymentReceiptType {
     protected String receivedTransactionId;
     @XmlElementRef(name = "FinancialAccountRefIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<FinancialAccountRefIdListType> financialAccountRefIdList;
+    @XmlElementRef(name = "AccountCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AccountCodeListType> accountCodeList;
     @XmlElementRef(name = "TransactionDescription", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> transactionDescription;
     @XmlElementRef(name = "TaxRate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -134,6 +153,30 @@ public class PaymentReceiptType {
     @XmlAttribute(name = "RefId", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String refId;
+
+    /**
+     * Gets the value of the localId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLocalId() {
+        return localId;
+    }
+
+    /**
+     * Sets the value of the localId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLocalId(JAXBElement<String> value) {
+        this.localId = value;
+    }
 
     /**
      * Gets the value of the transactionType property.
@@ -181,6 +224,30 @@ public class PaymentReceiptType {
      */
     public void setInvoiceRefId(JAXBElement<String> value) {
         this.invoiceRefId = value;
+    }
+
+    /**
+     * Gets the value of the paymentReceiptLineList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link PaymentReceiptLineListType }{@code >}
+     *     
+     */
+    public JAXBElement<PaymentReceiptLineListType> getPaymentReceiptLineList() {
+        return paymentReceiptLineList;
+    }
+
+    /**
+     * Sets the value of the paymentReceiptLineList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link PaymentReceiptLineListType }{@code >}
+     *     
+     */
+    public void setPaymentReceiptLineList(JAXBElement<PaymentReceiptLineListType> value) {
+        this.paymentReceiptLineList = value;
     }
 
     /**
@@ -349,6 +416,30 @@ public class PaymentReceiptType {
      */
     public void setFinancialAccountRefIdList(JAXBElement<FinancialAccountRefIdListType> value) {
         this.financialAccountRefIdList = value;
+    }
+
+    /**
+     * Gets the value of the accountCodeList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AccountCodeListType }{@code >}
+     *     
+     */
+    public JAXBElement<AccountCodeListType> getAccountCodeList() {
+        return accountCodeList;
+    }
+
+    /**
+     * Sets the value of the accountCodeList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AccountCodeListType }{@code >}
+     *     
+     */
+    public void setAccountCodeList(JAXBElement<AccountCodeListType> value) {
+        this.accountCodeList = value;
     }
 
     /**

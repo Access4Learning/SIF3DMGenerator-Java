@@ -24,8 +24,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="DebitFinancialAccountRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="CreditFinancialAccountRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
+ *         &lt;element name="DebitAccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *         &lt;element name="CreditAccountCode" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="OriginatingTransactionRefId" minOccurs="0">
  *           &lt;complexType>
  *             &lt;simpleContent>
@@ -47,6 +50,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="GSTCodeOriginal" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="GSTCodeReplacement" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="Note" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="JournalAdjustmentList" type="{http://www.sifassociation.org/datamodel/au/3.4}JournalAdjustmentListType" minOccurs="0"/>
  *         &lt;element name="CreatedDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="ApprovedDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="CreatedBy" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -65,13 +69,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "JournalType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "localId",
     "debitFinancialAccountRefId",
     "creditFinancialAccountRefId",
+    "debitAccountCode",
+    "creditAccountCode",
     "originatingTransactionRefId",
     "amount",
     "gstCodeOriginal",
     "gstCodeReplacement",
     "note",
+    "journalAdjustmentList",
     "createdDate",
     "approvedDate",
     "createdBy",
@@ -82,12 +90,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class JournalType {
 
-    @XmlElement(name = "DebitFinancialAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String debitFinancialAccountRefId;
-    @XmlElement(name = "CreditFinancialAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String creditFinancialAccountRefId;
+    @XmlElementRef(name = "LocalId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> localId;
+    @XmlElementRef(name = "DebitFinancialAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> debitFinancialAccountRefId;
+    @XmlElementRef(name = "CreditFinancialAccountRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> creditFinancialAccountRefId;
+    @XmlElementRef(name = "DebitAccountCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> debitAccountCode;
+    @XmlElementRef(name = "CreditAccountCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> creditAccountCode;
     @XmlElementRef(name = "OriginatingTransactionRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<JournalType.OriginatingTransactionRefId> originatingTransactionRefId;
     @XmlElement(name = "Amount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
@@ -98,6 +110,8 @@ public class JournalType {
     protected JAXBElement<String> gstCodeReplacement;
     @XmlElementRef(name = "Note", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> note;
+    @XmlElementRef(name = "JournalAdjustmentList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<JournalAdjustmentListType> journalAdjustmentList;
     @XmlElementRef(name = "CreatedDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> createdDate;
     @XmlElementRef(name = "ApprovedDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -117,14 +131,38 @@ public class JournalType {
     protected String refId;
 
     /**
+     * Gets the value of the localId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getLocalId() {
+        return localId;
+    }
+
+    /**
+     * Sets the value of the localId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setLocalId(JAXBElement<String> value) {
+        this.localId = value;
+    }
+
+    /**
      * Gets the value of the debitFinancialAccountRefId property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getDebitFinancialAccountRefId() {
+    public JAXBElement<String> getDebitFinancialAccountRefId() {
         return debitFinancialAccountRefId;
     }
 
@@ -133,10 +171,10 @@ public class JournalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setDebitFinancialAccountRefId(String value) {
+    public void setDebitFinancialAccountRefId(JAXBElement<String> value) {
         this.debitFinancialAccountRefId = value;
     }
 
@@ -145,10 +183,10 @@ public class JournalType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public String getCreditFinancialAccountRefId() {
+    public JAXBElement<String> getCreditFinancialAccountRefId() {
         return creditFinancialAccountRefId;
     }
 
@@ -157,11 +195,59 @@ public class JournalType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setCreditFinancialAccountRefId(String value) {
+    public void setCreditFinancialAccountRefId(JAXBElement<String> value) {
         this.creditFinancialAccountRefId = value;
+    }
+
+    /**
+     * Gets the value of the debitAccountCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getDebitAccountCode() {
+        return debitAccountCode;
+    }
+
+    /**
+     * Sets the value of the debitAccountCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setDebitAccountCode(JAXBElement<String> value) {
+        this.debitAccountCode = value;
+    }
+
+    /**
+     * Gets the value of the creditAccountCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getCreditAccountCode() {
+        return creditAccountCode;
+    }
+
+    /**
+     * Sets the value of the creditAccountCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setCreditAccountCode(JAXBElement<String> value) {
+        this.creditAccountCode = value;
     }
 
     /**
@@ -282,6 +368,30 @@ public class JournalType {
      */
     public void setNote(JAXBElement<String> value) {
         this.note = value;
+    }
+
+    /**
+     * Gets the value of the journalAdjustmentList property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link JournalAdjustmentListType }{@code >}
+     *     
+     */
+    public JAXBElement<JournalAdjustmentListType> getJournalAdjustmentList() {
+        return journalAdjustmentList;
+    }
+
+    /**
+     * Sets the value of the journalAdjustmentList property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link JournalAdjustmentListType }{@code >}
+     *     
+     */
+    public void setJournalAdjustmentList(JAXBElement<JournalAdjustmentListType> value) {
+        this.journalAdjustmentList = value;
     }
 
     /**
