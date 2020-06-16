@@ -1,5 +1,5 @@
 # License
-> Copyright 2013 - 2019 Systemic Pty Ltd
+> Copyright 2013 - 2020 Systemic Pty Ltd
 > 
 > Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 > 
@@ -31,6 +31,18 @@ As of June 12, 2019 the following SIF Locale Data Models are supported by this p
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
 - SIF NA Unity 4.0
+
+## Usage with SIF3 Framework
+Since version **0.15.0 of the SIF3 Framework** the **SIF Infrastructure 3.3** (or later) is supported. In the 3.3 infrastructure a new JSON format was introduced called PESC-JSON. This format is in addition to the JSON that has been supported in the past, which was known under the term JSON-Goessner or Goessner notation. There were 'breaking' changes required in the SIF3 Framework to enable this second JSON format. This in term meant that the sif3.3Common-0.15.0.jar, that is being used with this project, is no longer compatible with previous versions of the same library (e.g. sif3.2.1Common-0.14.1.jar). There were changes in all Marshaller and Unmarshaller classes in this project required that would break existing implementations with SIF 3.2.1 infrastructure projects. To enable continued support for implementations that use the SIF 3.2.1 infrastructure and therefore use the SIF3 Framework before version 0.15.0 the SIF3 Generator project required branching. If you need to produce updated data models for your locale you need to consider which SIF3 Framework version you are using and then use/download the correct branch of the SIF3 Generator to produce your data model artifacts that will be compatible with your SIF3 Framework version. Below is the list of appropriate SIF3 Generator branches to use with the corresponding SIF3 Framework version and therefore SIF 3.x Infrastructure version.
+
+| SIF3DMGenerator Branch | SIF3Framework Version | SIF3 Infra Version  |
+| ---------------------- | --------------------- | ------------------- |
+| pre-fw15               | 0.14.1 or before      |  3.2.1 or before    |
+| fw15-plus              | 0.15.0 or later       |  3.3 or later       |
+| master                 | 0.15.0 or later       |  3.3 or later       |
+
+**Note:** 
+Based on the table above the "master" always holds the support for the latest version of the SIF3 Generator and SIF3 Framework. 
 
 # Build Instructions using build.xml
 There is an ant.properties file at the top level of this project. This is the place where settings need to change to build
@@ -115,6 +127,11 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 
 ## Version from June 12, 2019
 - Added NA Unity 4.0 support. 
+
+## Version from JUNE 16, 2020
+Add support for PESC JSON. Note if the artifacts/libraries produced with this project are being used with the SIF3 Framework
+(https://github.com/Access4Learning/sif3-framework-java) then you should refer to the instructions in the 
+"**Summary - Usage with SIF3 Framework**" section first for details which version/branch of this project you should use.
 
 # Download Instructions
 How to download this project:
