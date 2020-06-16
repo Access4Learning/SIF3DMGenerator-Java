@@ -21,6 +21,7 @@ package sif3.test.dm.au30.conversion;
 import sif.dd.au30.conversion.DataModelMarshalFactory;
 import sif.dd.au30.conversion.DataModelUnmarshalFactory;
 import sif.dd.au30.model.StudentPersonalType;
+import sif3.common.CommonConstants.SchemaType;
 import au.com.systemic.framework.utils.FileReaderWriter;
 import au.com.systemic.framework.utils.Timer;
 
@@ -36,7 +37,8 @@ public class TestMarshallers
     
 	private final static String INPUT_STUDENT_FILE_NAME       = BASE_DIR +"/sif3DMTest/testdata/au/input/StudentPersonal.xml";
 	private final static String OUTPUT_STUDENT_FILE_NAME_XML  = BASE_DIR +"/sif3DMTest/testdata/au/output/StudentPersonal.xml";
-	private final static String OUTPUT_STUDENT_FILE_NAME_JSON = BASE_DIR +"/sif3DMTest/testdata/au/output/StudentPersonal.json";
+	private final static String OUTPUT_STUDENT_FILE_NAME_JSON_GOESSNER = BASE_DIR +"/sif3DMTest/testdata/au/output/StudentPersonal-goessner.json";
+    private final static String OUTPUT_STUDENT_FILE_NAME_JSON_PESC = BASE_DIR +"/sif3DMTest/testdata/au/output/StudentPersonal-pesc.json";
 		
 	private DataModelUnmarshalFactory unmarshaller = new DataModelUnmarshalFactory();
 	private DataModelMarshalFactory marshaller = new DataModelMarshalFactory();
@@ -60,11 +62,16 @@ public class TestMarshallers
 			System.out.println("Time Taken to marshal Object -> XML: "+timer.timeTaken()+"ms");
 			
 			timer.start();
-      String ouputEnvJSON = marshaller.marshalToJSON(student);
-      timer.finish();
-      FileReaderWriter.writeContentToFile(ouputEnvJSON, OUTPUT_STUDENT_FILE_NAME_JSON);
-      System.out.println("Time Taken to marshal Object -> JSON: "+timer.timeTaken()+"ms");
-			
+            String ouputEnvJSON = marshaller.marshalToJSON(student, SchemaType.goessner);
+            timer.finish();
+            FileReaderWriter.writeContentToFile(ouputEnvJSON, OUTPUT_STUDENT_FILE_NAME_JSON_GOESSNER);
+            System.out.println("Time Taken to marshal Object -> JSON Goessner: "+timer.timeTaken()+"ms");
+            
+            timer.start();
+            ouputEnvJSON = marshaller.marshalToJSON(student, SchemaType.pesc);
+            timer.finish();
+            FileReaderWriter.writeContentToFile(ouputEnvJSON, OUTPUT_STUDENT_FILE_NAME_JSON_PESC);
+            System.out.println("Time Taken to marshal Object -> JSON PESC: "+timer.timeTaken()+"ms");
 		}
 		catch (Exception ex)
 		{
