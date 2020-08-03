@@ -5,24 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyElement;
-import javax.xml.bind.annotation.XmlMixed;
-import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for ExtendedContentType complex type.
+ * <p>Java class for CensusStudentListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ExtendedContentType">
+ * &lt;complexType name="CensusStudentListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="CensusStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}CensusStudentType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,47 +29,41 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExtendedContentType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "content"
+@XmlType(name = "CensusStudentListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "censusStudent"
 })
-@XmlSeeAlso({
-    sif.dd.au30.model.SIFExtendedElementsType.SIFExtendedElement.class
-})
-public class ExtendedContentType {
+public class CensusStudentListType {
 
-    @XmlMixed
-    @XmlAnyElement(lax = true)
-    protected List<Object> content;
+    @XmlElement(name = "CensusStudent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<CensusStudentType> censusStudent;
 
     /**
-     * Gets the value of the content property.
+     * Gets the value of the censusStudent property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the content property.
+     * This is why there is not a <CODE>set</CODE> method for the censusStudent property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getContent().add(newItem);
+     *    getCensusStudent().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Element }
-     * {@link String }
-     * {@link Object }
+     * {@link CensusStudentType }
      * 
      * 
      */
-    public List<Object> getContent() {
-        if (content == null) {
-            content = new ArrayList<Object>();
+    public List<CensusStudentType> getCensusStudent() {
+        if (censusStudent == null) {
+            censusStudent = new ArrayList<CensusStudentType>();
         }
-        return this.content;
+        return this.censusStudent;
     }
 
 }

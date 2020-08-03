@@ -2,6 +2,7 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -71,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="CensusAge" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
+ *         &lt;element name="CensusAge" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
  *         &lt;element name="DistanceEducationStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="BoardingStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsBoardingType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -163,7 +164,7 @@ public class StudentMostRecentContainerType {
     @XmlElementRef(name = "DisabilityCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> disabilityCategory;
     @XmlElementRef(name = "CensusAge", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<BigDecimal> censusAge;
+    protected JAXBElement<BigInteger> censusAge;
     @XmlElementRef(name = "DistanceEducationStudent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> distanceEducationStudent;
     @XmlElementRef(name = "BoardingStatus", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -750,10 +751,10 @@ public class StudentMostRecentContainerType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+     *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
      *     
      */
-    public JAXBElement<BigDecimal> getCensusAge() {
+    public JAXBElement<BigInteger> getCensusAge() {
         return censusAge;
     }
 
@@ -762,10 +763,10 @@ public class StudentMostRecentContainerType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+     *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
      *     
      */
-    public void setCensusAge(JAXBElement<BigDecimal> value) {
+    public void setCensusAge(JAXBElement<BigInteger> value) {
         this.censusAge = value;
     }
 
