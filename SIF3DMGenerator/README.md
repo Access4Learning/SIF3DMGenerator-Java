@@ -116,6 +116,9 @@ Updated Marshallers and Unmarshallers to match the interface version of the SIF3
 ## Version from June 12, 2019
 - Added NA Unity 4.0 support. 
 
+## Version from Sep 22, 2022
+- Updated with official SIF AU 3.4.7 release. XSD & POJOs. 
+
 # Download Instructions
 How to download this project:
 
