@@ -133,6 +133,10 @@ Add support for PESC JSON. Note if the artifacts/libraries produced with this pr
 (https://github.com/Access4Learning/sif3-framework-java) then you should refer to the instructions in the 
 "**Summary - Usage with SIF3 Framework**" section first for details which version/branch of this project you should use.
 
+## Version from Sept 22, 2020
+- Updated with official SIF AU 3.4.4 release. XSD & POJOs. 
+
+
 # Download Instructions
 How to download this project:
 
