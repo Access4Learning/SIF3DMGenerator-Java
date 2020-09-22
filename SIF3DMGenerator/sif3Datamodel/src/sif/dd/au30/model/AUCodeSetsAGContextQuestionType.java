@@ -16,11 +16,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="AC001"/>
  *     &lt;enumeration value="AC002"/>
- *     &lt;enumeration value="NGSC001"/>
- *     &lt;enumeration value="NGSC002"/>
- *     &lt;enumeration value="NGSC003"/>
- *     &lt;enumeration value="NGSC004"/>
- *     &lt;enumeration value="NGSC005"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -33,17 +28,7 @@ public enum AUCodeSetsAGContextQuestionType {
     @XmlEnumValue("AC001")
     AC_001("AC001"),
     @XmlEnumValue("AC002")
-    AC_002("AC002"),
-    @XmlEnumValue("NGSC001")
-    NGSC_001("NGSC001"),
-    @XmlEnumValue("NGSC002")
-    NGSC_002("NGSC002"),
-    @XmlEnumValue("NGSC003")
-    NGSC_003("NGSC003"),
-    @XmlEnumValue("NGSC004")
-    NGSC_004("NGSC004"),
-    @XmlEnumValue("NGSC005")
-    NGSC_005("NGSC005");
+    AC_002("AC002");
     private final String value;
 
     AUCodeSetsAGContextQuestionType(String v) {

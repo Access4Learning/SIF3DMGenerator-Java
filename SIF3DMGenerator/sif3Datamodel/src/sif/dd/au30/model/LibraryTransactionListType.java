@@ -5,22 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyElement;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for ReportDataObjectType complex type.
+ * <p>Java class for LibraryTransactionListType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ReportDataObjectType">
+ * &lt;complexType name="LibraryTransactionListType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;any processContents='lax' maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Transaction" type="{http://www.sifassociation.org/datamodel/au/3.4}LibraryTransactionType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,42 +29,41 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ReportDataObjectType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
-    "any"
+@XmlType(name = "LibraryTransactionListType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+    "transaction"
 })
-public class ReportDataObjectType {
+public class LibraryTransactionListType {
 
-    @XmlAnyElement(lax = true)
-    protected List<Object> any;
+    @XmlElement(name = "Transaction", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
+    protected List<LibraryTransactionType> transaction;
 
     /**
-     * Gets the value of the any property.
+     * Gets the value of the transaction property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the any property.
+     * This is why there is not a <CODE>set</CODE> method for the transaction property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getAny().add(newItem);
+     *    getTransaction().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Object }
-     * {@link Element }
+     * {@link LibraryTransactionType }
      * 
      * 
      */
-    public List<Object> getAny() {
-        if (any == null) {
-            any = new ArrayList<Object>();
+    public List<LibraryTransactionType> getTransaction() {
+        if (transaction == null) {
+            transaction = new ArrayList<LibraryTransactionType>();
         }
-        return this.any;
+        return this.transaction;
     }
 
 }
