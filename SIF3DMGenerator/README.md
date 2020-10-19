@@ -136,6 +136,9 @@ Add support for PESC JSON. Note if the artifacts/libraries produced with this pr
 ## Version from Sept 22, 2020
 - Updated with official SIF AU 3.4.4 release. XSD & POJOs. 
 
+## Version from Oct 19, 2020
+- Minor update to the sif3.3Common-0.15.0.jar file. Enforces lower case "value" for JAXB property called 'value' for 
+  data models that use the upper camel case naming convention otherwise. 
 
 # Download Instructions
 How to download this project:
