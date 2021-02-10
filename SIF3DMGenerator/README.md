@@ -38,11 +38,19 @@ Since version **0.15.0 of the SIF3 Framework** the **SIF Infrastructure 3.3** (o
 | SIF3DMGenerator Branch | SIF3Framework Version | SIF3 Infra Version  |
 | ---------------------- | --------------------- | ------------------- |
 | pre-fw15               | 0.14.1 or before      |  3.2.1 or before    |
-| fw15-plus              | 0.15.0 or later       |  3.3 or later       |
-| master                 | 0.15.0 or later       |  3.3 or later       |
+| fw15-plus              | 0.15.0 or later       |  3.3 or later*      |
+| master                 | 0.15.0 or later       |  3.3 or later*      |
+*see update notes for Feb 10, 2021. 
+
 
 **Note:** 
+
 Based on the table above the "master" always holds the support for the latest version of the SIF3 Generator and SIF3 Framework. 
+
+### Update as of Feb 10, 2021
+The SIF3 Framework supports infrastructure namespace mapping. This in turn means that it is possible to use the latest version of 
+the SIF3 Datamodel Generator and latest version of the SIF3 Framework for SIF Adapters that run with an older versions of the SIF Infrastructure. For details refer to section 5.16 in the Developer's Guide of the SIF3 Framework. Basically the SIF3 Framework can
+now run with any infrastructure version. **For the SIF3 Datamodel Generator this means that the fw15-plus branch will be decommissioned**.
 
 # Build Instructions using build.xml
 There is an ant.properties file at the top level of this project. This is the place where settings need to change to build
@@ -139,6 +147,9 @@ Add support for PESC JSON. Note if the artifacts/libraries produced with this pr
 ## Version from Oct 19, 2020
 - Minor update to the sif3.3Common-0.15.0.jar file. Enforces lower case "value" for JAXB property called 'value' for 
   data models that use the upper camel case naming convention otherwise. 
+
+## Version from Feb 10, 2021
+- Minor update to the sif3.3Common-0.15.0.jar file. Support for infrastructure namespace mapping. 
 
 # Download Instructions
 How to download this project:
