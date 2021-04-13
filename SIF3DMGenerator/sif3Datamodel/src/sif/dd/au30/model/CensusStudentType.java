@@ -2,10 +2,10 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="StudentCohortId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
- *         &lt;element name="CensusAge" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="CensusAge" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="CohortGender" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
@@ -99,7 +99,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="Headcount" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="Headcount" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -131,7 +131,8 @@ public class CensusStudentType {
     @XmlElement(name = "YearLevel", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected YearLevelType yearLevel;
     @XmlElement(name = "CensusAge", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger censusAge;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long censusAge;
     @XmlElement(name = "CohortGender", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String cohortGender;
@@ -156,7 +157,8 @@ public class CensusStudentType {
     @XmlElement(name = "FTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal fte;
     @XmlElement(name = "Headcount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger headcount;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long headcount;
 
     /**
      * Gets the value of the studentCohortId property.
@@ -211,10 +213,10 @@ public class CensusStudentType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getCensusAge() {
+    public Long getCensusAge() {
         return censusAge;
     }
 
@@ -223,10 +225,10 @@ public class CensusStudentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setCensusAge(BigInteger value) {
+    public void setCensusAge(Long value) {
         this.censusAge = value;
     }
 
@@ -427,10 +429,10 @@ public class CensusStudentType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getHeadcount() {
+    public Long getHeadcount() {
         return headcount;
     }
 
@@ -439,10 +441,10 @@ public class CensusStudentType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setHeadcount(BigInteger value) {
+    public void setHeadcount(Long value) {
         this.headcount = value;
     }
 

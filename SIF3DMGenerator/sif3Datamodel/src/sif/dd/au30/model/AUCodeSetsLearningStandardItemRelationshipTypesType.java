@@ -15,6 +15,7 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;simpleType name="AUCodeSetsLearningStandardItemRelationshipTypesType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
  *     &lt;enumeration value="Content"/>
+ *     &lt;enumeration value="Other"/>
  *     &lt;enumeration value="PD"/>
  *     &lt;enumeration value="State"/>
  *   &lt;/restriction>
@@ -28,6 +29,8 @@ public enum AUCodeSetsLearningStandardItemRelationshipTypesType {
 
     @XmlEnumValue("Content")
     CONTENT("Content"),
+    @XmlEnumValue("Other")
+    OTHER("Other"),
     PD("PD"),
     @XmlEnumValue("State")
     STATE("State");

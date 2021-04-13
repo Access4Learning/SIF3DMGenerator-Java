@@ -3,15 +3,12 @@ package sif.dd.au30.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import org.w3c.dom.Element;
 
 
 /**
@@ -25,55 +22,13 @@ import org.w3c.dom.Element;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice>
- *           &lt;element name="XMLData">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;any processContents='lax' minOccurs="0"/>
- *                   &lt;/sequence>
- *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="TextData">
- *             &lt;complexType>
- *               &lt;simpleContent>
- *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                   &lt;attribute name="MIMEType" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                   &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/extension>
- *               &lt;/simpleContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="BinaryData">
- *             &lt;complexType>
- *               &lt;simpleContent>
- *                 &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
- *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                   &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/extension>
- *               &lt;/simpleContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="Reference">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *                   &lt;/sequence>
- *                   &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                   &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
+ *           &lt;element name="XMLData" type="{http://www.sifassociation.org/datamodel/au/3.4}XMLDataType"/>
+ *           &lt;element name="TextData" type="{http://www.sifassociation.org/datamodel/au/3.4}TextDataType"/>
+ *           &lt;element name="BinaryData" type="{http://www.sifassociation.org/datamodel/au/3.4}BinaryDataType"/>
+ *           &lt;element name="Reference" type="{http://www.sifassociation.org/datamodel/au/3.4}ReferenceDataType"/>
  *         &lt;/choice>
  *       &lt;/sequence>
+ *       &lt;attribute name="RefId" type="{http://www.sifassociation.org/datamodel/au/3.4}RefIdType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -88,26 +43,32 @@ import org.w3c.dom.Element;
     "binaryData",
     "reference"
 })
+@XmlSeeAlso({
+    LearningResourcePackageType.class
+})
 public class AbstractContentElementType {
 
     @XmlElement(name = "XMLData", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AbstractContentElementType.XMLData xmlData;
+    protected XMLDataType xmlData;
     @XmlElement(name = "TextData", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AbstractContentElementType.TextData textData;
+    protected TextDataType textData;
     @XmlElement(name = "BinaryData", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AbstractContentElementType.BinaryData binaryData;
+    protected BinaryDataType binaryData;
     @XmlElement(name = "Reference", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected AbstractContentElementType.Reference reference;
+    protected ReferenceDataType reference;
+    @XmlAttribute(name = "RefId")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String refId;
 
     /**
      * Gets the value of the xmlData property.
      * 
      * @return
      *     possible object is
-     *     {@link AbstractContentElementType.XMLData }
+     *     {@link XMLDataType }
      *     
      */
-    public AbstractContentElementType.XMLData getXMLData() {
+    public XMLDataType getXMLData() {
         return xmlData;
     }
 
@@ -116,10 +77,10 @@ public class AbstractContentElementType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AbstractContentElementType.XMLData }
+     *     {@link XMLDataType }
      *     
      */
-    public void setXMLData(AbstractContentElementType.XMLData value) {
+    public void setXMLData(XMLDataType value) {
         this.xmlData = value;
     }
 
@@ -128,10 +89,10 @@ public class AbstractContentElementType {
      * 
      * @return
      *     possible object is
-     *     {@link AbstractContentElementType.TextData }
+     *     {@link TextDataType }
      *     
      */
-    public AbstractContentElementType.TextData getTextData() {
+    public TextDataType getTextData() {
         return textData;
     }
 
@@ -140,10 +101,10 @@ public class AbstractContentElementType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AbstractContentElementType.TextData }
+     *     {@link TextDataType }
      *     
      */
-    public void setTextData(AbstractContentElementType.TextData value) {
+    public void setTextData(TextDataType value) {
         this.textData = value;
     }
 
@@ -152,10 +113,10 @@ public class AbstractContentElementType {
      * 
      * @return
      *     possible object is
-     *     {@link AbstractContentElementType.BinaryData }
+     *     {@link BinaryDataType }
      *     
      */
-    public AbstractContentElementType.BinaryData getBinaryData() {
+    public BinaryDataType getBinaryData() {
         return binaryData;
     }
 
@@ -164,10 +125,10 @@ public class AbstractContentElementType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AbstractContentElementType.BinaryData }
+     *     {@link BinaryDataType }
      *     
      */
-    public void setBinaryData(AbstractContentElementType.BinaryData value) {
+    public void setBinaryData(BinaryDataType value) {
         this.binaryData = value;
     }
 
@@ -176,10 +137,10 @@ public class AbstractContentElementType {
      * 
      * @return
      *     possible object is
-     *     {@link AbstractContentElementType.Reference }
+     *     {@link ReferenceDataType }
      *     
      */
-    public AbstractContentElementType.Reference getReference() {
+    public ReferenceDataType getReference() {
         return reference;
     }
 
@@ -188,489 +149,35 @@ public class AbstractContentElementType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AbstractContentElementType.Reference }
+     *     {@link ReferenceDataType }
      *     
      */
-    public void setReference(AbstractContentElementType.Reference value) {
+    public void setReference(ReferenceDataType value) {
         this.reference = value;
     }
 
-
     /**
-     * <p>Java class for anonymous complex type.
+     * Gets the value of the refId property.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.sifassociation.org/datamodel/au/3.4>XSBase64BinaryOrEmpty">
-     *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *       &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "value"
-    })
-    public static class BinaryData {
-
-        @XmlValue
-        protected String value;
-        @XmlAttribute(name = "MIMEType", required = true)
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String mimeType;
-        @XmlAttribute(name = "FileName")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String fileName;
-        @XmlAttribute(name = "Description")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String description;
-
-        /**
-         * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getValue() {
-            return value;
-        }
-
-        /**
-         * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setValue(String value) {
-            this.value = value;
-        }
-
-        /**
-         * Gets the value of the mimeType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getMIMEType() {
-            return mimeType;
-        }
-
-        /**
-         * Sets the value of the mimeType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setMIMEType(String value) {
-            this.mimeType = value;
-        }
-
-        /**
-         * Gets the value of the fileName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getFileName() {
-            return fileName;
-        }
-
-        /**
-         * Sets the value of the fileName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setFileName(String value) {
-            this.fileName = value;
-        }
-
-        /**
-         * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDescription() {
-            return description;
-        }
-
-        /**
-         * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDescription(String value) {
-            this.description = value;
-        }
-
+    public String getRefId() {
+        return refId;
     }
 
-
     /**
-     * <p>Java class for anonymous complex type.
+     * Sets the value of the refId property.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="MIMEType" use="required" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "url"
-    })
-    public static class Reference {
-
-        @XmlElement(name = "URL", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-        @XmlSchemaType(name = "anyURI")
-        protected String url;
-        @XmlAttribute(name = "MIMEType", required = true)
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String mimeType;
-        @XmlAttribute(name = "Description")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String description;
-
-        /**
-         * Gets the value of the url property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getURL() {
-            return url;
-        }
-
-        /**
-         * Sets the value of the url property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setURL(String value) {
-            this.url = value;
-        }
-
-        /**
-         * Gets the value of the mimeType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getMIMEType() {
-            return mimeType;
-        }
-
-        /**
-         * Sets the value of the mimeType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setMIMEType(String value) {
-            this.mimeType = value;
-        }
-
-        /**
-         * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDescription() {
-            return description;
-        }
-
-        /**
-         * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDescription(String value) {
-            this.description = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *       &lt;attribute name="MIMEType" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *       &lt;attribute name="FileName" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "value"
-    })
-    public static class TextData {
-
-        @XmlValue
-        protected String value;
-        @XmlAttribute(name = "MIMEType")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String mimeType;
-        @XmlAttribute(name = "FileName")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String fileName;
-        @XmlAttribute(name = "Description")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String description;
-
-        /**
-         * Gets the value of the value property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getValue() {
-            return value;
-        }
-
-        /**
-         * Sets the value of the value property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setValue(String value) {
-            this.value = value;
-        }
-
-        /**
-         * Gets the value of the mimeType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getMIMEType() {
-            return mimeType;
-        }
-
-        /**
-         * Sets the value of the mimeType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setMIMEType(String value) {
-            this.mimeType = value;
-        }
-
-        /**
-         * Gets the value of the fileName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getFileName() {
-            return fileName;
-        }
-
-        /**
-         * Sets the value of the fileName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setFileName(String value) {
-            this.fileName = value;
-        }
-
-        /**
-         * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDescription() {
-            return description;
-        }
-
-        /**
-         * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDescription(String value) {
-            this.description = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;any processContents='lax' minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="Description" type="{http://www.w3.org/2001/XMLSchema}token" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "any"
-    })
-    public static class XMLData {
-
-        @XmlAnyElement(lax = true)
-        protected Object any;
-        @XmlAttribute(name = "Description")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        @XmlSchemaType(name = "token")
-        protected String description;
-
-        /**
-         * Gets the value of the any property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Element }
-         *     {@link Object }
-         *     
-         */
-        public Object getAny() {
-            return any;
-        }
-
-        /**
-         * Sets the value of the any property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Element }
-         *     {@link Object }
-         *     
-         */
-        public void setAny(Object value) {
-            this.any = value;
-        }
-
-        /**
-         * Gets the value of the description property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDescription() {
-            return description;
-        }
-
-        /**
-         * Sets the value of the description property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDescription(String value) {
-            this.description = value;
-        }
-
+    public void setRefId(String value) {
+        this.refId = value;
     }
 
 }

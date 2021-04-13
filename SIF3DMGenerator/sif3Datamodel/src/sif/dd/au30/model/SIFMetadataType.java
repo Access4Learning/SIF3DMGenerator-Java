@@ -1,12 +1,9 @@
 
 package sif.dd.au30.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
 
@@ -21,17 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="TimeElements" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TimeElement" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeElementType" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
+ *         &lt;element name="TimeElements" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeElementListType" minOccurs="0"/>
  *         &lt;element name="LifeCycle" type="{http://www.sifassociation.org/datamodel/au/3.4}LifeCycleType" minOccurs="0"/>
  *         &lt;element name="EducationFilter" type="{http://www.sifassociation.org/datamodel/au/3.4}EducationFilterType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -51,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 public class SIFMetadataType {
 
     @XmlElementRef(name = "TimeElements", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SIFMetadataType.TimeElements> timeElements;
+    protected JAXBElement<TimeElementListType> timeElements;
     @XmlElementRef(name = "LifeCycle", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LifeCycleType> lifeCycle;
     @XmlElementRef(name = "EducationFilter", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -62,10 +49,10 @@ public class SIFMetadataType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SIFMetadataType.TimeElements }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TimeElementListType }{@code >}
      *     
      */
-    public JAXBElement<SIFMetadataType.TimeElements> getTimeElements() {
+    public JAXBElement<TimeElementListType> getTimeElements() {
         return timeElements;
     }
 
@@ -74,10 +61,10 @@ public class SIFMetadataType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SIFMetadataType.TimeElements }{@code >}
+     *     {@link JAXBElement }{@code <}{@link TimeElementListType }{@code >}
      *     
      */
-    public void setTimeElements(JAXBElement<SIFMetadataType.TimeElements> value) {
+    public void setTimeElements(JAXBElement<TimeElementListType> value) {
         this.timeElements = value;
     }
 
@@ -127,66 +114,6 @@ public class SIFMetadataType {
      */
     public void setEducationFilter(JAXBElement<EducationFilterType> value) {
         this.educationFilter = value;
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TimeElement" type="{http://www.sifassociation.org/datamodel/au/3.4}TimeElementType" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "timeElement"
-    })
-    public static class TimeElements {
-
-        @XmlElement(name = "TimeElement", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-        protected List<TimeElementType> timeElement;
-
-        /**
-         * Gets the value of the timeElement property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the timeElement property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getTimeElement().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link TimeElementType }
-         * 
-         * 
-         */
-        public List<TimeElementType> getTimeElement() {
-            if (timeElement == null) {
-                timeElement = new ArrayList<TimeElementType>();
-            }
-            return this.timeElement;
-        }
-
     }
 
 }

@@ -15,12 +15,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for TimeElementType complex type.
+ * <p>Java class for SpanGapType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TimeElementType">
+ * &lt;complexType name="SpanGapType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -30,8 +30,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="Value" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StartDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="EndDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="SpanGaps" type="{http://www.sifassociation.org/datamodel/au/3.4}SpanGapListType" minOccurs="0"/>
- *         &lt;element name="IsCurrent" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,17 +39,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TimeElementType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
+@XmlType(name = "SpanGapType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "type",
     "code",
     "name",
     "value",
     "startDateTime",
-    "endDateTime",
-    "spanGaps",
-    "isCurrent"
+    "endDateTime"
 })
-public class TimeElementType {
+public class SpanGapType {
 
     @XmlElement(name = "Type", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
@@ -73,10 +69,6 @@ public class TimeElementType {
     protected JAXBElement<Calendar> startDateTime;
     @XmlElementRef(name = "EndDateTime", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<Calendar> endDateTime;
-    @XmlElementRef(name = "SpanGaps", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<SpanGapListType> spanGaps;
-    @XmlElement(name = "IsCurrent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected Boolean isCurrent;
 
     /**
      * Gets the value of the type property.
@@ -220,54 +212,6 @@ public class TimeElementType {
      */
     public void setEndDateTime(JAXBElement<Calendar> value) {
         this.endDateTime = value;
-    }
-
-    /**
-     * Gets the value of the spanGaps property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link SpanGapListType }{@code >}
-     *     
-     */
-    public JAXBElement<SpanGapListType> getSpanGaps() {
-        return spanGaps;
-    }
-
-    /**
-     * Sets the value of the spanGaps property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link SpanGapListType }{@code >}
-     *     
-     */
-    public void setSpanGaps(JAXBElement<SpanGapListType> value) {
-        this.spanGaps = value;
-    }
-
-    /**
-     * Gets the value of the isCurrent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isIsCurrent() {
-        return isCurrent;
-    }
-
-    /**
-     * Sets the value of the isCurrent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setIsCurrent(Boolean value) {
-        this.isCurrent = value;
     }
 
 }

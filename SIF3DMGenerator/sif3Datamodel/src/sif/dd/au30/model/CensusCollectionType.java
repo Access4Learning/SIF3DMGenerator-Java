@@ -27,7 +27,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element name="CensusYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="RoundCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ReportingAuthorityCommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SoftwareVendorInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}SoftwareVendorInfoContainerType" minOccurs="0"/>
  *         &lt;element name="CensusReportingList" type="{http://www.sifassociation.org/datamodel/au/3.4}CensusReportingListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
@@ -45,7 +44,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "CensusCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "censusYear",
     "roundCode",
-    "reportingAuthorityCommonwealthId",
     "softwareVendorInfo",
     "censusReportingList",
     "sifMetadata",
@@ -59,8 +57,6 @@ public class CensusCollectionType {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String roundCode;
-    @XmlElementRef(name = "ReportingAuthorityCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> reportingAuthorityCommonwealthId;
     @XmlElementRef(name = "SoftwareVendorInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<SoftwareVendorInfoContainerType> softwareVendorInfo;
     @XmlElementRef(name = "CensusReportingList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -119,30 +115,6 @@ public class CensusCollectionType {
      */
     public void setRoundCode(String value) {
         this.roundCode = value;
-    }
-
-    /**
-     * Gets the value of the reportingAuthorityCommonwealthId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
-     */
-    public JAXBElement<String> getReportingAuthorityCommonwealthId() {
-        return reportingAuthorityCommonwealthId;
-    }
-
-    /**
-     * Sets the value of the reportingAuthorityCommonwealthId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link String }{@code >}
-     *     
-     */
-    public void setReportingAuthorityCommonwealthId(JAXBElement<String> value) {
-        this.reportingAuthorityCommonwealthId = value;
     }
 
     /**

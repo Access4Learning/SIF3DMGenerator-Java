@@ -27,7 +27,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element name="FQYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="RoundCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
- *         &lt;element name="ReportingAuthorityCommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="SoftwareVendorInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}SoftwareVendorInfoContainerType" minOccurs="0"/>
  *         &lt;element name="FQReportingList" type="{http://www.sifassociation.org/datamodel/au/3.4}FQReportingListType" minOccurs="0"/>
  *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
@@ -46,7 +45,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "FinancialQuestionnaireCollectionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "fqYear",
     "roundCode",
-    "reportingAuthorityCommonwealthId",
     "softwareVendorInfo",
     "fqReportingList",
     "localCodeList",
@@ -61,10 +59,6 @@ public class FinancialQuestionnaireCollectionType {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     @XmlSchemaType(name = "normalizedString")
     protected String roundCode;
-    @XmlElement(name = "ReportingAuthorityCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
-    @XmlSchemaType(name = "normalizedString")
-    protected String reportingAuthorityCommonwealthId;
     @XmlElement(name = "SoftwareVendorInfo", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected SoftwareVendorInfoContainerType softwareVendorInfo;
     @XmlElementRef(name = "FQReportingList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -125,30 +119,6 @@ public class FinancialQuestionnaireCollectionType {
      */
     public void setRoundCode(String value) {
         this.roundCode = value;
-    }
-
-    /**
-     * Gets the value of the reportingAuthorityCommonwealthId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getReportingAuthorityCommonwealthId() {
-        return reportingAuthorityCommonwealthId;
-    }
-
-    /**
-     * Sets the value of the reportingAuthorityCommonwealthId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setReportingAuthorityCommonwealthId(String value) {
-        this.reportingAuthorityCommonwealthId = value;
     }
 
     /**

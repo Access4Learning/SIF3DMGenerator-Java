@@ -23,6 +23,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Sex" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSexCodeType" minOccurs="0"/>
  *         &lt;element name="BirthDate" type="{http://www.sifassociation.org/datamodel/au/3.4}BirthDateType" minOccurs="0"/>
  *         &lt;element name="DateOfDeath" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="Deceased" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="BirthDateVerification" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsBirthdateVerificationType" minOccurs="0"/>
  *         &lt;element name="PlaceOfBirth" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="StateOfBirth" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceType" minOccurs="0"/>
@@ -62,6 +63,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "sex",
     "birthDate",
     "dateOfDeath",
+    "deceased",
     "birthDateVerification",
     "placeOfBirth",
     "stateOfBirth",
@@ -98,6 +100,8 @@ public class DemographicsType {
     protected JAXBElement<XMLGregorianCalendar> birthDate;
     @XmlElementRef(name = "DateOfDeath", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> dateOfDeath;
+    @XmlElementRef(name = "Deceased", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> deceased;
     @XmlElementRef(name = "BirthDateVerification", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> birthDateVerification;
     @XmlElementRef(name = "PlaceOfBirth", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -243,6 +247,30 @@ public class DemographicsType {
      */
     public void setDateOfDeath(JAXBElement<XMLGregorianCalendar> value) {
         this.dateOfDeath = value;
+    }
+
+    /**
+     * Gets the value of the deceased property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getDeceased() {
+        return deceased;
+    }
+
+    /**
+     * Sets the value of the deceased property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setDeceased(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.deceased = value;
     }
 
     /**

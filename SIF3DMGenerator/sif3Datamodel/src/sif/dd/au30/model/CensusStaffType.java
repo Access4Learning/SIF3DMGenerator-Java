@@ -2,12 +2,12 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="Headcount" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="Headcount" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -110,7 +110,8 @@ public class CensusStaffType {
     @XmlElementRef(name = "JobFTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<BigDecimal> jobFTE;
     @XmlElement(name = "Headcount", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger headcount;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long headcount;
 
     /**
      * Gets the value of the staffCohortId property.
@@ -285,10 +286,10 @@ public class CensusStaffType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getHeadcount() {
+    public Long getHeadcount() {
         return headcount;
     }
 
@@ -297,10 +298,10 @@ public class CensusStaffType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setHeadcount(BigInteger value) {
+    public void setHeadcount(Long value) {
         this.headcount = value;
     }
 

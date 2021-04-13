@@ -2,10 +2,10 @@
 package sif.dd.au30.model;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
@@ -40,8 +40,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="DaysInReferencePeriod" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="PossibleSchoolDays" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="DaysInReferencePeriod" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="PossibleSchoolDays" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="AttendanceDays" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
@@ -50,9 +50,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="AttendanceLess90Percent" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="AttendanceGTE90Percent" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="PossibleSchoolDaysGT90PercentAttendance" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
+ *         &lt;element name="AttendanceLess90Percent" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="AttendanceGTE90Percent" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
+ *         &lt;element name="PossibleSchoolDaysGT90PercentAttendance" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -85,17 +85,22 @@ public class StatsCohortType {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String cohortGender;
     @XmlElement(name = "DaysInReferencePeriod", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger daysInReferencePeriod;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long daysInReferencePeriod;
     @XmlElement(name = "PossibleSchoolDays", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger possibleSchoolDays;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long possibleSchoolDays;
     @XmlElement(name = "AttendanceDays", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected BigDecimal attendanceDays;
     @XmlElement(name = "AttendanceLess90Percent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger attendanceLess90Percent;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long attendanceLess90Percent;
     @XmlElement(name = "AttendanceGTE90Percent", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger attendanceGTE90Percent;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long attendanceGTE90Percent;
     @XmlElement(name = "PossibleSchoolDaysGT90PercentAttendance", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
-    protected BigInteger possibleSchoolDaysGT90PercentAttendance;
+    @XmlSchemaType(name = "unsignedInt")
+    protected Long possibleSchoolDaysGT90PercentAttendance;
 
     /**
      * Gets the value of the statsCohortId property.
@@ -174,10 +179,10 @@ public class StatsCohortType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getDaysInReferencePeriod() {
+    public Long getDaysInReferencePeriod() {
         return daysInReferencePeriod;
     }
 
@@ -186,10 +191,10 @@ public class StatsCohortType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setDaysInReferencePeriod(BigInteger value) {
+    public void setDaysInReferencePeriod(Long value) {
         this.daysInReferencePeriod = value;
     }
 
@@ -198,10 +203,10 @@ public class StatsCohortType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getPossibleSchoolDays() {
+    public Long getPossibleSchoolDays() {
         return possibleSchoolDays;
     }
 
@@ -210,10 +215,10 @@ public class StatsCohortType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setPossibleSchoolDays(BigInteger value) {
+    public void setPossibleSchoolDays(Long value) {
         this.possibleSchoolDays = value;
     }
 
@@ -246,10 +251,10 @@ public class StatsCohortType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getAttendanceLess90Percent() {
+    public Long getAttendanceLess90Percent() {
         return attendanceLess90Percent;
     }
 
@@ -258,10 +263,10 @@ public class StatsCohortType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setAttendanceLess90Percent(BigInteger value) {
+    public void setAttendanceLess90Percent(Long value) {
         this.attendanceLess90Percent = value;
     }
 
@@ -270,10 +275,10 @@ public class StatsCohortType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getAttendanceGTE90Percent() {
+    public Long getAttendanceGTE90Percent() {
         return attendanceGTE90Percent;
     }
 
@@ -282,10 +287,10 @@ public class StatsCohortType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setAttendanceGTE90Percent(BigInteger value) {
+    public void setAttendanceGTE90Percent(Long value) {
         this.attendanceGTE90Percent = value;
     }
 
@@ -294,10 +299,10 @@ public class StatsCohortType {
      * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public BigInteger getPossibleSchoolDaysGT90PercentAttendance() {
+    public Long getPossibleSchoolDaysGT90PercentAttendance() {
         return possibleSchoolDaysGT90PercentAttendance;
     }
 
@@ -306,10 +311,10 @@ public class StatsCohortType {
      * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
+     *     {@link Long }
      *     
      */
-    public void setPossibleSchoolDaysGT90PercentAttendance(BigInteger value) {
+    public void setPossibleSchoolDaysGT90PercentAttendance(Long value) {
         this.possibleSchoolDaysGT90PercentAttendance = value;
     }
 
