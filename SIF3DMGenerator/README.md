@@ -20,7 +20,7 @@ The reason for this project is that the actual SIF3 Framework becomes/remains in
 data model. It is expected that a specific SIF3 Project will include not only the SIF3 Framework 
 Libraries but also one of the Data Model libraries generated out of this project.
 
-As of June 12, 2019 the following SIF Locale Data Models are supported by this project
+As of April 13, 2021 the following SIF Locale Data Models are supported by this project
 - SIF AU 1.3 for Infrastructure 3.x (Should not be used)
 - SIF AU 1.4 for Infrastructure 3.x (Should not be used)
 - SIF AU 3.4 for Infrastructure 3.x
@@ -28,6 +28,10 @@ As of June 12, 2019 the following SIF Locale Data Models are supported by this p
 - SIF AU 3.4.2 for Infrastructure 3.x
 - SIF AU 3.4.3 for Infrastructure 3.x
 - SIF AU 3.4.4 for Infrastructure 3.x
+- SIF AU 3.4.5 for Infrastructure 3.x
+- SIF AU 3.4.6 for Infrastructure 3.x
+- SIF AU 3.4.7 for Infrastructure 3.x
+- SIF AU 3.4.8 for Infrastructure 3.x
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
 - SIF NA Unity 4.0
@@ -150,6 +154,9 @@ Add support for PESC JSON. Note if the artifacts/libraries produced with this pr
 
 ## Version from Feb 10, 2021
 - Minor update to the sif3.3Common-0.15.0.jar file. Support for infrastructure namespace mapping. 
+
+## Version from April 13, 2021
+- Updated with official SIF AU 3.4.8 release. XSD & POJOs. 
 
 # Download Instructions
 How to download this project:
