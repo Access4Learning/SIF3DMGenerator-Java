@@ -64,6 +64,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="SymptomList" type="{http://www.sifassociation.org/datamodel/au/3.4}SymptomListType" minOccurs="0"/>
  *         &lt;element name="DailyManagement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="EmergencyManagement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="PreferredHospital" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="EmergencyResponsePlan" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="Trigger" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ConfidentialFlag" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
@@ -99,6 +100,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "symptomList",
     "dailyManagement",
     "emergencyManagement",
+    "preferredHospital",
     "emergencyResponsePlan",
     "trigger",
     "confidentialFlag",
@@ -142,6 +144,8 @@ public class WellbeingCharacteristicType {
     protected JAXBElement<String> dailyManagement;
     @XmlElementRef(name = "EmergencyManagement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> emergencyManagement;
+    @XmlElementRef(name = "PreferredHospital", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> preferredHospital;
     @XmlElementRef(name = "EmergencyResponsePlan", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> emergencyResponsePlan;
     @XmlElementRef(name = "Trigger", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -522,6 +526,30 @@ public class WellbeingCharacteristicType {
      */
     public void setEmergencyManagement(JAXBElement<String> value) {
         this.emergencyManagement = value;
+    }
+
+    /**
+     * Gets the value of the preferredHospital property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getPreferredHospital() {
+        return preferredHospital;
+    }
+
+    /**
+     * Sets the value of the preferredHospital property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setPreferredHospital(JAXBElement<String> value) {
+        this.preferredHospital = value;
     }
 
     /**

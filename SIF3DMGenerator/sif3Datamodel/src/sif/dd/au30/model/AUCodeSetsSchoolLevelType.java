@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="Spec/P-12"/>
  *     &lt;enumeration value="Spec/Pri"/>
  *     &lt;enumeration value="Spec/Sec"/>
+ *     &lt;enumeration value="SpecialAssisstance"/>
  *     &lt;enumeration value="Prim"/>
  *     &lt;enumeration value="Sec"/>
  *     &lt;enumeration value="Senior"/>
@@ -74,6 +75,8 @@ public enum AUCodeSetsSchoolLevelType {
     SPEC_PRI("Spec/Pri"),
     @XmlEnumValue("Spec/Sec")
     SPEC_SEC("Spec/Sec"),
+    @XmlEnumValue("SpecialAssisstance")
+    SPECIAL_ASSISSTANCE("SpecialAssisstance"),
     @XmlEnumValue("Prim")
     PRIM("Prim"),
     @XmlEnumValue("Sec")

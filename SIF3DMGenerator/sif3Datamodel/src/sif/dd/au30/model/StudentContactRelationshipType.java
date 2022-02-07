@@ -39,6 +39,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="MainlySpeaksEnglishAtHome" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ContactSequence" type="{http://www.w3.org/2001/XMLSchema}unsignedInt" minOccurs="0"/>
  *         &lt;element name="ContactSequenceSource" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSourceCodeTypeType" minOccurs="0"/>
+ *         &lt;element name="ContactMethod" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsContactMethodType" minOccurs="0"/>
+ *         &lt;element name="FeePercentage" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentContactFeePercentageType" minOccurs="0"/>
  *         &lt;element name="SchoolInfoRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
@@ -63,6 +65,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "mainlySpeaksEnglishAtHome",
     "contactSequence",
     "contactSequenceSource",
+    "contactMethod",
+    "feePercentage",
     "schoolInfoRefId",
     "localCodeList",
     "sifMetadata",
@@ -90,6 +94,10 @@ public class StudentContactRelationshipType {
     protected JAXBElement<Long> contactSequence;
     @XmlElementRef(name = "ContactSequenceSource", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsSourceCodeTypeType> contactSequenceSource;
+    @XmlElementRef(name = "ContactMethod", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsContactMethodType> contactMethod;
+    @XmlElementRef(name = "FeePercentage", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<StudentContactFeePercentageType> feePercentage;
     @XmlElementRef(name = "SchoolInfoRefId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> schoolInfoRefId;
     @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -316,6 +324,54 @@ public class StudentContactRelationshipType {
      */
     public void setContactSequenceSource(JAXBElement<AUCodeSetsSourceCodeTypeType> value) {
         this.contactSequenceSource = value;
+    }
+
+    /**
+     * Gets the value of the contactMethod property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsContactMethodType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsContactMethodType> getContactMethod() {
+        return contactMethod;
+    }
+
+    /**
+     * Sets the value of the contactMethod property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsContactMethodType }{@code >}
+     *     
+     */
+    public void setContactMethod(JAXBElement<AUCodeSetsContactMethodType> value) {
+        this.contactMethod = value;
+    }
+
+    /**
+     * Gets the value of the feePercentage property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link StudentContactFeePercentageType }{@code >}
+     *     
+     */
+    public JAXBElement<StudentContactFeePercentageType> getFeePercentage() {
+        return feePercentage;
+    }
+
+    /**
+     * Sets the value of the feePercentage property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link StudentContactFeePercentageType }{@code >}
+     *     
+     */
+    public void setFeePercentage(JAXBElement<StudentContactFeePercentageType> value) {
+        this.feePercentage = value;
     }
 
     /**

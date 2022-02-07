@@ -28,6 +28,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="EmploymentType" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsEmploymentTypeType" minOccurs="0"/>
  *         &lt;element name="SchoolEducationalLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}EducationalLevelType" minOccurs="0"/>
  *         &lt;element name="NonSchoolEducation" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsNonSchoolEducationType" minOccurs="0"/>
+ *         &lt;element name="Employment" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="Workplace" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="WorkingWithChildrenCheck" type="{http://www.sifassociation.org/datamodel/au/3.4}WorkingWithChildrenCheckType" minOccurs="0"/>
  *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
@@ -48,6 +51,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "employmentType",
     "schoolEducationalLevel",
     "nonSchoolEducation",
+    "employment",
+    "workplace",
+    "workingWithChildrenCheck",
     "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
@@ -66,6 +72,12 @@ public class StudentContactPersonalType {
     protected JAXBElement<String> schoolEducationalLevel;
     @XmlElementRef(name = "NonSchoolEducation", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> nonSchoolEducation;
+    @XmlElementRef(name = "Employment", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> employment;
+    @XmlElementRef(name = "Workplace", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> workplace;
+    @XmlElementRef(name = "WorkingWithChildrenCheck", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<WorkingWithChildrenCheckType> workingWithChildrenCheck;
     @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -218,6 +230,78 @@ public class StudentContactPersonalType {
      */
     public void setNonSchoolEducation(JAXBElement<String> value) {
         this.nonSchoolEducation = value;
+    }
+
+    /**
+     * Gets the value of the employment property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getEmployment() {
+        return employment;
+    }
+
+    /**
+     * Sets the value of the employment property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setEmployment(JAXBElement<String> value) {
+        this.employment = value;
+    }
+
+    /**
+     * Gets the value of the workplace property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getWorkplace() {
+        return workplace;
+    }
+
+    /**
+     * Sets the value of the workplace property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setWorkplace(JAXBElement<String> value) {
+        this.workplace = value;
+    }
+
+    /**
+     * Gets the value of the workingWithChildrenCheck property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link WorkingWithChildrenCheckType }{@code >}
+     *     
+     */
+    public JAXBElement<WorkingWithChildrenCheckType> getWorkingWithChildrenCheck() {
+        return workingWithChildrenCheck;
+    }
+
+    /**
+     * Sets the value of the workingWithChildrenCheck property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link WorkingWithChildrenCheckType }{@code >}
+     *     
+     */
+    public void setWorkingWithChildrenCheck(JAXBElement<WorkingWithChildrenCheckType> value) {
+        this.workingWithChildrenCheck = value;
     }
 
     /**

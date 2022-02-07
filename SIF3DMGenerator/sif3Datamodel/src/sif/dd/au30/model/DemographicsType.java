@@ -41,14 +41,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="PermanentResident" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsPermanentResidentStatusType" minOccurs="0"/>
  *         &lt;element name="VisaSubClass" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassCodeType" minOccurs="0"/>
  *         &lt;element name="VisaStatisticalCode" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="VisaNumber" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
+ *         &lt;element name="VisaGrantDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="VisaExpiryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="VisaConditions" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="VisaStudyEntitlement" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsVisaStudyEntitlementType" minOccurs="0"/>
  *         &lt;element name="VisaSubClassList" type="{http://www.sifassociation.org/datamodel/au/3.4}VisaSubClassListType" minOccurs="0"/>
+ *         &lt;element name="Passport" type="{http://www.sifassociation.org/datamodel/au/3.4}PassportType" minOccurs="0"/>
  *         &lt;element name="LBOTE" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="InterpreterRequired" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ImmunisationCertificateStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsImmunisationCertificateStatusType" minOccurs="0"/>
  *         &lt;element name="CulturalBackground" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType" minOccurs="0"/>
  *         &lt;element name="MaritalStatus" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsMaritalStatusAIHWType" minOccurs="0"/>
  *         &lt;element name="MedicareNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="MedicarePositionNumber" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="MedicareCardHolder" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="PrivateHealthInsurance" type="{http://www.sifassociation.org/datamodel/au/3.4}PrivateHealthInsuranceType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -81,14 +89,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "permanentResident",
     "visaSubClass",
     "visaStatisticalCode",
+    "visaNumber",
+    "visaGrantDate",
     "visaExpiryDate",
+    "visaConditions",
+    "visaStudyEntitlement",
     "visaSubClassList",
+    "passport",
     "lbote",
     "interpreterRequired",
     "immunisationCertificateStatus",
     "culturalBackground",
     "maritalStatus",
-    "medicareNumber"
+    "medicareNumber",
+    "medicarePositionNumber",
+    "medicareCardHolder",
+    "privateHealthInsurance"
 })
 public class DemographicsType {
 
@@ -136,10 +152,20 @@ public class DemographicsType {
     protected JAXBElement<String> visaSubClass;
     @XmlElementRef(name = "VisaStatisticalCode", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> visaStatisticalCode;
+    @XmlElementRef(name = "VisaNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> visaNumber;
+    @XmlElementRef(name = "VisaGrantDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> visaGrantDate;
     @XmlElementRef(name = "VisaExpiryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<XMLGregorianCalendar> visaExpiryDate;
+    @XmlElementRef(name = "VisaConditions", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> visaConditions;
+    @XmlElementRef(name = "VisaStudyEntitlement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsVisaStudyEntitlementType> visaStudyEntitlement;
     @XmlElementRef(name = "VisaSubClassList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<VisaSubClassListType> visaSubClassList;
+    @XmlElementRef(name = "Passport", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PassportType> passport;
     @XmlElementRef(name = "LBOTE", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> lbote;
     @XmlElementRef(name = "InterpreterRequired", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -152,6 +178,12 @@ public class DemographicsType {
     protected JAXBElement<String> maritalStatus;
     @XmlElementRef(name = "MedicareNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> medicareNumber;
+    @XmlElementRef(name = "MedicarePositionNumber", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> medicarePositionNumber;
+    @XmlElementRef(name = "MedicareCardHolder", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> medicareCardHolder;
+    @XmlElementRef(name = "PrivateHealthInsurance", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<PrivateHealthInsuranceType> privateHealthInsurance;
 
     /**
      * Gets the value of the indigenousStatus property.
@@ -682,6 +714,54 @@ public class DemographicsType {
     }
 
     /**
+     * Gets the value of the visaNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getVisaNumber() {
+        return visaNumber;
+    }
+
+    /**
+     * Sets the value of the visaNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setVisaNumber(JAXBElement<String> value) {
+        this.visaNumber = value;
+    }
+
+    /**
+     * Gets the value of the visaGrantDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getVisaGrantDate() {
+        return visaGrantDate;
+    }
+
+    /**
+     * Sets the value of the visaGrantDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setVisaGrantDate(JAXBElement<XMLGregorianCalendar> value) {
+        this.visaGrantDate = value;
+    }
+
+    /**
      * Gets the value of the visaExpiryDate property.
      * 
      * @return
@@ -706,6 +786,54 @@ public class DemographicsType {
     }
 
     /**
+     * Gets the value of the visaConditions property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getVisaConditions() {
+        return visaConditions;
+    }
+
+    /**
+     * Sets the value of the visaConditions property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setVisaConditions(JAXBElement<String> value) {
+        this.visaConditions = value;
+    }
+
+    /**
+     * Gets the value of the visaStudyEntitlement property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsVisaStudyEntitlementType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsVisaStudyEntitlementType> getVisaStudyEntitlement() {
+        return visaStudyEntitlement;
+    }
+
+    /**
+     * Sets the value of the visaStudyEntitlement property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsVisaStudyEntitlementType }{@code >}
+     *     
+     */
+    public void setVisaStudyEntitlement(JAXBElement<AUCodeSetsVisaStudyEntitlementType> value) {
+        this.visaStudyEntitlement = value;
+    }
+
+    /**
      * Gets the value of the visaSubClassList property.
      * 
      * @return
@@ -727,6 +855,30 @@ public class DemographicsType {
      */
     public void setVisaSubClassList(JAXBElement<VisaSubClassListType> value) {
         this.visaSubClassList = value;
+    }
+
+    /**
+     * Gets the value of the passport property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link PassportType }{@code >}
+     *     
+     */
+    public JAXBElement<PassportType> getPassport() {
+        return passport;
+    }
+
+    /**
+     * Sets the value of the passport property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link PassportType }{@code >}
+     *     
+     */
+    public void setPassport(JAXBElement<PassportType> value) {
+        this.passport = value;
     }
 
     /**
@@ -871,6 +1023,78 @@ public class DemographicsType {
      */
     public void setMedicareNumber(JAXBElement<String> value) {
         this.medicareNumber = value;
+    }
+
+    /**
+     * Gets the value of the medicarePositionNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getMedicarePositionNumber() {
+        return medicarePositionNumber;
+    }
+
+    /**
+     * Sets the value of the medicarePositionNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setMedicarePositionNumber(JAXBElement<String> value) {
+        this.medicarePositionNumber = value;
+    }
+
+    /**
+     * Gets the value of the medicareCardHolder property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getMedicareCardHolder() {
+        return medicareCardHolder;
+    }
+
+    /**
+     * Sets the value of the medicareCardHolder property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setMedicareCardHolder(JAXBElement<String> value) {
+        this.medicareCardHolder = value;
+    }
+
+    /**
+     * Gets the value of the privateHealthInsurance property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link PrivateHealthInsuranceType }{@code >}
+     *     
+     */
+    public JAXBElement<PrivateHealthInsuranceType> getPrivateHealthInsurance() {
+        return privateHealthInsurance;
+    }
+
+    /**
+     * Sets the value of the privateHealthInsurance property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link PrivateHealthInsuranceType }{@code >}
+     *     
+     */
+    public void setPrivateHealthInsurance(JAXBElement<PrivateHealthInsuranceType> value) {
+        this.privateHealthInsurance = value;
     }
 
 }

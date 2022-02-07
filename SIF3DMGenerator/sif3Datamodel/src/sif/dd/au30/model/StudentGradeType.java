@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -37,6 +38,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="GradingScoreList" type="{http://www.sifassociation.org/datamodel/au/3.4}GradingScoreListType" minOccurs="0"/>
  *         &lt;element name="Grade" type="{http://www.sifassociation.org/datamodel/au/3.4}GradeType" minOccurs="0"/>
  *         &lt;element name="TeacherJudgement" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="TermSpan" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsSessionTypeType" minOccurs="0"/>
+ *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
  *         &lt;element name="LocalCodeList" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalCodeListType" minOccurs="0"/>
  *         &lt;element name="SIF_Metadata" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_MetadataType" minOccurs="0"/>
  *         &lt;element name="SIF_ExtendedElements" type="{http://www.sifassociation.org/datamodel/au/3.4}SIF_ExtendedElementsType" minOccurs="0"/>
@@ -66,6 +69,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "gradingScoreList",
     "grade",
     "teacherJudgement",
+    "termSpan",
+    "schoolYear",
     "localCodeList",
     "sifMetadata",
     "sifExtendedElements"
@@ -103,6 +108,10 @@ public class StudentGradeType {
     protected JAXBElement<GradeType> grade;
     @XmlElementRef(name = "TeacherJudgement", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> teacherJudgement;
+    @XmlElementRef(name = "TermSpan", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> termSpan;
+    @XmlElementRef(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> schoolYear;
     @XmlElementRef(name = "LocalCodeList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<LocalCodeListType> localCodeList;
     @XmlElementRef(name = "SIF_Metadata", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -471,6 +480,54 @@ public class StudentGradeType {
      */
     public void setTeacherJudgement(JAXBElement<String> value) {
         this.teacherJudgement = value;
+    }
+
+    /**
+     * Gets the value of the termSpan property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getTermSpan() {
+        return termSpan;
+    }
+
+    /**
+     * Sets the value of the termSpan property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setTermSpan(JAXBElement<String> value) {
+        this.termSpan = value;
+    }
+
+    /**
+     * Gets the value of the schoolYear property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getSchoolYear() {
+        return schoolYear;
+    }
+
+    /**
+     * Sets the value of the schoolYear property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setSchoolYear(JAXBElement<XMLGregorianCalendar> value) {
+        this.schoolYear = value;
     }
 
     /**

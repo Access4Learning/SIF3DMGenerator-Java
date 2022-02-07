@@ -30,6 +30,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
  *         &lt;element name="CommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
+ *         &lt;element name="ParentCommonwealthId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="ACARAId" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
  *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
  *         &lt;element name="SchoolName" type="{http://www.w3.org/2001/XMLSchema}normalizedString" minOccurs="0"/>
@@ -99,6 +100,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "localId",
     "stateProvinceId",
     "commonwealthId",
+    "parentCommonwealthId",
     "acaraId",
     "otherIdList",
     "schoolName",
@@ -149,6 +151,8 @@ public class SchoolInfoType {
     protected JAXBElement<String> stateProvinceId;
     @XmlElementRef(name = "CommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> commonwealthId;
+    @XmlElementRef(name = "ParentCommonwealthId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> parentCommonwealthId;
     @XmlElementRef(name = "ACARAId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> acaraId;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -307,6 +311,30 @@ public class SchoolInfoType {
      */
     public void setCommonwealthId(JAXBElement<String> value) {
         this.commonwealthId = value;
+    }
+
+    /**
+     * Gets the value of the parentCommonwealthId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getParentCommonwealthId() {
+        return parentCommonwealthId;
+    }
+
+    /**
+     * Sets the value of the parentCommonwealthId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setParentCommonwealthId(JAXBElement<String> value) {
+        this.parentCommonwealthId = value;
     }
 
     /**

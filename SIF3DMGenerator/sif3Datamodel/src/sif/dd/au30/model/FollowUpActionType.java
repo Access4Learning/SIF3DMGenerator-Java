@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -21,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="WellbeingResponseRefId" type="{http://www.sifassociation.org/datamodel/au/3.4}IdRefType" minOccurs="0"/>
  *         &lt;element name="FollowUpDetails" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="FollowUpActionCategory" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Date" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,7 +35,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "FollowUpActionType", namespace = "http://www.sifassociation.org/datamodel/au/3.4", propOrder = {
     "wellbeingResponseRefId",
     "followUpDetails",
-    "followUpActionCategory"
+    "followUpActionCategory",
+    "date"
 })
 public class FollowUpActionType {
 
@@ -43,6 +46,8 @@ public class FollowUpActionType {
     protected JAXBElement<String> followUpDetails;
     @XmlElementRef(name = "FollowUpActionCategory", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> followUpActionCategory;
+    @XmlElementRef(name = "Date", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> date;
 
     /**
      * Gets the value of the wellbeingResponseRefId property.
@@ -114,6 +119,30 @@ public class FollowUpActionType {
      */
     public void setFollowUpActionCategory(JAXBElement<String> value) {
         this.followUpActionCategory = value;
+    }
+
+    /**
+     * Gets the value of the date property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getDate() {
+        return date;
+    }
+
+    /**
+     * Sets the value of the date property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setDate(JAXBElement<XMLGregorianCalendar> value) {
+        this.date = value;
     }
 
 }

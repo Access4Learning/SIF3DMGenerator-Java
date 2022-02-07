@@ -28,6 +28,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="MedicalAlertMessages" type="{http://www.sifassociation.org/datamodel/au/3.4}MedicalAlertMessagesType" minOccurs="0"/>
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="StateProvinceId" type="{http://www.sifassociation.org/datamodel/au/3.4}StateProvinceIdType" minOccurs="0"/>
+ *         &lt;element name="NationalUniqueStudentIdentifier" type="{http://www.w3.org/2001/XMLSchema}token" minOccurs="0"/>
  *         &lt;element name="ElectronicIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}ElectronicIdListType" minOccurs="0"/>
  *         &lt;element name="OtherIdList" type="{http://www.sifassociation.org/datamodel/au/3.4}OtherIdListType" minOccurs="0"/>
  *         &lt;element name="PersonInfo" type="{http://www.sifassociation.org/datamodel/au/3.4}PersonInfoType" minOccurs="0"/>
@@ -45,6 +46,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="IntegrationAide" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="EducationSupport" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="HomeSchooledStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
+ *         &lt;element name="IndependentStudent" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="Sensitive" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="OfflineDelivery" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
  *         &lt;element name="ESLSupport" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsYesOrNoCategoryType" minOccurs="0"/>
@@ -69,6 +71,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "medicalAlertMessages",
     "localId",
     "stateProvinceId",
+    "nationalUniqueStudentIdentifier",
     "electronicIdList",
     "otherIdList",
     "personInfo",
@@ -86,6 +89,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "integrationAide",
     "educationSupport",
     "homeSchooledStudent",
+    "independentStudent",
     "sensitive",
     "offlineDelivery",
     "eslSupport",
@@ -107,6 +111,8 @@ public class StudentPersonalType {
     protected String localId;
     @XmlElementRef(name = "StateProvinceId", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<String> stateProvinceId;
+    @XmlElementRef(name = "NationalUniqueStudentIdentifier", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> nationalUniqueStudentIdentifier;
     @XmlElementRef(name = "ElectronicIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<ElectronicIdListType> electronicIdList;
     @XmlElementRef(name = "OtherIdList", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -141,6 +147,8 @@ public class StudentPersonalType {
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> educationSupport;
     @XmlElementRef(name = "HomeSchooledStudent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> homeSchooledStudent;
+    @XmlElementRef(name = "IndependentStudent", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<AUCodeSetsYesOrNoCategoryType> independentStudent;
     @XmlElementRef(name = "Sensitive", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
     protected JAXBElement<AUCodeSetsYesOrNoCategoryType> sensitive;
     @XmlElementRef(name = "OfflineDelivery", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
@@ -257,6 +265,30 @@ public class StudentPersonalType {
      */
     public void setStateProvinceId(JAXBElement<String> value) {
         this.stateProvinceId = value;
+    }
+
+    /**
+     * Gets the value of the nationalUniqueStudentIdentifier property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getNationalUniqueStudentIdentifier() {
+        return nationalUniqueStudentIdentifier;
+    }
+
+    /**
+     * Sets the value of the nationalUniqueStudentIdentifier property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setNationalUniqueStudentIdentifier(JAXBElement<String> value) {
+        this.nationalUniqueStudentIdentifier = value;
     }
 
     /**
@@ -665,6 +697,30 @@ public class StudentPersonalType {
      */
     public void setHomeSchooledStudent(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
         this.homeSchooledStudent = value;
+    }
+
+    /**
+     * Gets the value of the independentStudent property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public JAXBElement<AUCodeSetsYesOrNoCategoryType> getIndependentStudent() {
+        return independentStudent;
+    }
+
+    /**
+     * Sets the value of the independentStudent property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link AUCodeSetsYesOrNoCategoryType }{@code >}
+     *     
+     */
+    public void setIndependentStudent(JAXBElement<AUCodeSetsYesOrNoCategoryType> value) {
+        this.independentStudent = value;
     }
 
     /**

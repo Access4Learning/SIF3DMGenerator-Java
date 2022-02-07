@@ -165,7 +165,9 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="USN"/>
  *     &lt;enumeration value="UYI"/>
  *     &lt;enumeration value="UYU"/>
+ *     &lt;enumeration value="UYW"/>
  *     &lt;enumeration value="UZS"/>
+ *     &lt;enumeration value="VED"/>
  *     &lt;enumeration value="VES"/>
  *     &lt;enumeration value="VND"/>
  *     &lt;enumeration value="VUV"/>
@@ -352,7 +354,9 @@ public enum ISO4217CurrencyNamesAndCodeElementsType {
     USN,
     UYI,
     UYU,
+    UYW,
     UZS,
+    VED,
     VES,
     VND,
     VUV,

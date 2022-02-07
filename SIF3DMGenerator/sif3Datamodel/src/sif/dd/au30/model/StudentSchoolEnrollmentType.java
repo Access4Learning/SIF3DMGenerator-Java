@@ -32,6 +32,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="LocalId" type="{http://www.sifassociation.org/datamodel/au/3.4}LocalIdType" minOccurs="0"/>
  *         &lt;element name="TimeFrame" type="{http://www.sifassociation.org/datamodel/au/3.4}AUCodeSetsEnrollmentTimeFrameType" minOccurs="0"/>
  *         &lt;element name="SchoolYear" type="{http://www.sifassociation.org/datamodel/au/3.4}SchoolYearType" minOccurs="0"/>
+ *         &lt;element name="IntendedEntryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="EntryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
  *         &lt;element name="EntryType" type="{http://www.sifassociation.org/datamodel/au/3.4}StudentEntryContainerType" minOccurs="0"/>
  *         &lt;element name="YearLevel" type="{http://www.sifassociation.org/datamodel/au/3.4}YearLevelType" minOccurs="0"/>
@@ -139,6 +140,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "localId",
     "timeFrame",
     "schoolYear",
+    "intendedEntryDate",
     "entryDate",
     "entryType",
     "yearLevel",
@@ -198,6 +200,8 @@ public class StudentSchoolEnrollmentType {
     protected AUCodeSetsEnrollmentTimeFrameType timeFrame;
     @XmlElement(name = "SchoolYear", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     protected XMLGregorianCalendar schoolYear;
+    @XmlElementRef(name = "IntendedEntryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4", type = JAXBElement.class, required = false)
+    protected JAXBElement<XMLGregorianCalendar> intendedEntryDate;
     @XmlElement(name = "EntryDate", namespace = "http://www.sifassociation.org/datamodel/au/3.4")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar entryDate;
@@ -427,6 +431,30 @@ public class StudentSchoolEnrollmentType {
      */
     public void setSchoolYear(XMLGregorianCalendar value) {
         this.schoolYear = value;
+    }
+
+    /**
+     * Gets the value of the intendedEntryDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public JAXBElement<XMLGregorianCalendar> getIntendedEntryDate() {
+        return intendedEntryDate;
+    }
+
+    /**
+     * Sets the value of the intendedEntryDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
+     *     
+     */
+    public void setIntendedEntryDate(JAXBElement<XMLGregorianCalendar> value) {
+        this.intendedEntryDate = value;
     }
 
     /**
