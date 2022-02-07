@@ -32,6 +32,7 @@ As of April 13, 2021 the following SIF Locale Data Models are supported by this 
 - SIF AU 3.4.6 for Infrastructure 3.x
 - SIF AU 3.4.7 for Infrastructure 3.x
 - SIF AU 3.4.8 for Infrastructure 3.x
+- SIF AU 3.4.9 for Infrastructure 3.x
 - SIF NA (North America) 3.2
 - SIF NA (North America) 3.3
 - SIF NA Unity 4.0
@@ -157,6 +158,9 @@ Add support for PESC JSON. Note if the artifacts/libraries produced with this pr
 
 ## Version from April 13, 2021
 - Updated with official SIF AU 3.4.8 release. XSD & POJOs. 
+
+## Version from Feb 07, 2022
+- Updated with official SIF AU 3.4.9 release. XSD & POJOs. 
 
 # Download Instructions
 How to download this project:
